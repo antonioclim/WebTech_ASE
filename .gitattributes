@@ -13,3 +13,4 @@
 *.webp binary
 00_SETUP/**/PACKAGE_EXACT/** -text
 01_WEEKS/**/PACKAGE_EXACT/** -text
+00_SETUP/ALTERNATIVES/**/GUIDE/** -text
