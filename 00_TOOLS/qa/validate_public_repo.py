@@ -4,6 +4,7 @@ from __future__ import annotations
 import argparse
 import csv
 import hashlib
+import io
 import json
 import os
 import re
@@ -12,6 +13,7 @@ import struct
 import subprocess
 import sys
 import tempfile
+import tarfile
 import unicodedata
 import zipfile
 from html.parser import HTMLParser
@@ -20,7 +22,7 @@ from typing import Iterable
 
 
 ROOT = Path(__file__).resolve().parents[2]
-VERSION = "2.0.0"
+VERSION = "2.0.1"
 ROMANIAN_ALLOWED_PREFIXES = (
     "01_WEEKS/WEEK_01/C01_COURSE/RO/",
     "01_WEEKS/WEEK_01/S01_SEMINAR/RO/",
@@ -62,6 +64,19 @@ def sha256_path(path: Path) -> str:
 
 def normal_key(name: str) -> str:
     return unicodedata.normalize("NFC", name).casefold()
+
+
+def repository_files() -> list[Path]:
+    """Return public worktree files while excluding local Git metadata."""
+    files: list[Path] = []
+    for path in ROOT.rglob("*"):
+        if not path.is_file():
+            continue
+        rel = path.relative_to(ROOT)
+        if rel.parts and rel.parts[0] == ".git":
+            continue
+        files.append(path)
+    return files
 
 
 def parse_hash_manifest(data: str) -> dict[str, str]:
@@ -303,7 +318,7 @@ class Audit:
         try:
             cff_text = (ROOT / "CITATION.cff").read_text(encoding="utf-8")
             self.require(re.search(r"^cff-version:\s*1\.2\.0\s*$", cff_text, re.M) is not None, "CITATION.cff version")
-            self.require(re.search(r"^version:\s*[\"']?2\.0\.0[\"']?\s*$", cff_text, re.M) is not None, "CITATION.cff repository version")
+            self.require(re.search(rf"^version:\s*[\"\']?{re.escape(VERSION)}[\"\']?\s*$", cff_text, re.M) is not None, "CITATION.cff repository version")
             self.require("family-names: Clim" in cff_text and "given-names: Antonio" in cff_text, "CITATION.cff author")
         except Exception as exc:
             self.fail(f"CITATION.cff: {exc}")
@@ -316,7 +331,7 @@ class Audit:
             self.fail(f"codemeta.json: {exc}")
         try:
             meta_text = (ROOT / "metadata/repository-metadata.yml").read_text(encoding="utf-8")
-            for needle, label in [("owner: antonioclim", "repository owner"),("name: WebTech_ASE", "repository name"),("status: final", "repository status"),("version: 2.0.0", "repository metadata version")]:
+            for needle, label in [("owner: antonioclim", "repository owner"),("name: WebTech_ASE", "repository name"),("status: final", "repository status"),("version: 2.0.1", "repository metadata version")]:
                 self.require(needle in meta_text, label)
         except Exception as exc:
             self.fail(f"repository-metadata.yml: {exc}")
@@ -357,6 +372,76 @@ class Audit:
         except Exception as exc:
             self.fail(f"RELEASE_PLAN.json: {exc}")
 
+    def _identity_from_committed_tree(self, excluded: set[str]) -> dict[str, str] | None:
+        """Hash committed Git blobs, avoiding checkout/export EOL conversion.
+
+        GitHub Actions checks out files according to `.gitattributes`. Files such as
+        `.cmd` may therefore use CRLF in the worktree although the committed blob and
+        repository manifest use LF. `git ls-tree` plus `git cat-file --batch` reads
+        the committed blob bytes directly and does not apply checkout or archive
+        attributes.
+        """
+        if not (ROOT / ".git").exists():
+            return None
+        try:
+            listing = subprocess.run(
+                ["git", "ls-tree", "-r", "-z", "--full-tree", "HEAD"],
+                cwd=ROOT, capture_output=True, timeout=60, check=False,
+            )
+            if listing.returncode != 0:
+                self.warn("git ls-tree unavailable; repository identity uses worktree bytes")
+                return None
+            entries: list[tuple[str, str]] = []
+            for record in listing.stdout.split(b"\0"):
+                if not record:
+                    continue
+                meta, raw_path = record.split(b"\t", 1)
+                _mode, obj_type, object_id = meta.split()
+                if obj_type != b"blob":
+                    continue
+                rel = raw_path.decode("utf-8", "surrogateescape")
+                if rel in excluded:
+                    continue
+                entries.append((rel, object_id.decode("ascii")))
+
+            process = subprocess.Popen(
+                ["git", "cat-file", "--batch"], cwd=ROOT,
+                stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+            )
+            assert process.stdin is not None and process.stdout is not None
+            for _rel, object_id in entries:
+                process.stdin.write(object_id.encode("ascii") + b"\n")
+            process.stdin.close()
+
+            cache: dict[str, str] = {}
+            actual: dict[str, str] = {}
+            for rel, object_id in entries:
+                header = process.stdout.readline().rstrip(b"\n")
+                fields = header.split()
+                if len(fields) != 3 or fields[1] != b"blob":
+                    raise ValueError(f"unexpected git cat-file header for {rel}: {header!r}")
+                size = int(fields[2])
+                data = process.stdout.read(size)
+                if len(data) != size:
+                    raise ValueError(f"truncated git blob for {rel}")
+                separator = process.stdout.read(1)
+                if separator != b"\n":
+                    raise ValueError(f"invalid git cat-file separator for {rel}")
+                digest = cache.get(object_id)
+                if digest is None:
+                    digest = sha256_bytes(data)
+                    cache[object_id] = digest
+                actual[rel] = digest
+            stderr = process.stderr.read() if process.stderr is not None else b""
+            rc = process.wait(timeout=60)
+            if rc != 0:
+                raise ValueError(f"git cat-file failed ({rc}): {stderr.decode(errors='replace')}")
+            self.count("repository_identity_git_blobs")
+            return actual
+        except Exception as exc:
+            self.warn(f"raw Git blob validation unavailable; repository identity uses worktree bytes: {exc}")
+            return None
+
     def check_repo_identity(self) -> None:
         manifest = ROOT / "REPOSITORY_SHA256SUMS.txt"
         pid = ROOT / "REPOSITORY_PACKAGE_ID.txt"
@@ -366,12 +451,18 @@ class Audit:
             return
         rows = parse_hash_manifest(manifest.read_text(encoding="utf-8"))
         excluded = {manifest.name, pid.name, method.name}
-        actual = {p.relative_to(ROOT).as_posix(): sha256_path(p) for p in ROOT.rglob("*") if p.is_file() and p.name not in excluded}
+        actual = self._identity_from_committed_tree(excluded)
+        if actual is None:
+            actual = {
+                path.relative_to(ROOT).as_posix(): sha256_path(path)
+                for path in repository_files()
+                if path.relative_to(ROOT).as_posix() not in excluded
+            }
         if rows != actual:
-            missing = sorted(set(actual) - set(rows))[:5]
-            extra = sorted(set(rows) - set(actual))[:5]
+            unexpected = sorted(set(actual) - set(rows))[:5]
+            absent = sorted(set(rows) - set(actual))[:5]
             mismatch = sorted(k for k in set(rows) & set(actual) if rows[k] != actual[k])[:5]
-            self.fail(f"repository manifest mismatch: missing={missing}, extra={extra}, mismatch={mismatch}")
+            self.fail(f"repository manifest mismatch: unexpected={unexpected}, absent={absent}, mismatch={mismatch}")
         if pid.read_text(encoding="utf-8").strip() != sha256_path(manifest):
             self.fail("repository PACKAGE_ID mismatch")
 
@@ -388,7 +479,7 @@ class Audit:
         ]
         for rel in required:
             self.require((ROOT / rel).exists(), f"missing required path: {rel}")
-        all_paths = [p for p in ROOT.rglob("*") if p.is_file()]
+        all_paths = repository_files()
         normal_paths: set[str] = set()
         for path in all_paths:
             rel = path.relative_to(ROOT).as_posix()

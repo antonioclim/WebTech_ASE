@@ -1,15 +1,18 @@
 # GitHub Pages setup
 
-The repository contains a static portal and an official GitHub Actions workflow.
+The repository uses one owner-triggered Pages workflow. It validates the complete
+repository before it builds or deploys the site.
 
-1. Push the repository to `main`.
+1. Finish every browser upload or hotfix commit.
 2. Open **Settings → Pages**.
 3. Select **GitHub Actions** as the source.
 4. Open **Actions → Deploy GitHub Pages**.
-5. Run the workflow manually when no deployment is present.
-6. Wait for the `github-pages` environment deployment to become green.
-7. Open `https://antonioclim.github.io/WebTech_ASE/`.
-8. Confirm that the Windows, macOS/Linux and four weekly bundle links download.
+5. Select **Run workflow → main → Run workflow** exactly once.
+6. Confirm the log contains `VERDICT: PASS_PUBLIC_REPOSITORY_FINAL`.
+7. Wait for the `github-pages` deployment to become green.
+8. Open `https://antonioclim.github.io/WebTech_ASE/`.
+9. Confirm that the Windows, macOS/Linux and four weekly bundle links download.
 
-The workflow builds `_site` from public repository files only. It does not publish
-`.github`, private staging material or local Git history.
+The workflow does not run automatically after each browser commit. The separate
+validation workflow is a manual diagnostic fallback and should not be run when
+the Pages workflow has already passed.

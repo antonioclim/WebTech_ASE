@@ -30,8 +30,9 @@ web-technologies web-development javascript html css nodejs react teaching compu
    `metadata/github-actions-lock.json`.
 4. Set default workflow permissions to read-only. The manual release workflow
    requests `contents: write` only for its own job.
-5. Dependabot may propose action or validator-dependency updates; review the new
-   tag and SHA before merging.
+5. Validation and Pages are manual to avoid one run for each browser-upload commit.
+6. Dependabot version updates are disabled with `open-pull-requests-limit: 0`;
+   action pins are reviewed intentionally before a repository update.
 
 ## Pages
 
@@ -57,7 +58,7 @@ Then target `main` and configure:
 - block force pushes;
 - block deletion;
 - require pull requests when collaborators are added;
-- require the status check `validate-public-repository`;
+- do not require an automatic status check while browser-only manual validation is used;
 - require conversation resolution;
 - require linear history.
 

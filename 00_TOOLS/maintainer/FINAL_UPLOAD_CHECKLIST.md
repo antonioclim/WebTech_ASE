@@ -1,17 +1,13 @@
-# Final upload checklist
+# Final browser-upload checklist
 
-Complete every item before the first public push.
-
-- [ ] Use `WebTech_ASE_GITHUB_READY_FINAL_v2.0.zip`.
-- [ ] Do not use a BETA, RC or private-staging archive.
-- [ ] Extract the archive completely.
-- [ ] Run the platform validation wrapper.
-- [ ] Confirm `PASS_PUBLIC_REPOSITORY_FINAL`.
-- [ ] Confirm the repository-local Git name and email.
-- [ ] Review `git status` before the first commit.
-- [ ] Confirm no teacher package or Moodle administration file is staged.
-- [ ] Push `main` only after local validation passes.
-- [ ] Wait for validation and Pages workflows to pass.
+- [ ] Use the numbered browser-upload or post-upload hotfix pack supplied for this release.
+- [ ] Do not upload BETA, RC or private-staging archives.
+- [ ] Upload all files before running a workflow.
+- [ ] Confirm no teacher package or Moodle administration file was uploaded.
+- [ ] Set **Settings → Pages → Source** to **GitHub Actions**.
+- [ ] Run **Deploy GitHub Pages** manually exactly once.
+- [ ] Confirm `VERDICT: PASS_PUBLIC_REPOSITORY_FINAL` in the build log.
+- [ ] Confirm the deployment job is green.
 - [ ] Apply the repository settings checklist.
 - [ ] Upload the social preview.
-- [ ] Publish weekly releases only through the manual workflow.
+- [ ] Publish weekly releases only through the manual release workflow.
