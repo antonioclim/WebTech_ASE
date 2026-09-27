@@ -68,7 +68,7 @@ See [SUPPORT.md](SUPPORT.md) and [SECURITY.md](SECURITY.md).
 ## Release status
 
 ```text
-Repository version: 2.0.0
+Repository version: 2.0.1
 Status: final upload-ready public release
 Public material: Day 0 and weeks 1–2
 Default branch: main

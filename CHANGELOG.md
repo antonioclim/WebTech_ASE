@@ -1,11 +1,21 @@
 # Changelog
 
+## 2.0.1 — post-upload validation hotfix (2026-09-27)
+
+- Corrected repository identity validation inside a GitHub Actions checkout.
+- Excluded local `.git` metadata from public worktree scans.
+- Hashes committed Git blobs so `.gitattributes` EOL conversion cannot create false mismatches.
+- Changed validation and Pages deployment to manual owner-triggered workflows.
+- Disabled Dependabot version-update pull requests while immutable action pins are maintained manually.
+- Added a single-run browser-only recovery path after the initial upload.
+
 ## 2.0.0 — final upload-ready repository (2026-09-27)
 
+- Added a browser-only first-upload route with eleven ordered batches.
 - Completed an independent hostile audit and post-package re-audit.
 - Rebuilt weekly assets as deterministic final bundles.
 - Pinned every GitHub Action to a verified immutable commit SHA.
-- Added reproducible Python dependency installation for repository validation.
+- Removed network-dependent validator setup; validation uses the Python standard library.
 - Added final repository manifests, package identity and Pages-payload validation.
 - Hardened release publication against an existing tag or release.
 - Removed final wording from all public metadata and guidance.
