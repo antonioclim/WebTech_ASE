@@ -1,0 +1,29 @@
+AUDIT C02 v1.1 — AUTOPSIA UNEI INTERFEŢE
+
+Primeşti:
+1. fragmentul HTML şi regulile CSS;
+2. o captură sau urmă limitată;
+3. matricea de stări: 320 px, zoom 200%, text tradus, tastatură şi reduced motion;
+4. contractul operaţiei economice;
+5. suprafaţa permisă pentru schimbare.
+
+Pentru fiecare problemă:
+- clasifică: SEMANTICĂ / CASCADĂ / DIMENSIONARE / LAYOUT / INTERACŢIUNE / DOVADĂ;
+- separă: OBSERVATĂ / INFERATĂ / NECUNOSCUTĂ;
+- numeşte proprietarul contractului;
+- indică exact elementul, relaţia, declaraţia câştigătoare ori proba lipsă;
+- propune cea mai mică schimbare în stratul care deţine problema;
+- cere o verificare care ar putea falsifica propunerea;
+- declară limita dovezii.
+
+Nu propune fără justificare:
+- rescrierea markup-ului;
+- !important reflex;
+- overflow ascuns;
+- înălţimi fixe;
+- eliminarea indicatorului de focus;
+- schimbarea ordinii vizuale fără auditarea ordinii logice;
+- afirmaţii de accesibilitate fără testare.
+
+Format:
+PROBLEMĂ | PROPRIETAR | MECANISM | DOVADĂ | CORECŢIE MINIMĂ | LIMITĂ.

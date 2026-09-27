@@ -1,0 +1,37 @@
+[
+  {
+    "file": "01_cinci_porti_interfata.svg",
+    "title": "Cinci porţi ale unei interfeţe",
+    "alt_text": "Un traseu de la semnificaţia documentului la dovada care susţine afirmaţia.",
+    "provenance": "Generated for C02 v1.1 from the C02-A didactic contract; editable SVG; no external artwork."
+  },
+  {
+    "file": "02_relatii_formular.svg",
+    "title": "Relaţiile unui control de formular",
+    "alt_text": "Numele, descrierea, gruparea şi starea sunt relaţii distincte conectate controlului.",
+    "provenance": "Generated for C02 v1.1 from the C02-A didactic contract; editable SVG; no external artwork."
+  },
+  {
+    "file": "03_pipeline_cascada.svg",
+    "title": "Procesul cascadei în demonstraţia C02",
+    "alt_text": "Etapele declarate ale demonstraţiei: relevanţă, origine şi importanţă, strat, specificitate şi ordine.",
+    "provenance": "Generated for C02 v1.1 from the C02-A didactic contract; editable SVG; no external artwork."
+  },
+  {
+    "file": "04_harta_layout.svg",
+    "title": "Harta responsabilităţii layoutului",
+    "alt_text": "Patru mecanisme de layout, fiecare asociat relaţiei pe care o exprimă.",
+    "provenance": "Generated for C02 v1.1 from the C02-A didactic contract; editable SVG; no external artwork."
+  },
+  {
+    "file": "05_matrice_dovezi.svg",
+    "title": "Matricea dovezilor",
+    "alt_text": "Exemple de afirmaţii asociate dovezii potrivite şi limitei acelei dovezi.",
+    "provenance": "Generated for C02 v1.1 from the C02-A didactic contract; editable SVG; no external artwork."
+  },
+  {
+    "file": "06_autopsie_interfata.svg",
+    "alt": "Diagramă a unei interfeţe de decont, cu şase etichete care indică un control nenativ, un nume instabil, un status ascuns, o înălţime fixă, o ordine vizuală divergentă şi mişcare obligatorie.",
+    "provenance": "Original diagram generated for C02 v1.1; historical 2025 materials supplied only the motif of interface diagnosis, not the artwork or code."
+  }
+]

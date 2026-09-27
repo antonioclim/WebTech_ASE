@@ -1,0 +1,12 @@
+RĂSPUNS LLM DELIBERAT IMPERFECT — OBIECT DE AUDIT C02 v1.1
+
+1. Păstrează <div class="approve"> şi adaugă cursor:pointer; astfel devine echivalent cu un buton.
+2. Elimină outline pentru un aspect mai curat; focusul rămâne oricum în browser.
+3. Adaugă height:12rem şi overflow:hidden pe card ca toate cardurile să fie egale.
+4. Aplică .status { display:none !important; } când statusul nu încape.
+5. Adaugă overflow-x:hidden pe body pentru a elimina derularea la 320px.
+6. Mută vizual acţiunea înaintea datelor cu order:-1; ordinea tastaturii se va adapta automat.
+7. Dacă statusul tot nu se vede, adaugă z-index:9999; cauza este probabil specificitatea.
+8. O captură la 1280px este suficientă pentru a confirma responsive design-ul.
+
+Concluzie: patch-ul este accesibil deoarece arată coerent, are patru coloane pe desktop şi nu mai produce overflow vizibil.

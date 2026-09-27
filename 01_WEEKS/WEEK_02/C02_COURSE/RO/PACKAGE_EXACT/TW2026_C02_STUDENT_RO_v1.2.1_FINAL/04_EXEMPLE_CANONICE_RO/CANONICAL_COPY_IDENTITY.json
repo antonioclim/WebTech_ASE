@@ -1,0 +1,81 @@
+{
+  "source": "lectures/04-html-css-accessibility/ro/examples",
+  "status": "exact copy plus this identity file",
+  "files": [
+    {
+      "path": "01-semantic-form-relationships/README.md",
+      "sha256": "cd6b7d1a14c9ce9ac45e579930e0fab485bc56cdbfc3fd0af1638398be59b086",
+      "bytes": 1356
+    },
+    {
+      "path": "01-semantic-form-relationships/index.html",
+      "sha256": "2e4e670b0ed7b2b02b6779a2af7c9d030e1bb7a2685d746cb79222a6c1ac2fab",
+      "bytes": 1469
+    },
+    {
+      "path": "01-semantic-form-relationships/validate.js",
+      "sha256": "a6d72f9b8bf3463e788f86780b6c35554963a3eaa253dc413cecf4dff035e8fd",
+      "bytes": 638
+    },
+    {
+      "path": "02-cascade-layer-order/README.md",
+      "sha256": "303ac4b8543eb8131a7de1c85293da013f4f9c69a378a7e914158bb65804b656",
+      "bytes": 1387
+    },
+    {
+      "path": "02-cascade-layer-order/index.html",
+      "sha256": "fb722d589f8da1fe149b65aa733403c7854092ffb17b2851c61c3992baeb67bf",
+      "bytes": 1281
+    },
+    {
+      "path": "03-box-model-sizing/README.md",
+      "sha256": "067068e7b40604875c2ad6a62b577cc34b06d0731b2bb68fcf80e8451f60d905",
+      "bytes": 1180
+    },
+    {
+      "path": "03-box-model-sizing/index.html",
+      "sha256": "7f7036c9d2246fa9c6b8e4114f3f494419f7cccc038a46151578b1f2a2aa8aac",
+      "bytes": 1476
+    },
+    {
+      "path": "04-intrinsic-card-grid/README.md",
+      "sha256": "a5f333b249e911a15f4e122f494dc2413adad2df24eff6b0444ec458d77e4df8",
+      "bytes": 1309
+    },
+    {
+      "path": "04-intrinsic-card-grid/index.html",
+      "sha256": "a10aed0078cb0c0e9499df348e657b870c5f0315ab95858c458ceaf6a2f9fe71",
+      "bytes": 1576
+    },
+    {
+      "path": "05-focus-and-motion-preferences/README.md",
+      "sha256": "3d40b68e26150fdb8bf91ed9d1b052098ec9cc792b7c462c4041941f9921e09a",
+      "bytes": 1542
+    },
+    {
+      "path": "05-focus-and-motion-preferences/index.html",
+      "sha256": "0e3f3ad06518f99ffe58ec546755f2c6f8a925e77b03e6fc4f3573b005b41103",
+      "bytes": 1874
+    },
+    {
+      "path": "06-flex-positioned-container/README.md",
+      "sha256": "9ba192c95d3a16aff63c3f4f73c85a32be77b992e70c39453819ad765a351485",
+      "bytes": 2247
+    },
+    {
+      "path": "06-flex-positioned-container/index.html",
+      "sha256": "2c825572d158a7aa401cefd563c8cc0f0a048462de057128d69eeb9cfd2fd43b",
+      "bytes": 1369
+    },
+    {
+      "path": "06-flex-positioned-container/styles.css",
+      "sha256": "8da42c9acf71172207b6530c86dab2233b0a36005816d2e206ac445c047bac73",
+      "bytes": 920
+    },
+    {
+      "path": "06-flex-positioned-container/validate.js",
+      "sha256": "6b73a4c59a73396b5c298666c5ab4b337a79e7453d0435ce442dc0a3a57d15bb",
+      "bytes": 843
+    }
+  ]
+}
