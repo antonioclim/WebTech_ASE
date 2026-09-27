@@ -1,0 +1,14 @@
+{
+  "object": "C01",
+  "releaseVersion": "v2.0.1 FINAL",
+  "date": "2026-09-27",
+  "auditMode": "independent hostile fail-closed hardening",
+  "changes": [
+    "Added exact npm verification alongside Node.js verification.",
+    "Preserved exact-set package verification and all five canonical U01 examples.",
+    "Hardened the shared runtime helper against reporter drift."
+  ],
+  "canonicalRepositoryModified": false,
+  "requiredNode": "v24.21.0",
+  "requiredNpm": "11.19.0"
+}

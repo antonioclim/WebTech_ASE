@@ -1,0 +1,1 @@
+Auditează afirmaţiile despre un schimb HTTP. Pentru fiecare afirmaţie, numeşte câmpul sau artefactul observabil, dovada minimă şi limita. Nu deduce procese economice din statusul HTTP şi nu trata JSON drept sinonim pentru REST.

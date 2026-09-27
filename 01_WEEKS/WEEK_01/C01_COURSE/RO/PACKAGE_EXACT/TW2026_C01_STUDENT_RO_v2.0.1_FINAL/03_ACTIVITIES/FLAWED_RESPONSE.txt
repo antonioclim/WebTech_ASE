@@ -1,0 +1,7 @@
+RĂSPUNS DELIBERAT IMPERFECT
+
+1. 201 dovedeşte că decontul a fost aprobat şi plătit.
+2. Corpul arată ca JSON, deci Content-Type nu contează.
+3. URL-ul conţine substantive, deci API-ul este REST.
+4. Testul verde dovedeşte că nu există alte defecte.
+5. Un retry este întotdeauna o a doua intenţie a utilizatorului.
