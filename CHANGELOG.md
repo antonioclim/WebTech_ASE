@@ -1,0 +1,38 @@
+# Changelog
+
+## 2.0.0 — final upload-ready repository (2026-09-27)
+
+- Completed an independent hostile audit and post-package re-audit.
+- Rebuilt weekly assets as deterministic final bundles.
+- Pinned every GitHub Action to a verified immutable commit SHA.
+- Added reproducible Python dependency installation for repository validation.
+- Added final repository manifests, package identity and Pages-payload validation.
+- Hardened release publication against an existing tag or release.
+- Removed final wording from all public metadata and guidance.
+- Preserved the student packages byte-for-byte and kept instructor material private.
+
+## 2.0.0 — Phase 3 final release (2026-09-27)
+
+- Added `CITATION.cff`, `codemeta.json` and final safe-default metadata.
+- Added a 1280×640 social-preview asset and upload instructions.
+- Added a reproducible GitHub Pages build and deployment workflow.
+- Added a manual, fail-closed weekly GitHub Release workflow.
+- Rebuilt week 1 and week 2 bundles as immutable RC assets.
+- Added exact repository-settings, first-upload and release-publishing guides.
+- Updated GitHub Actions to current Node 24-compatible major releases.
+- Changed repository status from Phase 2 beta to Phase 3 final release.
+
+## v2.0.0-beta — Phase 2
+
+- Rebuilt navigation as week → object → language.
+- Published audited Day 0 setup in English.
+- Populated C01, S01, C02 and S02 in RO and EN-GB.
+- Added exact extracted student packages and downloadable ZIPs.
+- Added professional community files, issue templates and beta CI.
+- Created a separate private instructor staging archive.
+- Corrected the GitHub owner identifier to `antonioclim`.
+
+## Earlier prototype
+
+The language-first v1.0 prototype is superseded and must not be uploaded as the
+current repository.
