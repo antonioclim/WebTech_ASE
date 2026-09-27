@@ -1,0 +1,1 @@
+These images are locally generated explanatory schematics. They are not Chromium captures and do not constitute runtime evidence.

@@ -1,0 +1,9 @@
+DELIBERATELY FLAWED LLM RESPONSE — AUDIT OBJECT
+
+I optimised the layout for consistency. Every card now has a width of 320px, horizontal overflow is hidden on the body and four columns remain active at every size to avoid visual jumps. I also removed link outlines because the design looks cleaner. The solution is responsive because the scrollbar is no longer visible.
+
+Claims to challenge:
+- hiding the scrollbar is equivalent to removing overflow;
+- permanent four columns satisfy every viewport;
+- outline:none is acceptable when hover exists;
+- syntactically valid CSS means the contract is satisfied.

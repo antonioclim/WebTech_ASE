@@ -1,0 +1,21 @@
+# Deliberately faulty patch for audit; DO NOT apply.
+--- a/public/styles.css
++++ b/public/styles.css
+@@
++body {
++  overflow-x: hidden;
++}
++
++.card-grid {
++  display: grid;
++  grid-template-columns: repeat(4, 1fr);
++}
++
++.card {
++  width: 320px;
++}
++
++a:focus,
++a:focus-visible {
++  outline: none;
++}
