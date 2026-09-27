@@ -1,0 +1,1 @@
+Analyse only the patch for GET /api/greetings/<name>. For every claim, state observed / inferred / unknown, the minimum counterexample, the relevant test and the limitation. Do not change tests or extend the surface beyond src/application-handler.js.
