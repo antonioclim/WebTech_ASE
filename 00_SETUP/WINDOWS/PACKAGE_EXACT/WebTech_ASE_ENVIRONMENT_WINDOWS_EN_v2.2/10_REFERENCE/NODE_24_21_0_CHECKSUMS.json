@@ -1,0 +1,15 @@
+{
+  "source": "https://nodejs.org/dist/v24.21.0/SHASUMS256.txt.asc",
+  "verified_on": "2026-09-27",
+  "files": {
+    "node-v24.21.0-x64.msi": "bb0eaee134f9357f22aea915ee793343e627aefc1e66488164bac6915bce2cac",
+    "node-v24.21.0-arm64.msi": "22ca85110f26015696a3fa9216bc372ae65203d170622eaf7d211e2dd5bb49e3",
+    "node-v24.21.0-win-x64.zip": "158f7685b44de51f6c0df1d153526cbcd3e1bc739a8dfc607721cef75de9e541",
+    "node-v24.21.0-win-arm64.zip": "8779b1bde1d39f8d420e3b57aa657b39891af434d3de44a919044cec06785921",
+    "node-v24.21.0.pkg": "9831a74b04c270a429bd5a240e37712c4fe229b02b032e18ff2e0702c17c20fd",
+    "node-v24.21.0-darwin-x64.tar.xz": "0ae5a24c24bb7d015cd816c5036b3f90f2945aa872fcf54e58da054753b3a299",
+    "node-v24.21.0-darwin-arm64.tar.xz": "6239d4cf92d864487ec8cd3615038f7b67e7f58b77b21cd2f09ea9fbd68065fe",
+    "node-v24.21.0-linux-x64.tar.xz": "fd8e59d5a511510f6a298afb548f18c7d2b1be404d8b4a27d94fbe49f56cb2d6",
+    "node-v24.21.0-linux-arm64.tar.xz": "6ad1325edbdb5649c379b75a237147a666c95d4f9ae8d340fef2d1575d289ad2"
+  }
+}
