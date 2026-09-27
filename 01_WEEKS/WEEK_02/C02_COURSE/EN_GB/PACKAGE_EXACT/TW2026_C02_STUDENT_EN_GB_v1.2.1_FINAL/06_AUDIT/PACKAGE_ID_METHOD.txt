@@ -1,0 +1,1 @@
+PACKAGE_ID is SHA-256 over the sorted canonical list `SHA-256  relative/path` for every final file except PACKAGE_ID.txt and SHA256SUMS.txt. SHA256SUMS.txt lists every final file except itself.

@@ -1,0 +1,73 @@
+{
+  "schema": "c02-offline-trace-1.1",
+  "case": "expense-claim approval",
+  "states": [
+    {
+      "id": "capture",
+      "observed": "polished screenshot",
+      "supported": [
+        "visible appearance in one state"
+      ],
+      "unsupported": [
+        "semantics",
+        "keyboard path",
+        "reflow",
+        "motion preference"
+      ]
+    },
+    {
+      "id": "cascade",
+      "rules": [
+        "legacy #claim .status",
+        "theme .status"
+      ],
+      "winner": "theme .status",
+      "scope": "normal author layers"
+    },
+    {
+      "id": "box",
+      "width": 200,
+      "padding_each_side": 20,
+      "border_each_side": 1,
+      "content_box_outer": 242,
+      "border_box_outer": 200
+    },
+    {
+      "id": "responsive",
+      "test_inputs": [
+        "320 CSS px",
+        "200% zoom",
+        "long translated text",
+        "unbroken token",
+        "keyboard",
+        "reduced motion"
+      ]
+    }
+  ],
+  "version": "1.1",
+  "extension": {
+    "minutes": "60-75",
+    "modules": [
+      "interface-autopsy",
+      "status-cascade-diagnosis",
+      "native-button-contract",
+      "responsive-state-matrix",
+      "css-courtroom"
+    ],
+    "defects": [
+      "non-native-control",
+      "unstable-label",
+      "hidden-status",
+      "fixed-height",
+      "visual-order-only",
+      "unadapted-motion"
+    ],
+    "required_evidence": [
+      "DOM-or-accessibility-tree",
+      "matched-rules-and-computed-style",
+      "keyboard-path",
+      "narrow-and-zoom-states",
+      "reduced-motion-state"
+    ]
+  }
+}
