@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.0",
+  "academic_year": "2026-2027",
+  "repository_version": "2.0.0",
+  "weeks": [
+    {
+      "week": 1,
+      "course_id": "C01",
+      "course": "The Web as a system, HTTP and AI-assisted development",
+      "seminar_id": "S01",
+      "seminar": "From click to contract",
+      "public": true,
+      "languages": [
+        "RO",
+        "EN_GB"
+      ]
+    },
+    {
+      "week": 2,
+      "course_id": "C02",
+      "course": "Semantic HTML, CSS, responsive UI and accessibility",
+      "seminar_id": "S02",
+      "seminar": "CSS as a constraint system",
+      "public": true,
+      "languages": [
+        "RO",
+        "EN_GB"
+      ]
+    },
+    {
+      "week": 3,
+      "course_id": "C03",
+      "course": "JavaScript for reading and modifying programs",
+      "seminar_id": "S03",
+      "seminar": "Dataset Transformer CLI",
+      "public": false,
+      "languages": [
+        "EN_GB"
+      ]
+    },
+    {
+      "week": 4,
+      "course_id": "C04",
+      "course": "Modules, DOM, events, Promises, async/await and fetch",
+      "seminar_id": "S04",
+      "seminar": "Multi-source Data Dashboard",
+      "public": false,
+      "languages": [
+        "EN_GB"
+      ]
+    },
+    {
+      "week": 5,
+      "course_id": "C05",
+      "course": "Node, Express and REST",
+      "seminar_id": "S05",
+      "seminar": "In-memory Task API",
+      "public": false,
+      "languages": [
+        "EN_GB"
+      ]
+    },
+    {
+      "week": 6,
+      "course_id": "C06",
+      "course": "Persistence with Sequelize and SQLite",
+      "seminar_id": "S06",
+      "seminar": "Query API",
+      "public": false,
+      "languages": [
+        "EN_GB"
+      ]
+    },
+    {
+      "week": 7,
+      "course_id": "C07",
+      "course": "Relationships, transactions and API design",
+      "seminar_id": "S07",
+      "seminar": "Transactional Booking",
+      "public": false,
+      "languages": [
+        "EN_GB"
+      ]
+    },
+    {
+      "week": 8,
+      "course_id": "C08",
+      "course": "React with Vite",
+      "seminar_id": "S08",
+      "seminar": "Vanilla-to-React Reading Queue",
+      "public": false,
+      "languages": [
+        "EN_GB"
+      ]
+    },
+    {
+      "week": 9,
+      "course_id": "C09",
+      "course": "Routing, forms and full-stack React",
+      "seminar_id": "S09",
+      "seminar": "Routed Notes Application",
+      "public": false,
+      "languages": [
+        "EN_GB"
+      ]
+    },
+    {
+      "week": 10,
+      "course_id": "C10",
+      "course": "State ownership and frontend architecture",
+      "seminar_id": "S10",
+      "seminar": "Shared Workshop State",
+      "public": false,
+      "languages": [
+        "EN_GB"
+      ]
+    },
+    {
+      "week": 11,
+      "course_id": "C11",
+      "course": "Authentication, authorisation and web security",
+      "seminar_id": "S11",
+      "seminar": "Role-Protected Moderation Operation",
+      "public": false,
+      "languages": [
+        "EN_GB"
+      ]
+    },
+    {
+      "week": 12,
+      "course_id": "C12",
+      "course": "Realtime and asynchronous work",
+      "seminar_id": "S12",
+      "seminar": "Correlated Request Dispatcher",
+      "public": false,
+      "languages": [
+        "EN_GB"
+      ]
+    },
+    {
+      "week": 13,
+      "course_id": "C13",
+      "course": "Workers, Service Workers and the cost of composition",
+      "seminar_id": "S13",
+      "seminar": "Worker Offload",
+      "public": false,
+      "languages": [
+        "EN_GB"
+      ]
+    },
+    {
+      "week": 14,
+      "course_id": "C14",
+      "course": "Testing, observability, performance and production evidence",
+      "seminar_id": "S14",
+      "seminar": "Evidence review and individual defence",
+      "public": false,
+      "languages": [
+        "EN_GB"
+      ]
+    }
+  ]
+}
