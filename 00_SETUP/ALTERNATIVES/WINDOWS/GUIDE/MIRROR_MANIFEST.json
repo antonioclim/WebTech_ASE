@@ -1,0 +1,40 @@
+{
+  "schema": "webtech-ase.alternative-guide-mirror.v1",
+  "platform": "windows",
+  "repository_state": "work-in-progress",
+  "package_status": "RELEASE_CANDIDATE_NATIVE_ACCEPTANCE_NOT_EXECUTED",
+  "archive": "DOWNLOAD/TW2026_WINDOWS_ONEFILE_v1.1_EN_RC1_WITH_GUIDE.zip",
+  "archive_sha256": "2f85109bcfdbd331722dc95a2dbc2cdfa906675c70f9edcfd75e34375f69a77d",
+  "archive_bytes": 142921,
+  "archive_root": "TW2026_WINDOWS_ONEFILE_v1.1_EN_RC1_WITH_GUIDE",
+  "mirrored_files": [
+    {
+      "source_member": "TW2026_WINDOWS_ONEFILE_v1.1_EN_RC1_WITH_GUIDE/README.md",
+      "target": "GUIDE/README.md",
+      "sha256": "0618ee04f1f1549947a13101572e53bc44f14dc6aef7b2b5b8ca699214488488",
+      "bytes": 63512
+    },
+    {
+      "source_member": "TW2026_WINDOWS_ONEFILE_v1.1_EN_RC1_WITH_GUIDE/README.html",
+      "target": "GUIDE/README.html",
+      "sha256": "6f55cfa232163188439c88abe8210993016904de47451946f13c87433494d2ed",
+      "bytes": 85357
+    },
+    {
+      "source_member": "TW2026_WINDOWS_ONEFILE_v1.1_EN_RC1_WITH_GUIDE/PACKAGING_AUDIT.json",
+      "target": "GUIDE/PACKAGING_AUDIT.json",
+      "sha256": "41acbeeb1a719f043d63327ce06a00c8ef52f880a3abcd8aac760c21fe598d85",
+      "bytes": 21896
+    },
+    {
+      "source_member": "TW2026_WINDOWS_ONEFILE_v1.1_EN_RC1_WITH_GUIDE/SHA256SUMS.txt",
+      "target": "GUIDE/SHA256SUMS.txt",
+      "sha256": "f71f9ad99a12404036d39cc554b4bb8c1b133c586c90a6e6328b05b1fd816cd9",
+      "bytes": 350
+    }
+  ],
+  "executable_members_not_mirrored": [
+    "TW2026_WINDOWS_ONEFILE_v1.1_EN_RC1_WITH_GUIDE/TW2026_WINDOWS_ONEFILE_v1.1_EN_RC1.cmd"
+  ],
+  "policy": "The ZIP is the canonical executable artefact. GUIDE mirrors only documentation and audit files for browser inspection."
+}

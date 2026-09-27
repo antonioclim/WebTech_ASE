@@ -1,24 +1,25 @@
 # WebTech_ASE — Web Technologies at ASE
 
-[![Validate repository](https://github.com/antonioclim/WebTech_ASE/actions/workflows/validate.yml/badge.svg)](https://github.com/antonioclim/WebTech_ASE/actions/workflows/validate.yml)
-[![Deploy Pages](https://github.com/antonioclim/WebTech_ASE/actions/workflows/pages.yml/badge.svg)](https://github.com/antonioclim/WebTech_ASE/actions/workflows/pages.yml)
+> **Repository work in progress. Automated validation, Pages deployment and weekly release publication are intentionally manual-only until the corpus is frozen.**
 
 `WebTech_ASE` is the public, student-facing repository for the Web Technologies
 module at the Bucharest University of Economic Studies.
 
-## Published material
+## Available material
 
-The current public release contains:
+The current working repository contains:
 
-- audited Day 0 setup for Windows and macOS/Linux;
+- Day 0 setup for Windows and macOS/Linux;
+- optional one-file setup release candidates with browsable guides;
 - week 1: C01 and S01 in Romanian and British English;
 - week 2: C02 and S02 in Romanian and British English;
 - offline student packages and evidence-oriented seminar forms;
 - Moodle submission guidance;
 - public checksums, exact extracted packages and repository validation tools.
 
-Future weeks are listed in the [course map](current-outline.md) but remain
-unpublished until they pass the same public/private, language, Moodle and QA gate.
+Future weeks are listed in the [course map](current-outline.md). Their publication
+state remains provisional until the same public/private, language, Moodle and QA
+gate has been completed.
 
 ## Start in three steps
 
@@ -30,7 +31,7 @@ unpublished until they pass the same public/private, language, Moodle and QA gat
 week → course/seminar → language
 ```
 
-## Published weeks
+## Published teaching objects
 
 - [Week 1](01_WEEKS/WEEK_01/README.md)
 - [Week 2](01_WEEKS/WEEK_02/README.md)
@@ -56,8 +57,9 @@ and internal QA archives. See [PRIVATE_CONTENT_POLICY.md](PRIVATE_CONTENT_POLICY
 ## Citation and rights
 
 Citation metadata is available in [CITATION.cff](CITATION.cff) and
-[codemeta.json](codemeta.json). Copyright © 2026 Antonio Clim. All rights reserved.
-Public access does not create an open licence.
+[codemeta.json](codemeta.json). During the WIP period, these identify the last
+stable repository baseline rather than a newly frozen release. Copyright © 2026
+Antonio Clim. All rights reserved. Public access does not create an open licence.
 
 ## Support
 
@@ -65,13 +67,15 @@ Use the issue forms for reproducible technical problems or content corrections.
 Do not post passwords, tokens, cookies, private Moodle data or student work.
 See [SUPPORT.md](SUPPORT.md) and [SECURITY.md](SECURITY.md).
 
-## Release status
+## Development status
 
 ```text
-Repository version: 2.0.1
-Status: final upload-ready public release
-Public material: Day 0 and weeks 1–2
-Default branch: main
+Stable baseline version: 2.0.1
+Current state: work in progress
+Automated Actions: disabled; all workflows are manual-only
+Pages deployment: intentionally deferred
+Repository identity: frozen baseline; regeneration deferred until final freeze
+Public material currently present: Day 0 and weeks 1–2
 Guidance language: English
 Bilingual exceptions: C01, S01, C02 and S02
 ```

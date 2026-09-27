@@ -23,6 +23,7 @@ from typing import Iterable
 
 ROOT = Path(__file__).resolve().parents[2]
 VERSION = "2.0.1"
+DEVELOPMENT_STATE_PATH = ROOT / "metadata/development-state.json"
 ROMANIAN_ALLOWED_PREFIXES = (
     "01_WEEKS/WEEK_01/C01_COURSE/RO/",
     "01_WEEKS/WEEK_01/S01_SEMINAR/RO/",
@@ -114,6 +115,11 @@ class Audit:
         self.errors: list[str] = []
         self.warnings: list[str] = []
         self.counts: dict[str, int] = {}
+        try:
+            self.development_state = json.loads(DEVELOPMENT_STATE_PATH.read_text(encoding="utf-8"))
+        except Exception:
+            self.development_state = {"status": "final"}
+        self.repository_state = str(self.development_state.get("status", "final"))
 
     def count(self, key: str, amount: int = 1) -> None:
         self.counts[key] = self.counts.get(key, 0) + amount
@@ -314,6 +320,73 @@ class Audit:
         if unexpected:
             self.fail(f"actions used but absent from lock: {unexpected}")
 
+
+    def check_automation_policy(self) -> None:
+        workflows = {
+            "validate": ROOT / ".github/workflows/validate.yml",
+            "pages": ROOT / ".github/workflows/pages.yml",
+            "release": ROOT / ".github/workflows/release-week.yml",
+        }
+        if self.repository_state != "work-in-progress":
+            return
+        for label, path in workflows.items():
+            text = path.read_text(encoding="utf-8")
+            self.require("workflow_dispatch:" in text, f"{label} workflow is not manually dispatchable")
+            for trigger in ("push:", "pull_request:", "schedule:"):
+                if re.search(rf"^\s{{0,4}}{re.escape(trigger)}\s*$", text, re.M):
+                    self.fail(f"automatic trigger {trigger[:-1]} remains enabled in {path.relative_to(ROOT)}")
+        dependabot = (ROOT / ".github/dependabot.yml").read_text(encoding="utf-8")
+        self.require("open-pull-requests-limit: 0" in dependabot, "Dependabot version updates are not paused")
+
+    def check_alternatives(self) -> None:
+        root = ROOT / "00_SETUP/ALTERNATIVES"
+        self.require((root / "README.md").is_file(), "alternatives root README")
+        self.require((root / "ALTERNATIVES_STATUS.json").is_file(), "alternatives status file")
+        expected = {
+            "WINDOWS": "TW2026_WINDOWS_ONEFILE_v1.1_EN_RC1_WITH_GUIDE.zip",
+            "MACOS": "TW2026_MACOS_ONEFILE_v1.0_RC1_WITH_GUIDE.zip",
+            "LINUX": "TW2026_LINUX_ONEFILE_v1.0_RC1_WITH_GUIDE.zip",
+        }
+        for platform, archive_name in expected.items():
+            platform_dir = root / platform
+            archive = platform_dir / "DOWNLOAD" / archive_name
+            guide = platform_dir / "GUIDE"
+            self.require((platform_dir / "README.md").is_file(), f"{platform} alternative README")
+            self.require(archive.is_file(), f"{platform} alternative archive")
+            self.require((guide / "MIRROR_MANIFEST.json").is_file(), f"{platform} mirror manifest")
+            if not archive.is_file() or not (guide / "MIRROR_MANIFEST.json").is_file():
+                continue
+            try:
+                mirror = json.loads((guide / "MIRROR_MANIFEST.json").read_text(encoding="utf-8"))
+                self.require(mirror.get("archive") == f"DOWNLOAD/{archive_name}", f"{platform} mirror archive path")
+                self.require(mirror.get("archive_sha256") == sha256_path(archive), f"{platform} mirror archive hash")
+                root_name = mirror.get("archive_root")
+                with zipfile.ZipFile(archive) as z:
+                    members = {i.filename: z.read(i) for i in z.infolist() if not i.is_dir()}
+                for item in mirror.get("mirrored_files", []):
+                    source = item.get("source_member")
+                    target_rel = item.get("target")
+                    target = platform_dir / str(target_rel)
+                    self.require(source in members, f"{platform} missing mirrored source {source}")
+                    self.require(target.is_file(), f"{platform} missing mirrored target {target_rel}")
+                    if source in members and target.is_file():
+                        self.require(target.read_bytes() == members[source], f"{platform} guide mirror differs: {target_rel}")
+                        self.require(item.get("sha256") == sha256_bytes(members[source]), f"{platform} mirror hash differs: {target_rel}")
+                for executable in mirror.get("executable_members_not_mirrored", []):
+                    self.require(not (guide / Path(executable).name).exists(), f"{platform} executable duplicated outside ZIP")
+                flat = root / archive_name
+                flat_side = Path(str(flat) + ".sha256")
+                if self.repository_state == "work-in-progress":
+                    self.require(flat.is_file(), f"temporary flat alias missing: {archive_name}")
+                    self.require(flat_side.is_file(), f"temporary flat alias sidecar missing: {archive_name}")
+                    if flat.is_file():
+                        self.require(flat.read_bytes() == archive.read_bytes(), f"temporary flat alias differs: {archive_name}")
+                else:
+                    self.require(not flat.exists() and not flat_side.exists(), f"temporary flat alternative alias remains in final state: {archive_name}")
+                self.count("alternative_packages")
+            except Exception as exc:
+                self.fail(f"alternative package {platform}: {exc}")
+
     def check_metadata(self) -> None:
         try:
             cff_text = (ROOT / "CITATION.cff").read_text(encoding="utf-8")
@@ -331,7 +404,8 @@ class Audit:
             self.fail(f"codemeta.json: {exc}")
         try:
             meta_text = (ROOT / "metadata/repository-metadata.yml").read_text(encoding="utf-8")
-            for needle, label in [("owner: antonioclim", "repository owner"),("name: WebTech_ASE", "repository name"),("status: final", "repository status"),("version: 2.0.1", "repository metadata version")]:
+            expected_status = "status: work-in-progress" if self.repository_state == "work-in-progress" else "status: final"
+            for needle, label in [("owner: antonioclim", "repository owner"),("name: WebTech_ASE", "repository name"),(expected_status, "repository status"),("version: 2.0.1", "repository metadata version")]:
                 self.require(needle in meta_text, label)
         except Exception as exc:
             self.fail(f"repository-metadata.yml: {exc}")
@@ -450,6 +524,12 @@ class Audit:
             self.fail("final repository identity files are missing")
             return
         rows = parse_hash_manifest(manifest.read_text(encoding="utf-8"))
+        if pid.read_text(encoding="utf-8").strip() != sha256_path(manifest):
+            self.fail("repository PACKAGE_ID mismatch")
+        if self.repository_state == "work-in-progress":
+            self.warn("repository tree identity is intentionally deferred while status is work-in-progress")
+            self.count("repository_identity_deferred")
+            return
         excluded = {manifest.name, pid.name, method.name}
         actual = self._identity_from_committed_tree(excluded)
         if actual is None:
@@ -463,8 +543,6 @@ class Audit:
             absent = sorted(set(rows) - set(actual))[:5]
             mismatch = sorted(k for k in set(rows) & set(actual) if rows[k] != actual[k])[:5]
             self.fail(f"repository manifest mismatch: unexpected={unexpected}, absent={absent}, mismatch={mismatch}")
-        if pid.read_text(encoding="utf-8").strip() != sha256_path(manifest):
-            self.fail("repository PACKAGE_ID mismatch")
 
     def run(self) -> int:
         required = [
@@ -474,7 +552,8 @@ class Audit:
             "metadata/github-actions-lock.json", "00_TOOLS/qa/requirements.txt",
             ".github/workflows/validate.yml", ".github/workflows/pages.yml",
             ".github/workflows/release-week.yml", ".github/dependabot.yml",
-            "90_RELEASES/RELEASE_PLAN.json", "REPOSITORY_SHA256SUMS.txt",
+            "90_RELEASES/RELEASE_PLAN.json", "metadata/development-state.json",
+            "00_SETUP/ALTERNATIVES/README.md", "REPOSITORY_SHA256SUMS.txt",
             "REPOSITORY_PACKAGE_ID.txt", "REPOSITORY_PACKAGE_ID_METHOD.md",
         ]
         for rel in required:
@@ -542,14 +621,17 @@ class Audit:
                     self.fail(f"Node syntax failure {path.relative_to(ROOT)}: {cp.stderr.strip()}")
         self.check_metadata()
         self.check_action_lock()
+        self.check_automation_policy()
+        self.check_alternatives()
         self.check_release_plan()
         self.check_repo_identity()
         if self.errors:
             print(f"VERDICT: FAIL_PUBLIC_REPOSITORY ({len(self.errors)} findings)")
             return 2
+        verdict = "PASS_PUBLIC_REPOSITORY_WIP" if self.repository_state == "work-in-progress" else "PASS_PUBLIC_REPOSITORY_FINAL"
         print(
-            "VERDICT: PASS_PUBLIC_REPOSITORY_FINAL "
-            f"(files={len(all_paths)}, zips={self.counts.get('zip_archives',0)}, exact_packages={self.counts.get('exact_packages',0)}, warnings={len(self.warnings)})"
+            f"VERDICT: {verdict} "
+            f"(files={len(all_paths)}, zips={self.counts.get('zip_archives',0)}, exact_packages={self.counts.get('exact_packages',0)}, alternatives={self.counts.get('alternative_packages',0)}, warnings={len(self.warnings)})"
         )
         return 0
 

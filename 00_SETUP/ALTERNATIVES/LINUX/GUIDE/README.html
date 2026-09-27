@@ -1,0 +1,460 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Linux setup, one step at a time</title><style>
+:root{color-scheme:light;--ink:#193047;--muted:#516377;--line:#d9e3e9;--accent:#12695c;--soft:#eef5f3}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:1.3rem}body{margin:0;background:#f5f7f9;color:var(--ink);font:16px/1.7 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:#08695e;text-decoration-thickness:1px;text-underline-offset:3px}.masthead{background:#173548;color:white;padding:32px max(5vw,20px);border-bottom:5px solid #67b39c}.eyebrow{font-size:.79rem;text-transform:uppercase;letter-spacing:.15em;font-weight:700}.masthead h1{font-size:clamp(1.5rem,3vw,2.35rem);line-height:1.25;max-width:900px;margin:12px 0}.masthead p{max-width:850px;margin:8px 0;color:#dce8ee}.phase{display:inline-block;padding:3px 10px;border:1px solid #a1cbbd;border-radius:30px;font-size:.83rem}.layout{max-width:1460px;margin:auto;display:grid;grid-template-columns:280px minmax(0,1fr);gap:36px;padding:36px max(3vw,18px)}nav{align-self:start;position:sticky;top:20px;max-height:calc(100vh - 40px);overflow:auto;font-size:.88rem;background:white;border:1px solid var(--line);border-radius:10px;padding:20px}nav strong{display:block;margin-bottom:10px}nav a{display:block;padding:7px 0;line-height:1.4;text-decoration:none;border-bottom:1px solid #eef1f4}main{min-width:0;background:white;border:1px solid var(--line);border-radius:12px;padding:clamp(20px,3.5vw,48px);overflow-wrap:anywhere}main>h1{font-size:1.75rem;line-height:1.3;margin:0 0 20px}h2{margin:42px 0 12px;padding-top:15px;border-top:1px solid var(--line);font-size:1.45rem;line-height:1.35}h3{font-size:1.14rem;margin-top:26px}p{margin:12px 0}blockquote{margin:22px 0;padding:12px 20px;border-left:4px solid var(--accent);background:var(--soft);border-radius:0 6px 6px 0}blockquote p{margin:7px 0}code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.89em}p code,li code,td code{background:#eef2f5;padding:1px 4px;border-radius:3px;overflow-wrap:anywhere}.command{border:1px solid #c4d7d1;border-radius:8px;margin:20px 0;background:#f3f7f6;overflow:hidden}.command-toolbar{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:9px 14px;border-bottom:1px solid #d5e3df;color:var(--accent);font-size:.69rem;letter-spacing:.08em;font-weight:700}button{font:600 .82rem system-ui,sans-serif;background:var(--accent);border:0;border-radius:5px;color:white;padding:7px 12px;cursor:pointer;letter-spacing:normal}button:focus-visible,a:focus-visible{outline:3px solid #c6771d;outline-offset:3px}pre{margin:0;padding:17px;overflow-x:auto;white-space:pre;max-width:100%;line-height:1.6}.copy-status{display:block;font-size:.76rem;line-height:1.4;color:var(--muted);padding:0 15px 8px;min-height:8px}.output{background:#f3f5f7;border:1px solid var(--line);border-radius:7px;margin:18px 0}.table-scroll{overflow-x:auto;max-width:100%;margin:20px 0;border:1px solid var(--line);border-radius:7px}table{border-collapse:collapse;width:100%;font-size:.89rem;line-height:1.55}th{background:#eaf1f5;text-align:left}td,th{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top;min-width:120px}tr:last-child td{border-bottom:0}footer{max-width:1460px;margin:auto;padding:0 max(3vw,18px) 35px;color:var(--muted);font-size:.86rem}.notice{padding:12px 18px;background:#fff6e8;border-left:4px solid #ac721e;font-size:.93rem}noscript{display:block;background:#fff6e8;padding:10px}@media(max-width:900px){.layout{grid-template-columns:minmax(0,1fr);gap:18px;padding:18px}nav{position:static;max-height:none}nav a{padding:5px 0}main{padding:22px}table{min-width:610px}.masthead{padding:24px 20px}}@media print{nav,button,.copy-status,.masthead{display:none}.layout{display:block;padding:0}main{border:0;padding:0}pre{white-space:pre-wrap;overflow-wrap:anywhere}.table-scroll{overflow:visible}table{min-width:0}body{background:white;font-size:10pt}h2{break-after:avoid}.command{break-inside:avoid}}
+</style></head><body><header class="masthead"><div class="eyebrow">TW2026 · Environment setup</div><h1>Linux setup, one step at a time</h1><span class="phase">Phase 5 of 5 · Release candidate 1.0 RC1</span><p>One self-contained entry script. Explicit account and Git choices. Complete commands, expected results and stop conditions.</p></header><div class="layout"><nav aria-label="Guide sections"><strong>Find your situation</strong><a href="#1-what-you-downloaded-and-what-it-does">1. What you downloaded and what it does</a><a href="#2-choose-the-correct-computer-and-account">2. Choose the correct computer and account</a><a href="#3-save-the-zip-in-the-right-place">3. Save the ZIP in the right place</a><a href="#4-open-the-terminal-and-extract-once">4. Open the terminal and extract once</a><a href="#5-choose-one-action">5. Choose one action</a><a href="#6-existing-environment-audit-without-reinstalling">6. Existing environment: audit without reinstalling</a><a href="#7-new-environment-start-declared-setup">7. New environment: start declared setup</a><a href="#8-complete-missing-components-or-request-updates">8. Complete missing components or request updates</a><a href="#9-how-this-platform-installs-software">9. How this platform installs software</a><a href="#10-system-approval-is-not-an-account-acknowledgement">10. System approval is not an account acknowledgement</a><a href="#11-record-or-revoke-account-acknowledgements">11. Record or revoke account acknowledgements</a><a href="#12-configure-the-course-git-identity">12. Configure the course Git identity</a><a href="#13-open-the-course-editor-for-daily-work">13. Open the course editor for daily work</a><a href="#14-open-the-course-terminal-in-the-same-window">14. Open the course terminal in the same window</a><a href="#15-read-the-verdict-maintenance-and-completion-separately">15. Read the verdict, maintenance and completion separately</a><a href="#16-locate-the-correct-report-and-evidence">16. Locate the correct report and evidence</a><a href="#17-progress-timeouts-and-concurrent-operations">17. Progress, timeouts and concurrent operations</a><a href="#18-troubleshoot-the-actual-message">18. Troubleshoot the actual message</a><a href="#19-source-inspection-and-optional-integrity-checks">19. Source inspection and optional integrity checks</a><a href="#20-what-stays-unchanged-and-what-can-change">20. What stays unchanged and what can change</a><a href="#21-verification-evidence-and-remaining-acceptance">21. Verification evidence and remaining acceptance</a><a href="#22-primary-implementation-references">22. Primary implementation references</a><a href="#23-replacing-an-earlier-unix-candidate-without-starting-again">23. Replacing an earlier Unix candidate without starting again</a><a href="#24-first-use-evidence-and-handover">24. First-use evidence and handover</a></nav><main><noscript>JavaScript is disabled. Read the guide and select command text manually.</noscript><h1>TW2026 Linux setup — the complete one-file guide</h1>
+<p><strong>Package:</strong> <code>TW2026_LINUX_ONEFILE_v1.0_RC1_WITH_GUIDE</code><br/>
+<strong>Entry script:</strong> <code>TW2026_LINUX_ONEFILE_v1.0_RC1.sh</code><br/>
+<strong>Guide revision:</strong> 1.0 RC1 · 27 September 2026 · Phase 5 of 5<br/>
+<strong>Language:</strong> British English</p>
+<blockquote>
+<p><strong>The five-phase production sequence is complete.</strong> This is the consolidated 1.0 RC1 release candidate. Choose the route appropriate to the target computer. No further phase archive is needed to run it. Native installation acceptance on a Mac or an untested Linux desktop remains separate from production completion; read <code>PLATFORM_ACCEPTANCE.md</code>.</p>
+<p><strong>Already have a working course environment?</strong> Choose <strong>audit</strong>, not a new installation. Merely receiving a new README is not a reason to update applications.</p>
+<p><strong>Read the section matching your situation. Do not execute every command.</strong> Copy one command, press Return or Enter and read the result before moving on. Output examples are not commands.</p>
+<p><strong>Validation limit:</strong> the shell packaging and personal workflows were tested on Linux. No native Mac installation, Linux ARM64 desktop or fresh graphical package-manager installation has been certified by this package. Tests with simulated platform replies are not native acceptance.</p>
+</blockquote>
+<h2 id="1-what-you-downloaded-and-what-it-does">1. What you downloaded and what it does</h2>
+<p>This ZIP is a complete user package with one main script. The <code>.sh</code> file contains the runtime sources, policy, startup tests and offline guides. You do not need to obtain the earlier phase archives or manually execute a list of internal scripts. The adjacent README files let you read the instructions before running anything.</p>
+<div aria-label="Scrollable reference table" class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>File</th>
+<th>What it is</th>
+<th>What you do with it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TW2026_LINUX_ONEFILE_v1.0_RC1.sh</code></td>
+<td>The self-contained entry script with the checked source payload</td>
+<td>Run it with one chosen action in your terminal</td>
+</tr>
+<tr>
+<td><code>README.md</code></td>
+<td>This guide in Markdown or ordinary text</td>
+<td>Read it; it is not a program</td>
+</tr>
+<tr>
+<td><code>README.html</code></td>
+<td>The same guide in an offline browser page</td>
+<td>Open it; copy buttons do not execute commands</td>
+</tr>
+<tr>
+<td><code>SHA256SUMS.txt</code></td>
+<td>Digests for the other package files</td>
+<td>Use for the optional integrity check</td>
+</tr>
+<tr>
+<td><code>PACKAGING_AUDIT.json</code></td>
+<td>Packaging facts and verification limits</td>
+<td>Read as a technical record</td>
+</tr>
+<tr>
+<td><code>RELEASE_NOTES.md</code></td>
+<td>Changes since v0.4 and migration guidance</td>
+<td>Read before replacing an earlier downloaded script</td>
+</tr>
+<tr>
+<td><code>PLATFORM_ACCEPTANCE.md</code></td>
+<td>What has actually run and the first-use evidence boundary</td>
+<td>Read before calling an untested target accepted</td>
+</tr>
+</tbody>
+</table></div>
+<p>Application installers are not included. A small ZIP does not mean the software is already installed or that a new setup will work offline. The source payload itself is not fetched as remote code. Requested application downloads use the provider routes declared by the candidate.</p>
+<p>The course runtime remains <strong>Node.js 24.21.0 and npm 11.19.0</strong>. The script does not globally upgrade npm, remove an unrelated Node installation or run your seminar projects. Git, VS Code, Postman Desktop, SQLite, a supported browser, Prettier and ESLint are the declared components. This is the <strong>FULL</strong> profile, not a guarantee that every seminar exercise has been executed.</p>
+<h2 id="2-choose-the-correct-computer-and-account">2. Choose the correct computer and account</h2>
+<p>Use a normal account in a local Linux desktop session. Open the terminal supplied by that desktop. Its name and keyboard shortcut depend on your distribution. A prompt ending in <code>$</code> is common, but you do not need a particular prompt or starting directory.</p>
+<p>Automatic application installation is implemented for Ubuntu 22.04, 24.04 and 26.04 plus Debian 12 and 13 on x64 and ARM64. It requires the declared glibc, local graphical session and systemd conditions. Fedora and unqualified distributions remain inspection/audit routes. The code does not send APT commands to every system that happens to identify itself as Linux.</p>
+<p>Containers, WSL, headless sessions and SSH installations are not automatic-installation targets. An audit can still describe a missing or unsuitable environment. That is not desktop acceptance. Do not install WSL on your working Windows computer merely to test this package.</p>
+<p>Do <strong>not</strong> place <code>sudo</code> before the whole script. Privileged package operations use the operating system's own approval mechanism when applicable. A password belongs in that system prompt, never in an account wizard, report or chat. Script-wide root execution can create the wrong user's state or lead to rejected application launches.</p>
+<p>If an institutional policy blocks execution, preserve the exact message and follow the approved deployment route. Do not disable platform protection, alter global ownership or change permissions recursively to obtain a green result.</p>
+<h2 id="3-save-the-zip-in-the-right-place">3. Save the ZIP in the right place</h2>
+<p><strong>Where:</strong> your web browser's download controls. Save this exact archive in the signed-in user's Downloads folder:</p>
+<pre class="output"><code class="language-text">TW2026_LINUX_ONEFILE_v1.0_RC1_WITH_GUIDE.zip
+</code></pre>
+<p>The terminal path used throughout this guide is:</p>
+<pre class="output"><code class="language-text">$HOME/Downloads/TW2026_LINUX_ONEFILE_v1.0_RC1_WITH_GUIDE.zip
+</code></pre>
+<p><code>$HOME</code> means your own home directory on this computer. It is not the Windows <code>D:</code> drive and it should not be replaced with another person's username. Paths containing <code>$HOME</code> use <strong>double quotes</strong> so the shell can expand it. Single quotes would leave the characters <code>$HOME</code> unchanged.</p>
+<p>A filename ending in <code>(1).zip</code> is different. Rename only the intended download to the exact name above or deliberately adjust each path. Do not run a different old copy simply because its name looks similar. If your browser automatically extracts downloads, check the resulting folder before attempting another extraction.</p>
+<p>On your existing Windows computer the ZIP may be stored in <code>D:\#___MY_SPACE\Downloads</code> for safekeeping. That is storage only. These commands are for Linux, not Windows PowerShell. Your working Windows installation is not replaced.</p>
+<h2 id="4-open-the-terminal-and-extract-once">4. Open the terminal and extract once</h2>
+<p>Copy only the command text in a command box. Do not copy a leading <code>$</code>, <code>%</code>, <code>PS ...&gt;</code>, a continuation prompt, Markdown backticks or example output. Long commands may wrap visually in a narrow window; do not insert an Enter halfway through the command.</p>
+<h3 id="step-4-1-confirm-the-archive-exists">Step 4.1 — Confirm the archive exists</h3>
+<p><strong>Where:</strong> the normal terminal on the target computer.</p>
+<div class="command"><div class="command-toolbar"><span>TERMINAL · CHECK THE SECTION</span><button aria-label="Copy this command" type="button">Copy command</button></div><pre><code class="language-bash">test -f "$HOME/Downloads/TW2026_LINUX_ONEFILE_v1.0_RC1_WITH_GUIDE.zip" &amp;&amp; printf '%s\n' 'Archive found'</code></pre><span aria-live="polite" class="copy-status" role="status"></span></div>
+<p><strong>Expected:</strong> <code>Archive found</code>. No output means the file was not found at that exact location. Correct the location or name; repeatedly trying to launch a missing file does not repair it.</p>
+<h3 id="step-4-2-extract-into-downloads">Step 4.2 — Extract into Downloads</h3>
+<div class="command"><div class="command-toolbar"><span>TERMINAL · CHECK THE SECTION</span><button aria-label="Copy this command" type="button">Copy command</button></div><pre><code class="language-bash">unzip -n "$HOME/Downloads/TW2026_LINUX_ONEFILE_v1.0_RC1_WITH_GUIDE.zip" -d "$HOME/Downloads"</code></pre><span aria-live="polite" class="copy-status" role="status"></span></div>
+<p>The ZIP already contains the folder <code>TW2026_LINUX_ONEFILE_v1.0_RC1_WITH_GUIDE</code>. Do not append that name to the extraction destination again. <code>-n</code> avoids overwriting files if a folder already exists. A previously incomplete or modified copy should be preserved under another name before a fresh extraction. Do not mix two candidate versions.</p>
+<p>If <code>unzip</code> is missing, use the desktop archive manager to extract the ZIP into Downloads. Use the extraction tool already supplied by your desktop rather than installing another utility solely for this ZIP. If extraction reports an error, stop before launching partial files.</p>
+<h3 id="step-4-3-check-the-script-at-its-actual-location">Step 4.3 — Check the script at its actual location</h3>
+<div class="command"><div class="command-toolbar"><span>TERMINAL · CHECK THE SECTION</span><button aria-label="Copy this command" type="button">Copy command</button></div><pre><code class="language-bash">test -f "$HOME/Downloads/TW2026_LINUX_ONEFILE_v1.0_RC1_WITH_GUIDE/TW2026_LINUX_ONEFILE_v1.0_RC1.sh" &amp;&amp; printf '%s\n' 'Launcher found'</code></pre><span aria-live="polite" class="copy-status" role="status"></span></div>
+<p><strong>Required output:</strong> <code>Launcher found</code>. The script is inside the package folder, not directly in Downloads. An accidental second nested folder changes the path. Stop if the check does not find the script.</p>
+<h3 id="step-4-4-open-the-browser-guide">Step 4.4 — Open the browser guide</h3>
+<div class="command"><div class="command-toolbar"><span>TERMINAL · CHECK THE SECTION</span><button aria-label="Copy this command" type="button">Copy command</button></div><pre><code class="language-bash">xdg-open "$HOME/Downloads/TW2026_LINUX_ONEFILE_v1.0_RC1_WITH_GUIDE/README.html"</code></pre><span aria-live="polite" class="copy-status" role="status"></span></div>
+<p>Opening the HTML page does not start installation. It works offline and does not contact a server. Its buttons copy command text only. If clipboard access is unavailable, the page selects the command so you can copy it manually with Ctrl+C. Paste into the terminal only when the section applies to you.</p>
+<p>All main examples use a full path and <code>/bin/bash</code>. No preliminary <code>cd</code>, executable-bit change or <code>chmod +x</code> step is required. This is a normal interpreter invocation, not an override of the computer's security policy.</p>
+<h2 id="5-choose-one-action">5. Choose one action</h2>
+<p>An <strong>action</strong> is one word after the closing quote around the script path. Do not put it inside the filename's quotes. The single-file entry accepts exactly one action. Do not add internal engine flags, account passwords or parameters copied from the Windows kit.</p>
+<div aria-label="Scrollable reference table" class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Action</th>
+<th>What can change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Existing working environment or a diagnostic report</td>
+<td><code>audit</code></td>
+<td>Reports, cache and temporary probes; no software installation or missing-runtime download</td>
+</tr>
+<tr>
+<td>New environment or automatic maintenance decision</td>
+<td><code>auto</code> or no word</td>
+<td>Declared applications and course configuration can be installed or updated</td>
+</tr>
+<tr>
+<td>Complete missing components</td>
+<td><code>resume</code></td>
+<td>Missing apps/extensions and course configuration; routine updates to present apps are skipped</td>
+</tr>
+<tr>
+<td>Intentionally request updates now</td>
+<td><code>update</code></td>
+<td>Declared managed components and dependencies through their applicable manager</td>
+</tr>
+<tr>
+<td>Record or revoke checked account conditions</td>
+<td><code>accounts</code></td>
+<td>Local declarations only after SAVE, followed by audit</td>
+</tr>
+<tr>
+<td>Set course commit name/email</td>
+<td><code>git</code></td>
+<td>Course-only Git configuration only after SAVE, followed by audit</td>
+</tr>
+<tr>
+<td>Open the course editor</td>
+<td><code>vscode</code></td>
+<td>Course editor settings and a launch request; no app installation</td>
+</tr>
+<tr>
+<td>Work in a course shell</td>
+<td><code>terminal</code></td>
+<td>Temporary session environment in the same terminal window</td>
+</tr>
+<tr>
+<td>Read usage or inspect the source</td>
+<td><code>help</code> or <code>extract</code></td>
+<td>Verified local source cache; no application installation</td>
+</tr>
+<tr>
+<td>Inspect platform metadata and candidate command paths</td>
+<td><code>inspect</code></td>
+<td>Verified source cache; no candidate app is launched</td>
+</tr>
+</tbody>
+</table></div>
+<p>No argument means <code>auto</code>, <strong>not audit</strong>. Do not double-click or run the bare script merely to read a report. For an already working computer, use the explicit audit command below.</p>
+<h2 id="6-existing-environment-audit-without-reinstalling">6. Existing environment: audit without reinstalling</h2>
+<p><strong>When:</strong> software may already be present or a previous run succeeded and you want a current diagnostic report. Finish any earlier TW2026 setup first. Do not run several copies in parallel.</p>
+<div class="command"><div class="command-toolbar"><span>TERMINAL · CHECK THE SECTION</span><button aria-label="Copy this command" type="button">Copy command</button></div><pre><code class="language-bash">/bin/bash "$HOME/Downloads/TW2026_LINUX_ONEFILE_v1.0_RC1_WITH_GUIDE/TW2026_LINUX_ONEFILE_v1.0_RC1.sh" audit</code></pre><span aria-live="polite" class="copy-status" role="status"></span></div>
+<p>The script verifies its embedded source and extracts or reuses an exact local copy. It checks the selected diagnostic runtime, runs self-tests, inventories applications, performs the implemented CLI/local checks and writes the reports. It does not call the provisioning adapter to install a missing application.</p>
+<p>An existing Node 18 or later can run the diagnostic engine, but the readiness check still requires the exact native course pair. A report produced by Node 22 does not become a passing Node 24 check. With no usable diagnostic Node, the shell reports that the engine did not start and exits 2 without downloading one. Read that early bootstrap output instead of looking for a report which was never created.</p>
+<p>This audit is not a zero-write forensic inspection. It creates private cache/report directories and temporary test files. A CLI probe can initialise the course-specific editor data. It does not edit your login shell profiles, change project lockfiles or install npm project dependencies.</p>
+<p><strong>Expected completion is a consistent result, not necessarily zero.</strong> If a component is missing, <code>NOT_READY</code> with exit 2 is a legitimate completed diagnostic. Read the failing checks. A headless container cannot become a qualified desktop merely because the report was produced successfully.</p>
+<h2 id="7-new-environment-start-declared-setup">7. New environment: start declared setup</h2>
+<p><strong>When:</strong> this is a new course environment and you intend to permit the declared installations. This route is appropriate only when you intend to prepare that particular target computer.</p>
+<p>Save your work first. Close applications normally when their updates should be considered. Keep the terminal open while a package transaction is active. Use the intended normal user and provide any necessary system approval only through the operating system's prompt.</p>
+<div class="command"><div class="command-toolbar"><span>TERMINAL · CHECK THE SECTION</span><button aria-label="Copy this command" type="button">Copy command</button></div><pre><code class="language-bash">/bin/bash "$HOME/Downloads/TW2026_LINUX_ONEFILE_v1.0_RC1_WITH_GUIDE/TW2026_LINUX_ONEFILE_v1.0_RC1.sh" auto</code></pre><span aria-live="polite" class="copy-status" role="status"></span></div>
+<p>The normal sequence is payload verification, native platform selection, course runtime preparation, startup tests, inventory, individual software operations, course configuration, final checks and evidence export. An unsupported installation context is rejected before its package-manager operations are requested.</p>
+<p>A matching exact Node/npm pair is reused. Otherwise an installation action can download the corresponding official runtime archive, verify its required SHA-256 and extract it into a new private directory. Existing system Node installations are left in place. No unverified runtime is executed merely because the download completed.</p>
+<p>The <code>auto</code> decision uses the previous recorded maintenance attempt. A sufficiently recent matching attempt can select missing-only mode for the following 24 hours. This is evaluated only when you start the script. It does not install a TW2026 background service or scheduled task. A recorded attempt is not proof that every requested update succeeded.</p>
+<h2 id="8-complete-missing-components-or-request-updates">8. Complete missing components or request updates</h2>
+<h3 id="missing-items-only">Missing items only</h3>
+<p><strong>When:</strong> a setup finished, but an application or required extension was missing. This route does not deliberately refresh every already detected component.</p>
+<div class="command"><div class="command-toolbar"><span>TERMINAL · CHECK THE SECTION</span><button aria-label="Copy this command" type="button">Copy command</button></div><pre><code class="language-bash">/bin/bash "$HOME/Downloads/TW2026_LINUX_ONEFILE_v1.0_RC1_WITH_GUIDE/TW2026_LINUX_ONEFILE_v1.0_RC1.sh" resume</code></pre><span aria-live="polite" class="copy-status" role="status"></span></div>
+<p>Read the new result before repeating the command. The existence of a package is not sufficient evidence that its CLI works, so verification still runs. A detected unmanaged application may be retained with an update deferral rather than replaced by a duplicate copy.</p>
+<h3 id="requested-maintenance-now">Requested maintenance now</h3>
+<p><strong>When:</strong> you specifically intend to check and request updates to the declared software, rather than merely inspect it.</p>
+<div class="command"><div class="command-toolbar"><span>TERMINAL · CHECK THE SECTION</span><button aria-label="Copy this command" type="button">Copy command</button></div><pre><code class="language-bash">/bin/bash "$HOME/Downloads/TW2026_LINUX_ONEFILE_v1.0_RC1_WITH_GUIDE/TW2026_LINUX_ONEFILE_v1.0_RC1.sh" update</code></pre><span aria-live="polite" class="copy-status" role="status"></span></div>
+<p>Do not execute <code>resume</code> and <code>update</code> as two mandatory consecutive instructions. Choose the action matching your intention. Save work and close an affected application normally. The script does not terminate personal work to make an update appear successful.</p>
+<p>A manager can update dependencies needed by a named application. The kit therefore does not promise that exactly one physical package changes. It does not issue a blanket update of all unrelated software. Provider-managed background updates remain independent of this script.</p>
+<h2 id="9-how-this-platform-installs-software">9. How this platform installs software</h2>
+<p>Git and SQLite use declared distribution APT packages. If VS Code is missing, the Linux adapter can request the official <code>code</code> Snap with its documented classic confinement. An existing declared APT Code installation can be updated from its already configured repository. Postman Desktop uses its Snap route when absent; the standalone Postman CLI is not a substitute for the desktop application.</p>
+<p>For a missing browser, Debian requests <code>firefox-esr</code> through APT and Ubuntu requests the Firefox Snap. Existing supported browsers can be retained. Snap infrastructure is prepared only when required by the declared route. A missing daemon or uncompleted Snap initialisation is reported, not solved by deleting service state.</p>
+<p>APT commands name the declared packages and prohibit automatic removals. The script does not request a blanket <code>apt upgrade</code>, <code>dist-upgrade</code>, repository replacement or unauthenticated package acceptance. Snap operations also name the relevant package; the kit does not refresh all Snaps indiscriminately or disable Snap's own updates.</p>
+<p>Supporting services, dependencies and provider update behaviour still belong to the manager being used. A new sign-in session or restart can remain necessary for the desktop environment even when explicit paths avoid some PATH issues. The kit does not force a restart or certify a graphical session from a version string.</p>
+<h2 id="10-system-approval-is-not-an-account-acknowledgement">10. System approval is not an account acknowledgement</h2>
+<p>When a system package operation requires privileges, the adapter uses the normal <code>sudo</code> mechanism. The operating system may display nothing while a password is typed; that does not mean the keyboard is broken. Enter a password only into the genuine system prompt. It is not recorded by the account wizard.</p>
+<p>No administrator permission means the corresponding system change cannot be silently performed. Preserve the exact failure and use an authorised administrator or software-centre route. Do not change the report's status to ready simply because a request was attempted.</p>
+<p>The <code>accounts</code> action described next is separate. It records statements you make about GitHub, 2FA and Gemini. It does not approve an OS licence, acquire administrator privileges or log in online. No password, token or recovery code belongs in those answers.</p>
+<h2 id="11-record-or-revoke-account-acknowledgements">11. Record or revoke account acknowledgements</h2>
+<h3 id="step-11-1-check-the-conditions-personally">Step 11.1 — Check the conditions personally</h3>
+<p>Before confirming, check that you can sign in to the intended GitHub account and its email address is verified. Separately check that two-factor authentication is enabled on that same account. Check permitted working Gemini web access with the account intended for the course. Existing accounts can be reused; you do not need duplicate accounts merely to run setup.</p>
+<p>Do not infer 2FA from the fact that a browser is already signed in. Do not share a screenshot showing a recovery code, token or password. The kit deliberately cannot inspect your secret account settings automatically.</p>
+<h3 id="step-11-2-start-the-console-wizard">Step 11.2 — Start the console wizard</h3>
+<div class="command"><div class="command-toolbar"><span>TERMINAL · CHECK THE SECTION</span><button aria-label="Copy this command" type="button">Copy command</button></div><pre><code class="language-bash">/bin/bash "$HOME/Downloads/TW2026_LINUX_ONEFILE_v1.0_RC1_WITH_GUIDE/TW2026_LINUX_ONEFILE_v1.0_RC1.sh" accounts</code></pre><span aria-live="polite" class="copy-status" role="status"></span></div>
+<p>Use your own interactive terminal. Piped answer files are rejected. All questions appear in this same console; no separate graphical form is required. If no usable diagnostic Node exists, the bootstrap explains that limitation without installing a runtime in this action.</p>
+<div aria-label="Scrollable reference table" class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>Input</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Y</code> or <code>YES</code>, then Enter</td>
+<td>You personally verified the condition</td>
+</tr>
+<tr>
+<td><code>N</code> or <code>NO</code>, then Enter</td>
+<td>Do not confirm it or revoke the earlier declaration</td>
+</tr>
+<tr>
+<td>Enter alone or <code>K</code></td>
+<td>Keep the existing value; a missing declaration remains unconfirmed</td>
+</tr>
+<tr>
+<td><code>X</code>, then Enter</td>
+<td>Cancel the proposed changes</td>
+</tr>
+</tbody>
+</table></div>
+<p>The script displays the current values and the date of any valid record. A declaration for another system/user context, malformed record or future date is not imported as valid. A Windows declaration is not an automatic Unix declaration. Revoking GitHub also leaves GitHub 2FA unconfirmed; the script does not keep an orphaned 2FA claim.</p>
+<h3 id="step-11-3-save-only-the-displayed-summary-you-intend">Step 11.3 — Save only the displayed summary you intend</h3>
+<p>After the questions, read the proposed summary. To record it, type the following word into the <strong>wizard prompt</strong>, not as a new shell command:</p>
+<pre class="output"><code class="language-text">SAVE
+</code></pre>
+<p>The word is case-sensitive. At this last question, <strong>Enter alone cancels</strong>. This differs from the individual questions where Enter keeps the old value. <code>save</code>, <code>YES</code> or any other text does not substitute for final <code>SAVE</code>.</p>
+<p>Cancellation or an input stream closing before SAVE does not commit the proposed record and does not start an audit. Existing declarations are left intact. A successful SAVE writes and rereads a local dated record, then launches <strong>audit only</strong>, without software installation.</p>
+<h3 id="step-11-4-understand-what-was-recorded">Step 11.4 — Understand what was recorded</h3>
+<p><code>USER_ACKNOWLEDGED</code> means a valid explicit local statement was read for this context. It is not a live API verification, proof of account ownership or guarantee that access will remain available. A future audit can reuse the dated declaration. Run <code>accounts</code> again to change or revoke it after circumstances change. The script does not import browser cookies or store credentials.</p>
+<p>A saved declaration does not by itself force <code>READY_FOR_TW2026</code>. The subsequent technical audit may still report missing applications or the wrong Node version. In that case read the failed checks rather than repeatedly saving the same answers.</p>
+<h2 id="12-configure-the-course-git-identity">12. Configure the course Git identity</h2>
+<p>Git needs a commit author name and email. This is not a GitHub password and does not authenticate a push. Use the name and address appropriate for your course commits, including a valid GitHub no-reply address when required by your privacy choices.</p>
+<div class="command"><div class="command-toolbar"><span>TERMINAL · CHECK THE SECTION</span><button aria-label="Copy this command" type="button">Copy command</button></div><pre><code class="language-bash">/bin/bash "$HOME/Downloads/TW2026_LINUX_ONEFILE_v1.0_RC1_WITH_GUIDE/TW2026_LINUX_ONEFILE_v1.0_RC1.sh" git</code></pre><span aria-live="polite" class="copy-status" role="status"></span></div>
+<p>The wizard verifies that a Git command works. It does not install Git or request Apple developer tools from inside the personal-action route. If Git is unavailable, complete the authorised setup route first.</p>
+<p>Type the author name at its question and the email at the next question. An existing value is displayed when available; Enter keeps it. Enter cannot turn a missing value into a valid identity. Type <code>X</code> to cancel. The email check is a basic format check, not an email ownership check.</p>
+<p>Review both proposed values, then type <code>SAVE</code> at the final wizard prompt. <strong>The Unix Git wizard also requires SAVE.</strong> Do not assume the behaviour of a different Windows revision. Any other final answer cancels, leaving the original course configuration intact.</p>
+<p>After SAVE, the code validates the proposed values in a private temporary file using Git itself, checks that the original did not change during the dialogue, then replaces only the small course <code>gitconfig</code> file. It rereads the committed values and deletes its temporary draft. No repository is created, commit made, push sent or credential configured.</p>
+<p>The normal <code>~/.gitconfig</code> is not rewritten. Git commands in the dedicated course terminal/editor environment use <code>GIT_CONFIG_GLOBAL</code> to select the course file. A repository's own configuration can still override identity; this is Git's normal configuration precedence. A course name/email being present does not establish your ownership of that email.</p>
+<p>A successful save is followed by audit. Cancelling does not run an audit. Changing the identity does not require reinstalling Node or the editor.</p>
+<h2 id="13-open-the-course-editor-for-daily-work">13. Open the course editor for daily work</h2>
+<p><strong>When:</strong> the exact native course runtime and a functional VS Code installation have been prepared. Use this instead of launching an unrelated old editor shortcut when you need the course environment.</p>
+<div class="command"><div class="command-toolbar"><span>TERMINAL · CHECK THE SECTION</span><button aria-label="Copy this command" type="button">Copy command</button></div><pre><code class="language-bash">/bin/bash "$HOME/Downloads/TW2026_LINUX_ONEFILE_v1.0_RC1_WITH_GUIDE/TW2026_LINUX_ONEFILE_v1.0_RC1.sh" vscode</code></pre><span aria-live="polite" class="copy-status" role="status"></span></div>
+<p>The action verifies the runtime and editor CLI before sending the launch request. It selects the separate course user-data and extension directories and opens the course workspace. It also prepares only the course profile's integrated terminal settings for <strong>TW2026 Bash</strong>, with the course runtime and Git configuration.</p>
+<p>A documented VS Code portable-data directory can override the CLI profile paths. Before requesting an isolated profile, the kit now rejects such a portable candidate and records <code>PORTABLE_DATA_OVERRIDE</code>. It does not move, rename or delete that directory. A different eligible installed CLI can still be selected. Read <code>VSCODE_CLI.json</code> in the engine report when all candidates are rejected.</p>
+<p>The normal editor profile and its settings are not the target of this change. The two required extension IDs remain <code>esbenp.prettier-vscode</code> and <code>dbaeumer.vscode-eslint</code>. Extensions are private to the Unix course profile. They are installed through setup actions, not installed just because you ask to open the editor.</p>
+<p>A launch request accepted by the CLI is labelled <code>EDITOR_LAUNCH_REQUEST_SENT</code>. That does not prove that a window became visible, that a project compiled or that every extension activated. If the launch process is still running after the observation period, it is not killed. Check the editor before requesting another launch.</p>
+<p>A wrong runtime produces <code>COURSE_RUNTIME_NOT_READY</code>, not a silent fallback to another Node major version. The editor action does not download a replacement. If course settings were hand-edited into JSON with comments or another unsupported shape, the script preserves them and reports the issue rather than overwriting an unreadable file.</p>
+<p>Open your seminar project according to its own README. The setup workspace is not a replacement for a repository checkout and does not run <code>npm install</code>, start servers or submit work on your behalf.</p>
+<h2 id="14-open-the-course-terminal-in-the-same-window">14. Open the course terminal in the same window</h2>
+<p><strong>When:</strong> you want commands to use the exact course Node/npm pair and course Git configuration.</p>
+<div class="command"><div class="command-toolbar"><span>TERMINAL · CHECK THE SECTION</span><button aria-label="Copy this command" type="button">Copy command</button></div><pre><code class="language-bash">/bin/bash "$HOME/Downloads/TW2026_LINUX_ONEFILE_v1.0_RC1_WITH_GUIDE/TW2026_LINUX_ONEFILE_v1.0_RC1.sh" terminal</code></pre><span aria-live="polite" class="copy-status" role="status"></span></div>
+<p>The action opens a dedicated interactive Bash session <strong>inside this terminal window</strong>. This is deliberate on both platforms: it does not depend on a particular Linux terminal emulator, AppleScript permissions or another window becoming visible.</p>
+<p>The prompt identifies the course context:</p>
+<pre class="output"><code class="language-text">[TW2026] ... $
+</code></pre>
+<p>Bash does not read your ordinary login/profile files in this session. The parent shell is not reconfigured and your preferred login shell stays unchanged. The course shell sets its own PATH, Git configuration and workspace. Personal shell aliases and startup customisations are therefore not guaranteed to be present. Shell history for this dedicated session is not saved by the kit.</p>
+<p>Inside the course shell, check Node:</p>
+<div class="command"><div class="command-toolbar"><span>TERMINAL · CHECK THE SECTION</span><button aria-label="Copy this command" type="button">Copy command</button></div><pre><code class="language-bash">node --version</code></pre><span aria-live="polite" class="copy-status" role="status"></span></div>
+<pre class="output"><code class="language-text">v24.21.0
+</code></pre>
+<p>Then check npm:</p>
+<div class="command"><div class="command-toolbar"><span>TERMINAL · CHECK THE SECTION</span><button aria-label="Copy this command" type="button">Copy command</button></div><pre><code class="language-bash">npm --version</code></pre><span aria-live="polite" class="copy-status" role="status"></span></div>
+<pre class="output"><code class="language-text">11.19.0
+</code></pre>
+<p>These commands are not reinstall commands. If the expected exact runtime is not available, the action should refuse before opening this session. A normal terminal opened independently can still select another system Node. That is consistent with keeping course changes local.</p>
+<p>When finished, type:</p>
+<div class="command"><div class="command-toolbar"><span>TERMINAL · CHECK THE SECTION</span><button aria-label="Copy this command" type="button">Copy command</button></div><pre><code class="language-bash">exit</code></pre><span aria-live="polite" class="copy-status" role="status"></span></div>
+<p>You return to the original shell and the wrapper finishes its utility report. Do not close the entire terminal just to leave the course session. Do not start a second TW2026 setup while this terminal action is still open; the enclosing run keeps its normal concurrency protection. Type <code>exit</code> first, then run the next setup action outside the course session.</p>
+<p>A utility result <code>COURSE_SHELL_CLOSED</code> is not a new readiness audit. The shell's own last exit status is recorded separately. Commands you choose to run inside the shell remain your responsibility and are not automatically collected as a transcript by this kit.</p>
+<h2 id="15-read-the-verdict-maintenance-and-completion-separately">15. Read the verdict, maintenance and completion separately</h2>
+<p>These are different questions. <strong>Readiness</strong> concerns the implemented required checks. <strong>Maintenance</strong> concerns attempted or skipped application updates. <strong>Completion</strong> concerns whether the processes and reports finished consistently. A fourth field, <strong>action status</strong>, explains utility outcomes which did not audit the environment.</p>
+<div aria-label="Scrollable reference table" class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>Result</th>
+<th>Meaning and sensible next step</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>READY_FOR_TW2026</code>, exit 0</td>
+<td>Required checks passed with relevant acknowledgements. Stop reinstalling and use the tools. Not a GUI or account API certificate.</td>
+</tr>
+<tr>
+<td><code>TECHNICALLY_READY_PERSONAL_ACTIONS_PENDING</code>, exit 3</td>
+<td>Technical checks passed but a personal condition or transaction remains. Read the named pending item.</td>
+</tr>
+<tr>
+<td><code>NOT_READY</code>, exit 2</td>
+<td>One or more required technical checks failed. Read those checks before changing installations.</td>
+</tr>
+<tr>
+<td><code>NOT_EVALUATED_UTILITY</code></td>
+<td>This action opened a tool or handled a personal interaction without a completed audit. Its zero is not a readiness pass.</td>
+</tr>
+<tr>
+<td><code>SETUP_ERROR</code>, exit 70</td>
+<td>Integrity, self-test, execution, reporting or completion consistency failed. Preserve evidence.</td>
+</tr>
+<tr>
+<td><code>CANCELLED</code>, exit 4</td>
+<td>Proposed personal values were not saved and no follow-on audit was started.</td>
+</tr>
+<tr>
+<td>Exit 75</td>
+<td>Another run or an unresolved lock prevents safe continuation. Do not remove locks blindly.</td>
+</tr>
+<tr>
+<td>Exit 78</td>
+<td>Wrong platform, unsupported context or an interactive/local-session prerequisite was not met.</td>
+</tr>
+<tr>
+<td>Exit 64</td>
+<td>Invalid action or extra arguments. Use one listed action.</td>
+</tr>
+</tbody>
+</table></div>
+<p><code>NOT_CHECKED_AUDIT_MODE</code> means application updates were not checked. <code>UPDATES_NOT_CHECKED_RESUME</code> means updates were intentionally skipped during missing-only work. <code>PARTIAL</code> is not a promise that every operation completed. Provider background updates are not evaluated simply by running this audit.</p>
+<p>A complete audited one-file run normally ends with fields such as:</p>
+<pre class="output"><code class="language-text">ONEFILE_VERDICT: NOT_READY
+MAINTENANCE: NOT_CHECKED_AUDIT_MODE
+ONEFILE_REPORT: /actual/path/to/ONEFILE_REPORT.html
+ONEFILE_EVIDENCE_ARCHIVE: /actual/path/to/run.tar.gz
+ONEFILE_EXIT_CODE: 2
+COMPLETION_RECEIPT: VERIFIED
+BOOTSTRAP_EXIT_CODE: 2
+ONEFILE_BOOTSTRAP_EXIT_CODE: 2
+</code></pre>
+<p>This intentionally illustrates a completed <strong>failed-readiness</strong> diagnosis, not a promised pass. Do not paste the example into a terminal. The printed actual paths belong to your invocation.</p>
+<p>The child receipt must match the fresh token, action and exit code. The engine report must agree with the receipt. The outer completion also records the wrapper report's digest. A zero exit without the required matching records is not accepted as a successful audited run.</p>
+<h2 id="16-locate-the-correct-report-and-evidence">16. Locate the correct report and evidence</h2>
+<p>The private state directory on this platform is:</p>
+<pre class="output"><code class="language-text">$HOME/.local/share/TW2026/linux
+</code></pre>
+<p>Each dispatch creates a new subdirectory in <code>reports</code>. It contains <code>ONEFILE_REPORT.html</code>, <code>ONEFILE_REPORT.json</code>, a summary, self-test output and the outer completion record. When an engine audit follows, its detailed report is inside the <code>engine</code> subdirectory. The wrapper HTML links to that report.</p>
+<p>The console prints the actual wrapper report path and evidence archive. The outer <code>.tar.gz</code> contains the action report plus any child engine evidence. This is the single report bundle to inspect and share for that run, rather than a random older ZIP from the Downloads directory.</p>
+<p>Read the last confirmed wrapper report path:</p>
+<div class="command"><div class="command-toolbar"><span>TERMINAL · CHECK THE SECTION</span><button aria-label="Copy this command" type="button">Copy command</button></div><pre><code class="language-bash">cat "$HOME/.local/share/TW2026/linux/LAST_ONEFILE_REPORT.txt"</code></pre><span aria-live="polite" class="copy-status" role="status"></span></div>
+<p>Only after that file exists, open its report:</p>
+<div class="command"><div class="command-toolbar"><span>TERMINAL · CHECK THE SECTION</span><button aria-label="Copy this command" type="button">Copy command</button></div><pre><code class="language-bash">xdg-open "$(cat "$HOME/.local/share/TW2026/linux/LAST_ONEFILE_REPORT.txt")"</code></pre><span aria-live="polite" class="copy-status" role="status"></span></div>
+<p>A missing pointer is not permission to invent a timestamped report path. Early bootstrap failures can stop before an engine report exists. Preserve the exact console output in that situation. The wrapper pointer is <code>LAST_ONEFILE_REPORT.txt</code>; the older <code>LAST_REPORT.txt</code> identifies the detailed platform-engine report rather than the wrapper.</p>
+<p>Reports are not uploaded. Before sharing an archive, inspect the included HTML, JSON and raw logs. The main reports redact the home-directory prefix, but raw provider output can include local paths, repository addresses or organisational information. Passwords, recovery codes, account tokens and browser profiles are not requested. Personal identity is stored in the private course Git configuration, not used as proof of ownership.</p>
+<p>The report archive has a neighbouring <code>.sha256</code> file. It is an ordinary compressed archive, not an executable. Do not run it. If you need to review it manually, extract it into a separate review folder using the desktop archive manager, then read the HTML without moving its linked <code>engine</code> folder away.</p>
+<h2 id="17-progress-timeouts-and-concurrent-operations">17. Progress, timeouts and concurrent operations</h2>
+<p>Version probes and other disposable diagnostics have time and output limits. Package and application modifications are handled differently: interrupting a package manager during a transaction can leave inconsistent state. The kit records and observes those operations without killing them merely because a parent waiting limit expired.</p>
+<p>If an operation is reported pending, do not repeatedly launch setup or delete its pending record. A later run checks the matching transaction state and completion record before further changes. A crash may leave an unresolved lock which needs inspection. An absent PID alone is not used as permission to discard the record.</p>
+<p>During cache preparation a separate extraction lock prevents two copies from preparing the same cache concurrently. After an exact copy is selected, the platform entry owns the normal run lock. Earlier extracted copies are not forcibly renamed or deleted. A changed cached payload is not reused merely because the directory exists; the exact file set and hashes are checked again.</p>
+<p><code>Ctrl+C</code> inside a personal wizard cancels rather than accepting answers. Closing the terminal or interrupting installation is not the normal completion procedure. Preserve a genuine failure and its last visible phase instead of trying speculative permission changes.</p>
+<h2 id="18-troubleshoot-the-actual-message">18. Troubleshoot the actual message</h2>
+<p><strong>File not found:</strong> confirm the ZIP name, top-level folder and <code>.sh</code> filename. A <code>(1)</code> suffix or a second nested directory changes the path. Use the existence checks in Section 4. Administrator privileges cannot make a file appear at a different location.</p>
+<p><strong>A continuation prompt appears:</strong> a pasted command may have an unclosed quote. Press Ctrl+C to cancel the incomplete input, then paste one complete command from this guide. Do not add arbitrary quotes or braces. Do not copy the displayed prompt.</p>
+<p><strong>Permission denied:</strong> distinguish a missing executable bit from a security restriction or unsafe state directory. Explicit <code>/bin/bash</code> is already provided to avoid an unnecessary <code>chmod</code> step. Do not recursively change ownership or permissions over your home directory. Read the exact named path.</p>
+<p><strong>Wrong-platform package:</strong> the macOS and Linux user archives have deliberate platform gates. Choose the matching archive. There is also a combined source package for development, but it is not a reason to force an unqualified operating-system route.</p>
+<p><strong>Payload hash or manifest failed:</strong> preserve the current file and obtain the intended copy again. Do not edit <code>RUNTIME_SHA256SUMS.txt</code> or expected hashes to approve an unexplained change. A developer manifest-refresh helper is not a user repair operation.</p>
+<p><strong>No diagnostic Node:</strong> audit and personal actions do not download one silently. On a qualified new computer, use the intended setup action when you authorise installation. Do not globally downgrade an unrelated Node project just to make an audit green.</p>
+<p><strong>Download or metadata changed:</strong> a checksum mismatch or unknown provider structure is a refusal, not a cue to use an arbitrary mirror. A reviewed candidate update may be needed. Certificate checks and required hashes are not disabled to hide a failure.</p>
+<p><strong>Package operation still active:</strong> let its actual operating-system operation finish before another modification. Do not terminate an unrelated process or remove manager locks. A genuinely stuck transaction can need an authorised administrator, which the kit reports rather than conceals.</p>
+<p><strong>Portable editor profile conflict:</strong> <code>PORTABLE_DATA_OVERRIDE</code> means the detected portable editor can redirect extension or profile writes. Preserve the portable installation and its data. Use an eligible normal installation through your approved software route rather than removing the data directory to make a check pass. This diagnostic does not say that portable VS Code is generally unsafe.</p>
+<p><strong>Account wizard immediately stops:</strong> use an interactive terminal and the <code>accounts</code> action. Do not pipe a prepared answer file. If you cancelled, code 4 is expected. If it failed before any question, preserve the exact phase and bootstrap output.</p>
+<p><strong>Saved accounts but still exit 2:</strong> saving a declaration does not install missing apps or change Node. Read the technical audit. Reconfirming the same accounts is not a repair for a missing CLI.</p>
+<p><strong>Git identity differs in a project:</strong> repository-local Git configuration can override the course global file. Inspect the seminar project's configuration under its own instructions. The setup wizard does not rewrite every repository or infer that a commit email belongs to you.</p>
+<p><strong>Editor requested but no window:</strong> a launch request is not a GUI test. Check existing editor windows and the action result. No hidden <code>--no-sandbox</code> fallback or forced closing of other apps is attempted. A profile using unsupported portable-mode behaviour may require an explicitly reviewed installation route.</p>
+<p><strong>Terminal shows another Node outside the course session:</strong> this can be intentional. The normal shell remains unchanged. Use the <code>terminal</code> or <code>vscode</code> action for the selected course context, rather than editing system PATH blindly.</p>
+<h2 id="19-source-inspection-and-optional-integrity-checks">19. Source inspection and optional integrity checks</h2>
+<p>Show the short usage text and embedded guide location:</p>
+<div class="command"><div class="command-toolbar"><span>TERMINAL · CHECK THE SECTION</span><button aria-label="Copy this command" type="button">Copy command</button></div><pre><code class="language-bash">/bin/bash "$HOME/Downloads/TW2026_LINUX_ONEFILE_v1.0_RC1_WITH_GUIDE/TW2026_LINUX_ONEFILE_v1.0_RC1.sh" help</code></pre><span aria-live="polite" class="copy-status" role="status"></span></div>
+<p>Export or select the checked embedded sources without installation:</p>
+<div class="command"><div class="command-toolbar"><span>TERMINAL · CHECK THE SECTION</span><button aria-label="Copy this command" type="button">Copy command</button></div><pre><code class="language-bash">/bin/bash "$HOME/Downloads/TW2026_LINUX_ONEFILE_v1.0_RC1_WITH_GUIDE/TW2026_LINUX_ONEFILE_v1.0_RC1.sh" extract</code></pre><span aria-live="polite" class="copy-status" role="status"></span></div>
+<p>The output <code>EXTRACTED_SOURCE_PATH</code> is an actual private directory selected by this run. It is not a request to manually move internal scripts. The source includes both platform engines, policy and tests. The user <code>.sh</code> remains self-contained when moved by itself, but cached internal modules must stay together.</p>
+<p>Inspect platform metadata and candidate command paths:</p>
+<div class="command"><div class="command-toolbar"><span>TERMINAL · CHECK THE SECTION</span><button aria-label="Copy this command" type="button">Copy command</button></div><pre><code class="language-bash">/bin/bash "$HOME/Downloads/TW2026_LINUX_ONEFILE_v1.0_RC1_WITH_GUIDE/TW2026_LINUX_ONEFILE_v1.0_RC1.sh" inspect</code></pre><span aria-live="polite" class="copy-status" role="status"></span></div>
+<p><code>CANDIDATE</code> means a path was found, not that the application has passed a version, signature or GUI check. Inspection does not evaluate course readiness or authenticate online accounts.</p>
+<p>To check the files in the extracted <strong>user package</strong> against its external manifest:</p>
+<div class="command"><div class="command-toolbar"><span>TERMINAL · CHECK THE SECTION</span><button aria-label="Copy this command" type="button">Copy command</button></div><pre><code class="language-bash">cd "$HOME/Downloads/TW2026_LINUX_ONEFILE_v1.0_RC1_WITH_GUIDE" &amp;&amp; sha256sum -c SHA256SUMS.txt</code></pre><span aria-live="polite" class="copy-status" role="status"></span></div>
+<p>Each listed file should report <code>OK</code>. This is one of the few guide commands which uses <code>cd</code>, because the manifest contains relative paths. A failed checksum is a reason to stop, not to regenerate the manifest. A hash establishes correspondence with expected bytes, not publisher identity or universal correctness.</p>
+<h2 id="20-what-stays-unchanged-and-what-can-change">20. What stays unchanged and what can change</h2>
+<p>Normal shell startup files, global PATH, unrelated Node installations, project lockfiles and ordinary Git identity are not automatically rewritten by the one-file utility. Personal declarations remain local to the appropriate OS/user context. The working Windows kit is a separate installation.</p>
+<p>The private course directories, reports, source cache, Git configuration, editor profile and extension folder can be created or updated by their documented actions. The application-install routes can modify existing managed applications and their dependencies. Native provider installers and services retain their own behaviour; course isolation is not a promise that every application on the computer is a private copy.</p>
+<p>No GitHub repository is created, remote branch pushed, account accessed, email sent, paid resource provisioned or report uploaded by these actions. There is no TW2026 recurring job. Online account access, administrator permission and licence decisions remain personal conditions.</p>
+<p>Keep projects out of extracted source/cache directories. A future candidate may select a different source hash without moving or deleting the old copy. Do not store valuable work inside the runtime payload merely because the source path was printed.</p>
+<h2 id="21-verification-evidence-and-remaining-acceptance">21. Verification evidence and remaining acceptance</h2>
+<p>The matching <code>PACKAGING_AUDIT.json</code> records what was checked for this user archive. The cumulative engineering package contains the detailed Phase 5 validation, unit/process tests, native Linux audit and HTML command-copy evidence. Historical Phase 4 and earlier evidence remains explicitly historical, not relabelled as a Phase 5 run.</p>
+<p>Local Linux tests include harmless child processes, temporary Git configuration, account save/cancel scenarios, source corruption rejection and the non-installing wrapper audit. Injected successful Mac responses exercise control flow, not Apple signatures. A test fixture marked ready is not evidence that an actual Mac reached readiness.</p>
+<p>No native Mac GUI, Apple licence dialogue, fresh APT/Snap/Homebrew transaction or Linux ARM64 desktop acceptance was performed here. The pinned Node binary was not executed in this development environment. The native diagnostic runtime differs from the required course runtime, so the real local audit should report that mismatch honestly.</p>
+<p>Phase 5 is the final consolidated production delivery. There is no sixth production phase. Native acceptance on unavailable systems remains a stated evidence condition, not an invented pass. Successful Windows results do not certify macOS or Linux. The current package contains the documented operational commands, not placeholders reserved for another phase.</p>
+<h2 id="22-primary-implementation-references">22. Primary implementation references</h2>
+<p>The following references support the underlying commands and platform mechanisms, not a certificate that this candidate runs on every configuration. Documentation can change. No DOI is invented for software documentation.</p>
+<div aria-label="Scrollable reference table" class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>Reference</th>
+<th>Relevance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://git-scm.com/docs/git-config">Git configuration manual</a></td>
+<td><code>--file</code>, <code>GIT_CONFIG_GLOBAL</code> and configuration precedence</td>
+</tr>
+<tr>
+<td><a href="https://code.visualstudio.com/docs/configure/command-line">VS Code command line</a></td>
+<td>CLI actions, separate user data and extension directories</td>
+</tr>
+<tr>
+<td><a href="https://code.visualstudio.com/docs/setup/portable">VS Code portable mode</a></td>
+<td>Portable data can override requested user-data and extension directories</td>
+</tr>
+<tr>
+<td><a href="https://www.gnu.org/software/bash/manual/bash.html">Bash reference manual</a></td>
+<td>Interactive shells, <code>--noprofile</code> and <code>--norc</code></td>
+</tr>
+<tr>
+<td><a href="https://nodejs.org/en/download/archive/v24.21.0">Node course-version archive</a></td>
+<td>Inherited version baseline; not an assertion that this binary was executed here</td>
+</tr>
+<tr>
+<td><a href="https://code.visualstudio.com/docs/setup/linux">VS Code Linux installation</a></td>
+<td>Distribution and Snap installation options</td>
+</tr>
+<tr>
+<td><a href="https://learning.postman.com/docs/getting-started/installation/install-app">Postman desktop installation</a></td>
+<td>The desktop application route</td>
+</tr>
+<tr>
+<td><a href="https://manpages.debian.org/trixie/apt/apt-get.8.en.html">Debian apt-get manual</a></td>
+<td>Named package operations and dependency behaviour</td>
+</tr>
+</tbody>
+</table></div>
+<p>The Git, VS Code CLI and Bash documentation was checked during Phase 5. Platform installation references and the software policy are carried from the reviewed Phase 3 baseline. Distinguish current documentation from inherited implementation choices.</p>
+<h2 id="23-replacing-an-earlier-unix-candidate-without-starting-again">23. Replacing an earlier Unix candidate without starting again</h2>
+<p>The version in this package replaces the <strong>downloaded entry script</strong>, not your whole course environment. It uses the same platform state directory as v0.4. Existing valid account acknowledgements, course Git configuration, workspace, application receipts and private runtime are reused under the same context checks. The new embedded source hash selects a new source-cache copy. Old copies are not overwritten or renamed.</p>
+<p>Keep an older ZIP as evidence until the intended new script has run. Extract the new ZIP into its own correctly named folder. Do not mix the contents of two package folders and do not rename a v0.4 script to the 1.0 filename. A filename change does not change the embedded code.</p>
+<p>On an environment that previously worked, run the <strong>audit command in Section 6</strong> first. This does not request application updates. A valid saved account declaration should not need to be entered again merely because a script version changed. A Git identity already present in the course configuration should not need to be rewritten. The runtime and software policy are unchanged in this release.</p>
+<p>Do not remove the platform state directory to clear a warning. It includes your course workspace as well as configuration and reports. Also do not recursively delete every extracted cache merely because there are several copies. A retained cache or report is not proof that an application was installed twice. Keeping historical evidence does not by itself stop the new script from selecting a valid new source copy.</p>
+<p>If an audit identifies a specific missing tool, use <code>resume</code> only after reading the named failure and confirming that installation is allowed on that target. If it identifies an unresolved active transaction, do not launch another update in parallel. If it identifies an unsupported platform, a newer filename does not authorise bypassing that platform gate.</p>
+<h2 id="24-first-use-evidence-and-handover">24. First-use evidence and handover</h2>
+<p>This section explains the boundary between a completed kit and acceptance on your own computer. It is not a demand to rerun every command in the guide. A target is not fully accepted merely because this README opens or the script's help returns zero.</p>
+<p>For an existing environment, choose the audit route. For a genuinely new environment, choose the setup route under the normal user account and the institution's approval rules. Read the returned readiness, maintenance and completion fields together. Record or revoke account declarations only after personally checking the conditions. A <code>USER_ACKNOWLEDGED</code> result remains a dated local statement, not an account API check.</p>
+<p>When the required technical checks have passed, normal daily work uses <code>vscode</code> or <code>terminal</code>, not repeated <code>auto</code> runs. The terminal must report the required course Node/npm context. In the editor, check that the expected course workspace opens and that a terminal uses the course runtime. A successful launch request alone does not certify the visible window, extension activation or every exercise. Do not use an unrelated project as an installation experiment.</p>
+<p>Keep the path printed after <code>ONEFILE_EVIDENCE_ARCHIVE:</code>. Review the archive before sharing it. If a failure occurs very early, there may be only a bootstrap directory and console text rather than a full report archive. Send the exact command, visible failure and actual saved evidence when requesting support. Do not manufacture a missing report path or share passwords, authentication cookies, personal tokens or recovery codes.</p>
+<p>The <code>PLATFORM_ACCEPTANCE.md</code> file identifies which native scenarios were unavailable during production. The release retains <code>RC1</code> for that reason. It is ready for the documented target-validation route, not labelled universally error-free or silently promoted to an Apple-signed application. Native target evidence may close a listed acceptance condition later without changing the fact that the five agreed production phases are complete.</p>
+<p><strong>Production is complete.</strong> Keep the package and its manifest together. Use <code>audit</code> for an existing environment or the documented setup route for a new target. A new release note is not a reason to reinstall already working tools.</p>
+</main></div><footer>Offline guide · British English · Source: README_LINUX.md · Copying never executes a command.</footer><script>
+document.querySelectorAll('.command').forEach(box=>{
+ const button=box.querySelector('button'),code=box.querySelector('code'),status=box.querySelector('.copy-status');
+ button.addEventListener('click',async()=>{
+  const text=code.textContent;
+  try {if(!navigator.clipboard||!navigator.clipboard.writeText)throw Error('Clipboard unavailable');await navigator.clipboard.writeText(text);status.textContent='Copied. Paste into the stated terminal only when this section matches your task.';}
+  catch(error){const selection=window.getSelection(),range=document.createRange();range.selectNodeContents(code);selection.removeAllRanges();selection.addRange(range);status.textContent='Command selected. Press Command+C on macOS or Ctrl+C on Linux. The guide does not execute it.';}
+ });
+});
+</script></body></html>

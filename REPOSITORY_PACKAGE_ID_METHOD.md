@@ -14,13 +14,22 @@ sorted by their Unicode-normalised, case-folded representation. Each manifest ro
 uses:
 
 ```text
-<sha256><two spaces><relative/path>\n
+<sha256><two spaces><relative/path>
+
 ```
 
-In an ordinary extracted archive, validation hashes the filesystem bytes. In a
-Git checkout, validation hashes the committed bytes exposed by `git archive HEAD`;
-this prevents `.gitattributes` line-ending conversion from producing a false
-manifest mismatch.
+In an ordinary extracted archive, final validation hashes filesystem bytes. In a
+Git checkout, final validation hashes committed Git blobs so `.gitattributes`
+line-ending conversion cannot create false mismatches.
 
-`REPOSITORY_PACKAGE_ID.txt` is the SHA-256 of the exact UTF-8 bytes of
-`REPOSITORY_SHA256SUMS.txt`.
+## Work-in-progress rule
+
+While `metadata/development-state.json` declares `work-in-progress`, the manifest
+and package ID remain the last frozen baseline. The validator checks that the two
+baseline identity files agree with each other but does not compare that baseline
+manifest with the changing repository tree.
+
+At the final freeze, the state must change to `final`, temporary alternative ZIP
+aliases must be removed, the manifest must be regenerated once and
+`REPOSITORY_PACKAGE_ID.txt` must become the SHA-256 of the exact UTF-8 bytes of the
+new `REPOSITORY_SHA256SUMS.txt`.

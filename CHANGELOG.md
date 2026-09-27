@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased — repository construction continues
+
+- Paused all automatic GitHub Actions triggers; validation, Pages and releases remain manual-only.
+- Added structured Windows, macOS and Linux one-file setup candidates under `00_SETUP/ALTERNATIVES`.
+- Exposed exact package guides and audit files for browser inspection while keeping launchers canonical inside ZIP archives.
+- Added SHA-256 sidecars and guide-mirror manifests for all alternative packages.
+- Marked repository identity as a frozen baseline until the final corpus freeze.
+- Added WIP validation for manual-only workflows, alternative-package mirrors and temporary flat aliases.
+
 ## 2.0.1 — post-upload validation hotfix (2026-09-27)
 
 - Corrected repository identity validation inside a GitHub Actions checkout.

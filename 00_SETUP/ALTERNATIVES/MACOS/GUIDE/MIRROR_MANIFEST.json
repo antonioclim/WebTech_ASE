@@ -1,0 +1,52 @@
+{
+  "schema": "webtech-ase.alternative-guide-mirror.v1",
+  "platform": "macos",
+  "repository_state": "work-in-progress",
+  "package_status": "RELEASE_CANDIDATE_NATIVE_ACCEPTANCE_PARTIAL",
+  "archive": "DOWNLOAD/TW2026_MACOS_ONEFILE_v1.0_RC1_WITH_GUIDE.zip",
+  "archive_sha256": "0d3a805955d77fc2f4fdcf76851bfe98be56962fdce554fbc4c6b4cc1d685627",
+  "archive_bytes": 207932,
+  "archive_root": "TW2026_MACOS_ONEFILE_v1.0_RC1_WITH_GUIDE",
+  "mirrored_files": [
+    {
+      "source_member": "TW2026_MACOS_ONEFILE_v1.0_RC1_WITH_GUIDE/README.md",
+      "target": "GUIDE/README.md",
+      "sha256": "faeae8a9a67453bea8fc7d191c258a0cc6825cb3601b064f7d5403bbb391b3af",
+      "bytes": 47587
+    },
+    {
+      "source_member": "TW2026_MACOS_ONEFILE_v1.0_RC1_WITH_GUIDE/README.html",
+      "target": "GUIDE/README.html",
+      "sha256": "c8d9f0374c74b27d06174aeaf639ef00ced9b3ae7dda9ff04d928914b18ae797",
+      "bytes": 68413
+    },
+    {
+      "source_member": "TW2026_MACOS_ONEFILE_v1.0_RC1_WITH_GUIDE/PLATFORM_ACCEPTANCE.md",
+      "target": "GUIDE/PLATFORM_ACCEPTANCE.md",
+      "sha256": "c538ece9cd8eef5ef7cc45c9cc3806d23267399ee47bf90a2259c455611f1749",
+      "bytes": 3900
+    },
+    {
+      "source_member": "TW2026_MACOS_ONEFILE_v1.0_RC1_WITH_GUIDE/RELEASE_NOTES.md",
+      "target": "GUIDE/RELEASE_NOTES.md",
+      "sha256": "1e6058b9d5947ac97c6b56b1d3e5d5f3f5cfda9a6422b30915e64edc41aaf867",
+      "bytes": 3079
+    },
+    {
+      "source_member": "TW2026_MACOS_ONEFILE_v1.0_RC1_WITH_GUIDE/PACKAGING_AUDIT.json",
+      "target": "GUIDE/PACKAGING_AUDIT.json",
+      "sha256": "3cf90a84eca35610bbeb76f81fe38e1b34f8c1446bc9a829f1a85d24f4464dd7",
+      "bytes": 2604
+    },
+    {
+      "source_member": "TW2026_MACOS_ONEFILE_v1.0_RC1_WITH_GUIDE/SHA256SUMS.txt",
+      "target": "GUIDE/SHA256SUMS.txt",
+      "sha256": "84fdd7e49b03e67baf7617650db6a2e3a8dfa97589d68277fd1e095bf09bebbf",
+      "bytes": 512
+    }
+  ],
+  "executable_members_not_mirrored": [
+    "TW2026_MACOS_ONEFILE_v1.0_RC1_WITH_GUIDE/TW2026_MACOS_ONEFILE_v1.0_RC1.sh"
+  ],
+  "policy": "The ZIP is the canonical executable artefact. GUIDE mirrors only documentation and audit files for browser inspection."
+}

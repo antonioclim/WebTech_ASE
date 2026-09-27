@@ -1,14 +1,18 @@
 # Maintainer documentation
 
-The initial publication profile is **browser only**. Start with:
+The current repository state is **work in progress** and the publication profile is
+**browser only**.
 
-1. `FIRST_UPLOAD_GUIDE.md`;
-2. `FINAL_UPLOAD_CHECKLIST.md`;
-3. `GITHUB_REPOSITORY_SETTINGS.md`;
-4. `GITHUB_PAGES_SETUP.md`;
-5. `WEEKLY_RELEASE_PUBLISHING.md`.
+Start with:
 
-The private instructor staging archive is not a GitHub upload source. Local
-validation scripts remain available for reproducibility, but the first upload does
-not require Git, GitHub Desktop, PowerShell, Terminal or another shell. After the final browser upload, the owner manually runs **Deploy GitHub Pages** once.
-That single workflow performs the authoritative repository validation and site deployment.
+1. `DEVELOPMENT_WORKFLOW.md`;
+2. `FIRST_UPLOAD_GUIDE.md`;
+3. `FINAL_UPLOAD_CHECKLIST.md`;
+4. `GITHUB_REPOSITORY_SETTINGS.md`;
+5. `GITHUB_PAGES_SETUP.md`;
+6. `WEEKLY_RELEASE_PUBLISHING.md`.
+
+The private instructor staging archive is not a GitHub upload source. GitHub
+Actions workflows are manual-only and must not be run until the final corpus
+freeze. The final owner-triggered Pages workflow performs repository validation,
+site construction, payload validation and deployment in one run.
