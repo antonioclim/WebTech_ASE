@@ -1,8 +1,6 @@
 name: Validate public teaching repository
 
 on:
-  push:
-  pull_request:
   workflow_dispatch:
 
 permissions:
