@@ -1,0 +1,6 @@
+CONTRACT S02 v2.1
+- Editaţi numai public/styles.css.
+- 1/2/4 coloane la 320/768/1280 px.
+- Nu ascundeţi overflow-ul şi nu modificaţi HTML-ul.
+- STOP la 60:00 pentru nucleu. Extensia 60–73 este opţională.
+- Timeout/crash/signal/leak nu este expected pedagogical FAIL.

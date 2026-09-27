@@ -1,0 +1,16 @@
+{
+  "object": "S02",
+  "releaseVersion": "v2.2.1 FINAL",
+  "date": "2026-09-27",
+  "auditMode": "independent hostile fail-closed hardening",
+  "changes": [
+    "Forced TAP output for deterministic Node 24 assertion counting.",
+    "Required exactly three objective assertion failures in the initial student state.",
+    "Aligned Windows and POSIX launchers to Node.js v24.21.0 and npm 11.19.0.",
+    "Made POSIX package verification exact-set and fail-closed.",
+    "Added POSIX teacher checks for student initial state and canonical reference."
+  ],
+  "canonicalRepositoryModified": false,
+  "requiredNode": "v24.21.0",
+  "requiredNpm": "11.19.0"
+}
