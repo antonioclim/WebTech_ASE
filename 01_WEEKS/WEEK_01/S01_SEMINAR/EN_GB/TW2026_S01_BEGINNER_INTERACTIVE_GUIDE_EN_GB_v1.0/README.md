@@ -15,3 +15,9 @@ The guide is fully offline and contains:
 - a one-page lecturer cue card.
 
 The package does not modify the audited S01 v6.0.1 kit. The clean English-only form is a standalone convenience copy.
+
+
+NOTE: Sometimes is better to launch firs/secon project server using a variant command (instead of .\START_PROJECT_2.cmd) : $env:TW2026_ALLOW_RUNTIME_MISMATCH="1"
+.\START_PROJECT_1.cmd
+
+The troubles can occur only under MS Windows systems.
