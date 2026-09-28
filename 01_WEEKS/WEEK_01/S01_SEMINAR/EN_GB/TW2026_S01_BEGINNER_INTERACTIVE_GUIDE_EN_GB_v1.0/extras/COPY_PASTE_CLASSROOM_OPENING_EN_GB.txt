@@ -1,0 +1,5 @@
+Today you will work individually. We will follow the same sequence together, but each of you must run the experiments on your own computer, record your own observations and submit your own evidence form.
+
+The goal is not merely to obtain a green test. The goal is to connect a claim to an HTTP exchange, a test result and an explicit limitation.
+
+In Project 1, you may change one JSON file only. In Project 2, you may change one JavaScript file only. Do not modify the tests, the launchers or the project infrastructure.
