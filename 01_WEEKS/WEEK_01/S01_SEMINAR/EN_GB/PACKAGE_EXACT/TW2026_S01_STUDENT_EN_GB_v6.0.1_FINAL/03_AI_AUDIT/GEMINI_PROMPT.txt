@@ -1,1 +1,36 @@
-Analyse only the patch for GET /api/greetings/<name>. For every claim, state observed / inferred / unknown, the minimum counterexample, the relevant test and the limitation. Do not change tests or extend the surface beyond src/application-handler.js.
+Analyse only the deliberately flawed patch for:
+
+GET /api/greetings/<name>
+
+For every claim, provide:
+1. classification: observed, inferred or unknown;
+2. the minimum counterexample;
+3. the relevant test or HTTP observation;
+4. a verdict: accepted, rejected, partly accepted or unknown;
+5. the limitation of the available evidence.
+
+Do not modify the tests.
+Do not propose changes outside src/application-handler.js.
+Do not extend the route contract.
+
+Required contract:
+- GET /api/greetings/Ada returns status 200;
+- GET /api/greetings/Ada%20Lovelace decodes and trims the name;
+- GET /api/greetings/%20%20 returns status 400 with name_required;
+- GET /api/greetings/Ada/extra must not be accepted by this route;
+- the successful response is:
+  {"message":"Hello, <name>!","source":"path"}
+
+Deliberately flawed patch:
+
+if (url.pathname.includes('/api/greetings/')) {
+  const name = url.pathname.split('/').pop();
+  sendJson(response, 200, { greeting: `Hello, ${name}!` });
+  return true;
+}
+
+Claim:
+“The patch covers every name, including encoded spaces and empty names.”
+
+Return a table with these columns:
+Claim | Observed / inferred / unknown | Minimum counterexample | Relevant test or evidence | Verdict | Limitation

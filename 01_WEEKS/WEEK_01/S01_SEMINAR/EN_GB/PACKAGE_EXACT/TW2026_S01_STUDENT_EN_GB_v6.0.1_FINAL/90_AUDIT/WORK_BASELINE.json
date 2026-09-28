@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "02_PROJECTS/P01_HTTP_DETECTIVE/README.md",
-      "sha256": "1416696932b056d91eb45a643c7ed0a0a9b0f778eda47b1a7ce3d8828db4001c"
+      "sha256": "04ee3b430f349da0014a26ca74bdf23f3d035adffb7ae8b51fa599d7b327e890"
     },
     {
       "path": "02_PROJECTS/P01_HTTP_DETECTIVE/case-report.json",
@@ -58,7 +58,7 @@
     },
     {
       "path": "02_PROJECTS/P02_TINY_HTTP_SERVER/README.md",
-      "sha256": "3e114c84eb540194860f8611dfcf813b0f95a5d4d1ab42f90b9e6cd481803a05"
+      "sha256": "409bbb33dfec64e60ea22d715d6aa305fc60be78385278c096dd80565a8383fa"
     },
     {
       "path": "02_PROJECTS/P02_TINY_HTTP_SERVER/package-lock.json",

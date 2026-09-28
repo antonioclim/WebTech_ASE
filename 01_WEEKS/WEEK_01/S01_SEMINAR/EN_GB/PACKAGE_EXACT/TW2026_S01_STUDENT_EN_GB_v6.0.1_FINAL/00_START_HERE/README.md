@@ -1,39 +1,72 @@
-# S01 — start here
+# S01 — start here — EN-GB v6.0.2 FINAL
 
-This package contains only the Seminar 1 core route: **HTTP Detective** and **Tiny HTTP Server**. Project 3 is not part of the main student kit.
+This package contains the complete Seminar 1 student route: **HTTP Detective** and **Tiny HTTP Server**.
+
+## First action
+
+On Windows, double-click:
+
+```text
+OPEN_BEGINNER_GUIDE.cmd
+```
+
+On macOS/Linux, open a terminal in the extracted kit folder and run:
+
+```bash
+bash OPEN_BEGINNER_GUIDE.sh
+```
+
+The interactive guide explains every click in VS Code, Chrome, Edge, Firefox, Gemini and Moodle. It includes annotated images, exact commands, expected outputs, STOP conditions and recovery steps.
 
 ## Before the seminar
 
-1. Extract the complete ZIP to a short path such as `D:\TW2026\S01` or `$HOME/TW2026/S01`.
+1. Extract the complete ZIP to a short local path such as `D:\TW2026\S01` or `$HOME/TW2026/S01`.
 2. Do not work from inside the ZIP, OneDrive/iCloud or a read-only folder.
 3. Run `VERIFY_PACKAGE.cmd` on Windows or `bash VERIFY_PACKAGE.sh` on macOS/Linux.
 4. Run `CHECK_ENVIRONMENT.cmd` or `bash CHECK_ENVIRONMENT.sh`.
-5. The required runtime is Node.js `v24.21.0`.
-6. **Do not run `npm install`**: the projects have no external dependencies.
+5. The required runtime is Node.js `v24.21.0` with npm `11.19.0`.
+6. Do **not** run `npm install`: the projects have no external dependencies.
 
-## Initial state
-
-Run `VERIFY_INITIAL_STATE`. The correct state is:
+## Required sequence
 
 ```text
-P1 baseline PASS, objective 1 assertion FAIL, regression PASS
-P2 baseline PASS, objective 2 assertion FAIL, regression PASS
+VERIFY_PACKAGE
+→ CHECK_ENVIRONMENT
+→ VERIFY_INITIAL_STATE
+→ Project 1
+→ TEST_PROJECT_1
+→ Project 2
+→ TEST_PROJECT_2
+→ VERIFY_WORK_RESULT
+→ Gemini audit
+→ English form
+→ PDF
+→ Moodle final submission
 ```
 
-A timeout, crash or residual process is a technical problem rather than an expected FAIL.
+## Allowed edits
 
-## Project 1 — HTTP Detective
+Only these two files may change:
 
-Start it with `START_PROJECT_1`. Select the page button and inspect DevTools → Network. Change only `02_PROJECTS/P01_HTTP_DETECTIVE/case-report.json`.
+```text
+02_PROJECTS/P01_HTTP_DETECTIVE/case-report.json
+02_PROJECTS/P02_TINY_HTTP_SERVER/src/application-handler.js
+```
 
-## Project 2 — Tiny HTTP Server
+Do not modify tests, launchers, package files or project infrastructure.
 
-Change only `02_PROJECTS/P02_TINY_HTTP_SERVER/src/application-handler.js`. Start it with `START_PROJECT_2`; stop the server with `Ctrl+C`.
+## Moodle submission
 
-## At the end
+Open the integrated form with `OPEN_MOODLE_FORM`. Complete it in English, export one PDF and use this exact naming pattern:
 
-Run `VERIFY_WORK_RESULT`. The required verdict is `PASS_WORK_RESULT`.
+```text
+TW2026_S01_GROUP_Surname_Firstname.pdf
+```
 
-## Individual Moodle submission
+Example:
 
-Complete the form under `05_MOODLE_SUBMISSION`, export `TW2026_S01_GROUP_Surname_Firstname.pdf` and upload it individually to the S01 Assignment. The Gemini audit, evidence and limitation are required.
+```text
+TW2026_S01_1042_Popescu_Ana.pdf
+```
+
+The Gemini answer is not evidence by itself. Record a verdict, independent evidence and an explicit limitation.

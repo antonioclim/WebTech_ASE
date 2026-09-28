@@ -1,33 +1,20 @@
 # Tiny HTTP Server
 
-Run `npm install`, then `npm start`. The server prints its loopback URL.
+Do not run `npm install`. This project has no external dependencies.
 
-Inspect the file response:
+From the root of the complete S01 student kit:
 
-```sh
-curl -i "<base-url>/"
+```text
+TEST_PROJECT_2
+START_PROJECT_2
 ```
 
-Inspect the query route:
+The server prints a loopback URL. Keep the server terminal open and use a second VS Code terminal for the manual `curl.exe` probes shown in the integrated guide.
 
-```sh
-curl -i "<base-url>/api/greetings?name=Ada"
+Modify only:
+
+```text
+src/application-handler.js
 ```
 
-Implement the missing path route, then inspect it:
-
-```sh
-curl -i "<base-url>/api/greetings/Ada%20Lovelace"
-```
-
-Inspect the echo route:
-
-```sh
-curl -i -X POST -H 'content-type: application/json' -d '{"clue":"crumbs"}' "<base-url>/api/echo"
-```
-
-Thunder Client is a good second check: send one `GET` request to `/`, one
-`GET` request to `/api/greetings?name=Ada`, one `GET` request to
-`/api/greetings/Ada%20Lovelace`, and one JSON `POST` request to `/api/echo`.
-
-Run `npm test` for all checks, or use the `test:baseline`, `test:objective`, and `test:regression` scripts separately.
+Do not modify tests, `package.json`, the server infrastructure or any other file.

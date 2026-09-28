@@ -1,0 +1,2 @@
+@echo off
+start "" "%~dp000_START_HERE\S01_INTERACTIVE_ULTRA_BEGINNER_GUIDE_EN_GB_v1.1.html"

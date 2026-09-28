@@ -1,13 +1,14 @@
 # S01 — hardening changelog
 
-Release: `v6.0.1 FINAL`
+Release: `v6.0.2 FINAL`
 
-Independent hostile audit remediations:
-
-- Forced Node test runner TAP output so expected-failure counting is stable on Node 24.
-- Verified exact Node.js and npm versions in the kit runtime gate.
-- Made expected assertion counts explicit for baseline/objective/regression.
-- Removed stale references to the v2.0 RC environment kit.
+- Integrated the self-contained click-by-click browser, VS Code, Gemini and Moodle guide.
+- Added OPEN_BEGINNER_GUIDE launchers for Windows and macOS/Linux.
+- Replaced the mixed-language Moodle form with English-only HTML and DOCX forms.
+- Standardised the PDF name as TW2026_S01_GROUP_Surname_Firstname.pdf.
+- Removed contradictory npm install instructions and optional client-tool recommendations.
+- Expanded student README and project guidance without changing the allowed code surface.
+- Updated release metadata and exact-set integrity manifests.
 
 Canonical tree: `5bfb519fbb6aeb1855d372a747724b742c528c1fee06c1102b06402f8cf40587`
 
