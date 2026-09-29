@@ -1,0 +1,34 @@
+{
+  "week": 4,
+  "mode": "STUDENT_WIP_PREVIEW",
+  "qualified_release": false,
+  "pending_gates": [
+    "reference_runtime",
+    "real_browser",
+    "native_platform_acceptance"
+  ],
+  "week_zip": "01_WEEKS/WEEK_04/DOWNLOAD/WebTech_ASE_WEEK_04_EN_GB_v1.2.0_PREVIEW.zip",
+  "sha256": "400b2eb19e7c9a9d932480c62b18e7d3aa342bd58f70961d7c0124300a115ed8",
+  "bytes": 780027,
+  "package_id": "ca6786cfaf1ca1e45f1de1f12b3b5f8f49606fd83febd36b7443c92a460f4ec1",
+  "objects": [
+    {
+      "object": "C04",
+      "title": "Modules, DOM, Events, Promises, async/await and fetch",
+      "filename": "WEBTECH_ASE_C04_STUDENT_EN_GB_v1.1.0_PUBLIC.zip",
+      "bytes": 170153,
+      "sha256": "f92b00c6ce9d14302b75f0be5b5be54df116b357abeae851c614f90e21763206",
+      "package_id": "79bd37e7b47965bcebbc28bedd8ce5337d056e5154a103740db0baaafe3a019a",
+      "files": 41
+    },
+    {
+      "object": "S04",
+      "title": "Multi-source Data Dashboard",
+      "filename": "WEBTECH_ASE_S04_STUDENT_EN_GB_v1.1.0_PUBLIC.zip",
+      "bytes": 217259,
+      "sha256": "4f02fb52c61dadf668fb030a6472c30adc7f98124fc4e4857b3790509170c395",
+      "package_id": "e8ff57910c57490ac1f42b7d189c00017d872371df6353a8ff5aa86809c798db",
+      "files": 93
+    }
+  ]
+}

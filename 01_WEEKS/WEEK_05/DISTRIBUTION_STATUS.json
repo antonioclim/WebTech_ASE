@@ -1,0 +1,35 @@
+{
+  "week": 5,
+  "mode": "STUDENT_WIP_PREVIEW",
+  "qualified_release": false,
+  "pending_gates": [
+    "reference_runtime",
+    "real_browser",
+    "native_platform_acceptance",
+    "Express_application"
+  ],
+  "week_zip": "01_WEEKS/WEEK_05/DOWNLOAD/WebTech_ASE_WEEK_05_EN_GB_v1.2.0_PREVIEW.zip",
+  "sha256": "5877e43cb7858f36663080f6fe9041f2124c39de487348eb83db3fa46f509ea7",
+  "bytes": 920931,
+  "package_id": "50ac91b7c314ef1ba8d46047f52d00b837509cd1c2c8273853e6b8e8edd66584",
+  "objects": [
+    {
+      "object": "C05",
+      "title": "Node, Express and REST",
+      "filename": "WEBTECH_ASE_C05_STUDENT_EN_GB_v1.1.0_PUBLIC.zip",
+      "bytes": 206356,
+      "sha256": "b0a02d30c32804ddea08c9cc18d406706caea56d7662f78ebf67e20e8a6eaad5",
+      "package_id": "6afd6a195f1e490030287484c7d5cb42000633aa09ce6bb6a1acdb73b16619e7",
+      "files": 61
+    },
+    {
+      "object": "S05",
+      "title": "In-memory Task API",
+      "filename": "WEBTECH_ASE_S05_STUDENT_EN_GB_v1.1.0_PUBLIC.zip",
+      "bytes": 257497,
+      "sha256": "d5944fc09808fe7b34d8ec194265e97310af603ba0adb80f2da63613e279df0d",
+      "package_id": "6168751d49ed26520d4af38f155954fa33e992ea25d342f15435012e6f18387e",
+      "files": 86
+    }
+  ]
+}
