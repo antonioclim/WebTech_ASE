@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>C07 — Sources and discrepancy notes</title><link rel="stylesheet" href="assets/theme.css"></head><body><a class="skip" href="#main">Skip to content</a><header><div class="brand">Web Technologies · C07 · v1.1.0</div><p>Relationships, Transactions and API Design</p></header><main id="main"><p><a href="index.html">Course home</a></p><article class="reading"><h1>C07 sources and attribution</h1>
+<p>The primary basis is the supplied canonical U07 <code>07-relationships-transactions</code> lecture, examples and project contracts, together with the approved Week07 Phase1 architecture. Canonical teaching files are exact copies. New slides, explanations, models and launch adapters are derived materials. CANONICAL_SOURCES.json gives exact public paths and SHA-256 identities. Private source copies and the audit register remain with the teacher.</p>
+<table><thead><tr><th scope="col">Label</th><th scope="col">Reference</th><th scope="col">Role</th></tr></thead><tbody>
+<tr><td>C1</td><td>Supplied U07 lecture, Relationships, Transactions and API Design</td><td>Primary content, 39 numbered headings</td></tr>
+<tr><td>E1–E5</td><td>Supplied U07 course examples in canonical/</td><td>Preserved executable sources and README discrepancies</td></tr>
+<tr><td>P1–P3</td><td>Supplied U07 project specifications/source</td><td>Assessment boundaries; complete references are private</td></tr>
+<tr><td>A1</td><td>Week07 Phase1 audit, architecture and ADR design (29 September 2026)</td><td>Explicit 60-minute derivation and planned supplementary checks</td></tr>
+<tr><td>R1</td><td>Sequelize contributors. (n.d.). Transactions (v6 documentation). https://sequelize.org/docs/v6/other-topics/transactions/</td><td>Managed callback and outer settlement; read 29 September 2026</td></tr>
+<tr><td>R2</td><td>SQLite. (n.d.). Row values, section 3.1. https://www.sqlite.org/rowvalue.html</td><td>Cursor and ordering tuple; read 29 September 2026</td></tr>
+<tr><td>R3</td><td>SQLite. (n.d.). Isolation in SQLite. https://www.sqlite.org/isolation.html</td><td>Concurrency limits; verified in the preceding audit</td></tr>
+<tr><td>R4</td><td>Fielding, R., Nottingham, M., &amp; Reschke, J. (2022). HTTP semantics (RFC 9110), section 9.2.2. https://www.rfc-editor.org/rfc/rfc9110.html</td><td>Intended effect of idempotent repetition; read 29 September 2026</td></tr>
+</tbody></table>
+<p>These software documentation sources have no DOI assigned in this dossier. No DOI, classroom outcome or current security certification is invented. Optional external links are references, not resources required to run the local shell. The exact next-reading list is canonical/reading-list-next.md. SOURCE_NOTES.md explains the preserved documentary mismatches.</p>
+<h1>C07 source notes and discrepancies</h1>
+<p>The twenty files in the five canonical example roots and the next-reading list are exact copies. They are not edited to match a preferred explanation. CANONICAL_SOURCES.json records their identities. The current guide.html is the launch route; historical README installation commands are retained as source text, not an instruction to install now.</p>
+<h2>Example 01 — Relationship Shapes</h2>
+<p>The script creates one conference, one session and one attendee. The README describes two sessions. The nested Registration.ticketType and duplicate-membership assertion are real source content but their genuine execution remains pending.</p>
+<h2>Example 02 — Eager-loading Query Count</h2>
+<p>The logger is cleared before each route. Four lazy statements and one eager statement are expected for three parents. A one-query result is not automatically a lower cost or a capped graph. The laboratory&#x27;s count is a calculation, not SQL logging.</p>
+<h2>Example 03 — Resource Contract</h2>
+<p>The script performs sequential PUT and DELETE membership assertions. Query-page validations described in its README do not appear in the script. Sequential create-or-update does not itself qualify arbitrary concurrent upsert. The registration contract must not be silently assigned to P02 booking POST.</p>
+<h2>Example 04 — Pagination Stability</h2>
+<p>The README describes offset/insertion/continuation assertions absent from its script. Its id &gt; afterId predicate does not generally follow its title/date ordering. Query inputs also have validation limitations noted in the Phase1 audit. The separate derived/cursor-model.js uses a fixed numeric catalogue with rank/ID continuation. It is not a patched copy, SQL result or production endpoint. The model has explicit finite-key, unique-ID and page-size guards.</p>
+<h2>Example 05 — Transaction Timeline</h2>
+<p>The failAudit flag throws before Audit.create; it does not inject a rejection from an attempted audit insert. Source assertions test rollback after the checkpoint and a later success when the genuine stack runs. They are not current execution results.</p>
+<h2>Seminar transfer</h2>
+<p>P02 Transactional Booking is the sole full required implementation. The reference passes the transaction to five database operations; the original spy omits event.save. A source-wide UniqueConstraintError catch can also translate that class from the callback or audit. These are disclosed source limits, not silent changes to the assessment contract. A generated Location has no supplied booking-member GET route.</p>
+<p>The required P03 ADR is analysis, not the complete router implementation. Full P01 and P03 code are optional. No completed assessed reference target or ADR is supplied publicly. There is one final S07 PDF, not a C07 Assignment.</p></article></main><footer>C07 v1.1.0 · Produced candidate; acceptance remains deferred.</footer></body></html>
