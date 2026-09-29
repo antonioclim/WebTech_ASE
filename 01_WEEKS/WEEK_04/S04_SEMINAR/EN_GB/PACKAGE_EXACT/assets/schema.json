@@ -1,0 +1,549 @@
+{
+  "schema": "TW2026_S04_EVIDENCE",
+  "version": "1.0",
+  "maxImportBytes": 2000000,
+  "sections": [
+    {
+      "id": "identity",
+      "title": "Identity and observed environment",
+      "intro": "Preserve prediction, actual observation, evidence origin and limitation. Write PENDING explicitly where applicable to a draft.",
+      "fields": [
+        {
+          "id": "surname",
+          "label": "Surname",
+          "kind": "text",
+          "max": 128,
+          "phase": "core",
+          "help": "Enter your own surname. This assessment identification stays in your private submission.",
+          "default": ""
+        },
+        {
+          "id": "given",
+          "label": "Given name",
+          "kind": "text",
+          "max": 128,
+          "phase": "core",
+          "help": "Enter your own given name. Do not enter another student's data.",
+          "default": ""
+        },
+        {
+          "id": "group",
+          "label": "Group",
+          "kind": "text",
+          "max": 128,
+          "phase": "core",
+          "help": "Enter your actual group, not the synthetic example group.",
+          "default": ""
+        },
+        {
+          "id": "kits",
+          "label": "C04/S04 versions or package IDs",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "help": "Read the supplied version and PACKAGE_ID.txt. Record C04 and S04 separately; do not invent an identifier.",
+          "default": ""
+        },
+        {
+          "id": "os",
+          "label": "Operating system",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "help": "Record the operating system actually used. UNKNOWN is better than an assumed version.",
+          "default": ""
+        },
+        {
+          "id": "terminal",
+          "label": "Terminal used",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "help": "Name the terminal actually used, or explain why no command could run.",
+          "default": ""
+        },
+        {
+          "id": "node",
+          "label": "Observed Node version",
+          "kind": "text",
+          "max": 128,
+          "phase": "core",
+          "help": "Copy node --version output, or UNKNOWN with the reason.",
+          "default": ""
+        },
+        {
+          "id": "npm",
+          "label": "Observed npm version",
+          "kind": "text",
+          "max": 128,
+          "phase": "core",
+          "help": "Copy npm --version output, or UNKNOWN. No install command is needed.",
+          "default": ""
+        },
+        {
+          "id": "browser",
+          "label": "Browser and observed version",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "help": "Record the browser and version actually used, or PENDING with the intended next check.",
+          "default": ""
+        },
+        {
+          "id": "launch_mode",
+          "label": "Actual launch route",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "help": "Distinguish direct file opening for the form from the printed loopback HTTP address for project applications.",
+          "default": ""
+        }
+      ]
+    },
+    {
+      "id": "p01",
+      "title": "P01 prediction and result",
+      "intro": "Preserve prediction, actual observation, evidence origin and limitation. Write PENDING explicitly where applicable to a draft.",
+      "fields": [
+        {
+          "id": "prediction",
+          "label": "Original prediction",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "help": "Write before running: profile, open/total counts, notice count and initial/final state. Keep the first prediction after a discrepancy.",
+          "default": ""
+        },
+        {
+          "id": "fixture",
+          "label": "Exact fixture and request paths",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "help": "Name supplied browser data versus canonical objective data. List all three /data/*.json paths.",
+          "default": ""
+        },
+        {
+          "id": "edit_path",
+          "label": "Allowed edit path",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "help": "Only projects/p01/public/dashboard.js is the P01 edit target. Record this exact path.",
+          "default": ""
+        },
+        {
+          "id": "command",
+          "label": "Actual command or action",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "help": "Copy the actual command or precise browser action; include flags and which project was checked.",
+          "default": ""
+        },
+        {
+          "id": "checks",
+          "label": "Named checks and actual statuses",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "help": "Record baseline/objective/regression/full results with test names. Separate canonical raw exceptions from derived assertion checks and runtime guards.",
+          "default": ""
+        },
+        {
+          "id": "requests",
+          "label": "Initiation, completion and result order",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "help": "Use the injected deferred witness. Explain request initiation versus release/completion versus aggregate ordering; label MODEL_OR_INJECTED.",
+          "default": ""
+        },
+        {
+          "id": "ui_result",
+          "label": "Loading/final model and visible output",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "help": "Distinguish the controller model from visible DOM output. Record the observed states and return, not only a green label.",
+          "default": ""
+        },
+        {
+          "id": "comparison",
+          "label": "Comparison with the preserved prediction",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "help": "State the discrepancy or agreement without replacing the original prediction. Give the smallest discriminating check.",
+          "default": ""
+        }
+      ]
+    },
+    {
+      "id": "failure",
+      "title": "Failure boundary",
+      "intro": "Preserve prediction, actual observation, evidence origin and limitation. Write PENDING explicitly where applicable to a draft.",
+      "fields": [
+        {
+          "id": "fail_prediction",
+          "label": "Predicted failure and UI transition",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "help": "Predict the model and visible state before selecting missing-tasks, malformed-tasks or the injected transport witness.",
+          "default": ""
+        },
+        {
+          "id": "fail_setup",
+          "label": "Reproducible failure setup",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "help": "Record the exact controlled scenario and command; do not edit fixtures or contact public endpoints.",
+          "default": ""
+        },
+        {
+          "id": "fail_observed",
+          "label": "Observed result",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "help": "Paste a short real result or state PENDING with a next action. Do not use expected output as an observation.",
+          "default": ""
+        },
+        {
+          "id": "fail_classification",
+          "label": "Transport, HTTP or parsing classification",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "help": "Say TRANSPORT, HTTP_STATUS or JSON_PARSE and justify the boundary. An HTTP 404 is not a transport rejection.",
+          "default": ""
+        },
+        {
+          "id": "fail_evidence",
+          "label": "Evidence excerpt and identifier",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "help": "Give an evidence identifier and a short command/output excerpt; distinguish MODEL_OR_INJECTED, LOCAL_HTTP and REAL_BROWSER.",
+          "default": ""
+        },
+        {
+          "id": "fail_limit",
+          "label": "What this witness does not establish",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "help": "Explain what the one witness does not establish, including cancellation, arbitrary input or browser behaviour.",
+          "default": ""
+        }
+      ]
+    },
+    {
+      "id": "browser",
+      "title": "Browser evidence",
+      "intro": "Preserve prediction, actual observation, evidence origin and limitation. Write PENDING explicitly where applicable to a draft.",
+      "fields": [
+        {
+          "id": "browser_state",
+          "label": "Browser observation state",
+          "kind": "select",
+          "max": 12000,
+          "phase": "core",
+          "help": "OBSERVED means that you actually used a browser. An alternative requires separate explicit teacher authorisation, not this selection.",
+          "default": "PENDING",
+          "options": [
+            "",
+            "PENDING",
+            "OBSERVED",
+            "TEACHER_APPROVED_ALTERNATIVE"
+          ]
+        },
+        {
+          "id": "browser_url",
+          "label": "Actual local URL or explicitly unknown",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "help": "Copy the actual printed URL and scenario. Never copy a synthetic port as an observed address.",
+          "default": ""
+        },
+        {
+          "id": "browser_trace",
+          "label": "Network/DOM/console evidence or authorised alternative reference",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "help": "Record Network/DOM/console actions and results. For an approved alternative include AUTHORISATION: teacher, date, scope and reference.",
+          "default": ""
+        },
+        {
+          "id": "browser_limit",
+          "label": "Limit of the browser evidence",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "help": "Describe missing evidence honestly. For PENDING, specify the next browser action.",
+          "default": ""
+        }
+      ]
+    },
+    {
+      "id": "gemini",
+      "title": "Bounded Gemini verification",
+      "intro": "Preserve prediction, actual observation, evidence origin and limitation. Write PENDING explicitly where applicable to a draft.",
+      "fields": [
+        {
+          "id": "gemini_state",
+          "label": "Actual interaction state",
+          "kind": "select",
+          "max": 12000,
+          "phase": "core",
+          "help": "Select ACTUAL_INTERACTION only after a real bounded interaction. The offline synthetic exercise does not satisfy it.",
+          "default": "PENDING",
+          "options": [
+            "",
+            "PENDING",
+            "ACTUAL_INTERACTION",
+            "TEACHER_APPROVED_ALTERNATIVE"
+          ]
+        },
+        {
+          "id": "gemini_context",
+          "label": "Sanitised context and date",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "help": "Use a sanitised context and actual interaction date. An approved alternative needs AUTHORISATION: teacher, date, scope and reference.",
+          "default": ""
+        },
+        {
+          "id": "gemini_prompt",
+          "label": "Relevant prompt",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "help": "Include only the relevant bounded review prompt, not a complete conversation.",
+          "default": ""
+        },
+        {
+          "id": "gemini_claim",
+          "label": "One selected claim",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "help": "Copy or precisely paraphrase one selected claim. Do not attribute the synthetic practice text to Gemini.",
+          "default": ""
+        },
+        {
+          "id": "gemini_check",
+          "label": "Independent verification",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "help": "Give a reproducible independent check and the observed result; identify the evidence class.",
+          "default": ""
+        },
+        {
+          "id": "gemini_verdict",
+          "label": "Verdict",
+          "kind": "select",
+          "max": 12000,
+          "phase": "core",
+          "help": "Choose a verdict justified by evidence. UNKNOWN and a defensible rejection are legitimate outcomes.",
+          "default": "",
+          "options": [
+            "",
+            "ACCEPTED",
+            "REJECTED",
+            "PARTIALLY ACCEPTED",
+            "UNKNOWN"
+          ]
+        },
+        {
+          "id": "gemini_correction",
+          "label": "Correction or justified no correction",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "help": "Give the correction or explain why none is justified; agreement is not the assessment target.",
+          "default": ""
+        },
+        {
+          "id": "gemini_limit",
+          "label": "Remaining limitation",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "help": "State the remaining limit. Never paste credentials, cookies, tokens or private records.",
+          "default": ""
+        }
+      ]
+    },
+    {
+      "id": "portfolio",
+      "title": "Required P02 portfolio",
+      "intro": "Complete after the seminar; source workload 45–60 minutes. P02 is required, not optional.",
+      "fields": [
+        {
+          "id": "p02_prediction",
+          "label": "Prediction before implementation",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "portfolio",
+          "help": "Record the expected rows, event target and callback effect before working on Task List.",
+          "default": ""
+        },
+        {
+          "id": "p02_contract",
+          "label": "One-file edit contract",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "portfolio",
+          "help": "Only projects/p02/public/task-view.js may be edited for P02.",
+          "default": ""
+        },
+        {
+          "id": "p02_command",
+          "label": "Commands and action sequence",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "portfolio",
+          "help": "Record check commands and browser actions: valid/blank submit, toggle, nested delete, unbind and rebind.",
+          "default": ""
+        },
+        {
+          "id": "p02_checks",
+          "label": "Actual baseline/objective/regression/full results",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "portfolio",
+          "help": "Distinguish derived teaching checks from canonical baseline/objective/regression/full results. Report TypeError or other failures truthfully.",
+          "default": ""
+        },
+        {
+          "id": "p02_dom",
+          "label": "DOM projection and plain-text witness",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "portfolio",
+          "help": "Observe state-to-DOM projection and a literal <em>sample</em> title. It must remain text rather than a parsed element.",
+          "default": ""
+        },
+        {
+          "id": "p02_event",
+          "label": "Direct/nested target, currentTarget and action trace",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "portfolio",
+          "help": "Compare a direct checkbox or button click with a nested span click; record callback counters and the actual event fields.",
+          "default": ""
+        },
+        {
+          "id": "p02_unbind",
+          "label": "Bind/unbind/rebind observation",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "portfolio",
+          "help": "Use the separate observer: bind, one action, unbind, repeat the action, rebind, one action. Record deltas rather than totals alone.",
+          "default": ""
+        },
+        {
+          "id": "p02_diff",
+          "label": "One-file diff summary",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "portfolio",
+          "help": "State the one edited path and the protected-file check result. A normal runtime error is not evidence of correct edit scope.",
+          "default": ""
+        },
+        {
+          "id": "p02_result",
+          "label": "Actual result and comparison",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "portfolio",
+          "help": "Compare the result with the prior prediction. For an approved browser alternative include AUTHORISATION: teacher, date, scope and reference.",
+          "default": ""
+        },
+        {
+          "id": "p02_browser_state",
+          "label": "Browser evidence state for P02",
+          "kind": "select",
+          "max": 12000,
+          "phase": "portfolio",
+          "help": "OBSERVED requires actual browser work; MODEL_OR_INJECTED alone is not browser evidence.",
+          "default": "PENDING",
+          "options": [
+            "",
+            "PENDING",
+            "OBSERVED",
+            "TEACHER_APPROVED_ALTERNATIVE"
+          ]
+        },
+        {
+          "id": "p02_limit",
+          "label": "Limit or unresolved defect",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "portfolio",
+          "help": "State a demonstrated defect, an untested property or the next minimum check. This is not a claim of production readiness.",
+          "default": ""
+        }
+      ]
+    },
+    {
+      "id": "closure",
+      "title": "Closure and declaration",
+      "intro": "Preserve prediction, actual observation, evidence origin and limitation. Write PENDING explicitly where applicable to a draft.",
+      "fields": [
+        {
+          "id": "exit_state",
+          "label": "State at the minute-60 stop and final update",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "help": "At minute 60 state the implementation status and outstanding browser, Gemini and P02 work. Add a dated final update without erasing the stop state.",
+          "default": ""
+        },
+        {
+          "id": "reflection",
+          "label": "Specific learning reflection",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "help": "Explain one mechanism using your evidence, not a general confidence statement.",
+          "default": ""
+        },
+        {
+          "id": "uncertainty",
+          "label": "Remaining uncertainty",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "help": "State the next smallest check that could change your conclusion.",
+          "default": ""
+        },
+        {
+          "id": "evidence_inventory",
+          "label": "Evidence identifiers and origins",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "help": "List concise evidence IDs and origins. Screenshots supplement commands/actions; no full source archive is submitted.",
+          "default": ""
+        },
+        {
+          "id": "declaration",
+          "label": "Truthful individual-work declaration",
+          "kind": "checkbox",
+          "max": null,
+          "phase": "core",
+          "help": "I declare that the work and observations are my own, imported evidence has been reviewed and synthetic/pending material is labelled honestly. This does not certify correctness.",
+          "default": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Launch and troubleshooting</title><link rel="stylesheet" href="assets/site.css"></head><body class=""><a class="skip-link" href="#main">Skip to content</a><header><p>WEB TECHNOLOGIES 2026 · WEEK 04 · S04 · v1.1.0</p><h1>Launch and troubleshooting</h1><nav aria-label="Main"><a href="index.html">Start</a><a href="seminar.html">60-minute route</a><a href="guide.html">Working guide</a><a href="evidence.html">Evidence form</a><a href="portfolio.html">Required P02</a><a href="moodle.html">Moodle guide</a></nav></header><main id="main"><h1>Windows — exact launch route</h1>
+<p>Use the new S04 student ZIP, not the private teacher archive as a student working directory. No Git command, installer or administrator privilege is required by this guide. The prepared Day 0 Node environment is a prerequisite for project execution; the presentation and form remain readable without Node.</p>
+<h2>Extract once and identify the root</h2>
+<p>Save the ZIP in <code>D:\#___MY_SPACE\Downloads</code>. In File Explorer choose <strong>Extract All</strong>, then a new short folder such as <code>D:\WTW04\S04</code>. At that folder level you must see <code>index.html</code>, <code>projects</code>, <code>tools</code> and <code>documents</code>. Do not work inside File Explorer's compressed-folder view. If preserving your previous attempt, use a different folder rather than overwriting it.</p>
+<p>Open <code>index.html</code> for the start page, <code>seminar.html</code> for the route or <code>evidence.html</code> for your form. These pages require no local server. Project <code>index.html</code> pages are different: use the HTTP launch below.</p>
+<h2>Open a terminal at that root</h2>
+<p>In File Explorer open the extracted root, click the address bar, type <code>powershell</code> and press Enter. Alternatively open your existing PowerShell terminal and use:</p>
+<pre><code class="language-powershell">Set-Location -LiteralPath 'D:\WTW04\S04'
+node --version
+npm --version
+</code></pre>
+<p>Record the actual values. The project reference is Node <code>v24.21.0</code> with npm <code>11.19.0</code>. The gate checks Node; npm is measured separately. If Node is absent, return to the prepared Day 0 setup with the teacher. Do not try arbitrary global installations. If you see RUNTIME_GUARD_BLOCK, that is an environment mismatch, not a pedagogical test failure. The teacher may explicitly allow a labelled compatibility run; only then append <code>--allow-runtime-mismatch</code> to the relevant tools command. Such a run cannot qualify the reference environment.</p>
+<h2>Predict and run initial P01 checks</h2>
+<p>Read the P01 public contract and the three files in <code>projects\p01\public\data</code>. Record the original prediction in the form before running:</p>
+<pre><code class="language-powershell">node tools/gate.mjs P01 initial
+</code></pre>
+<p>In the JSON result, find <code>verdict</code>, each <code>suite</code> and its <code>classification</code>. A matching initial P01 run has baseline PASS, objective EXPECTED_BOUNDED_ASSERTION_FAILURE for exactly three named tests and regression PASS. It is not the completed project. Do not run initial mode after editing: it requires the exact original target file.</p>
+<h2>Implement and check</h2>
+<p>Edit only <code>projects\p01\public\dashboard.js</code> in your existing editor, then save. Do not change fixtures, tests, package metadata, the server or renderer. Run:</p>
+<pre><code class="language-powershell">node tools/gate.mjs P01 complete
+node tools/observe.mjs P01 deferred
+node tools/observe.mjs P01 transport
+node tools/observe.mjs P01 http
+node tools/observe.mjs P01 parse
+</code></pre>
+<p>Complete mode requires every named canonical and derived check to pass. Observer outputs are actual executions with injected responses, labelled MODEL_OR_INJECTED. They are not browser Network records. A remaining failure is recorded with its name and result, not removed from the tests. Save logs outside <code>projects</code>, for example at the kit root, to keep protected-file checks meaningful.</p>
+<h2>Open the actual local application</h2>
+<p>In the same terminal start:</p>
+<pre><code class="language-powershell">node tools/serve.mjs P01 --delay-ms 300
+</code></pre>
+<p>Wait for <code>READY P01</code> and copy the exact printed <code>http://127.0.0.1:&lt;port&gt;</code> address into the browser. The port is selected at launch; do not use a port copied from a screenshot or example. The 300 ms delay is a controlled local teaching intervention, not an internet latency measurement. Keep the terminal open. Open browser developer tools, choose Network, reload and record the three request paths and observed state. Use Elements/DOM to inspect <code>data-state</code> on the dashboard. No screenshot is a substitute for describing your exact action.</p>
+<p>Click the terminal and press <strong>Ctrl+C</strong>. <code>STOPPED P01</code> is the expected shutdown message. Then start the missing-resource scenario:</p>
+<pre><code class="language-powershell">node tools/serve.mjs P01 --scenario missing-tasks
+</code></pre>
+<p>Use the newly printed URL. Predict and inspect the 404 response and the final UI state. Stop with Ctrl+C. Repeat for malformed JSON when needed:</p>
+<pre><code class="language-powershell">node tools/serve.mjs P01 --scenario malformed-tasks
+</code></pre>
+<p>The adapter changes only its response for the task path. Files on disk remain unchanged. Do not disable browser security or expose the listener beyond loopback. If launch fails, retain its diagnostic; do not start repeated background servers. Close each successful run before another.</p>
+<h2>Required P02, after the seminar</h2>
+<p>Read <code>portfolio.html</code> and <code>contracts/P02.html</code>. Before editing:</p>
+<pre><code class="language-powershell">node tools/gate.mjs P02 initial
+node tools/gate.mjs P02 teaching
+</code></pre>
+<p>The first command deliberately retains raw canonical test-body exceptions and FAIL_CLOSED. The second uses a distinct assertion-first instructional suite. Do not collapse the two outputs into a single PASS. After editing only <code>projects\p02\public\task-view.js</code>:</p>
+<pre><code class="language-powershell">node tools/gate.mjs P02 complete
+node tools/serve.mjs P02
+</code></pre>
+<p>The server prints both READY and OBSERVER addresses. Use the normal application for add/toggle/delete. Use OBSERVER to expose your bind/unbind/rebind return and a nested-button intervention. Record predictions and callback deltas. A scripted submit probe is explicitly not native submission. Stop with Ctrl+C after the observations.</p>
+<h2>Save and submit the form</h2>
+<p>Use Export JSON before closing the form. Confirm the file appears in your Downloads location and keep it private. Reopen the form and Import JSON to continue; imported observations are marked unconfirmed and the declaration is reset. Browser autosave is optional and may vary for local files.</p>
+<p>At minute 60 use Check core draft and Print core draft only if a draft PDF is useful. The final PDF must include required P02 and the actual Gemini/browser evidence or a separately documented teacher-approved alternative. Check final fields, choose Print final PDF, select the browser's PDF destination and verify the filename shown by the form. Reopen the saved PDF before the Moodle submission steps in <code>moodle.html</code>.</p>
+<p>The preserved canonical README commands mention npm install, npm start and browser-smoke automation. They are retained as source bytes, not the authorised route for this derived kit. Use this guide; no dependency install or browser automation is required here.</p>
+<h1>macOS and Linux — exact launch route</h1>
+<p>Extract the student ZIP with Finder or your existing archive manager into a new short folder, for example <code>~/WTW04/S04</code>. The root must contain index.html, projects, tools and documents. Keep old attempts in separate folders rather than overwriting them. Open index.html, seminar.html or evidence.html directly for the offline teaching shell.</p>
+<p>Open Terminal and select the actual extracted root. Replace the path only when yours differs:</p>
+<pre><code class="language-sh">cd &quot;$HOME/WTW04/S04&quot;
+node --version
+npm --version
+</code></pre>
+<p>Record the real versions. Node v24.21.0 and npm 11.19.0 are the project reference. The tools block a Node mismatch by default. Only with teacher permission, append <code>--allow-runtime-mismatch</code> for a labelled compatibility run. No global installation, sudo command, framework or API key is needed. A missing Node command goes back to Day 0 setup; it is not an expected test failure.</p>
+<p>Read contracts/P01.html and record the fixture prediction first. Then:</p>
+<pre><code class="language-sh">node tools/gate.mjs P01 initial
+</code></pre>
+<p>The exact initial result is baseline PASS, three named objective assertion failures and regression PASS. Edit only projects/p01/public/dashboard.js. After saving:</p>
+<pre><code class="language-sh">node tools/gate.mjs P01 complete
+node tools/observe.mjs P01 deferred
+node tools/observe.mjs P01 transport
+node tools/observe.mjs P01 http
+node tools/observe.mjs P01 parse
+node tools/serve.mjs P01 --delay-ms 300
+</code></pre>
+<p>The observer calls your code with injected responses. Its label MODEL_OR_INJECTED is not browser evidence. The last command keeps a foreground local server running. Copy the exact READY URL into the browser, inspect Network/DOM and keep the terminal open. Stop with Control+C and confirm STOPPED P01 before starting another scenario:</p>
+<pre><code class="language-sh">node tools/serve.mjs P01 --scenario missing-tasks
+</code></pre>
+<p>Inspect the new URL and controlled 404, stop, then use <code>node tools/serve.mjs P01 --scenario malformed-tasks</code> to observe successful HTTP status with invalid JSON. The server adapter never edits the fixtures. Ports are dynamic. Do not double-click the project's index.html for module/fetch execution and do not disable browser security.</p>
+<p>For the required P02 portfolio, before editing:</p>
+<pre><code class="language-sh">node tools/gate.mjs P02 initial
+node tools/gate.mjs P02 teaching
+</code></pre>
+<p>The first retains the raw canonical starter exceptions as FAIL_CLOSED. The second is the separate assertion-first teaching signature. Edit only projects/p02/public/task-view.js, then:</p>
+<pre><code class="language-sh">node tools/gate.mjs P02 complete
+node tools/serve.mjs P02
+</code></pre>
+<p>Use READY for the canonical Task List and OBSERVER for the separate cleanup caller. Predict the direct/nested event and callback effects, then compare bind/unbind/rebind deltas. Scripted events remain labelled scripted. Stop with Control+C. Save logs outside projects and do not add editor backup files inside protected subtrees. An EXTRA file diagnostic is not a passing edit boundary.</p>
+<p>Export the evidence form as private JSON while drafting. Use Import JSON to restore it; review all observations and renew the declaration. Optional local autosave is not the portable backup. Print the final complete form to the browser's PDF destination, verify its suggested name and reopen it. Follow moodle.html for the one final individual submission after the P02 window.</p>
+<p>Canonical READMEs are preserved source bytes and may mention npm install or browser-smoke automation. Use this derived route instead. Native macOS/Linux behaviour has not been certified by the local producer's model tests.</p>
+</main><footer>Local teaching candidate. Read the actual observation class and limits.</footer></body></html>
