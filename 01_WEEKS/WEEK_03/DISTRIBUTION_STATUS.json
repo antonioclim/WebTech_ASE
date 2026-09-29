@@ -1,0 +1,34 @@
+{
+  "week": 3,
+  "mode": "STUDENT_WIP_PREVIEW",
+  "qualified_release": false,
+  "pending_gates": [
+    "reference_runtime",
+    "real_browser",
+    "native_platform_acceptance"
+  ],
+  "week_zip": "01_WEEKS/WEEK_03/DOWNLOAD/WebTech_ASE_WEEK_03_EN_GB_v1.2.0_PREVIEW.zip",
+  "sha256": "2ca83c2b31e24e2131e3696fc86b5bab3d65e2a0d22e4e60dbc6532f993bf866",
+  "bytes": 661140,
+  "package_id": "e5646aafd6783d9dc9046e702d83e58c07c1591678150c10eaf46fa1c6c07a0d",
+  "objects": [
+    {
+      "object": "C03",
+      "title": "JavaScript for Reading and Modifying Programs",
+      "filename": "WEBTECH_ASE_C03_STUDENT_EN_GB_v1.1.0_PUBLIC.zip",
+      "bytes": 145765,
+      "sha256": "8e939bb0b71389d0312ce04d63e95301b6cdcd765b32fa6fd09ceac2ebf70c51",
+      "package_id": "7e32a923c353c64e57f7369a9208f917ef52402744c2f6852a2e0548e2f1133e",
+      "files": 38
+    },
+    {
+      "object": "S03",
+      "title": "Dataset Transformer CLI",
+      "filename": "WEBTECH_ASE_S03_STUDENT_EN_GB_v1.1.0_PUBLIC.zip",
+      "bytes": 182054,
+      "sha256": "5a6a7289acedb17c86dc14df2d3cecd903da43f901716c22c1badbeec624a493",
+      "package_id": "9978f14ab59966e39a0ac008bd716dcef9c090c5173ed3e4b103d0a5c6d277b8",
+      "files": 65
+    }
+  ]
+}

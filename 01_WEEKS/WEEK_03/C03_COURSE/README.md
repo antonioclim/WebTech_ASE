@@ -1,0 +1,5 @@
+# C03 — JavaScript for Reading and Modifying Programs
+
+[Open the British English student package](EN_GB/README.md).
+
+This is a WIP preview, not a qualified final release. [Week 03](../README.md).
