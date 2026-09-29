@@ -31,6 +31,19 @@ gate has been completed.
 week → course/seminar → language
 ```
 
+## Week 01–07 download index
+
+[Choose a week, course or seminar](01_WEEKS/README.md).
+
+Weeks 01–02 keep their existing files and navigation. Weeks 03–07 are now provided
+as **student WIP preview downloads**, not qualified final releases. The complete
+course and seminar sources are inside the ZIPs. Runtime, native-platform and
+browser acceptance remain pending; Weeks 05–07 also have application/dependency
+qualification gaps. See the [preview policy](00_TOOLS/maintainer/PREVIEW_DOWNLOAD_POLICY.md).
+
+This download-only route does not deploy Pages, create a Release, run Actions or
+change stable release admission. Do not upload private teacher packages.
+
 ## Published teaching objects
 
 - [Week 1](01_WEEKS/WEEK_01/README.md)
@@ -75,7 +88,8 @@ Current state: work in progress
 Automated Actions: disabled; all workflows are manual-only
 Pages deployment: intentionally deferred
 Repository identity: frozen baseline; regeneration deferred until final freeze
-Public material currently present: Day 0 and weeks 1–2
+Established material: Day 0 and weeks 1–2
+Additional downloads: weeks 3–7, unqualified WIP previews
 Guidance language: English
 Bilingual exceptions: C01, S01, C02 and S02
 ```

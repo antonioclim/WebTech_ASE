@@ -1,0 +1,188 @@
+{
+  "schema": "webtech-preview-downloads/1",
+  "build_date": "2026-09-29",
+  "observed_live_commit": "3dbb79818732a1432bea6b606dcab39e9a6e3e6d",
+  "policy": "00_TOOLS/maintainer/PREVIEW_DOWNLOAD_POLICY.md",
+  "distribution_mode": "STUDENT_WIP_PREVIEW",
+  "qualified_release": false,
+  "weeks_01_02": "PRESERVE_LIVE_UNCHANGED",
+  "weeks": [
+    {
+      "week": 3,
+      "mode": "STUDENT_WIP_PREVIEW",
+      "qualified_release": false,
+      "pending_gates": [
+        "reference_runtime",
+        "real_browser",
+        "native_platform_acceptance"
+      ],
+      "week_zip": "01_WEEKS/WEEK_03/DOWNLOAD/WebTech_ASE_WEEK_03_EN_GB_v1.2.0_PREVIEW.zip",
+      "sha256": "2ca83c2b31e24e2131e3696fc86b5bab3d65e2a0d22e4e60dbc6532f993bf866",
+      "bytes": 661140,
+      "package_id": "e5646aafd6783d9dc9046e702d83e58c07c1591678150c10eaf46fa1c6c07a0d",
+      "objects": [
+        {
+          "object": "C03",
+          "title": "JavaScript for Reading and Modifying Programs",
+          "filename": "WEBTECH_ASE_C03_STUDENT_EN_GB_v1.1.0_PUBLIC.zip",
+          "bytes": 145765,
+          "sha256": "8e939bb0b71389d0312ce04d63e95301b6cdcd765b32fa6fd09ceac2ebf70c51",
+          "package_id": "7e32a923c353c64e57f7369a9208f917ef52402744c2f6852a2e0548e2f1133e",
+          "files": 38
+        },
+        {
+          "object": "S03",
+          "title": "Dataset Transformer CLI",
+          "filename": "WEBTECH_ASE_S03_STUDENT_EN_GB_v1.1.0_PUBLIC.zip",
+          "bytes": 182054,
+          "sha256": "5a6a7289acedb17c86dc14df2d3cecd903da43f901716c22c1badbeec624a493",
+          "package_id": "9978f14ab59966e39a0ac008bd716dcef9c090c5173ed3e4b103d0a5c6d277b8",
+          "files": 65
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "mode": "STUDENT_WIP_PREVIEW",
+      "qualified_release": false,
+      "pending_gates": [
+        "reference_runtime",
+        "real_browser",
+        "native_platform_acceptance"
+      ],
+      "week_zip": "01_WEEKS/WEEK_04/DOWNLOAD/WebTech_ASE_WEEK_04_EN_GB_v1.2.0_PREVIEW.zip",
+      "sha256": "400b2eb19e7c9a9d932480c62b18e7d3aa342bd58f70961d7c0124300a115ed8",
+      "bytes": 780027,
+      "package_id": "ca6786cfaf1ca1e45f1de1f12b3b5f8f49606fd83febd36b7443c92a460f4ec1",
+      "objects": [
+        {
+          "object": "C04",
+          "title": "Modules, DOM, Events, Promises, async/await and fetch",
+          "filename": "WEBTECH_ASE_C04_STUDENT_EN_GB_v1.1.0_PUBLIC.zip",
+          "bytes": 170153,
+          "sha256": "f92b00c6ce9d14302b75f0be5b5be54df116b357abeae851c614f90e21763206",
+          "package_id": "79bd37e7b47965bcebbc28bedd8ce5337d056e5154a103740db0baaafe3a019a",
+          "files": 41
+        },
+        {
+          "object": "S04",
+          "title": "Multi-source Data Dashboard",
+          "filename": "WEBTECH_ASE_S04_STUDENT_EN_GB_v1.1.0_PUBLIC.zip",
+          "bytes": 217259,
+          "sha256": "4f02fb52c61dadf668fb030a6472c30adc7f98124fc4e4857b3790509170c395",
+          "package_id": "e8ff57910c57490ac1f42b7d189c00017d872371df6353a8ff5aa86809c798db",
+          "files": 93
+        }
+      ]
+    },
+    {
+      "week": 5,
+      "mode": "STUDENT_WIP_PREVIEW",
+      "qualified_release": false,
+      "pending_gates": [
+        "reference_runtime",
+        "real_browser",
+        "native_platform_acceptance",
+        "Express_application"
+      ],
+      "week_zip": "01_WEEKS/WEEK_05/DOWNLOAD/WebTech_ASE_WEEK_05_EN_GB_v1.2.0_PREVIEW.zip",
+      "sha256": "5877e43cb7858f36663080f6fe9041f2124c39de487348eb83db3fa46f509ea7",
+      "bytes": 920931,
+      "package_id": "50ac91b7c314ef1ba8d46047f52d00b837509cd1c2c8273853e6b8e8edd66584",
+      "objects": [
+        {
+          "object": "C05",
+          "title": "Node, Express and REST",
+          "filename": "WEBTECH_ASE_C05_STUDENT_EN_GB_v1.1.0_PUBLIC.zip",
+          "bytes": 206356,
+          "sha256": "b0a02d30c32804ddea08c9cc18d406706caea56d7662f78ebf67e20e8a6eaad5",
+          "package_id": "6afd6a195f1e490030287484c7d5cb42000633aa09ce6bb6a1acdb73b16619e7",
+          "files": 61
+        },
+        {
+          "object": "S05",
+          "title": "In-memory Task API",
+          "filename": "WEBTECH_ASE_S05_STUDENT_EN_GB_v1.1.0_PUBLIC.zip",
+          "bytes": 257497,
+          "sha256": "d5944fc09808fe7b34d8ec194265e97310af603ba0adb80f2da63613e279df0d",
+          "package_id": "6168751d49ed26520d4af38f155954fa33e992ea25d342f15435012e6f18387e",
+          "files": 86
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "mode": "STUDENT_WIP_PREVIEW",
+      "qualified_release": false,
+      "pending_gates": [
+        "reference_runtime",
+        "real_browser",
+        "native_platform_acceptance",
+        "project_dependencies",
+        "native_sqlite3_driver",
+        "genuine_ORM_SQLite_application"
+      ],
+      "week_zip": "01_WEEKS/WEEK_06/DOWNLOAD/WebTech_ASE_WEEK_06_EN_GB_v1.2.0_PREVIEW.zip",
+      "sha256": "55e3fa56ab93c9ca8f39b3e17a2353344701e342cdd5fcb936ac1ea838568999",
+      "bytes": 1051682,
+      "package_id": "5f19035eeeab2f68fe78848d61829d4edb6a25274dd6a8113880441d7b330d65",
+      "objects": [
+        {
+          "object": "C06",
+          "title": "Persistence with Sequelize and SQLite",
+          "filename": "WEBTECH_ASE_C06_STUDENT_EN_GB_v1.1.0_PUBLIC.zip",
+          "bytes": 232420,
+          "sha256": "a9a1a2aa6d9e049542cd4b0433a121e8a35900eca173d2156b3461dbf16704ff",
+          "package_id": "44760c1b2ff83580206c4173379813a58ba24c3c0412ffbe977873c36396365f",
+          "files": 56
+        },
+        {
+          "object": "S06",
+          "title": "Query API",
+          "filename": "WEBTECH_ASE_S06_STUDENT_EN_GB_v1.1.0_PUBLIC.zip",
+          "bytes": 292175,
+          "sha256": "c919ce3ab5454de21caa1946097a5f37a5fa2695e1b76943114f19ce8ade44f4",
+          "package_id": "9a934af09a2474ae092ad2141f4c7b63308f9ac738cbf0f0e41cfbaae9fb4764",
+          "files": 88
+        }
+      ]
+    },
+    {
+      "week": 7,
+      "mode": "STUDENT_WIP_PREVIEW",
+      "qualified_release": false,
+      "pending_gates": [
+        "reference_runtime",
+        "real_browser",
+        "native_platform_acceptance",
+        "project_dependencies",
+        "native_sqlite3_driver",
+        "genuine_ORM_SQLite_application"
+      ],
+      "week_zip": "01_WEEKS/WEEK_07/DOWNLOAD/WebTech_ASE_WEEK_07_EN_GB_v1.2.0_PREVIEW.zip",
+      "sha256": "1f2b580d078882cb3bbd6a35f0e026b1308eb11ccce1f587dda2a536cbb6c75b",
+      "bytes": 1008066,
+      "package_id": "20461382bc8c57734da0f6938e4848dc6f0e2bd8fef64cf9ebbe7563d7143dbb",
+      "objects": [
+        {
+          "object": "C07",
+          "title": "Relationships, Transactions and API Design",
+          "filename": "WEBTECH_ASE_C07_STUDENT_EN_GB_v1.1.0_PUBLIC.zip",
+          "bytes": 224132,
+          "sha256": "148eb9dcc679e604663ef559b2f8436fd3496b538c4fcb5004b295367f01f392",
+          "package_id": "1912535db40fa98048cf00d0a0f8d1e5b9a6a2219de249126284105d9d7f9999",
+          "files": 51
+        },
+        {
+          "object": "S07",
+          "title": "Transactional Booking",
+          "filename": "WEBTECH_ASE_S07_STUDENT_EN_GB_v1.1.0_PUBLIC.zip",
+          "bytes": 277708,
+          "sha256": "f9e34b3056e3862c2580b3e847d2ab7d0c38518b58ad751e306fb82be32af369",
+          "package_id": "07bf18598e5f217a2b996106012995139e6ebc294aba61346397642ac1188936",
+          "files": 88
+        }
+      ]
+    }
+  ]
+}
