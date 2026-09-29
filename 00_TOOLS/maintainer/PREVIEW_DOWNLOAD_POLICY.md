@@ -4,7 +4,7 @@
 
 The owner requested browser-ready posting of Weeks 01–07 before whole-corpus qualification. This lane makes the student-content candidates downloadable with explicit warnings. It does not assert that the qualified-release admission gates passed. `DISTRIBUTION_STATUS.json` describes the preview mode; it is not a replacement for `WEEK_STATE.json` or a fabricated PASS receipt.
 
-Weeks 01–02, their paths, original archives and current live additions are preserved. Only the root README is amended among existing files. No established week folder is renamed. Weeks 03–07 follow week → course/seminar → EN_GB, with complete original ZIPs in DOWNLOAD. Source browsing happens after extraction. No new PACKAGE_EXACT copies are added in this compact browser-upload lane.
+Weeks 01–02, their paths, original archives and current live additions are preserved. The earlier compact upload supplied ZIPs only. The additive PACKAGE_EXACT supplement now exposes the same ten public payloads directly in the repository and updates the relevant navigation plus this distribution note. No established week folder is renamed or deleted. Weeks 03–07 follow week → course/seminar → EN_GB, with unchanged original ZIPs in DOWNLOAD and exact extracted copies in PACKAGE_EXACT. The latter retain flat package roots, original filenames, manifests and PACKAGE_ID values. GitHub displays HTML source; it is not the lesson player and no Pages deployment is implied.
 
 ## Immutable object payloads
 
@@ -20,4 +20,4 @@ No teacher package, restricted solution, console, internal QA archive, Moodle ad
 
 Use the supplied browser-only upload kit on a short-lived public review branch. Upload only the contents of UPLOAD_CONTENTS at repository root. Review the exact changed paths and merge only that branch. Do not run Actions and do not apply an older cumulative patch afterwards. The private owner guide is outside the upload directory.
 
-This operation changes download availability only when the owner actually uploads and merges it. The preparation process itself performed no remote write. Package integrity checks are not application, native-browser, accessibility or external security certification.
+These routes become available on the review branch after the owner uploads them and on main only after the owner merges the reviewed change. This supplement changes file access, not the qualification of the underlying teaching objects. The preparation process itself performed no remote write. Package integrity checks are not application, native-browser, accessibility or external security certification.

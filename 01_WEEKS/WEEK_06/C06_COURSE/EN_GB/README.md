@@ -6,7 +6,7 @@
 
 On the ZIP's GitHub page, use **Download raw file**. Keep the ZIP intact until it is on your computer. Use **Extract All** into a new short folder, then open `index.html`. Do not open the lesson from inside the compressed archive. The standalone HTML shell is read locally; GitHub's file viewer is not the lesson player.
 
-The archive contains the complete original student payload, not a shortcut or an installer. Its internal files and manifest are unchanged. No `PACKAGE_EXACT` copy is uploaded for this preview lane: the exact source is inside the ZIP. Weeks 01–02 retain their existing browsing layout.
+The archive contains the complete original student payload, not a shortcut or an installer. Its internal files and manifest are unchanged. The adjacent `PACKAGE_EXACT` directory contains an exact, fully extracted copy of this same public ZIP, including its original manifest and PACKAGE_ID. No extra wrapper directory is inserted. Weeks 01–02 retain their existing browsing layout.
 
 P02 Query API is the only required complete implementation. A short separate file-lifecycle observation is required; full P01 and P03 implementations are not required from every student.
 
@@ -16,5 +16,22 @@ Both meetings have a minute-60 stop. Follow the seminar guide for any remaining 
 
 SHA-256: `a9a1a2aa6d9e049542cd4b0433a121e8a35900eca173d2156b3461dbf16704ff`  
 PACKAGE_ID: `44760c1b2ff83580206c4173379813a58ba24c3c0412ffbe977873c36396365f`
+
+## Browse the exact extracted files
+
+| Material | Repository file or directory |
+| --- | --- |
+| Complete extracted package | [Open](PACKAGE_EXACT/) |
+| Start page — HTML source | [Open](PACKAGE_EXACT/index.html) |
+| Course — HTML source | [Open](PACKAGE_EXACT/course.html) |
+| Student guide — HTML source | [Open](PACKAGE_EXACT/guide.html) |
+| C06 HANDOUT — Word document | [Open](PACKAGE_EXACT/documents/C06_HANDOUT.docx) |
+| C06 PREPARATION TRANSFER — Word document | [Open](PACKAGE_EXACT/documents/C06_PREPARATION_TRANSFER.docx) |
+| Canonical teaching examples | [Open](PACKAGE_EXACT/canonical/) |
+| Student observation and checking tools | [Open](PACKAGE_EXACT/tools/) |
+| Original file checksums | [Open](PACKAGE_EXACT/SHA256SUMS.txt) |
+| Original package identifier | [Open](PACKAGE_EXACT/PACKAGE_ID.txt) |
+
+Repository browsing displays HTML source; it does not host or execute the lesson. Use the unchanged ZIP above for the complete local interactive package. This addition does not activate GitHub Pages and does not close any qualification gate.
 
 [Whole-week preview](../../README.md) · [All weeks](../../../README.md)

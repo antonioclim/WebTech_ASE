@@ -1,6 +1,8 @@
-# Download and open Weeks 01–07
+# Browse, download and open Weeks 01–07
 
 Start with [the weekly index](../01_WEEKS/README.md). Weeks 01–02 keep their established pages and original ZIPs. The additional interactive S01 guide remains at its existing Week 01 path and is not replaced by an old archive.
+
+For individual file browsing in Weeks 03–07, follow week → course/seminar → EN_GB and open PACKAGE_EXACT. Each language README links to the HTML sources, Word documents and student project directories present in that exact public package. The same original files remain in DOWNLOAD; browsing a copy is not a qualification result or Pages deployment.
 
 For Weeks 03–07, open the week's complete PREVIEW ZIP file in GitHub, then choose **Download raw file**. On Windows, save it in Downloads, right-click the ZIP and use **Extract All** into a short new folder such as `D:\WTW07\WEEK`. Open `index.html` in the extracted directory. COURSE and SEMINAR are ready to browse. Do not extract the duplicate ZIPs inside DOWNLOAD merely to view the lesson.
 

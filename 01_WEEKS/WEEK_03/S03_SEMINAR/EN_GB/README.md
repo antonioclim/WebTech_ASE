@@ -6,7 +6,7 @@
 
 On the ZIP's GitHub page, use **Download raw file**. Keep the ZIP intact until it is on your computer. Use **Extract All** into a new short folder, then open `index.html`. Do not open the lesson from inside the compressed archive. The standalone HTML shell is read locally; GitHub's file viewer is not the lesson player.
 
-The archive contains the complete original student payload, not a shortcut or an installer. Its internal files and manifest are unchanged. No `PACKAGE_EXACT` copy is uploaded for this preview lane: the exact source is inside the ZIP. Weeks 01–02 retain their existing browsing layout.
+The archive contains the complete original student payload, not a shortcut or an installer. Its internal files and manifest are unchanged. The adjacent `PACKAGE_EXACT` directory contains an exact, fully extracted copy of this same public ZIP, including its original manifest and PACKAGE_ID. No extra wrapper directory is inserted. Weeks 01–02 retain their existing browsing layout.
 
 P01 Dataset Transformer is the central implementation. P03 Generated-Code Audit is required after the meeting. P02 Rule Engine is optional.
 
@@ -16,5 +16,24 @@ Both meetings have a minute-60 stop. Follow the seminar guide for any remaining 
 
 SHA-256: `5a6a7289acedb17c86dc14df2d3cecd903da43f901716c22c1badbeec624a493`  
 PACKAGE_ID: `9978f14ab59966e39a0ac008bd716dcef9c090c5173ed3e4b103d0a5c6d277b8`
+
+## Browse the exact extracted files
+
+| Material | Repository file or directory |
+| --- | --- |
+| Complete extracted package | [Open](PACKAGE_EXACT/) |
+| Start page — HTML source | [Open](PACKAGE_EXACT/index.html) |
+| Seminar — HTML source | [Open](PACKAGE_EXACT/seminar.html) |
+| Evidence form — HTML source | [Open](PACKAGE_EXACT/evidence.html) |
+| Student guide — HTML source | [Open](PACKAGE_EXACT/guide.html) |
+| S03 EVIDENCE FORM — Word document | [Open](PACKAGE_EXACT/documents/S03_EVIDENCE_FORM.docx) |
+| S03 PORTFOLIO — Word document | [Open](PACKAGE_EXACT/documents/S03_PORTFOLIO.docx) |
+| S03 STUDENT GUIDE — Word document | [Open](PACKAGE_EXACT/documents/S03_STUDENT_GUIDE.docx) |
+| Student projects | [Open](PACKAGE_EXACT/projects/) |
+| Student observation and checking tools | [Open](PACKAGE_EXACT/tools/) |
+| Original file checksums | [Open](PACKAGE_EXACT/SHA256SUMS.txt) |
+| Original package identifier | [Open](PACKAGE_EXACT/PACKAGE_ID.txt) |
+
+Repository browsing displays HTML source; it does not host or execute the lesson. Use the unchanged ZIP above for the complete local interactive package. This addition does not activate GitHub Pages and does not close any qualification gate.
 
 [Whole-week preview](../../README.md) · [All weeks](../../../README.md)

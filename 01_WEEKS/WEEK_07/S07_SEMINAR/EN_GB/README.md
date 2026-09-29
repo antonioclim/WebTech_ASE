@@ -6,7 +6,7 @@
 
 On the ZIP's GitHub page, use **Download raw file**. Keep the ZIP intact until it is on your computer. Use **Extract All** into a new short folder, then open `index.html`. Do not open the lesson from inside the compressed archive. The standalone HTML shell is read locally; GitHub's file viewer is not the lesson player.
 
-The archive contains the complete original student payload, not a shortcut or an installer. Its internal files and manifest are unchanged. No `PACKAGE_EXACT` copy is uploaded for this preview lane: the exact source is inside the ZIP. Weeks 01–02 retain their existing browsing layout.
+The archive contains the complete original student payload, not a shortcut or an installer. Its internal files and manifest are unchanged. The adjacent `PACKAGE_EXACT` directory contains an exact, fully extracted copy of this same public ZIP, including its original manifest and PACKAGE_ID. No extra wrapper directory is inserted. Weeks 01–02 retain their existing browsing layout.
 
 P02 Transactional Booking is the only required complete implementation. The P03-informed architecture decision record is required; full P01 and P03 implementations are optional.
 
@@ -16,5 +16,26 @@ Both meetings have a minute-60 stop. Follow the seminar guide for any remaining 
 
 SHA-256: `f9e34b3056e3862c2580b3e847d2ab7d0c38518b58ad751e306fb82be32af369`  
 PACKAGE_ID: `07bf18598e5f217a2b996106012995139e6ebc294aba61346397642ac1188936`
+
+## Browse the exact extracted files
+
+| Material | Repository file or directory |
+| --- | --- |
+| Complete extracted package | [Open](PACKAGE_EXACT/) |
+| Start page — HTML source | [Open](PACKAGE_EXACT/index.html) |
+| Seminar — HTML source | [Open](PACKAGE_EXACT/seminar.html) |
+| Evidence form — HTML source | [Open](PACKAGE_EXACT/evidence.html) |
+| Student guide — HTML source | [Open](PACKAGE_EXACT/guide.html) |
+| S07 ADR BRIEF — Word document | [Open](PACKAGE_EXACT/documents/S07_ADR_BRIEF.docx) |
+| S07 EVIDENCE FORM — Word document | [Open](PACKAGE_EXACT/documents/S07_EVIDENCE_FORM.docx) |
+| S07 STUDENT GUIDE — Word document | [Open](PACKAGE_EXACT/documents/S07_STUDENT_GUIDE.docx) |
+| Student projects | [Open](PACKAGE_EXACT/projects/) |
+| Optional or continuation projects | [Open](PACKAGE_EXACT/optional/) |
+| Project contracts | [Open](PACKAGE_EXACT/contracts/) |
+| Student observation and checking tools | [Open](PACKAGE_EXACT/tools/) |
+| Original file checksums | [Open](PACKAGE_EXACT/SHA256SUMS.txt) |
+| Original package identifier | [Open](PACKAGE_EXACT/PACKAGE_ID.txt) |
+
+Repository browsing displays HTML source; it does not host or execute the lesson. Use the unchanged ZIP above for the complete local interactive package. This addition does not activate GitHub Pages and does not close any qualification gate.
 
 [Whole-week preview](../../README.md) · [All weeks](../../../README.md)
