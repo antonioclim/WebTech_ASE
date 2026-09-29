@@ -1,0 +1,78 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>P02 public contract</title><link rel="stylesheet" href="../assets/site.css"></head><body class=""><a class="skip-link" href="#main">Skip to content</a><header><p>WEB TECHNOLOGIES 2026 · WEEK 05 · S05 · v1.1.0</p><h1>P02 public contract</h1><nav aria-label="Main"><a href="../index.html">Start</a><a href="../seminar.html">60-minute route</a><a href="../guide.html">Working guide</a><a href="../evidence.html">Evidence form</a><a href="../guided.html">Guided P02</a><a href="../moodle.html">Moodle guide</a></nav></header><main id="main"><h1>S05 — P02 public contract</h1>
+<p>Optional complete implementation. The required guided observation is supplied separately in guided.html; full P02 is not required for the maximum standard mark. Edit only optional/p02/src/report-pipeline.js when taking this route.</p>
+<h1>Exercise Specification — Middleware Pipeline</h1>
+<h2>Unit</h2>
+<p>Unit 05 — Server-Side JavaScript and REST APIs</p>
+<h2>Learning objective</h2>
+<p>Build and explain an ordered Express middleware pipeline that establishes request identity, records timing, validates a write request, short-circuits safely and emits one structured completion log.</p>
+<h2>Why this exercise exists</h2>
+<p>Middleware is a control-flow protocol, not a list of unrelated callbacks. Students need to see which middleware runs before a handler, which work resumes afterward, how rejection stops the pipeline and who owns response-level observability.</p>
+<h2>Prerequisites</h2>
+<ul>
+<li>Completed In-memory Task API or equivalent Express routing experience.</li>
+<li>JavaScript closures, <code>try</code>/<code>catch</code>/<code>finally</code> and HTTP header/status knowledge.</li>
+</ul>
+<h2>Starting context</h2>
+<p>Students receive a small Express 5 ESM application with:</p>
+<ul>
+<li>a complete <code>POST /api/reports</code> handler that assumes a validated body and returns <code>201</code> with an in-memory report representation;</li>
+<li>supplied app assembly, JSON parsing, not-found/error handling, server startup and deterministic tests;</li>
+<li>injected dependencies <code>clock.now()</code>, <code>createRequestId()</code> and <code>logger.info(entry)</code>;</li>
+<li>an incomplete <code>createReportPipeline(dependencies)</code> in <code>src/report-pipeline.js</code>, which must return an ordered array of Express middleware mounted before the handler.</li>
+</ul>
+<p>A valid report body is a plain JSON object with exactly <code>summary</code> and <code>severity</code>; <code>summary</code> is a nonblank string after trimming and <code>severity</code> is one of <code>low</code>, <code>medium</code> or <code>high</code>.</p>
+<h2>Required behaviour</h2>
+<ul>
+<li>The pipeline uses a nonblank incoming <code>X-Request-Id</code> header when present; otherwise it calls the injected ID factory exactly once.</li>
+<li>It exposes the chosen ID as <code>request.requestId</code>, returns it in <code>X-Request-Id</code> and includes it in every pipeline-produced error and completion log.</li>
+<li>Timing begins before validation/handler work and is captured immediately before response headers are committed.</li>
+<li><code>X-Response-Time-Ms</code> is set at that commit boundary using the nonnegative difference between injected clock readings; completion logging reuses the captured duration rather than pretending to measure after an already-sent header.</li>
+<li>Exactly one structured log is emitted per request with <code>{ requestId, method, path, status, durationMs, outcome }</code>, where outcome is <code>completed</code> for <code>finish</code> and <code>aborted</code> for <code>close</code> before finish.</li>
+<li>A request without <code>application/json</code> short-circuits with <code>415</code> and the standard <code>json_required</code> error.</li>
+<li>Invalid report fields short-circuit with <code>400</code> and <code>{ &quot;error&quot;: { &quot;code&quot;: &quot;validation_failed&quot;, &quot;message&quot;: &lt;stable message&gt;, &quot;requestId&quot;: &lt;id&gt; } }</code>.</li>
+<li>Validation replaces <code>request.body</code> with a normalized frozen object containing trimmed <code>summary</code> and the accepted <code>severity</code> before the route handler runs.</li>
+<li>A rejected request never invokes the route handler and still receives identity, timing and one completion log.</li>
+<li>Unexpected synchronous middleware/dependency errors are forwarded to supplied centralised error handling.</li>
+</ul>
+<h2>Constraints</h2>
+<ul>
+<li>JavaScript ESM, Express 5, Node.js LTS, native <code>fetch</code> and Node's test runner.</li>
+<li>Implement only <code>src/report-pipeline.js</code>; preserve route, app assembly, logger/factory fakes, tests and error middleware.</li>
+<li>Add no logging, request-ID, validation or timing packages.</li>
+<li>Do not patch <code>response.end</code>, log twice or rely on wall-clock delays in tests.</li>
+<li>Register response lifecycle listeners before calling <code>next</code>.</li>
+<li>Keep middleware responsibilities separate and return them in an explicit order.</li>
+</ul>
+<h2>Observable completion criteria</h2>
+<ul>
+<li>Valid report creation returns <code>201</code>, normalized data, <code>X-Request-Id</code> and a nonnegative response-time header.</li>
+<li>Invalid type/media requests return their documented errors without creating a report.</li>
+<li>Captured logs show exactly one completion record for successful, rejected, error and aborted requests.</li>
+<li>Focused tests prove pipeline order and deterministic duration from injected dependencies.</li>
+<li>The student can draw the request's downward middleware path and response completion path.</li>
+</ul>
+<h2>Validation plan</h2>
+<h3>Baseline checks</h3>
+<ul>
+<li>App/server startup, JSON parsing, the supplied handler and centralised fallback behaviour work with a known passthrough pipeline.</li>
+<li>Dependency injection records ID-factory, clock, logger and handler calls deterministically.</li>
+</ul>
+<h3>Objective checks</h3>
+<ul>
+<li>Incoming/generated identity behaviour, propagation and call counts match the contract.</li>
+<li>Valid input is trimmed, frozen and reaches the handler once.</li>
+<li>Media-type and field validation short-circuit before the handler with exact errors.</li>
+<li>Timing header and structured log contain the injected duration, final status, method/path, request ID and correct outcome.</li>
+<li>A simulated close-before-finish path logs <code>aborted</code> once.</li>
+</ul>
+<h3>Regression checks</h3>
+<ul>
+<li>Malformed JSON remains owned by centralised parsing/error middleware but still receives pipeline-independent standard handling.</li>
+<li>Unknown routes and unrelated health behaviour remain unchanged.</li>
+<li>Injected ID and clock dependencies are invoked only at their documented boundaries; a completion event never generates a second ID or duration.</li>
+<li>No response event listener remains active after its mutually exclusive completion event.</li>
+</ul>
+<h2>Explicit production clarifications</h2>
+<p>The canonical technical contract above is retained. Its historical whole-implementation Gemini prompt is not the current activity: use one bounded claim and independent verification. The current guide supersedes historical npm installation/start instructions without rewriting those source files. No complete assessed target is supplied here.</p>
+<p>Language-only adaptation: the public excerpt uses British spelling and omits serial commas. Technical requirements and their original source are retained in the private provenance record.</p>
+</main><footer>Local teaching candidate. Field completeness is not correctness, reference-runtime acceptance or a Moodle receipt.</footer></body></html>

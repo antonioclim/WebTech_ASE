@@ -1,0 +1,11 @@
+{
+  "project": "TEHNOLOGII WEB 2026",
+  "object": "S05",
+  "version": "1.1.0",
+  "audience": "PUBLIC_STUDENT",
+  "production": "PHASE_3_S05_PRODUCTION_COMPLETE",
+  "qualification": "PRODUCED_PENDING_DEFERRED_ACCEPTANCE",
+  "referenceNode": "v24.21.0",
+  "referenceNpm": "11.19.0",
+  "publicWeekState": "SCAFFOLD"
+}

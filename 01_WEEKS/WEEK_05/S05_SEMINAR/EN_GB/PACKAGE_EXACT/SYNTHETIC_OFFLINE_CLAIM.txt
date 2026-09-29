@@ -1,0 +1,3 @@
+SYNTHETIC PRACTICE ONLY — not a real Gemini exchange.
+Claim: "If every failure response has status 400, it must have been produced by your router validation, and an empty DELETE response should still be parsed as JSON."
+Select one part. Predict a counterexample, consult the supplied app/contract and later compare with one local HTTP observation. Keep Gemini state PENDING until an actual bounded interaction or a separately documented teacher alternative exists. This text does not supply the assessed implementation.

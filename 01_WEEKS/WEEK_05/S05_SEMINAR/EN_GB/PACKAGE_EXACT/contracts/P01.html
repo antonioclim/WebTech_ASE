@@ -1,0 +1,82 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>P01 public contract</title><link rel="stylesheet" href="../assets/site.css"></head><body class=""><a class="skip-link" href="#main">Skip to content</a><header><p>WEB TECHNOLOGIES 2026 · WEEK 05 · S05 · v1.1.0</p><h1>P01 public contract</h1><nav aria-label="Main"><a href="../index.html">Start</a><a href="../seminar.html">60-minute route</a><a href="../guide.html">Working guide</a><a href="../evidence.html">Evidence form</a><a href="../guided.html">Guided P02</a><a href="../moodle.html">Moodle guide</a></nav></header><main id="main"><h1>S05 — P01 public contract</h1>
+<p>Required implementation. Edit only projects/p01/src/task-router.js. The full contract remains assigned even when implementation is unfinished at minute 60.</p>
+<h1>Exercise Specification — In-memory Task API</h1>
+<h2>Unit</h2>
+<p>Unit 05 — Server-Side JavaScript and REST APIs</p>
+<h2>Learning objective</h2>
+<p>Implement a resource-oriented Express router that maps validated HTTP requests to in-memory CRUD operations with deliberate methods, status codes, headers and JSON representations.</p>
+<h2>Why this exercise exists</h2>
+<p>Students have already inspected and built raw HTTP handlers. Express should now reduce transport boilerplate without hiding the request/response contract. A supplied in-memory repository keeps routing, parsing, validation and REST semantics visible before persistence is introduced.</p>
+<h2>Prerequisites</h2>
+<ul>
+<li>Units 1–4, especially HTTP messages, JavaScript modules, async error paths and native <code>fetch</code>.</li>
+<li>Node.js LTS and npm.</li>
+<li>Ability to read small Express middleware and repository modules.</li>
+</ul>
+<h2>Starting context</h2>
+<p>Students receive a JavaScript ESM project using Express 5 with:</p>
+<ul>
+<li><code>src/app.js</code>, which creates an app, enables <code>express.json</code>, mounts a task router at <code>/api/tasks</code> and installs supplied not-found and error middleware;</li>
+<li>a complete injected in-memory repository with deterministic reset data and methods <code>list</code>, <code>findById</code>, <code>create</code>, <code>update</code> and <code>remove</code>;</li>
+<li>a static page at <code>/</code> that identifies the API and links to its documentation;</li>
+<li>tests that start the app on an ephemeral loopback port and use native <code>fetch</code>;</li>
+<li>an incomplete <code>createTaskRouter({ repository })</code> in <code>src/task-router.js</code>.</li>
+</ul>
+<p>Tasks have exactly <code>id</code>, <code>title</code> and <code>completed</code>. IDs are opaque strings assigned by the repository. The router owns HTTP parsing and validation; the repository owns collection state.</p>
+<h2>Required behaviour</h2>
+<ul>
+<li><code>GET /api/tasks</code> returns <code>200</code> and <code>{ &quot;data&quot;: [ ... ] }</code> in repository order.</li>
+<li><code>GET /api/tasks/:taskId</code> returns <code>200</code> and <code>{ &quot;data&quot;: task }</code> when found.</li>
+<li>A missing task returns <code>404</code> and <code>{ &quot;error&quot;: { &quot;code&quot;: &quot;task_not_found&quot;, &quot;message&quot;: &quot;Task not found&quot; } }</code>.</li>
+<li><code>POST /api/tasks</code> accepts JSON containing only <code>title</code>; it trims the title, creates <code>{ completed: false }</code> and returns <code>201</code>, <code>Location: /api/tasks/&lt;id&gt;</code> and <code>{ &quot;data&quot;: task }</code>.</li>
+<li><code>PATCH /api/tasks/:taskId</code> accepts one or both of <code>title</code> and <code>completed</code>, returns <code>200</code> and the updated task and preserves unspecified fields.</li>
+<li><code>DELETE /api/tasks/:taskId</code> removes an existing task and returns <code>204</code> with no body or content type.</li>
+<li>A create/update body that is not a plain JSON object, contains unknown fields, has an empty/blank title or has a non-boolean <code>completed</code> returns <code>400</code> with <code>{ &quot;error&quot;: { &quot;code&quot;: &quot;validation_failed&quot;, &quot;message&quot;: &lt;stable message&gt; } }</code>.</li>
+<li>A create/update request without <code>application/json</code> returns <code>415</code> with <code>{ &quot;error&quot;: { &quot;code&quot;: &quot;json_required&quot;, &quot;message&quot;: &quot;Content-Type must be application/json&quot; } }</code>.</li>
+<li>Malformed JSON is handled by the supplied centralised error middleware as <code>400 invalid_json</code>.</li>
+<li>Router handlers pass unexpected repository errors to centralised error handling rather than exposing stack traces.</li>
+</ul>
+<h2>Constraints</h2>
+<ul>
+<li>Use JavaScript, ESM, Node.js LTS, Express 5, native <code>fetch</code> and Node's built-in test runner.</li>
+<li>Use <code>express.json</code>; do not add <code>body-parser</code>, Axios, a validation package, a database or a second HTTP framework.</li>
+<li>Implement application routes only in <code>src/task-router.js</code>; do not change the supplied repository, app assembly, error middleware, fixtures or tests as student work.</li>
+<li>Match method and route deliberately; do not treat action verbs as resource paths.</li>
+<li>Send no body with <code>204</code>.</li>
+<li>Bind the validation server to loopback and support an OS-assigned port.</li>
+</ul>
+<h2>Observable completion criteria</h2>
+<ul>
+<li>The documented start command prints a usable loopback URL and serves the static landing page.</li>
+<li>A <code>curl</code> or native-fetch sequence can list, create, fetch, update and delete one task using the specified status/header/body contracts.</li>
+<li>At least one invalid body, unsupported media type, missing task, malformed JSON and unknown route produce their documented errors.</li>
+<li><code>npm test</code> reports all baseline, objective and regression checks passing.</li>
+<li>The student can trace one request through Express parsing, router validation, repository invocation and centralised error handling.</li>
+</ul>
+<h2>Validation plan</h2>
+<h3>Baseline checks</h3>
+<ul>
+<li>The Express app starts/stops on an ephemeral loopback port and serves <code>/</code>.</li>
+<li>JSON parsing, not-found middleware, error middleware and the repository's deterministic reset behaviour work independently of the objective router.</li>
+<li>The project uses ESM, the committed lock file and only justified dependencies.</li>
+</ul>
+<h3>Objective checks</h3>
+<ul>
+<li>List/fetch/create/update/delete success paths match exact methods, statuses, <code>Location</code>, wrappers and no-body semantics.</li>
+<li>Create/update validation rejects every documented invalid type and unknown field without mutating repository state.</li>
+<li>Missing-resource and unsupported-media responses use the standard error shape.</li>
+<li>An injected repository failure reaches the supplied <code>500 internal_error</code> handler without leaking its message or stack.</li>
+</ul>
+<h3>Regression checks</h3>
+<ul>
+<li>Malformed JSON remains <code>400 invalid_json</code> and does not create a task.</li>
+<li>Unknown API routes remain <code>404 not_found</code>.</li>
+<li>A failed request does not prevent a later health/list request.</li>
+<li>Repository-returned task objects are represented without transport-only fields or mutation.</li>
+</ul>
+<h2>Explicit production clarifications</h2>
+<p>The canonical technical contract above is retained. Its historical whole-implementation Gemini prompt is not the current activity: use one bounded claim and independent verification. The current guide supersedes historical npm installation/start instructions without rewriting those source files. No complete assessed target is supplied here.</p>
+<p>The supplied strict JSON parser runs before the router. A syntactically valid primitive such as <code>null</code> is a parser-category case, not a body-object case reached by router validation. The derived expected response is <code>400 invalid_json</code>; record it only as observed after an actual HTTP run. A JSON array passes strict parsing but is rejected by router shape validation. This source-supported clarification is outside the immutable project; it is not a silent correction of the original specification.</p>
+<p>The source calls the accepted shape a plain JSON object. Its predicate excludes null and arrays rather than performing a general JavaScript prototype audit. Stay within JSON-derived inputs. A DELETE response has no body or Content-Type under this exercise's contract; that is not a claim that every HTTP 204 forbids all metadata.</p>
+<p>Language-only adaptation: the public excerpt uses British spelling and omits serial commas. Technical requirements and their original source are retained in the private provenance record.</p>
+</main><footer>Local teaching candidate. Field completeness is not correctness, reference-runtime acceptance or a Moodle receipt.</footer></body></html>
