@@ -1,0 +1,5 @@
+SYNTHETIC PRACTICE TEXT — NOT A GEMINI CONVERSATION
+
+Claim for review: “If one frozen-record test passes, the transformation cannot change any input array, and mapped output objects must be aliases of the input.”
+
+Separate the claims. Predict a two-record before/after observation and a reference-identity comparison. Run the relevant observer on your current code. Record evidence and a bounded verdict. Keep Gemini state PENDING until the actual required activity takes place.

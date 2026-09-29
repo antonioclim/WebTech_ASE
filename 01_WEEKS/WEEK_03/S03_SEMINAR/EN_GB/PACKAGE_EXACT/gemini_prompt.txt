@@ -1,0 +1,8 @@
+S03 bounded review. Do not implement the assessed module.
+
+I predict [ONE CLAIM] for this synthetic input: [SMALL INPUT].
+The relevant contract is [ONE CLAUSE].
+My actual observation is [OUTPUT/ERROR OR NOT YET RUN].
+Review only the claim. Distinguish own-property lookup, exact types, input mutation and output identity where relevant. Propose one small independent witness, not the finished function. State a limitation. Do not edit tests, fixtures, CLI or dependencies.
+
+I will independently execute the witness and record ACCEPTED / REJECTED / PARTIALLY ACCEPTED / UNKNOWN. Do not treat your explanation as test evidence.
