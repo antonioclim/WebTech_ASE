@@ -1,0 +1,3 @@
+SYNTHETIC PRACTICE ONLY — not an actual Gemini exchange.
+Claim: “If the four-operation spy passes, all writes must share a transaction and retrying the booking POST is automatically idempotent.”
+Predict which independent observations could support or reject each part. Keep actual Gemini activity pending until it happens or a teacher separately grants an alternative.
