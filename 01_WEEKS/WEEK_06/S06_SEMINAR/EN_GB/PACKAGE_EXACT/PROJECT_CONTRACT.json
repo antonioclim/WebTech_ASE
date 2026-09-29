@@ -1,0 +1,101 @@
+{
+  "p01": {
+    "root": "optional/p01",
+    "target": "src/note-store.js",
+    "files": {
+      "README.md": "2cda1c42844871d67a450a76de818bb76bc19ccaf9bfc7d862f36171cc0f94ae",
+      "package-lock.json": "f4ef6beeaaac8c71c02317b014f63a12ba8cd0494b6c1f58ef1d50b116f65036",
+      "package.json": "49cf26f90d3759977ba6c10384943bac4c1fa17a4185c670aa5af4478a2eef92",
+      "public/index.html": "e990407330f4de4e991e387076c7dd32784155eda1b75e48a44aef6e2d40b099",
+      "src/app.js": "e624d1801d907bdef592a30e1baee8d8af6081c84e0db662c86e4afe4b77f2e2",
+      "src/note-store.js": "569f8ffa10557f1c5b540dea7c71e1a40adb3a96073dbc1ac67cc77f7df84ab0",
+      "src/seed.js": "7ac8e83d94b2550ed6cfff6a4b383f7170fa4ef596834330d09fc8c0c55e361b",
+      "src/server.js": "20f051bc89327a489dd046ccba14d0ab1bcafdb03c86c3df6fa5ce4fae0a0c3c",
+      "tests/baseline.test.js": "eaa84740dc1d93a87b650966bc8808abba98480098bf7c3db05490a3814f9685",
+      "tests/helpers.js": "9fc5f15afd39b9706b86c71bd2f44bebdd60a642e8aa4f824c52a4e54e339874",
+      "tests/objective.test.js": "58e21a5a753dd6a0fc9bf80060559d00073c8ee88f5bf7445b0ac50568185ee3",
+      "tests/regression.test.js": "3ed0e9d4af19e1396ac188ef042911ba38dc5fa2dc9760df36fa68a78a7b02f8"
+    },
+    "tests": {
+      "baseline": [
+        "supplied HTTP application works with an injected fake store"
+      ],
+      "objective": [
+        "model metadata, defaults, normalization, and CRUD match the contract",
+        "file-backed rows survive close and non-reset initialization",
+        "live HTTP CRUD uses persistent store results",
+        "invalid model data inserts nothing and later work succeeds",
+        "normal initialization does not duplicate seed"
+      ],
+      "regression": [
+        "malformed JSON, unknown routes, and health stay independent from persistence",
+        "store remains independent from Express and HTTP contracts"
+      ]
+    }
+  },
+  "p02": {
+    "root": "projects/p02",
+    "target": "src/note-query.js",
+    "files": {
+      "README.md": "fb5e0e4147929291d72770d8820c9ad0fc1c8fff6160acfbc1c114f9e6ce9f45",
+      "package-lock.json": "d38955fdd65db968f0262cb1c960a8df235ca5b4fcf47ebd991322bd5bf3ad69",
+      "package.json": "01226263306c5b178f6956e1188d6637cddf09bf342e46d0b9d30f4c40bd9881",
+      "public/index.html": "47eb1a61f79c053131582e33e194517cdcb7a8434cf4af6e4b6bdd0261f896ce",
+      "src/app.js": "d1913c3c062a9d3a9ae34d4c2bcf8a5d5c4b696a04c4b00091a1f47b9acf2eb6",
+      "src/database.js": "8d2762b908c430a81afa305e35d696191c26d57b7ba8c5804852d43a81db2da2",
+      "src/note-query.js": "49030efc3bf54825eb55fc9c337531e58b070a4ccc2076a46f5fe9ad39ed1f99",
+      "src/server.js": "fa626c61556fe470e015fff80da1f5ca1d1b872f66e7846967c61bf0acac0a92",
+      "tests/baseline.test.js": "66705ce4eb7c0e74155838ff05e37c72568a6e0274ce29c60448db9aad476fcf",
+      "tests/helpers.js": "eab97b49589f8154fad8c08af5b7f0d5498617ff5f333d9db7b61ab98c517837",
+      "tests/objective.test.js": "698d2062b48b5220d290bcff3655dce221d7e6ef1764d9b5b0a9ca68fe47f9af",
+      "tests/regression.test.js": "716fadc4b219dad1366ffdc932fecfa84465288b45892976a167377373c40b5e"
+    },
+    "tests": {
+      "baseline": [
+        "supplied database, route, static page, and serializer work with fixed options"
+      ],
+      "objective": [
+        "translator builds default, filters, orders, and projection without mutation",
+        "integration filters, searches literals, sorts deterministically, and projects",
+        "invalid closed-language inputs throw stable errors before querying"
+      ],
+      "regression": [
+        "default listing, unknown route, health, and recovery remain healthy"
+      ]
+    }
+  },
+  "p03": {
+    "root": "optional/p03",
+    "target": "src/persistence-repair.js",
+    "files": {
+      "README.md": "768da401f9c005c8db0ae543cf5ee39676c825de1c14ad027d64bab2f501c93a",
+      "package-lock.json": "b591f8cb125c46c32749520f0ea7daea29c18f7f70521cfd3141958f91035c40",
+      "package.json": "bb9fd0128128a570dc7976138a929201d633392c9e731cadb539b6f699e9f90c",
+      "public/index.html": "987faadef825615eda1530c98c65148dae26c87c1681cc30f34e16a36d527859",
+      "src/app.js": "2ed54e3879d75ccbce5046d76871fb24f26b4a49a7a093e6ea6ae1a2ac1d4aca",
+      "src/database.js": "d41fa20402e4b009efe46dc80b83ce4a1886c78a4ef805b9c3414f2a069c13bf",
+      "src/persistence-repair.js": "428cc6210d1bb971984d215cd283e2f102f25d27429fa707cae1149e7937605f",
+      "src/server.js": "9d16b88ea2251d74f9fb43e657b3513073f1c67ae30155f16fd956a60becfb29",
+      "src/unsafe-generated-persistence.js": "4c5569b727c06e9f1d609a6c3f453217aadfa09c8aa6bb6017df44324e4d7eae",
+      "tests/baseline.test.js": "eb5ff1d8fc3c0b7104e3a94a05cb6f19b629780d777fc17988e209c7b47cfa62",
+      "tests/helpers.js": "a2e4046a5519811f18a48fffe6090612e8a0bd1d9902eb3fd6f0fd3500e09482",
+      "tests/objective.test.js": "64a7dd2d676d9f1703fecaf11426b9d30749103b18d07df4f88f1ea497eefc9e",
+      "tests/regression.test.js": "cbe66c37b7e04c7e2bdb847caa4b5e055822d898b08e62e8d5382c26f4d9ed36"
+    },
+    "tests": {
+      "baseline": [
+        "unsafe evidence reproducibly has weak metadata and raw async rejection"
+      ],
+      "objective": [
+        "model metadata, normalization, ranges, and detached success are correct",
+        "invalid and duplicate writes map exact custom errors and insert nothing",
+        "unexpected failures preserve identity",
+        "HTTP waits for persistence and maps validation/conflict safely",
+        "unsafe evidence stays separate from repaired module"
+      ],
+      "regression": [
+        "supplied parser, fallback, health, and safe internal error remain healthy"
+      ]
+    }
+  }
+}

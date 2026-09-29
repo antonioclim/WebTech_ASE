@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-GB"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>P03: persistence bug hunt</title><link href="../assets/site.css" rel="stylesheet"/></head><body class=""><a class="skip-link" href="#main">Skip to content</a><header><p>WEB TECHNOLOGIES 2026 · WEEK 06 · S06 · v1.1.0</p><h1>P03: persistence bug hunt</h1><nav aria-label="Main"><a href="../index.html">Start</a><a href="../seminar.html">60-minute route</a><a href="../guide.html">Working guide</a><a href="../evidence.html">Evidence form</a><a href="../lifecycle.html">File observation</a><a href="../moodle.html">Moodle guide</a></nav></header><main id="main"><h1>P03 public contract</h1>
+<p><strong>Role:</strong> Optional reinforcement. <strong>Local allowed target:</strong> <code>optional/p03/src/persistence-repair.js</code>.</p>
+<p>This is a source-derived public contract. Technical requirements and section order are retained. British-English wording, punctuation, local directory guidance and the bounded-AI task are explicit delivery adaptations. Instructions for producing the starter have been replaced by direct student guidance; the exact original specification is retained privately. Immutable starter files are unchanged.</p>
+<h1>Exercise Specification — Persistence Bug Hunt</h1>
+<h2>Unit</h2>
+<p>Unit 06 — Persistence with Sequelize and SQLite</p>
+<h2>Learning objective</h2>
+<p>Diagnose a plausible generated Sequelize boundary and repair model constraints plus asynchronous write/error ownership without rewriting supplied application or legacy evidence.</p>
+<h2>Why this exercise exists</h2>
+<p>Generated ORM code often appears correct on the happy path while allowing invalid rows, returning before writes settle or catching nothing because a promise was not awaited. Students need to connect model metadata, database state, promise settlement and public failures from evidence.</p>
+<h2>Prerequisites</h2>
+<ul>
+<li>Persistent Notes API and Query API.</li>
+<li>Sequelize models/validation, async rejection behaviour and centralised API errors.</li>
+</ul>
+<h2>Starting context</h2>
+<p>Students receive a small reservation service with fixed Express routes, serialiser/error middleware, deterministic SQLite harness, tests and an intentionally preserved <code>src/unsafe-generated-persistence.js</code>. The unsafe module defines nullable/weak fields and returns <code>model.create(...)</code> from inside a non-async <code>try</code>/<code>catch</code>, so validation/database rejections escape its intended translation.</p>
+<p>The reference repair is confined to <code>src/persistence-repair.js</code>, exporting <code>defineReservation(sequelize)</code> and <code>createReservation(Reservation, input)</code>. A supplied compatibility branch can delegate to the unsafe module when objective repair code is absent; that branch is common to reference/student trees and clearly labeled as defective evidence.</p>
+<p>Reservations have public fields <code>id</code>, <code>code</code>, <code>guestName</code>, <code>seats</code>, <code>createdAt</code> and <code>updatedAt</code>.</p>
+<h2>Required behaviour</h2>
+<ul>
+<li>Define <code>code</code> as a non-null unique string, trimmed and restricted to <code>^[A-Z0-9-]{4,16}$</code>.</li>
+<li>Define <code>guestName</code> as a non-null string whose trimmed value is nonempty; persist the trimmed value.</li>
+<li>Define <code>seats</code> as a non-null integer with minimum <code>1</code> and maximum <code>8</code>.</li>
+<li>Keep integer auto-increment primary key and Sequelize timestamps.</li>
+<li><code>createReservation</code> is async, awaits <code>Reservation.create</code> and returns a detached plain object only after persistence succeeds.</li>
+<li>Sequelize validation failures are caught and rethrown as <code>PersistenceValidationError</code> with <code>code: 'reservation_invalid'</code> and a stable non-sensitive message.</li>
+<li>Unique-code database/constraint failures are caught and rethrown as <code>PersistenceConflictError</code> with <code>code: 'reservation_exists'</code>.</li>
+<li>Unexpected failures propagate unchanged to centralised internal-error handling.</li>
+<li>Invalid/conflicting writes insert no row, produce no unhandled rejection and settle before the request handler responds.</li>
+<li>The preserved unsafe module remains byte-for-byte unchanged and is never used by the validated reference path.</li>
+</ul>
+<h2>Constraints</h2>
+<ul>
+<li>JavaScript ESM, Sequelize stable 6.x, SQLite, Express 5 supplied code, native <code>fetch</code> and Node's test runner.</li>
+<li>Edit only <code>src/persistence-repair.js</code>; do not edit the unsafe generated module, routes, error middleware, tests or dependencies.</li>
+<li>Do not validate only in Express; constraints must exist in model metadata and direct model/store checks.</li>
+<li>Do not swallow unexpected errors, match database errors solely by message text or add a second model/table.</li>
+<li>Tests use isolated temporary/in-memory databases and deterministic cleanup.</li>
+</ul>
+<h2>Observable completion criteria</h2>
+<ul>
+<li>The initial student checks expose nullable/format/range/unique defects and escaped asynchronous rejections while baseline server/model evidence remains inspectable.</li>
+<li>After repair, all categorized checks pass and only <code>src/persistence-repair.js</code> differs.</li>
+<li>Model metadata and direct invalid writes prove constraints independently of HTTP validation.</li>
+<li>Duplicate and invalid API requests return stable <code>409</code>/<code>400</code> errors; unexpected failures return sanitised <code>500</code>.</li>
+<li>No <code>unhandledRejection</code> is observed and successful responses occur only after the row is queryable.</li>
+<li>The student can explain why <code>return Model.create()</code> inside a synchronous <code>try</code> block does not catch a later rejection.</li>
+</ul>
+<h2>Validation plan</h2>
+<h3>Baseline checks</h3>
+<ul>
+<li>Supplied Express/server/error lifecycle and deterministic database harness work with a known safe fake.</li>
+<li>The unsafe module remains present, unchanged and reproducibly demonstrates weak metadata plus escaped promise rejection.</li>
+</ul>
+<h3>Objective checks</h3>
+<ul>
+<li>Model metadata and direct writes enforce non-null, format, normalisation, integer range and uniqueness.</li>
+<li>Successful creation returns a detached object only after the row exists.</li>
+<li>Invalid/duplicate failures become the exact custom errors and insert nothing.</li>
+<li>An injected unexpected failure preserves object identity for centralised handling.</li>
+<li>A rejection observer records no unhandled promise for repaired calls.</li>
+</ul>
+<h3>Regression checks</h3>
+<ul>
+<li>Malformed JSON, unknown routes, health and database cleanup remain healthy.</li>
+<li>Failed writes do not poison a later valid request.</li>
+<li>Public bodies expose no SQLite SQL, stack, storage path or raw constraint text.</li>
+<li>The unsafe evidence module is identical across reference/student and excluded from the repaired runtime path.</li>
+</ul>
+<h2>Intended student work</h2>
+<p>Work from the supplied starter and edit only <code>optional/p03/src/persistence-repair.js</code>. Do not copy or alter the reference, tests, model, routes or fixture files. Use the completion and validation criteria above to justify your implementation. Keep the originally supplied incomplete target identifiable before your first edit.</p>
+<h2>Bounded Gemini review — derived delivery rule</h2>
+<p>Use the top-level <code>GEMINI_PROMPT.txt</code> for one sanitised claim and an independent check. This replaces the source's full-implementation prompt for the present teaching delivery. Do not ask Gemini to rewrite the complete target or edit tests. Save only prompt, selected claim, independent result, verdict, correction and limitation.</p>
+<h2>Debugging / extension task</h2>
+<ul>
+<li>Replace <code>return await Reservation.create(...)</code> with <code>return Reservation.create(...)</code> inside the <code>try</code> block. Trigger an invalid write and compare where the rejection is observed; restore <code>await</code> and verify the custom error plus zero unhandled rejections.</li>
+</ul>
+<h2>Out of scope</h2>
+<ul>
+<li>Associations, transactions, migrations, availability rules, authentication, production database engines or a rewrite of the preserved generated module.</li>
+</ul>
+</main><footer>Local teaching candidate. Completeness is not correctness, native qualification or a Moodle receipt.</footer></body></html>

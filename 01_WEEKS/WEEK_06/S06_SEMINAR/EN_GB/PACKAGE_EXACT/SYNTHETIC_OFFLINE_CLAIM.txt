@@ -1,0 +1,5 @@
+SYNTHETIC PRACTICE ONLY — not a real Gemini response or interaction.
+
+Claim for independent review: "If the API returns HTTP 400, no database method can have run; a successful list from :memory: also proves that a file will survive a restart."
+
+Identify the two distinct claims, propose separate witnesses and state their limits. Do not report this text as an actual AI session. Keep the final Gemini requirement pending unless a separate teacher decision applies.

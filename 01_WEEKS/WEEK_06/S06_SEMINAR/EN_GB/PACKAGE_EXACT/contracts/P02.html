@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-GB"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>P02: query api</title><link href="../assets/site.css" rel="stylesheet"/></head><body class=""><a class="skip-link" href="#main">Skip to content</a><header><p>WEB TECHNOLOGIES 2026 · WEEK 06 · S06 · v1.1.0</p><h1>P02: query api</h1><nav aria-label="Main"><a href="../index.html">Start</a><a href="../seminar.html">60-minute route</a><a href="../guide.html">Working guide</a><a href="../evidence.html">Evidence form</a><a href="../lifecycle.html">File observation</a><a href="../moodle.html">Moodle guide</a></nav></header><main id="main"><h1>P02 public contract</h1>
+<p><strong>Role:</strong> The required central implementation. <strong>Local allowed target:</strong> <code>projects/p02/src/note-query.js</code>.</p>
+<p>This is a source-derived public contract. Technical requirements and section order are retained. British-English wording, punctuation, local directory guidance and the bounded-AI task are explicit delivery adaptations. Instructions for producing the starter have been replaced by direct student guidance; the exact original specification is retained privately. Immutable starter files are unchanged.</p>
+<p><strong>Scope clarifications:</strong> the <code>lower</code>/<code>instr</code> route has the default SQLite ASCII-case boundary, not a claim of universal Unicode folding. The tie-breaker is a contract requirement; its removal need not visibly shuffle a small run. P02 uses <code>:memory:</code>, not file storage. A 400 alone does not prove zero model calls. These notes clarify claims; they do not alter the allowed target or seed.</p>
+<h1>Exercise Specification — Query API</h1>
+<h2>Unit</h2>
+<p>Unit 06 — Persistence with Sequelize and SQLite</p>
+<h2>Learning objective</h2>
+<p>Translate a small validated HTTP query language into safe Sequelize <code>findAll</code> options for filtering, deterministic sorting and field projection without leaking ORM details into route code.</p>
+<h2>Why this exercise exists</h2>
+<p>CRUD alone hides much of persistence work. Query parameters become useful only when their types, allowed values, ORM operators, projection rules and stable ordering are explicit. A dedicated translator keeps the API contract inspectable and testable independently of Express and SQLite.</p>
+<h2>Prerequisites</h2>
+<ul>
+<li>Persistent Notes API and Sequelize model/query basics.</li>
+<li>URL query parameters, strict validation, array/object transformations and API envelopes.</li>
+</ul>
+<h2>Starting context</h2>
+<p>Students receive a complete Express/Sequelize notes application with deterministic in-memory test database, seeded <code>Note</code> model, app/store lifecycle, serialiser, static page and <code>GET /api/notes</code> route. The route passes <code>request.query</code> to an incomplete <code>buildNoteQuery(query)</code> in <code>src/note-query.js</code>, then calls <code>Note.findAll(options)</code> and returns <code>{ data }</code>.</p>
+<p>The accepted query parameters are <code>owner</code>, <code>archived</code>, <code>search</code>, <code>sort</code> and <code>fields</code>. Each may appear at most once. Unknown or repeated parameters must be rejected before Sequelize executes.</p>
+<h2>Required behaviour</h2>
+<ul>
+<li>With no parameters, return all notes ordered by <code>updatedAt</code> descending and <code>id</code> ascending as a deterministic tie-breaker.</li>
+<li><code>owner=&lt;nonblank&gt;</code> filters exact owner after trimming.</li>
+<li><code>archived=true|false</code> filters the exact boolean; no other spelling or coercion is accepted.</li>
+<li><code>search=&lt;nonblank&gt;</code> performs a case-insensitive substring match against title using the portable SQLite-compatible Sequelize expression selected by the reference; wildcard characters are treated as literal search text rather than raw SQL.</li>
+<li><code>sort=updated_desc|updated_asc|title_asc</code> maps only to documented attribute/direction pairs and always adds ascending <code>id</code> as a final tie-breaker.</li>
+<li><code>fields</code> is a comma-separated subset of <code>title</code>, <code>owner</code>, <code>archived</code> and <code>updatedAt</code>; trim entries, reject empty/unknown/duplicate names and always include <code>id</code>.</li>
+<li>Combine filters with AND semantics in one <code>where</code> option.</li>
+<li>Omit <code>where</code> or <code>attributes</code> when no corresponding constraint was supplied.</li>
+<li>Return a new options object and never mutate <code>query</code>.</li>
+<li>Invalid input throws <code>QueryValidationError</code> with stable public <code>code: 'invalid_query'</code> and a message naming only the invalid parameter, not generated SQL.</li>
+<li>The supplied error middleware maps that error to <code>400</code> and the standard error envelope; other database errors remain sanitised <code>500</code> responses.</li>
+</ul>
+<h2>Constraints</h2>
+<ul>
+<li>JavaScript ESM, Sequelize stable 6.x, SQLite, Express 5 supplied code, native <code>fetch</code> and Node's test runner.</li>
+<li>Implement only <code>src/note-query.js</code>; do not edit route/model/seed/error middleware or tests.</li>
+<li>Use Sequelize operators/functions, not raw SQL strings or post-query in-memory filtering/sorting/projection.</li>
+<li>Do not accept arbitrary column names or sort directions from the request.</li>
+<li>Keep the query language deliberately small; no pagination or associations in this unit.</li>
+</ul>
+<h2>Observable completion criteria</h2>
+<ul>
+<li>Focused translator and integration checks pass.</li>
+<li>Browser/<code>curl</code> requests demonstrate one combined filter, each sort mode and one projection.</li>
+<li>Invalid/repeated/unknown parameters return <code>400 invalid_query</code> and execute no model query.</li>
+<li>Equal primary sort values always return ascending IDs.</li>
+<li>The generated SQL can be inspected in a debugging variation, but SQL text is not part of public errors.</li>
+<li>Only <code>src/note-query.js</code> changes.</li>
+</ul>
+<h2>Validation plan</h2>
+<h3>Baseline checks</h3>
+<ul>
+<li>Supplied Sequelize connection, model, seed, route, serialiser and error middleware work with a known fixed options object.</li>
+<li>Seed data makes every filter/sort/projection result deterministic.</li>
+</ul>
+<h3>Objective checks</h3>
+<ul>
+<li>Unit checks inspect exact <code>where</code>, <code>order</code> and <code>attributes</code> option structure for every accepted parameter and combination.</li>
+<li>Integration checks prove returned rows for owner/archived/search filters, all sort modes, tie-breaking and projections.</li>
+<li>Invalid booleans, blanks, sort modes, fields, duplicates, repeats and unknown parameters throw before <code>findAll</code>.</li>
+<li>Frozen query input remains unchanged.</li>
+</ul>
+<h3>Regression checks</h3>
+<ul>
+<li>Default listing and supplied health/static/error behaviour remain healthy.</li>
+<li>Query values cannot inject attribute names, directions, SQL fragments or response internals.</li>
+<li>A failed query is followed successfully by a valid list request.</li>
+<li>Database instances are closed after every test.</li>
+</ul>
+<h2>Intended student work</h2>
+<p>Work from the supplied starter and edit only <code>projects/p02/src/note-query.js</code>. Do not copy or alter the reference, tests, model, routes or fixture files. Use the completion and validation criteria above to justify your implementation. Keep the originally supplied incomplete target identifiable before your first edit.</p>
+<h2>Bounded Gemini review — derived delivery rule</h2>
+<p>Use the top-level <code>GEMINI_PROMPT.txt</code> for one sanitised claim and an independent check. This replaces the source's full-implementation prompt for the present teaching delivery. Do not ask Gemini to rewrite the complete target or edit tests. Save only prompt, selected claim, independent result, verdict, correction and limitation.</p>
+<h2>Debugging / extension task</h2>
+<ul>
+<li>Remove the ID tie-breaker from one sort mode and use equal seeded values. Reproduce nondeterministic/contract-incomplete ordering, then restore explicit deterministic order.</li>
+</ul>
+<h2>Out of scope</h2>
+<ul>
+<li>Pagination, full-text search, ranking, associations, transactions, raw SQL, database-specific production search or client UI controls.</li>
+</ul>
+</main><footer>Local teaching candidate. Completeness is not correctness, native qualification or a Moodle receipt.</footer></body></html>
