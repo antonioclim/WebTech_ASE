@@ -1,0 +1,161 @@
+{
+  "files": [
+    {
+      "path": "canonical/01-session-identity-trace/README.md",
+      "source": "SOURCE_EXACT/lectures/11-auth-security/en/examples/01-session-identity-trace/README.md",
+      "bytes": 1067,
+      "sha256": "75b915f1da5a81eb7ca81441d83fd9343c6f27de9b27f3e3df019fef2e8215e2"
+    },
+    {
+      "path": "canonical/01-session-identity-trace/package-lock.json",
+      "source": "SOURCE_EXACT/lectures/11-auth-security/en/examples/01-session-identity-trace/package-lock.json",
+      "bytes": 30867,
+      "sha256": "4633bc651140c382364ddce8eccfdb2b13f2af4986d0c3e4b0d9a8423fde7d56"
+    },
+    {
+      "path": "canonical/01-session-identity-trace/package.json",
+      "source": "SOURCE_EXACT/lectures/11-auth-security/en/examples/01-session-identity-trace/package.json",
+      "bytes": 176,
+      "sha256": "7aad2517ff694ebdcc0b9a17732819cf44e163b12f17a73e95446b12c29a58b7"
+    },
+    {
+      "path": "canonical/01-session-identity-trace/server.mjs",
+      "source": "SOURCE_EXACT/lectures/11-auth-security/en/examples/01-session-identity-trace/server.mjs",
+      "bytes": 1310,
+      "sha256": "586d2bec9f226518c1e4d0a6efa1956c29b3076a33d5b89a12c99c978c4493e0"
+    },
+    {
+      "path": "canonical/01-session-identity-trace/server.test.mjs",
+      "source": "SOURCE_EXACT/lectures/11-auth-security/en/examples/01-session-identity-trace/server.test.mjs",
+      "bytes": 932,
+      "sha256": "578ce956693ab326198a894fe74b0873091263d862557179e0518efa024ba21a"
+    },
+    {
+      "path": "canonical/02-authorization-decision-table/README.md",
+      "source": "SOURCE_EXACT/lectures/11-auth-security/en/examples/02-authorization-decision-table/README.md",
+      "bytes": 1196,
+      "sha256": "7856ae115f354e4d2f8219fb10599490df7b2eda0dfc4893bb59b1bd53015940"
+    },
+    {
+      "path": "canonical/02-authorization-decision-table/package-lock.json",
+      "source": "SOURCE_EXACT/lectures/11-auth-security/en/examples/02-authorization-decision-table/package-lock.json",
+      "bytes": 30879,
+      "sha256": "4756ff25584000a3ccce35bfd8cc2b21187946883bcdbb3e7b3551dae4627bda"
+    },
+    {
+      "path": "canonical/02-authorization-decision-table/package.json",
+      "source": "SOURCE_EXACT/lectures/11-auth-security/en/examples/02-authorization-decision-table/package.json",
+      "bytes": 182,
+      "sha256": "3daa6dd23dd78518f3e441614d11b93ff4b4c6606dfc28599273707a1d321b8a"
+    },
+    {
+      "path": "canonical/02-authorization-decision-table/server.mjs",
+      "source": "SOURCE_EXACT/lectures/11-auth-security/en/examples/02-authorization-decision-table/server.mjs",
+      "bytes": 1455,
+      "sha256": "ac2fd71c775c41bed0a1db3907653bbb91c3bae4c94a2ebb8b04e33cb1612344"
+    },
+    {
+      "path": "canonical/02-authorization-decision-table/server.test.mjs",
+      "source": "SOURCE_EXACT/lectures/11-auth-security/en/examples/02-authorization-decision-table/server.test.mjs",
+      "bytes": 722,
+      "sha256": "20d17ea04cab8e254c12ea69e850f338a9cb47fe8f3d6ffcec16ebcc93d4dd87"
+    },
+    {
+      "path": "canonical/03-session-cookie-contract/README.md",
+      "source": "SOURCE_EXACT/lectures/11-auth-security/en/examples/03-session-cookie-contract/README.md",
+      "bytes": 969,
+      "sha256": "db47798cf1b06e03daa624522347db56d05748cf8fbafd975eb100ab2f8421e6"
+    },
+    {
+      "path": "canonical/03-session-cookie-contract/package-lock.json",
+      "source": "SOURCE_EXACT/lectures/11-auth-security/en/examples/03-session-cookie-contract/package-lock.json",
+      "bytes": 30865,
+      "sha256": "d47213e61d2f4e0bbcc62e7bb8c9f247199a9620f0442cb76fea2fd09ac5a56e"
+    },
+    {
+      "path": "canonical/03-session-cookie-contract/package.json",
+      "source": "SOURCE_EXACT/lectures/11-auth-security/en/examples/03-session-cookie-contract/package.json",
+      "bytes": 175,
+      "sha256": "646238af9f5d0758645c2e438efdcf3aa3997fe7aefd067c05b3466d01ff2afa"
+    },
+    {
+      "path": "canonical/03-session-cookie-contract/server.mjs",
+      "source": "SOURCE_EXACT/lectures/11-auth-security/en/examples/03-session-cookie-contract/server.mjs",
+      "bytes": 598,
+      "sha256": "f66a9f18b1eb5b1315d50520a5c85f611347cf54b366f4b3008bd19c02e99b47"
+    },
+    {
+      "path": "canonical/03-session-cookie-contract/server.test.mjs",
+      "source": "SOURCE_EXACT/lectures/11-auth-security/en/examples/03-session-cookie-contract/server.test.mjs",
+      "bytes": 599,
+      "sha256": "f0be7d964b6b8a76a68ede293aed7b67c86bce54fd47a46e5f7d238da7620ca9"
+    },
+    {
+      "path": "canonical/04-credentialed-cors-policy/README.md",
+      "source": "SOURCE_EXACT/lectures/11-auth-security/en/examples/04-credentialed-cors-policy/README.md",
+      "bytes": 801,
+      "sha256": "2db03c989241dfc6bd906a6172cbc2d3df76f00322a7e6ce55a45d3a5a1851ba"
+    },
+    {
+      "path": "canonical/04-credentialed-cors-policy/package-lock.json",
+      "source": "SOURCE_EXACT/lectures/11-auth-security/en/examples/04-credentialed-cors-policy/package-lock.json",
+      "bytes": 30871,
+      "sha256": "00c3813e0664d6eb2b4c0697bf491e2b2e5b07830c7e79a34fe35835838c1028"
+    },
+    {
+      "path": "canonical/04-credentialed-cors-policy/package.json",
+      "source": "SOURCE_EXACT/lectures/11-auth-security/en/examples/04-credentialed-cors-policy/package.json",
+      "bytes": 178,
+      "sha256": "5cc6c51112a6f886727b946b5b2ba2b9bbabd84c291c5eefd9252e160b2a0529"
+    },
+    {
+      "path": "canonical/04-credentialed-cors-policy/server.mjs",
+      "source": "SOURCE_EXACT/lectures/11-auth-security/en/examples/04-credentialed-cors-policy/server.mjs",
+      "bytes": 709,
+      "sha256": "0f687c211697db65e3f5d199e09e69755255dc52338bd0f9f0213065ec80d853"
+    },
+    {
+      "path": "canonical/04-credentialed-cors-policy/server.test.mjs",
+      "source": "SOURCE_EXACT/lectures/11-auth-security/en/examples/04-credentialed-cors-policy/server.test.mjs",
+      "bytes": 783,
+      "sha256": "1c9b653d8a57d5455d7dd115be1588cb81968bf5c32689d2316939623070a698"
+    },
+    {
+      "path": "canonical/05-browser-security-contexts/README.md",
+      "source": "SOURCE_EXACT/lectures/11-auth-security/en/examples/05-browser-security-contexts/README.md",
+      "bytes": 1188,
+      "sha256": "5f8c38f141d21af2aa20d32798be40d2bab64a8af400a2bc5b102386ed45b944"
+    },
+    {
+      "path": "canonical/05-browser-security-contexts/package-lock.json",
+      "source": "SOURCE_EXACT/lectures/11-auth-security/en/examples/05-browser-security-contexts/package-lock.json",
+      "bytes": 31178,
+      "sha256": "1d99b923f0c98d0f2aa28396c19cbb2854f05f50cc4b751126744f9de6b297e9"
+    },
+    {
+      "path": "canonical/05-browser-security-contexts/package.json",
+      "source": "SOURCE_EXACT/lectures/11-auth-security/en/examples/05-browser-security-contexts/package.json",
+      "bytes": 196,
+      "sha256": "1c64cd319472cea21a421540cc4aebe49fbdeb586e6a68f8c2bd70276854df47"
+    },
+    {
+      "path": "canonical/05-browser-security-contexts/server.mjs",
+      "source": "SOURCE_EXACT/lectures/11-auth-security/en/examples/05-browser-security-contexts/server.mjs",
+      "bytes": 1326,
+      "sha256": "500de829eba4cd2d075d95d0bb00dc97abe3f038afab63d9890b0ac7c7364781"
+    },
+    {
+      "path": "canonical/05-browser-security-contexts/server.test.mjs",
+      "source": "SOURCE_EXACT/lectures/11-auth-security/en/examples/05-browser-security-contexts/server.test.mjs",
+      "bytes": 721,
+      "sha256": "184178502a85f7f233c2e50619d70dd1ca5f152fe6e73535794c3573d6233c55"
+    },
+    {
+      "path": "canonical/reading-list-next.md",
+      "source": "SOURCE_EXACT/lectures/11-auth-security/en/reading-list-next.md",
+      "bytes": 814,
+      "sha256": "691393db012773f26d360ef2d12489e6e1f695747007bf66d2b8607361caeba9"
+    }
+  ],
+  "source_dossier_sha256": "ba3c7a0adfe2fb22317456ebc5e2f7fc4d62e9f8391cab4b415dfb11b6048d08"
+}
