@@ -1,0 +1,1 @@
+{"name":"lecture-test-boundaries","private":true,"type":"module","scripts":{"start":"node system.mjs","test":"npm run test:unit && npm run test:integration && npm run test:api","test:unit":"node --test unit.test.mjs","test:integration":"node --test integration.test.mjs","test:api":"node --test api.test.mjs"},"dependencies":{"express":"5.1.0"}}

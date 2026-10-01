@@ -1,0 +1,4 @@
+import{performance}from"node:perf_hooks";import express from"express";
+export function createApp(delays=[10,10,10,10,10,10,10,10,10,200]){let index=0;const app=express();app.get("/work",async(_req,res)=>{const delay=delays[Math.min(index++,delays.length-1)];await new Promise(r=>setTimeout(r,delay));res.json({delay});});return app;}
+export async function measure(base,count=10){const values=[];for(let i=0;i<count;i++){const started=performance.now();await fetch(`${base}/work`);values.push(performance.now()-started);}const sorted=[...values].sort((a,b)=>a-b);return{values,mean:values.reduce((a,b)=>a+b,0)/values.length,p95:sorted[Math.ceil(.95*sorted.length)-1],max:sorted.at(-1)};}
+if(import.meta.url===`file://${process.argv[1]}`){const server=createApp().listen(3000,async()=>{console.table(await measure("http://127.0.0.1:3000"));server.close();});}

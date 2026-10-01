@@ -1,0 +1,27 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>S14 — Production Evidence Review</title><link rel="stylesheet" href="assets/site.css"></head><body><a class="skip" href="#main">Skip to content</a><header><span class="pill">WEB TECHNOLOGIES 2026 · S14 · WIP/PREVIEW</span><h1>S14 — Production Evidence Review</h1><a href="index.html">Start page</a></header><main id="main" class="document"><h1>S14 — Production Evidence Review</h1>
+<p>Apply the table to your own project. The required columns are:</p>
+<table>
+<thead>
+<tr>
+  <th>Claim</th>
+  <th>Evidence source</th>
+  <th>State</th>
+  <th>Owner</th>
+  <th>Next action</th>
+  <th>Limit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>A specific readiness claim</td>
+  <td>File, command log, runtime trace or pending source</td>
+  <td><code>pass</code>, <code>fail</code> or <code>unknown</code></td>
+  <td>Named person or role</td>
+  <td>Concrete next step</td>
+  <td>What the witness cannot prove</td>
+</tr>
+</tbody>
+</table>
+<p>Review at least: project identity, locked installation, dependency audit, production build, runtime health and cleanup, log redaction, configuration and secrets, HTTP errors and headers, deployment/TLS/proxy evidence and exceptions with owners and expiry.</p>
+<p><code>UNKNOWN</code> is required when evidence was not obtained or a tool failed. A truthy value, a copied <code>PASS</code> string or a historical log does not authenticate current evidence. The supplied structural validator runs no commands and certifies nothing.</p>
+</main><footer>Evidence source, execution, platform and publication remain separate.</footer></body></html>

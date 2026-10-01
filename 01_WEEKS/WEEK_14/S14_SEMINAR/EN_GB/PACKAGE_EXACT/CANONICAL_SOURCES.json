@@ -1,0 +1,260 @@
+{
+  "schema": "TW2026_S14_PUBLIC_SOURCE_REGISTRY/1.0",
+  "records": [
+    {
+      "path": "QUALIFICATION.md",
+      "bytes": 206,
+      "sha256": "9c0d9296e4d85480d2db5de2cba0d3da8ff3bc49bcecb5909ac75052c02fd496"
+    },
+    {
+      "path": "README.md",
+      "bytes": 181,
+      "sha256": "b43a6939b672b159174378e11a48d16ade3109feef212b0652060f030ddbca1d"
+    },
+    {
+      "path": "S14_EVIDENCE_FORM.md",
+      "bytes": 208,
+      "sha256": "0ffa5178649455bc25c3b4989d023edb89bbe721143b4997645f4f2b4f19b7e9"
+    },
+    {
+      "path": "S14_PRODUCTION_EVIDENCE_REVIEW.md",
+      "bytes": 898,
+      "sha256": "77cd3cd11ba584ee0184a813aea426a8936ceca83757d49208a7aa794070dd9b"
+    },
+    {
+      "path": "S14_REGRESSION_HARNESS_CLOSURE.md",
+      "bytes": 932,
+      "sha256": "bc8d85539f515860e5013f8c48d55af7963602a3ae40c81af03d800009a813bb"
+    },
+    {
+      "path": "S14_STUDENT_GUIDE.md",
+      "bytes": 1432,
+      "sha256": "305e6f4816a380a3008c2375fdd5aecfacb9dbc4f2ba3ca484bf8d3a9d1b659e"
+    },
+    {
+      "path": "projects/p01/CONTRACT.md",
+      "bytes": 175,
+      "sha256": "e899f8cbf6726480bc42106120116c7d2e7ccbbd90ae18a0664a6bc49cb71f66"
+    },
+    {
+      "path": "projects/p01/spec.md",
+      "bytes": 5742,
+      "sha256": "48dd0a5a9fc02f347e93632bc597d889e4ef5eff28ae6c1fd7051a67d50da875"
+    },
+    {
+      "path": "projects/p01/student/README.md",
+      "bytes": 498,
+      "sha256": "fb5702b9e1d04af5b27f24c62920eca42c9ffc993868479bb57e760bc83a97b7"
+    },
+    {
+      "path": "projects/p01/student/example.mjs",
+      "bytes": 243,
+      "sha256": "0da41cb19cbf0c633fdc65421bda58e5e12d0b2028cda6423b267fc3896a115f"
+    },
+    {
+      "path": "projects/p01/student/package-lock.json",
+      "bytes": 219,
+      "sha256": "6a053989516fe55771f25494c86c966c00965dc821200f4af19abb57a87dcfea"
+    },
+    {
+      "path": "projects/p01/student/package.json",
+      "bytes": 434,
+      "sha256": "7bbdf1e0187882a75c43952d8006066903851bc8b810ef6626ce065bfaede39d"
+    },
+    {
+      "path": "projects/p01/student/src/checklist-app.mjs",
+      "bytes": 4030,
+      "sha256": "d657b0b48cc00f255e96e1cd617d80559d069b4bac47552542f8666ff41a6287"
+    },
+    {
+      "path": "projects/p01/student/src/regression-harness.mjs",
+      "bytes": 875,
+      "sha256": "10fe90633423c646cd3f1ce3679e1242ad05fa85146e87a0f00cb671a11098bf"
+    },
+    {
+      "path": "projects/p01/student/tests/baseline.test.mjs",
+      "bytes": 807,
+      "sha256": "631489d3966b7278049f374fbc52b0f2917465d2c34e0586a606680f61d736d7"
+    },
+    {
+      "path": "projects/p01/student/tests/objective.test.mjs",
+      "bytes": 2214,
+      "sha256": "cd6fc846f7cb8d353621c329c52a9311b8243d423aff454069044cf2a4476591"
+    },
+    {
+      "path": "projects/p01/student/tests/regression.test.mjs",
+      "bytes": 1280,
+      "sha256": "38c5a6c9b8371f040914156d435bae998aa264e1e0328f84acada401933b736b"
+    },
+    {
+      "path": "projects/p02/CONTRACT.md",
+      "bytes": 148,
+      "sha256": "dd85e224a5adeaf69ed5cbdb44c4d48329399ce51425d5d630b1fddc43f318b4"
+    },
+    {
+      "path": "projects/p02/spec.md",
+      "bytes": 6185,
+      "sha256": "1fb62df1fd435cfa5457f62738dd82a663b68ed9cac2ca34719d34d890d7ef5f"
+    },
+    {
+      "path": "projects/p02/student/README.md",
+      "bytes": 456,
+      "sha256": "7d4c0da111ea71228cbef716709647e31aa97cdeb69457f9a273a9c87cac8799"
+    },
+    {
+      "path": "projects/p02/student/example.mjs",
+      "bytes": 844,
+      "sha256": "095ffda5e9f20a69f2235d1ad7af1ad6ff55fc084306f718fa901db73621a28a"
+    },
+    {
+      "path": "projects/p02/student/package-lock.json",
+      "bytes": 219,
+      "sha256": "1dab501b419af82630b883162f3984af5d0b029fc11cd14940330987905025f1"
+    },
+    {
+      "path": "projects/p02/student/package.json",
+      "bytes": 434,
+      "sha256": "87f9e265758f3f6c79d89bb0e8ecc436e51e1db5cccf82ffa0b53e3b0e74b8ac"
+    },
+    {
+      "path": "projects/p02/student/src/load-probe.mjs",
+      "bytes": 362,
+      "sha256": "ad731acb54d27ad2c443c0011de9808157155951038cd6a6822c22ddef0aa298"
+    },
+    {
+      "path": "projects/p02/student/src/probe-server.mjs",
+      "bytes": 1106,
+      "sha256": "0c97871c3d6aa8c3311b6583687117203585cc166ab99ee52fcb13b956130193"
+    },
+    {
+      "path": "projects/p02/student/src/statistics.mjs",
+      "bytes": 446,
+      "sha256": "bf61c8c841c27d82367b3638b51c31a156d766c24e7392faf049bd20a323cb6e"
+    },
+    {
+      "path": "projects/p02/student/tests/baseline.test.mjs",
+      "bytes": 754,
+      "sha256": "369693001544ba301410e6a60a99b877b42c9184602368c40119551b8a613010"
+    },
+    {
+      "path": "projects/p02/student/tests/helpers.mjs",
+      "bytes": 591,
+      "sha256": "b1a2d99ac664bbffa0893840eed269241e788d85fd2c6b51f50aa57e6be167c1"
+    },
+    {
+      "path": "projects/p02/student/tests/objective.test.mjs",
+      "bytes": 4512,
+      "sha256": "689f8a559db984df55ab968fc037eb48e7ddc7401b5b5ea093e0201124da585d"
+    },
+    {
+      "path": "projects/p02/student/tests/regression.test.mjs",
+      "bytes": 1239,
+      "sha256": "2431480cef854c754bee65e7bb75631b252a343c2d72d2ea94a1d199a79e6d28"
+    },
+    {
+      "path": "projects/p03/CONTRACT.md",
+      "bytes": 152,
+      "sha256": "da69acbb44c90f294253186c050b6f3cf1f6bf6371f52bf60a802e43bb3cba25"
+    },
+    {
+      "path": "projects/p03/spec.md",
+      "bytes": 6936,
+      "sha256": "2514fc756f3d1fa9d5e7bdad3240dcc75c7607225b2d6e049af96ccf1d50b646"
+    },
+    {
+      "path": "projects/p03/student/README.md",
+      "bytes": 713,
+      "sha256": "86c1613a10f5ccc770429c2d6f45dab0f628fbe96d42fb78648d2345ecf2948d"
+    },
+    {
+      "path": "projects/p03/student/example.mjs",
+      "bytes": 486,
+      "sha256": "a3b95f60c178c8d4e5ec82c4fc8865ed0a8e0dd95854b826e1bca903014cf0e4"
+    },
+    {
+      "path": "projects/p03/student/fixture-app/.gitignore",
+      "bytes": 16,
+      "sha256": "14c77ca6e9bf97d7e5e6a94fd97a8a1815285096800991ca4f884d4702074637"
+    },
+    {
+      "path": "projects/p03/student/fixture-app/package-lock.json",
+      "bytes": 162,
+      "sha256": "1e51b60524af898adef6f2e237a5b1c3ae9eb44a77f7a73100b9fa631c9a0658"
+    },
+    {
+      "path": "projects/p03/student/fixture-app/package.json",
+      "bytes": 162,
+      "sha256": "47c87c7cabd2e7401a49f40dd58c7da2592dfb9d3ccbdcc16dba3961b09e47e3"
+    },
+    {
+      "path": "projects/p03/student/fixture-app/scripts/build.mjs",
+      "bytes": 135,
+      "sha256": "b2d72d29655bcd0be649d957fba502ac568efb645d6af4381247b7b297199729"
+    },
+    {
+      "path": "projects/p03/student/fixture-app/src/server.mjs",
+      "bytes": 832,
+      "sha256": "eb1547e8fbb81f826952083abd463deb8700405589316420f175ef7fadb7377c"
+    },
+    {
+      "path": "projects/p03/student/package-lock.json",
+      "bytes": 235,
+      "sha256": "73f8cc7ce14994d8c3b8622b313ebe8a5dcd763c480cfd0ef3b1a4ecddffd003"
+    },
+    {
+      "path": "projects/p03/student/package.json",
+      "bytes": 545,
+      "sha256": "c7cb80f666ea91f6cbd06d1110bf1038ad19b8c526ac584ed0a97b38894e89bd"
+    },
+    {
+      "path": "projects/p03/student/src/evidence-fixtures.mjs",
+      "bytes": 1734,
+      "sha256": "a333049a0c927267d21021f3bc9446fb7112c28498905f910e0e6935a03978ab"
+    },
+    {
+      "path": "projects/p03/student/src/production-review.mjs",
+      "bytes": 691,
+      "sha256": "8e7629f9a04b3d31176b92146a6d01384e998bc8d45b581e07c292d7d77b974f"
+    },
+    {
+      "path": "projects/p03/student/src/safe-runner.mjs",
+      "bytes": 4181,
+      "sha256": "14091267e767e1ace98ec83425fbc714263b502fa1ec7a060d57f380c9c4eafb"
+    },
+    {
+      "path": "projects/p03/student/tests/baseline.test.mjs",
+      "bytes": 894,
+      "sha256": "3331144884d3a9adcb49cdeba1ae949977045139551a9426e937c032de8e1ef9"
+    },
+    {
+      "path": "projects/p03/student/tests/commands.integration.test.mjs",
+      "bytes": 870,
+      "sha256": "2755fe9d7db1ace40e84dd4ed03bc1113fbcc88b2aa88d4e03091e061b97ce43"
+    },
+    {
+      "path": "projects/p03/student/tests/helpers.mjs",
+      "bytes": 478,
+      "sha256": "c08362b5752ecb12a4465270bfdbbd8bf1ca1b1abaf5a1d050d5b15b11c85b5b"
+    },
+    {
+      "path": "projects/p03/student/tests/objective.test.mjs",
+      "bytes": 3161,
+      "sha256": "12efdb7236fd2fd02c5bf8c0d072e3ca625212b9bf69eae478b901149bfb9991"
+    },
+    {
+      "path": "projects/p03/student/tests/regression.test.mjs",
+      "bytes": 1421,
+      "sha256": "a414f5d229e873d6a86edfc59b21f5c845bf5929434ced7a77302c1ccc3e8631"
+    },
+    {
+      "path": "projects/p04/CONTRACT.md",
+      "bytes": 110,
+      "sha256": "e258bd27d9775cd9683353d1a12a414fc0b4eca83013451bee45ed53d7ce719b"
+    },
+    {
+      "path": "projects/p04/spec.md",
+      "bytes": 7022,
+      "sha256": "0e45a462ee873f639fb8332bd3f721d8b82a088a5f97ed828ee59c8dc4f9d126"
+    }
+  ]
+}

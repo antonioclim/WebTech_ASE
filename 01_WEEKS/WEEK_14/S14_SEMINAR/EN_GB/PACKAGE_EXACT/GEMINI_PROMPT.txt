@@ -1,0 +1,1 @@
+Assess one sanitised readiness claim against the minimal evidence excerpt. Identify what the witness supports, what it does not support and whether the claim should be ACCEPTED, REJECTED, PARTIALLY ACCEPTED or UNKNOWN. Do not generate the full harness or reviewer and do not request credentials, tokens, cookies, account exports or private institutional data.
