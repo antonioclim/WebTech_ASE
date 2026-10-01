@@ -1,0 +1,20 @@
+{
+  "root": "projects/p02/student",
+  "allowed": "src/authorization-policy.js",
+  "files": {
+    "README.md": "ddadfd0b4217975ba790042f3a5b9492add8d8a1b594be0a042d49308445cb1a",
+    "package-lock.json": "1fa7ae02cc9cc746b2b5e7c7a751aa3d2657c6a79a8ac1af78c790245626250b",
+    "package.json": "6c98f763299e97e0944f1660dc31be54ec2d87acf74aa6edd7975e5047ed00be",
+    "src/app.js": "16aa51921206618c1c8b568e8c155f754952d049ed769d7f875bb9f221bb9ca6",
+    "src/authentication.js": "ee24b0bf051f4bf4e0c9abaf956e7c14db1e9d8312a2ead8abec5e06cf22e5f5",
+    "src/authorization-policy.js": "b1017f64c79b9c01d9e72f9f1c670c4b8186e1140f452c9d070a262111bab3ff",
+    "src/csrf.js": "870e73c7bd20ddac7c7acbc4f1ca296dd6ee9b3cccc7aef2adb2ecd7fa0f3b25",
+    "src/permissions.js": "a4db2f00d5aecf71241e394859ba1dd0c6a77942d21a7832915444583e56884e",
+    "src/report-repository.js": "b8367577e455e2d941b61c7de280871e390741eb921d74abbd4020800b4a98b5",
+    "src/server.js": "c36ba67d3ea1a6cf39dc8fad276d12f48df6d8b4973ff044e229a8f6cc48c1c2",
+    "tests/baseline.test.js": "e1207642472e3a8ab41cea0cfe1c7484be60ded82014a572e8e59569efaffcfe",
+    "tests/helpers.js": "5eac76c1bf7c802f216ab88e041a6586c0b1e265af85ddc2cad4ed2c71c82c47",
+    "tests/objective.test.js": "c3918a1f985480924caa8b60f2885ed538a859921fe46188838970a5f8d8854f",
+    "tests/regression.test.js": "f08b7a1e8e77f767aabc3ddb9ed1e1caa6a870095efdf091c3294099855dbd02"
+  }
+}
