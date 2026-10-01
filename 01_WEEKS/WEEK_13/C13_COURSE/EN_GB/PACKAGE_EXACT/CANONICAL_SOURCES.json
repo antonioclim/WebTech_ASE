@@ -1,0 +1,113 @@
+{
+  "schema": "TW2026_C13_CANONICAL_SOURCES/1.0",
+  "files": {
+    "01-versioned-storage-record/README.md": {
+      "bytes": 1125,
+      "sha256": "1b95187b13e9b1ed8b3cba73949a91fb3136d7a24346ee66dba5ad61b1d04cf1"
+    },
+    "01-versioned-storage-record/index.html": {
+      "bytes": 375,
+      "sha256": "3b16c793c8cfb8cf26c45087b99e323a2a529e2f9e06bcf4754930fa36430d76"
+    },
+    "01-versioned-storage-record/main.js": {
+      "bytes": 1324,
+      "sha256": "a717768c626c66584705a3be779512e66d16433a8f91e8a5917c04f49af23e8c"
+    },
+    "01-versioned-storage-record/server.mjs": {
+      "bytes": 652,
+      "sha256": "e4b7a8a96ddc32050bfeecce2fd4833479ddb8562761c0780845ee0dc175927a"
+    },
+    "02-worker-clone-boundary/README.md": {
+      "bytes": 1236,
+      "sha256": "19491e9ea220d28694923b65f114ec478618b997b440aba2dc8a27fc59ab5a28"
+    },
+    "02-worker-clone-boundary/index.html": {
+      "bytes": 856,
+      "sha256": "d7fdade33360cbec91c9ccee1ef49ca2ee8fb4f62e6e0ec8de98212467428821"
+    },
+    "02-worker-clone-boundary/main.js": {
+      "bytes": 448,
+      "sha256": "672bb1f23461ee6b115c53413fe046d0e65339b15465b27e0b1a85245469a83d"
+    },
+    "02-worker-clone-boundary/server.mjs": {
+      "bytes": 826,
+      "sha256": "44762ba175bd99a27d140f698b918503d8c32c6bc1d79073077a46e6f1fc3c69"
+    },
+    "02-worker-clone-boundary/worker.js": {
+      "bytes": 152,
+      "sha256": "34991fcbf286a852778d1ff9f672f454181f7d014f9b262d878d42736841bb5a"
+    },
+    "03-service-worker-scope-decision/README.md": {
+      "bytes": 1195,
+      "sha256": "1df65d4b86b545c9f2a0e1f24e0afae94a159211200345140c2fd3ed4fe3ba3e"
+    },
+    "03-service-worker-scope-decision/index.html": {
+      "bytes": 275,
+      "sha256": "55af4d32b4070ff037f11626741e42b1b40ce213ee7e41735d5612edf45887a8"
+    },
+    "03-service-worker-scope-decision/main.js": {
+      "bytes": 925,
+      "sha256": "c87ee5ffb64c53c155a74d7dd6f4c63cd5d861c5ff49b097c1335d86d4a2734d"
+    },
+    "03-service-worker-scope-decision/server.mjs": {
+      "bytes": 731,
+      "sha256": "89328a3f04801f11b6a1fc5837ac188fdf5c991ab85fbe0038abc9f28c0b981b"
+    },
+    "03-service-worker-scope-decision/sw.js": {
+      "bytes": 481,
+      "sha256": "7a9fa024accf3f61ba423dcaf59f79509d9837719dfb6b3f88caedf897a2e83a"
+    },
+    "04-message-contract-gate/README.md": {
+      "bytes": 1165,
+      "sha256": "6368032d8c96e46c77a857ddf53e299200210ea4d039771940ecffefc485590e"
+    },
+    "04-message-contract-gate/child.html": {
+      "bytes": 226,
+      "sha256": "591bcdeefc412f606894b3ce21ff0e43ae7e42df08d8665d56a4d43054007b6e"
+    },
+    "04-message-contract-gate/decoy.html": {
+      "bytes": 233,
+      "sha256": "21b84059bb461b9cbcddbee5c13b3665fa387a8842791fe40c0a71970fd7ed01"
+    },
+    "04-message-contract-gate/index.html": {
+      "bytes": 429,
+      "sha256": "52f6ac5728c9b71ed4784fcab77bcaaeddf02fdf9228933840fa12623464d195"
+    },
+    "04-message-contract-gate/main.js": {
+      "bytes": 677,
+      "sha256": "f84a3b3d9c65589875ab52e951f7f86c1a5080407490b1a83a0372badd3695de"
+    },
+    "04-message-contract-gate/server.mjs": {
+      "bytes": 815,
+      "sha256": "95b2da555af33993723dcc01536f7193febd275886b6e2ae8f21e768f95aae4a"
+    },
+    "05-frame-generation-gate/README.md": {
+      "bytes": 837,
+      "sha256": "5f23b8217671740730878e7f19f90b3bb538db53aa6899d6159d195690d1a858"
+    },
+    "05-frame-generation-gate/child.html": {
+      "bytes": 637,
+      "sha256": "95aaa261dc6d1f6e97f6368d28a6614fec25f8b65d91c472d3185f954ffddcb8"
+    },
+    "05-frame-generation-gate/index.html": {
+      "bytes": 270,
+      "sha256": "0fd298ae14d604af4671db4880e6f2f1aa7ba0de38f5f4537b7a21a7e4f1851a"
+    },
+    "05-frame-generation-gate/main.js": {
+      "bytes": 1153,
+      "sha256": "1fc61eca04c2a4feb9cdc9da0ad1c0202bc889e5b26a89ff2abe9853bcb5effd"
+    },
+    "05-frame-generation-gate/server.mjs": {
+      "bytes": 680,
+      "sha256": "2188049ff479ddcfc3864b822af0044cfe389b9518a35d18f71321a80906c13b"
+    },
+    "READ_ME_FIRST.md": {
+      "bytes": 310,
+      "sha256": "9f495576acb0c873d2a181cbe94bca24c643a97a25839e8f27d628d9a84a274f"
+    },
+    "reading-list-next.md": {
+      "bytes": 857,
+      "sha256": "ca2ae426ac89b721198409ab2ffc4c6eb35435807626689671b48957bab75121"
+    }
+  }
+}

@@ -1,0 +1,1 @@
+SYNTHETIC CLAIM FOR CRITIQUE ONLY: An active Service Worker always controls the current page.

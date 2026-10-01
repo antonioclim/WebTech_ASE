@@ -1,0 +1,13 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>S13 — Guided Service Worker Trace</title><link rel="stylesheet" href="assets/site.css"></head><body><header><span class="pill">WEB TECHNOLOGIES 2026 · S13 · WIP/PREVIEW</span><h1>S13 — Guided Service Worker Trace</h1><a href="index.html">Start page</a></header><main class="document"><h1>S13 — Guided Service Worker Lifecycle Trace</h1>
+<p>This is a guided trace, not a second full implementation.</p>
+<p>Record separately:</p>
+<ol>
+<li>Whether the page is merely registered, has an active worker, is ready or is actually controlled.</li>
+<li>The exact same-origin GET request eligible for dispatch.</li>
+<li>The direct fallback used when the current client is uncontrolled.</li>
+<li>The source and protocol-version checks on a response.</li>
+<li>The effect of <code>controllerchange</code> on pending work.</li>
+<li>The evidence class and remaining browser limitation.</li>
+</ol>
+<p>Do not claim that an active registration proves control of the current page. Do not report a fake-container result as a native Service Worker observation.</p>
+</main><footer>Source, model, browser and platform evidence remain separate.</footer></body></html>
