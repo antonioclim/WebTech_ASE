@@ -1,0 +1,1 @@
+Review one sanitised state-placement or transition claim. Do not implement the complete provider, slice or comparator. Claim: [one claim]. Evidence: [minimal source/trace excerpt]. Name one assumption, one counterexample and one independent check. Distinguish owner, consumers, lifetime, authority and derivation. I will verify the response.

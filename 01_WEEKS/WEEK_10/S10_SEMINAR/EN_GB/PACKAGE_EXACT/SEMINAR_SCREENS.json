@@ -1,0 +1,98 @@
+[
+  [
+    "0–5",
+    "Shared state: begin with the owner",
+    "Complete P01 and a required state ADR. P02 and the full comparator remain optional. Record the exact package, source and actual environment.",
+    "What is authoritative, and which observation have you actually made?"
+  ],
+  [
+    "0–5",
+    "Classify evidence before conclusions",
+    "A source function, captured reducer, React test and native browser are different classes. Missing dependencies or parser errors are not intended starter failures.",
+    "Which named check is pending rather than passed?"
+  ],
+  [
+    "5–12",
+    "Inventory the values",
+    "Shared: track and savedIds. Search belongs to WorkshopWorkspace; disclosure belongs to each mounted card. Visible sessions and counts are derived.",
+    "Point to the actual owner and consumers in App.jsx."
+  ],
+  [
+    "5–12",
+    "Bound the comparison",
+    "The supplied prop-drilled witness covers save/count. It is not a deep-chain benchmark or full target parity. Preserve its exact bytes.",
+    "Which requirement needs a separate witness?"
+  ],
+  [
+    "12–30",
+    "One assessed file",
+    "Edit only projects/p01/student/src/state/workshop-state.jsx. Preserve consumers, tests, fixtures, styles, entry and lockfile. Eighteen minutes is a segment, not the full task.",
+    "What is your next smallest implementation step?"
+  ],
+  [
+    "12–30",
+    "Provider, state and dispatch",
+    "Implement the required exports, a provider-owned reducer and separate guarded hooks. Keep private drafts and derived values outside Context.",
+    "Which subscriber needs state and which only dispatch?"
+  ],
+  [
+    "12–30",
+    "Transitions and initial state",
+    "Record cloned/deduplicated seed, named immutable transitions, two no-op cases and unsupported-action handling. Two toggles are not duplicate-event suppression.",
+    "Predict the next state before running your check."
+  ],
+  [
+    "30–39",
+    "Check without inventing completion",
+    "Run named checks only in an already provisioned environment. Keep baseline/objective/regression/build output and the narrow diff. Supplemental witnesses are separate.",
+    "Which result came from a real library rather than a stand-in?"
+  ],
+  [
+    "30–39",
+    "Synchronisation and isolation",
+    "Observe toolbar/card/summary and two actual provider instances. A cloned array cannot prove mounted isolation.",
+    "What exact locator shows the unaffected second instance?"
+  ],
+  [
+    "30–39",
+    "Local lifetime is bounded",
+    "Search and disclosure can survive unrelated shared actions while their owners remain mounted. Removing a card can change the lifetime being tested.",
+    "Does your observation include unmount, or not?"
+  ],
+  [
+    "39–45",
+    "Ask one bounded Gemini question",
+    "Provide one sanitised claim and minimum relevant excerpt. Keep the actual prompt and answer excerpt; do not ask for the full solution or invent a conversation.",
+    "What single claim can an independent test falsify?"
+  ],
+  [
+    "45–50",
+    "Check, verdict and correction",
+    "Choose ACCEPTED, REJECTED, PARTIALLY ACCEPTED or UNKNOWN after an independent source/test check. Record correction and limit.",
+    "What changed because of your own verification?"
+  ],
+  [
+    "50–55",
+    "The required ADR",
+    "Name a real capstone problem, consumers, lifetime, authority and constraints. The complete comparator implementation is not mandatory.",
+    "Which alternatives are admissible before costs?"
+  ],
+  [
+    "50–55",
+    "Assumptions, ties and sensitivity",
+    "Fixed evidence flags and costs are supplied descriptors, not measurements. Change one requirement or weight; admit a tie or no eligible candidate.",
+    "Which requirement does your reason actually name?"
+  ],
+  [
+    "55–60",
+    "One draft, one final PDF later",
+    "Save truthful P01, ADR and critique evidence with locators. JSON is a backup, not final submission. P02/comparator may be NOT_STARTED.",
+    "What required work remains before the real deadline?"
+  ],
+  [
+    "60",
+    "STOP and transfer",
+    "Stop content at minute 60. The other 30 reserved minutes are not overflow. Review the actual final PDF before the single private S10 submission.",
+    "Do not claim a saved PDF or Moodle receipt you have not observed."
+  ]
+]
