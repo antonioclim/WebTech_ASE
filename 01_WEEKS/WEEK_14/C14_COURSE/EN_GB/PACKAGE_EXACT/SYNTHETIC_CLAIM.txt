@@ -1,0 +1,3 @@
+SYNTHETIC PRACTICE CLAIM: The project is production ready because tests and build passed.
+
+This claim is intentionally overbroad and must not be presented as a real project conclusion.

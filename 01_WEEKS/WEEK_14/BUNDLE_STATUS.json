@@ -1,0 +1,34 @@
+{
+  "schema": "TW2026_WEEKLY_REVIEW/1.0",
+  "week": 14,
+  "status": "WIP/PREVIEW_NOT_FINAL",
+  "course_minutes": 60,
+  "seminar_minutes": 60,
+  "reserved_extra_30_used": false,
+  "P01": "REQUIRED_PORTFOLIO_CLOSE",
+  "P02": "OPTIONAL_ADVANCED",
+  "P03": "CAPSTONE_INTEGRATION_REQUIRED_REVIEW",
+  "P04": "ASSESSMENT_BANK_SEPARATE",
+  "C14_assignment": false,
+  "one_private_S14_final_PDF": true,
+  "P04_in_S14": false,
+  "actual_npm_ci_audit_build_deployment_browser_execution": false,
+  "remote_uploaded": false,
+  "upload_kit": false,
+  "source_packages": [
+    {
+      "object": "C14",
+      "file": "WEBTECH_ASE_C14_STUDENT_EN_GB_v1.1.0_PUBLIC.zip",
+      "sha256": "0e51e702f6c3a1e09308a3ea7927e1e33fa9fc3c42bf8cf43398b7e3ff53385f",
+      "members": 66,
+      "package_id": "3997a731b8d3fea447e3d16fbc43b66815dc87222a845af6c012ee3f4be2e0a4"
+    },
+    {
+      "object": "S14",
+      "file": "WEBTECH_ASE_S14_STUDENT_EN_GB_v1.1.0_PUBLIC.zip",
+      "sha256": "7e9ea1f4d9e8c2e74d6b5a19b6f0468fde16c7a48770b2f829866aae93ad9fca",
+      "members": 80,
+      "package_id": "a767896d63a096f794589e4681bc8ad3e2223ea4e09a934dddcc2289d4997596"
+    }
+  ]
+}
