@@ -1,0 +1,97 @@
+{
+  "schema": "TW2026_S14_PRODUCTION_REVIEW/1.0",
+  "project": "",
+  "rows": [
+    {
+      "id": "PROJECT_IDENTITY",
+      "claim": "Project root and package identity",
+      "source": "",
+      "state": "unknown",
+      "owner": "",
+      "nextAction": "",
+      "limit": ""
+    },
+    {
+      "id": "LOCKED_INSTALL",
+      "claim": "Locked installation",
+      "source": "",
+      "state": "unknown",
+      "owner": "",
+      "nextAction": "",
+      "limit": ""
+    },
+    {
+      "id": "DEPENDENCY_AUDIT",
+      "claim": "Dependency audit",
+      "source": "",
+      "state": "unknown",
+      "owner": "",
+      "nextAction": "",
+      "limit": ""
+    },
+    {
+      "id": "PRODUCTION_BUILD",
+      "claim": "Production build",
+      "source": "",
+      "state": "unknown",
+      "owner": "",
+      "nextAction": "",
+      "limit": ""
+    },
+    {
+      "id": "RUNTIME_HEALTH",
+      "claim": "Runtime health and cleanup",
+      "source": "",
+      "state": "unknown",
+      "owner": "",
+      "nextAction": "",
+      "limit": ""
+    },
+    {
+      "id": "LOG_REDACTION",
+      "claim": "Structured logs and redaction",
+      "source": "",
+      "state": "unknown",
+      "owner": "",
+      "nextAction": "",
+      "limit": ""
+    },
+    {
+      "id": "CONFIG_SECRETS",
+      "claim": "Configuration and secrets",
+      "source": "",
+      "state": "unknown",
+      "owner": "",
+      "nextAction": "",
+      "limit": ""
+    },
+    {
+      "id": "HTTP_ERROR_HEADERS",
+      "claim": "HTTP error shape and response headers",
+      "source": "",
+      "state": "unknown",
+      "owner": "",
+      "nextAction": "",
+      "limit": ""
+    },
+    {
+      "id": "DEPLOYMENT",
+      "claim": "Deployment/TLS/proxy evidence",
+      "source": "",
+      "state": "unknown",
+      "owner": "",
+      "nextAction": "",
+      "limit": ""
+    },
+    {
+      "id": "EXCEPTIONS",
+      "claim": "Exceptions, owners and expiry",
+      "source": "",
+      "state": "unknown",
+      "owner": "",
+      "nextAction": "",
+      "limit": ""
+    }
+  ],
+  "decision": "unknown"
+}
