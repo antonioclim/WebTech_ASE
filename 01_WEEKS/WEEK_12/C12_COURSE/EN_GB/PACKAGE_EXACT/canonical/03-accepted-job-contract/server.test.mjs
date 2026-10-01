@@ -1,0 +1,4 @@
+import assert from"node:assert/strict";import test from"node:test";import{createApp}from"./server.mjs";
+const request=async queue=>{const server=createApp({queue}).listen(0);const response=await fetch(`http://127.0.0.1:${server.address().port}/exports`,{method:"POST",headers:{"content-type":"application/json"},body:"{}"});server.close();return response;};
+test("202 follows awaited enqueue and identifies queued status",async()=>{let settled=false;const response=await request({async add(){await new Promise(r=>setTimeout(r,10));settled=true;return{id:"j1"};}});assert.equal(settled,true);assert.equal(response.status,202);assert.equal(response.headers.get("location"),"/jobs/j1");assert.deepEqual(await response.json(),{id:"j1",status:"queued"});});
+test("enqueue failure cannot produce false acceptance",async()=>assert.equal((await request({async add(){throw new Error("offline");}})).status,503));

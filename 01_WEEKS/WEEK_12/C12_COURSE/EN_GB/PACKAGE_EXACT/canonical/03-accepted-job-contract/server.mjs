@@ -1,0 +1,3 @@
+import crypto from"node:crypto";import express from"express";
+export function createApp({queue}){const app=express();app.use(express.json());app.post("/exports",async(req,res,next)=>{try{const job=await queue.add("export",{format:req.body?.format??"csv"});res.location(`/jobs/${job.id}`).status(202).json({id:String(job.id),status:"queued"});}catch(error){next(error);}});app.use((_error,_req,res,_next)=>res.status(503).json({error:"queue_unavailable"}));return app;}
+if(import.meta.url===`file://${process.argv[1]}`){const queue={async add(){return{id:crypto.randomUUID()};}};createApp({queue}).listen(3000,()=>console.log("Accepted-job service: http://localhost:3000"));}

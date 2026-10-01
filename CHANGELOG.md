@@ -2,12 +2,12 @@
 
 ## Unreleased — repository construction continues
 
-- Paused all automatic GitHub Actions triggers; validation, Pages and releases remain manual-only.
-- Added structured Windows, macOS and Linux one-file setup candidates under `00_SETUP/ALTERNATIVES`.
-- Exposed exact package guides and audit files for browser inspection while keeping launchers canonical inside ZIP archives.
-- Added SHA-256 sidecars and guide-mirror manifests for all alternative packages.
-- Marked repository identity as a frozen baseline until the final corpus freeze.
-- Added WIP validation for manual-only workflows, alternative-package mirrors and temporary flat aliases.
+- Prepared Weeks 08–14 as public-only student WIP previews with object ZIPs and byte-identical `PACKAGE_EXACT` trees.
+- Extended the weekly index, course map, start guidance and preview register through Week 14.
+- Preserved Weeks 01–07 byte-for-byte, including the live S01 guide and the direct-root Weeks 03–07 `PACKAGE_EXACT` layout.
+- Kept repository identity at the frozen baseline while work-in-progress gates remain open.
+- Kept validation, Pages deployment and release publication manual-only.
+- Preserved all runtime, browser, native-platform, Microsoft Word, Moodle and R3B-6 gates as separate unresolved evidence classes.
 
 ## 2.0.1 — post-upload validation hotfix (2026-09-27)
 
@@ -53,5 +53,4 @@
 
 ## Earlier prototype
 
-The language-first v1.0 prototype is superseded and must not be uploaded as the
-current repository.
+The language-first v1.0 prototype is superseded and must not be uploaded as the current repository.

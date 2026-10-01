@@ -1,0 +1,121 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>S11 — Student Guide</title><link rel="stylesheet" href="assets/site.css"></head><body><header><span class="pill">WEB TECHNOLOGIES 2026 · S11 · WIP/PREVIEW</span><h1>S11 — Student Guide</h1><a href="index.html">Start page</a></header><main><h1>S11 — Role-Protected Moderation and a Reduced Security Portfolio</h1>
+<h2>1. What is compulsory</h2>
+<p><strong>WIP/PREVIEW · individual work · 60 content minutes.</strong> P02 Role-Protected Moderation Operation is the full central implementation. Complete its one-file authorisation policy and record your own protective evidence. P03 contributes the required reduced 11.3A portfolio for <strong>CORS and CSRF only</strong>. P01 Authenticated Session API remains a semester-project integration route rather than a second full implementation inside this meeting.</p>
+<p>The source estimate for P02 alone is 55–65 minutes. The seminar provides an 18-minute implementation segment, not a promise that the full project, observations, bounded Gemini critique and final PDF will finish before minute 60. At minute 60, STOP and retain a truthful draft. Finish required P02 and the reduced two-class portfolio before the real teacher-set deadline. The other 30 reserved minutes are not overflow. This package does not create a date.</p>
+<p>One private S11 Moodle Assignment receives one reviewed PDF combining P02 evidence, the reduced portfolio, the bounded Gemini critique and reflection. There is no C11 Assignment and no separate P03 upload.</p>
+<h2>2. Roles and permitted edits</h2>
+<table>
+<thead>
+<tr>
+  <th>Route</th>
+  <th>Role</th>
+  <th>Permitted assessed edit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>P02 Role-Protected Moderation</td>
+  <td>Central full implementation</td>
+  <td><code>projects/p02/student/src/authorization-policy.js</code></td>
+</tr>
+<tr>
+  <td>P03 reduced 11.3A</td>
+  <td>Required two-class portfolio</td>
+  <td><code>portfolio/p03-reduced/student/src/security-boundary.js</code></td>
+</tr>
+<tr>
+  <td>P01 Authenticated Session API</td>
+  <td>Capstone transfer</td>
+  <td><code>capstone/p01/student/src/authentication.js</code> when that semester work is scheduled</td>
+</tr>
+</tbody>
+</table>
+<p>Preserve every supplied support file, test, fixture, package and lockfile. The reduced P03 successor is a separate defensive exercise. It does not claim that the original all-five starter was safe or that two passing classes establish the other three. The canonical deliberately insecure evidence is not included in the public package.</p>
+<h2>3. Evidence classes and redaction</h2>
+<p>For every claim, label the evidence as SOURCE, PURE_FUNCTION, CALLBACK_MODEL, ACTUAL_EXPRESS, REAL_BROWSER, TLS_DEPLOYMENT, NOT_EXECUTED or BLOCKED. A source reading or a callback with a response substitute is not an Express request. A cookie header is not browser enforcement. A forwarded-proto string is not a TLS handshake. A query object is not SQL execution.</p>
+<p>Do not submit passwords, raw cookies, session identifiers, CSRF token values, configured secrets, private records, full Gemini conversations or institutional data. Record redacted outcomes, named checks and evidence locators. The package uses only synthetic fixtures.</p>
+<h2>4. Environment and named checks</h2>
+<p>Actual project execution assumes an environment provisioned separately for the course. This package contains no <code>node_modules</code> and does not authorise installation. The prescribed pair is Node 24.21.0/npm 11.19.0. Local authoring checks used Node 22.16.0/npm 10.9.2. Record your real versions rather than copying the prescribed pair as a measurement.</p>
+<p>After separate provisioning, the canonical P02 scripts are run from <code>projects/p02/student</code>:</p>
+<pre><code class="language-text">node --version
+npm --version
+npm run test:baseline
+npm run test:objective
+npm run test:regression
+</code></pre>
+<p>Baseline, objective and regression outputs remain distinct. An unavailable command, missing dependency, parser error, timeout, crash or reporter fault is an environment incident, not an intended policy failure. The additional S11 checks are separate from the canonical suite and must be reported separately.</p>
+<p>From the public package root, the read-only boundary checker is:</p>
+<pre><code class="language-text">node tools/verify-boundary.mjs p02
+node tools/verify-boundary.mjs p03
+node tools/verify-boundary.mjs p01
+</code></pre>
+<p><code>BOUNDARY_ONLY_PASS</code> proves only that the changed paths are permitted. It does not prove that the code is correct or secure.</p>
+<h2>5. The 60-minute seminar route</h2>
+<table>
+<thead>
+<tr>
+  <th>Minutes</th>
+  <th>Individual activity</th>
+  <th>Record</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>00–05</td>
+  <td>Package, scope and prediction</td>
+  <td>Exact package, actual environment and evidence class</td>
+</tr>
+<tr>
+  <td>05–12</td>
+  <td>Trust-boundary map</td>
+  <td>Principal provenance, constant route action, server resource and denial semantics</td>
+</tr>
+<tr>
+  <td>12–30</td>
+  <td>P02 implementation segment</td>
+  <td>One-file progress and unresolved obligations</td>
+</tr>
+<tr>
+  <td>30–39</td>
+  <td>Protective observations</td>
+  <td>Allowed, forbidden, concealed, one load and state precondition</td>
+</tr>
+<tr>
+  <td>39–45</td>
+  <td>Bounded Gemini critique</td>
+  <td>One sanitised claim and minimal excerpt</td>
+</tr>
+<tr>
+  <td>45–50</td>
+  <td>Independent check</td>
+  <td>Verdict, correction and remaining limit</td>
+</tr>
+<tr>
+  <td>50–55</td>
+  <td>Reduced P03 and P01 transfer</td>
+  <td>CORS/CSRF portfolio and capstone plan</td>
+</tr>
+<tr>
+  <td>55–60</td>
+  <td>Evidence draft and STOP</td>
+  <td>Outstanding required work and next evidence</td>
+</tr>
+</tbody>
+</table>
+<h2>6. P02: identity, policy and state</h2>
+<p>Predict before executing. Record where <code>request.principal</code> came from, the constant action supplied by the route and the server-loaded resource. Do not treat body fields such as <code>role</code>, <code>permissions</code>, <code>ownerId</code> or resource state as authority.</p>
+<p>Your evidence matrix needs at least one allowed case, one ordinary forbidden case, one concealed result and one state-precondition case. Record the loader call count and how it was measured. The policy snapshot is a flat frozen clone; it is not a transaction, database lock or universal deep immutability guarantee.</p>
+<p>Unsupported action names are configuration errors raised while constructing the middleware. Keep this distinct from a runtime loader failure forwarded to <code>next(error)</code> and from a public HTTP response. A status code alone does not reveal which phase failed.</p>
+<h2>7. Reduced P03: CORS and CSRF</h2>
+<p>The mandatory 11.3A route contains only two selected classes:</p>
+<ol>
+<li><strong>CORS:</strong> record exact-origin allow/refuse decisions, status, <code>Access-Control-Allow-Origin</code>, credentials and <code>Vary</code>. Withholding sharing headers and returning application 403 are different policies. No real browser or cache observation is implied by a pure decision.</li>
+<li><strong>CSRF:</strong> record the safe-method rule, the cookie-authenticated unsafe-method rule and benign match/missing/mismatch controls. Do not export the token value. A deterministic fixture is not a production secret.</li>
+</ol>
+<p>The reduced starter fails closed and contains no original insecure evidence import. The teacher reference is private. Completing this reduced route does not establish query safety, output-context encoding or configuration-secret handling.</p>
+<h2>8. Bounded Gemini critique</h2>
+<p>Ask Gemini to assess one sanitised, falsifiable policy claim against a small code or trace excerpt. Do not ask for the complete policy or security-boundary solution. Preserve only the relevant actual prompt and answer excerpt, then check the claim independently against source, named tests or your actual observation. Use ACCEPTED, REJECTED, PARTIALLY ACCEPTED or UNKNOWN. UNKNOWN is not a pass of the implementation.</p>
+<h2>9. One PDF and honest completion</h2>
+<p>Use <code>form.html</code> for the text-only draft and <code>S11_EVIDENCE_FORM.docx</code> for genuine captures in the same final PDF. Imported JSON is an unverified draft and resets the declarations, PDF review and submission status. Structural completeness cannot prove truth, execution, teacher approval, PDF existence or Moodle submission.</p>
+<p>Before submission, inspect every page of the actual PDF. If compulsory work is unfinished, keep the document as a draft. P01 capstone integration and advanced all-five 11.3B are not hidden S11 completion criteria.</p>
+</main><footer>Source, model, actual application, browser and platform evidence remain separate. No automatic submission or publication.</footer></body></html>

@@ -1,0 +1,16 @@
+{
+  "README.md": "b3cc244fd1882558d0be1c839de07b06306492150793bf3aa6fdfde1ac05cd4f",
+  "example.mjs": "2bd9949599b8c3ef52aba01ad20136c7ef18aa0312d66f8890b0a098adbd851b",
+  "package-lock.json": "41f5a608c69b667f26186447b073aef92831af2665a2c6ecf72dae5dae2a1d7d",
+  "package.json": "df996acd08b823af67719aa66ea65ce9d4a84079ed50bfbe5e0f659f04e85bb7",
+  "src/demo-server.mjs": "022c487582932839918e9688ea96b9b76fdf1e78a7ef37208f897020f5a9fa70",
+  "src/fake-transport.mjs": "2304ee2c8570c285d206bd5bbd7427656f52567fa807b6d35a63c737c2962506",
+  "src/public-errors.mjs": "987d3a7ff0a34789f27bd699d13b37f58379636d2b8bfdeacb1f0eb6694e9e8c",
+  "src/request-dispatcher.mjs": "ad2b2a03a76370d2bd6a7f26abfdfdd591907b1345f559e571de6b959fd3c2f1",
+  "src/websocket-transport.mjs": "a3697609d9822719725cd453233db64bcf1aea4b61af965338775e239f101a01",
+  "tests/baseline.test.mjs": "13800fecd59bc03e1c2b5777e0a78b242fc413fdb85d9762b47a661afbcee138",
+  "tests/helpers.mjs": "d03821e0216d318155073d7a62996020f47b8c5c4b492f5a909d8d2e7ff7c84c",
+  "tests/objective.test.mjs": "abc9317dccfbf66faaddd3c0e0c9c6d46dcd80c3627c48509d1b2150bcec8e14",
+  "tests/regression.test.mjs": "fe725def31a00b9d9e2063470f10a30dc76e85ae3762268da1e064cd5f21c535",
+  "tests/websocket.integration.test.mjs": "c61c7bee2fb883ab62637734a4e42d5dc491ae35892a25192b883f68e79d6dee"
+}

@@ -1,0 +1,474 @@
+{
+  "schema": "TW2026_S09_EVIDENCE/1.0",
+  "version": "1.1.0",
+  "status": "IMPLEMENTED_FIELDS_NOT_EVIDENCE_CERTIFICATION",
+  "maxImportBytes": 2000000,
+  "sections": [
+    {
+      "id": "identity",
+      "title": "Identity and boundaries",
+      "intro": "Core draft fields may truthfully record work that is not yet executed. No field grants qualification.",
+      "fields": [
+        {
+          "id": "student_identity",
+          "label": "Student and group",
+          "help": "GROUP | Surname | GivenName; no identity document data.",
+          "kind": "text",
+          "phase": "core",
+          "default": "",
+          "max": 16000
+        },
+        {
+          "id": "package_identity",
+          "label": "Package and source identity",
+          "help": "S09 version/PACKAGE_ID and source/diff locators, never a hash guessed from a filename.",
+          "kind": "textarea",
+          "phase": "core",
+          "default": "",
+          "max": 16000
+        },
+        {
+          "id": "actual_environment",
+          "label": "Actual environment",
+          "help": "Node/npm, operating system, browser where used; prescribed pins are not observations.",
+          "kind": "textarea",
+          "phase": "core",
+          "default": "",
+          "max": 16000
+        },
+        {
+          "id": "evidence_class",
+          "label": "Evidence classes",
+          "help": "Label every witness SOURCE / MODEL / REACT_TEST / HTTP_LOOPBACK / REAL_BROWSER / NOT_EXECUTED. One summary label cannot upgrade other witnesses.",
+          "kind": "textarea",
+          "phase": "core",
+          "default": "",
+          "max": 16000
+        },
+        {
+          "id": "environment_limit",
+          "label": "Blocks and limits",
+          "help": "Missing dependencies and blocked runs stay visible; no automatic replacement by a model.",
+          "kind": "textarea",
+          "phase": "core",
+          "default": "",
+          "max": 16000
+        },
+        {
+          "id": "permitted_edit",
+          "label": "Permitted paths",
+          "help": "P01 src/NotesApp.jsx; P03 server/create-production-app.js; P02 client/src/NotesWorkspace.jsx for later capstone integration.",
+          "kind": "textarea",
+          "phase": "core",
+          "default": "",
+          "max": 16000
+        }
+      ]
+    },
+    {
+      "id": "predictions",
+      "title": "P01 ownership and prediction",
+      "intro": "Core draft fields may truthfully record work that is not yet executed. No field grants qualification.",
+      "fields": [
+        {
+          "id": "p01_prediction",
+          "label": "Pre-experiment prediction",
+          "help": "Action, initial route and falsifying observation; retrospective notes explicitly labelled.",
+          "kind": "textarea",
+          "phase": "core",
+          "default": "",
+          "max": 16000
+        },
+        {
+          "id": "fixture",
+          "label": "Exact seed and route fixture",
+          "help": "Use canonical seed 1/2; new store lifetime is distinct from reload of durable data.",
+          "kind": "textarea",
+          "phase": "core",
+          "default": "",
+          "max": 16000
+        },
+        {
+          "id": "route_owner_map",
+          "label": "Route and parameter ownership",
+          "help": "URL owns route/id; distinguish query from draft.",
+          "kind": "textarea",
+          "phase": "core",
+          "default": "",
+          "max": 16000
+        },
+        {
+          "id": "history_policy",
+          "label": "Push/replace expectation",
+          "help": "Specify stack before/after action and cancel; do not infer replacement merely from final URL.",
+          "kind": "textarea",
+          "phase": "core",
+          "default": "",
+          "max": 16000
+        },
+        {
+          "id": "form_owner_map",
+          "label": "Shared controlled form",
+          "help": "Draft initialisation, trim/blank boundary and no-write cancel; missing edit target.",
+          "kind": "textarea",
+          "phase": "core",
+          "default": "",
+          "max": 16000
+        }
+      ]
+    },
+    {
+      "id": "p01_results",
+      "title": "P01 individual evidence",
+      "intro": "Core draft fields may truthfully record work that is not yet executed. No field grants qualification.",
+      "fields": [
+        {
+          "id": "direct_url_trace",
+          "label": "Direct-route trace",
+          "help": "Initial URL, exact fixture, visible state, actual evidence locator and class.",
+          "kind": "textarea",
+          "phase": "final",
+          "default": "",
+          "max": 16000
+        },
+        {
+          "id": "link_history_trace",
+          "label": "Link/back/forward witness",
+          "help": "Record stack-sensitive observation after submit/cancel; no browser claim for MemoryRouter only.",
+          "kind": "textarea",
+          "phase": "final",
+          "default": "",
+          "max": 16000
+        },
+        {
+          "id": "create_trace",
+          "label": "Create and local validation",
+          "help": "Blank and trimmed input, writes/navigation and returned id.",
+          "kind": "textarea",
+          "phase": "final",
+          "default": "",
+          "max": 16000
+        },
+        {
+          "id": "edit_trace",
+          "label": "Edit identity and reset",
+          "help": "Addressed id, saved title/body, direct edit-id change and no body id override.",
+          "kind": "textarea",
+          "phase": "final",
+          "default": "",
+          "max": 16000
+        },
+        {
+          "id": "unknown_route_trace",
+          "label": "Missing note and unknown route",
+          "help": "Distinguish missing data from unknown client path and server missing document.",
+          "kind": "textarea",
+          "phase": "final",
+          "default": "",
+          "max": 16000
+        },
+        {
+          "id": "p01_test_results",
+          "label": "Named actual checks",
+          "help": "Baseline/objective/regression/build/browser with exact command, outcome, source identity and locators. Unexecuted stays unexecuted.",
+          "kind": "textarea",
+          "phase": "final",
+          "default": "",
+          "max": 16000
+        },
+        {
+          "id": "p01_completion",
+          "label": "Whole P01 status",
+          "help": "NOT_STARTED / IN_PROGRESS / COMPLETE_RECORDED; completeness remains teacher-assessed.",
+          "kind": "select",
+          "phase": "core",
+          "default": "",
+          "max": 16000,
+          "options": [
+            "",
+            "NOT_STARTED",
+            "IN_PROGRESS",
+            "COMPLETE_RECORDED"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p03_portfolio",
+      "title": "P03 required repair portfolio",
+      "intro": "Core draft fields may truthfully record work that is not yet executed. No field grants qualification.",
+      "fields": [
+        {
+          "id": "p03_prediction",
+          "label": "Delivery prediction",
+          "help": "Predict representative method/path/Accept before observation.",
+          "kind": "textarea",
+          "phase": "final",
+          "default": "",
+          "max": 16000
+        },
+        {
+          "id": "p03_static_only",
+          "label": "Static-only witness",
+          "help": "Status, content type, body kind and request trace; actual missing deep link where executed.",
+          "kind": "textarea",
+          "phase": "final",
+          "default": "",
+          "max": 16000
+        },
+        {
+          "id": "p03_universal",
+          "label": "Universal witness",
+          "help": "Use a genuinely affected asset/method case; do not fabricate a broken API control.",
+          "kind": "textarea",
+          "phase": "final",
+          "default": "",
+          "max": 16000
+        },
+        {
+          "id": "p03_api_control",
+          "label": "API control",
+          "help": "Known/unknown API status/envelope and pipeline; preserved router may already return JSON 404.",
+          "kind": "textarea",
+          "phase": "final",
+          "default": "",
+          "max": 16000
+        },
+        {
+          "id": "p03_matrix",
+          "label": "Eligibility matrix",
+          "help": "GET/HEAD; root/nested; API boundary; existing/missing asset; non-HTML/non-GET; 404/500 distinctions.",
+          "kind": "textarea",
+          "phase": "final",
+          "default": "",
+          "max": 16000
+        },
+        {
+          "id": "p03_middleware",
+          "label": "Actual middleware order",
+          "help": "Link order to request-log entries rather than a generic diagram.",
+          "kind": "textarea",
+          "phase": "final",
+          "default": "",
+          "max": 16000
+        },
+        {
+          "id": "p03_diff",
+          "label": "One-file repair",
+          "help": "Causal explanation and concise diff; no full hidden answer key. Keep built/evidence/tests byte-identical.",
+          "kind": "textarea",
+          "phase": "final",
+          "default": "",
+          "max": 16000
+        },
+        {
+          "id": "p03_assets",
+          "label": "Asset and fixture identity",
+          "help": "Compare exact hashes and bytes; a marker or hash-looking filename is insufficient.",
+          "kind": "textarea",
+          "phase": "final",
+          "default": "",
+          "max": 16000
+        },
+        {
+          "id": "p03_qualification",
+          "label": "Actual P03 checks",
+          "help": "Named baseline/objective/regression, HTTP traces and real nested browser boot separately; failure classes and limits.",
+          "kind": "textarea",
+          "phase": "final",
+          "default": "",
+          "max": 16000
+        }
+      ]
+    },
+    {
+      "id": "gemini",
+      "title": "Bounded AI critique and independent check",
+      "intro": "Core draft fields may truthfully record work that is not yet executed. No field grants qualification.",
+      "fields": [
+        {
+          "id": "gemini_mode",
+          "label": "Actual exchange status",
+          "help": "ACTUAL_RECORDED / PENDING / separately authorised alternative, never fabricated practice.",
+          "kind": "select",
+          "phase": "core",
+          "default": "",
+          "max": 16000,
+          "options": [
+            "",
+            "PENDING",
+            "ACTUAL_RECORDED",
+            "SEPARATELY_AUTHORISED_ALTERNATIVE"
+          ]
+        },
+        {
+          "id": "gemini_prompt",
+          "label": "Sanitised bounded prompt",
+          "help": "One claim based on own trace/diff; no private routes, tokens or entire conversations.",
+          "kind": "textarea",
+          "phase": "final",
+          "default": "",
+          "max": 16000
+        },
+        {
+          "id": "gemini_claim",
+          "label": "Relevant response excerpt",
+          "help": "Keep only the claim under evaluation; no invented dialogue.",
+          "kind": "textarea",
+          "phase": "final",
+          "default": "",
+          "max": 16000
+        },
+        {
+          "id": "independent_check",
+          "label": "Independent evaluation",
+          "help": "Falsifiable check not another paraphrase by the same model; source/test/trace with locator.",
+          "kind": "textarea",
+          "phase": "final",
+          "default": "",
+          "max": 16000
+        },
+        {
+          "id": "gemini_verdict",
+          "label": "Verdict",
+          "help": "ACCEPTED / REJECTED / PARTIALLY ACCEPTED / UNKNOWN; UNKNOWN is not task PASS.",
+          "kind": "select",
+          "phase": "final",
+          "default": "",
+          "max": 16000,
+          "options": [
+            "",
+            "ACCEPTED",
+            "REJECTED",
+            "PARTIALLY_ACCEPTED",
+            "UNKNOWN"
+          ]
+        },
+        {
+          "id": "correction_limit",
+          "label": "Correction and limitation",
+          "help": "Correct only the supported claim and record remaining uncertainty.",
+          "kind": "textarea",
+          "phase": "final",
+          "default": "",
+          "max": 16000
+        }
+      ]
+    },
+    {
+      "id": "capstone",
+      "title": "P02 semester integration, not a second S09 implementation gate",
+      "intro": "P02 is capstone integration, not a second full S09 completion gate. Blank implementation evidence is allowed.",
+      "fields": [
+        {
+          "id": "p02_transfer_map",
+          "label": "Server/UI/submission mapping",
+          "help": "Conceptual transfer for the semester milestone; no second full build in class.",
+          "kind": "textarea",
+          "phase": "transfer",
+          "default": "",
+          "max": 16000
+        },
+        {
+          "id": "p02_integration_status",
+          "label": "Capstone progress",
+          "help": "NOT_STARTED is allowed for this separate implementation at the S09 evidence stage; do not claim completed integration.",
+          "kind": "select",
+          "phase": "transfer",
+          "default": "",
+          "max": 16000,
+          "options": [
+            "",
+            "NOT_STARTED",
+            "IN_PROGRESS",
+            "COMPLETE_RECORDED"
+          ]
+        },
+        {
+          "id": "p02_evidence_optional",
+          "label": "Available capstone evidence",
+          "help": "Use evidence only if actually produced; blank does not deduct the S09 P01/P03 rubric.",
+          "kind": "textarea",
+          "phase": "optional",
+          "default": "",
+          "max": 16000
+        }
+      ]
+    },
+    {
+      "id": "closing",
+      "title": "Reflection, PDF and declaration",
+      "intro": "Core draft fields may truthfully record work that is not yet executed. No field grants qualification.",
+      "fields": [
+        {
+          "id": "learning_transfer",
+          "label": "Learning transfer",
+          "help": "Explain one changed mental model and a boundary still untested.",
+          "kind": "textarea",
+          "phase": "final",
+          "default": "",
+          "max": 16000
+        },
+        {
+          "id": "evidence_index",
+          "label": "Evidence locator index",
+          "help": "All cited captures/logs fit in the same PDF; no external private repository required.",
+          "kind": "textarea",
+          "phase": "final",
+          "default": "",
+          "max": 16000
+        },
+        {
+          "id": "pending_work",
+          "label": "Unfinished work",
+          "help": "Required P01/P03/AI work versus separate capstone work; no hidden promotion to final.",
+          "kind": "textarea",
+          "phase": "core",
+          "default": "",
+          "max": 16000
+        },
+        {
+          "id": "teacher_exception",
+          "label": "Prior authorisation if relevant",
+          "help": "Record actual prior teacher decision and replacement evidence; a text field cannot authorise or authenticate it.",
+          "kind": "textarea",
+          "phase": "conditional",
+          "default": "",
+          "max": 16000
+        },
+        {
+          "id": "pdf_status",
+          "label": "Draft/export/review state",
+          "help": "A print request does not demonstrate a saved, readable PDF or Moodle submission.",
+          "kind": "select",
+          "phase": "core",
+          "default": "DRAFT_NOT_REVIEWED",
+          "max": 16000,
+          "options": [
+            "DRAFT_NOT_REVIEWED",
+            "FINAL_CANDIDATE_NOT_YET_SAVED",
+            "LOCAL_PDF_REVIEWED_NOT_MOODLE_RECEIPT"
+          ]
+        },
+        {
+          "id": "declaration",
+          "label": "Individual accuracy declaration",
+          "help": "False by default; reset after import or relevant edits.",
+          "kind": "checkbox",
+          "phase": "final",
+          "default": false,
+          "max": 16000
+        },
+        {
+          "id": "reflection_limit",
+          "label": "Limit of the evidence",
+          "help": "Acknowledge model/stub versus React/HTTP/browser and source identity limits.",
+          "kind": "textarea",
+          "phase": "final",
+          "default": "",
+          "max": 16000
+        }
+      ]
+    }
+  ]
+}

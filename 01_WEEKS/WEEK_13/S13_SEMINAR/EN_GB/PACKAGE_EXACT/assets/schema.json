@@ -1,0 +1,599 @@
+{
+  "schema": "TW2026_S13_EVIDENCE",
+  "version": "1.1.0",
+  "maxImportBytes": 2000000,
+  "sections": [
+    {
+      "id": "identity_execution",
+      "title": "1. Identity and execution boundary",
+      "intro": "Imported text remains an unverified draft. Structural completeness is not execution, approval or submission.",
+      "fields": [
+        {
+          "id": "student_code",
+          "label": "Student code or approved alias",
+          "kind": "text",
+          "default": "",
+          "max": 256,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "core"
+        },
+        {
+          "id": "package_id",
+          "label": "Public package ID",
+          "kind": "text",
+          "default": "",
+          "max": 256,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "core"
+        },
+        {
+          "id": "environment_node",
+          "label": "Actual Node.js and npm environment",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "core"
+        },
+        {
+          "id": "environment_browser",
+          "label": "Actual browser environment or honest block",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "core"
+        },
+        {
+          "id": "execution_class",
+          "label": "Evidence execution class",
+          "kind": "select",
+          "default": "",
+          "max": 16000,
+          "options": [
+            "",
+            "SOURCE_ONLY",
+            "NODE_FAKE_WORKER",
+            "REAL_BROWSER_WORKER",
+            "BLOCKED_UNQUALIFIED"
+          ],
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "core"
+        },
+        {
+          "id": "install_status",
+          "label": "Installation/runtime status",
+          "kind": "select",
+          "default": "",
+          "max": 16000,
+          "options": [
+            "",
+            "NO_INSTALL_ATTEMPTED",
+            "PREPARED_EXISTING_ENVIRONMENT",
+            "MISSING_OR_UNQUALIFIED",
+            "NOT_CHECKED"
+          ],
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "core"
+        },
+        {
+          "id": "initial_scope",
+          "label": "Initial assessed scope and source identity",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "core"
+        }
+      ]
+    },
+    {
+      "id": "protocol_prediction",
+      "title": "2. Protocol and lifecycle prediction",
+      "intro": "Imported text remains an unverified draft. Structural completeness is not execution, approval or submission.",
+      "fields": [
+        {
+          "id": "selected_boundary",
+          "label": "Selected browser boundary",
+          "kind": "select",
+          "default": "",
+          "max": 16000,
+          "options": [
+            "",
+            "P01_WORKER",
+            "P02_SERVICE_WORKER_GUIDED",
+            "P03_OPTIONAL_ADVANCED",
+            "REGRESSION_HARNESS_LAUNCH"
+          ],
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "core"
+        },
+        {
+          "id": "worker_owner",
+          "label": "Worker, pending-state and DOM ownership map",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "core"
+        },
+        {
+          "id": "request_id_policy",
+          "label": "Request ID generation and reuse policy",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "core"
+        },
+        {
+          "id": "predicted_sync_reply",
+          "label": "Prediction for a synchronous reply",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "core"
+        },
+        {
+          "id": "predicted_out_of_order",
+          "label": "Prediction for out-of-order completion",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "core"
+        },
+        {
+          "id": "predicted_terminal_cleanup",
+          "label": "Predicted cleanup for every terminal path",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "core"
+        },
+        {
+          "id": "prediction_limit",
+          "label": "Prediction limitation",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "core"
+        }
+      ]
+    },
+    {
+      "id": "p01_implementation_evidence",
+      "title": "3. P01 implementation and evidence",
+      "intro": "Imported text remains an unverified draft. Structural completeness is not execution, approval or submission.",
+      "fields": [
+        {
+          "id": "p01_diff_locator",
+          "label": "P01 narrow diff or hash locator",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "final"
+        },
+        {
+          "id": "p01_validation",
+          "label": "Input validation and pre-abort evidence",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "final"
+        },
+        {
+          "id": "p01_lazy_worker",
+          "label": "Lazy Worker creation evidence",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "final"
+        },
+        {
+          "id": "p01_pending_before_send",
+          "label": "Pending-before-send evidence",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "final"
+        },
+        {
+          "id": "p01_sync_reply",
+          "label": "Synchronous reply evidence",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "final"
+        },
+        {
+          "id": "p01_reverse_order",
+          "label": "Out-of-order correlation evidence",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "final"
+        },
+        {
+          "id": "p01_progress",
+          "label": "Monotonic progress evidence",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "final"
+        },
+        {
+          "id": "p01_abort",
+          "label": "Abort settlement evidence",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "final"
+        },
+        {
+          "id": "p01_cancel_envelope",
+          "label": "Cancel envelope evidence",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "final"
+        },
+        {
+          "id": "p01_worker_error",
+          "label": "Worker error evidence",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "final"
+        },
+        {
+          "id": "p01_messageerror",
+          "label": "Message error evidence",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "final"
+        },
+        {
+          "id": "p01_dispose",
+          "label": "Dispose and termination evidence",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "final"
+        },
+        {
+          "id": "p01_pending_final",
+          "label": "Final pending-count evidence",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "final"
+        },
+        {
+          "id": "p01_listener_final",
+          "label": "Final listener evidence",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "final"
+        },
+        {
+          "id": "p01_worker_final",
+          "label": "Final worker ownership evidence",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "final"
+        },
+        {
+          "id": "p01_id_reuse_policy",
+          "label": "Retired-ID or reuse policy evidence",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "final"
+        },
+        {
+          "id": "p01_actual_or_model",
+          "label": "Actual browser evidence or explicit model classification",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "final"
+        },
+        {
+          "id": "p01_limit",
+          "label": "P01 remaining limitation",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "final"
+        }
+      ]
+    },
+    {
+      "id": "p02_guided_trace",
+      "title": "4. P02 guided lifecycle trace",
+      "intro": "Imported text remains an unverified draft. Structural completeness is not execution, approval or submission.",
+      "fields": [
+        {
+          "id": "p02_control_state",
+          "label": "Registered, active, ready and controlled state",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "final"
+        },
+        {
+          "id": "p02_target_request",
+          "label": "Target request and eligibility trace",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "final"
+        },
+        {
+          "id": "p02_uncontrolled_fallback",
+          "label": "Uncontrolled-client fallback trace",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "final"
+        },
+        {
+          "id": "p02_source_version_check",
+          "label": "Source and protocol-version check",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "final"
+        },
+        {
+          "id": "p02_controllerchange",
+          "label": "Controller-change lifecycle trace",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "final"
+        },
+        {
+          "id": "p02_limit",
+          "label": "P02 guided-trace limitation",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "final"
+        }
+      ]
+    },
+    {
+      "id": "regression_harness_launch",
+      "title": "5. Regression Harness launch",
+      "intro": "Imported text remains an unverified draft. Structural completeness is not execution, approval or submission.",
+      "fields": [
+        {
+          "id": "rh_package_locator",
+          "label": "Regression Harness package locator",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "final"
+        },
+        {
+          "id": "rh_target_contract",
+          "label": "Regression target contract",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "final"
+        },
+        {
+          "id": "rh_test_matrix_draft",
+          "label": "Initial unit, integration and HTTP matrix",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "final"
+        },
+        {
+          "id": "rh_mutation_candidate",
+          "label": "Initial mutation candidate",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "final"
+        },
+        {
+          "id": "rh_outstanding_before_s14",
+          "label": "Outstanding work before S14",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "final"
+        }
+      ]
+    },
+    {
+      "id": "gemini_reflection",
+      "title": "6. Gemini critique and reflection",
+      "intro": "Imported text remains an unverified draft. Structural completeness is not execution, approval or submission.",
+      "fields": [
+        {
+          "id": "gemini_claim",
+          "label": "Sanitised falsifiable claim",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "final"
+        },
+        {
+          "id": "gemini_excerpt",
+          "label": "Relevant actual Gemini excerpt or pending state",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "final"
+        },
+        {
+          "id": "independent_check",
+          "label": "Independent check",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "final"
+        },
+        {
+          "id": "verdict",
+          "label": "Verdict",
+          "kind": "select",
+          "default": "",
+          "max": 16000,
+          "options": [
+            "",
+            "ACCEPTED",
+            "REJECTED",
+            "PARTIALLY_ACCEPTED",
+            "UNKNOWN"
+          ],
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "final"
+        },
+        {
+          "id": "correction_limit",
+          "label": "Correction and remaining limitation",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "final"
+        }
+      ]
+    },
+    {
+      "id": "declarations_pdf",
+      "title": "7. Declarations and PDF route",
+      "intro": "Imported text remains an unverified draft. Structural completeness is not execution, approval or submission.",
+      "fields": [
+        {
+          "id": "outstanding_work",
+          "label": "Outstanding required work",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "options": null,
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "final"
+        },
+        {
+          "id": "declaration",
+          "label": "Truthfulness and redaction declaration",
+          "kind": "select",
+          "default": "",
+          "max": 16000,
+          "options": [
+            "",
+            "DRAFT_NOT_DECLARED",
+            "DECLARED_TRUTHFUL_REDACTED"
+          ],
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "final"
+        },
+        {
+          "id": "pdf_review_submission",
+          "label": "PDF review and submission state",
+          "kind": "select",
+          "default": "",
+          "max": 16000,
+          "options": [
+            "",
+            "DRAFT_NOT_REVIEWED",
+            "FINAL_REVIEWED_READY_NOT_SUBMITTED",
+            "SUBMITTED_UNVERIFIED"
+          ],
+          "help": "Record the source, observation and limitation. Do not include credentials, cookies, tokens or unnecessary personal data.",
+          "phase": "final"
+        }
+      ]
+    }
+  ]
+}

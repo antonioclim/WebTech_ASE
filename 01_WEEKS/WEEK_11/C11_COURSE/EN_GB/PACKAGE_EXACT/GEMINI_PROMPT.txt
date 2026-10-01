@@ -1,0 +1,4 @@
+Critique one security-boundary claim using the minimal sanitised source/observation I provide. Identify the trusted source, the untrusted input category, the relevant control and one independent benign check that could contradict the claim. Do not generate a complete policy or CORS/CSRF repair, exploit payload, bypass procedure or request for credentials. State what cannot be inferred from the evidence. I will record and check your actual response separately.
+
+My own claim: [write it]
+Sanitised excerpt and evidence class: [provide only what is necessary]

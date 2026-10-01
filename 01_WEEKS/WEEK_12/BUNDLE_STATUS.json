@@ -1,0 +1,32 @@
+{
+  "schema": "TW2026_WEEKLY_REVIEW/1.0",
+  "week": 12,
+  "status": "WIP/PREVIEW_NOT_FINAL",
+  "course_minutes": 60,
+  "seminar_minutes": 60,
+  "reserved_extra_30_used": false,
+  "P01": "GUIDED_DEMO",
+  "P02": "OPTIONAL_ADVANCED",
+  "P03": "IN_CLASS_CORE_FULL_IMPLEMENTATION",
+  "C12_assignment": false,
+  "one_private_S12_final_PDF": true,
+  "actual_protocol_execution": false,
+  "remote_uploaded": false,
+  "upload_kit": false,
+  "source_packages": [
+    {
+      "object": "C12",
+      "file": "WEBTECH_ASE_C12_STUDENT_EN_GB_v1.1.0_PUBLIC.zip",
+      "sha256": "7461ac8c42409af0fb4c735eda6a919b5b84631ccf77261238d0ee0d7fd5b810",
+      "members": 63,
+      "package_id": "22e03eae0f8a7a775a19a5125e79b041cd53fad9c7f52ed5ec66143eea4b367c"
+    },
+    {
+      "object": "S12",
+      "file": "WEBTECH_ASE_S12_STUDENT_EN_GB_v1.1.0_PUBLIC.zip",
+      "sha256": "b4e385573b363aa8f48f82df2af8193c8471d3301101d5908f0aceea509ae681",
+      "members": 83,
+      "package_id": "174112f72b02eb951be2bdb7709e9e305ab2d2d6ec95ef98c50e2cf8caea7a31"
+    }
+  ]
+}

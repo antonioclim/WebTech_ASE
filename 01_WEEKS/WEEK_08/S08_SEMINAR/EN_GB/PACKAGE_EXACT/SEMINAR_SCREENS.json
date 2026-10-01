@@ -1,0 +1,98 @@
+[
+  [
+    "00–05",
+    "Start with an owner",
+    "P01 is the full central implementation. P03 is required portfolio. P02 is optional. Record the package and actual environment. A missing runtime is an execution block, not a pedagogical PASS.",
+    "Predict: who owns the title, item collection, filter and request result?"
+  ],
+  [
+    "00–05",
+    "Name the evidence class",
+    "SOURCE_REASONING, MODEL, actual React test, actual browser observation, saved PDF and Moodle receipt are different. Do not use one as a substitute for another.",
+    "Write a prediction before you run the next experiment."
+  ],
+  [
+    "05–12",
+    "Follow one responsibility",
+    "Read the vanilla comparator and your assessed App.jsx contract. Move authoritative data to a state owner, event intent to a callback, visible output to rendering and persistence to the owned effect.",
+    "Draw one prop down and one intent up. Do not paste a reference implementation."
+  ],
+  [
+    "05–12",
+    "Fix the comparison fixture",
+    "HTTP with id a is unread; SQLite with id b is read. Record the same initial array and stored content on both sides. Separate mount-time writes from later changes.",
+    "Which observation would distinguish invalid-storage fallback from valid-data parity?"
+  ],
+  [
+    "12–30",
+    "Implement P01 inside its boundary",
+    "Edit only projects/p01/student/src/App.jsx. Preserve canonical evidence, entry, CSS, fixtures, tests and dependencies. The separate preview launcher is not an assessed replacement.",
+    "Begin with controlled input and a pure state transition. Keep a short evidence note."
+  ],
+  [
+    "12–30",
+    "Retain the whole obligation",
+    "QueueForm, QueueFilter, QueueList and QueueItem need explicit props and callbacks. Include trim/blank behaviour, immutable toggle/remove, ID keys, derived counts, empty states and complete-array persistence.",
+    "The 18-minute class segment does not guarantee completion of the source-estimated 55–65-minute project."
+  ],
+  [
+    "30–39",
+    "Observe before asserting",
+    "Record one add/toggle/remove transition: exact input, previous state, next complete array and visible counts. A blank submission must be distinguished from a successful add.",
+    "Report the real command or browser action and a locator; otherwise write NOT_EXECUTED."
+  ],
+  [
+    "30–39",
+    "Filter and persistence",
+    "Record writes after mount, change only the filter and compare the counts and stored array. Name StrictMode/mount conditions. A source expression count does not prove a global invocation count.",
+    "Any temporary dependency edit must be recorded and restored."
+  ],
+  [
+    "30–39",
+    "ID after real reload",
+    "The canonical entry resets its generator; the separately labelled preview allocates against current stored/session-reserved IDs. Its helper test is not an actual browser reload.",
+    "Record add → persist → reload → add and verify ID uniqueness only if you actually performed it."
+  ],
+  [
+    "39–45",
+    "Ask one bounded Gemini question",
+    "Share one sanitised claim with a small excerpt and your recorded trace. Ask for one failure condition and independent check, not the entire assessed solution.",
+    "Retain only the relevant actual prompt/answer extract. No keys, cookies, credentials or institutional data."
+  ],
+  [
+    "45–50",
+    "Make your own verdict",
+    "Check the claim independently. Use ACCEPTED, REJECTED, PARTIALLY_ACCEPTED or UNKNOWN, then supply a correction and a limit. An unknown claim may remain honest without completing pending practical work.",
+    "An offline synthetic example must say SYNTHETIC_ILLUSTRATION; it is not a Gemini conversation."
+  ],
+  [
+    "50–55",
+    "Required P03 portfolio",
+    "Predict and diagnose the weak search panel. Implement only SearchPanel.jsx. Debounce, cleanup, stable dependencies, late settlement and sanitised errors belong to the full required contract.",
+    "The compatible preview adapter does not repair lifecycle. Original missing-signal TypeError is a separate discrepancy."
+  ],
+  [
+    "50–55",
+    "Which request may publish?",
+    "Compare the actual guard conditions: guards retained; numeric checks removed while active remains; abort-only with publication guards removed. The second condition need not fail.",
+    "Use a named non-cooperative fake and record the order: start A → cleanup A → start B → settle B → settle A."
+  ],
+  [
+    "55–60",
+    "Save an honest draft",
+    "Open form.html. Record unfinished P01/P03/AI work. Export JSON as a portable draft or use optional browser storage. Imported text resets the declaration and PDF review state.",
+    "At minute 60 stop. Finish the required work before the teacher-set deadline; no date is invented here."
+  ],
+  [
+    "55–60",
+    "One PDF, one private Assignment",
+    "All 40 fields cover P01, P03, Gemini and reflection. Use DOCX for actual screenshot images. Review the saved PDF and later the separate Moodle submission state.",
+    "Field validation is not execution, acceptance, saving or submission."
+  ],
+  [
+    "60",
+    "STOP and transfer",
+    "Classroom content ends now. Keep the remaining 30 scheduled minutes out of this route. Preserve pending work and the exact assessed files.",
+    "Before final submission complete both required strands, actual checks and bounded AI review or an explicitly prior authorised alternative."
+  ]
+]

@@ -1,0 +1,2 @@
+import express from"express";
+export function createService(defect="none"){const rows=[];const app=express();app.use(express.json());app.post("/tasks",(req,res)=>{if(req.body?.fail){const message=defect==="leaked-error"?`database failed with password=${req.body.password}`:"internal_error";return res.status(500).json({error:message});}const task={id:"1",title:req.body?.title};if(defect!=="missing-persistence")rows.push(task);res.status(defect==="wrong-status"?200:201).json(task);});app.get("/tasks",(_req,res)=>res.json(rows));return app;}

@@ -1,25 +1,19 @@
 # WebTech_ASE — Web Technologies at ASE
 
-> **Repository work in progress. Automated validation, Pages deployment and weekly release publication are intentionally manual-only until the corpus is frozen.**
+> **Repository work in progress. Automated validation, Pages deployment and weekly release publication remain manual-only while runtime and platform gates are open.**
 
-`WebTech_ASE` is the public, student-facing repository for the Web Technologies
-module at the Bucharest University of Economic Studies.
+`WebTech_ASE` is the public, student-facing repository for the Web Technologies module at the Bucharest University of Economic Studies.
 
 ## Available material
 
-The current working repository contains:
+The working repository contains:
 
-- Day 0 setup for Windows and macOS/Linux;
-- optional one-file setup release candidates with browsable guides;
-- week 1: C01 and S01 in Romanian and British English;
-- week 2: C02 and S02 in Romanian and British English;
+- Day 0 setup for Windows, macOS and Linux;
+- weeks 1–2 as the established bilingual material;
+- weeks 3–14 as English student WIP previews;
 - offline student packages and evidence-oriented seminar forms;
 - Moodle submission guidance;
-- public checksums, exact extracted packages and repository validation tools.
-
-Future weeks are listed in the [course map](current-outline.md). Their publication
-state remains provisional until the same public/private, language, Moodle and QA
-gate has been completed.
+- public checksums, extracted packages and repository validation tools.
 
 ## Start in three steps
 
@@ -31,25 +25,13 @@ gate has been completed.
 week → course/seminar → language
 ```
 
-## Week 01–07 material index
+## Week 01–14 material index
 
 [Choose a week, course or seminar](01_WEEKS/README.md).
 
-Weeks 01–02 keep their existing files and navigation. Weeks 03–07 are now provided
-as **student WIP previews**, not qualified final releases. Each object has both
-an unchanged ZIP in DOWNLOAD and a complete byte-identical extracted copy in
-EN_GB/PACKAGE_EXACT. The language README links to individual files. Runtime, native-platform and
-browser acceptance remain pending; Weeks 05–07 also have application/dependency
-qualification gaps. See the [preview policy](00_TOOLS/maintainer/PREVIEW_DOWNLOAD_POLICY.md).
+Weeks 01–02 retain their existing files, bilingual routes and the additional live S01 guide. Weeks 03–14 are **student WIP previews**, not qualified final releases. Each course and seminar keeps its original ZIP in `DOWNLOAD` and a complete byte-identical extracted copy in `EN_GB/PACKAGE_EXACT`. GitHub displays HTML source rather than running the lesson. Pages is not activated by this distribution route.
 
-This file-browsing and download route does not deploy Pages, create a Release, run Actions or
-change stable release admission. Do not upload private teacher packages.
-
-## Published teaching objects
-
-- [Week 1](01_WEEKS/WEEK_01/README.md)
-- [Week 2](01_WEEKS/WEEK_02/README.md)
-- [Download a whole week](00_START_HERE/DOWNLOAD_A_WEEK.md)
+Runtime, native-platform, browser, Microsoft Word and Moodle acceptance remain separate gates. Read the [preview policy](00_TOOLS/maintainer/PREVIEW_DOWNLOAD_POLICY.md) and each package guide before running an application.
 
 ## Seminar evidence and Moodle
 
@@ -59,27 +41,19 @@ Seminar work follows this individual loop:
 prediction → experiment → evidence → Gemini audit → limitation → PDF → Moodle
 ```
 
-Read the [Moodle submission guide](00_START_HERE/MOODLE_SUBMISSION.md) before
-uploading work to `online.ase.ro`.
+Read the [Moodle submission guide](00_START_HERE/MOODLE_SUBMISSION.md) before uploading work to `online.ase.ro`.
 
 ## Public/private boundary
 
-This repository excludes teacher guides, answer keys, teacher consoles,
-restricted reference solutions, internal grading material, student submissions
-and internal QA archives. See [PRIVATE_CONTENT_POLICY.md](PRIVATE_CONTENT_POLICY.md).
+This repository excludes teacher guides, answer keys, teacher consoles, restricted reference solutions, internal grading material, student submissions and internal QA archives. See [PRIVATE_CONTENT_POLICY.md](PRIVATE_CONTENT_POLICY.md).
 
 ## Citation and rights
 
-Citation metadata is available in [CITATION.cff](CITATION.cff) and
-[codemeta.json](codemeta.json). During the WIP period, these identify the last
-stable repository baseline rather than a newly frozen release. Copyright © 2026
-Antonio Clim. All rights reserved. Public access does not create an open licence.
+Citation metadata is available in [CITATION.cff](CITATION.cff) and [codemeta.json](codemeta.json). During the WIP period these identify the last stable repository baseline rather than a newly frozen release. Copyright © 2026 Antonio Clim. All rights reserved. Public access does not create an open licence.
 
 ## Support
 
-Use the issue forms for reproducible technical problems or content corrections.
-Do not post passwords, tokens, cookies, private Moodle data or student work.
-See [SUPPORT.md](SUPPORT.md) and [SECURITY.md](SECURITY.md).
+Use the issue forms for reproducible technical problems or content corrections. Do not post passwords, tokens, cookies, private Moodle data or student work. See [SUPPORT.md](SUPPORT.md) and [SECURITY.md](SECURITY.md).
 
 ## Development status
 
@@ -90,7 +64,7 @@ Automated Actions: disabled; all workflows are manual-only
 Pages deployment: intentionally deferred
 Repository identity: frozen baseline; regeneration deferred until final freeze
 Established material: Day 0 and weeks 1–2
-Additional material: weeks 3–7, unqualified WIP previews; DOWNLOAD + PACKAGE_EXACT
+Additional material: weeks 3–14, unqualified WIP previews; DOWNLOAD + PACKAGE_EXACT
 Guidance language: English
 Bilingual exceptions: C01, S01, C02 and S02
 ```

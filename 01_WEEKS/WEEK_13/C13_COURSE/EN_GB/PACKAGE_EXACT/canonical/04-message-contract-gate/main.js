@@ -1,0 +1,3 @@
+const trustedOrigin="http://127.0.0.1:4217";const catalog=document.querySelector("#catalog");const status=document.querySelector("#status");let seen=0,accepted=0;
+function accept(event){if(event.origin!==trustedOrigin||event.source!==catalog.contentWindow)return null;const data=event.data;if(data?.version!==1||data.type!=="catalog/select"||typeof data.payload?.itemId!=="string")return null;return{type:data.type,itemId:data.payload.itemId};}
+addEventListener("message",event=>{seen+=1;const intent=accept(event);if(intent){accepted+=1;status.textContent=`Accepted ${intent.type} for ${intent.itemId}`;}if(seen===2)document.body.dataset.result=accepted===1?"pass":"fail";});

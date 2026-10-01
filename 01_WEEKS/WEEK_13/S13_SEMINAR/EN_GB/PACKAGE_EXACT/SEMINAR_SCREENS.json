@@ -1,0 +1,98 @@
+[
+  {
+    "number": 1,
+    "eyebrow": "00",
+    "title": "S13 scope and evidence classes",
+    "body": "P01 is central, P02 guided, P03 optional and Regression Harness is launched for completion before S14."
+  },
+  {
+    "number": 2,
+    "eyebrow": "00–05",
+    "title": "Package, runtime and assessed path",
+    "body": "Record package identity, actual Node/browser state and the one assessed P01 file. Missing infrastructure is a block, not a pass."
+  },
+  {
+    "number": 3,
+    "eyebrow": "05–12",
+    "title": "Lifecycle prediction",
+    "body": "Map caller, client, worker, pending owner, request ID and every terminal path before coding."
+  },
+  {
+    "number": 4,
+    "eyebrow": "Validation",
+    "title": "Fail before worker creation",
+    "body": "Invalid values and a pre-aborted signal must reject without creating a worker or sending a message."
+  },
+  {
+    "number": 5,
+    "eyebrow": "Lazy worker",
+    "title": "One owned module Worker",
+    "body": "Create the worker lazily and keep DOM work on the main thread."
+  },
+  {
+    "number": 6,
+    "eyebrow": "Ordering",
+    "title": "Pending before postMessage",
+    "body": "The fake Worker can reply synchronously. Pending state must exist before the send."
+  },
+  {
+    "number": 7,
+    "eyebrow": "Correlation",
+    "title": "Out-of-order completion",
+    "body": "Opaque request IDs preserve caller/result ownership when completion order changes."
+  },
+  {
+    "number": 8,
+    "eyebrow": "Progress",
+    "title": "Monotonic non-terminal messages",
+    "body": "Accept only monotonic progress for the matching request and do not settle the promise."
+  },
+  {
+    "number": 9,
+    "eyebrow": "Abort",
+    "title": "Cancel locally and cooperatively",
+    "body": "Abort rejects once, removes local ownership and sends one cancel envelope when possible."
+  },
+  {
+    "number": 10,
+    "eyebrow": "Worker failure",
+    "title": "Stable public errors",
+    "body": "Worker error and messageerror reject pending work without exposing raw event details. State the worker-retirement policy."
+  },
+  {
+    "number": 11,
+    "eyebrow": "Dispose",
+    "title": "Terminate and clean",
+    "body": "Dispose rejects pending work, removes listeners, terminates the worker and is idempotent."
+  },
+  {
+    "number": 12,
+    "eyebrow": "30–39",
+    "title": "Independent P01 observations",
+    "body": "Record exact baseline, objective, regression and browser-integration status. Fake Worker evidence is not real responsiveness."
+  },
+  {
+    "number": 13,
+    "eyebrow": "39–45",
+    "title": "Bounded Gemini critique",
+    "body": "Use one sanitised lifecycle claim and a minimal excerpt. Preserve the actual response or pending state."
+  },
+  {
+    "number": 14,
+    "eyebrow": "45–50",
+    "title": "Verdict and correction",
+    "body": "Choose ACCEPTED, REJECTED, PARTIALLY ACCEPTED or UNKNOWN, then state a corrected claim and limitation."
+  },
+  {
+    "number": 15,
+    "eyebrow": "50–55",
+    "title": "P02 trace and Regression Harness launch",
+    "body": "Trace controlled versus uncontrolled Service Worker state, then record the U14 harness target, matrix and mutation candidate."
+  },
+  {
+    "number": 16,
+    "eyebrow": "55–60",
+    "title": "Evidence draft and STOP",
+    "body": "Save an honest draft, list unfinished P01 and portfolio work and stop at minute 60."
+  }
+]

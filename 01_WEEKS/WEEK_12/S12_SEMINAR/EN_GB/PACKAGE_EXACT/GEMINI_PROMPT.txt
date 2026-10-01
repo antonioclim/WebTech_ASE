@@ -1,0 +1,1 @@
+Assess one sanitised lifecycle claim about pending-before-send or terminal cleanup against the supplied minimal excerpt. Do not generate the complete dispatcher. State what evidence would falsify the claim and what remains untested.

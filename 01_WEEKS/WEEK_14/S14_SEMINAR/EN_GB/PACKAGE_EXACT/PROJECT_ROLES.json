@@ -1,0 +1,92 @@
+{
+  "roles": {
+    "P01": "REQUIRED_PORTFOLIO_CLOSE",
+    "P02": "OPTIONAL_ADVANCED",
+    "P03": "CAPSTONE_INTEGRATION_REQUIRED_REVIEW",
+    "P04": "ASSESSMENT_BANK_SEPARATE"
+  },
+  "assessed_paths": {
+    "P01": "student/src/regression-harness.mjs",
+    "P02": "student/src/load-probe.mjs",
+    "P03": "student/src/production-review.mjs",
+    "P04": "student/src/archive-extension.mjs"
+  },
+  "course_blocks": [
+    [
+      0,
+      5
+    ],
+    [
+      5,
+      14
+    ],
+    [
+      14,
+      24
+    ],
+    [
+      24,
+      34
+    ],
+    [
+      34,
+      43
+    ],
+    [
+      43,
+      52
+    ],
+    [
+      52,
+      57
+    ],
+    [
+      57,
+      60
+    ]
+  ],
+  "seminar_blocks": [
+    [
+      0,
+      5
+    ],
+    [
+      5,
+      15
+    ],
+    [
+      15,
+      24
+    ],
+    [
+      24,
+      36
+    ],
+    [
+      36,
+      44
+    ],
+    [
+      44,
+      51
+    ],
+    [
+      51,
+      56
+    ],
+    [
+      56,
+      60
+    ]
+  ],
+  "topics": 38,
+  "form_fields": 54,
+  "form_sections": 7,
+  "declaration_prechecked": false,
+  "canonical_tests_executed": 0,
+  "actual_runtime_qualified": false,
+  "remote_mutations": 0,
+  "C14_assignment": false,
+  "one_S14_PDF": true,
+  "P04_in_S14": false
+}

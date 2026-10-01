@@ -1,0 +1,7 @@
+I am checking one claim in my own S09 work.
+Claim: [one claim about URL/history or document delivery]
+Source/trace excerpt: [minimal sanitised excerpt]
+Prediction before checking: [your prediction]
+Identify one assumption and one counterexample or independent check.
+Do not implement the project or claim that you ran my code.
+Distinguish a source inference, a model and an actual runtime observation.

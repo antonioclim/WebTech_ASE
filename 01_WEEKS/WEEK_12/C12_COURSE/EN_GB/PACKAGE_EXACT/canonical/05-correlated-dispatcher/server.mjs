@@ -1,0 +1,1 @@
+import{WebSocketServer}from"ws";const wss=new WebSocketServer({port:3000});wss.on("connection",socket=>socket.on("message",data=>{const message=JSON.parse(data);setTimeout(()=>socket.send(JSON.stringify({requestId:message.requestId,result:message.payload.value})),message.payload.delay);}));console.log("Dispatcher server: ws://localhost:3000");

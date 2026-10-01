@@ -1,0 +1,41 @@
+{
+  "schema": "webtech-ase.week08-review-bundle.v1",
+  "week": 8,
+  "version": "1.1.0_WIP",
+  "status": "LOCAL_PAIRED_WIP_PREVIEW_NOT_FINAL",
+  "roles": {
+    "P01": "IN_CLASS_CORE_FULL_IMPLEMENTATION",
+    "P03": "REQUIRED_PORTFOLIO",
+    "P02": "OPTIONAL_REINFORCEMENT"
+  },
+  "course_minutes": 60,
+  "seminar_minutes": 60,
+  "stop_at_minute": 60,
+  "second_course_assignment": false,
+  "objects": {
+    "C08": {
+      "file": "WEBTECH_ASE_C08_STUDENT_EN_GB_v1.1.0_PUBLIC.zip",
+      "bytes": 206259,
+      "sha256": "902dcf4664aaae54f027f2a7a0e7f0425bfa780011e127d2b571d243739b1b61",
+      "files": 63,
+      "package_id": "83d26b157c47ccf30871352902492a9b6fad5499dce6cf702953aad830cbbee3",
+      "package_exact": "C08_COURSE/EN_GB/PACKAGE_EXACT"
+    },
+    "S08": {
+      "file": "WEBTECH_ASE_S08_STUDENT_EN_GB_v1.1.0_PUBLIC.zip",
+      "bytes": 363064,
+      "sha256": "a958eeceede4627755c9885bc5e2b6c695a60a2024df5de1d6031998fe7149e2",
+      "files": 124,
+      "package_id": "554f4a7125c4161a67456ede22d636cdff201bea4acd71b79967da76d17dfb45",
+      "crc": "PASS",
+      "manifest": "PASS",
+      "package_id_check": "PASS",
+      "extraction_roundtrip": "PASS_BYTE_IDENTICAL",
+      "package_exact": "S08_SEMINAR/EN_GB/PACKAGE_EXACT"
+    }
+  },
+  "installation_or_upload_authorised": false,
+  "remote_checked_this_phase": false,
+  "genuine_stack_qualified": false,
+  "created": "2026-09-30"
+}
