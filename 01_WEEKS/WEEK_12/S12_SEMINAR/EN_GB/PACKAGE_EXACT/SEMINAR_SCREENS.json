@@ -1,0 +1,98 @@
+[
+  {
+    "number": 1,
+    "eyebrow": "00",
+    "title": "S12 scope and evidence classes",
+    "body": "P03 is core; P01 is guided; P02 is optional advanced. Source, pure JavaScript, fake transport, canonical tests, real protocol and platform evidence remain distinct."
+  },
+  {
+    "number": 2,
+    "eyebrow": "00–05",
+    "title": "Identity and execution boundary",
+    "body": "Record package identity, actual runtime, assessed path and the evidence class available. Missing dependencies are an environment block, not a pedagogical pass or expected failure."
+  },
+  {
+    "number": 3,
+    "eyebrow": "05–12",
+    "title": "Lifecycle prediction",
+    "body": "Map caller, dispatcher, pending owner, transport and terminal message. Predict every terminal path before coding."
+  },
+  {
+    "number": 4,
+    "eyebrow": "Ordering",
+    "title": "Pending before send",
+    "body": "The transport may reply synchronously. Pending state, timeout and abort ownership must exist before send can trigger a callback."
+  },
+  {
+    "number": 5,
+    "eyebrow": "Validation",
+    "title": "Fail early and safely",
+    "body": "Reject invalid type, timeout, pre-abort and duplicate IDs without sending. Stable public errors do not expose raw transport detail."
+  },
+  {
+    "number": 6,
+    "eyebrow": "12–30",
+    "title": "Individual P03 implementation",
+    "body": "Edit only student/src/request-dispatcher.mjs. This 18-minute segment is not the full 55–65-minute project."
+  },
+  {
+    "number": 7,
+    "eyebrow": "Settlement",
+    "title": "One owner, one cleanup",
+    "body": "Resolve or reject once, remove pending state, clear timer and remove the abort listener. Late and unknown messages are harmless."
+  },
+  {
+    "number": 8,
+    "eyebrow": "Correlation",
+    "title": "Out-of-order results",
+    "body": "Request IDs select the pending owner. Completion order must not change caller/result association."
+  },
+  {
+    "number": 9,
+    "eyebrow": "Synchronous reply",
+    "title": "Fast transport witness",
+    "body": "A synchronous completion is captured only when pending state is installed before send."
+  },
+  {
+    "number": 10,
+    "eyebrow": "Timeout and abort",
+    "title": "Local terminal paths",
+    "body": "Timeout and abort settle local waiting. They do not prove remote work was cancelled."
+  },
+  {
+    "number": 11,
+    "eyebrow": "Close and dispose",
+    "title": "Transport and component lifetime",
+    "body": "Close rejects current pending work. Dispose unsubscribes and rejects pending work. Wider reconnect and ID-reuse policies must be stated rather than assumed."
+  },
+  {
+    "number": 12,
+    "eyebrow": "30–39",
+    "title": "Independent observations",
+    "body": "Record named baseline, objective, regression and integration results with exact status. Prove pending/listener/timer counts return to zero."
+  },
+  {
+    "number": 13,
+    "eyebrow": "39–45",
+    "title": "Bounded Gemini critique",
+    "body": "Use one sanitised claim and a minimal excerpt. Keep the actual response extract, then verify independently."
+  },
+  {
+    "number": 14,
+    "eyebrow": "45–50",
+    "title": "Verdict and correction",
+    "body": "Choose ACCEPTED, REJECTED, PARTIALLY ACCEPTED or UNKNOWN. Add the corrected claim and remaining limitation."
+  },
+  {
+    "number": 15,
+    "eyebrow": "50–55",
+    "title": "P01 guided trace and P02 hand-off",
+    "body": "Trace HTTP acceptance to one targeted WebSocket result. P02 remains optional and requires separately prepared Redis/BullMQ infrastructure."
+  },
+  {
+    "number": 16,
+    "eyebrow": "55–60",
+    "title": "Evidence draft and STOP",
+    "body": "Save an honest draft, list unfinished required work and stop at minute 60. No invented deadline or hidden 30-minute extension."
+  }
+]

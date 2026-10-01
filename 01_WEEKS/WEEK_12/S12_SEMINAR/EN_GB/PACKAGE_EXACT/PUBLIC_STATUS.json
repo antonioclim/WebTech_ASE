@@ -1,0 +1,12 @@
+{
+  "schema": "TW2026_S12_PUBLIC_STATUS/1.0",
+  "status": "WIP/PREVIEW_NOT_FINAL",
+  "P03": "IN_CLASS_CORE_FULL_IMPLEMENTATION",
+  "P01": "GUIDED_DEMO",
+  "P02": "OPTIONAL_ADVANCED",
+  "seminar_minutes": 60,
+  "reserved_30_used": false,
+  "C12_assignment": false,
+  "one_private_S12_final_PDF": true,
+  "actual_protocol_qualification": false
+}
