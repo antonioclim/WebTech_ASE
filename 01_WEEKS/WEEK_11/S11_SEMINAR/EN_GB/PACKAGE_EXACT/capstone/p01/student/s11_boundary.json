@@ -1,0 +1,21 @@
+{
+  "root": "capstone/p01/student",
+  "allowed": "src/authentication.js",
+  "files": {
+    "README.md": "40f8a136d92a16ca39f5d8cf7de60cc4817df87957a57f855fc83812b261b3eb",
+    "package-lock.json": "8686348eb3137b202ca04a2d7b89620e05f2ed67e0bffe4063ed3dda8081fdc3",
+    "package.json": "708c40761c8d7669d3c7e3e6ad16a7c8a4602adaa95e71cd7997811132f24580",
+    "src/app.js": "9fe396ef6d7ea1df07f3408b9a93bf7a09af4683df71a3f80f8ba0870d0e354d",
+    "src/authentication.js": "e0ab4b6ffba4f35d659fe9d876cdd6dc77d1fe609acd5eb399131ac1eaecd6d3",
+    "src/cookies.js": "f109029c2fb2fc60210851c39bf8a13cc0ae69a1dc61a85cdb6046935dcbdd0f",
+    "src/passwords.js": "1004c3bed8199a79d602d625e47672bc502106688d039c4d84e7f1392f299e91",
+    "src/request-security.js": "fe81d3ba7ae41afad8ceea683a013c06a79068b952a0cbfb57137dcc9051160c",
+    "src/server.js": "53616384b51ce2e2ceb86a00920ff891bfb4d4970257d702225983aa787ec081",
+    "src/session-store.js": "9f45092d19f22e2f14bf186b104bc351fd6f9761618918c071e57faa7ddfb245",
+    "src/users.js": "eb031a7874b11d3c7d8207ea14aca291bc43ae28c41fe603b7b911d6c1d25835",
+    "tests/baseline.test.js": "d1be635b37c684443ebf22134e92942d01b55ac043d23d9cc14637d87f172624",
+    "tests/helpers.js": "0a9b22dd6c8ba6dcea28d561089e9bb858bd8ca05aa6c35ae1e340a543795a5f",
+    "tests/objective.test.js": "e50c84b658eadb32a4086d17bf5778d8df79df9514a8dbdb7d8481a2865149dc",
+    "tests/regression.test.js": "bc20218dc8e5cd5e301d86f67342c11cdb38f123ca794533fe719bcbe41698fa"
+  }
+}

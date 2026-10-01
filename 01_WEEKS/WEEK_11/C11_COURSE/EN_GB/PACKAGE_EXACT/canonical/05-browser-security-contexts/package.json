@@ -1,0 +1,1 @@
+{"name":"lecture-security-contexts","private":true,"type":"module","scripts":{"start":"node server.mjs","test":"node --test server.test.mjs"},"dependencies":{"express":"5.1.0","sql.js":"1.13.0"}}
