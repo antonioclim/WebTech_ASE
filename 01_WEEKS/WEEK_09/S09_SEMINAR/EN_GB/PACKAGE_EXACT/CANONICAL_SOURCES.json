@@ -1,0 +1,308 @@
+[
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-01-routed-notes/student/index.html",
+    "path": "projects/p01/student/index.html",
+    "sha256": "fa20b54bcf4eb54062ab9294123abae3c036577b0f13e72be563c7f7618b8c35",
+    "bytes": 253
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-01-routed-notes/student/package.json",
+    "path": "projects/p01/student/package.json",
+    "sha256": "afc71ed33b53b66fb613f0bb39a05eee3f16bb1a3519460f09f31b19a5f0584a",
+    "bytes": 703
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-01-routed-notes/student/README.md",
+    "path": "projects/p01/student/README.md",
+    "sha256": "d6b35a55d8e8f64e7df25d3d9e56ae0e82ee9ecd202ba70a5ad396d18a146632",
+    "bytes": 192
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-01-routed-notes/student/package-lock.json",
+    "path": "projects/p01/student/package-lock.json",
+    "sha256": "9ca28526d95bc95e03012ea3a480738128f26360c8ccdc6e2c669b21e36d71d8",
+    "bytes": 105635
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-01-routed-notes/student/vite.config.js",
+    "path": "projects/p01/student/vite.config.js",
+    "sha256": "6d5d9601345ee02b422bc6b327a6d2e969e77664b048beb349f5f3b0fb94ad2e",
+    "bytes": 211
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-01-routed-notes/student/tests/setup.js",
+    "path": "projects/p01/student/tests/setup.js",
+    "sha256": "f6a3591a31193bda3fae485d3ff6a05ae21237b3633b46d8c52dd3155b634fdd",
+    "bytes": 157
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-01-routed-notes/student/tests/objective.test.jsx",
+    "path": "projects/p01/student/tests/objective.test.jsx",
+    "sha256": "ea8eb8781975e33fc0f360f39f00cd74eeee89f6908178f97ce5240f1b8fb684",
+    "bytes": 4858
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-01-routed-notes/student/tests/baseline.test.js",
+    "path": "projects/p01/student/tests/baseline.test.js",
+    "sha256": "68cb35409f039c4c3aa87d59a52a8256d44702b48e5b3095c6e57e0f112301e8",
+    "bytes": 570
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-01-routed-notes/student/tests/regression.test.jsx",
+    "path": "projects/p01/student/tests/regression.test.jsx",
+    "sha256": "8c795fdd28abf3611ed7c1118365706976f5affdc05315a75eebe902cb307918",
+    "bytes": 439
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-01-routed-notes/student/tests/helpers.jsx",
+    "path": "projects/p01/student/tests/helpers.jsx",
+    "sha256": "85f26e2fffcd04588dad85b9776eccf874c5a905a3116b896a3f5f16a6dc5546",
+    "bytes": 868
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-01-routed-notes/student/src/main.jsx",
+    "path": "projects/p01/student/src/main.jsx",
+    "sha256": "24c9847ad5bea6713920f95170ea004aab9bcea1aea6d03ec538684d4dfe917f",
+    "bytes": 363
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-01-routed-notes/student/src/styles.css",
+    "path": "projects/p01/student/src/styles.css",
+    "sha256": "f067203fb3c91f2f4acb97938eb3f75af2a398d86ef69461a01f8a81f5989b86",
+    "bytes": 345
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-01-routed-notes/student/src/NotesApp.jsx",
+    "path": "projects/p01/student/src/NotesApp.jsx",
+    "sha256": "300c4b72c65d982ed2a85370c694b54a0d33d0c26c0113e25bf5bd7a32f6d152",
+    "bytes": 575
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-01-routed-notes/student/src/notes-store.js",
+    "path": "projects/p01/student/src/notes-store.js",
+    "sha256": "fd91495c7dcfec84899ce2210a2b6f822e44d01932215d5815a974190c28242b",
+    "bytes": 916
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-01-routed-notes/spec.md",
+    "path": "projects/p01/spec.md",
+    "sha256": "08c5d850d53e279e59512debf6acb29bdf21f5b410c414c1d50360cf8af24f16",
+    "bytes": 5703
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-02-full-stack-crud/student/package.json",
+    "path": "capstone/p02/student/package.json",
+    "sha256": "76e9555446251438ea2943093eee1c3061343b10ae92f126119f58e07f63c10f",
+    "bytes": 922
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-02-full-stack-crud/student/README.md",
+    "path": "capstone/p02/student/README.md",
+    "sha256": "fbac09e153a0811bb74f9fbae58801f3777444bc4781d68dfcc124a7964b2443",
+    "bytes": 260
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-02-full-stack-crud/student/package-lock.json",
+    "path": "capstone/p02/student/package-lock.json",
+    "sha256": "3093a0bbdd96b2b09d7a36c679821fa94c0a075672a443cc671da1bca80d8b17",
+    "bytes": 132637
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-02-full-stack-crud/student/server/app.js",
+    "path": "capstone/p02/student/server/app.js",
+    "sha256": "13ef39ff01037ded5948a6562aa3ccc52d1604e825765bb380e5323c6106ddf7",
+    "bytes": 2388
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-02-full-stack-crud/student/server/server.js",
+    "path": "capstone/p02/student/server/server.js",
+    "sha256": "461ae527ed8398f201e3aac84e9a1dff0b1c18a33ad744f31dee8d29146cff39",
+    "bytes": 612
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-02-full-stack-crud/student/client/index.html",
+    "path": "capstone/p02/student/client/index.html",
+    "sha256": "90d54f0d676de15a61da6a4b048b5f972ff51579f20897c1d93fa4f04a787916",
+    "bytes": 257
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-02-full-stack-crud/student/client/vite.config.js",
+    "path": "capstone/p02/student/client/vite.config.js",
+    "sha256": "c760a4b9b36baaecf705208f8ddd8c3fe72efd595878fdc45c76a10558d9d142",
+    "bytes": 411
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-02-full-stack-crud/student/client/tests/setup.js",
+    "path": "capstone/p02/student/client/tests/setup.js",
+    "sha256": "f6a3591a31193bda3fae485d3ff6a05ae21237b3633b46d8c52dd3155b634fdd",
+    "bytes": 157
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-02-full-stack-crud/student/client/tests/objective.test.jsx",
+    "path": "capstone/p02/student/client/tests/objective.test.jsx",
+    "sha256": "6ba91e184447ccc056c3fdd2bbac57ecabc174f7dc6cb4f8bc89a874294d951a",
+    "bytes": 4342
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-02-full-stack-crud/student/client/tests/baseline.test.js",
+    "path": "capstone/p02/student/client/tests/baseline.test.js",
+    "sha256": "d403be8a89bde2a1af1348ebd8fff26fef36759853c511c8050f757a4b7d2d74",
+    "bytes": 928
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-02-full-stack-crud/student/client/tests/regression.test.jsx",
+    "path": "capstone/p02/student/client/tests/regression.test.jsx",
+    "sha256": "d56a28b03eb4bd3de12626c98bea5795d96c92322f3cd7075bd388d527b26537",
+    "bytes": 839
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-02-full-stack-crud/student/client/tests/helpers.jsx",
+    "path": "capstone/p02/student/client/tests/helpers.jsx",
+    "sha256": "f47726beb13e46e95a7978555bb47a9ebb6e6e262fada6bc6ef0087b65276302",
+    "bytes": 946
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-02-full-stack-crud/student/client/src/main.jsx",
+    "path": "capstone/p02/student/client/src/main.jsx",
+    "sha256": "ef01761c01d3f1e8e1909590d16b79354b12755ed805363e4867bcbebb347ff6",
+    "bytes": 292
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-02-full-stack-crud/student/client/src/NotesWorkspace.jsx",
+    "path": "capstone/p02/student/client/src/NotesWorkspace.jsx",
+    "sha256": "b9530a57f7bce7f7ca3ed8697c3a4641bcc5ce378cda5bd8f161af4d680a4f77",
+    "bytes": 415
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-02-full-stack-crud/student/client/src/styles.css",
+    "path": "capstone/p02/student/client/src/styles.css",
+    "sha256": "3edc348bbc51fa807eabb856d0dfdce96c8693c7141e71fddbe217bb68857ac7",
+    "bytes": 458
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-02-full-stack-crud/student/client/src/notes-api.js",
+    "path": "capstone/p02/student/client/src/notes-api.js",
+    "sha256": "058b74017d497b6a20de8de7a43278d162b3f81e1505f8901e8005638cd2f0bb",
+    "bytes": 954
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-02-full-stack-crud/spec.md",
+    "path": "capstone/p02/spec.md",
+    "sha256": "8e496ad0ca2e86f58fd6b01d04dc7fa0ca22db0f4921821840906e70c33f08ec",
+    "bytes": 6694
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-03-deep-link-repair/student/package.json",
+    "path": "portfolio/p03/student/package.json",
+    "sha256": "abfd8714537e98f8c932a93fb83b9d95bbefe036721f73be8cc340864c548fe5",
+    "bytes": 653
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-03-deep-link-repair/student/README.md",
+    "path": "portfolio/p03/student/README.md",
+    "sha256": "dc6fff62b8e673647ead9da5e039bc0b13757610afe6dab595143c7a1233bd8d",
+    "bytes": 484
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-03-deep-link-repair/student/package-lock.json",
+    "path": "portfolio/p03/student/package-lock.json",
+    "sha256": "366ce1da70a8686154c8026a76e0d91a0258d4080b04dfd97cd14d508dcc71d6",
+    "bytes": 58335
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-03-deep-link-repair/student/server/api-router.js",
+    "path": "portfolio/p03/student/server/api-router.js",
+    "sha256": "1fe1d3f0c95666697407fbcc04905265662f31b7f96710d089c7dadfd68335e3",
+    "bytes": 527
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-03-deep-link-repair/student/server/server.js",
+    "path": "portfolio/p03/student/server/server.js",
+    "sha256": "b515fe885d3dd1194083f1700527e509c7e8a43ff902b1b60b506922d2c4a65e",
+    "bytes": 1055
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-03-deep-link-repair/student/server/create-production-app.js",
+    "path": "portfolio/p03/student/server/create-production-app.js",
+    "sha256": "ede130b2fa65e2b9fd5d73b7a689bde689213a4ee5149b4147fca5a1a68139ba",
+    "bytes": 425
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-03-deep-link-repair/student/client-dist/index.html",
+    "path": "portfolio/p03/student/client-dist/index.html",
+    "sha256": "a979c9ea42a2f084c7cbb366b70b66119723c97bfad7ac9b967655b17228bec3",
+    "bytes": 316
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-03-deep-link-repair/student/client-dist/icon.svg",
+    "path": "portfolio/p03/student/client-dist/icon.svg",
+    "sha256": "beef4fe8e85ba2dd78ea491d9e4602d0ec1932d29368432b7ea900d50b824b99",
+    "bytes": 180
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-03-deep-link-repair/student/tests/helpers.js",
+    "path": "portfolio/p03/student/tests/helpers.js",
+    "sha256": "6f277d10a75c908e8265fd85c2e71eb8989a025e5fb5b7935f85ee0be03ce47a",
+    "bytes": 855
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-03-deep-link-repair/student/tests/baseline.test.js",
+    "path": "portfolio/p03/student/tests/baseline.test.js",
+    "sha256": "c310bd117da501a9699bf60f7e365145c26d37668ea6721b81b8ee28d5c1c79e",
+    "bytes": 1387
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-03-deep-link-repair/student/tests/regression.test.js",
+    "path": "portfolio/p03/student/tests/regression.test.js",
+    "sha256": "4b770e13769ff4b5d91790380dcba24d0dd60cec80dc195dddc3d479ac9790e5",
+    "bytes": 1074
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-03-deep-link-repair/student/tests/objective.test.js",
+    "path": "portfolio/p03/student/tests/objective.test.js",
+    "sha256": "bb4dac3ef912a6d81733f4f7ef64d36aad3392b40627455fd7234676d9ee6f81",
+    "bytes": 4621
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-03-deep-link-repair/student/evidence/broken-server.js",
+    "path": "portfolio/p03/student/evidence/broken-server.js",
+    "sha256": "7e29f11835e8650b13076b1ef978a46fc69e82539a3dd78fb17cf9880c50dddd",
+    "bytes": 899
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-03-deep-link-repair/student/client/index.html",
+    "path": "portfolio/p03/student/client/index.html",
+    "sha256": "5e3fdeec7f9815de017bb440291cd163bc3142d199e9391f6781ce23cc29093a",
+    "bytes": 293
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-03-deep-link-repair/student/client/vite.config.js",
+    "path": "portfolio/p03/student/client/vite.config.js",
+    "sha256": "b3782299d3495eb9cf63025547829f465543aa4eca224ab79b0b584e805665d0",
+    "bytes": 348
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-03-deep-link-repair/student/client/public/icon.svg",
+    "path": "portfolio/p03/student/client/public/icon.svg",
+    "sha256": "beef4fe8e85ba2dd78ea491d9e4602d0ec1932d29368432b7ea900d50b824b99",
+    "bytes": 180
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-03-deep-link-repair/student/client/src/main.jsx",
+    "path": "portfolio/p03/student/client/src/main.jsx",
+    "sha256": "55c75096c187a3094ab3d8d5b68d1f12162ec38b26613cbe41d1727bd07c64e3",
+    "bytes": 834
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-03-deep-link-repair/student/client-dist/assets/app-a1b2c3.js",
+    "path": "portfolio/p03/student/client-dist/assets/app-a1b2c3.js",
+    "sha256": "536d91f6282172caa4c348454b9c3ff9d778c0b719b531ad8caef2037eabb1cd",
+    "bytes": 229278
+  },
+  {
+    "source": "tutorials/09-routing-full-stack/en/project-03-deep-link-repair/spec.md",
+    "path": "portfolio/p03/spec.md",
+    "sha256": "99c0be6e82a528127ecdbebd96b1e440be83aeef0ea3b2d6dc1cdfb7e69a178d",
+    "bytes": 6223
+  }
+]

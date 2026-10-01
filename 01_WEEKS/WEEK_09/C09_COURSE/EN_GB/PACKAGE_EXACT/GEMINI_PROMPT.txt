@@ -1,0 +1,1 @@
+I am reviewing one claim about my own sanitised route or trace. Do not write the complete assessed solution. Claim: [one claim]. Evidence: [brief sanitised source or trace]. Identify one assumption, one counterexample and an independent check. Distinguish URL state, draft, confirmed state and document delivery. I will verify the answer myself.
