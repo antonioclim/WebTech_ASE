@@ -1,0 +1,69 @@
+REFERENCE TRACE — NOT STUDENT EXECUTION
+Runtime used to generate this trace: Node.js v22.16.0.
+
+{
+  "unsafeInputAfter": [
+    {
+      "id": "A",
+      "occurredAt": "2026-01-01T00:00:00Z",
+      "active": true,
+      "durationMs": 1
+    },
+    {
+      "id": "B",
+      "occurredAt": "2026-02-01T00:00:00Z",
+      "active": false,
+      "durationMs": 2
+    }
+  ],
+  "unsafeOutput": [
+    {
+      "id": "A",
+      "occurredAt": "2026-01-01T00:00:00Z",
+      "active": true,
+      "durationMs": 1
+    },
+    {
+      "id": "B",
+      "occurredAt": "2026-02-01T00:00:00Z",
+      "active": false,
+      "durationMs": 2
+    }
+  ],
+  "safeInputAfter": [
+    {
+      "id": "B",
+      "occurredAt": "2026-02-01T00:00:00Z",
+      "active": false,
+      "durationMs": 2
+    },
+    {
+      "id": "A",
+      "occurredAt": "2026-01-01T00:00:00Z",
+      "active": true,
+      "durationMs": 1
+    }
+  ],
+  "safeOutput": [
+    {
+      "id": "A",
+      "occurredAt": "2026-01-01T00:00:00Z",
+      "active": true,
+      "durationMs": 1
+    },
+    {
+      "id": "B",
+      "occurredAt": "2026-02-01T00:00:00Z",
+      "active": false,
+      "durationMs": 2
+    }
+  ],
+  "safeSummary": {
+    "activeCount": 1,
+    "totalDurationMs": 3
+  },
+  "unsafeMutated": true,
+  "safeMutated": false
+}
+
+Limit: mutation, aliasing, coercion and tie-breaking are separate claims and require separate witnesses.

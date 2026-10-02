@@ -1,0 +1,10 @@
+{
+  "seminar": "S03",
+  "previous_public_version": "1.1.0",
+  "new_local_version": "1.2.0",
+  "bump": "minor",
+  "reason": "The entry point, package architecture, workflow, launchers, teacher materials, visuals, AI audit and Moodle evidence route changed materially.",
+  "phase3_local_final": true,
+  "remote_published": false,
+  "owner_acceptance": "OPEN"
+}
