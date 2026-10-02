@@ -1,0 +1,25 @@
+{
+  "seminar": "S04",
+  "object": "student",
+  "version": "1.2.0",
+  "status": "FINAL_LOCAL_PHASE3",
+  "reference_runtime": {
+    "node": "v24.21.0",
+    "npm": "11.19.0"
+  },
+  "qa_runtime": {
+    "node": "v22.16.0",
+    "npm": "10.9.2"
+  },
+  "runtime_qualification": "DOCUMENTED_RUNTIME_MISMATCH",
+  "native_windows": "NOT_EXECUTED",
+  "native_macos": "NOT_EXECUTED",
+  "native_browsers": "NOT_QUALIFIED",
+  "moodle_live": "NOT_ACCESSED",
+  "owner_acceptance": "OPEN",
+  "mutable_paths": [
+    "02_PROJECTS/P01_MULTI_SOURCE_DASHBOARD/public/dashboard.js",
+    "02_PROJECTS/P02_INTERACTIVE_TASK_LIST/public/task-view.js",
+    "02_PROJECTS/P03_RESILIENT_FETCH_OPTIONAL/public/fetch-policy.js"
+  ]
+}
