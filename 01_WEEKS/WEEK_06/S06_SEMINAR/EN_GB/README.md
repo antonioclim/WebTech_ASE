@@ -1,42 +1,28 @@
-# S06 — Query API
+# S06 — Query API v1.2.0
 
-**Student WIP preview · original object v1.1.0 · qualification pending.**
+Locally audited teaching edition, prepared as a WIP student preview. This local patch does not publish the repository or qualify native platforms.
 
-[Open the ZIP file](DOWNLOAD/WEBTECH_ASE_S06_STUDENT_EN_GB_v1.1.0_PUBLIC.zip) · [SHA-256](DOWNLOAD/WEBTECH_ASE_S06_STUDENT_EN_GB_v1.1.0_PUBLIC.zip.sha256)
+- [Download the complete student ZIP](DOWNLOAD/TW2026_S06_STUDENT_EN_GB_v1.2.0_FINAL.zip)
+- [Download SHA-256 sidecar](DOWNLOAD/TW2026_S06_STUDENT_EN_GB_v1.2.0_FINAL.zip.sha256)
+- [Interactive beginner guide](PACKAGE_EXACT/TW2026_S06_STUDENT_EN_GB_v1.2.0_FINAL/00_START_HERE/S06_INTERACTIVE_ULTRA_BEGINNER_GUIDE_EN_GB_v1.2.0.html)
+- [Student worksheet](PACKAGE_EXACT/TW2026_S06_STUDENT_EN_GB_v1.2.0_FINAL/01_WORKSHEET/STUDENT_WORKSHEET_S06_v1.2.0_EN_GB.md)
+- [P02 Query API target](PACKAGE_EXACT/TW2026_S06_STUDENT_EN_GB_v1.2.0_FINAL/02_PROJECTS/p02/README.md)
+- [Bounded Gemini prompt](PACKAGE_EXACT/TW2026_S06_STUDENT_EN_GB_v1.2.0_FINAL/03_AI_AUDIT/GEMINI_PROMPT_EN_GB.txt)
+- [Submission form HTML](PACKAGE_EXACT/TW2026_S06_STUDENT_EN_GB_v1.2.0_FINAL/05_MOODLE_SUBMISSION/S06_MOODLE_SUBMISSION_FORM_EN_GB_v1.2.0.html)
+- [Submission form DOCX](PACKAGE_EXACT/TW2026_S06_STUDENT_EN_GB_v1.2.0_FINAL/05_MOODLE_SUBMISSION/S06_MOODLE_SUBMISSION_FORM_EN_GB_v1.2.0.docx)
+- [Submission guide](PACKAGE_EXACT/TW2026_S06_STUDENT_EN_GB_v1.2.0_FINAL/05_MOODLE_SUBMISSION/MOODLE_UPLOAD_GUIDE_EN_GB_v1.2.0.md)
+- [Current local release pointer](CURRENT_STUDENT_RELEASE.json)
 
-On the ZIP's GitHub page, use **Download raw file**. Keep the ZIP intact until it is on your computer. Use **Extract All** into a new short folder, then open `index.html`. Do not open the lesson from inside the compressed archive. The standalone HTML shell is read locally; GitHub's file viewer is not the lesson player.
+P02 is the only required complete implementation. Edit only `02_PROJECTS/p02/src/note-query.js`. A short separate temporary SQLite file observation is also required. Full P01 and P03 implementations are optional and are not required for the maximum mark.
 
-The archive contains the complete original student payload, not a shortcut or an installer. Its internal files and manifest are unchanged. The adjacent `PACKAGE_EXACT` directory contains an exact, fully extracted copy of this same public ZIP, including its original manifest and PACKAGE_ID. No extra wrapper directory is inserted. Weeks 01–02 retain their existing browsing layout.
+Use the 60-minute content route inside the 90-minute meeting, with 30 minutes reserved for logistics. The 26-minute translator slot does not guarantee P02 completion: finish remaining work before the separately announced deadline. Stop at minute 60.
 
-P02 Query API is the only required complete implementation. A short separate file-lifecycle observation is required; full P01 and P03 implementations are not required from every student.
+Submit one PDF, `TW2026_S06_GROUP_Surname_Firstname.pdf`, to one S06 Assignment. There is no second C06 upload. The standard final evidence includes a bounded actual Gemini interaction checked independently; synthetic practice does not automatically substitute for it.
 
-Both meetings have a minute-60 stop. Follow the seminar guide for any remaining work and the final private Moodle PDF. No teacher package, reference solution, console or personal submission belongs in this repository.
+Node.js v24.21.0 and npm 11.19.0 are the required reference versions. The production runtime was Node.js v24.19.0 and npm 11.9.0: DOCUMENTED_RUNTIME_MISMATCH.
 
-**Known limits:** reference_runtime, real_browser, native_platform_acceptance, project_dependencies, native_sqlite3_driver, genuine_ORM_SQLite_application remain unqualified. The archive is not a completed runtime installation. Model/static evidence does not establish genuine application, native-browser or platform acceptance. Internal build-time status notes remain historical qualification records; this preview wrapper does not turn them into PASS.
+Content and package checks passed locally. Genuine Express/Sequelize/sqlite3 application, native driver, query and file lifecycle execution, Windows/macOS, native browser and Word acceptance, actual Gemini interaction, Moodle live and owner acceptance remain open. Source-derived expectations and synthetic evidence do not qualify these properties.
 
-SHA-256: `c919ce3ab5454de21caa1946097a5f37a5fa2695e1b76943114f19ce8ade44f4`  
-PACKAGE_ID: `9a934af09a2474ae092ad2141f4c7b63308f9ac738cbf0f0e41cfbaae9fb4764`
+The v1.1.0 download and unversioned PACKAGE_EXACT leaves are superseded for the S06 route. They remain physically present for history until a separately authorised final-freeze cleanup. This navigation does not link to them.
 
-## Browse the exact extracted files
-
-| Material | Repository file or directory |
-| --- | --- |
-| Complete extracted package | [Open](PACKAGE_EXACT/) |
-| Start page — HTML source | [Open](PACKAGE_EXACT/index.html) |
-| Seminar — HTML source | [Open](PACKAGE_EXACT/seminar.html) |
-| Evidence form — HTML source | [Open](PACKAGE_EXACT/evidence.html) |
-| Student guide — HTML source | [Open](PACKAGE_EXACT/guide.html) |
-| S06 CONTINUATION — Word document | [Open](PACKAGE_EXACT/documents/S06_CONTINUATION.docx) |
-| S06 EVIDENCE FORM — Word document | [Open](PACKAGE_EXACT/documents/S06_EVIDENCE_FORM.docx) |
-| S06 STUDENT GUIDE — Word document | [Open](PACKAGE_EXACT/documents/S06_STUDENT_GUIDE.docx) |
-| Canonical teaching examples | [Open](PACKAGE_EXACT/canonical/) |
-| Student projects | [Open](PACKAGE_EXACT/projects/) |
-| Optional or continuation projects | [Open](PACKAGE_EXACT/optional/) |
-| Project contracts | [Open](PACKAGE_EXACT/contracts/) |
-| Student observation and checking tools | [Open](PACKAGE_EXACT/tools/) |
-| Original file checksums | [Open](PACKAGE_EXACT/SHA256SUMS.txt) |
-| Original package identifier | [Open](PACKAGE_EXACT/PACKAGE_ID.txt) |
-
-Repository browsing displays HTML source; it does not host or execute the lesson. Use the unchanged ZIP above for the complete local interactive package. This addition does not activate GitHub Pages and does not close any qualification gate.
-
-[Whole-week preview](../../README.md) · [All weeks](../../../README.md)
+The versioned PACKAGE_EXACT tree is byte-identical to the sealed student ZIP, including its manifest and PACKAGE_ID. SHA-256 of the ZIP: `6a8791695bd4d5777c425f89808b2692f11dcb5aa4c63dde4f36c9a56c8d3fce`. PACKAGE_ID: `f29ef810d6cdf304832629e31990ce089c78a7d8fd55015aeec6c7c24162621d`. Keep the downloaded directory intact; GitHub source previews do not execute an HTML guide. Extract the complete ZIP into a new local folder to use the guide.

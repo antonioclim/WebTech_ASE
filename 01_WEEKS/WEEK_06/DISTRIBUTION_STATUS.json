@@ -1,37 +1,34 @@
 {
+  "schema": "tw2026.week06.distribution.v1",
   "week": 6,
-  "mode": "STUDENT_WIP_PREVIEW",
-  "qualified_release": false,
-  "pending_gates": [
-    "reference_runtime",
-    "real_browser",
-    "native_platform_acceptance",
-    "project_dependencies",
-    "native_sqlite3_driver",
-    "genuine_ORM_SQLite_application"
-  ],
-  "week_zip": "01_WEEKS/WEEK_06/DOWNLOAD/WebTech_ASE_WEEK_06_EN_GB_v1.2.0_PREVIEW.zip",
-  "sha256": "55e3fa56ab93c9ca8f39b3e17a2353344701e342cdd5fcb936ac1ea838568999",
-  "bytes": 1051682,
-  "package_id": "5f19035eeeab2f68fe78848d61829d4edb6a25274dd6a8113880441d7b330d65",
-  "objects": [
-    {
-      "object": "C06",
-      "title": "Persistence with Sequelize and SQLite",
-      "filename": "WEBTECH_ASE_C06_STUDENT_EN_GB_v1.1.0_PUBLIC.zip",
-      "bytes": 232420,
-      "sha256": "a9a1a2aa6d9e049542cd4b0433a121e8a35900eca173d2156b3461dbf16704ff",
-      "package_id": "44760c1b2ff83580206c4173379813a58ba24c3c0412ffbe977873c36396365f",
-      "files": 56
-    },
-    {
-      "object": "S06",
-      "title": "Query API",
-      "filename": "WEBTECH_ASE_S06_STUDENT_EN_GB_v1.1.0_PUBLIC.zip",
-      "bytes": 292175,
-      "sha256": "c919ce3ab5454de21caa1946097a5f37a5fa2695e1b76943114f19ce8ade44f4",
-      "package_id": "9a934af09a2474ae092ad2141f4c7b63308f9ac738cbf0f0e41cfbaae9fb4764",
-      "files": 88
-    }
-  ]
+  "status": "WIP_SCOPED_S06_LOCAL_DELTA_PREPARED",
+  "S06": {
+    "version": "1.2.0",
+    "current_student_route": "S06_SEMINAR/EN_GB/README.md",
+    "release_pointer": "S06_SEMINAR/EN_GB/CURRENT_STUDENT_RELEASE.json",
+    "download": "S06_SEMINAR/EN_GB/DOWNLOAD/TW2026_S06_STUDENT_EN_GB_v1.2.0_FINAL.zip",
+    "sha256": "6a8791695bd4d5777c425f89808b2692f11dcb5aa4c63dde4f36c9a56c8d3fce",
+    "package_id": "f29ef810d6cdf304832629e31990ce089c78a7d8fd55015aeec6c7c24162621d",
+    "superseded_public_baseline": "1.1.0",
+    "legacy_objects_retained": true
+  },
+  "C06": {
+    "version": "1.1.0",
+    "route": "C06_COURSE/EN_GB/README.md",
+    "content_changed_by_S06_delta": false,
+    "qualification": "No new qualification claimed"
+  },
+  "paired_week_zip_regenerated": false,
+  "repository_identity_regenerated": false,
+  "local_phase4_complete": true,
+  "remote_writes": 0,
+  "Actions_triggered": 0,
+  "Pages_enabled_by_this_phase": false,
+  "Releases_created_by_this_phase": 0,
+  "Moodle_live_access": false,
+  "full_current_remote_snapshot_available": false,
+  "recorded_remote_main": "fb0da1d35880ff028884baed7f0997fa368e7234",
+  "recorded_remote_root_tree": "6538f99c71c13fcba53004984a136dfcb9541aee",
+  "remote_snapshot_live_reverified": false,
+  "platform_gates_open": true
 }
