@@ -1,41 +1,38 @@
-# S05 — In-memory Task API
+# S05 — In-memory Task API v1.2.0
 
-**Student WIP preview · original object v1.1.0 · qualification pending.**
+**Student WIP preview · locally hardened content and packaging · qualification gates still open.**
 
-[Open the ZIP file](DOWNLOAD/WEBTECH_ASE_S05_STUDENT_EN_GB_v1.1.0_PUBLIC.zip) · [SHA-256](DOWNLOAD/WEBTECH_ASE_S05_STUDENT_EN_GB_v1.1.0_PUBLIC.zip.sha256)
+[Open the ZIP file](DOWNLOAD/TW2026_S05_STUDENT_EN_GB_v1.2.0_FINAL.zip) · [SHA-256](DOWNLOAD/TW2026_S05_STUDENT_EN_GB_v1.2.0_FINAL.zip.sha256)
 
-On the ZIP's GitHub page, use **Download raw file**. Keep the ZIP intact until it is on your computer. Use **Extract All** into a new short folder, then open `index.html`. Do not open the lesson from inside the compressed archive. The standalone HTML shell is read locally; GitHub's file viewer is not the lesson player.
+On the ZIP's GitHub page, use **Download raw file**. Keep the ZIP intact until it is on your computer. Use **Extract All** into a new short writable folder, then start with `00_START_HERE/S05_INTERACTIVE_ULTRA_BEGINNER_GUIDE_EN_GB_v1.2.html` or the matching root launcher. Do not work inside the compressed archive. GitHub's file viewer shows source files and does not run the lesson.
 
-The archive contains the complete original student payload, not a shortcut or an installer. Its internal files and manifest are unchanged. The adjacent `PACKAGE_EXACT` directory contains an exact, fully extracted copy of this same public ZIP, including its original manifest and PACKAGE_ID. No extra wrapper directory is inserted. Weeks 01–02 retain their existing browsing layout.
+P01 In-memory Task API is the only required complete implementation. P02 supplies a required guided observation, not a second compulsory implementation. Full P02 and P03 implementations are optional. The content route has a hard STOP at minute 60.
 
-P01 In-memory Task API is the only required complete implementation. P02 supplies a required guided observation, not a second compulsory implementation. Full P02 and P03 implementations are optional.
+**Known limits:** exact Node.js v24.21.0 and npm 11.19.0, project-local Express execution, Postman Desktop, native Chrome, Edge and Firefox, native Windows/macOS, Microsoft Word, Moodle live and owner acceptance remain unqualified. Source-contract, model, helper and packaging evidence does not establish Express-application or native-platform acceptance.
 
-Both meetings have a minute-60 stop. Follow the seminar guide for any remaining work and the final private Moodle PDF. No teacher package, reference solution, console or personal submission belongs in this repository.
-
-**Known limits:** reference_runtime, real_browser, native_platform_acceptance, Express_application remain unqualified. The archive is not a completed runtime installation. Model/static evidence does not establish genuine application, native-browser or platform acceptance. Internal build-time status notes remain historical qualification records; this preview wrapper does not turn them into PASS.
-
-SHA-256: `d5944fc09808fe7b34d8ec194265e97310af603ba0adb80f2da63613e279df0d`  
-PACKAGE_ID: `6168751d49ed26520d4af38f155954fa33e992ea25d342f15435012e6f18387e`
+SHA-256: `9442ec6535e9fdade8edd302eabd26e6f53ad9f14daab81f73a682a827740347`  
+PACKAGE_ID: `1eec860a3c9ad042071c0b06e0600cdefba398171319814514281bee8c349089`
 
 ## Browse the exact extracted files
 
 | Material | Repository file or directory |
 | --- | --- |
-| Complete extracted package | [Open](PACKAGE_EXACT/) |
-| Start page — HTML source | [Open](PACKAGE_EXACT/index.html) |
-| Seminar — HTML source | [Open](PACKAGE_EXACT/seminar.html) |
-| Evidence form — HTML source | [Open](PACKAGE_EXACT/evidence.html) |
-| Student guide — HTML source | [Open](PACKAGE_EXACT/guide.html) |
-| S05 CONTINUATION — Word document | [Open](PACKAGE_EXACT/documents/S05_CONTINUATION.docx) |
-| S05 EVIDENCE FORM — Word document | [Open](PACKAGE_EXACT/documents/S05_EVIDENCE_FORM.docx) |
-| S05 STUDENT GUIDE — Word document | [Open](PACKAGE_EXACT/documents/S05_STUDENT_GUIDE.docx) |
-| Student projects | [Open](PACKAGE_EXACT/projects/) |
-| Optional or continuation projects | [Open](PACKAGE_EXACT/optional/) |
-| Project contracts | [Open](PACKAGE_EXACT/contracts/) |
-| Student observation and checking tools | [Open](PACKAGE_EXACT/tools/) |
-| Original file checksums | [Open](PACKAGE_EXACT/SHA256SUMS.txt) |
-| Original package identifier | [Open](PACKAGE_EXACT/PACKAGE_ID.txt) |
+| Complete extracted package | [Open](PACKAGE_EXACT/TW2026_S05_STUDENT_EN_GB_v1.2.0_FINAL/) |
+| Interactive ultra-beginner guide | [Open](PACKAGE_EXACT/TW2026_S05_STUDENT_EN_GB_v1.2.0_FINAL/00_START_HERE/S05_INTERACTIVE_ULTRA_BEGINNER_GUIDE_EN_GB_v1.2.html) |
+| Quick start | [Open](PACKAGE_EXACT/TW2026_S05_STUDENT_EN_GB_v1.2.0_FINAL/00_START_HERE/QUICK_START_EN_GB.md) |
+| Student worksheet | [Open](PACKAGE_EXACT/TW2026_S05_STUDENT_EN_GB_v1.2.0_FINAL/01_WORKSHEET/STUDENT_WORKSHEET_S05_v1.2_EN_GB.docx) |
+| P01 continuation sheet | [Open](PACKAGE_EXACT/TW2026_S05_STUDENT_EN_GB_v1.2.0_FINAL/01_WORKSHEET/CONTINUATION_S05_P01_v1.2_EN_GB.docx) |
+| P01 required project | [Open](PACKAGE_EXACT/TW2026_S05_STUDENT_EN_GB_v1.2.0_FINAL/02_PROJECTS/P01_IN_MEMORY_TASK_API/) |
+| P02 guided observation | [Open](PACKAGE_EXACT/TW2026_S05_STUDENT_EN_GB_v1.2.0_FINAL/02_PROJECTS/P02_MIDDLEWARE_GUIDED_OBSERVATION/) |
+| P03 optional project | [Open](PACKAGE_EXACT/TW2026_S05_STUDENT_EN_GB_v1.2.0_FINAL/02_PROJECTS/P03_API_CONTRACT_REPAIR_OPTIONAL/) |
+| Gemini prompt | [Open](PACKAGE_EXACT/TW2026_S05_STUDENT_EN_GB_v1.2.0_FINAL/03_AI_AUDIT/GEMINI_PROMPT_EN_GB.txt) |
+| Evidence form — HTML | [Open](PACKAGE_EXACT/TW2026_S05_STUDENT_EN_GB_v1.2.0_FINAL/05_MOODLE_SUBMISSION/FORM_S05_EN_GB.html) |
+| Evidence form — Word | [Open](PACKAGE_EXACT/TW2026_S05_STUDENT_EN_GB_v1.2.0_FINAL/05_MOODLE_SUBMISSION/FORM_S05_EN_GB.docx) |
+| Student-safe QA summary | [Open](PACKAGE_EXACT/TW2026_S05_STUDENT_EN_GB_v1.2.0_FINAL/90_AUDIT/STUDENT_SAFE_QA_SUMMARY.md) |
+| Package identifier | [Open](PACKAGE_EXACT/TW2026_S05_STUDENT_EN_GB_v1.2.0_FINAL/90_AUDIT/PACKAGE_ID.txt) |
 
-Repository browsing displays HTML source; it does not host or execute the lesson. Use the unchanged ZIP above for the complete local interactive package. This addition does not activate GitHub Pages and does not close any qualification gate.
+The original v1.1.0 objects remain physically present for audit continuity but are superseded by this navigation target. No teacher package, answer key, teacher console, private QA, Moodle administration or personal submission belongs in this public path.
+
+This update does not activate GitHub Pages, run Actions, create a Release or close any qualification gate.
 
 [Whole-week preview](../../README.md) · [All weeks](../../../README.md)
