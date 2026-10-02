@@ -1,0 +1,7 @@
+S11 intentionally flawed benign claim for critique
+
+Constructed teaching claim — not an observed result, actual screenshot or Gemini answer:
+
+"The supplied pure CORS decision accepts an exact-origin fixture and emits Access-Control-Allow-Origin. Therefore the browser has accepted the credentialed response and the other three security classes in the original five-class project are also verified."
+
+Critique the evidence boundary. Use one small sanitised source/trace excerpt and independently check the inference. Do not create exploit payloads, test an external service, submit secrets or ask Gemini for the full implementation. Record what the actual evidence establishes and what would require a different qualification class.
