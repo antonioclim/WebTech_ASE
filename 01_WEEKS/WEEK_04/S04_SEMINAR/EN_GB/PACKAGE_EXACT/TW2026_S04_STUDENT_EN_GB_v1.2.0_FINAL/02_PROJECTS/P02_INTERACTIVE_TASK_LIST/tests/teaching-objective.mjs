@@ -1,0 +1,8 @@
+import assert from 'node:assert/strict';
+import test from 'node:test';
+import {bindTaskEvents,renderTasks} from '../public/task-view.js';
+import {FakeElement,fakeDocument} from './fakes.js';
+test('teaching route renders one task row',()=>{const list=new FakeElement('ul');renderTasks([{id:'1',title:'A',completed:false}],{document:fakeDocument,list});assert.equal(list.children.length,1);assert.equal(list.children[0].dataset.taskId,'1');});
+test('teaching route binds one submit listener and cleanup',()=>{const form=new FakeElement('form'),list=new FakeElement('ul');form.elements={title:{value:'A'}};form.reset=()=>{};const cleanup=bindTaskEvents({form,list,onAdd:()=>{},onToggle:()=>{},onDelete:()=>{}});assert.equal(form.listeners.size,1);assert.equal(typeof cleanup,'function');});
+test('teaching route delegates nested delete target',()=>{const form=new FakeElement('form'),list=new FakeElement('ul'),row=new FakeElement('li'),button=new FakeElement('button'),icon=new FakeElement('span'),calls=[];form.elements={title:{value:''}};form.reset=()=>{};row.dataset.taskId='7';button.dataset.action='delete';button.append(icon);row.append(button);list.append(row);bindTaskEvents({form,list,onAdd:()=>{},onToggle:()=>{},onDelete:id=>calls.push(id)});list.emit('click',{target:icon});assert.deepEqual(calls,['7']);});
+test('teaching route cleanup removes listeners',()=>{const form=new FakeElement('form'),list=new FakeElement('ul');form.elements={title:{value:''}};form.reset=()=>{};const cleanup=bindTaskEvents({form,list,onAdd:()=>{},onToggle:()=>{},onDelete:()=>{}});assert.equal(form.listeners.size,1);assert.equal(list.listeners.size,1);cleanup();assert.equal(form.listeners.size,0);assert.equal(list.listeners.size,0);});
