@@ -1,0 +1,9 @@
+criterion,points,full-credit descriptor
+Prediction and input contract,1.0,"Preserved before execution, falsifiable and tied to the fixture and contract."
+P01 pipeline and output,2.0,"Correct selection, projection, deterministic order, summary and CLI reconciliation."
+P01 ownership and preservation,1.0,Own-field and exact-type boundaries plus non-mutation and fresh-record evidence.
+Checks and edit boundary,1.0,"Correct starter signature, bounded failures and one-file edit discipline."
+Required P03 portfolio,2.0,"Separate evidence for coercion, inherited fields, mutation, aliasing and tie-breaking."
+Critical Gemini audit,1.0,"One bounded claim, independent witness, four-state verdict, correction and limit."
+Limitations and reflection,1.0,Specific residual limits and an honest uncertainty statement.
+Traceability and final PDF,1.0,"Evidence IDs, version/PACKAGE_ID, declaration, one readable PDF and correct filename."
