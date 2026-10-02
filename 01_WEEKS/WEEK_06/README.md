@@ -1,24 +1,16 @@
-# Week 6 — Query API
+# Week 06 — Persistence with Sequelize and SQLite
 
-> **WIP student preview. Content is produced; runtime/browser/platform qualification remains pending. This is not a final release.**
+- [S06 Query API v1.2.0 student route](S06_SEMINAR/EN_GB/README.md)
+- [Existing C06 course route](C06_COURSE/EN_GB/README.md)
+- [Distribution status](DISTRIBUTION_STATUS.json)
+- [Qualification status](QUALIFICATION_STATUS.md)
 
-[Open the complete week ZIP](DOWNLOAD/WebTech_ASE_WEEK_06_EN_GB_v1.2.0_PREVIEW.zip) · [SHA-256](DOWNLOAD/WebTech_ASE_WEEK_06_EN_GB_v1.2.0_PREVIEW.zip.sha256)
+S06 v1.2.0 is the locally audited teaching edition prepared for a WIP preview. C06 course files and its v1.1.0 ZIP are unchanged by this S06 patch. The old paired week ZIP is not regenerated and is not the current S06 download.
 
-| Object | British English |
-| --- | --- |
-| C06 — Persistence with Sequelize and SQLite | [Course package](C06_COURSE/EN_GB/README.md) |
-| S06 — Query API | [Seminar package](S06_SEMINAR/EN_GB/README.md) |
+P02 is the only required complete implementation. The short SQLite file observation is required separately; complete P01 and P03 are optional. One S06 PDF submission covers the evidence, including bounded actual Gemini review; there is no C06 Assignment.
 
-P02 Query API is the only required complete implementation. A short separate file-lifecycle observation is required; full P01 and P03 implementations are not required from every student.
+Content and package checks passed locally. Genuine Express/Sequelize/sqlite3 application, native driver, query and file lifecycle execution, Windows/macOS, native browser and Word acceptance, actual Gemini interaction, Moodle live and owner acceptance remain open. Source-derived expectations and synthetic evidence do not qualify these properties.
 
-After downloading the whole-week ZIP, extract it to a new short folder and open `index.html`. COURSE and SEMINAR are already extracted inside it. The ZIP copies in DOWNLOAD are for exact distribution, not a second required extraction. GitHub displays source files; it does not play this HTML lesson in the repository file view.
+The v1.1.0 download and unversioned PACKAGE_EXACT leaves are superseded for the S06 route. They remain physically present for history until a separately authorised final-freeze cleanup. This navigation does not link to them.
 
-One final individual PDF: `TW2026_S06_GROUP_Surname_GivenName.pdf`. Personal assessment evidence belongs only in the private Moodle submission, never here.
-
-## Browse individual files
-
-Open the [C06 British English index](C06_COURSE/EN_GB/README.md) or [S06 British English index](S06_SEMINAR/EN_GB/README.md) for direct links to the extracted documents, HTML sources and student projects. The complete exact trees are [C06 PACKAGE_EXACT](C06_COURSE/EN_GB/PACKAGE_EXACT/) and [S06 PACKAGE_EXACT](S06_SEMINAR/EN_GB/PACKAGE_EXACT/). All existing ZIPs and checksums remain unchanged.
-
-GitHub file browsing is not HTML hosting. Use the ZIP instructions above for local interactive reading; no Pages deployment or qualification upgrade is implied.
-
-[Qualification and limits](QUALIFICATION_STATUS.md) · [All weeks](../README.md)
+This is a bounded Week 06/S06 delta. No current full-repository identity is regenerated during WIP production. Any retained historical week/repository manifests bind their original scope, not the proposed composite WIP state.
