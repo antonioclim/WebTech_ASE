@@ -6,3 +6,5 @@ This is a **WIP/PREVIEW** student-only local review bundle. It combines the exac
 - [S11 seminar](S11_SEMINAR/EN_GB/index.html)
 
 Each object retains both `DOWNLOAD` and the complete `PACKAGE_EXACT` tree. Opening HTML in GitHub shows source; Pages is not enabled by this bundle.
+
+S11 navigation proposes the v1.2.1 remediated candidate. C11 content is retained unchanged. Native/live and FINAL gates remain open; no upload is authorised by this bundle.
