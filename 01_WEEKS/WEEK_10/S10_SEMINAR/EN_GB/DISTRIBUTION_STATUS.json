@@ -1,0 +1,43 @@
+{
+  "schema": "TW2026_S10_PHASE4_DISTRIBUTION_STATUS/1.0",
+  "version": "1.2.1",
+  "status": "REMEDIATED_CANDIDATE",
+  "publication_status_at_phase4_build": "PREPARED_LOCAL_ONLY_NOT_PUBLISHED",
+  "prepared_local": true,
+  "remote_operations_during_phase4": "NOT_EXECUTED",
+  "publication_authorisation": "ABSENT_AT_BUILD",
+  "public_label": "WIP/PREVIEW_NOT_FINAL / REMEDIATED_CANDIDATE",
+  "content_finality": "FINAL_ADMISSION_PENDING_RENDERED_HTML_QA",
+  "rendered_html_browser_qa": "NOT_EXECUTED_NO_LOCAL_BROWSER",
+  "exact_runtime": "NOT_EXECUTED",
+  "native_acceptance": "OPEN",
+  "owner_acceptance": "OPEN",
+  "initial_failure_diagnostic_patterns": "DECLARED_NOT_QUALIFIED_ACTUAL_VITEST",
+  "required_runtime": {
+    "node": "v24.21.0",
+    "npm": "11.19.0"
+  },
+  "required": [
+    "P01 Shared Workshop State",
+    "State ADR"
+  ],
+  "optional": [
+    "P02 Notification Centre",
+    "P03 comparator implementation"
+  ],
+  "source_archive": "TW2026_S10_STUDENT_EN_GB_v1.2.1_REMEDIATED_CANDIDATE.zip",
+  "source_archive_sha256": "67882e41949cb25c9769536b18675bcea7e5027d46ec385d7eae2af1937370e4",
+  "source_archive_bytes": 1855440,
+  "student_package_id": "6eb0c763526d9197920a4f87a12638dd4f62b470907783e2e4f618181c97a9c5",
+  "exact_members": 157,
+  "exact_root": "PACKAGE_EXACT/TW2026_S10_STUDENT_v1.2.1",
+  "remote_base_commit": "fb0da1d35880ff028884baed7f0997fa368e7234",
+  "remote_base_root_tree": "6538f99c71c13fcba53004984a136dfcb9541aee",
+  "remote_base_s10_tree": "78f2d9207810fbd2efabb735c8fc8cfaab9ebc4a",
+  "remote_writes": 0,
+  "deletions": 0,
+  "browser_PACKAGE_EXACT_git_modes": "UNQUALIFIED",
+  "native_execution_distribution": "INTACT_STUDENT_ZIP_ONLY",
+  "predecessor_policy": "PRESERVE_ALL_V1_1_0_PATHS_UNTIL_SEPARATE_FINAL_FREEZE",
+  "weekly_root_manifest_reconciliation": "DEFERRED_NO_ROOT_MANIFEST_CHANGE_IN_THIS_OVERLAY"
+}

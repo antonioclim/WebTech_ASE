@@ -1,0 +1,10 @@
+S10 — Shared Workshop State and State ADR: individual evidence
+
+Complete P01 Shared Workshop State and the required State ADR. P02 Redux Toolkit Notification Center and the full P03 comparator implementation are optional.
+
+Submit one PDF named:
+TW2026_S10_GROUP_Surname_Firstname.pdf
+
+Include prospective predictions, exact project identity, environment/evidence classification, P01 diff and named checks, shared/local/derived state observations, provider-isolation evidence or an explicit pending state, one bounded Gemini claim with an independent verdict, the required ADR, limitations, reflection, privacy review and declaration.
+
+Do not upload the project folder, node_modules, JSON backup, credentials, private data, teacher materials or a full AI conversation. Dates and institutional settings are supplied separately by the teacher.
