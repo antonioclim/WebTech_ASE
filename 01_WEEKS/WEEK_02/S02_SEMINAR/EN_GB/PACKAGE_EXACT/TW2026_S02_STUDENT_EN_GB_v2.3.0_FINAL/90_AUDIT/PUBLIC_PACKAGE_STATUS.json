@@ -1,0 +1,31 @@
+{
+  "seminar": "S02",
+  "title": "Responsive Card/Grid Reconstruction",
+  "version": "2.3.0",
+  "status": "FINAL_LOCAL_CONTENT_AND_PACKAGING",
+  "remote_publication": false,
+  "owner_accepted": false,
+  "remote_commit_unchanged": "d5f63cb5ef35db7d1bb50c008bfd399b5b716201",
+  "remote_tree_unchanged": "e33f8fb10a916e206ecc90589b10ff2db02a2c4e",
+  "student_language": "en-GB",
+  "exact_runtime_required": {
+    "node": "v24.21.0",
+    "npm": "11.19.0"
+  },
+  "observed_qa_runtime": {
+    "node": "v22.16.0",
+    "npm": "10.9.2",
+    "classification": "DOCUMENTED_RUNTIME_MISMATCH"
+  },
+  "open_gates": [
+    "exact runtime",
+    "native Windows",
+    "native macOS",
+    "native Chrome",
+    "native Edge",
+    "native Firefox",
+    "native Microsoft Word",
+    "Moodle live",
+    "owner acceptance"
+  ]
+}

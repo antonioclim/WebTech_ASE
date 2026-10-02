@@ -1,0 +1,7 @@
+criterion,maximum_points,full_performance,partial_performance,insufficient_performance
+Experiment and technical result,3.0,The exact 1/2/4 contract and edge case are reproduced with correct final tests.,The main result works but one bounded state is weak or incomplete.,"The result is absent, irreproducible or contract-breaking."
+Reproducible evidence,2.0,"Named inputs, outputs and bounded evidence allow reproduction.","Evidence exists but one input, output or state is ambiguous.",Screenshots or unsupported claims replace reproducible evidence.
+Explanation of mechanism,2.0,"Grid, Flexbox, intrinsic sizing, focus and motion are explained precisely.",The explanation is broadly correct but incomplete.,The explanation is generic or conflicts with the source.
+Critical Gemini audit,1.5,"One claim is classified, verified independently and given a justified verdict.",A claim and verdict are present but verification or correction is weak.,Gemini is treated as authority or the audit is missing.
+Limitations and reflection,1.0,Evidence limits and a precise Business Informatics link are explicit.,A limit or reflection is present but vague.,No material limitation or reflection is stated.
+Completeness and format,0.5,One legible PDF uses the exact filename and contains the declaration.,Minor formatting or completeness issue.,"Wrong format, unreadable file or missing declaration."
