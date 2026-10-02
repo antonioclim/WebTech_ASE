@@ -1,0 +1,5 @@
+CLAIM TO AUDIT
+
+"The transformer may safely convert a string estimate such as "3" to a number because the record would produce the same output. Also, mapping to new objects proves that the original input array was not mutated."
+
+This claim deliberately combines two different mechanisms. Use separate witnesses for exact-type rejection and input-array mutation. Do not accept or reject it from wording alone.
