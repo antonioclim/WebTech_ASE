@@ -1,0 +1,13 @@
+import React from "react";
+import { readFile } from "node:fs/promises";
+import { render, screen, within } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
+import { expect, it } from "vitest";
+import App from "../src/App.jsx";
+import { useWorkshopState, workshopReducer } from "../src/state/workshop-state.jsx";
+
+it("reducer normalizes shared transitions immutably and rejects unknown actions", () => { const state = { track: "all", savedIds: ["s1"] }; expect(workshopReducer(state, { type: "track/selected", track: "frontend" })).toEqual({ track: "frontend", savedIds: ["s1"] }); expect(workshopReducer(state, { type: "session/toggled", id: "s1" }).savedIds).toEqual([]); expect(workshopReducer(state, { type: "session/toggled", id: "s2" }).savedIds).toEqual(["s1", "s2"]); expect(() => workshopReducer(state, { type: "typo" })).toThrow("Unsupported workshop action"); expect(state).toEqual({ track: "all", savedIds: ["s1"] }); });
+it("distant toolbar, cards, and summary synchronize through shared state", async () => { const user = userEvent.setup(); render(<App initialState={{ savedIds: ["s1", "s1"] }} />); expect(screen.getByText("Saved: 1")).toBeInTheDocument(); await user.selectOptions(screen.getByRole("combobox", { name: "Track" }), "backend"); expect(screen.queryByRole("heading", { name: "Route ownership" })).not.toBeInTheDocument(); await user.click(screen.getByRole("button", { name: "Save Transaction boundaries" })); expect(screen.getByText("Saved: 2")).toBeInTheDocument(); await user.click(screen.getByRole("button", { name: "Clear saved" })); expect(screen.getByText("Saved: 0")).toBeInTheDocument(); });
+it("two provider instances do not share state", async () => { const user = userEvent.setup(); const one = render(<App />); const two = render(<App />); await user.click(within(one.container).getByRole("button", { name: "Save Route ownership" })); expect(within(one.container).getByText("Saved: 1")).toBeInTheDocument(); expect(within(two.container).getByText("Saved: 0")).toBeInTheDocument(); });
+it("hooks fail clearly outside their provider", () => { function Probe() { useWorkshopState(); return null; } expect(() => render(<Probe />)).toThrow("useWorkshopState must be used inside WorkshopProvider"); });
+it("source owns only track and saved IDs in Context reducer", async () => { const source = await readFile("src/state/workshop-state.jsx", "utf8"); expect(source).toMatch(/createContext/); expect(source).toMatch(/useReducer/); expect(source).toMatch(/WorkshopStateContext/); expect(source).toMatch(/WorkshopDispatchContext/); expect(source).not.toMatch(/search|description|visibleSessions|localStorage|useEffect|redux/i); });

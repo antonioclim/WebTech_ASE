@@ -1,0 +1,26 @@
+# TW2026 S10 — Shared Workshop State
+
+**Version:** 1.2.1 remediated candidate  
+**Status:** local Phase 3 remediated candidate — not published, not exact-runtime qualified and not owner-accepted
+
+## Start safely
+
+1. Extract the complete ZIP into a new short folder. Do not work from inside the archive.
+2. Open `00_START_HERE/S10_INTERACTIVE_ULTRA_BEGINNER_GUIDE_EN_GB_v1.2.1.html` or use `OPEN_BEGINNER_GUIDE`.
+3. Run `VERIFY_PACKAGE`. Continue only after the exact-set PASS verdict.
+4. Run `CHECK_ENVIRONMENT`. Required target: Node.js v24.21.0 and npm 11.19.0.
+5. P01 is required, P02 is optional and P03 contributes the required State ADR while full comparator code stays optional.
+
+## Privacy
+
+Do not place passwords, tokens, cookies, private repositories, Moodle data, real personal data or full AI conversations in the package, form, screenshots or Gemini. Submit one reviewed PDF to the private S10 Assignment only.
+
+## Editable source boundaries
+
+- P01: `02_PROJECTS/P01_SHARED_WORKSHOP_STATE/student/src/state/workshop-state.jsx`
+- P02 optional: `02_PROJECTS/P02_NOTIFICATION_CENTER_OPTIONAL/student/src/store/notifications-slice.js`
+- P03 optional code: `02_PROJECTS/P03_ARCHITECTURE_COMPARISON/student/src/decision/compare-architectures.js`
+
+The State ADR is required even when P03 comparator code is not implemented.
+
+Rendered responsive/zoom HTML QA is still open. Static and DOM-adapter checks do not qualify a browser. No FINAL admission or publication is claimed.
