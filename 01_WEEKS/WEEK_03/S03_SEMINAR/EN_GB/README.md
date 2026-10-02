@@ -1,39 +1,45 @@
-# S03 — Dataset Transformer CLI
+# S03 — Dataset Transformer CLI v1.2.0
 
-**Student WIP preview · original object v1.1.0 · qualification pending.**
+**Student WIP preview · locally hardened content and packaging · platform qualification pending.**
 
-[Open the ZIP file](DOWNLOAD/WEBTECH_ASE_S03_STUDENT_EN_GB_v1.1.0_PUBLIC.zip) · [SHA-256](DOWNLOAD/WEBTECH_ASE_S03_STUDENT_EN_GB_v1.1.0_PUBLIC.zip.sha256)
+[Download the complete student ZIP](DOWNLOAD/TW2026_S03_STUDENT_EN_GB_v1.2.0_FINAL.zip) · [SHA-256 sidecar](DOWNLOAD/TW2026_S03_STUDENT_EN_GB_v1.2.0_FINAL.zip.sha256)
 
-On the ZIP's GitHub page, use **Download raw file**. Keep the ZIP intact until it is on your computer. Use **Extract All** into a new short folder, then open `index.html`. Do not open the lesson from inside the compressed archive. The standalone HTML shell is read locally; GitHub's file viewer is not the lesson player.
+On the ZIP page, use **Download raw file**. Keep the ZIP intact until it is on your computer. Use **Extract All** into a new short writable folder. Do not open or edit files from inside the compressed archive.
 
-The archive contains the complete original student payload, not a shortcut or an installer. Its internal files and manifest are unchanged. The adjacent `PACKAGE_EXACT` directory contains an exact, fully extracted copy of this same public ZIP, including its original manifest and PACKAGE_ID. No extra wrapper directory is inserted. Weeks 01–02 retain their existing browsing layout.
+Start with the interactive ultra-beginner guide. P01 Dataset Transformer is the central 60-minute route, P03 Generated-Code Audit is the required portfolio after the hard STOP and P02 Rule Engine is optional advanced work.
 
-P01 Dataset Transformer is the central implementation. P03 Generated-Code Audit is required after the meeting. P02 Rule Engine is optional.
+## Recommended order
 
-Both meetings have a minute-60 stop. Follow the seminar guide for any remaining work and the final private Moodle PDF. No teacher package, reference solution, console or personal submission belongs in this repository.
+1. Download and extract the complete ZIP.
+2. Run `VERIFY_PACKAGE`.
+3. Run `CHECK_ENVIRONMENT` and record the actual versions.
+4. Run `VERIFY_INITIAL_STATE` before editing.
+5. Open the beginner guide and preserve your predictions before running P01.
+6. Complete the bounded Gemini audit and verify its claim independently.
+7. Export one final PDF named `TW2026_S03_GROUP_Surname_Firstname.pdf` for the private Moodle Assignment.
 
-**Known limits:** reference_runtime, real_browser, native_platform_acceptance remain unqualified. The archive is not a completed runtime installation. Model/static evidence does not establish genuine application, native-browser or platform acceptance. Internal build-time status notes remain historical qualification records; this preview wrapper does not turn them into PASS.
+## Browse the exact extracted package
 
-SHA-256: `5a6a7289acedb17c86dc14df2d3cecd903da43f901716c22c1badbeec624a493`  
-PACKAGE_ID: `9978f14ab59966e39a0ac008bd716dcef9c090c5173ed3e4b103d0a5c6d277b8`
-
-## Browse the exact extracted files
-
-| Material | Repository file or directory |
+| Material | Repository path |
 | --- | --- |
-| Complete extracted package | [Open](PACKAGE_EXACT/) |
-| Start page — HTML source | [Open](PACKAGE_EXACT/index.html) |
-| Seminar — HTML source | [Open](PACKAGE_EXACT/seminar.html) |
-| Evidence form — HTML source | [Open](PACKAGE_EXACT/evidence.html) |
-| Student guide — HTML source | [Open](PACKAGE_EXACT/guide.html) |
-| S03 EVIDENCE FORM — Word document | [Open](PACKAGE_EXACT/documents/S03_EVIDENCE_FORM.docx) |
-| S03 PORTFOLIO — Word document | [Open](PACKAGE_EXACT/documents/S03_PORTFOLIO.docx) |
-| S03 STUDENT GUIDE — Word document | [Open](PACKAGE_EXACT/documents/S03_STUDENT_GUIDE.docx) |
-| Student projects | [Open](PACKAGE_EXACT/projects/) |
-| Student observation and checking tools | [Open](PACKAGE_EXACT/tools/) |
-| Original file checksums | [Open](PACKAGE_EXACT/SHA256SUMS.txt) |
-| Original package identifier | [Open](PACKAGE_EXACT/PACKAGE_ID.txt) |
+| Complete v1.2.0 package tree | [Open](PACKAGE_EXACT/TW2026_S03_STUDENT_EN_GB_v1.2.0_FINAL/) |
+| Start here | [Open](PACKAGE_EXACT/TW2026_S03_STUDENT_EN_GB_v1.2.0_FINAL/00_START_HERE/README.md) |
+| Interactive guide | [Open](PACKAGE_EXACT/TW2026_S03_STUDENT_EN_GB_v1.2.0_FINAL/00_START_HERE/S03_INTERACTIVE_ULTRA_BEGINNER_GUIDE_EN_GB_v1.2.html) |
+| Student worksheet | [Open](PACKAGE_EXACT/TW2026_S03_STUDENT_EN_GB_v1.2.0_FINAL/01_WORKSHEET/STUDENT_WORKSHEET_S03_v1.2_EN_GB.docx) |
+| Required P03 transfer | [Open](PACKAGE_EXACT/TW2026_S03_STUDENT_EN_GB_v1.2.0_FINAL/01_WORKSHEET/HOMEWORK_S03_P03_v1.2_EN_GB.docx) |
+| Student projects | [Open](PACKAGE_EXACT/TW2026_S03_STUDENT_EN_GB_v1.2.0_FINAL/02_PROJECTS/) |
+| Gemini prompt | [Open](PACKAGE_EXACT/TW2026_S03_STUDENT_EN_GB_v1.2.0_FINAL/03_AI_AUDIT/GEMINI_PROMPT_EN_GB.txt) |
+| Moodle form | [Open](PACKAGE_EXACT/TW2026_S03_STUDENT_EN_GB_v1.2.0_FINAL/05_MOODLE_SUBMISSION/FORM_S03_EN_GB.html) |
+| Student-safe QA summary | [Open](PACKAGE_EXACT/TW2026_S03_STUDENT_EN_GB_v1.2.0_FINAL/90_AUDIT/STUDENT_SAFE_QA_SUMMARY.md) |
+| Package identifier | [Open](PACKAGE_EXACT/TW2026_S03_STUDENT_EN_GB_v1.2.0_FINAL/90_AUDIT/PACKAGE_ID.txt) |
 
-Repository browsing displays HTML source; it does not host or execute the lesson. Use the unchanged ZIP above for the complete local interactive package. This addition does not activate GitHub Pages and does not close any qualification gate.
+## Boundaries
 
-[Whole-week preview](../../README.md) · [All weeks](../../../README.md)
+Do not upload the project folder, `node_modules`, credentials, complete Gemini conversations or private data to Moodle. Submit one PDF only.
+
+Exact Node.js v24.21.0 and npm 11.19.0, native Windows, native macOS, native Chrome, Edge and Firefox, Microsoft Word, Moodle live and owner acceptance remain unqualified. Local content and packaging finality does not close those gates.
+
+SHA-256: `a860080d6c4ef3ce1b245faa6e6add74b8699ef4562c95ef9e4607cf89435ca1`  
+PACKAGE_ID: `5e097748e02597813c3329eb5124192eecf2b7b9235e86e4c20ccb5467d3af46`
+
+[Week 03](../../README.md) · [All weeks](../../../README.md)
