@@ -1,0 +1,34 @@
+[
+  {
+    "path": "02_PROJECTS/canonical/02-initialization-policy/README.md",
+    "source": "lectures/06-persistence-sequelize/en/examples/02-initialization-policy/README.md",
+    "sha256": "5420621e5433be4589f2df5b7a30c812a2d818d1a1fc6ce1d7cc9c244617c4da",
+    "baseline_sha256": "56e782664d419cf14e28243dc24f54afa92cb281209a59d78fc4097ee7f40cc6",
+    "byte_identity": false,
+    "classification": "DERIVED_DOCUMENTATION"
+  },
+  {
+    "path": "02_PROJECTS/canonical/02-initialization-policy/example.js",
+    "source": "lectures/06-persistence-sequelize/en/examples/02-initialization-policy/example.js",
+    "sha256": "bf8c53e6c1ffb1a88b896b751af0085b53046e49422b56dbbe8b3210d79b17c9",
+    "baseline_sha256": "bf8c53e6c1ffb1a88b896b751af0085b53046e49422b56dbbe8b3210d79b17c9",
+    "byte_identity": true,
+    "classification": "CANONICAL_TECHNICAL_BYTES"
+  },
+  {
+    "path": "02_PROJECTS/canonical/02-initialization-policy/package-lock.json",
+    "source": "lectures/06-persistence-sequelize/en/examples/02-initialization-policy/package-lock.json",
+    "sha256": "55e199e2d83ba2786a90f6388e757c5e3b51f85ebf49c1dd6b55468f2d24eea9",
+    "baseline_sha256": "55e199e2d83ba2786a90f6388e757c5e3b51f85ebf49c1dd6b55468f2d24eea9",
+    "byte_identity": true,
+    "classification": "CANONICAL_TECHNICAL_BYTES"
+  },
+  {
+    "path": "02_PROJECTS/canonical/02-initialization-policy/package.json",
+    "source": "lectures/06-persistence-sequelize/en/examples/02-initialization-policy/package.json",
+    "sha256": "c9024f1d7b114c1102d6bc0678b12df23eff8d34d2535e7bdaab60a94bd3ed7b",
+    "baseline_sha256": "c9024f1d7b114c1102d6bc0678b12df23eff8d34d2535e7bdaab60a94bd3ed7b",
+    "byte_identity": true,
+    "classification": "CANONICAL_TECHNICAL_BYTES"
+  }
+]

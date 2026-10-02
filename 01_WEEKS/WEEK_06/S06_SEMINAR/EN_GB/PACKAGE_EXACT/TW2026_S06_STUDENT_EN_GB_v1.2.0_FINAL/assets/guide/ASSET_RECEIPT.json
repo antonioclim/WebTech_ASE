@@ -1,0 +1,89 @@
+{
+  "version": "1.2.0",
+  "kind": "LOCALLY_DRAWN_PRECISE_SVG_ILLUSTRATIONS",
+  "actual_application_screenshots": false,
+  "essential_assets_embedded": true,
+  "source": "S06 Phase 1 bounded sources and visual plan",
+  "assets": [
+    {
+      "id": "V01",
+      "file": "V01.svg",
+      "title": "Extract first, then use the folder",
+      "alt": "Three numbered panels distinguish the ZIP, the extracted package root and the same root opened in VS Code.",
+      "caption": "Use the extracted folder, not the compressed view. Interface wording can vary by Windows version.",
+      "source": "Locally drawn from the S06 bounded source and Phase 1 specification. No native application or online service was observed."
+    },
+    {
+      "id": "V02",
+      "file": "V02.svg",
+      "title": "One folder, two terminals",
+      "alt": "A diagram shows the package explorer, a server terminal holding READY and a separate client terminal.",
+      "caption": "Keep the server running while the client sends requests. The sample PORT is a placeholder, not a measured port.",
+      "source": "Locally drawn from the S06 bounded source and Phase 1 specification. No native application or online service was observed."
+    },
+    {
+      "id": "V03",
+      "file": "V03.svg",
+      "title": "The query boundary",
+      "alt": "Six numbered boxes separate request strings, validation, Sequelize options, model call, rows and HTTP representation.",
+      "caption": "Record the evidence class at each boundary. The call counter supplies different evidence from the HTTP status.",
+      "source": "Locally drawn from the S06 bounded source and Phase 1 specification. No native application or online service was observed."
+    },
+    {
+      "id": "V04",
+      "file": "V04.svg",
+      "title": "The four-row fixture and sorts",
+      "alt": "Fixture panel lists four note IDs, titles, owners and archived flags; sort panel lists three source-expected ID orders.",
+      "caption": "Compare these source expectations only after preserving your original predictions. Measure the real result separately.",
+      "source": "Locally drawn from the S06 bounded source and Phase 1 specification. No native application or online service was observed."
+    },
+    {
+      "id": "V05",
+      "file": "V05.svg",
+      "title": "Literal percent and a boolean string",
+      "alt": "Two numbered panels explain percent URL decoding and the difference between the false string and a boolean.",
+      "caption": "Reason about the two translations before the request. This diagram explains a rule and contains no translator solution.",
+      "source": "Locally drawn from the S06 bounded source and Phase 1 specification. No native application or online service was observed."
+    },
+    {
+      "id": "V06",
+      "file": "V06.svg",
+      "title": "Memory and the short file observation",
+      "alt": "Three panels distinguish the P02 memory database, one-process file connection lifecycle and the recorded boundary.",
+      "caption": "The short file task is required separately. It does not require the full optional P01 implementation.",
+      "source": "Locally drawn from the S06 bounded source and Phase 1 specification. No native application or online service was observed."
+    },
+    {
+      "id": "V07",
+      "file": "V07.svg",
+      "title": "Observe the correct browser tab",
+      "alt": "The correct local application tab is contrasted with guide and external service tabs; the Network request is highlighted.",
+      "caption": "Browser capture is optional. A CLI HTTP transcript can supply the required HTTP witness without a screenshot.",
+      "source": "Locally drawn from the S06 bounded source and Phase 1 specification. No native application or online service was observed."
+    },
+    {
+      "id": "V08",
+      "file": "V08.svg",
+      "title": "Draft export, final PDF and inspection",
+      "alt": "Three numbered panels distinguish the evidence form, recoverable JSON draft and inspected final PDF.",
+      "caption": "A draft may retain blocks. Standard final mode needs actual required evidence and an honest declaration.",
+      "source": "Locally drawn from the S06 bounded source and Phase 1 specification. No native application or online service was observed."
+    },
+    {
+      "id": "V09",
+      "file": "V09.svg",
+      "title": "Audit one Gemini claim",
+      "alt": "Prompt, selected claim with independent check and student verdict form three numbered stages.",
+      "caption": "Gemini reviews a claim. The task does not request the complete translator, changed tests or new dependencies.",
+      "source": "Locally drawn from the S06 bounded source and Phase 1 specification. No native application or online service was observed."
+    },
+    {
+      "id": "V10",
+      "file": "V10.svg",
+      "title": "Check Moodle submission status",
+      "alt": "Three numbered Moodle panels show assignment title, saving and final submission receipt checks.",
+      "caption": "Stop if the title is wrong or the status remains Draft. This illustration is not a live Moodle receipt.",
+      "source": "Locally drawn from the S06 bounded source and Phase 1 specification. No native application or online service was observed."
+    }
+  ]
+}
