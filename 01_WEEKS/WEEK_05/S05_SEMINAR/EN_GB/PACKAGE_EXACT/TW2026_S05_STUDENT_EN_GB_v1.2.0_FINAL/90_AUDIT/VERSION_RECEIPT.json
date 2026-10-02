@@ -1,0 +1,8 @@
+{
+  "seminar": "S05",
+  "previous": "1.1.0",
+  "new": "1.2.0",
+  "reason": "minor version: package architecture, student workflow and didactic route materially changed",
+  "status": "FINAL_LOCAL_CONTENT_AND_PACKAGING",
+  "qualified_release": false
+}

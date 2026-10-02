@@ -1,0 +1,1 @@
+import test from "node:test";import assert from "node:assert/strict";import{readFile}from"node:fs/promises";const s=await readFile(new URL("../../02_PROJECTS/P03_API_CONTRACT_REPAIR_OPTIONAL/src/http-contract.js",import.meta.url),"utf8");test("P03 keeps the legacy fallback import available",()=>assert.match(s,/legacy-http-fallback/));
