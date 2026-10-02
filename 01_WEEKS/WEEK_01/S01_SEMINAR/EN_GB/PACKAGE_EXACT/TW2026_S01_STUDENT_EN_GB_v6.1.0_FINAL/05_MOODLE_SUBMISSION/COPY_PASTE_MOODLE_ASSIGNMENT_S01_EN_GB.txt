@@ -1,0 +1,12 @@
+S01 — HTTP Detective + Tiny HTTP Server: individual evidence
+
+Complete the P01 observation/report task and P02 path-greeting implementation. Both are core. Record at least two prospective predictions, exact actions, expected and observed results, reproducible evidence and mechanisms. Audit one bounded Gemini claim with two independent counterexamples, a verdict, correction and limitation. Identify any supplied fallback or unexecuted step truthfully.
+
+Submit one PDF generated from FORM_S01_EN_GB, named:
+TW2026_S01_GROUP_Surname_Firstname.pdf
+
+Do not upload the project, ZIP, node_modules, JSON draft or complete AI conversation. Do not include credentials, cookies, tokens, private code or Moodle data. Reconfirm the declaration after edits and inspect the PDF's final paragraph.
+
+Maximum grade: 10. Rubric: result 3, reproducibility 2, mechanism 2, critical AI audit 1.5, limits/reflection 1 and completeness 0.5.
+
+Dates, visibility and late policy: [OWNER TO COMPLETE]. Where a separate final submit action exists, Draft is not final submission. Verify status, filename and timestamp.

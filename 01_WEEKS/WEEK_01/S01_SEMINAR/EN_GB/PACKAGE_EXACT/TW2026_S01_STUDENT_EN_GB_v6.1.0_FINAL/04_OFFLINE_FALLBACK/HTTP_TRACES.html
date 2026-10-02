@@ -1,0 +1,25 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>S01 supplied HTTP trace</title><style>body{font:17px/1.5 system-ui,sans-serif;max-width:1000px;margin:auto;padding:20px}section{border:1px solid #96afbf;padding:15px;margin:15px 0}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#edf3f6;padding:12px}h1{font-size:1.8rem}@media print{body{font-size:10pt}section{break-inside:avoid}}</style></head><body><h1>S01 — supplied P01 trace</h1><p>Real Phase 2 loopback capture on Linux/Node.js v22.16.0. This is compatibility evidence, not exact-runtime qualification and not your own execution. Dynamic date, connection and length headers are omitted from this teaching view; the complete captured headers are in SUPPLIED_P01_TRACE_NODE22.json.</p><p>The fixed lesson input is case=missing-cookie and POST {caseId: missing-cookie, verdict: cookie-jar}. Do not copy an unrelated example input into the assessed report. A 200 stylesheet fetch does not prove stylesheet application.</p><section><h2>1. Supplied exchange</h2><pre>GET /assets/detective.css
+Request Content-Type: not set by this lesson call
+
+HTTP status: 200
+content-type: text/css; charset=utf-8
+
+body { font-family: system-ui, sans-serif; max-width: 48rem; margin: 3rem auto; }
+button { padding: 0.6rem 1rem; }
+pre { background: #eef2f6; padding: 1rem; white-space: pre-wrap; }
+</pre></section><section><h2>2. Supplied exchange</h2><pre>GET /api/clues?case=missing-cookie
+Request Content-Type: not set by this lesson call
+
+HTTP status: 200
+content-type: application/json; charset=utf-8
+x-case-id: missing-cookie
+
+{&quot;caseId&quot;:&quot;missing-cookie&quot;,&quot;clues&quot;:[&quot;crumbs&quot;,&quot;open jar&quot;]}</pre></section><section><h2>3. Supplied exchange</h2><pre>POST /api/verdicts
+Request Content-Type: application/json
+Request body: {&quot;caseId&quot;: &quot;missing-cookie&quot;, &quot;verdict&quot;: &quot;cookie-jar&quot;}
+
+HTTP status: 201
+content-type: application/json; charset=utf-8
+location: /api/verdicts/verdict-1
+
+{&quot;id&quot;:&quot;verdict-1&quot;,&quot;caseId&quot;:&quot;missing-cookie&quot;,&quot;verdict&quot;:&quot;cookie-jar&quot;}</pre></section></body></html>

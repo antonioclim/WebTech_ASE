@@ -1,0 +1,7 @@
+criterion,maximum_points,full_evidence,partial_evidence,insufficient_evidence
+Experiment and technical result,3.0,"P01 report reflects the three real exchanges; P02 satisfies path, decoding, blank-name and extra-segment contracts.",One bounded defect or incomplete comparison.,Missing/incorrect results or unlabelled supplied evidence.
+Reproducible evidence,2.0,"Exact commands, actual ports, named test modes/results and traceable request/response fields.",Some reproduction details are incomplete.,"Only “it worked”, screenshot alone or unverifiable claims."
+Explanation of mechanism,2.0,"Separates request/response, query/body/path and successful fetch versus applied styling.",Mostly correct but a material distinction is weak.,Output confused with mechanism.
+Critical Gemini audit,1.5,"Bounded claim, two independent counterexamples, justified verdict, correction and limitation.",One counterexample or limited independent verification.,Model response treated as authority or synthetic interaction mislabelled.
+Limitations and reflection,1.0,Explicit limits and a traceability connection to Economic Informatics.,Relevant but generic reflection.,Unsupported generalisation or missing limit.
+Completeness and format,0.5,"One readable, private, correctly named PDF with reconfirmed declaration and upload checks.",Minor omission without evidence loss.,"Wrong artefact, sensitive data or unreadable/incomplete PDF."
