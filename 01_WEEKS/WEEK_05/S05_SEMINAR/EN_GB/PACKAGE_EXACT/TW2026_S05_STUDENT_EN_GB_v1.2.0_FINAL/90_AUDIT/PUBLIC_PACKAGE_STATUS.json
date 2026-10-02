@@ -1,0 +1,20 @@
+{
+  "seminar": "S05",
+  "version": "1.2.0",
+  "state": "FINAL_LOCAL_CONTENT_AND_PACKAGING",
+  "qualified_release": false,
+  "public_language": "EN-GB",
+  "exact_runtime": "NOT_EXECUTED",
+  "express_application": "NOT_EXECUTED",
+  "postman": "NOT_INSTALLED_OR_VERIFIED",
+  "platform_limits": [
+    "Windows native",
+    "macOS native",
+    "Chrome native",
+    "Edge native",
+    "Firefox native",
+    "Microsoft Word native",
+    "Moodle live"
+  ],
+  "note": "Local finality does not close runtime, application, platform or owner-acceptance gates."
+}

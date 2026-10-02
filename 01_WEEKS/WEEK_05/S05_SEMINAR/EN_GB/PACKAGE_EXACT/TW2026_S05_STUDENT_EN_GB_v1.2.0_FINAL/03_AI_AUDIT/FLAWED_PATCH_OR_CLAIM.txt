@@ -1,0 +1,1 @@
+If an API response has status 400, the router must have produced it, and an empty DELETE response should still be parsed as JSON.
