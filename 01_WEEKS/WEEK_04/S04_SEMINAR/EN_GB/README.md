@@ -1,41 +1,46 @@
-# S04 — Multi-source Data Dashboard
+# S04 — Multi-source Data Dashboard v1.2.0
 
-**Student WIP preview · original object v1.1.0 · qualification pending.**
+**Student WIP preview · locally hardened content and packaging · platform qualification pending.**
 
-[Open the ZIP file](DOWNLOAD/WEBTECH_ASE_S04_STUDENT_EN_GB_v1.1.0_PUBLIC.zip) · [SHA-256](DOWNLOAD/WEBTECH_ASE_S04_STUDENT_EN_GB_v1.1.0_PUBLIC.zip.sha256)
+[Download the complete student ZIP](DOWNLOAD/TW2026_S04_STUDENT_EN_GB_v1.2.0_FINAL.zip) · [SHA-256 sidecar](DOWNLOAD/TW2026_S04_STUDENT_EN_GB_v1.2.0_FINAL.zip.sha256)
 
-On the ZIP's GitHub page, use **Download raw file**. Keep the ZIP intact until it is on your computer. Use **Extract All** into a new short folder, then open `index.html`. Do not open the lesson from inside the compressed archive. The standalone HTML shell is read locally; GitHub's file viewer is not the lesson player.
+On the ZIP page, use **Download raw file**. Keep the ZIP intact until it is on your computer. Use **Extract All** into a new short writable folder. Do not open or edit files from inside the compressed archive.
 
-The archive contains the complete original student payload, not a shortcut or an installer. Its internal files and manifest are unchanged. The adjacent `PACKAGE_EXACT` directory contains an exact, fully extracted copy of this same public ZIP, including its original manifest and PACKAGE_ID. No extra wrapper directory is inserted. Weeks 01–02 retain their existing browsing layout.
+Start with the interactive ultra-beginner guide. P01 Multi-source Data Dashboard is the central 60-minute route, P02 Interactive Task List is the required portfolio after the hard STOP and P03 Resilient Fetch is optional advanced work.
 
-P01 Dashboard is the central implementation. P02 Interactive Task List is the required later portfolio. P03 Resilient Fetch is optional.
+## Recommended order
 
-Both meetings have a minute-60 stop. Follow the seminar guide for any remaining work and the final private Moodle PDF. No teacher package, reference solution, console or personal submission belongs in this repository.
+1. Download and extract the complete ZIP.
+2. Run `VERIFY_PACKAGE`.
+3. Run `CHECK_ENVIRONMENT` and record the actual versions.
+4. Run `VERIFY_INITIAL_STATE` before editing.
+5. Open the beginner guide and preserve your predictions before running P01.
+6. Complete the bounded Gemini audit and verify its claim independently.
+7. Complete the required P02 transfer after the hard STOP.
+8. Export one final PDF named `TW2026_S04_GROUP_Surname_Firstname.pdf` for the private Moodle Assignment.
 
-**Known limits:** reference_runtime, real_browser, native_platform_acceptance remain unqualified. The archive is not a completed runtime installation. Model/static evidence does not establish genuine application, native-browser or platform acceptance. Internal build-time status notes remain historical qualification records; this preview wrapper does not turn them into PASS.
+## Browse the exact extracted package
 
-SHA-256: `4f02fb52c61dadf668fb030a6472c30adc7f98124fc4e4857b3790509170c395`  
-PACKAGE_ID: `e8ff57910c57490ac1f42b7d189c00017d872371df6353a8ff5aa86809c798db`
-
-## Browse the exact extracted files
-
-| Material | Repository file or directory |
+| Material | Repository path |
 | --- | --- |
-| Complete extracted package | [Open](PACKAGE_EXACT/) |
-| Start page — HTML source | [Open](PACKAGE_EXACT/index.html) |
-| Seminar — HTML source | [Open](PACKAGE_EXACT/seminar.html) |
-| Evidence form — HTML source | [Open](PACKAGE_EXACT/evidence.html) |
-| Student guide — HTML source | [Open](PACKAGE_EXACT/guide.html) |
-| S04 EVIDENCE FORM — Word document | [Open](PACKAGE_EXACT/documents/S04_EVIDENCE_FORM.docx) |
-| S04 PORTFOLIO — Word document | [Open](PACKAGE_EXACT/documents/S04_PORTFOLIO.docx) |
-| S04 STUDENT GUIDE — Word document | [Open](PACKAGE_EXACT/documents/S04_STUDENT_GUIDE.docx) |
-| Student projects | [Open](PACKAGE_EXACT/projects/) |
-| Optional or continuation projects | [Open](PACKAGE_EXACT/optional/) |
-| Project contracts | [Open](PACKAGE_EXACT/contracts/) |
-| Student observation and checking tools | [Open](PACKAGE_EXACT/tools/) |
-| Original file checksums | [Open](PACKAGE_EXACT/SHA256SUMS.txt) |
-| Original package identifier | [Open](PACKAGE_EXACT/PACKAGE_ID.txt) |
+| Complete v1.2.0 package tree | [Open](PACKAGE_EXACT/TW2026_S04_STUDENT_EN_GB_v1.2.0_FINAL/) |
+| Start here | [Open](PACKAGE_EXACT/TW2026_S04_STUDENT_EN_GB_v1.2.0_FINAL/00_START_HERE/README.md) |
+| Interactive guide | [Open](PACKAGE_EXACT/TW2026_S04_STUDENT_EN_GB_v1.2.0_FINAL/00_START_HERE/S04_INTERACTIVE_ULTRA_BEGINNER_GUIDE_EN_GB_v1.2.html) |
+| Student worksheet | [Open](PACKAGE_EXACT/TW2026_S04_STUDENT_EN_GB_v1.2.0_FINAL/01_WORKSHEET/STUDENT_WORKSHEET_S04_v1.2_EN_GB.docx) |
+| Required P02 transfer | [Open](PACKAGE_EXACT/TW2026_S04_STUDENT_EN_GB_v1.2.0_FINAL/01_WORKSHEET/HOMEWORK_S04_P02_v1.2_EN_GB.docx) |
+| Student projects | [Open](PACKAGE_EXACT/TW2026_S04_STUDENT_EN_GB_v1.2.0_FINAL/02_PROJECTS/) |
+| Gemini prompt | [Open](PACKAGE_EXACT/TW2026_S04_STUDENT_EN_GB_v1.2.0_FINAL/03_AI_AUDIT/GEMINI_PROMPT_EN_GB.txt) |
+| Moodle form | [Open](PACKAGE_EXACT/TW2026_S04_STUDENT_EN_GB_v1.2.0_FINAL/05_MOODLE_SUBMISSION/FORM_S04_EN_GB.html) |
+| Student-safe QA summary | [Open](PACKAGE_EXACT/TW2026_S04_STUDENT_EN_GB_v1.2.0_FINAL/90_AUDIT/STUDENT_SAFE_QA_SUMMARY.md) |
+| Package identifier | [Open](PACKAGE_EXACT/TW2026_S04_STUDENT_EN_GB_v1.2.0_FINAL/90_AUDIT/PACKAGE_ID.txt) |
 
-Repository browsing displays HTML source; it does not host or execute the lesson. Use the unchanged ZIP above for the complete local interactive package. This addition does not activate GitHub Pages and does not close any qualification gate.
+## Boundaries
 
-[Whole-week preview](../../README.md) · [All weeks](../../../README.md)
+Do not upload the project folder, `node_modules`, credentials, complete Gemini conversations or private data to Moodle. Submit one PDF only.
+
+Exact Node.js v24.21.0 and npm 11.19.0, native Windows, native macOS, native Chrome, Edge and Firefox, Microsoft Word, Moodle live and owner acceptance remain unqualified. Local content and packaging finality does not close those gates.
+
+SHA-256: `d4dc8ba5b85dbbe0e269a5cd1a3ab5a722e30a7d9cb59d168bc2045e0c80e2eb`  
+PACKAGE_ID: `829b297bb59a2ab24c4b2572208a874918d00eaca58bfc88c2bb0e79fd68e285`
+
+[Week 04](../../README.md) · [All weeks](../../../README.md)
