@@ -1,0 +1,18 @@
+S02 - Responsive Card/Grid Reconstruction: individual experiment and evidence
+
+Complete the individual prediction -> experiment -> observation -> evidence -> mechanism -> Gemini audit -> verdict -> limitation cycle. Submit one PDF only.
+
+Required filename:
+TW2026_S02_GROUP_Surname_Firstname.pdf
+
+The PDF must include:
+- two predictions written before execution;
+- initial baseline/objective/regression results;
+- 320, 768 and 1280 CSS pixel evidence;
+- a long-content edge case;
+- keyboard focus and reduced-motion evidence or an explicit UNKNOWN limitation;
+- one independently verified Gemini claim;
+- final test results, mechanism explanation, reflection and evidence limits;
+- the individual declaration and privacy check.
+
+Do not submit passwords, tokens, cookies, API keys, private code, Moodle data, the project folder, node_modules or the complete Gemini conversation.
