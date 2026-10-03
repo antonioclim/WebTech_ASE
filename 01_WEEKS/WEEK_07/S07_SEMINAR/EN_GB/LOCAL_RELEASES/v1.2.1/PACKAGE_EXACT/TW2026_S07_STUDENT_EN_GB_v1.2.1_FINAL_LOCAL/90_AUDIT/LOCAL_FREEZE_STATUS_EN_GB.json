@@ -1,0 +1,19 @@
+{
+  "schema": "tw2026.s07.local-freeze.v1",
+  "kit": "S07",
+  "version": "1.2.1",
+  "phase": "4/4",
+  "status": "FINAL_LOCAL",
+  "meaning": "Locally audited teaching content and packaging only",
+  "canonical_runtime_executed": false,
+  "new_functional_code_execution_in_phase4": false,
+  "native_browser_word_platform_acceptance": "NOT_EXECUTED",
+  "native_SQLite_ORM_application_HTTP": "NOT_EXECUTED",
+  "actual_Gemini_student_evidence_authentication": "EXTERNAL_GATE",
+  "Moodle_live": "NOT_EXECUTED",
+  "publication": "NOT_EXECUTED",
+  "owner_acceptance": "OPEN",
+  "previous_candidate_student_zip_sha256": "3c68bb9959e8d5daa8d2b048ab3c1908e39aaf81263b859b11f2636905e49d9c",
+  "package_identity": "Read the current PACKAGE_ID.txt and SHA256SUMS.txt; the version label is not package identity",
+  "assessment": "P02 is the sole full mandatory implementation; the P03-informed ADR is required; complete P01/P03 code is optional"
+}
