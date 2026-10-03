@@ -1,0 +1,12 @@
+case_id,source_mode_and_identity,method,path,Accept,prediction_before_run,expected_source,observed,difference,evidence_locator,evidence_class,record_status,limitation
+P01-ROOT,,,,, ,/notes rendered; root transition replaces the root entry; Back exposes /unknown without an intervening root entry,,,,NOT_EXECUTED,NOT_STARTED,
+P01-DIRECT,,,,, ,Exact addressed note title/body; edit values belong to note2,,,,NOT_EXECUTED,NOT_STARTED,
+P01-CREATE,,,,, ,One create with trimmed strings; deterministic new ID3 in fresh store; /notes/3 replaces form; Back /notes then Forward /notes/3,,,,NOT_EXECUTED,NOT_STARTED,
+P01-EDIT,,,,, ,One update of addressed2; route /notes/2; prior edit URL replaced; Back earlier /notes/2 then Forward revised /notes/2,,,,NOT_EXECUTED,NOT_STARTED,
+P01-BLANK,,,,, ,Accessible validation error; zero create/update; no navigation; draft retained,,,,NOT_EXECUTED,NOT_STARTED,
+P01-CANCEL,,,,, ,New→/notes; edit→/notes/2; no mutation,,,,NOT_EXECUTED,NOT_STARTED,
+P01-TARGET-CHANGE,,,,, ,Fields initialise from note2; no stale note1 draft or write,,,,NOT_EXECUTED,NOT_STARTED,
+P01-MISSING,,,,, ,Stable same note-not-found state; edit does not show another record/form,,,,NOT_EXECUTED,NOT_STARTED,
+P01-UNKNOWN,,,,, ,Page-not-found client view distinct from missing note,,,,NOT_EXECUTED,NOT_STARTED,
+P01-STORE-LIFETIME,,,,, ,"Fresh store seed has1/2, so new3 absent; no durable persistence claimed",,,,NOT_EXECUTED,NOT_STARTED,
+P01-PUSH-COUNTEREXAMPLE,,,,,,Your design distinguishes destination evidence from history evidence. No result is prefilled; the complete private teacher witness/key is not included.,,,,NOT_EXECUTED,PENDING,

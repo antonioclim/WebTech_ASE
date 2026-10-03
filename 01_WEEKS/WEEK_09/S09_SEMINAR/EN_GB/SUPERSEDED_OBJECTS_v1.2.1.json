@@ -1,0 +1,1160 @@
+{
+  "schema": "S09_PHASE4_SUPERSEDED/1.0",
+  "language": "EN-GB",
+  "replacement_version": "1.2.1",
+  "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+  "no_remote_deletions": true,
+  "cleanup_candidates": [
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/DOWNLOAD/WEBTECH_ASE_S09_STUDENT_EN_GB_v1.1.0_PUBLIC.zip",
+      "bytes": 408155,
+      "sha256": "d484324987e3fd05ae67065784215c5100e575bd32cd1e408d90bff7279005c6",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/DOWNLOAD/WEBTECH_ASE_S09_STUDENT_EN_GB_v1.1.0_PUBLIC.zip.sha256",
+      "bytes": 114,
+      "sha256": "a39b3878137fa20ffdb0aa433845858f412cd4c07a43ed931f0d29f349cbec25",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/CANONICAL_SOURCES.json",
+      "bytes": 13746,
+      "sha256": "ef5e08fb3f78134dda00fd10b82a6e3556c6f02ada5def81fd6617979676f159",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/GEMINI_PROMPT.txt",
+      "bytes": 402,
+      "sha256": "6da5f78e3ba4601bf143a5dc9f1f73149dbf52bfa52f24b74732963832aab5f2",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/P02_CAPSTONE_TRANSFER.html",
+      "bytes": 2669,
+      "sha256": "0eafe1b507211fff2c779ff8320d99e069016a5e626c39752e20032ae45ecf91",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/P02_CAPSTONE_TRANSFER.md",
+      "bytes": 2011,
+      "sha256": "45b36de9977805d4431182fc8267c332b9c14bb6f59e6c11b2e565c588801ebb",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/P03_OBSERVATION_MATRIX.csv",
+      "bytes": 602,
+      "sha256": "2bb6bfcc4fd5e9910a6107ceab4730ad20346a0b1c59803a42e77ba2ac29adc9",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/P03_PORTFOLIO.docx",
+      "bytes": 41534,
+      "sha256": "6b845e2307dc66d4151a662b8f37b56cde961c0a12116eb9aa5547ad61e1df59",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/P03_PORTFOLIO.html",
+      "bytes": 7991,
+      "sha256": "a0dad8a6a26c9581769ca34546c1123babf4d07e24350290358253abf224b07e",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/P03_PORTFOLIO.md",
+      "bytes": 6663,
+      "sha256": "e446b3a1c14189601447076895bf52b9c673ee71ee4de558977ca4a7259b4297",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/PACKAGE_ID.txt",
+      "bytes": 65,
+      "sha256": "d3184601fc0ec07a42be9c05ff87c12faa337d49324e78fbf61aff9acaf9b4f9",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/PACKAGE_ID_METHOD.md",
+      "bytes": 539,
+      "sha256": "d65412ef7d1e2378bfd87b7282a8e085af00d5942b10d1a9c5a4c87bf05b3ab0",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/PACKAGE_STATUS.json",
+      "bytes": 467,
+      "sha256": "a3f2b7b799f1845d05d4cac8b66bbbaaf7717a34815ed4b29ee9ee8a554f6d7e",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/PROJECT_BASELINES.json",
+      "bytes": 5877,
+      "sha256": "ad0b0143d1e4e175a83c056e41aec803be9bd0b36d21a11b72d3b3ddee0d7879",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/QUALIFICATION.md",
+      "bytes": 996,
+      "sha256": "eb82acd87c73b1542f15859b74c343d1ab23d9036485d2ca540d99c7e25df715",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/README.md",
+      "bytes": 1302,
+      "sha256": "95bb6187de1cea940419f7d068f8c91b51d088b86db1070eee08d873212db918",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/RUN_AND_EVIDENCE.md",
+      "bytes": 2865,
+      "sha256": "01a10351b4fd361e71a9b56ddcaef45fa4ca6cb1bfe4f49fcd5c3b6996dafd0e",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/S09_EVIDENCE_FORM.docx",
+      "bytes": 42110,
+      "sha256": "a0f83b57297d9ff3065e65d1e315568c4bbc798e5a7b1b42d0eaf4ce2682abc0",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/S09_EVIDENCE_FORM.html",
+      "bytes": 8902,
+      "sha256": "2da2616dc7eb29e5eb0631d9cfedb1ef395afe776f44d3ccb14f7be0b97898ba",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/S09_EVIDENCE_FORM.md",
+      "bytes": 7547,
+      "sha256": "a2e6713a2d95cfc913cab4bdf20dfe0f5c6a4fed8a903e8386e338af2bd10329",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/S09_STUDENT_GUIDE.docx",
+      "bytes": 45045,
+      "sha256": "d040b981d6a09afe75237610e3572c98aa30227afc11fb550a2619a66c30609a",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/S09_STUDENT_GUIDE.html",
+      "bytes": 16266,
+      "sha256": "2d005ce8e05c8afab6987d3ec14c144b01f887cbcdda56b6e9c1dbe0fda84bb6",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/S09_STUDENT_GUIDE.md",
+      "bytes": 14251,
+      "sha256": "acfc041f889e56e3ce6ccd77ecc451058299070af91e2646fb768c260fa0eefd",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/SEMINAR_SCREENS.json",
+      "bytes": 5115,
+      "sha256": "cf3380a8521ec50d263921296cd055fee5307946e48373cd9e80262eb798ed91",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/SHA256SUMS.txt",
+      "bytes": 11016,
+      "sha256": "45bdc03f038fc55d414e181848604889de835feccf365ddc61c0ffc94b0694ef",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/SOURCES.md",
+      "bytes": 1496,
+      "sha256": "bcc1df4b51af7651f732b5face937162564113236a491a0848c52a5e96db7333",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/SOURCE_NOTES.md",
+      "bytes": 2429,
+      "sha256": "835d03618a62caa13cb1a024ae4a57910544685685c775611eee235bf5bb7ca5",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/assets/form-core.js",
+      "bytes": 5922,
+      "sha256": "6ffefcc78bb66f499f8745278f8724e6c56224a4237efc925d3d291e3975616b",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/assets/form-ui.js",
+      "bytes": 7727,
+      "sha256": "e1ef7c71a59db6e3e2ac0f9612005a5ea3cba05fb48a7b1d1b8357bf26840fbb",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/assets/schema.js",
+      "bytes": 16095,
+      "sha256": "5e2220c960dd2b6035ac9d8fd3d4f32cc985f7e17c1e12341fbf326bc2f8e1ba",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/assets/schema.json",
+      "bytes": 16070,
+      "sha256": "6ca1679b82b21c6b2b63fd09cef42bb6e2164e4756bc5a7514be189984d5c9d2",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/assets/seminar.js",
+      "bytes": 1597,
+      "sha256": "296ad23892c5dd1d17441be21e3b25b8c05048d5f8ef0911e75e695e757e8517",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/assets/site.css",
+      "bytes": 3523,
+      "sha256": "3f18ca2ac239868edb1f1d8c169b6a111d8590a1c0766d0a2533b3111e3e1d64",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/capstone/p02/CONTRACT.md",
+      "bytes": 1264,
+      "sha256": "f00ce0400a5a64f9e02ac314a32a1a842d951d87e1d21beffb72c813c6ed80f6",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/capstone/p02/spec.md",
+      "bytes": 6694,
+      "sha256": "8e496ad0ca2e86f58fd6b01d04dc7fa0ca22db0f4921821840906e70c33f08ec",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/capstone/p02/student/README.md",
+      "bytes": 260,
+      "sha256": "fbac09e153a0811bb74f9fbae58801f3777444bc4781d68dfcc124a7964b2443",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/capstone/p02/student/client/index.html",
+      "bytes": 257,
+      "sha256": "90d54f0d676de15a61da6a4b048b5f972ff51579f20897c1d93fa4f04a787916",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/capstone/p02/student/client/s09_checks/additional.check.jsx",
+      "bytes": 1681,
+      "sha256": "c09131031f7b962a6fdf1eefd38ccf8f3f0fd9d1a4256a3cc26fd2a1923fdf6f",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/capstone/p02/student/client/s09_checks/config.js",
+      "bytes": 119,
+      "sha256": "b6b2bd37859e7f0324503959251f6cb269ed6b31da46099e01496a0e28edc236",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/capstone/p02/student/client/src/NotesWorkspace.jsx",
+      "bytes": 415,
+      "sha256": "b9530a57f7bce7f7ca3ed8697c3a4641bcc5ce378cda5bd8f161af4d680a4f77",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/capstone/p02/student/client/src/main.jsx",
+      "bytes": 292,
+      "sha256": "ef01761c01d3f1e8e1909590d16b79354b12755ed805363e4867bcbebb347ff6",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/capstone/p02/student/client/src/notes-api.js",
+      "bytes": 954,
+      "sha256": "058b74017d497b6a20de8de7a43278d162b3f81e1505f8901e8005638cd2f0bb",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/capstone/p02/student/client/src/styles.css",
+      "bytes": 458,
+      "sha256": "3edc348bbc51fa807eabb856d0dfdce96c8693c7141e71fddbe217bb68857ac7",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/capstone/p02/student/client/tests/baseline.test.js",
+      "bytes": 928,
+      "sha256": "d403be8a89bde2a1af1348ebd8fff26fef36759853c511c8050f757a4b7d2d74",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/capstone/p02/student/client/tests/helpers.jsx",
+      "bytes": 946,
+      "sha256": "f47726beb13e46e95a7978555bb47a9ebb6e6e262fada6bc6ef0087b65276302",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/capstone/p02/student/client/tests/objective.test.jsx",
+      "bytes": 4342,
+      "sha256": "6ba91e184447ccc056c3fdd2bbac57ecabc174f7dc6cb4f8bc89a874294d951a",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/capstone/p02/student/client/tests/regression.test.jsx",
+      "bytes": 839,
+      "sha256": "d56a28b03eb4bd3de12626c98bea5795d96c92322f3cd7075bd388d527b26537",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/capstone/p02/student/client/tests/setup.js",
+      "bytes": 157,
+      "sha256": "f6a3591a31193bda3fae485d3ff6a05ae21237b3633b46d8c52dd3155b634fdd",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/capstone/p02/student/client/vite.config.js",
+      "bytes": 411,
+      "sha256": "c760a4b9b36baaecf705208f8ddd8c3fe72efd595878fdc45c76a10558d9d142",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/capstone/p02/student/package-lock.json",
+      "bytes": 132637,
+      "sha256": "3093a0bbdd96b2b09d7a36c679821fa94c0a075672a443cc671da1bca80d8b17",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/capstone/p02/student/package.json",
+      "bytes": 922,
+      "sha256": "76e9555446251438ea2943093eee1c3061343b10ae92f126119f58e07f63c10f",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/capstone/p02/student/server/app.js",
+      "bytes": 2388,
+      "sha256": "13ef39ff01037ded5948a6562aa3ccc52d1604e825765bb380e5323c6106ddf7",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/capstone/p02/student/server/server.js",
+      "bytes": 612,
+      "sha256": "461ae527ed8398f201e3aac84e9a1dff0b1c18a33ad744f31dee8d29146cff39",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/form.html",
+      "bytes": 2781,
+      "sha256": "3d2cc05f1d1ed64f9f89cbc8b320ee17a5486f3f03fc154ebc3893dc803bee4d",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/index.html",
+      "bytes": 2327,
+      "sha256": "ebd15ec73e847d910498fe08a3a646a6a04c87940397aaed283c01d1353738f4",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/portfolio/p03/CONTRACT.md",
+      "bytes": 1190,
+      "sha256": "480562647a92c3ad33c4c3f05e74866cc71d07e7cc3c171f8772d3b3566c9ba6",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/portfolio/p03/spec.md",
+      "bytes": 6223,
+      "sha256": "99c0be6e82a528127ecdbebd96b1e440be83aeef0ea3b2d6dc1cdfb7e69a178d",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/portfolio/p03/student/README.md",
+      "bytes": 484,
+      "sha256": "dc6fff62b8e673647ead9da5e039bc0b13757610afe6dab595143c7a1233bd8d",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/portfolio/p03/student/client-dist/assets/app-a1b2c3.js",
+      "bytes": 229278,
+      "sha256": "536d91f6282172caa4c348454b9c3ff9d778c0b719b531ad8caef2037eabb1cd",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/portfolio/p03/student/client-dist/icon.svg",
+      "bytes": 180,
+      "sha256": "beef4fe8e85ba2dd78ea491d9e4602d0ec1932d29368432b7ea900d50b824b99",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/portfolio/p03/student/client-dist/index.html",
+      "bytes": 316,
+      "sha256": "a979c9ea42a2f084c7cbb366b70b66119723c97bfad7ac9b967655b17228bec3",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/portfolio/p03/student/client/index.html",
+      "bytes": 293,
+      "sha256": "5e3fdeec7f9815de017bb440291cd163bc3142d199e9391f6781ce23cc29093a",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/portfolio/p03/student/client/public/icon.svg",
+      "bytes": 180,
+      "sha256": "beef4fe8e85ba2dd78ea491d9e4602d0ec1932d29368432b7ea900d50b824b99",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/portfolio/p03/student/client/src/main.jsx",
+      "bytes": 834,
+      "sha256": "55c75096c187a3094ab3d8d5b68d1f12162ec38b26613cbe41d1727bd07c64e3",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/portfolio/p03/student/client/vite.config.js",
+      "bytes": 348,
+      "sha256": "b3782299d3495eb9cf63025547829f465543aa4eca224ab79b0b584e805665d0",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/portfolio/p03/student/evidence/broken-server.js",
+      "bytes": 899,
+      "sha256": "7e29f11835e8650b13076b1ef978a46fc69e82539a3dd78fb17cf9880c50dddd",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/portfolio/p03/student/package-lock.json",
+      "bytes": 58335,
+      "sha256": "366ce1da70a8686154c8026a76e0d91a0258d4080b04dfd97cd14d508dcc71d6",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/portfolio/p03/student/package.json",
+      "bytes": 653,
+      "sha256": "abfd8714537e98f8c932a93fb83b9d95bbefe036721f73be8cc340864c548fe5",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/portfolio/p03/student/s09_checks/additional.check.mjs",
+      "bytes": 1664,
+      "sha256": "7557ca2011f195b1504a4e86874ec452bafe5c3f75895f3dd6c2ed23fe843485",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/portfolio/p03/student/server/api-router.js",
+      "bytes": 527,
+      "sha256": "1fe1d3f0c95666697407fbcc04905265662f31b7f96710d089c7dadfd68335e3",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/portfolio/p03/student/server/create-production-app.js",
+      "bytes": 425,
+      "sha256": "ede130b2fa65e2b9fd5d73b7a689bde689213a4ee5149b4147fca5a1a68139ba",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/portfolio/p03/student/server/server.js",
+      "bytes": 1055,
+      "sha256": "b515fe885d3dd1194083f1700527e509c7e8a43ff902b1b60b506922d2c4a65e",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/portfolio/p03/student/tests/baseline.test.js",
+      "bytes": 1387,
+      "sha256": "c310bd117da501a9699bf60f7e365145c26d37668ea6721b81b8ee28d5c1c79e",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/portfolio/p03/student/tests/helpers.js",
+      "bytes": 855,
+      "sha256": "6f277d10a75c908e8265fd85c2e71eb8989a025e5fb5b7935f85ee0be03ce47a",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/portfolio/p03/student/tests/objective.test.js",
+      "bytes": 4621,
+      "sha256": "bb4dac3ef912a6d81733f4f7ef64d36aad3392b40627455fd7234676d9ee6f81",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/portfolio/p03/student/tests/regression.test.js",
+      "bytes": 1074,
+      "sha256": "4b770e13769ff4b5d91790380dcba24d0dd60cec80dc195dddc3d479ac9790e5",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/previews/p02/PREVIEW_NOT_ASSESSED.md",
+      "bytes": 1075,
+      "sha256": "e2c2228b58928425a1b63bed859d2540abb25892f755b939dc56d741b2138e41",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/previews/p02/README.md",
+      "bytes": 260,
+      "sha256": "fbac09e153a0811bb74f9fbae58801f3777444bc4781d68dfcc124a7964b2443",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/previews/p02/client/index.html",
+      "bytes": 257,
+      "sha256": "90d54f0d676de15a61da6a4b048b5f972ff51579f20897c1d93fa4f04a787916",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/previews/p02/client/src/NotesWorkspace.jsx",
+      "bytes": 415,
+      "sha256": "b9530a57f7bce7f7ca3ed8697c3a4641bcc5ce378cda5bd8f161af4d680a4f77",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/previews/p02/client/src/main.jsx",
+      "bytes": 292,
+      "sha256": "ef01761c01d3f1e8e1909590d16b79354b12755ed805363e4867bcbebb347ff6",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/previews/p02/client/src/notes-api.js",
+      "bytes": 1994,
+      "sha256": "242362e207cf260c0a25b98be618f8eb434657a301849e6aaf90cf1610e12274",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/previews/p02/client/src/styles.css",
+      "bytes": 458,
+      "sha256": "3edc348bbc51fa807eabb856d0dfdce96c8693c7141e71fddbe217bb68857ac7",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/previews/p02/client/tests/baseline.test.js",
+      "bytes": 928,
+      "sha256": "d403be8a89bde2a1af1348ebd8fff26fef36759853c511c8050f757a4b7d2d74",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/previews/p02/client/tests/helpers.jsx",
+      "bytes": 946,
+      "sha256": "f47726beb13e46e95a7978555bb47a9ebb6e6e262fada6bc6ef0087b65276302",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/previews/p02/client/tests/objective.test.jsx",
+      "bytes": 4342,
+      "sha256": "6ba91e184447ccc056c3fdd2bbac57ecabc174f7dc6cb4f8bc89a874294d951a",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/previews/p02/client/tests/regression.test.jsx",
+      "bytes": 839,
+      "sha256": "d56a28b03eb4bd3de12626c98bea5795d96c92322f3cd7075bd388d527b26537",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/previews/p02/client/tests/setup.js",
+      "bytes": 157,
+      "sha256": "f6a3591a31193bda3fae485d3ff6a05ae21237b3633b46d8c52dd3155b634fdd",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/previews/p02/client/vite.config.js",
+      "bytes": 411,
+      "sha256": "c760a4b9b36baaecf705208f8ddd8c3fe72efd595878fdc45c76a10558d9d142",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/previews/p02/package-lock.json",
+      "bytes": 132637,
+      "sha256": "3093a0bbdd96b2b09d7a36c679821fa94c0a075672a443cc671da1bca80d8b17",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/previews/p02/package.json",
+      "bytes": 922,
+      "sha256": "76e9555446251438ea2943093eee1c3061343b10ae92f126119f58e07f63c10f",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/previews/p02/server/app.js",
+      "bytes": 2388,
+      "sha256": "13ef39ff01037ded5948a6562aa3ccc52d1604e825765bb380e5323c6106ddf7",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/previews/p02/server/preview-server.mjs",
+      "bytes": 978,
+      "sha256": "056c19713bd78a414567b7a3dab1330be1f0a6b03205e881e9cfe88d96a0c422",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/previews/p02/server/server.js",
+      "bytes": 612,
+      "sha256": "461ae527ed8398f201e3aac84e9a1dff0b1c18a33ad744f31dee8d29146cff39",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/projects/p01/CONTRACT.md",
+      "bytes": 1142,
+      "sha256": "28f8b934b20db249db483b018a5f750821e6d77c6ff504fc7b49d3a198e925cc",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/projects/p01/spec.md",
+      "bytes": 5703,
+      "sha256": "08c5d850d53e279e59512debf6acb29bdf21f5b410c414c1d50360cf8af24f16",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/projects/p01/student/README.md",
+      "bytes": 192,
+      "sha256": "d6b35a55d8e8f64e7df25d3d9e56ae0e82ee9ecd202ba70a5ad396d18a146632",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/projects/p01/student/index.html",
+      "bytes": 253,
+      "sha256": "fa20b54bcf4eb54062ab9294123abae3c036577b0f13e72be563c7f7618b8c35",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/projects/p01/student/package-lock.json",
+      "bytes": 105635,
+      "sha256": "9ca28526d95bc95e03012ea3a480738128f26360c8ccdc6e2c669b21e36d71d8",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/projects/p01/student/package.json",
+      "bytes": 703,
+      "sha256": "afc71ed33b53b66fb613f0bb39a05eee3f16bb1a3519460f09f31b19a5f0584a",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/projects/p01/student/s09_checks/additional.check.jsx",
+      "bytes": 2358,
+      "sha256": "e9346c7f0e4f9aff0b0d55ba1e3614fe6118a2dfaa22dcf99ab3c4c85d6b70ed",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/projects/p01/student/s09_checks/config.js",
+      "bytes": 119,
+      "sha256": "b6b2bd37859e7f0324503959251f6cb269ed6b31da46099e01496a0e28edc236",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/projects/p01/student/src/NotesApp.jsx",
+      "bytes": 575,
+      "sha256": "300c4b72c65d982ed2a85370c694b54a0d33d0c26c0113e25bf5bd7a32f6d152",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/projects/p01/student/src/main.jsx",
+      "bytes": 363,
+      "sha256": "24c9847ad5bea6713920f95170ea004aab9bcea1aea6d03ec538684d4dfe917f",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/projects/p01/student/src/notes-store.js",
+      "bytes": 916,
+      "sha256": "fd91495c7dcfec84899ce2210a2b6f822e44d01932215d5815a974190c28242b",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/projects/p01/student/src/styles.css",
+      "bytes": 345,
+      "sha256": "f067203fb3c91f2f4acb97938eb3f75af2a398d86ef69461a01f8a81f5989b86",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/projects/p01/student/tests/baseline.test.js",
+      "bytes": 570,
+      "sha256": "68cb35409f039c4c3aa87d59a52a8256d44702b48e5b3095c6e57e0f112301e8",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/projects/p01/student/tests/helpers.jsx",
+      "bytes": 868,
+      "sha256": "85f26e2fffcd04588dad85b9776eccf874c5a905a3116b896a3f5f16a6dc5546",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/projects/p01/student/tests/objective.test.jsx",
+      "bytes": 4858,
+      "sha256": "ea8eb8781975e33fc0f360f39f00cd74eeee89f6908178f97ce5240f1b8fb684",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/projects/p01/student/tests/regression.test.jsx",
+      "bytes": 439,
+      "sha256": "8c795fdd28abf3611ed7c1118365706976f5affdc05315a75eebe902cb307918",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/projects/p01/student/tests/setup.js",
+      "bytes": 157,
+      "sha256": "f6a3591a31193bda3fae485d3ff6a05ae21237b3633b46d8c52dd3155b634fdd",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/projects/p01/student/vite.config.js",
+      "bytes": 211,
+      "sha256": "6d5d9601345ee02b422bc6b327a6d2e969e77664b048beb349f5f3b0fb94ad2e",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/seminar.html",
+      "bytes": 7898,
+      "sha256": "0cf48e0c54e5d69f8c296bc20a08c4314c6de76cb2486141e7e82f28757d2a5a",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/tools/observe-p03.mjs",
+      "bytes": 3111,
+      "sha256": "c8bf319fcdb12fe16884dd55f8ff6fa573c9a5ba63c7d4c7dca0524207befb8a",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    },
+    {
+      "repository_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_EXACT/tools/verify-boundary.mjs",
+      "bytes": 2135,
+      "sha256": "7d1915a8dd2e1135330ac86bf41788ce58b91f4788a8b63fc7e93ea447a48653",
+      "evidence": "SUPPLIED_HISTORICAL_CANDIDATE_ONLY",
+      "current_remote": "UNKNOWN_NOT_RECONFIRMED",
+      "delete_authorised": false,
+      "delete_performed": false,
+      "required_action": "RECONFIRM_EXACT_PATH_AND_BYTES_AT_SEPARATELY_AUTHORISED_FINAL_FREEZE"
+    }
+  ],
+  "phase2_v1_2_0": "PRIVATE_PRELIMINARY_PRODUCTION_NO_PUBLIC_DELETE_CANDIDATE_INVENTED"
+}
