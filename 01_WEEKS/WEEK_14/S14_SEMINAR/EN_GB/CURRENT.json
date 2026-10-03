@@ -1,0 +1,17 @@
+{
+  "schema": "TW2026_S14_PUBLIC_CURRENT/1.0",
+  "version": "1.2.1",
+  "state": "PUBLISHED_READY_LOCAL_CANDIDATE",
+  "remote_published": false,
+  "download": "DOWNLOAD/TW2026_S14_STUDENT_EN_GB_v1.2.1_FINAL_LOCAL.zip",
+  "student_sha256": "8ae622c37c395900bbb8ad422a4e11555d97b15572465cfce1d5f694d162f8c8",
+  "package_id": "09a38c41f804a5d49aa22ed5f7bf1e8248d0420033db05c8f1fb47d9b9c4a284",
+  "content_packaging": "FINAL_LOCAL",
+  "native_live_acceptance": false,
+  "state_transition": [
+    "scaffold",
+    "candidate",
+    "published-ready local candidate"
+  ],
+  "C14_changed": false
+}

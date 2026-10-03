@@ -1,0 +1,5 @@
+# S14 Production Evidence Review
+
+Apply all ten rows to your own project: identity, locked installation, dependency audit, build, runtime health and cleanup, log redaction, configuration and secrets, HTTP errors and headers, deployment and exceptions. Record claim, source, pass/fail/unknown, owner, next action and limit for each. A missing witness may be recorded honestly as UNKNOWN with the owner and next sufficient witness. A known failed required gate gives fail; otherwise a required unknown gives unknown. Only fully evidenced required rows may support a scoped pass. Deployment evidence remains visible independently. No result certifies production readiness.
+
+The optional JSON template is outside the assessed P01 work. Copy it outside the kit before editing. In a root terminal you may use `node tools/kit.mjs review "path-to-review.json"` only after the prescribed runtime and package checks. This performs structure and coherence checks only, executes no project command and cannot authenticate your witnesses. The HTML form and DOCX are the normal PDF route. Do not run P03 full-program install/audit integration as a hidden seminar requirement.

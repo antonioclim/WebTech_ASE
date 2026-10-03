@@ -1,8 +1,7 @@
-# Week 14 — Testing, observability, performance and production evidence
+# Week 14
 
-This is a **WIP/PREVIEW** student-only local review bundle. It combines the exact C14 and S14 public packages. It is not a repository upload kit, release candidate, production certificate or FINAL admission.
+[S14 current local candidate](S14_SEMINAR/EN_GB/README.md)
 
-- [C14 course](C14_COURSE/EN_GB/index.html)
-- [S14 seminar](S14_SEMINAR/EN_GB/index.html)
+[C14 preserved course package](C14_COURSE/EN_GB/PACKAGE_EXACT/README.md)
 
-Each object retains both `DOWNLOAD` and the complete `PACKAGE_EXACT` tree. Opening HTML in GitHub shows source; Pages is not enabled by this bundle.
+S14 1.2.1 is prepared locally with native and live gates pending. Existing C14 files are unchanged. No C14 Assignment is created. Repository-wide WIP identity is not regenerated here.
