@@ -1,0 +1,12 @@
+{
+  "version": "1.2.1",
+  "status": "FINAL_LOCAL_CONTENT_AND_PACKAGING",
+  "phase": 3,
+  "FINAL_LOCAL": true,
+  "exact_runtime_qualified": false,
+  "native_acceptance": false,
+  "live_acceptance": false,
+  "remote_published": false,
+  "C14_assignment": false,
+  "one_S14_PDF": true
+}

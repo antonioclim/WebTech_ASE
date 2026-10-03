@@ -1,0 +1,588 @@
+{
+  "schema": "TW2026_S14_CURRENT_SOURCE_REGISTRY/1.2",
+  "records": [
+    {
+      "path": "CHECK_ENVIRONMENT.cmd",
+      "current_sha256": "9bac045bb4c7e774ccdff864514d8aaa54ea7c1c91ac45ac9e64b0aab3261fba",
+      "historical_sha256": null,
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "CHECK_ENVIRONMENT.sh",
+      "current_sha256": "bf963eb7abc9dcc5422927df2484bf89f1a62b2fe6de466bcf96f90b78d5902f",
+      "historical_sha256": null,
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "GEMINI_FLAWED_CLAIM_EN_GB.txt",
+      "current_sha256": "9ed15523be7a4435a8acf0bd2b184b38f743394eb2dfb9a45f37c88dcb6959dd",
+      "historical_sha256": null,
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "GEMINI_PROMPT_EN_GB.txt",
+      "current_sha256": "00c6e61f833f72a096323ee0d720c4f10af5e6c571e49e685f84e15d13f0ca6d",
+      "historical_sha256": null,
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "GEMINI_WORKSHEET_EN_GB.md",
+      "current_sha256": "0c4dc8a3c284dffd006639965da2ac9b9fe3e11cd453dd73c93558f04b32c711",
+      "historical_sha256": null,
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "KIT_CONFIG.json",
+      "current_sha256": "f845656898fde778c4ba9ba65d259c3f75aeb58a7436f7dbfa463049cb618572",
+      "historical_sha256": null,
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "OPEN_BEGINNER_GUIDE.cmd",
+      "current_sha256": "f59bec215a6f2bc4d0e43ec3698fb2ae8717eb58c0b3b9970155049fe183531f",
+      "historical_sha256": null,
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "OPEN_BEGINNER_GUIDE.sh",
+      "current_sha256": "f51f46d19e2b8a7030297572edf932774b3bddfbd29e5cb7e6c743e63f77a2c3",
+      "historical_sha256": null,
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "OPEN_EVIDENCE_FORM.cmd",
+      "current_sha256": "a2333f14a9eef53359d75c5adb06f582c7ea7a46bd353f1480f50688a77137c8",
+      "historical_sha256": null,
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "OPEN_EVIDENCE_FORM.sh",
+      "current_sha256": "5b2d15673cc53fbb606594c1112de503e0513d7361d2973ba7542178f7620346",
+      "historical_sha256": null,
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "PACKAGE_ID_METHOD.md",
+      "current_sha256": "5751f6ef5d1b71958b6811539abd17b5fa95e66be0bd43ab545433087ecf04da",
+      "historical_sha256": "3f471cd6134a727a5abb4250dcf5f2305de4806133b61d4844a0f43dc59e5d14",
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "PRODUCTION_EVIDENCE_REVIEW_EN_GB.md",
+      "current_sha256": "1a39c26f1a0c34fccc1542b8f94a768b812afe52cc480ea6bcfee6bc78653c90",
+      "historical_sha256": null,
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "PUBLIC_STATUS.json",
+      "current_sha256": "aca7ad3a47c9cc2d1d30b4e7faeb9bcb0e48aaa81667e55f785996f53d7a13bc",
+      "historical_sha256": "08af4e7e2bca3d110ac9c93091d77a6a372ae7fdebdca9c9a7a3ee55d940cd32",
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "README.md",
+      "current_sha256": "d0aec4c3a99385c188a2ce32f576b71b4ce34cea2a97c1007a3f5f139ce037fb",
+      "historical_sha256": "b43a6939b672b159174378e11a48d16ade3109feef212b0652060f030ddbca1d",
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "S14_EVIDENCE_FORM_EN_GB_v1.2.1.docx",
+      "current_sha256": "14d83ffe7754b6f3148e2853f0bf26c20b4c827e12c8f1a6a776973d70e62f61",
+      "historical_sha256": null,
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "S14_EVIDENCE_FORM_EN_GB_v1.2.1.html",
+      "current_sha256": "642db328e1de98fa4e9161ee0d8c4c530f309881595b9bcdddb26840e4053b45",
+      "historical_sha256": null,
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "S14_INTERACTIVE_ULTRA_BEGINNER_GUIDE_EN_GB_v1.2.1.html",
+      "current_sha256": "6372c685fcd11d21e0dd15d14b3fd22687572e2680a28c59f7e2b9fe3bbb6b92",
+      "historical_sha256": null,
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "S14_PRESENTATION_EN_GB_v1.2.1.html",
+      "current_sha256": "dc113750933694936d7487b806a2650fe423190ee8c8600775a66f06edc71dbf",
+      "historical_sha256": null,
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "STATUS_SERVERS.cmd",
+      "current_sha256": "5b32984a9531fd3ba42af1d4f7c47129bc383e7092f20ff941e9cbb1d57fd30a",
+      "historical_sha256": null,
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "STATUS_SERVERS.sh",
+      "current_sha256": "e07c2daacc1d898d2551bb0022f6e44d98f95b05611b5ce1addb4759c3b5a415",
+      "historical_sha256": null,
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "STOP_SERVERS.cmd",
+      "current_sha256": "565bc7f3539ae96dad78486efdfb34f605faf934e60e7579452d036c0234f152",
+      "historical_sha256": null,
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "STOP_SERVERS.sh",
+      "current_sha256": "2fd19d90b75db774f160ffc4376b2a4858cc662fcca752b07b47f39a839f59ce",
+      "historical_sha256": null,
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "TEST_PROJECT_1.cmd",
+      "current_sha256": "09cc1e56285a1875f0f5de67ca3a80998de799679a1fe0c79ee0102f51db1df7",
+      "historical_sha256": null,
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "TEST_PROJECT_1.sh",
+      "current_sha256": "4b60fe710a1ef961218d5f9c64953428c97042f69047e4bec3e5db88fb2cfe02",
+      "historical_sha256": null,
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "VERIFY_INITIAL_STATE.cmd",
+      "current_sha256": "e22a060bdf2580dcf0b42b1a83854fecb2415ad10de8912aec77c73089fea8fb",
+      "historical_sha256": null,
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "VERIFY_INITIAL_STATE.sh",
+      "current_sha256": "b3cd57cb29000e90c83409a341c89ba23b7b04c4460b3f567c7a5fc70036f67d",
+      "historical_sha256": null,
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "VERIFY_PACKAGE.cmd",
+      "current_sha256": "da252053384077d72fc6ec1262a0333431618f6490f8889df25a47df02823c7d",
+      "historical_sha256": null,
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "VERIFY_PACKAGE.sh",
+      "current_sha256": "87a7d97a8f5b92e36f721ff364792706975fe18d2bd5112a2be648d24ce09059",
+      "historical_sha256": null,
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "VERIFY_WORK_RESULT.cmd",
+      "current_sha256": "b037a0479fae72de60b6f25b842701f7f210b583d1512967076dffb4a73e12b2",
+      "historical_sha256": null,
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "VERIFY_WORK_RESULT.sh",
+      "current_sha256": "412a8a95919a548d0a9656b24d74f4355d1b0f4bd06c2c944659d75640a5d81a",
+      "historical_sha256": null,
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "assets/boundaries.svg",
+      "current_sha256": "9c0f9deb523e28b58210769e629c9db5adc49d858bf6fc2510c39e9ad7ca4bc0",
+      "historical_sha256": null,
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "assets/evidence-schema.json",
+      "current_sha256": "cdebb185112d8d0a43ecbf6a1021144161e982fec09975ec45f7b6cf04728424",
+      "historical_sha256": null,
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "assets/gates.svg",
+      "current_sha256": "e16ff8a45b4ee7b33f1ad6aba81692e5f5bbcb89f3143c7284049334b8f03313",
+      "historical_sha256": null,
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "assets/guide-steps.json",
+      "current_sha256": "93c61ca47e4874f85e22cce280c08f3c82e99691c140f02ee7e44cecbf723dde",
+      "historical_sha256": null,
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "assets/mutations.svg",
+      "current_sha256": "81193b1586f6ee073f06ed3a98ea16060ee5a12a7a2ab471694ede6c5ff5f978",
+      "historical_sha256": null,
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "assets/persistence.svg",
+      "current_sha256": "e5ca6408370a56af20d9c2b5c6bbd66c646bc92ace9ef7bf6f335df40b085db1",
+      "historical_sha256": null,
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "assets/submission.svg",
+      "current_sha256": "861a91946ca94df5e2f7a9433a33a18d24cc6b6926153eb777a210dbeda9eba1",
+      "historical_sha256": null,
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "assets/workspace.svg",
+      "current_sha256": "a98893a7ee88b537f13f40914aa9dd532d83a56b2260cf819ace6140648e7324",
+      "historical_sha256": null,
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "index.html",
+      "current_sha256": "8a23e5be5accc562f8bebf604678be9dc8d129f9e8adf6ed6a4045ba933dac54",
+      "historical_sha256": "450de0d9cb9b2856170b7b7340afc0b697734f4244553a825947ca47bc4ccdba",
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "projects/p01/CONTRACT.md",
+      "current_sha256": "be70c775d10707f11ad456b35b40ef41fa4290f42e32f2290e99108a7592f7ad",
+      "historical_sha256": "e899f8cbf6726480bc42106120116c7d2e7ccbbd90ae18a0664a6bc49cb71f66",
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "projects/p01/student/README.md",
+      "current_sha256": "fb5702b9e1d04af5b27f24c62920eca42c9ffc993868479bb57e760bc83a97b7",
+      "historical_sha256": "fb5702b9e1d04af5b27f24c62920eca42c9ffc993868479bb57e760bc83a97b7",
+      "kind": "EXACT_ORIGINAL",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "projects/p01/student/example.mjs",
+      "current_sha256": "0da41cb19cbf0c633fdc65421bda58e5e12d0b2028cda6423b267fc3896a115f",
+      "historical_sha256": "0da41cb19cbf0c633fdc65421bda58e5e12d0b2028cda6423b267fc3896a115f",
+      "kind": "EXACT_ORIGINAL",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "projects/p01/student/package-lock.json",
+      "current_sha256": "6a053989516fe55771f25494c86c966c00965dc821200f4af19abb57a87dcfea",
+      "historical_sha256": "6a053989516fe55771f25494c86c966c00965dc821200f4af19abb57a87dcfea",
+      "kind": "EXACT_ORIGINAL",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "projects/p01/student/package.json",
+      "current_sha256": "7bbdf1e0187882a75c43952d8006066903851bc8b810ef6626ce065bfaede39d",
+      "historical_sha256": "7bbdf1e0187882a75c43952d8006066903851bc8b810ef6626ce065bfaede39d",
+      "kind": "EXACT_ORIGINAL",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "projects/p01/student/src/checklist-app.mjs",
+      "current_sha256": "d657b0b48cc00f255e96e1cd617d80559d069b4bac47552542f8666ff41a6287",
+      "historical_sha256": "d657b0b48cc00f255e96e1cd617d80559d069b4bac47552542f8666ff41a6287",
+      "kind": "EXACT_ORIGINAL",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "projects/p01/student/src/regression-harness.mjs",
+      "current_sha256": "10fe90633423c646cd3f1ce3679e1242ad05fa85146e87a0f00cb671a11098bf",
+      "historical_sha256": "10fe90633423c646cd3f1ce3679e1242ad05fa85146e87a0f00cb671a11098bf",
+      "kind": "EXACT_ORIGINAL",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "projects/p01/student/tests/baseline.test.mjs",
+      "current_sha256": "631489d3966b7278049f374fbc52b0f2917465d2c34e0586a606680f61d736d7",
+      "historical_sha256": "631489d3966b7278049f374fbc52b0f2917465d2c34e0586a606680f61d736d7",
+      "kind": "EXACT_ORIGINAL",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "projects/p01/student/tests/objective.test.mjs",
+      "current_sha256": "cd6fc846f7cb8d353621c329c52a9311b8243d423aff454069044cf2a4476591",
+      "historical_sha256": "cd6fc846f7cb8d353621c329c52a9311b8243d423aff454069044cf2a4476591",
+      "kind": "EXACT_ORIGINAL",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "projects/p01/student/tests/regression.test.mjs",
+      "current_sha256": "38c5a6c9b8371f040914156d435bae998aa264e1e0328f84acada401933b736b",
+      "historical_sha256": "38c5a6c9b8371f040914156d435bae998aa264e1e0328f84acada401933b736b",
+      "kind": "EXACT_ORIGINAL",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "projects/p02/CONTRACT.md",
+      "current_sha256": "a3ffa6027429f32b7ab2c0a0f620f4ed36169b11308f573fe73a485557200c19",
+      "historical_sha256": "dd85e224a5adeaf69ed5cbdb44c4d48329399ce51425d5d630b1fddc43f318b4",
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "projects/p02/student/README.md",
+      "current_sha256": "7d4c0da111ea71228cbef716709647e31aa97cdeb69457f9a273a9c87cac8799",
+      "historical_sha256": "7d4c0da111ea71228cbef716709647e31aa97cdeb69457f9a273a9c87cac8799",
+      "kind": "EXACT_ORIGINAL",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "projects/p02/student/example.mjs",
+      "current_sha256": "095ffda5e9f20a69f2235d1ad7af1ad6ff55fc084306f718fa901db73621a28a",
+      "historical_sha256": "095ffda5e9f20a69f2235d1ad7af1ad6ff55fc084306f718fa901db73621a28a",
+      "kind": "EXACT_ORIGINAL",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "projects/p02/student/package-lock.json",
+      "current_sha256": "1dab501b419af82630b883162f3984af5d0b029fc11cd14940330987905025f1",
+      "historical_sha256": "1dab501b419af82630b883162f3984af5d0b029fc11cd14940330987905025f1",
+      "kind": "EXACT_ORIGINAL",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "projects/p02/student/package.json",
+      "current_sha256": "87f9e265758f3f6c79d89bb0e8ecc436e51e1db5cccf82ffa0b53e3b0e74b8ac",
+      "historical_sha256": "87f9e265758f3f6c79d89bb0e8ecc436e51e1db5cccf82ffa0b53e3b0e74b8ac",
+      "kind": "EXACT_ORIGINAL",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "projects/p02/student/src/load-probe.mjs",
+      "current_sha256": "312e47ffd229b75d575b225ad7462693420fc4a6d90c8aeba194b1949d650b18",
+      "historical_sha256": "ad731acb54d27ad2c443c0011de9808157155951038cd6a6822c22ddef0aa298",
+      "kind": "DERIVED_OR_NEW",
+      "reason": "P02 optional starter uses explicit assertion failure in assessed module"
+    },
+    {
+      "path": "projects/p02/student/src/probe-server.mjs",
+      "current_sha256": "0c97871c3d6aa8c3311b6583687117203585cc166ab99ee52fcb13b956130193",
+      "historical_sha256": "0c97871c3d6aa8c3311b6583687117203585cc166ab99ee52fcb13b956130193",
+      "kind": "EXACT_ORIGINAL",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "projects/p02/student/src/statistics.mjs",
+      "current_sha256": "bf61c8c841c27d82367b3638b51c31a156d766c24e7392faf049bd20a323cb6e",
+      "historical_sha256": "bf61c8c841c27d82367b3638b51c31a156d766c24e7392faf049bd20a323cb6e",
+      "kind": "EXACT_ORIGINAL",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "projects/p02/student/tests/baseline.test.mjs",
+      "current_sha256": "369693001544ba301410e6a60a99b877b42c9184602368c40119551b8a613010",
+      "historical_sha256": "369693001544ba301410e6a60a99b877b42c9184602368c40119551b8a613010",
+      "kind": "EXACT_ORIGINAL",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "projects/p02/student/tests/helpers.mjs",
+      "current_sha256": "b1a2d99ac664bbffa0893840eed269241e788d85fd2c6b51f50aa57e6be167c1",
+      "historical_sha256": "b1a2d99ac664bbffa0893840eed269241e788d85fd2c6b51f50aa57e6be167c1",
+      "kind": "EXACT_ORIGINAL",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "projects/p02/student/tests/objective.test.mjs",
+      "current_sha256": "689f8a559db984df55ab968fc037eb48e7ddc7401b5b5ea093e0201124da585d",
+      "historical_sha256": "689f8a559db984df55ab968fc037eb48e7ddc7401b5b5ea093e0201124da585d",
+      "kind": "EXACT_ORIGINAL",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "projects/p02/student/tests/regression.test.mjs",
+      "current_sha256": "2431480cef854c754bee65e7bb75631b252a343c2d72d2ea94a1d199a79e6d28",
+      "historical_sha256": "2431480cef854c754bee65e7bb75631b252a343c2d72d2ea94a1d199a79e6d28",
+      "kind": "EXACT_ORIGINAL",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "projects/p03/CONTRACT.md",
+      "current_sha256": "5308488790d1c620dd5b34a2141f23a242c3b08ad35a895c6692a36aa72dcbfe",
+      "historical_sha256": "da69acbb44c90f294253186c050b6f3cf1f6bf6371f52bf60a802e43bb3cba25",
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "projects/p03/student/README.md",
+      "current_sha256": "86c1613a10f5ccc770429c2d6f45dab0f628fbe96d42fb78648d2345ecf2948d",
+      "historical_sha256": "86c1613a10f5ccc770429c2d6f45dab0f628fbe96d42fb78648d2345ecf2948d",
+      "kind": "EXACT_ORIGINAL",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "projects/p03/student/example.mjs",
+      "current_sha256": "a3b95f60c178c8d4e5ec82c4fc8865ed0a8e0dd95854b826e1bca903014cf0e4",
+      "historical_sha256": "a3b95f60c178c8d4e5ec82c4fc8865ed0a8e0dd95854b826e1bca903014cf0e4",
+      "kind": "EXACT_ORIGINAL",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "projects/p03/student/fixture-app/.gitignore",
+      "current_sha256": "14c77ca6e9bf97d7e5e6a94fd97a8a1815285096800991ca4f884d4702074637",
+      "historical_sha256": "14c77ca6e9bf97d7e5e6a94fd97a8a1815285096800991ca4f884d4702074637",
+      "kind": "EXACT_ORIGINAL",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "projects/p03/student/fixture-app/package-lock.json",
+      "current_sha256": "1e51b60524af898adef6f2e237a5b1c3ae9eb44a77f7a73100b9fa631c9a0658",
+      "historical_sha256": "1e51b60524af898adef6f2e237a5b1c3ae9eb44a77f7a73100b9fa631c9a0658",
+      "kind": "EXACT_ORIGINAL",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "projects/p03/student/fixture-app/package.json",
+      "current_sha256": "47c87c7cabd2e7401a49f40dd58c7da2592dfb9d3ccbdcc16dba3961b09e47e3",
+      "historical_sha256": "47c87c7cabd2e7401a49f40dd58c7da2592dfb9d3ccbdcc16dba3961b09e47e3",
+      "kind": "EXACT_ORIGINAL",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "projects/p03/student/fixture-app/scripts/build.mjs",
+      "current_sha256": "b2d72d29655bcd0be649d957fba502ac568efb645d6af4381247b7b297199729",
+      "historical_sha256": "b2d72d29655bcd0be649d957fba502ac568efb645d6af4381247b7b297199729",
+      "kind": "EXACT_ORIGINAL",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "projects/p03/student/fixture-app/src/server.mjs",
+      "current_sha256": "eb1547e8fbb81f826952083abd463deb8700405589316420f175ef7fadb7377c",
+      "historical_sha256": "eb1547e8fbb81f826952083abd463deb8700405589316420f175ef7fadb7377c",
+      "kind": "EXACT_ORIGINAL",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "projects/p03/student/package-lock.json",
+      "current_sha256": "73f8cc7ce14994d8c3b8622b313ebe8a5dcd763c480cfd0ef3b1a4ecddffd003",
+      "historical_sha256": "73f8cc7ce14994d8c3b8622b313ebe8a5dcd763c480cfd0ef3b1a4ecddffd003",
+      "kind": "EXACT_ORIGINAL",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "projects/p03/student/package.json",
+      "current_sha256": "c7cb80f666ea91f6cbd06d1110bf1038ad19b8c526ac584ed0a97b38894e89bd",
+      "historical_sha256": "c7cb80f666ea91f6cbd06d1110bf1038ad19b8c526ac584ed0a97b38894e89bd",
+      "kind": "EXACT_ORIGINAL",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "projects/p03/student/src/evidence-fixtures.mjs",
+      "current_sha256": "a333049a0c927267d21021f3bc9446fb7112c28498905f910e0e6935a03978ab",
+      "historical_sha256": "a333049a0c927267d21021f3bc9446fb7112c28498905f910e0e6935a03978ab",
+      "kind": "EXACT_ORIGINAL",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "projects/p03/student/src/production-review.mjs",
+      "current_sha256": "8e7629f9a04b3d31176b92146a6d01384e998bc8d45b581e07c292d7d77b974f",
+      "historical_sha256": "8e7629f9a04b3d31176b92146a6d01384e998bc8d45b581e07c292d7d77b974f",
+      "kind": "EXACT_ORIGINAL",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "projects/p03/student/src/safe-runner.mjs",
+      "current_sha256": "14091267e767e1ace98ec83425fbc714263b502fa1ec7a060d57f380c9c4eafb",
+      "historical_sha256": "14091267e767e1ace98ec83425fbc714263b502fa1ec7a060d57f380c9c4eafb",
+      "kind": "EXACT_ORIGINAL",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "projects/p03/student/tests/baseline.test.mjs",
+      "current_sha256": "3331144884d3a9adcb49cdeba1ae949977045139551a9426e937c032de8e1ef9",
+      "historical_sha256": "3331144884d3a9adcb49cdeba1ae949977045139551a9426e937c032de8e1ef9",
+      "kind": "EXACT_ORIGINAL",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "projects/p03/student/tests/commands.integration.test.mjs",
+      "current_sha256": "2755fe9d7db1ace40e84dd4ed03bc1113fbcc88b2aa88d4e03091e061b97ce43",
+      "historical_sha256": "2755fe9d7db1ace40e84dd4ed03bc1113fbcc88b2aa88d4e03091e061b97ce43",
+      "kind": "EXACT_ORIGINAL",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "projects/p03/student/tests/helpers.mjs",
+      "current_sha256": "c08362b5752ecb12a4465270bfdbbd8bf1ca1b1abaf5a1d050d5b15b11c85b5b",
+      "historical_sha256": "c08362b5752ecb12a4465270bfdbbd8bf1ca1b1abaf5a1d050d5b15b11c85b5b",
+      "kind": "EXACT_ORIGINAL",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "projects/p03/student/tests/objective.test.mjs",
+      "current_sha256": "12efdb7236fd2fd02c5bf8c0d072e3ca625212b9bf69eae478b901149bfb9991",
+      "historical_sha256": "12efdb7236fd2fd02c5bf8c0d072e3ca625212b9bf69eae478b901149bfb9991",
+      "kind": "EXACT_ORIGINAL",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "projects/p03/student/tests/regression.test.mjs",
+      "current_sha256": "a414f5d229e873d6a86edfc59b21f5c845bf5929434ced7a77302c1ccc3e8631",
+      "historical_sha256": "a414f5d229e873d6a86edfc59b21f5c845bf5929434ced7a77302c1ccc3e8631",
+      "kind": "EXACT_ORIGINAL",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "projects/p04/CONTRACT.md",
+      "current_sha256": "c83095507796925cc4a90fca2b1e07ac25dddfdb61755712520c1553819c3b3b",
+      "historical_sha256": "e258bd27d9775cd9683353d1a12a414fc0b4eca83013451bee45ed53d7ce719b",
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "tools/form-core.js",
+      "current_sha256": "60c60a9f7f95eb8270e071322d9d7496ec79c5b75a964b6a71b2882f10d1b331",
+      "historical_sha256": null,
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "tools/kit.mjs",
+      "current_sha256": "331ff4dfd559f148ebb9b328e92db3e110d304a2fe71d581432cab9f1fd9d82e",
+      "historical_sha256": null,
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    },
+    {
+      "path": "tools/production-review-template.json",
+      "current_sha256": "c7c5f1dd2c6b0f0da233fd54fe92f3062e277a2122d8bf183a5484c11817027f",
+      "historical_sha256": "3dfda249bf2f4e0cca8849f7e01a16bb42d7b27bbe94a4befaf304d11f3d60d6",
+      "kind": "DERIVED_OR_NEW",
+      "reason": "New guarded workflow and evidence materials; original retained privately"
+    }
+  ],
+  "original_selected_source_count": 1007,
+  "source_catalog_sha256": "d5b5766e201235b73f8b6d208a5b272609b4ba63dd5a9bb1a685c1a44a52cd61"
+}

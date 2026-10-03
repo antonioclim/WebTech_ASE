@@ -1,0 +1,37 @@
+{
+  "schema": "TW2026_S14_KIT/1.2",
+  "version": "1.2.1",
+  "status": "FINAL_LOCAL_CONTENT_AND_PACKAGING",
+  "requiredNode": "v24.21.0",
+  "requiredNpm": "11.19.0",
+  "editable": [
+    "projects/p01/student/src/regression-harness.mjs"
+  ],
+  "suites": {
+    "baseline": {
+      "names": [
+        "supplied checklist service validates, persists, and completes",
+        "supplied HTTP adapter is independently constructible"
+      ],
+      "initialFailures": 0
+    },
+    "objective": {
+      "names": [
+        "descriptor separates unit, integration, and HTTP boundaries",
+        "isolated behavior contracts pass twice with stable names",
+        "HTTP contracts include persisted follow-up and safe error behavior",
+        "all supplied realistic mutations are killed by named contracts",
+        "every run closes servers and releases active-run state"
+      ],
+      "initialFailures": 4
+    },
+    "regression": {
+      "names": [
+        "package is dependency-free ESM with categorized commands",
+        "application retains canonical safe error boundary",
+        "documentation bounds mutation evidence and avoids completeness claims"
+      ],
+      "initialFailures": 0
+    }
+  }
+}
