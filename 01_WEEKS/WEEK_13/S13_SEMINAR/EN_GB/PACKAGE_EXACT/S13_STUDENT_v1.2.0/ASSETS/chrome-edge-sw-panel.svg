@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+<title id="title">Chrome and Edge: locate the inspection area</title><desc id="desc">A labelled Application panel illustration showing where to inspect Service Workers, the local origin and the current registration state.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8" fill="#005B96"/></marker></defs>
+<rect x="0" y="0" width="1600" height="1000" rx="0" fill="#F3F6FA" stroke="none" stroke-width="2"/>
+<rect x="0" y="0" width="1600" height="158" rx="0" fill="#13263F" stroke="none" stroke-width="2"/>
+<text x="50" y="43" font-family="DejaVu Sans" font-size="22" font-weight="bold" fill="#FFFFFF" text-anchor="start">S13  /  VI06  /  ILLUSTRATIVE INTERFACE DIAGRAM</text>
+<text x="50" y="91" font-family="DejaVu Sans" font-size="38" font-weight="bold" fill="#FFFFFF" text-anchor="start">Chrome and Edge: locate the inspection area</text>
+<text x="50" y="132" font-family="DejaVu Sans" font-size="23" font-weight="normal" fill="#DCE8F7" text-anchor="start">Documented route illustration • labels depend on the installed browser version.</text>
+<rect x="50" y="197" width="1500" height="114" rx="16" fill="#FFFFFF" stroke="#A6B4C5" stroke-width="2"/>
+<circle cx="90" cy="239" r="22" fill="#005B96"/>
+<text x="90" y="247" font-family="DejaVu Sans" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle">1</text>
+<text x="126" y="248" font-family="DejaVu Sans" font-size="27" font-weight="bold" fill="#13263F" text-anchor="start">Record: Chrome or Microsoft Edge, exact version</text>
+<circle cx="90" cy="280" r="22" fill="#006E65"/>
+<text x="90" y="288" font-family="DejaVu Sans" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle">2</text>
+<text x="126" y="289" font-family="DejaVu Sans" font-size="25" font-weight="bold" fill="#13263F" text-anchor="start">Address: http://127.0.0.1:&lt;ACTUAL_PORT&gt;/…</text>
+<rect x="50" y="342" width="405" height="443" rx="16" fill="#FFFFFF" stroke="#A6B4C5" stroke-width="2"/>
+<rect x="52" y="344" width="401" height="62" rx="14" fill="#E6F1FA" stroke="none" stroke-width="2"/>
+<text x="75" y="384" font-family="DejaVu Sans" font-size="27" font-weight="bold" fill="#13263F" text-anchor="start">DEVTOOLS / schematic</text>
+<circle cx="91" cy="448" r="22" fill="#005B96"/>
+<text x="91" y="456" font-family="DejaVu Sans" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle">3</text>
+<text x="127" y="457" font-family="DejaVu Sans" font-size="28" font-weight="bold" fill="#13263F" text-anchor="start">Application</text>
+<rect x="76" y="480" width="351" height="65" rx="10" fill="#E6F1FA" stroke="none" stroke-width="2"/>
+<text x="96" y="520" font-family="DejaVu Sans" font-size="23" font-weight="bold" fill="#13263F" text-anchor="start">Service Workers / workers</text>
+<text x="78" y="597" font-family="DejaVu Sans" font-size="23" font-weight="normal" fill="#13263F" text-anchor="start">Chrome: Service Workers</text>
+<text x="78" y="637" font-family="DejaVu Sans" font-size="23" font-weight="normal" fill="#13263F" text-anchor="start">Edge: Service workers</text>
+<text x="78" y="677" font-family="DejaVu Sans" font-size="23" font-weight="normal" fill="#13263F" text-anchor="start">Use the visible equivalent</text>
+<text x="78" y="717" font-family="DejaVu Sans" font-size="23" font-weight="normal" fill="#13263F" text-anchor="start">in your installed version.</text>
+<rect x="487" y="342" width="1063" height="443" rx="16" fill="#FFFFFF" stroke="#A6B4C5" stroke-width="2"/>
+<rect x="489" y="344" width="1059" height="62" rx="14" fill="#E6F1FA" stroke="none" stroke-width="2"/>
+<text x="512" y="384" font-family="DejaVu Sans" font-size="27" font-weight="bold" fill="#13263F" text-anchor="start">SERVICE WORKER INSPECTION / record what is actually visible</text>
+<circle cx="530" cy="448" r="22" fill="#006E65"/>
+<text x="530" y="456" font-family="DejaVu Sans" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle">4</text>
+<text x="566" y="457" font-family="DejaVu Sans" font-size="28" font-weight="bold" fill="#13263F" text-anchor="start">Separate current state from this diagram</text>
+<text x="566" y="503" font-family="DejaVu Sans Mono" font-size="25" font-weight="normal" fill="#13263F" text-anchor="start">Origin:  record the actual origin and port</text>
+<text x="566" y="548" font-family="DejaVu Sans Mono" font-size="25" font-weight="normal" fill="#13263F" text-anchor="start">Script:  record the resolved script URL</text>
+<text x="566" y="593" font-family="DejaVu Sans Mono" font-size="25" font-weight="normal" fill="#13263F" text-anchor="start">Scope:   record the registration scope</text>
+<text x="566" y="638" font-family="DejaVu Sans Mono" font-size="25" font-weight="normal" fill="#13263F" text-anchor="start">State:   record installing / waiting / active</text>
+<text x="566" y="683" font-family="DejaVu Sans Mono" font-size="25" font-weight="normal" fill="#13263F" text-anchor="start">Control: inspect the current-page controller separately</text>
+<rect x="50" y="815" width="1500" height="60" rx="12" fill="#FFF2D6" stroke="none" stroke-width="2"/>
+<text x="72" y="849.0" font-family="DejaVu Sans" font-size="23" font-weight="normal" fill="#13263F" text-anchor="start">Offline and Cache Storage are conditional extension tools. The supplied P02 cache is empty; it does not</text>
+<text x="72" y="878.9" font-family="DejaVu Sans" font-size="23" font-weight="normal" fill="#13263F" text-anchor="start">establish offline readiness.</text>
+<line x1="50" y1="891" x2="1550" y2="891" stroke="#A6B4C5" stroke-width="3"/>
+<text x="50" y="926" font-family="DejaVu Sans" font-size="21" font-weight="bold" fill="#13263F" text-anchor="start">Illustrative interface diagram: locate the documented Chromium Service Worker inspection area and record the</text>
+<text x="50" y="954" font-family="DejaVu Sans" font-size="21" font-weight="bold" fill="#13263F" text-anchor="start">state you see.</text>
+<text x="50" y="981" font-family="DejaVu Sans" font-size="19" font-weight="normal" fill="#40516A" text-anchor="start">Locally authored diagram • No actual interface capture • Record your own browser, version, origin and evidence.</text>
+</svg>

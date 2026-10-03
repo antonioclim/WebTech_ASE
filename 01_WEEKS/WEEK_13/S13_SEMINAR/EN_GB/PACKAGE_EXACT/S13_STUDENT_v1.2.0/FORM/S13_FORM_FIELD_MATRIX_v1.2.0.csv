@@ -1,0 +1,61 @@
+order,section,field_id,label,kind,phase,origin,maximum_characters
+1,identity_execution,student_code,Student code or approved alias,text,core,PRESERVE_EXISTING_ID,256
+2,identity_execution,package_id,Public package ID,text,core,PRESERVE_EXISTING_ID,256
+3,identity_execution,environment_node,Actual Node.js and npm environment,textarea,core,PRESERVE_EXISTING_ID,16000
+4,identity_execution,environment_browser,Actual browser environment or honest block,textarea,core,PRESERVE_EXISTING_ID,16000
+5,identity_execution,execution_class,Evidence execution class,select,core,PRESERVE_EXISTING_ID,16000
+6,identity_execution,install_status,Installation/runtime status,select,core,PRESERVE_EXISTING_ID,16000
+7,identity_execution,initial_scope,Initial assessed scope and source identity,textarea,core,PRESERVE_EXISTING_ID,16000
+8,identity_execution,observation_date,Date of these observations,text,core,NEW_EXPLICIT_PROVENANCE_OR_METADATA,256
+9,identity_execution,seminar_id,Seminar ID,text,core,NEW_EXPLICIT_PROVENANCE_OR_METADATA,256
+10,identity_execution,kit_version,Kit version,text,core,NEW_EXPLICIT_PROVENANCE_OR_METADATA,256
+11,identity_execution,environment_os,Actual operating system,text,core,NEW_EXPLICIT_PROVENANCE_OR_METADATA,256
+12,protocol_prediction,selected_boundary,Selected browser boundary,select,core,PRESERVE_EXISTING_ID,16000
+13,protocol_prediction,worker_owner,"Worker, pending-state and DOM ownership map",textarea,core,PRESERVE_EXISTING_ID,16000
+14,protocol_prediction,request_id_policy,Request ID generation and reuse policy,textarea,core,PRESERVE_EXISTING_ID,16000
+15,protocol_prediction,predicted_sync_reply,Prediction for a synchronous reply,textarea,core,PRESERVE_EXISTING_ID,16000
+16,protocol_prediction,predicted_out_of_order,Prediction for out-of-order completion,textarea,core,PRESERVE_EXISTING_ID,16000
+17,protocol_prediction,predicted_terminal_cleanup,Predicted cleanup for every terminal path,textarea,core,PRESERVE_EXISTING_ID,16000
+18,protocol_prediction,prediction_limit,Prediction limitation,textarea,core,PRESERVE_EXISTING_ID,16000
+19,p01_implementation_evidence,p01_diff_locator,P01 narrow diff or hash locator,textarea,later,PRESERVE_EXISTING_ID,16000
+20,p01_implementation_evidence,p01_validation,Input validation and pre-abort evidence,textarea,later,PRESERVE_EXISTING_ID,16000
+21,p01_implementation_evidence,p01_lazy_worker,Lazy Worker creation evidence,textarea,later,PRESERVE_EXISTING_ID,16000
+22,p01_implementation_evidence,p01_pending_before_send,Pending-before-send evidence,textarea,later,PRESERVE_EXISTING_ID,16000
+23,p01_implementation_evidence,p01_sync_reply,Synchronous reply evidence,textarea,later,PRESERVE_EXISTING_ID,16000
+24,p01_implementation_evidence,p01_reverse_order,Out-of-order correlation evidence,textarea,later,PRESERVE_EXISTING_ID,16000
+25,p01_implementation_evidence,p01_progress,Monotonic progress evidence,textarea,later,PRESERVE_EXISTING_ID,16000
+26,p01_implementation_evidence,p01_abort,Abort settlement evidence,textarea,later,PRESERVE_EXISTING_ID,16000
+27,p01_implementation_evidence,p01_cancel_envelope,Cancel envelope evidence,textarea,later,PRESERVE_EXISTING_ID,16000
+28,p01_implementation_evidence,p01_worker_error,Worker error evidence,textarea,later,PRESERVE_EXISTING_ID,16000
+29,p01_implementation_evidence,p01_messageerror,Message error evidence,textarea,later,PRESERVE_EXISTING_ID,16000
+30,p01_implementation_evidence,p01_dispose,Dispose and termination evidence,textarea,later,PRESERVE_EXISTING_ID,16000
+31,p01_implementation_evidence,p01_pending_final,Final pending-count evidence,textarea,later,PRESERVE_EXISTING_ID,16000
+32,p01_implementation_evidence,p01_listener_final,Final listener evidence,textarea,later,PRESERVE_EXISTING_ID,16000
+33,p01_implementation_evidence,p01_worker_final,Final worker ownership evidence,textarea,later,PRESERVE_EXISTING_ID,16000
+34,p01_implementation_evidence,p01_id_reuse_policy,Retired-ID or reuse policy evidence,textarea,later,PRESERVE_EXISTING_ID,16000
+35,p01_implementation_evidence,p01_actual_or_model,Actual browser evidence or explicit model classification,textarea,later,PRESERVE_EXISTING_ID,16000
+36,p01_implementation_evidence,p01_limit,P01 remaining limitation,textarea,later,PRESERVE_EXISTING_ID,16000
+37,p02_guided_trace,p02_control_state,"Registered, active, ready and controlled state",textarea,later,PRESERVE_EXISTING_ID,16000
+38,p02_guided_trace,p02_target_request,Target request and eligibility trace,textarea,later,PRESERVE_EXISTING_ID,16000
+39,p02_guided_trace,p02_uncontrolled_fallback,Uncontrolled-client fallback trace,textarea,later,PRESERVE_EXISTING_ID,16000
+40,p02_guided_trace,p02_source_version_check,Source and protocol-version check,textarea,later,PRESERVE_EXISTING_ID,16000
+41,p02_guided_trace,p02_controllerchange,Controller-change lifecycle trace,textarea,later,PRESERVE_EXISTING_ID,16000
+42,p02_guided_trace,p02_limit,P02 guided-trace limitation,textarea,later,PRESERVE_EXISTING_ID,16000
+43,regression_harness_launch,rh_package_locator,Regression Harness package locator,textarea,later,PRESERVE_EXISTING_ID,16000
+44,regression_harness_launch,rh_target_contract,Regression target contract,textarea,later,PRESERVE_EXISTING_ID,16000
+45,regression_harness_launch,rh_test_matrix_draft,"Initial unit, integration and HTTP matrix",textarea,later,PRESERVE_EXISTING_ID,16000
+46,regression_harness_launch,rh_mutation_candidate,Initial mutation candidate,textarea,later,PRESERVE_EXISTING_ID,16000
+47,regression_harness_launch,rh_outstanding_before_s14,Outstanding work before S14,textarea,later,PRESERVE_EXISTING_ID,16000
+48,gemini_reflection,gemini_claim,Sanitised falsifiable claim,textarea,later,PRESERVE_EXISTING_ID,16000
+49,gemini_reflection,gemini_excerpt,Relevant actual Gemini excerpt or pending state,textarea,later,PRESERVE_EXISTING_ID,16000
+50,gemini_reflection,independent_check,Independent check,textarea,later,PRESERVE_EXISTING_ID,16000
+51,gemini_reflection,verdict,Verdict,select,later,PRESERVE_EXISTING_ID,16000
+52,gemini_reflection,correction_limit,Correction and remaining limitation,textarea,later,PRESERVE_EXISTING_ID,16000
+53,gemini_reflection,gemini_evidence_kind,Gemini evidence kind,select,later,NEW_EXPLICIT_PROVENANCE_OR_METADATA,16000
+54,gemini_reflection,gemini_prompt,Bounded prompt used or prepared,textarea,later,NEW_EXPLICIT_PROVENANCE_OR_METADATA,16000
+55,gemini_reflection,gemini_claim_class,Claim classification,select,later,NEW_EXPLICIT_PROVENANCE_OR_METADATA,16000
+56,gemini_reflection,reflection,Reflection on the evidence and Economic Informatics,textarea,later,NEW_EXPLICIT_PROVENANCE_OR_METADATA,16000
+57,declarations_pdf,outstanding_work,Outstanding required work,textarea,later,PRESERVE_EXISTING_ID,16000
+58,declarations_pdf,declaration,Truthfulness and redaction declaration,select,later,PRESERVE_EXISTING_ID,16000
+59,declarations_pdf,pdf_review_submission,PDF review and submission state,select,later,PRESERVE_EXISTING_ID,16000
+60,declarations_pdf,privacy_check,Privacy review,select,later,NEW_EXPLICIT_PROVENANCE_OR_METADATA,16000
