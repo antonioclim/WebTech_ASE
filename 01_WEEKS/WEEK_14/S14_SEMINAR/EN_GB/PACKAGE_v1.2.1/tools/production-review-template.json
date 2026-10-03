@@ -1,0 +1,97 @@
+{
+  "schema": "TW2026_S14_PRODUCTION_REVIEW/1.2",
+  "project": "",
+  "rows": [
+    {
+      "id": "PROJECT_IDENTITY",
+      "claim": "Project Identity",
+      "source": "",
+      "state": "unknown",
+      "owner": "",
+      "nextAction": "",
+      "limit": ""
+    },
+    {
+      "id": "LOCKED_INSTALL",
+      "claim": "Locked Install",
+      "source": "",
+      "state": "unknown",
+      "owner": "",
+      "nextAction": "",
+      "limit": ""
+    },
+    {
+      "id": "DEPENDENCY_AUDIT",
+      "claim": "Dependency Audit",
+      "source": "",
+      "state": "unknown",
+      "owner": "",
+      "nextAction": "",
+      "limit": ""
+    },
+    {
+      "id": "PRODUCTION_BUILD",
+      "claim": "Production Build",
+      "source": "",
+      "state": "unknown",
+      "owner": "",
+      "nextAction": "",
+      "limit": ""
+    },
+    {
+      "id": "RUNTIME_HEALTH",
+      "claim": "Runtime Health",
+      "source": "",
+      "state": "unknown",
+      "owner": "",
+      "nextAction": "",
+      "limit": ""
+    },
+    {
+      "id": "LOG_REDACTION",
+      "claim": "Log Redaction",
+      "source": "",
+      "state": "unknown",
+      "owner": "",
+      "nextAction": "",
+      "limit": ""
+    },
+    {
+      "id": "CONFIG_SECRETS",
+      "claim": "Config Secrets",
+      "source": "",
+      "state": "unknown",
+      "owner": "",
+      "nextAction": "",
+      "limit": ""
+    },
+    {
+      "id": "HTTP_ERROR_HEADERS",
+      "claim": "Http Error Headers",
+      "source": "",
+      "state": "unknown",
+      "owner": "",
+      "nextAction": "",
+      "limit": ""
+    },
+    {
+      "id": "DEPLOYMENT",
+      "claim": "Deployment",
+      "source": "",
+      "state": "unknown",
+      "owner": "",
+      "nextAction": "",
+      "limit": ""
+    },
+    {
+      "id": "EXCEPTIONS",
+      "claim": "Exceptions",
+      "source": "",
+      "state": "unknown",
+      "owner": "",
+      "nextAction": "",
+      "limit": ""
+    }
+  ],
+  "decision": "unknown"
+}
