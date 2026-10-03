@@ -1,0 +1,83 @@
+{
+  "p01": {
+    "root": "projects/p01/student",
+    "allowed_changes": [
+      "src/App.jsx"
+    ],
+    "files": {
+      "README.md": "ea8aa9692cb4f914b73fced003022e6184c002fb66ce956070bb41a73c3715fe",
+      "index.html": "df5bda49eb3d0a64daed558c9b6c84a0d6700875bf727ad9ef529bfe477e27e6",
+      "package-lock.json": "66e8a92ed30ad8f9fad97db1e5da70cda7446de149d355cc523d2d30f6848996",
+      "package.json": "43d9f83da6f513c14b327f70241f1801788d18b9d083ba6da1deda5cc6a0e250",
+      "s08_checks/additional.check.jsx": "ddddb41f9d514641feb940a78bcce8217cb83184666233f063a8532f6f626384",
+      "s08_checks/config.js": "c9701fcce0a52f67a4d687276730f7995fd6e6614e7c14892fb79d453c0303d0",
+      "src/App.jsx": "07ef32942272fbd0bfaad715956c3a0ffe3b1effff6e61a43489f909843fb9b2",
+      "src/main.jsx": "674c6f46ff2a9a06851ff1e3971a788c72486f17741c005fb5a8ec28499eb11f",
+      "src/storage.js": "53ef1f0e75f0a54cf1bea722fd4a21f337f52d17d85a2fc9f484a2b47271e119",
+      "src/styles.css": "c37cb899bb5d6c30e26892b38ae0b5783c390076fd1c1e85befcbc1dc27de322",
+      "tests/baseline.test.js": "b1acf7c19e461d26bbf0c88e02dc19410276f9bcf723b60e07c56473684f66ed",
+      "tests/helpers.jsx": "d4d78ca3e271bf3a672dfd88df7a8dd0fc5806f3ba80df5664064be684147eb6",
+      "tests/objective.test.jsx": "a893405333885c8b229d36ebefbc5ed33f12eee9dfe8271ce1406ccb9a5486b0",
+      "tests/regression.test.jsx": "3a81d59058434eefa2ddb8038aa307ce2feabb857d567fec16d1b56ef91b20fe",
+      "tests/setup.js": "25c47e8e142f35bcf62b021a3f71164e459932cf0bd5b8761dc6d01b5e5fba31",
+      "vanilla/index.html": "606c79b416a9fe3009b6e95bd0273ed53717d210e0af860f2dd8a810b5aa3251",
+      "vanilla/reading-queue.js": "1d90a2fb306f1b0d1026389e42565bb7f1c1722502d7447d823573bf0f04621d",
+      "vite.config.js": "6d5d9601345ee02b422bc6b327a6d2e969e77664b048beb349f5f3b0fb94ad2e"
+    }
+  },
+  "p03": {
+    "root": "projects/p03/student",
+    "allowed_changes": [
+      "src/SearchPanel.jsx"
+    ],
+    "files": {
+      "README.md": "657434ee935e0eaa862a320d01725d3e977a394bf8d1729e24209b4946f74f23",
+      "evidence/GeneratedSearchPanel.jsx": "3a6db9023b1151511f928c7ce49fd920f7dacb6c51b9c06997fb09adb6152b7a",
+      "index.html": "9f2bdee45ecb62cb98da40df5249b0ac1ce7d6a2e8c26c7c9312b2a2aa304eda",
+      "package-lock.json": "fe71668e34ea128e80f423412097f4308cd9ab064a685f1eb683430ec62057ec",
+      "package.json": "59c72d5073cb54a7f6e8613d70057cc2a4eb763f74a66d1b2538d550c7cbb862",
+      "s08_checks/additional.check.jsx": "9e0214c2397424e1b492fda0e9c961bd68ec7d368e2b1ecdd53e0296b10f093a",
+      "s08_checks/config.js": "c9701fcce0a52f67a4d687276730f7995fd6e6614e7c14892fb79d453c0303d0",
+      "src/SearchPanel.jsx": "e0028a5ec352831cc3dcbabea9b3825401140fb18f19aeba9305516f15657509",
+      "src/demo-search.js": "4b0813697f7405ec1c0f63a38331120ff973508bec8e5cce54ca2b0997c0f98c",
+      "src/main.jsx": "a3dfe4d2e908eaea884d1d6ee198e59cda50a9bcbf9da283109ef8501a3bd1e9",
+      "src/styles.css": "6544ae202b1cb038e28c9bd5183d1ee5c7983c2c022ca4c59f03fa13b8ea871a",
+      "tests/baseline.test.jsx": "c36c415cf67ee64e38beb515f49b76caf5d19ea9a0ab20167d9643dd058b56c7",
+      "tests/helpers.jsx": "015ce4b6e98583abb704be16906e224387eef2bacd43d6139e20e21d5831d81d",
+      "tests/objective.test.jsx": "d78779043d3154da75f93431305c3734306c2fde49174a71a1142a724e28380f",
+      "tests/regression.test.jsx": "11926a08917b72ed1bf3f03af0e92fce0a53210b9821ad910c573c9186da4fb7",
+      "tests/setup.js": "f6a3591a31193bda3fae485d3ff6a05ae21237b3633b46d8c52dd3155b634fdd",
+      "vite.config.js": "6d5d9601345ee02b422bc6b327a6d2e969e77664b048beb349f5f3b0fb94ad2e"
+    }
+  },
+  "p02": {
+    "root": "optional/p02/student",
+    "allowed_changes": [
+      "src/WorkshopDashboard.jsx",
+      "src/components/WorkshopToolbar.jsx",
+      "src/components/CapacitySummary.jsx",
+      "src/components/RegistrationForm.jsx",
+      "src/components/AttendeeList.jsx",
+      "src/components/AttendeeRow.jsx"
+    ],
+    "files": {
+      "README.md": "4f951ecb781a35621baedc6efac8d0e1a8e072ea37bc7087c8d6a20d978e59bd",
+      "evidence/OversizedWorkshopDashboard.jsx": "b7a74c42cb5f9e680be2cc6f51bc03ddc44963fba2c149701c879681ecbab07b",
+      "index.html": "0895acf5b59d1efde530e12eb378bfa40a49bc0383454125646099510a1e42ed",
+      "package-lock.json": "48ef02544ea98ae913ae9298cc7c3c53f15f1f31f8668c1e90efd09f35640a59",
+      "package.json": "157a7a8b3296db7eda00883891edcdcd07cdb7fce838bfdbb8e48441c1e14f3f",
+      "s08_checks/additional.check.jsx": "80221061c2b85e7046aa6d1c01bb04bfbdab9a554a341c4788d6ad5c57f1de26",
+      "s08_checks/config.js": "c9701fcce0a52f67a4d687276730f7995fd6e6614e7c14892fb79d453c0303d0",
+      "src/WorkshopDashboard.jsx": "281e035c13f768d97d2a929e4926d529444e2c952be76300d71b6db3fae617ba",
+      "src/fixtures.js": "5862953cbd32ee58ae7c76ac23edae9872d2a16ae31d22365ef4cc1ddab16976",
+      "src/main.jsx": "8899f8686fc57f460e16d008ebe1a7363f353192d1497595837a77d55b416022",
+      "src/styles.css": "5c079ff20ee7c18ba91cdd7367712613a1b56b081d7d2e95edec9eca1c29434c",
+      "tests/baseline.test.jsx": "521fefb60feb62dd522202b0f4b9f58880d9180dfca4f4489bd1b0f8f93010bd",
+      "tests/helpers.jsx": "78943aeff74a89e856b62366a8ebc5ab71a4d30c1559b08aba028b33008b0322",
+      "tests/objective.test.jsx": "f4032885f0f7fe39eb0ce0bcdffab03da3e719ba93d569a31e8911d195a51969",
+      "tests/regression.test.jsx": "3fc922638d00681420c671a0b375991f3cd17dd5ea6f08483d39b84dafbc1c08",
+      "tests/setup.js": "f6a3591a31193bda3fae485d3ff6a05ae21237b3633b46d8c52dd3155b634fdd",
+      "vite.config.js": "6d5d9601345ee02b422bc6b327a6d2e969e77664b048beb349f5f3b0fb94ad2e"
+    }
+  }
+}
