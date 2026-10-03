@@ -1,0 +1,12 @@
+I am evaluating one lifecycle claim in a teaching exercise, not requesting an implementation. Do not write, replace or complete the request dispatcher.
+
+FLAWED CLAIM:
+After a request completes or is aborted, dispatcher.pendingCount === 0 proves that the dispatcher, adapter, socket and remote work are all cleaned up.
+
+MINIMAL SANITISED SCHEMATIC EXCERPT — not a complete implementation:
+const offMessage = transport.onMessage(handleMessage);
+const offClose = transport.onClose(handleClose);
+// pendingCount reports pending.size, a per-request map.
+// dispose() separately calls offMessage() and offClose().
+
+Review only this claim and excerpt. Distinguish Observed, Inferred and Unknown. Name a bounded counterexample or check that could falsify the claim. Separate per-request pending/timer/abort cleanup from dispatcher subscriptions, adapter listeners, socket lifetime and remote execution. Do not assume that local abort cancels remote work. Suggest one narrowly scoped correction and explain what the excerpt cannot establish. Keep your response concise and do not invent test output.
