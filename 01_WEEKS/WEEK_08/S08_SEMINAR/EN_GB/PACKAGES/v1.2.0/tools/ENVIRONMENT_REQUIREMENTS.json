@@ -1,0 +1,14 @@
+{
+  "version": "1.2.0",
+  "node_required": "24.21.0",
+  "npm_required": "11.19.0",
+  "required_versions_status": "DECLARED_REQUIREMENTS_NOT_OBSERVED",
+  "canonical_runtime_executed_in_production": false,
+  "browser_status": "NOT_OBSERVED",
+  "windows_status": "NOT_OBSERVED",
+  "macOS_status": "NOT_OBSERVED",
+  "linux_desktop_status": "NOT_OBSERVED",
+  "install_or_network_authorised_by_this_file": false,
+  "python_verifier": "Installed Python 3.9 or later, standard library only",
+  "unknown_or_mismatch_route": "Record the raw output and environment limit; stop project commands and use teacher_exception. No automatic install, download or package command."
+}

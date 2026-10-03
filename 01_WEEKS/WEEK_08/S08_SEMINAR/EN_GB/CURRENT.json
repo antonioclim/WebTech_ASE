@@ -1,0 +1,14 @@
+{
+  "schema": "tw2026.s08.current_pointer.v1",
+  "version": "1.2.0",
+  "package_root": "PACKAGES/v1.2.0",
+  "archive": "DOWNLOAD/TW2026_S08_STUDENT_EN_GB_v1.2.0_FINAL_LOCAL.zip",
+  "archive_sha256": "8e65cf646ca9f46ad46e2ae839dc14e4b2ca4dd3c60a79dac85202dd7c18e131",
+  "package_id": "fe2dec0f8f5b4733aeb4d6495eee0d4cd45365cc789654dda42c2e2582642db3",
+  "source_of_truth": "SOURCE_OF_TRUTH_v1.2.0.json",
+  "state": "LOCAL_PUBLISHED_READY_WITH_PLATFORM_LIMITS",
+  "remote_state": "UNKNOWN_NOT_RECONFIRMED",
+  "remote_publication_performed": false,
+  "activation_batch": "005",
+  "legacy": "SUPERSEDED_RETAINED_BYTE_EXACT_NO_DELETION"
+}

@@ -1,0 +1,454 @@
+/* Implemented S08 schema, not imported S07 domain fields. */
+globalThis.S08_SCHEMA = {
+  "schema": "TW2026_S08_EVIDENCE",
+  "implementation_status": "IMPLEMENTED_LOCAL_NOT_NATIVE_BROWSER_QUALIFIED",
+  "sections": [
+    {
+      "id": "identity",
+      "fields": [
+        {
+          "id": "student_identity",
+          "label": "Student identity and group",
+          "kind": "text",
+          "max": 16000,
+          "default": "",
+          "help": "Enter GROUP | Surname | GivenName. Use your student identity only; no identity-document numbers. These three parts propose the PDF filename.",
+          "phase": "core"
+        },
+        {
+          "id": "package_identity",
+          "label": "Package/source identity",
+          "kind": "textarea",
+          "max": 16000,
+          "default": "",
+          "help": "Record S08 v1.1.0, PACKAGE_ID.txt and your assessed file identity. Distinguish student source from any teaching preview.",
+          "phase": "core"
+        },
+        {
+          "id": "actual_runtime",
+          "label": "Actual Node/npm and execution environment",
+          "kind": "textarea",
+          "max": 16000,
+          "default": "",
+          "help": "Copy actual node --version and npm --version output plus OS and browser/version where used. Do not copy the prescribed pin as an observation.",
+          "phase": "core"
+        },
+        {
+          "id": "execution_class",
+          "label": "SOURCE_REASONING / MODEL / REACT_TEST / REACT_BROWSER / NOT_EXECUTED",
+          "kind": "select",
+          "max": 16000,
+          "default": "",
+          "help": "Choose the strongest actual evidence class represented. MODEL and SOURCE_REASONING are not actual React execution. Per-check classes still belong in the traces.",
+          "phase": "core",
+          "options": [
+            "",
+            "SOURCE_REASONING",
+            "MODEL",
+            "REACT_TEST",
+            "REACT_BROWSER",
+            "NOT_EXECUTED",
+            "SEPARATELY_AUTHORISED_ALTERNATIVE"
+          ]
+        },
+        {
+          "id": "environment_limit",
+          "label": "Environment block or qualification limit",
+          "kind": "textarea",
+          "max": 16000,
+          "default": "",
+          "help": "State the actual block or write NONE for no known block. No field value qualifies the environment.",
+          "phase": "core"
+        }
+      ],
+      "title": "1. Identity and evidence class",
+      "intro": "Record actual work; use explicit pending labels for unfinished evidence. Never convert a model result into a React observation."
+    },
+    {
+      "id": "prediction",
+      "fields": [
+        {
+          "id": "p01_prediction",
+          "label": "Prediction before the selected individual action",
+          "kind": "textarea",
+          "max": 16000,
+          "default": "",
+          "help": "Record before your selected action: fixture, input, predicted state/output and a falsifying observation. A reconstructed prediction must be labelled retrospective.",
+          "phase": "core"
+        },
+        {
+          "id": "ownership_map",
+          "label": "Vanilla responsibility to React owner map",
+          "kind": "textarea",
+          "max": 16000,
+          "default": "",
+          "help": "Map initialisation, input, items, filter, counts, events, rendering and storage to owners. Include all four required child responsibilities.",
+          "phase": "core"
+        },
+        {
+          "id": "fixture",
+          "label": "Exact initial items and storage fixture",
+          "kind": "textarea",
+          "max": 16000,
+          "default": "",
+          "help": "Paste exact initial items and stored JSON or the explicit absence. Use the same valid fixture for both compared implementations. State the storage namespace.",
+          "phase": "core"
+        },
+        {
+          "id": "edit_boundary",
+          "label": "App.jsx-only assessment diff boundary",
+          "kind": "textarea",
+          "max": 16000,
+          "default": "",
+          "help": "Record the assessed path projects/p01/student/src/App.jsx and boundary-check result. Preview changes are separate and do not enlarge the permitted student edit.",
+          "phase": "core"
+        }
+      ],
+      "title": "2. Prediction and ownership",
+      "intro": "Record actual work; use explicit pending labels for unfinished evidence. Never convert a model result into a React observation."
+    },
+    {
+      "id": "p01_evidence",
+      "fields": [
+        {
+          "id": "p01_completion",
+          "label": "P01 implementation status and unfinished work",
+          "kind": "select",
+          "max": 16000,
+          "default": "",
+          "help": "Keep IN_PROGRESS until the full P01 contract is evidenced. An 18-minute implementation segment is not project completion.",
+          "phase": "core",
+          "options": [
+            "",
+            "NOT_STARTED",
+            "IN_PROGRESS",
+            "COMPLETE_RECORDED"
+          ]
+        },
+        {
+          "id": "transition_trace",
+          "label": "Add/toggle/remove/filter trace with input and output",
+          "kind": "textarea",
+          "max": 60000,
+          "default": "",
+          "help": "Give named steps for trim/blank add, toggle, remove, all/remaining/read counts, empty view and semantic controls; include actual outputs and evidence locators.",
+          "phase": "final"
+        },
+        {
+          "id": "persistence_trace",
+          "label": "Initialisation and filter-only storage observation",
+          "kind": "textarea",
+          "max": 16000,
+          "default": "",
+          "help": "Distinguish initial writes from later events. State exact complete-array output and the filter-only write count from your actual check.",
+          "phase": "final"
+        },
+        {
+          "id": "identity_trace",
+          "label": "ID uniqueness and reload evidence or explicit gap",
+          "kind": "textarea",
+          "max": 16000,
+          "default": "",
+          "help": "State actual add-after-reload evidence with source/preview path and IDs, or label the gap. Fresh allocation cannot repair duplicate IDs already stored or guarantee concurrent-tab uniqueness.",
+          "phase": "final"
+        },
+        {
+          "id": "baseline_result",
+          "label": "Baseline command/name/result and evidence",
+          "kind": "textarea",
+          "max": 16000,
+          "default": "",
+          "help": "Final candidate format: ACTUAL_RECORDED: PASS; command; named checks; evidence locator. Otherwise use NOT_EXECUTED/BLOCKED/FAIL with cause.",
+          "phase": "final"
+        },
+        {
+          "id": "objective_result",
+          "label": "Objective command/named failure class/result",
+          "kind": "textarea",
+          "max": 16000,
+          "default": "",
+          "help": "Record all six canonical P01 objective checks separately from additional checks. Use ACTUAL_RECORDED: PASS only for actual execution.",
+          "phase": "final"
+        },
+        {
+          "id": "regression_result",
+          "label": "Regression command/result",
+          "kind": "textarea",
+          "max": 16000,
+          "default": "",
+          "help": "Record canonical regression command, result and locator. It is not a substitute for a React objective or reload test.",
+          "phase": "final"
+        },
+        {
+          "id": "build_result",
+          "label": "Build command/output or explicit not-run status",
+          "kind": "textarea",
+          "max": 16000,
+          "default": "",
+          "help": "Record actual build command/output and locator. A build does not prove behavioural parity. No installation is part of this form.",
+          "phase": "final"
+        },
+        {
+          "id": "browser_result",
+          "label": "Actual browser observations or pending",
+          "kind": "textarea",
+          "max": 16000,
+          "default": "",
+          "help": "Record actual browser/OS, selected steps, visible outcomes and locator. Include controls, initialisation/reload and storage limits. MODEL is not a browser result.",
+          "phase": "final"
+        },
+        {
+          "id": "p01_diff",
+          "label": "Sanitised bounded diff and unchanged-source check",
+          "kind": "textarea",
+          "max": 60000,
+          "default": "",
+          "help": "Paste the bounded App.jsx diff or complete changed file with locator. Add pages in the DOCX route for long evidence. Do not paste a private reference solution.",
+          "phase": "final"
+        }
+      ],
+      "title": "3. P01 complete implementation evidence",
+      "intro": "Record actual work; use explicit pending labels for unfinished evidence. Never convert a model result into a React observation."
+    },
+    {
+      "id": "p03_portfolio",
+      "fields": [
+        {
+          "id": "p03_prediction",
+          "label": "Predicted debounce/cleanup/publication timeline",
+          "kind": "textarea",
+          "max": 16000,
+          "default": "",
+          "help": "Before execution, draw old/new timing, debounce, cleanup and publication expectations with a named fake.",
+          "phase": "final"
+        },
+        {
+          "id": "p03_diagnostic",
+          "label": "Diagnosis tied to weak evidence and exact source",
+          "kind": "textarea",
+          "max": 16000,
+          "default": "",
+          "help": "Tie your diagnosis to exact weak-source lines; separate missing-signal TypeError from lifecycle failures.",
+          "phase": "final"
+        },
+        {
+          "id": "p03_patch",
+          "label": "SearchPanel.jsx-only bounded patch excerpt and identity",
+          "kind": "textarea",
+          "max": 60000,
+          "default": "",
+          "help": "Paste your SearchPanel.jsx-only patch/explanation and file identity. Keep generated evidence/tests unchanged.",
+          "phase": "final"
+        },
+        {
+          "id": "p03_timeline",
+          "label": "Old/new/short-query/unmount evidence and ordering",
+          "kind": "textarea",
+          "max": 60000,
+          "default": "",
+          "help": "Record call order, timer steps, signals and settlements for old/new, shortened query and unmount. Label source/model versus actual test/browser.",
+          "phase": "final"
+        },
+        {
+          "id": "p03_guards",
+          "label": "Which guards and which fake were used",
+          "kind": "textarea",
+          "max": 16000,
+          "default": "",
+          "help": "Name the exact active/numeric/abort conditions and whether the fake settles after abort. Removing one guard need not create a race.",
+          "phase": "final"
+        },
+        {
+          "id": "p03_errors",
+          "label": "Unexpected error identity and sanitised display observation",
+          "kind": "textarea",
+          "max": 16000,
+          "default": "",
+          "help": "Record the unexpected error identity given to the logger and the sanitised visible message. Use only fabricated test data, never secrets.",
+          "phase": "final"
+        },
+        {
+          "id": "p03_checks",
+          "label": "Named P03 baseline/objective/regression/build results",
+          "kind": "textarea",
+          "max": 16000,
+          "default": "",
+          "help": "Final candidate format contains BASELINE: PASS; OBJECTIVE: PASS; REGRESSION: PASS; BUILD: PASS; with commands, evidence IDs and ACTUAL_RECORDED. Extra checks are separate and may remain explicitly unqualified.",
+          "phase": "final"
+        },
+        {
+          "id": "p03_limits",
+          "label": "Untested edge case including callback or runtime limit",
+          "kind": "textarea",
+          "max": 16000,
+          "default": "",
+          "help": "Record omitted-callback, unmount, accessibility and runtime checks not performed. Do not infer coverage from a test title.",
+          "phase": "final"
+        }
+      ],
+      "title": "4. Required P03 portfolio",
+      "intro": "Record actual work; use explicit pending labels for unfinished evidence. Never convert a model result into a React observation."
+    },
+    {
+      "id": "gemini",
+      "fields": [
+        {
+          "id": "gemini_mode",
+          "label": "ACTUAL_RECORDED / PENDING / separately authorised alternative",
+          "kind": "select",
+          "max": 16000,
+          "default": "",
+          "help": "ACTUAL_RECORDED means a real bounded exchange. Synthetic practice remains PENDING unless a prior, separate teacher authorisation specifies an alternative.",
+          "phase": "final",
+          "options": [
+            "",
+            "ACTUAL_RECORDED",
+            "PENDING",
+            "SEPARATELY_AUTHORISED_ALTERNATIVE"
+          ]
+        },
+        {
+          "id": "gemini_prompt",
+          "label": "Relevant sanitised prompt actually used",
+          "kind": "textarea",
+          "max": 16000,
+          "default": "",
+          "help": "Keep only the sanitised prompt actually used. Ask about one ownership/effect claim, not a complete implementation.",
+          "phase": "final"
+        },
+        {
+          "id": "gemini_claim",
+          "label": "Relevant claim actually received",
+          "kind": "textarea",
+          "max": 16000,
+          "default": "",
+          "help": "Keep the relevant answer extract and tool/date reference. Do not paste the full conversation or label synthetic text as received.",
+          "phase": "final"
+        },
+        {
+          "id": "independent_check",
+          "label": "Independent method and evidence locator",
+          "kind": "textarea",
+          "max": 16000,
+          "default": "",
+          "help": "State your independent method, actual result and evidence locator, not agreement between two AI answers.",
+          "phase": "final"
+        },
+        {
+          "id": "verdict",
+          "label": "ACCEPTED / REJECTED / PARTIALLY ACCEPTED / UNKNOWN",
+          "kind": "select",
+          "max": 16000,
+          "default": "",
+          "help": "Assess the claim, not the student. PARTIALLY_ACCEPTED is the stored code for PARTIALLY ACCEPTED. UNKNOWN is not PASS or an automatic waiver.",
+          "phase": "final",
+          "options": [
+            "",
+            "ACCEPTED",
+            "REJECTED",
+            "PARTIALLY_ACCEPTED",
+            "UNKNOWN"
+          ]
+        },
+        {
+          "id": "correction",
+          "label": "Correction justified by the witness",
+          "kind": "textarea",
+          "max": 16000,
+          "default": "",
+          "help": "State the correction supported by the witness, or explain why no change is justified.",
+          "phase": "final"
+        },
+        {
+          "id": "claim_limit",
+          "label": "Scope and unresolved uncertainty",
+          "kind": "textarea",
+          "max": 16000,
+          "default": "",
+          "help": "State what your check does not establish; an honest uncertainty can remain even after the check.",
+          "phase": "final"
+        }
+      ],
+      "title": "5. Actual Gemini claim and independent review",
+      "intro": "Record actual work; use explicit pending labels for unfinished evidence. Never convert a model result into a React observation."
+    },
+    {
+      "id": "reflection",
+      "fields": [
+        {
+          "id": "learning_transfer",
+          "label": "One ownership/identity lesson for the semester project",
+          "kind": "textarea",
+          "max": 16000,
+          "default": "",
+          "help": "Explain one ownership/identity/lifecycle lesson for the semester project in your own words.",
+          "phase": "final"
+        },
+        {
+          "id": "pending_work",
+          "label": "Remaining work and smallest next check",
+          "kind": "textarea",
+          "max": 16000,
+          "default": "",
+          "help": "List remaining required work and smallest next check. Use NONE only when no required work remains. Optional P02 may remain undone.",
+          "phase": "core"
+        },
+        {
+          "id": "evidence_index",
+          "label": "Locator list for snippets/screenshots/logs embedded in the PDF",
+          "kind": "textarea",
+          "max": 16000,
+          "default": "",
+          "help": "List only evidence embedded in this PDF: section/page/label. File paths alone do not embed screenshots or logs. Use the DOCX route to insert images.",
+          "phase": "final"
+        }
+      ],
+      "title": "6. Transfer, remaining work and evidence index",
+      "intro": "Record actual work; use explicit pending labels for unfinished evidence. Never convert a model result into a React observation."
+    },
+    {
+      "id": "declaration",
+      "fields": [
+        {
+          "id": "declaration",
+          "label": "Truthful individual work, actual observations distinguished from expectations",
+          "kind": "checkbox",
+          "max": 16000,
+          "default": false,
+          "help": "I performed the individual work described, distinguish actual observations from expectations/models and have not invented an AI exchange. This is not a teacher approval.",
+          "phase": "final"
+        },
+        {
+          "id": "teacher_exception",
+          "label": "Prior explicit authorisation if any; absence gives no exception",
+          "kind": "textarea",
+          "max": 16000,
+          "default": "NONE",
+          "help": "Default NONE. A separately authorised alternative must use AUTHORISATION: teacher=...; date=YYYY-MM-DD; scope=execution/gemini/both; reference=...; replacement=... . This form cannot grant or authenticate permission.",
+          "phase": "final"
+        },
+        {
+          "id": "pdf_status",
+          "label": "Draft/final candidate and local PDF review status",
+          "kind": "select",
+          "max": 16000,
+          "default": "",
+          "help": "Before saving select FINAL_CANDIDATE_NOT_YET_SAVED. After reopening and inspecting the saved PDF record LOCAL_PDF_REVIEWED_NOT_MOODLE_RECEIPT and regenerate as needed. Neither state establishes Moodle submission.",
+          "phase": "final",
+          "options": [
+            "",
+            "DRAFT_NOT_REVIEWED",
+            "FINAL_CANDIDATE_NOT_YET_SAVED",
+            "LOCAL_PDF_REVIEWED_NOT_MOODLE_RECEIPT"
+          ]
+        }
+      ],
+      "title": "7. Declaration and submission boundary",
+      "intro": "Record actual work; use explicit pending labels for unfinished evidence. Never convert a model result into a React observation."
+    }
+  ],
+  "field_count": 40,
+  "version": "1.0",
+  "packageVersion": "1.1.0",
+  "maxImportBytes": 2000000
+};
