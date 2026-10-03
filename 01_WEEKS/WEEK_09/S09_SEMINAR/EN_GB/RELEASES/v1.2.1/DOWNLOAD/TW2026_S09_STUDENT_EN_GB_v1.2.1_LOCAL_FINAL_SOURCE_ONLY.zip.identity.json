@@ -1,0 +1,19 @@
+{
+  "file": "TW2026_S09_STUDENT_EN_GB_v1.2.1_LOCAL_FINAL_SOURCE_ONLY.zip",
+  "archive_root": "TW2026_S09_STUDENT_EN_GB_v1.2.1_LOCAL_FINAL_SOURCE_ONLY",
+  "bytes": 6730459,
+  "sha256": "cb2f629f551ecd8dd5abf8f57c786cba93b5559c04916f5cb818455df1775907",
+  "package_id": "dda4b5dcf1f458a7661c45c58a6c3999d061b21b7a7f3f1687720bd93682395e",
+  "payload_files": 165,
+  "regular_files": 167,
+  "double_build": "EXACT_SAME_BYTES",
+  "phase": "3/4",
+  "status": "FINAL_LOCAL_SOURCE_RELEASE_WITH_EXTERNAL_GATES_OPEN",
+  "qualification": "SOURCE_DATA_SYNTHETIC_DOCUMENT_LAYOUT_ONLY",
+  "application_execution": "NOT_EXECUTED",
+  "owner_acceptance": "NOT_REQUESTED",
+  "remote": "UNKNOWN_NOT_RECONFIRMED",
+  "phase4_started": false,
+  "S10_started": false,
+  "remaining_normal_phases": 21
+}

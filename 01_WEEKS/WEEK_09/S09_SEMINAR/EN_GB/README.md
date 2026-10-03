@@ -1,15 +1,18 @@
-# S09 — English (British)
+# S09 — Routed Notes — English (British)
 
-WIP/PREVIEW, not FINAL.
+Local final source release with external acceptance gates open. This is a prepared local integration. Remote publication has not occurred. Applications need a separately qualified environment. Viewing HTML source in GitHub does not host a site.
 
-- [Open the complete student package](PACKAGE_EXACT/index.html)
-- [Open the interactive seminar](PACKAGE_EXACT/seminar.html)
-- [Open the 43-field evidence form](PACKAGE_EXACT/form.html)
-- [Read the required P03 portfolio](PACKAGE_EXACT/P03_PORTFOLIO.html)
-- [Read the P02 capstone transfer](PACKAGE_EXACT/P02_CAPSTONE_TRANSFER.html)
-- [Download the exact student ZIP](DOWNLOAD/WEBTECH_ASE_S09_STUDENT_EN_GB_v1.1.0_PUBLIC.zip)
-- [Original ZIP checksum](DOWNLOAD/WEBTECH_ASE_S09_STUDENT_EN_GB_v1.1.0_PUBLIC.zip.sha256)
+- [Beginner guide](RELEASES/v1.2.1/SOURCE_EXACT/guide/S09_INTERACTIVE_ULTRA_BEGINNER_GUIDE_EN_GB_v1.2.1.html)
+- [Student guide](RELEASES/v1.2.1/SOURCE_EXACT/companion/S09_STUDENT_GUIDE_EN_GB_v1.2.1.html)
+- [Required P03 portfolio](RELEASES/v1.2.1/SOURCE_EXACT/companion/S09_P03_PORTFOLIO_GUIDE_EN_GB_v1.2.1.html)
+- [Later P02 transfer](RELEASES/v1.2.1/SOURCE_EXACT/companion/S09_P02_TRANSFER_GUIDE_EN_GB_v1.2.1.html)
+- [54-field evidence form](RELEASES/v1.2.1/SOURCE_EXACT/form/FORM_S09_EN_GB.html)
+- [Seminar projection](RELEASES/v1.2.1/SOURCE_EXACT/projection/S09_SEMINAR_INTERACTIVE_PROJECTION_EN_GB_v1.2.0.html)
+- [Download the exact v1.2.1 student ZIP](RELEASES/v1.2.1/DOWNLOAD/TW2026_S09_STUDENT_EN_GB_v1.2.1_LOCAL_FINAL_SOURCE_ONLY.zip)
+- [Read the exact ZIP checksum](RELEASES/v1.2.1/DOWNLOAD/TW2026_S09_STUDENT_EN_GB_v1.2.1_LOCAL_FINAL_SOURCE_ONLY.zip.sha256)
+- [Read the current pointer](CURRENT_RELEASE_v1.2.1.json)
+- [Read the migration record](MIGRATION_FROM_PREVIOUS_VERSION_EN_GB.md)
 
-P01 Routed Notes is the sole full central implementation. P03 Deep-Link Failure Repair is required individual portfolio work. P02 Full-Stack Notes CRUD transfers to the semester project; it is not an extra full implementation or hidden marking criterion in the S09 hour. Each meeting has 60 minutes of content and an explicit STOP. The other 30 reserved minutes are not overflow. One final PDF is submitted to the private S09 Assignment after actual completion; there is no C09 Assignment or invented deadline.
+The v1.1.0 package and unversioned PACKAGE_EXACT tree are superseded for new work. They remain historical cleanup candidates; their present remote existence and identity have not been reconfirmed. This navigation links only the new release. No remote object has been deleted. Phase3 source and archive labels are preserved as provenance and the separate outer Phase4 state records this integration.
 
-PACKAGE_EXACT preserves the complete public archive. DOWNLOAD remains unchanged. Opening source on GitHub does not host a site or activate Pages.
+P01 is central individual work, P03 is required in the same PDF and P02 is conceptual transfer to a separate later capstone. Stop content after 60 minutes; the other 30 minutes are reserved. Submit one individual PDF named `TW2026_S09_GROUP_Surname_Firstname.pdf` through the actual assigned S09 activity after the save, reopen and review sequence in the guides. The actual deadline, upload size limit and service controls have not been verified here.

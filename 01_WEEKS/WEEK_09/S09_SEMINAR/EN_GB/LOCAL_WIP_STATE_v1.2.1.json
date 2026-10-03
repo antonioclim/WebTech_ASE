@@ -1,0 +1,37 @@
+{
+  "schema": "S09_PHASE4_LOCAL_WIP_STATE/1.0",
+  "language": "EN-GB",
+  "phase": "4/4",
+  "version": "1.2.1",
+  "scope": "SEMINAR_LOCAL_DELTA_ONLY",
+  "state_transition": [
+    {
+      "state": "SCAFFOLD_SOURCE_PATH_OBSERVED",
+      "basis": "SUPPLIED_HISTORICAL_REPOSITORY_CANDIDATE"
+    },
+    {
+      "state": "CANDIDATE_PHASE3_PINNED",
+      "basis": "cb2f629f551ecd8dd5abf8f57c786cba93b5559c04916f5cb818455df1775907"
+    },
+    {
+      "state": "PUBLISHED_READY_LOCAL",
+      "basis": "EXACT_LOCAL_UPLOAD_PAYLOAD_PREPARED_EXTERNAL_GATES_OPEN"
+    }
+  ],
+  "published": false,
+  "activated": false,
+  "remote_applied": false,
+  "remote": "UNKNOWN_NOT_RECONFIRMED",
+  "workflow_files_changed": [],
+  "current_workflow_manual_only_gate": "OPEN_NOT_RECONFIRMED",
+  "Actions_run_by_this_phase": 0,
+  "Pages_run_by_this_phase": 0,
+  "Releases_created_by_this_phase": 0,
+  "tags_created_by_this_phase": 0,
+  "application_execution": "NOT_EXECUTED",
+  "external_owner_acceptance": "NOT_REQUESTED",
+  "phase3_exact_source_labels": "HISTORICAL_UNMODIFIED",
+  "global_repository_identity": "NOT_REGENERATED_WIP",
+  "S10_started": false,
+  "remaining_normal_phases_after_phase4_delivery": 20
+}

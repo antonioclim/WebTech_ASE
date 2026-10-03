@@ -1,5 +1,5 @@
-# S09
+# S09 — Routed Notes
 
-[English (British)](EN_GB/README.md)
+[English (British) current materials](EN_GB/README.md)
 
-WIP/PREVIEW. No additional language edition is invented.
+The v1.2.1 final local source release is prepared for local WIP integration. Remote publication and external acceptance remain open.
