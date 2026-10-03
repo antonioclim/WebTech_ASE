@@ -1,0 +1,21 @@
+{
+  "kit": "S07",
+  "version": "1.2.1",
+  "status": "FINAL_LOCAL_CONTENT_AND_PACKAGING_NATIVE_EXTERNAL_GATES_OPEN",
+  "student_technical_files": 39,
+  "reference_technical_files": 39,
+  "original_inputs_immutable": true,
+  "student_allowed_edit": "02_PROJECTS/p02/src/book-seats.js",
+  "validation_scope": "LOCAL_DERIVATIVE_AND_NEW_DEPENDENCY_FREE_CONTROLS",
+  "canonical_application_and_test_execution": "NOT_EXECUTED",
+  "native_acceptance": "DEFERRED",
+  "previous_candidate": "1.2.0",
+  "version_reason": "Patch to newly authored local draft controls, timers and tooling; canonical technical files unchanged",
+  "final_local_content": true,
+  "published": false,
+  "owner_accepted": false,
+  "freeze_parent_phase": "3/4",
+  "freeze_parent_student_zip_sha256": "3c68bb9959e8d5daa8d2b048ab3c1908e39aaf81263b859b11f2636905e49d9c",
+  "freeze_phase": "4/4",
+  "functional_new_code_changes_in_phase4": false
+}

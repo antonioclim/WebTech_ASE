@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer"><title>TW2026 S07 — Evidence worksheet</title>
+<link rel="stylesheet" href="../assets/form.css">
+<script defer src="../assets/schema.js"></script><script defer src="../assets/form-core.js"></script><script defer src="../assets/form-ui.js"></script>
+</head>
+<body>
+<a class="skip" href="#fields">Skip to worksheet fields</a>
+<div id="screen">
+<header>
+ <p class="eyebrow">TW2026 · S07 · FINAL_LOCAL v1.2.1 · PHASE4 LOCAL CLOSURE · PRIVATE INDIVIDUAL WORK</p>
+ <h1>Transactional booking: evidence worksheet</h1>
+ <p>Keep two prior predictions, trace the five database operations and explain the limits of your observations. Complete the required P03-informed ADR and one bounded actual Gemini audit. Full P01/P03 implementation is optional.</p>
+ <p><a href="../index.html">Kit start</a> · <a href="S07_EVIDENCE_FORM_EN_GB.md">Editable Markdown fallback</a></p>
+</header>
+<noscript><p class="alert">This interactive form needs JavaScript. Open the Markdown fallback, write your own records and save an editable copy before producing one PDF.</p></noscript>
+<aside class="notice" aria-labelledby="scope-title">
+ <h2 id="scope-title">What a field check means</h2>
+ <p>Checks cover required text, field types and obvious pending placeholders. They cannot authenticate a run, a Gemini response, a prior prediction or a teacher decision. A selector cannot grant an alternative. Imported evidence remains visibly unverified.</p>
+ <p>Standard final evidence requires genuine ORM/SQLite and local HTTP observations plus an actual bounded Gemini interaction independently checked. Source reading, module models and synthetic practice remain distinct evidence classes.</p>
+ <p>At minute 60 save a truthful draft and stop. The deadline is configured separately. This page has no live Moodle, Gemini or project execution connection.</p>
+</aside>
+<section class="toolbar" aria-labelledby="draft-title">
+ <h2 id="draft-title">Save, check and print</h2>
+ <p>Save a portable backup regularly. Browser storage may be unavailable or differ between file locations. A download request does not prove a file was saved.</p>
+ <div class="buttons"><button id="core" type="button">Check core draft fields</button><button id="final" type="button">Check final fields</button><button id="save" type="button">Save browser draft</button><button id="restore" type="button">Restore browser draft</button></div>
+ <div class="buttons"><button id="export" type="button">Export JSON backup</button><label class="file-button" for="import">Import JSON backup<input id="import" type="file" accept=".json,application/json"></label><button id="text-backup" type="button">Copy or save plain text</button></div>
+ <div class="buttons"><button id="print-draft" type="button">Print truthful draft</button><button id="print-final" type="button">Prepare final PDF</button><button id="clear" class="danger" type="button">Reset form and browser draft</button></div>
+ <p><label><input id="autosave" type="checkbox"> Save browser draft after edits</label></p>
+ <p id="storage" aria-live="polite">Autosave is off. No browser draft has been written.</p>
+ <p id="provenance" class="provenance">USER_ENTERED_UNVERIFIED_DRAFT</p>
+ <p id="import-review"></p>
+ <p><strong>PDF filename:</strong> <output id="filename">Enter your group and both names.</output></p>
+ <p id="progress" aria-live="polite"></p>
+ <p id="message" class="message" role="status" aria-live="polite">Your records stay in this page until you save a backup.</p>
+ <div id="error-summary" hidden><h3>Fields to review</h3><ul id="error-links"></ul></div>
+</section>
+<nav id="section-nav" aria-label="Worksheet sections"></nav>
+<form id="worksheet" novalidate><div id="fields"></div></form>
+<section id="fallback-panel" hidden aria-labelledby="fallback-title">
+ <h2 id="fallback-title">Plain-text backup</h2><p>Select all text and use your system copy command if automatic copy is unavailable. This working backup includes every current field and keeps evidence private.</p>
+ <textarea id="fallback-text" rows="16" readonly aria-label="Complete plain-text worksheet backup"></textarea>
+ <div class="buttons"><button id="copy-text" type="button">Copy plain text</button><button id="download-text" type="button">Save TXT backup</button><button id="close-fallback" type="button">Close backup panel</button></div>
+</section>
+<footer><p>One S07 Assignment · One PDF · <code>TW2026_S07_GROUP_Surname_Firstname.pdf</code>. JSON, TXT and DOCX remain working backups. Inspect the saved PDF and confirm the actual upload state in the live interface.</p></footer>
+</div>
+<main id="print-output" aria-label="Printable worksheet"></main>
+</body></html>

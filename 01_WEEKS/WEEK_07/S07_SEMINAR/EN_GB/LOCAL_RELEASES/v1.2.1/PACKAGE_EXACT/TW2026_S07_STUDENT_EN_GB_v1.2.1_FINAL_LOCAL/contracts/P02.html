@@ -1,0 +1,70 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>S07 P02 contract</title><style>
+:root{--bg:#f5f2ea;--paper:#fffdf7;--ink:#192b35;--muted:#4c606b;--line:#b8c3c6;--accent:#075c68;--warm:#92541e;--focus:#a33808}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}a{color:var(--accent);text-underline-offset:.2em}a:hover{text-decoration-thickness:3px}button,input,select{font:inherit}button,select{padding:.55rem .8rem;border:1px solid var(--line);border-radius:.35rem;background:var(--paper);color:var(--ink)}button{cursor:pointer}button:hover{border-color:var(--accent)}:focus-visible{outline:3px solid var(--focus);outline-offset:4px}.skip{position:absolute;left:1rem;top:-6rem;background:white;padding:.7rem}.skip:focus{top:1rem}.layout{display:grid;grid-template-columns:17rem minmax(0,1fr);max-width:1500px;margin:auto}aside{padding:1.3rem;position:sticky;top:0;height:100vh;overflow:auto;border-right:1px solid var(--line);background:#e7ece7}main{padding:2rem clamp(1rem,4vw,4rem);max-width:1100px}h1{font-size:clamp(2.1rem,4vw,3.5rem);line-height:1.12;max-width:22ch}h2{font-size:1.75rem;line-height:1.25;margin-top:2.5rem}h3{line-height:1.3}p{max-width:80ch}code{font: .9em/1.5 ui-monospace,Consolas,monospace;background:#e9eeee;padding:.08em .24em;overflow-wrap:anywhere}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#162d37;color:#f4fbfc;padding:1rem;border-radius:.4rem;font: .9rem/1.6 ui-monospace,monospace}table{border-collapse:collapse;width:100%;font-size:.94rem}th,td{padding:.65rem;border:1px solid var(--line);text-align:left;vertical-align:top}th{background:#dce6e5}.table-wrap{overflow:auto;margin:1.2rem 0}.badge,.notice{border-left:5px solid var(--accent);background:#e2efeb;padding:1rem;margin:1.2rem 0}.notice{border-color:var(--warm);background:#f5e9d6}.small{font-size:.88rem;color:var(--muted)}nav a{display:block;margin:.35rem 0}label{display:block;margin:.7rem 0}label input{margin-right:.4rem}select{max-width:100%;width:100%}.toolbar{display:flex;gap:.5rem;flex-wrap:wrap;margin:1rem 0}.step{border-top:2px solid var(--line);padding-top:1.2rem;margin-top:2rem;scroll-margin-top:1rem}dl{margin:0}dt{font-weight:700;color:var(--accent);margin-top:1rem}dd{margin-left:0;max-width:84ch}.check{padding:.7rem;background:#e2efeb;border:1px solid var(--line);border-radius:.4rem}.figure{margin:1.5rem 0;border:1px solid var(--line);background:white;padding:1rem}.figure svg{width:100%;height:auto;max-height:620px}figcaption{font-size:.92rem;color:var(--muted)}details{padding:1rem;border:1px solid var(--line);margin:1rem 0;background:var(--paper)}summary{cursor:pointer;font-weight:650}progress{width:100%;accent-color:var(--accent)}.command{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}.command pre{flex:1;min-width:16rem}#timer{font:700 2rem ui-monospace,monospace}.hidden{display:none}.contrast{--bg:#000;--paper:#000;--ink:#fff;--muted:#eee;--line:#fff;--accent:#7ef9ff;--warm:#ffb64d;--focus:#ffeb00}.contrast aside,.contrast th,.contrast .check,.contrast .badge,.contrast .notice{background:#111;color:white}.contrast code{background:#222;color:white}.projector{font-size:22px}.projector .layout{grid-template-columns:19rem minmax(0,1fr)}@media(max-width:900px){.layout{display:block}aside{position:relative;height:auto;border-right:0;border-bottom:1px solid var(--line)}nav{display:flex;gap:.5rem;flex-wrap:wrap}nav a{font-size:.9rem}main{padding:1rem}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}@media print{@page{size:A4;margin:16mm}body{font:10pt/1.4 sans-serif;color:#000;background:white}.layout{display:block}aside,.toolbar,.check,.command button,.no-print,.skip{display:none}main{padding:0;max-width:none}h1{font-size:24pt}h2{font-size:16pt}h3{font-size:12pt}a{color:#000}pre,code{background:#eee;color:#000}th,td{font-size:9pt;padding:4pt}.figure{break-inside:avoid}h2,h3,dt{break-after:avoid}dd,p{orphans:3;widows:3}.step{border-top:1px solid #777;page-break-before:auto}.table-wrap{overflow:visible}details{display:block}details>summary{display:none}details>*{display:block!important}}
+</style></head><body><main><p><a href="../00_START_HERE/index.html">Guide</a> · <a href="../01_WORKSHEET/index.html">Evidence form</a></p><blockquote>Derived public contract: REQUIRED IMPLEMENTATION. Technical requirements and heading order follow the canonical U07 specification. British-English wording, source-generation instructions and the Gemini activity are explicitly adapted; the original specification remains in the teacher package. Historical audit-clean wording below is a source requirement, not a new security or runtime audit.</blockquote>
+<blockquote>Scope clarification: the reference maps the unique-error class from the entire managed call. It is not proof of the originating constraint. The canonical four-method spy omits Event.save and can pass with undefined transactions; the separate observer closes that gap. The initial source-derived signature is source-derived until actual ORM qualification. The supplied Location has no GET member route.</blockquote>
+<h1>Exercise Specification — Transactional Booking</h1>
+<h2>Unit</h2>
+<p>Unit 07 — Relationships, Transactions and API Design</p>
+<h2>Learning objective</h2>
+<p>Implement one explicit Sequelize transaction that enforces a booking consistency boundary across seat inventory, booking creation and audit recording, with complete rollback on every failure.</p>
+<h2>Why this exercise exists</h2>
+<p>Awaiting three database statements is not the same as making them atomic. A booking is valid only when capacity decrement, unique reservation and audit event succeed together. Students need observable commit/rollback behaviour rather than transaction syntax in isolation.</p>
+<h2>Prerequisites</h2>
+<p>- Conference Registration API associations and Unit 06 persistence/error ownership.</p>
+<p>- Promise rejection, centralised errors and relational uniqueness.</p>
+<h2>Starting context</h2>
+<p>Students receive a supplied Sequelize/SQLite model set and Express booking endpoint:</p>
+<p>- <code>Event</code> has <code>capacity</code> and <code>availableSeats</code> non-null integers;</p>
+<p>- <code>Booking</code> has unique <code>(eventId, attendeeId)</code> and positive <code>seats</code>;</p>
+<p>- <code>BookingAudit</code> records <code>bookingId</code>, <code>eventId</code>, <code>attendeeId</code>, <code>seats</code> and action <code>created</code>;</p>
+<p>- foreign keys/associations, schema lifecycle, route parsing, serialisers, domain errors and tests are complete.</p>
+<p>The incomplete <code>src/book-seats.js</code> exports <code>bookSeats({ sequelize, Event, Booking, BookingAudit }, { eventId, attendeeId, seats, afterBookingCreated })</code>. The optional injected callback defaults to a no-op and exists only for deterministic failure injection after booking creation.</p>
+<h2>Required behaviour</h2>
+<p>- Reject non-integer or non-positive <code>seats</code> with supplied <code>BookingValidationError</code> before opening a transaction.</p>
+<p>- Execute all database reads/writes inside one managed <code>sequelize.transaction(async transaction =&gt; ...)</code> callback and pass the transaction option to every call.</p>
+<p>- Load the event inside the transaction; missing event throws supplied <code>EventNotFoundError</code>.</p>
+<p>- If <code>availableSeats &lt; seats</code>, throw supplied <code>SoldOutError</code> without changing rows.</p>
+<p>- Detect an existing <code>(eventId, attendeeId)</code> booking and throw supplied <code>BookingExistsError</code>.</p>
+<p>- Decrement <code>availableSeats</code> by exactly <code>seats</code> and await persistence.</p>
+<p>- Create one Booking, invoke/await <code>afterBookingCreated({ booking, transaction })</code>, then create one matching BookingAudit in the same transaction.</p>
+<p>- Return detached <code>{ booking, event }</code> only after the managed transaction commits.</p>
+<p>- Unique constraint races map to <code>BookingExistsError</code>; known domain errors preserve identity; unexpected callback/database errors propagate unchanged after rollback.</p>
+<p>- Any failure after any intermediate step leaves available seats, Booking count and BookingAudit count exactly as before the call.</p>
+<p>- A successful second booking observes the committed seat count from the first.</p>
+<h2>Constraints</h2>
+<p>- JavaScript ESM, Sequelize 6.37.8, sqlite3 6.0.1, supplied Express 5 code, native <code>fetch</code> and Node&#x27;s test runner; retain audit-clean pins/override.</p>
+<p>- Implement only <code>src/book-seats.js</code>; do not edit models, routes, error middleware, tests or dependencies.</p>
+<p>- Use one managed transaction; no manual SQL <code>BEGIN/COMMIT</code>, nested transaction, compensating write or process-local mutex.</p>
+<p>- Do not catch and replace unexpected errors.</p>
+<p>- SQLite tests demonstrate atomic rollback; production-grade high-concurrency locking differences are explained but out of scope.</p>
+<h2>Observable completion criteria</h2>
+<p>- Successful HTTP booking returns <code>201</code>, booking/event data and reduced availability only after commit.</p>
+<p>- Missing/sold-out/duplicate/invalid cases return stable errors and change no rows.</p>
+<p>- Injected failure after booking creation proves seat update and booking are rolled back and no audit remains.</p>
+<p>- Injected audit create failure proves the same full rollback and preserves original error identity.</p>
+<p>- Captured query options show the same transaction object on every operation.</p>
+<p>- The relevant finite checks pass when actually executed; historical audit-clean wording is not a current security qualification and only <code>src/book-seats.js</code> changes.</p>
+<h2>Validation plan</h2>
+<h3>Baseline checks</h3>
+<p>- Supplied models/constraints/associations, schema seed, Express endpoint, serialisers/errors and database cleanup work with a known fake atomic booking function.</p>
+<h3>Objective checks</h3>
+<p>- Success verifies commit, detached return, exact capacity decrement, booking, audit and callback transaction identity.</p>
+<p>- Invalid/missing/sold-out/duplicate behaviour verifies errors and unchanged counts/state.</p>
+<p>- Post-booking callback and audit failures verify full rollback and unexpected-error identity.</p>
+<p>- Operation spies verify one managed transaction and consistent transaction options.</p>
+<p>- Unique constraint is translated without swallowing other Sequelize errors.</p>
+<h3>Regression checks</h3>
+<p>- Malformed JSON, unknown route, health/static resources and safe internal error responses remain healthy.</p>
+<p>- A failed transaction does not poison a later successful booking.</p>
+<p>- No unhandled rejection or open database handle remains.</p>
+<p>- Objective module contains no Express code or raw SQL.</p>
+<h2>Provided starter and edit boundary</h2>
+<p>The exact canonical student starter is included. For this route change only <code>02_PROJECTS/p02/src/book-seats.js</code>. Do not recreate the starter or alter dependencies, fixtures or tests. REQUIRED IMPLEMENTATION.</p>
+<h2>Bounded Gemini review</h2>
+<p>Review one sanitised claim or small diff with Gemini. Independently check it, record a verdict, correction and limitation and preserve your original prediction. Use <code>03_AI_AUDIT/GEMINI_PROMPT_EN_GB.txt</code>. This deliberately narrows the canonical full-implementation prompt under the current teaching protocol. No full reference solution or completed ADR is supplied.</p>
+<h2>Debugging / extension task</h2>
+<p>- Optional source/control discussion: examine the audit transaction option and the separate five-operation trace. Compare with the supplied unsafe partial-write witness. Failure injected before an insert cannot prove an escaped audit row; omitting the option does not promise a native SQLite escaped-row outcome. Preserve the protected helper and tests.</p>
+<h2>Out of scope</h2>
+<p>- Distributed locks, isolation-level comparison across production engines, payment processing, cancellation/refunds, queues or nested transactions.</p>
+<h2>Candidate interpretation boundary</h2>
+<p>The exact source precedence is missing event, insufficient capacity, then duplicate lookup. The broad unique-error mapping spans the whole managed call and does not identify the originating constraint. The five-operation observer adds event.save and non-null identity to the option check without changing canonical tests. Sequential rollback does not qualify concurrency, crash durability or external-effect rollback. No canonical runtime/test was executed during candidate production. Native execution and final genuine evidence remain separately gated.</p></main></body></html>

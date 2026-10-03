@@ -1,0 +1,45 @@
+{
+  "schema": "tw2026.s07.evidence-classes.v1",
+  "classes": {
+    "SOURCE_REASONING": "Reading or deriving from supplied source; no execution claim.",
+    "SOURCE_EXPECTATION": "Predicted contractual outcome before measurement.",
+    "MODULE_MODEL": "Execution of an explicitly bounded dependency-free model; no genuine ORM/native qualification.",
+    "SYNTHETIC_PRACTICE": "Constructed educational claim or witness, never attributed to a real student or Gemini interaction.",
+    "GENUINE_ORM_SQLITE": "Actual supplied application operation with loaded native driver, owned fixture, runtime and raw evidence; not granted by source identity.",
+    "LOCAL_HTTP": "Actual request/response to the recorded owned loopback instance; not granted by a DOM, response model or file:// page.",
+    "ACTUAL_GEMINI": "Actual bounded sanitised interaction, independently checked; structural validators cannot authenticate service origin.",
+    "NATIVE_BROWSER": "Observed native browser behaviour with version and scope; static parse is insufficient.",
+    "NATIVE_WINDOWS": "Observed native Windows operation with scope; path model is insufficient.",
+    "NATIVE_MACOS": "Observed native macOS operation with scope; Linux cannot qualify it.",
+    "NATIVE_WORD": "Observed Word render/edit/export with scope; LibreOffice or XML parse cannot qualify it.",
+    "NOT_EXECUTED": "Explicitly pending, blocked or unavailable required operation."
+  },
+  "legacy_aliases": {
+    "SOURCE_LINKED_MODEL": "MODULE_MODEL",
+    "ADRMODULE_MODEL": "MODULE_MODEL",
+    "ACTUAL_ORM_SQLITE": "GENUINE_ORM_SQLITE"
+  },
+  "alias_mapping_does_not_authenticate_old_observation": true,
+  "import_states": [
+    "NEW_UNVERIFIED",
+    "IMPORTED_UNVERIFIED",
+    "REVIEWED_SELF_DECLARED"
+  ],
+  "import_state_is_orthogonal_to_evidence_class": true,
+  "provenance_required_per_witness": [
+    "evidence_id",
+    "fixture",
+    "command_or_action",
+    "runtime_or_browser",
+    "class",
+    "observed_or_expected",
+    "pending_reason_if_not_executed"
+  ],
+  "phase1_executed_classes": [
+    "LOCAL_PACKAGE_INTEGRITY",
+    "INERT_STATIC_PARSE",
+    "SOURCE_DOMAIN_CONSTRUCTED_COUNTEREXAMPLE",
+    "INERT_URL_PATH_MODEL"
+  ],
+  "phase1_genuine_application_or_native_classes_executed": []
+}
