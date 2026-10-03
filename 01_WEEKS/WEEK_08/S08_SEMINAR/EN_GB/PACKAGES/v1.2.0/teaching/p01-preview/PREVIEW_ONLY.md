@@ -1,0 +1,3 @@
+# P01 teaching preview — not the assessed source tree
+
+This separate Vite project starts with the same incomplete target as the student project. It is not a reference solution and does not qualify any runtime. Only the launcher/adapter changes listed in TEACHING_DERIVATIONS.json are supplied. Preserve your assessed edit in projects/p01/student/src first; copy that single edited file to this preview's src directory only when you intentionally test the preview. Record both identities. Each Vite project needs its own already-provisioned local dependencies. Do not install or modify a lockfile as part of a test. No runtime is bundled here.
