@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+<title id="title">Completion order is not result ownership</title><desc id="desc">A trace in which B completes before A, each result reaches its own caller and terminal entries are removed.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8" fill="#005B96"/></marker></defs>
+<rect x="0" y="0" width="1600" height="1000" rx="0" fill="#F3F6FA" stroke="none" stroke-width="2"/>
+<rect x="0" y="0" width="1600" height="158" rx="0" fill="#13263F" stroke="none" stroke-width="2"/>
+<text x="50" y="43" font-family="DejaVu Sans" font-size="22" font-weight="bold" fill="#FFFFFF" text-anchor="start">S13  /  VI03  /  ILLUSTRATIVE INTERFACE DIAGRAM</text>
+<text x="50" y="91" font-family="DejaVu Sans" font-size="38" font-weight="bold" fill="#FFFFFF" text-anchor="start">Completion order is not result ownership</text>
+<text x="50" y="132" font-family="DejaVu Sans" font-size="23" font-weight="normal" fill="#DCE8F7" text-anchor="start">Source/model trace illustration • A and B stand for distinct opaque request IDs.</text>
+<circle cx="77" cy="216" r="22" fill="#005B96"/>
+<text x="77" y="224" font-family="DejaVu Sans" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle">1</text>
+<text x="113" y="225" font-family="DejaVu Sans" font-size="28" font-weight="bold" fill="#13263F" text-anchor="start">Register pending before sending analysis.start</text>
+<rect x="50" y="257" width="1500" height="461" rx="16" fill="#FFFFFF" stroke="#A6B4C5" stroke-width="2"/>
+<rect x="52" y="259" width="1496" height="72" rx="16" fill="#E6F1FA" stroke="none" stroke-width="2"/>
+<text x="76" y="305" font-family="DejaVu Sans" font-size="23" font-weight="bold" fill="#13263F" text-anchor="start">MODEL STEP</text>
+<text x="291" y="305" font-family="DejaVu Sans" font-size="23" font-weight="bold" fill="#13263F" text-anchor="start">MESSAGE / ACTION</text>
+<text x="921" y="305" font-family="DejaVu Sans" font-size="23" font-weight="bold" fill="#13263F" text-anchor="start">OWNER</text>
+<text x="1290" y="305" font-family="DejaVu Sans" font-size="23" font-weight="bold" fill="#13263F" text-anchor="start">PENDING</text>
+<text x="76" y="382" font-family="DejaVu Sans" font-size="24" font-weight="normal" fill="#13263F" text-anchor="start">Start A</text>
+<text x="291" y="382" font-family="DejaVu Sans Mono" font-size="24" font-weight="normal" fill="#13263F" text-anchor="start">pending.set(A) → analysis.start(A)</text>
+<text x="921" y="382" font-family="DejaVu Sans" font-size="24" font-weight="normal" fill="#13263F" text-anchor="start">caller A</text>
+<text x="1290" y="382" font-family="DejaVu Sans" font-size="24" font-weight="normal" fill="#13263F" text-anchor="start">1</text>
+<line x1="52" y1="417" x2="1548" y2="417" stroke="#A6B4C5" stroke-width="1"/>
+<rect x="52" y="434" width="1496" height="92" rx="0" fill="#F3F6FA" stroke="none" stroke-width="2"/>
+<text x="76" y="476" font-family="DejaVu Sans" font-size="24" font-weight="normal" fill="#13263F" text-anchor="start">Start B</text>
+<text x="291" y="476" font-family="DejaVu Sans Mono" font-size="24" font-weight="normal" fill="#13263F" text-anchor="start">pending.set(B) → analysis.start(B)</text>
+<text x="921" y="476" font-family="DejaVu Sans" font-size="24" font-weight="normal" fill="#13263F" text-anchor="start">caller B</text>
+<text x="1290" y="476" font-family="DejaVu Sans" font-size="24" font-weight="normal" fill="#13263F" text-anchor="start">2</text>
+<line x1="52" y1="511" x2="1548" y2="511" stroke="#A6B4C5" stroke-width="1"/>
+<text x="76" y="570" font-family="DejaVu Sans" font-size="24" font-weight="normal" fill="#13263F" text-anchor="start">B finishes</text>
+<text x="291" y="570" font-family="DejaVu Sans Mono" font-size="24" font-weight="normal" fill="#13263F" text-anchor="start">analysis.completed(B, own result)</text>
+<text x="921" y="570" font-family="DejaVu Sans" font-size="24" font-weight="normal" fill="#13263F" text-anchor="start">caller B receives B</text>
+<text x="1290" y="570" font-family="DejaVu Sans" font-size="24" font-weight="normal" fill="#13263F" text-anchor="start">1</text>
+<line x1="52" y1="605" x2="1548" y2="605" stroke="#A6B4C5" stroke-width="1"/>
+<rect x="52" y="622" width="1496" height="92" rx="0" fill="#F3F6FA" stroke="none" stroke-width="2"/>
+<text x="76" y="664" font-family="DejaVu Sans" font-size="24" font-weight="normal" fill="#13263F" text-anchor="start">A finishes</text>
+<text x="291" y="664" font-family="DejaVu Sans Mono" font-size="24" font-weight="normal" fill="#13263F" text-anchor="start">analysis.completed(A, own result)</text>
+<text x="921" y="664" font-family="DejaVu Sans" font-size="24" font-weight="normal" fill="#13263F" text-anchor="start">caller A receives A</text>
+<text x="1290" y="664" font-family="DejaVu Sans" font-size="24" font-weight="normal" fill="#13263F" text-anchor="start">0</text>
+<line x1="52" y1="699" x2="1548" y2="699" stroke="#A6B4C5" stroke-width="1"/>
+<circle cx="77" cy="763" r="22" fill="#006E65"/>
+<text x="77" y="771" font-family="DejaVu Sans" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle">2</text>
+<text x="113" y="772" font-family="DejaVu Sans" font-size="28" font-weight="bold" fill="#13263F" text-anchor="start">B may finish first; its result still belongs to B</text>
+<circle cx="77" cy="818" r="22" fill="#005B96"/>
+<text x="77" y="826" font-family="DejaVu Sans" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle">3</text>
+<text x="113" y="827" font-family="DejaVu Sans" font-size="25" font-weight="bold" fill="#13263F" text-anchor="start">Terminal entries are removed. Late retired IDs cannot settle a new request.</text>
+<text x="111" y="863" font-family="DejaVu Sans" font-size="22" font-weight="normal" fill="#40516A" text-anchor="start">This trace illustrates correlation; a separate synchronous fixture tests pending-before-send reentrancy.</text>
+<line x1="50" y1="891" x2="1550" y2="891" stroke="#A6B4C5" stroke-width="3"/>
+<text x="50" y="926" font-family="DejaVu Sans" font-size="21" font-weight="bold" fill="#13263F" text-anchor="start">Illustrative interface diagram: completion order changes while result ownership follows the request identifier.</text>
+<text x="50" y="981" font-family="DejaVu Sans" font-size="19" font-weight="normal" fill="#40516A" text-anchor="start">Locally authored diagram • No actual interface capture • Record your own browser, version, origin and evidence.</text>
+</svg>
