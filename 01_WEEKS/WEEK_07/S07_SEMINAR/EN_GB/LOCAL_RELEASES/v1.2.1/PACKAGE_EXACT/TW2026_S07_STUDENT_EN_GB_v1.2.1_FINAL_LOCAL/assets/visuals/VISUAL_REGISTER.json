@@ -1,0 +1,71 @@
+{
+  "schema": "tw2026.s07.guide-visuals.v1",
+  "version": "1.2.1",
+  "assets": [
+    {
+      "id": "V01",
+      "filename": "V01_ZIP_versus_extracted_working_folder.svg",
+      "title": "ZIP versus extracted working folder",
+      "alt": "ZIP versus extracted working folder. Illustrative schematic, not a native capture.",
+      "caption": "What matters: identify one real extracted copy and actual PACKAGE_ID. What to ignore: icons/menus differ by OS. This drawing proves neither extraction nor an integrity check.",
+      "provenance": "NEW_SOURCE_DERIVED_SCHEMATIC_NOT_NATIVE_CAPTURE",
+      "qualification": "NOT_NATIVE_ACCEPTANCE"
+    },
+    {
+      "id": "V02",
+      "filename": "V02_One_editable_file_and_student_root_terminal.svg",
+      "title": "One editable file and student-root terminal",
+      "alt": "One editable file and student-root terminal. Illustrative schematic, not a native capture.",
+      "caption": "What matters: breadcrumb and terminal root are different checks. What to ignore: VS Code theme and panel placement. No current editor interface was captured.",
+      "provenance": "NEW_SOURCE_DERIVED_SCHEMATIC_NOT_NATIVE_CAPTURE",
+      "qualification": "NOT_NATIVE_ACCEPTANCE"
+    },
+    {
+      "id": "V03",
+      "filename": "V03_Five_ORM_operations_inside_one_boundary.svg",
+      "title": "Five ORM operations inside one boundary",
+      "alt": "Five ORM operations inside one boundary. Illustrative schematic, not a native capture.",
+      "caption": "What matters: event.save is the fifth operation missed by a four-method spy. The callback is awaited between creates. What to ignore: box width says nothing about duration. Option tracing alone does not prove native isolation.",
+      "provenance": "NEW_SOURCE_DERIVED_SCHEMATIC_NOT_NATIVE_CAPTURE",
+      "qualification": "NOT_NATIVE_ACCEPTANCE"
+    },
+    {
+      "id": "V04",
+      "filename": "V04_Three_state_facts_before_and_after.svg",
+      "title": "Three state facts before and after",
+      "alt": "Three state facts before and after. Illustrative schematic, not a native capture.",
+      "caption": "What matters: compare all three facts on named fixtures and distinguish unsafe from managed roles. What to ignore: these expected tuples are not your evidence. Recovery must be checked on the same failed instance.",
+      "provenance": "NEW_SOURCE_DERIVED_SCHEMATIC_NOT_NATIVE_CAPTURE",
+      "qualification": "NOT_NATIVE_ACCEPTANCE"
+    },
+    {
+      "id": "V05",
+      "filename": "V05_Actual_local_origin_and_supplied_HTTP_route.svg",
+      "title": "Actual local origin and supplied HTTP route",
+      "alt": "Actual local origin and supplied HTTP route. Illustrative schematic, not a native capture.",
+      "caption": "What matters: actual printed origin, method/path and distinct ORM/HTTP evidence. What to ignore: there is no live Network screenshot or guaranteed fixed port here. Do not kill foreign processes.",
+      "provenance": "NEW_SOURCE_DERIVED_SCHEMATIC_NOT_NATIVE_CAPTURE",
+      "qualification": "NOT_NATIVE_ACCEPTANCE"
+    },
+    {
+      "id": "V06",
+      "filename": "V06_Identity_and_repeated_effects_for_the_ADR.svg",
+      "title": "Identity and repeated effects for the ADR",
+      "alt": "Identity and repeated effects for the ADR. Illustrative schematic, not a native capture.",
+      "caption": "What matters: P02 and P03 are separate supplied APIs. What to ignore: no completed ADR answer is shown. A lost response is hypothetical unless actually observed.",
+      "provenance": "NEW_SOURCE_DERIVED_SCHEMATIC_NOT_NATIVE_CAPTURE",
+      "qualification": "NOT_NATIVE_ACCEPTANCE"
+    },
+    {
+      "id": "V07",
+      "filename": "V07_One_final_PDF_and_final_submission_state.svg",
+      "title": "One final PDF and final submission state",
+      "alt": "One final PDF and final submission state. Illustrative schematic, not a native capture.",
+      "caption": "What matters: inspect every PDF page and the actual final submission state. What to ignore: the diagram is not live Moodle and names no current buttons or deadline.",
+      "provenance": "NEW_SOURCE_DERIVED_SCHEMATIC_NOT_NATIVE_CAPTURE",
+      "qualification": "NOT_NATIVE_ACCEPTANCE"
+    }
+  ],
+  "native_captures": 0,
+  "native_ui_qualification": "NOT_EXECUTED"
+}
