@@ -1,0 +1,86 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>S09 P02 — Full-Stack Notes CRUD transfer</title><style>body{margin:0;color:#172b3a;background:#f5f8fb;font:17px/1.55 Arial,sans-serif}header,main,footer{max-width:1120px;margin:auto;padding:24px}header{background:#17354b;color:white;max-width:none}header>div{max-width:1120px;margin:auto}h1{font-size:2rem;line-height:1.2}h2{font-size:1.5rem;line-height:1.3}h3{font-size:1.2rem}a{color:#075586}header a{color:#fff}nav{display:flex;gap:16px;flex-wrap:wrap}section{margin:24px 0;background:#fff;padding:24px;border:1px solid #cbd6de;border-radius:12px}.notice{border-left:6px solid #9c6500;background:#fff6df;padding:14px}.step{border-top:2px solid #c8d6e0;padding:14px 0}dl{margin:0}dt{font-weight:bold;margin-top:10px;color:#123e57}dd{margin:3px 0 12px;white-space:pre-wrap;overflow-wrap:anywhere}table{width:100%;border-collapse:collapse;font-size:.95rem}th,td{border:1px solid #9baebc;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#e9f2f8}figure{margin:18px 0}figure img{width:100%;height:auto;max-height:660px;object-fit:contain}figcaption{font-size:.9rem;color:#3c5262;margin-top:8px}.table-wrap{overflow-x:auto}a:focus-visible{outline:3px solid #bd7400;outline-offset:3px}@media(max-width:700px){main,header,footer{padding:14px}section{padding:14px}h1{font-size:1.6rem}}@media print{@page{size:A4;margin:17mm}body{background:#fff;font-size:10pt}header{background:#fff;color:#172b3a;padding:0}header a{color:#172b3a}main{padding:0}section{border:0;padding:0;border-radius:0}nav,.screen-only{display:none}h2,h3,dt{break-after:avoid}figure{break-inside:avoid}th{background:#eee}tr{break-inside:avoid}figcaption{font-size:9pt}a{color:#172b3a;text-decoration:none}.table-wrap{overflow:visible}footer{font-size:9pt}}</style></head><body>
+<header><div><p>S09 · EN-GB · v1.2.1 · Phase3 source/data remediation candidate</p><h1>S09 P02 — Full-Stack Notes CRUD transfer</h1><p>Conceptual semester-milestone transfer, without a second S09 implementation gate</p><nav aria-label="Learning documents">
+<a href="../guide/S09_INTERACTIVE_ULTRA_BEGINNER_GUIDE_EN_GB_v1.2.1.html">Ultra-beginner guide</a>
+<a href="../form/FORM_S09_EN_GB.html">Evidence form</a>
+<a href="../moodle/MOODLE_UPLOAD_GUIDE_S09_EN_GB.md">Moodle upload guide</a>
+</nav></div></header><main><p class="notice">Application commands below are for your later separately provisioned and authorised teaching environment. No application, test, server, browser or Gemini exchange was executed while producing this candidate.</p>
+<p>The matching S09_P02_TRANSFER_GUIDE_EN_GB_v1.2.1.docx and S09_P02_TRANSFER_GUIDE_EN_GB_v1.2.1.pdf are supplied under student/documents. Use FORM_S09_EN_GB.docx under student/form for genuine captures in your one individual final PDF.</p><nav aria-label="Contents">
+<a href="#role">1. A later capstone obligation with a truthful status</a>
+<a href="#record">2. The S09 conceptual task</a>
+<a href="#mechanism">3. Confirmation, read/write order and cleanup</a>
+<a href="#later">4. Later source boundaries and environment blocks</a>
+</nav>
+<section id="role"><h2>1. A later capstone obligation with a truthful status</h2>
+<p>During S09, explain the transfer from URL/form ownership to confirmed server notes, local UI draft and submission state. Record actual capstone progress, including NOT_STARTED. Full P02 implementation is a later semester milestone with an unmeasured source estimate 70–90 minutes.</p>
+<p>The later assessed file is capstone/p02/student/client/src/NotesWorkspace.jsx. Keep server, API adapter, proxy, fixtures, tests and dependencies exact. P02 is one workspace; no router is required.</p>
+<p>The supplied adapter actually exposes list/create/update/remove. The original spec mentions an individual get contract that this supplied API/server does not implement. A POST Location header does not create that GET endpoint.</p>
+<h3>Ownership map</h3><div class="table-wrap"><table><thead><tr>
+<th scope="col">Owner</th>
+<th scope="col">Concrete state</th>
+<th scope="col">Economic review interpretation</th>
+</tr></thead><tbody>
+<tr><td>Confirmed server notes</td><td>Data from a successful API result</td><td>The revision acknowledged within the stated server domain</td></tr>
+<tr><td>Local selection</td><td>Selected existing note ID or no selection</td><td>Which order/invoice is being reviewed</td></tr>
+<tr><td>Controlled draft</td><td>Editable title/body and new/edit mode</td><td>A proposed revision that has not been confirmed</td></tr>
+<tr><td>Submission state</td><td>Pending/error/success status</td><td>Whether the proposed revision was accepted or remains unresolved</td></tr>
+</tbody></table></div>
+<figure data-figure-id="IMG-S09-02"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTAwIiBoZWlnaHQ9IjQ4MCIgdmlld0JveD0iMCAwIDExMDAgNDgwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+PHRpdGxlIGlkPSJ0aXRsZSI+SWRlbnRpZnkgZWFjaCBvd25lciBiZWZvcmUgY2hhbmdpbmcgY29kZTwvdGl0bGU+PGRlc2MgaWQ9ImRlc2MiPklsbHVzdHJhdGl2ZSBpbnRlcmZhY2UgZGlhZ3JhbSBzZXBhcmF0aW5nIFVSTCBub3RlSWQsIHRoZSBhZGRyZXNzZWQgbm90ZTIgcmVjb3JkIGFuZCB0aGUgbG9jYWwgdW5zYXZlZCB0aXRsZS9ib2R5IGRyYWZ0LiBJbGx1c3RyYXRpdmUgaW50ZXJmYWNlIGRpYWdyYW0uIFRoZSBVUkwgc2VsZWN0cyB0aGUgYWRkcmVzc2VkIHJlY29yZDsgZWRpdGFibGUgdGl0bGUvYm9keSByZW1haW4gYSBsb2NhbCBkcmFmdCB1bnRpbCBhIHZhbGlkIHdyaXRlLiBQMDEgc3RvcmFnZSBpcyB2b2xhdGlsZSwgd2l0aCBubyBkdXJhYmlsaXR5IG9yIGF1dGhvcmlzYXRpb24gY2xhaW0uPC9kZXNjPjxyZWN0IHdpZHRoPSIxMTAwIiBoZWlnaHQ9IjQ4MCIgcng9IjE2IiBmaWxsPSIjZjNmNmZhIi8+PHRleHQgeD0iMjgiIHk9IjM3IiBmaWxsPSIjODA1NDAwIiBmb250LXNpemU9IjE5IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSJub3JtYWwiPjx0c3BhbiB4PSIyOCIgZHk9IjAiPklsbHVzdHJhdGl2ZSBpbnRlcmZhY2UgZGlhZ3JhbSDCtyBTMDkgdjEuMi4wPC90c3Bhbj48L3RleHQ+PHRleHQgeD0iMjgiIHk9IjgwIiBmaWxsPSIjMTAzYjUzIiBmb250LXNpemU9IjI3IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSJib2xkIj48dHNwYW4geD0iMjgiIGR5PSIwIj5JZGVudGlmeSBlYWNoIG93bmVyIGJlZm9yZSBjaGFuZ2luZyBjb2RlPC90c3Bhbj48L3RleHQ+PHJlY3QgeD0iMjgiIHk9IjEyMiIgd2lkdGg9IjMzMCIgaGVpZ2h0PSIyMzgiIHJ4PSIxMiIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjNzg5NmFjIiBzdHJva2Utd2lkdGg9IjIiLz48Y2lyY2xlIGN4PSI1NSIgY3k9IjE1MiIgcj0iMTgiIGZpbGw9IiMxMDNiNTMiLz48dGV4dCB4PSI1NSIgeT0iMTU4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjZmZmZmZmIiBmb250LXNpemU9IjIwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiPjE8L3RleHQ+PHRleHQgeD0iODEiIHk9IjE1OSIgZmlsbD0iIzEwM2I1MyIgZm9udC1zaXplPSIyMCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iYm9sZCI+PHRzcGFuIHg9IjgxIiBkeT0iMCI+VVJMIG5vdGVJZDwvdHNwYW4+PC90ZXh0Pjx0ZXh0IHg9IjQ1IiB5PSIyMDciIGZpbGw9IiMyNDNiNTMiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9Im5vcm1hbCI+PHRzcGFuIHg9IjQ1IiBkeT0iMCI+L25vdGVzLzIvZWRpdCBuYW1lcyB0aGU8L3RzcGFuPjx0c3BhbiB4PSI0NSIgZHk9IjI1Ij5jdXJyZW50IHB1YmxpYyByb3V0ZSBhbmQ8L3RzcGFuPjx0c3BhbiB4PSI0NSIgZHk9IjI1Ij5yZXNvdXJjZSBpZGVudGl0eS48L3RzcGFuPjwvdGV4dD48cmVjdCB4PSIzODYiIHk9IjEyMiIgd2lkdGg9IjMzMCIgaGVpZ2h0PSIyMzgiIHJ4PSIxMiIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjNzg5NmFjIiBzdHJva2Utd2lkdGg9IjIiLz48Y2lyY2xlIGN4PSI0MTMiIGN5PSIxNTIiIHI9IjE4IiBmaWxsPSIjMTAzYjUzIi8+PHRleHQgeD0iNDEzIiB5PSIxNTgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNmZmZmZmYiIGZvbnQtc2l6ZT0iMjAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiI+MjwvdGV4dD48dGV4dCB4PSI0MzkiIHk9IjE1OSIgZmlsbD0iIzEwM2I1MyIgZm9udC1zaXplPSIyMCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iYm9sZCI+PHRzcGFuIHg9IjQzOSIgZHk9IjAiPkFkZHJlc3NlZCBub3RlPC90c3Bhbj48L3RleHQ+PHRleHQgeD0iNDAzIiB5PSIyMDciIGZpbGw9IiMyNDNiNTMiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9Im5vcm1hbCI+PHRzcGFuIHg9IjQwMyIgZHk9IjAiPlNlZWQgbm90ZTI6IENvbnRyb2xsZWQ8L3RzcGFuPjx0c3BhbiB4PSI0MDMiIGR5PSIyNSI+Zm9ybXMuIFJlYWQgdGhlIGFkZHJlc3NlZDwvdHNwYW4+PHRzcGFuIHg9IjQwMyIgZHk9IjI1Ij5yZWNvcmQsIG5vdCBhIHN0YWxlIGxvY2FsPC90c3Bhbj48dHNwYW4geD0iNDAzIiBkeT0iMjUiPklELjwvdHNwYW4+PC90ZXh0PjxyZWN0IHg9Ijc0NCIgeT0iMTIyIiB3aWR0aD0iMzMwIiBoZWlnaHQ9IjIzOCIgcng9IjEyIiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiM3ODk2YWMiIHN0cm9rZS13aWR0aD0iMiIvPjxjaXJjbGUgY3g9Ijc3MSIgY3k9IjE1MiIgcj0iMTgiIGZpbGw9IiMxMDNiNTMiLz48dGV4dCB4PSI3NzEiIHk9IjE1OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2ZmZmZmZiIgZm9udC1zaXplPSIyMCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIj4zPC90ZXh0Pjx0ZXh0IHg9Ijc5NyIgeT0iMTU5IiBmaWxsPSIjMTAzYjUzIiBmb250LXNpemU9IjIwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSJib2xkIj48dHNwYW4geD0iNzk3IiBkeT0iMCI+TG9jYWwgZHJhZnQ8L3RzcGFuPjwvdGV4dD48dGV4dCB4PSI3NjEiIHk9IjIwNyIgZmlsbD0iIzI0M2I1MyIgZm9udC1zaXplPSIxOSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXdlaWdodD0ibm9ybWFsIj48dHNwYW4geD0iNzYxIiBkeT0iMCI+VW5zYXZlZCB0aXRsZS9ib2R5IGFyZTwvdHNwYW4+PHRzcGFuIHg9Ijc2MSIgZHk9IjI1Ij5jb250cm9sbGVkIGZvcm0gdmFsdWVzLiBBPC90c3Bhbj48dHNwYW4geD0iNzYxIiBkeT0iMjUiPmRyYWZ0IGlzIG5vdCBhIGNvbmZpcm1lZDwvdHNwYW4+PHRzcGFuIHg9Ijc2MSIgZHk9IjI1Ij53cml0ZS48L3RzcGFuPjwvdGV4dD48dGV4dCB4PSIyOCIgeT0iNDA1IiBmaWxsPSIjMzg1NTZiIiBmb250LXNpemU9IjE3IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSJub3JtYWwiPjx0c3BhbiB4PSIyOCIgZHk9IjAiPlRoZSBVUkwgc2VsZWN0cyB0aGUgYWRkcmVzc2VkIHJlY29yZDsgZWRpdGFibGUgdGl0bGUvYm9keSByZW1haW4gYSBsb2NhbCBkcmFmdCB1bnRpbCBhIHZhbGlkPC90c3Bhbj48dHNwYW4geD0iMjgiIGR5PSIyNSI+d3JpdGUuIFAwMSBzdG9yYWdlIGlzIHZvbGF0aWxlLCB3aXRoIG5vIGR1cmFiaWxpdHkgb3IgYXV0aG9yaXNhdGlvbiBjbGFpbS48L3RzcGFuPjwvdGV4dD48L3N2Zz4=" alt="Illustrative interface diagram separating URL noteId, the addressed note 2 record and the local unsaved title/body draft."><figcaption>IMG-S09-02 — Illustrative interface diagram. The URL selects the addressed record; editable title/body remain a local draft until a valid write. P01 storage is volatile, with no durability or authorisation claim.</figcaption></figure>
+</section>
+<section id="record"><h2>2. The S09 conceptual task</h2>
+<article class="step" id="TG-01"><h3>TG-01 — Write the confirmed-data versus draft map</h3><dl>
+<dt>WHERE YOU ARE</dt><dd>The S09 form’s P02 transfer fields, not an additional implementation session.</dd>
+<dt>WHAT TO FIND</dt><dd>p02_transfer_map, p02_integration_status, economic_informatics_transfer and optional p02_evidence_optional.</dd>
+<dt>EXACT ACTION</dt><dd>Map one order/invoice review workflow onto confirmed data, selection, draft and submission state.</dd>
+<dt>WHAT YOU SHOULD SEE</dt><dd>A cause→observable consequence→economic implication→limit explanation and the actual progress status.</dd>
+<dt>WHAT TO RECORD</dt><dd>Your conceptual map and a precise consequence of publishing an unconfirmed or stale revision.</dd>
+<dt>DO NOT CONTINUE UNLESS</dt><dd>The record distinguishes proposal from confirmation and describes only the evidence you have.</dd>
+<dt>IF YOU DO NOT SEE THIS</dt><dd>Use the ownership table and state NOT_STARTED if no implementation has begun. Optional actual evidence can remain blank.</dd>
+<dt>STOP CONDITION</dt><dd>Stop if NOT_STARTED is being hidden or a completed P02 build is being invented to finish S09.</dd>
+<dt>CONTINUE WITH</dt><dd>TG-02: explain the supplied API scope.</dd>
+</dl></article>
+<article class="step" id="TG-02"><h3>TG-02 — State the supplied API operations accurately</h3><dl>
+<dt>WHERE YOU ARE</dt><dd>The exact supplied notes-api.js and server/app.js read as source.</dd>
+<dt>WHAT TO FIND</dt><dd>list/create/update/remove, collection GET, POST, PUT and DELETE. Source reading is a SOURCE witness.</dd>
+<dt>EXACT ACTION</dt><dd>Record the four implemented operations and the limitation that no individual get method is supplied.</dd>
+<dt>WHAT YOU SHOULD SEE</dt><dd>A source-grounded API map. The server’s initial note 1 is Server state, not the P01 seed 1/2; fresh P02 creates begin at ID 2.</dd>
+<dt>WHAT TO RECORD</dt><dd>p02_transfer_map with source locator and the distinction between P01 volatile store and P02 server-returned data.</dd>
+<dt>DO NOT CONTINUE UNLESS</dt><dd>A Location header is not mislabelled proof of a GET route or database persistence.</dd>
+<dt>IF YOU DO NOT SEE THIS</dt><dd>Return to the exact adapter/server rather than borrowing a different lecture example’s contract.</dd>
+<dt>STOP CONDITION</dt><dd>Stop a claim of an unimplemented endpoint, actual HTTP result or durable database.</dd>
+<dt>CONTINUE WITH</dt><dd>TG-03: record lifecycle and confirmation risks for later capstone work.</dd>
+</dl></article>
+</section>
+<section id="mechanism"><h2>3. Confirmation, read/write order and cleanup</h2>
+<p>Later implementation must retain server notes only from successful API results. A save click expresses intent; it is not confirmation. Use returned note identity/normalisation rather than the original draft as the confirmed record.</p>
+<p>An older refresh can settle after a newer one. A list started before a confirmed write can also settle afterwards and erase that confirmation from the view. These are different orderings to investigate with declared deferred witnesses.</p>
+<p>Abort is a cancellation request rather than proof that a non-cooperative promise cannot publish after cleanup. A later callback must still belong to the active session. Repeated submissions also need a declared ownership policy.</p>
+<p>A failed load/write should preserve the last confirmed notes and relevant local draft while exposing a stable sanitised error and a retry route. A UI status flag does not, by itself, prove synchronous exclusion of repeated writes.</p>
+<h3>Later capstone witness plan</h3><div class="table-wrap"><table><thead><tr>
+<th scope="col">Situation</th>
+<th scope="col">Discriminating future witness</th>
+<th scope="col">Current status</th>
+</tr></thead><tbody>
+<tr><td>Two refreshes settle newest then oldest</td><td>Actual deferred-order result retains the newer publication</td><td>PENDING; no execution in production</td></tr>
+<tr><td>List begins before a successful write</td><td>Older list cannot erase the confirmed returned record</td><td>PENDING; separate read/write ordering witness</td></tr>
+<tr><td>Non-cooperative promise settles after cleanup</td><td>Active-session publication rights are revoked</td><td>PENDING; aborted signal alone is insufficient</td></tr>
+<tr><td>Repeated submit or selected-ID change</td><td>Only intended write/target owns the result</td><td>PENDING; use exact event/session identity</td></tr>
+<tr><td>HTTP/transport/schema failure</td><td>Confirmed notes/draft retained with sanitised retry</td><td>PENDING; source adapter support is bounded</td></tr>
+</tbody></table></div>
+</section>
+<section id="later"><h2>4. Later source boundaries and environment blocks</h2>
+<p>The in-memory server is not a database and local UI confirmation is not a general economic transaction guarantee. Authorisation, durable storage, conflict resolution and accounting correctness are outside this small exercise.</p>
+<p>A precise conceptual transfer can be complete while full P02 progress remains NOT_STARTED. That honest separation is part of the learning objective.</p>
+<article class="step" id="TG-03"><h3>TG-03 — Keep the capstone plan and limits separate</h3><dl>
+<dt>WHERE YOU ARE</dt><dd>Your S09 transfer record and the actual later semester milestone plan.</dd>
+<dt>WHAT TO FIND</dt><dd>The incomplete NotesWorkspace.jsx, protected canonical adapter/server and separately named support preview.</dd>
+<dt>EXACT ACTION</dt><dd>Record the planned later implementation and its real current status.</dd>
+<dt>WHAT YOU SHOULD SEE</dt><dd>A transparent capstone plan with PENDING witnesses. The source-preserved standalone launcher has a Windows/path representation limitation; a named support launcher is a derivative, not the assessed server.</dd>
+<dt>WHAT TO RECORD</dt><dd>The active source identity and limitations. Preview adapter schema/transport checks do not qualify the original adapter or a complete security contract.</dd>
+<dt>DO NOT CONTINUE UNLESS</dt><dd>Full capstone work, environment qualification and support derivatives are labelled distinctly from S09 conceptual completion.</dd>
+<dt>IF YOU DO NOT SEE THIS</dt><dd>Keep the canonical source unchanged and use only a separately authorised support route later if needed.</dd>
+<dt>STOP CONDITION</dt><dd>Stop any hidden installation, runtime substitution, source rewrite or extra S09 gate.</dd>
+<dt>CONTINUE WITH</dt><dd>Finish the conceptual explanation in the same S09 PDF. Pursue the later actual capstone milestone under its published requirements.</dd>
+</dl></article>
+</section>
+</main><footer>Source reading, a saved record and actual runtime qualification are distinct. One final individual PDF: TW2026_S09_GROUP_Surname_Firstname.pdf.</footer></body></html>
