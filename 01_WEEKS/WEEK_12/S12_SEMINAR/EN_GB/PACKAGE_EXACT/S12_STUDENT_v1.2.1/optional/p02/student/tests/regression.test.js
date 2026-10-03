@@ -1,0 +1,8 @@
+import assert from "node:assert/strict";
+import test from "node:test";
+import { readFile } from "node:fs/promises";
+import { fixture, headers, withApp } from "./helpers.js";
+
+test("authentication and validation deny before enqueue", async () => { let calls = 0; const f = fixture({ queue: { async add() { calls += 1; return { id: "x" }; } } }); await withApp(f.app, async (url) => { assert.equal((await fetch(`${url}/api/exports`, { method: "POST", headers: { "content-type": "application/json" }, body: "{}" })).status, 401); for (const body of [{}, { reportId: "" }, { reportId: "r", extra: true }]) assert.equal((await fetch(`${url}/api/exports`, { method: "POST", headers: headers(), body: JSON.stringify(body) })).status, 400); assert.equal(calls, 0); }); });
+test("malformed JSON, unknown routes, health, and later requests remain healthy", async () => { const f = fixture(); await withApp(f.app, async (url) => { assert.equal((await fetch(`${url}/api/exports`, { method: "POST", headers: headers(), body: "{" })).status, 400); assert.equal((await fetch(`${url}/missing`)).status, 404); assert.equal((await fetch(`${url}/health`)).status, 200); }); });
+test("BullMQ dependency and bounded source claims remain explicit", async () => { const manifest = JSON.parse(await readFile("package.json", "utf8")); assert.deepEqual(manifest.dependencies, { bullmq: "6.0.10", express: "5.1.0", ioredis: "6.0.0" }); const text = `${await readFile("README.md", "utf8")}\n${await readFile("src/job-lifecycle.js", "utf8")}`; assert.match(text, /not production Redis operations or exactly-once execution/i); assert.doesNotMatch(text, /guarantees exactly-once|is production-ready/i); assert.doesNotMatch(await readFile("compose.yaml", "utf8"), /password|requirepass/i); });

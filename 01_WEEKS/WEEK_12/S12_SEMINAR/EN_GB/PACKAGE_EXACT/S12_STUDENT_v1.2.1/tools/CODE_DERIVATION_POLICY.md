@@ -1,0 +1,3 @@
+# Supplied code derivation boundary
+
+The assessed file remains the fail-closed starter. Public canonical test files and package.json/package-lock.json remain byte-identical to v1.1.0. `checks/` files are explicitly derived checks, not replacements for canonical source tests. Adapter, demo server, error mapper and active README/spec are author infrastructure corrections. Exact originals are retained privately. A package verifier checks the immutable delivered file set; a work verifier separately permits only the assessed file to change. Generated local node_modules may be excluded only after recursively rejecting symlinks and special objects. The core never imports it.
