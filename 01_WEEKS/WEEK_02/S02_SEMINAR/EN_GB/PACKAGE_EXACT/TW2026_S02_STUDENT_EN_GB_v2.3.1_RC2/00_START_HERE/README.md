@@ -1,6 +1,6 @@
 # S02 - Responsive Card/Grid Reconstruction
 
-This is S02 v2.3.1 RC1, a release candidate for the English student route. Qualification limits are recorded in `90_AUDIT/STUDENT_SAFE_QA_SUMMARY.md`.
+This is S02 v2.3.1 RC2, a release candidate for the English student route. Qualification limits are recorded in `90_AUDIT/STUDENT_SAFE_QA_SUMMARY.md`.
 
 ## Start here
 
