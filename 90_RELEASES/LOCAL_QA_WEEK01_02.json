@@ -1,0 +1,94 @@
+{
+  "schema": "webtech-ase-local-qa-v1",
+  "source_commit": "1850118b3f619b233f89941802212fe59d8d5dfe",
+  "distribution_version": "2.1.0-rc.1",
+  "qualification_status": "release-candidate",
+  "reference_runtime": {
+    "node": "24.21.0",
+    "npm": "11.19.0",
+    "override": false,
+    "platform": "Linux"
+  },
+  "browser": {
+    "engine": "Google Chrome for Testing",
+    "version": "151.0.7922.34",
+    "mode": "headless",
+    "platform": "Linux"
+  },
+  "integrated_package_checks": 8,
+  "integrated_distribution_checks": 9,
+  "deterministic_weekly_bundles": true,
+  "objects": {
+    "C01": {
+      "integrity_mutants_rejected": 13,
+      "bounded_process_mutants_rejected": 2,
+      "canonical_examples_passed": 5,
+      "browser_cases_passed": 9,
+      "docx_pages_inspected": 7
+    },
+    "S01": {
+      "completed_private_tests_passed": 16,
+      "method_guard_mutant": "rejected",
+      "fixed_name_mutant": "rejected",
+      "starter_expected_assertion_failures": [
+        1,
+        2
+      ],
+      "form_fields": 33,
+      "form_textareas": 13,
+      "browser_cases_passed": 15,
+      "docx_pages_inspected": 8,
+      "long_form_pdf_pages_inspected": 6
+    },
+    "C02": {
+      "integrity_and_canonical_cases_passed": 17,
+      "browser_cases_passed": 12,
+      "docx_pages_inspected": 4
+    },
+    "S02": {
+      "starter_suites": {
+        "baseline": {
+          "pass": 1,
+          "fail": 0
+        },
+        "objective": {
+          "pass": 0,
+          "fail": 3
+        },
+        "regression": {
+          "pass": 2,
+          "fail": 0
+        }
+      },
+      "completed_private_result": "pass",
+      "substantive_mutants_rejected": 6,
+      "missing_browser_exit_code": 3,
+      "pdf_text_tails_retained": 39,
+      "long_form_pdf_pages_inspected": 5
+    }
+  },
+  "shared_tool_fixture_checks_passed": 36,
+  "c02_identity_compatibility_checks_passed": 8,
+  "initial_integrated_issue": {
+    "finding": "C02 common validator used historical case-folded identity order for the new ordinal contract",
+    "resolution": "Respect explicitly documented RC ordinal manifest contract and retain original FINAL contract; eight compatibility and mutation checks passed"
+  },
+  "pending_gates": [
+    "native_windows",
+    "native_macos",
+    "manual_browser",
+    "word",
+    "moodle_live",
+    "human_pilot",
+    "owner_acceptance"
+  ],
+  "limits": [
+    "Local checks cover exercised cases only",
+    "CSS source checklist is bounded; valid alternatives may require review",
+    "Headless Linux cannot establish native platform, Word, Moodle, zoom/Tab manual or novice timing acceptance",
+    "Prior public assessed implementation remains accessible in Git history"
+  ],
+  "actions_dispatched": 0,
+  "publication_performed": false,
+  "completed_solutions_in_student_distribution": false
+}

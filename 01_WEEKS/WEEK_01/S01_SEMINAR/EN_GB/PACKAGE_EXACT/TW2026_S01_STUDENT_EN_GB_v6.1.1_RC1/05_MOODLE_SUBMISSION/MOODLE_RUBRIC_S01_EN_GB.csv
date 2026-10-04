@@ -1,0 +1,7 @@
+criterion,strong_evidence,needs_improvement
+HTTP accuracy,Accurately separates request and response fields and status from business data.,"Confuses method, query, body, headers or representation."
+Prediction and observation,"Records prospective prediction, actual result and a reproducible action.",Prediction is retrospective or observed result is unsupported.
+Mechanism,Explains the operations that cause the observed result.,Restates output without explaining the mechanism.
+Independent AI verification,Two counterexamples and an evidence-based verdict with source labels.,AI text is the only evidence or source labels are inaccurate.
+Provenance and limitations,Supplied and unexecuted evidence are labelled honestly.,Claims personal execution or qualification without evidence.
+Submission quality,One readable private PDF and bounded reproduction details.,"Clipped, incomplete or private material."

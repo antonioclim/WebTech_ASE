@@ -1,42 +1,98 @@
 {
   "schema": "webtech-ase-release-plan-v2",
+  "source_commit": "1850118b3f619b233f89941802212fe59d8d5dfe",
   "repository_version": "2.0.1",
-  "status": "final",
-  "prerelease": false,
+  "distribution_version": "2.1.0-rc.1",
+  "status": "release-candidate",
+  "draft": true,
+  "prerelease": true,
+  "required_gates": [
+    "local_integrity",
+    "reference_runtime",
+    "headless_browser",
+    "native_windows",
+    "native_macos",
+    "manual_browser",
+    "word",
+    "moodle_live",
+    "human_pilot",
+    "owner_acceptance"
+  ],
+  "gates": {
+    "local_integrity": {
+      "status": "pass",
+      "evidence": "90_RELEASES/LOCAL_QA_WEEK01_02.json",
+      "scope": "exercised local cases; native acceptance separate"
+    },
+    "reference_runtime": {
+      "status": "pass",
+      "evidence": "90_RELEASES/LOCAL_QA_WEEK01_02.json",
+      "scope": "exercised local cases; native acceptance separate"
+    },
+    "headless_browser": {
+      "status": "pass",
+      "evidence": "90_RELEASES/LOCAL_QA_WEEK01_02.json",
+      "scope": "exercised local cases; native acceptance separate"
+    },
+    "native_windows": {
+      "status": "pending",
+      "evidence": null
+    },
+    "native_macos": {
+      "status": "pending",
+      "evidence": null
+    },
+    "manual_browser": {
+      "status": "pending",
+      "evidence": null
+    },
+    "word": {
+      "status": "pending",
+      "evidence": null
+    },
+    "moodle_live": {
+      "status": "pending",
+      "evidence": null
+    },
+    "human_pilot": {
+      "status": "pending",
+      "evidence": null
+    },
+    "owner_acceptance": {
+      "status": "pending",
+      "evidence": null
+    }
+  },
   "weeks": {
     "01": {
-      "version": "2.0.0",
-      "tag": "week-01-v2.0.0",
-      "title": "WebTech_ASE Week 01 v2.0.0",
+      "version": "2.1.0-rc.1",
+      "tag": "week-01-en-v2.1.0-rc.1",
+      "title": "WebTech_ASE Week 01 EN 2.1.0-rc.1",
       "notes": "90_RELEASES/RELEASE_NOTES_WEEK_01.md",
+      "status": "release-candidate",
+      "draft": true,
+      "prerelease": true,
       "languages": {
-        "RO": {
-          "bundle": "90_RELEASES/assets/WebTech_ASE_WEEK_01_RO_v2.0.0.zip",
-          "course": "01_WEEKS/WEEK_01/C01_COURSE/RO/DOWNLOAD/TW2026_C01_STUDENT_RO_v2.0.1_FINAL.zip",
-          "seminar": "01_WEEKS/WEEK_01/S01_SEMINAR/RO/DOWNLOAD/TW2026_S01_STUDENT_RO_v6.0.1_FINAL.zip"
-        },
         "EN_GB": {
-          "bundle": "90_RELEASES/assets/WebTech_ASE_WEEK_01_EN_GB_v2.0.0.zip",
-          "course": "01_WEEKS/WEEK_01/C01_COURSE/EN_GB/DOWNLOAD/TW2026_C01_STUDENT_EN_GB_v2.0.1_FINAL.zip",
-          "seminar": "01_WEEKS/WEEK_01/S01_SEMINAR/EN_GB/DOWNLOAD/TW2026_S01_STUDENT_EN_GB_v6.0.1_FINAL.zip"
+          "bundle": "90_RELEASES/assets/WebTech_ASE_WEEK_01_EN_GB_v2.1.0-rc.1.zip",
+          "course": "01_WEEKS/WEEK_01/C01_COURSE/EN_GB/DOWNLOAD/TW2026_C01_STUDENT_EN_GB_v2.0.2_RC1.zip",
+          "seminar": "01_WEEKS/WEEK_01/S01_SEMINAR/EN_GB/DOWNLOAD/TW2026_S01_STUDENT_EN_GB_v6.1.1_RC1.zip"
         }
       }
     },
     "02": {
-      "version": "2.0.0",
-      "tag": "week-02-v2.0.0",
-      "title": "WebTech_ASE Week 02 v2.0.0",
+      "version": "2.1.0-rc.1",
+      "tag": "week-02-en-v2.1.0-rc.1",
+      "title": "WebTech_ASE Week 02 EN 2.1.0-rc.1",
       "notes": "90_RELEASES/RELEASE_NOTES_WEEK_02.md",
+      "status": "release-candidate",
+      "draft": true,
+      "prerelease": true,
       "languages": {
-        "RO": {
-          "bundle": "90_RELEASES/assets/WebTech_ASE_WEEK_02_RO_v2.0.0.zip",
-          "course": "01_WEEKS/WEEK_02/C02_COURSE/RO/DOWNLOAD/TW2026_C02_STUDENT_RO_v1.2.1_FINAL.zip",
-          "seminar": "01_WEEKS/WEEK_02/S02_SEMINAR/RO/DOWNLOAD/TW2026_S02_STUDENT_RO_v2.2.1_FINAL.zip"
-        },
         "EN_GB": {
-          "bundle": "90_RELEASES/assets/WebTech_ASE_WEEK_02_EN_GB_v2.0.0.zip",
-          "course": "01_WEEKS/WEEK_02/C02_COURSE/EN_GB/DOWNLOAD/TW2026_C02_STUDENT_EN_GB_v1.2.1_FINAL.zip",
-          "seminar": "01_WEEKS/WEEK_02/S02_SEMINAR/EN_GB/DOWNLOAD/TW2026_S02_STUDENT_EN_GB_v2.2.1_FINAL.zip"
+          "bundle": "90_RELEASES/assets/WebTech_ASE_WEEK_02_EN_GB_v2.1.0-rc.1.zip",
+          "course": "01_WEEKS/WEEK_02/C02_COURSE/EN_GB/DOWNLOAD/TW2026_C02_STUDENT_EN_GB_v1.2.2_RC1.zip",
+          "seminar": "01_WEEKS/WEEK_02/S02_SEMINAR/EN_GB/DOWNLOAD/TW2026_S02_STUDENT_EN_GB_v2.3.1_RC1.zip"
         }
       }
     }

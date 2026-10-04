@@ -1,8 +1,5 @@
 # C02 — Semantic HTML, CSS, responsive UI and accessibility
 
-Choose a language:
+[Active English student candidate](EN_GB/README.md) · [Romanian legacy alternative](RO/README.md)
 
-- [Romanian](RO/README.md)
-- [English (British)](EN_GB/README.md)
-
-The two routes implement the same teaching contract but are maintained as separate editions.
+The filtered Week 01–02 candidate contains English material only. The Romanian alternative retains its earlier identity and has not received this EN remediation.

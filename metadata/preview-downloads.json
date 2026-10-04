@@ -6,7 +6,7 @@
   "policy": "00_TOOLS/maintainer/PREVIEW_DOWNLOAD_POLICY.md",
   "distribution_mode": "STUDENT_WIP_PREVIEW",
   "qualified_release": false,
-  "weeks_01_02": "PRESERVE_LIVE_UNCHANGED",
+  "weeks_01_02": "SEE_90_RELEASES_CURRENT_OBJECTS_EN_RELEASE_CANDIDATE",
   "repository_identity": "FROZEN_BASELINE_UNCHANGED_DURING_WIP",
   "weeks": [
     {

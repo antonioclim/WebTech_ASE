@@ -1,0 +1,279 @@
+{
+  "schema": "webtech-ase-current-objects-v1",
+  "source_commit": "1850118b3f619b233f89941802212fe59d8d5dfe",
+  "distribution_version": "2.1.0-rc.1",
+  "status": "release-candidate",
+  "languages": [
+    "EN_GB"
+  ],
+  "objects": [
+    {
+      "id": "C01",
+      "week": "01",
+      "unit": "C01",
+      "kind": "course",
+      "title": "The Web as a system, HTTP and AI-assisted development",
+      "language": "EN_GB",
+      "version": "2.0.2-rc.1",
+      "candidate": "RC1",
+      "package_root": "TW2026_C01_STUDENT_EN_GB_v2.0.2_RC1",
+      "zip": "01_WEEKS/WEEK_01/C01_COURSE/EN_GB/DOWNLOAD/TW2026_C01_STUDENT_EN_GB_v2.0.2_RC1.zip",
+      "path": "01_WEEKS/WEEK_01/C01_COURSE/EN_GB/PACKAGE_EXACT/TW2026_C01_STUDENT_EN_GB_v2.0.2_RC1",
+      "sha256": "f4f958d201dd571b597710c385cf528bc781b2ae7355ed9ab085973cd8a29a25",
+      "bytes": 115355,
+      "files": 37,
+      "package_id": "d5c3180ec175a35e3c1ad1480ded1f66968990b9ae2ccf18e40323e17c9f5b51",
+      "status": "release-candidate",
+      "gates": {
+        "local_integrity": {
+          "status": "pass",
+          "evidence": "90_RELEASES/LOCAL_QA_WEEK01_02.json",
+          "scope": "exercised local cases; native acceptance separate"
+        },
+        "reference_runtime": {
+          "status": "pass",
+          "evidence": "90_RELEASES/LOCAL_QA_WEEK01_02.json",
+          "scope": "exercised local cases; native acceptance separate"
+        },
+        "headless_browser": {
+          "status": "pass",
+          "evidence": "90_RELEASES/LOCAL_QA_WEEK01_02.json",
+          "scope": "exercised local cases; native acceptance separate"
+        },
+        "native_windows": {
+          "status": "pending",
+          "evidence": null
+        },
+        "native_macos": {
+          "status": "pending",
+          "evidence": null
+        },
+        "manual_browser": {
+          "status": "pending",
+          "evidence": null
+        },
+        "word": {
+          "status": "pending",
+          "evidence": null
+        },
+        "moodle_live": {
+          "status": "pending",
+          "evidence": null
+        },
+        "human_pilot": {
+          "status": "pending",
+          "evidence": null
+        },
+        "owner_acceptance": {
+          "status": "pending",
+          "evidence": null
+        }
+      },
+      "entrypoints": {
+        "windows": "OPEN_PRESENTATION.cmd",
+        "macos_linux": "OPEN_PRESENTATION.sh"
+      }
+    },
+    {
+      "id": "S01",
+      "week": "01",
+      "unit": "S01",
+      "kind": "seminar",
+      "title": "HTTP Detective + Tiny HTTP Server",
+      "language": "EN_GB",
+      "version": "6.1.1-rc.1",
+      "candidate": "RC1",
+      "package_root": "TW2026_S01_STUDENT_EN_GB_v6.1.1_RC1",
+      "zip": "01_WEEKS/WEEK_01/S01_SEMINAR/EN_GB/DOWNLOAD/TW2026_S01_STUDENT_EN_GB_v6.1.1_RC1.zip",
+      "path": "01_WEEKS/WEEK_01/S01_SEMINAR/EN_GB/PACKAGE_EXACT/TW2026_S01_STUDENT_EN_GB_v6.1.1_RC1",
+      "sha256": "e454210ed5d8e3b59e76de233dc9464f5f19d7ca01ea1353323a119e34ff4439",
+      "bytes": 428406,
+      "files": 88,
+      "package_id": "3b23b11995d12baf24c2ea9cdb2fde284663428303e7b327352e248c99b9325c",
+      "status": "release-candidate",
+      "gates": {
+        "local_integrity": {
+          "status": "pass",
+          "evidence": "90_RELEASES/LOCAL_QA_WEEK01_02.json",
+          "scope": "exercised local cases; native acceptance separate"
+        },
+        "reference_runtime": {
+          "status": "pass",
+          "evidence": "90_RELEASES/LOCAL_QA_WEEK01_02.json",
+          "scope": "exercised local cases; native acceptance separate"
+        },
+        "headless_browser": {
+          "status": "pass",
+          "evidence": "90_RELEASES/LOCAL_QA_WEEK01_02.json",
+          "scope": "exercised local cases; native acceptance separate"
+        },
+        "native_windows": {
+          "status": "pending",
+          "evidence": null
+        },
+        "native_macos": {
+          "status": "pending",
+          "evidence": null
+        },
+        "manual_browser": {
+          "status": "pending",
+          "evidence": null
+        },
+        "word": {
+          "status": "pending",
+          "evidence": null
+        },
+        "moodle_live": {
+          "status": "pending",
+          "evidence": null
+        },
+        "human_pilot": {
+          "status": "pending",
+          "evidence": null
+        },
+        "owner_acceptance": {
+          "status": "pending",
+          "evidence": null
+        }
+      },
+      "entrypoints": {
+        "windows": "OPEN_BEGINNER_GUIDE.cmd",
+        "macos_linux": "OPEN_BEGINNER_GUIDE.sh"
+      }
+    },
+    {
+      "id": "C02",
+      "week": "02",
+      "unit": "C02",
+      "kind": "course",
+      "title": "Semantic HTML, CSS, responsive UI and accessibility",
+      "language": "EN_GB",
+      "version": "1.2.2-rc.1",
+      "candidate": "RC1",
+      "package_root": "TW2026_C02_STUDENT_EN_GB_v1.2.2_RC1",
+      "zip": "01_WEEKS/WEEK_02/C02_COURSE/EN_GB/DOWNLOAD/TW2026_C02_STUDENT_EN_GB_v1.2.2_RC1.zip",
+      "path": "01_WEEKS/WEEK_02/C02_COURSE/EN_GB/PACKAGE_EXACT/TW2026_C02_STUDENT_EN_GB_v1.2.2_RC1",
+      "sha256": "c1e8223cfd50441ee40796858ec7939cde4416da07ac41e0b9d3eb94cb89aa5e",
+      "bytes": 137387,
+      "files": 50,
+      "package_id": "aa65f64bd7f066e8d74b53a9e350c3d8b4e0ef91db944311f2b7f74fa5fdad93",
+      "status": "release-candidate",
+      "gates": {
+        "local_integrity": {
+          "status": "pass",
+          "evidence": "90_RELEASES/LOCAL_QA_WEEK01_02.json",
+          "scope": "exercised local cases; native acceptance separate"
+        },
+        "reference_runtime": {
+          "status": "pass",
+          "evidence": "90_RELEASES/LOCAL_QA_WEEK01_02.json",
+          "scope": "exercised local cases; native acceptance separate"
+        },
+        "headless_browser": {
+          "status": "pass",
+          "evidence": "90_RELEASES/LOCAL_QA_WEEK01_02.json",
+          "scope": "exercised local cases; native acceptance separate"
+        },
+        "native_windows": {
+          "status": "pending",
+          "evidence": null
+        },
+        "native_macos": {
+          "status": "pending",
+          "evidence": null
+        },
+        "manual_browser": {
+          "status": "pending",
+          "evidence": null
+        },
+        "word": {
+          "status": "pending",
+          "evidence": null
+        },
+        "moodle_live": {
+          "status": "pending",
+          "evidence": null
+        },
+        "human_pilot": {
+          "status": "pending",
+          "evidence": null
+        },
+        "owner_acceptance": {
+          "status": "pending",
+          "evidence": null
+        }
+      },
+      "entrypoints": {
+        "windows": "START_COURSE_02.cmd",
+        "macos_linux": "START_COURSE_02.sh"
+      }
+    },
+    {
+      "id": "S02",
+      "week": "02",
+      "unit": "S02",
+      "kind": "seminar",
+      "title": "Responsive Card Grid",
+      "language": "EN_GB",
+      "version": "2.3.1-rc.1",
+      "candidate": "RC1",
+      "package_root": "TW2026_S02_STUDENT_EN_GB_v2.3.1_RC1",
+      "zip": "01_WEEKS/WEEK_02/S02_SEMINAR/EN_GB/DOWNLOAD/TW2026_S02_STUDENT_EN_GB_v2.3.1_RC1.zip",
+      "path": "01_WEEKS/WEEK_02/S02_SEMINAR/EN_GB/PACKAGE_EXACT/TW2026_S02_STUDENT_EN_GB_v2.3.1_RC1",
+      "sha256": "6f1f20ab87880d44d45a31908599379cf5f77de0af8df11f8286648c5069b4dd",
+      "bytes": 1200640,
+      "files": 81,
+      "package_id": "26d9097cb09b63ec93cbcf43943845670027b4d8ee74cd78b837401c093bb746",
+      "status": "release-candidate",
+      "gates": {
+        "local_integrity": {
+          "status": "pass",
+          "evidence": "90_RELEASES/LOCAL_QA_WEEK01_02.json",
+          "scope": "exercised local cases; native acceptance separate"
+        },
+        "reference_runtime": {
+          "status": "pass",
+          "evidence": "90_RELEASES/LOCAL_QA_WEEK01_02.json",
+          "scope": "exercised local cases; native acceptance separate"
+        },
+        "headless_browser": {
+          "status": "pass",
+          "evidence": "90_RELEASES/LOCAL_QA_WEEK01_02.json",
+          "scope": "exercised local cases; native acceptance separate"
+        },
+        "native_windows": {
+          "status": "pending",
+          "evidence": null
+        },
+        "native_macos": {
+          "status": "pending",
+          "evidence": null
+        },
+        "manual_browser": {
+          "status": "pending",
+          "evidence": null
+        },
+        "word": {
+          "status": "pending",
+          "evidence": null
+        },
+        "moodle_live": {
+          "status": "pending",
+          "evidence": null
+        },
+        "human_pilot": {
+          "status": "pending",
+          "evidence": null
+        },
+        "owner_acceptance": {
+          "status": "pending",
+          "evidence": null
+        }
+      },
+      "entrypoints": {
+        "windows": "OPEN_BEGINNER_GUIDE.cmd",
+        "macos_linux": "OPEN_BEGINNER_GUIDE.sh"
+      }
+    }
+  ]
+}

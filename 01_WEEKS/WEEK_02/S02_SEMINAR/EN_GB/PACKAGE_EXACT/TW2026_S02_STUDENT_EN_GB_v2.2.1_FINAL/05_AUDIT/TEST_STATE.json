@@ -1,8 +1,0 @@
-{
-  "baseline_student": "PASS",
-  "objective_student": "EXPECTED_ASSERTION_FAIL",
-  "objective_assertion_failures": 3,
-  "regression_student": "PASS",
-  "reference": "PASS",
-  "museum": "OPTIONAL_DERIVED_OFFLINE"
-}

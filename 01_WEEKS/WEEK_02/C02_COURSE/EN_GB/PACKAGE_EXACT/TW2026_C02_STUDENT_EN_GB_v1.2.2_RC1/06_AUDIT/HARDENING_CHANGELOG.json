@@ -1,0 +1,38 @@
+{
+  "object": "C02",
+  "releaseVersion": "v1.2.2 RC1",
+  "date": "2026-10-04",
+  "status": "RELEASE_CANDIDATE",
+  "changes": [
+    "Expanded English handout with example mapping, worked mechanisms, self checks and verified primary references.",
+    "Separated preparation and independent transfer; mapped historical unit labels to current topics.",
+    "Corrected relative/sticky versus absolute/fixed flow explanation.",
+    "Added linked invalid/corrected form states and honest static validator scope.",
+    "Prevented presentation shortcuts hijacking native or editable controls; improved timer and overlay semantics.",
+    "Replaced misleading viewport/zoom/long-text simulation with measured iframe viewport, genuine long content and precisely labelled text/motion overrides.",
+    "Required a canonical PACKAGE_ID and manifest with safe unique paths, exact hashes/file set and no symlinks/reparse entries."
+  ],
+  "previousReceipt": {
+    "object": "C02",
+    "releaseVersion": "v1.2.1 FINAL",
+    "date": "2026-09-27",
+    "auditMode": "independent hostile fail-closed hardening",
+    "changes": [
+      "Upgraded POSIX verification from hash-only to exact-set verification.",
+      "Rejected extra files and symbolic links in the package root.",
+      "Preserved all canonical examples and the v1.1 didactic core."
+    ],
+    "canonicalRepositoryModified": false,
+    "requiredNode": "v24.21.0",
+    "requiredNpm": "11.19.0"
+  },
+  "qualification": {
+    "localChromium": "Bounded checks recorded separately",
+    "docxRender": "LibreOffice render and every-page visual inspection",
+    "nativeWindows": "PENDING",
+    "nativeWord": "PENDING",
+    "nativeZoom": "PENDING",
+    "classroomPilot": "PENDING",
+    "githubActions": "NOT_EXECUTED"
+  }
+}

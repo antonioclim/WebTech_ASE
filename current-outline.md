@@ -2,8 +2,8 @@
 
 | Week | Course | Seminar | Public status |
 | ---: | --- | --- | --- |
-| 01 | The Web as a system, HTTP and AI-assisted development | From click to contract | [Established week 1](01_WEEKS/WEEK_01/README.md) |
-| 02 | Semantic HTML, CSS, responsive UI and accessibility | CSS as a constraint system | [Established week 2](01_WEEKS/WEEK_02/README.md) |
+| 01 | The Web as a system, HTTP and AI-assisted development | HTTP Detective + Tiny HTTP Server | [English candidate week 1](01_WEEKS/WEEK_01/README.md) |
+| 02 | Semantic HTML, CSS, responsive UI and accessibility | Responsive Card Grid | [English candidate week 2](01_WEEKS/WEEK_02/README.md) |
 | 03 | JavaScript for reading and modifying programs | Dataset Transformer CLI | [WIP preview](01_WEEKS/WEEK_03/README.md) |
 | 04 | Modules, DOM, events, Promises, async/await and fetch | Multi-source Data Dashboard | [WIP preview](01_WEEKS/WEEK_04/README.md) |
 | 05 | Node, Express and REST | In-memory Task API | [WIP preview](01_WEEKS/WEEK_05/README.md) |

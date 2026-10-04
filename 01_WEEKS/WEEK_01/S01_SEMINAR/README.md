@@ -1,8 +1,5 @@
 # S01 — HTTP Detective + Tiny HTTP Server
 
-Choose a language:
+[Active English student candidate](EN_GB/README.md) · [Romanian legacy alternative](RO/README.md)
 
-- [Romanian](RO/README.md)
-- [English (British), current v6.1.0](EN_GB/README.md)
-
-The EN-GB route has been reconstructed and locally hardened. The Romanian route remains a historical separate edition and is not changed by this patch. Exact runtime, native platform/browser, Microsoft Word, Moodle-live and owner acceptance gates remain open.
+The filtered Week 01–02 candidate contains English material only. The Romanian alternative retains its earlier identity and has not received this EN remediation.

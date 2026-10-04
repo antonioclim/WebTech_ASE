@@ -1,9 +1,0 @@
-DELIBERATELY FLAWED PATCH
-
-if (url.pathname.includes('/api/greetings/')) {
-  const name = url.pathname.split('/').pop();
-  sendJson(response, 200, { greeting: `Hello, ${name}!` });
-  return true;
-}
-
-Claim: the patch covers every name, including encoded spaces and empty names.

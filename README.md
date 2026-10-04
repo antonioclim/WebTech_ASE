@@ -9,7 +9,7 @@
 The working repository contains:
 
 - Day 0 setup for Windows, macOS and Linux;
-- weeks 1–2 as the established bilingual material;
+- weeks 1–2 as filtered English release candidates, with legacy Romanian alternatives;
 - weeks 3–14 as English student WIP previews;
 - offline student packages and evidence-oriented seminar forms;
 - Moodle submission guidance;
@@ -29,7 +29,7 @@ week → course/seminar → language
 
 [Choose a week, course or seminar](01_WEEKS/README.md).
 
-Weeks 01–02 retain their existing files, bilingual routes and the additional live S01 guide. Weeks 03–14 are **student WIP previews**, not qualified final releases. Each course and seminar keeps its original ZIP in `DOWNLOAD` and a complete byte-identical extracted copy in `EN_GB/PACKAGE_EXACT`. GitHub displays HTML source rather than running the lesson. Pages is not activated by this distribution route.
+Weeks 01–02 provide one active EN package per course/seminar, corrected English guides, and a filtered candidate bundle. Legacy EN packages are retained in Git history; the duplicate standalone S01 guide is superseded. Weeks 03–14 are **student WIP previews**, not qualified final releases. Each course and seminar keeps its original ZIP in `DOWNLOAD` and a complete byte-identical extracted copy in `EN_GB/PACKAGE_EXACT`. GitHub displays HTML source rather than running the lesson. Pages is not activated by this distribution route.
 
 Runtime, native-platform, browser, Microsoft Word and Moodle acceptance remain separate gates. Read the [preview policy](00_TOOLS/maintainer/PREVIEW_DOWNLOAD_POLICY.md) and each package guide before running an application.
 
@@ -60,11 +60,11 @@ Use the issue forms for reproducible technical problems or content corrections. 
 ```text
 Stable baseline version: 2.0.1
 Current state: work in progress
-Automated Actions: disabled; all workflows are manual-only
+Automatic workflow triggers: none; manual execution controlled by the owner
 Pages deployment: intentionally deferred
 Repository identity: frozen baseline; regeneration deferred until final freeze
-Established material: Day 0 and weeks 1–2
+Day 0: existing setup; weeks 1–2: English release candidates
 Additional material: weeks 3–14, unqualified WIP previews; DOWNLOAD + PACKAGE_EXACT
 Guidance language: English
-Bilingual exceptions: C01, S01, C02 and S02
+Legacy Romanian alternatives: C01, S01, C02 and S02
 ```
