@@ -1,0 +1,9 @@
+S03 — Dataset Transformer CLI: individual evidence and generated-code audit
+
+Submit one PDF only. Include your preserved P01 prediction, exact initial-state evidence, one-file implementation evidence, CLI reconciliation, non-mutation and identity witness, bounded Gemini claim audit, required P03 generated-code audit, limitations, reflection and individual declaration.
+
+P02 Rule Engine is optional and is not required for the standard maximum mark.
+
+Filename: TW2026_S03_GROUP_Surname_Firstname.pdf
+
+Do not upload source folders, ZIP archives, node_modules, credentials, tokens, cookies, private data or complete AI conversations. A saved Draft is not final submission. Verify the final status, filename and timestamp.

@@ -1,0 +1,7 @@
+DELIBERATELY FLAWED RESPONSE
+
+1. 201 proves that the expense claim was approved and paid.
+2. The body looks like JSON, so Content-Type does not matter.
+3. The URL contains nouns, so the API is REST.
+4. A green test proves that no other defect exists.
+5. A retry is always a second user intention.

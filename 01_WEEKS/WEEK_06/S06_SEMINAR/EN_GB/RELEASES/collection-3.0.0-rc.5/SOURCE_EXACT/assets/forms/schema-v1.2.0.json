@@ -1,0 +1,1149 @@
+{
+  "schema": "TW2026-S06-EVIDENCE",
+  "version": "1.2.0",
+  "maxImportBytes": 2000000,
+  "sections": [
+    {
+      "id": "identity",
+      "title": "Identity and measured environment",
+      "intro": "Record the environment you actually used. A missing native package is a prerequisite block, not a failed student objective.",
+      "fields": [
+        {
+          "id": "surname",
+          "label": "Surname",
+          "kind": "input",
+          "max": 128,
+          "phase": "core",
+          "default": "",
+          "help": "Your surname as used in the private assessment submission; do not put this completed form in a public repository."
+        },
+        {
+          "id": "given",
+          "label": "First name (historical field ID: given)",
+          "kind": "input",
+          "max": 128,
+          "phase": "core",
+          "default": "",
+          "help": "Your first name. The v1.1.0 GivenName filename token maps to Firstname in v1.2.0; old records remain labelled with their original version."
+        },
+        {
+          "id": "group",
+          "label": "Group",
+          "kind": "input",
+          "max": 128,
+          "phase": "core",
+          "default": "",
+          "help": "Your seminar group. No invented demonstration identifier belongs in a real submission."
+        },
+        {
+          "id": "kits",
+          "label": "Historical combined C06/S06 identity or NONE",
+          "kind": "input",
+          "max": 128,
+          "phase": "core",
+          "default": "",
+          "help": "Preserved legacy field: retain an imported v1.1.0 identity verbatim. For a new draft write NONE unless a separate historical package is relevant. Current seminar, kit version and PACKAGE_ID are separate fields below."
+        },
+        {
+          "id": "os",
+          "label": "Operating system",
+          "kind": "input",
+          "max": 128,
+          "phase": "core",
+          "default": "",
+          "help": "Record the operating system and relevant version actually used."
+        },
+        {
+          "id": "terminal",
+          "label": "Terminal and client used",
+          "kind": "input",
+          "max": 128,
+          "phase": "core",
+          "default": "",
+          "help": "Record the terminal and HTTP client; CLI observations are sufficient for the client evidence."
+        },
+        {
+          "id": "node",
+          "label": "Observed Node version",
+          "kind": "input",
+          "max": 128,
+          "phase": "core",
+          "default": "",
+          "help": "Record the value actually observed or UNKNOWN with reason. Never prefill the project reference as a measurement."
+        },
+        {
+          "id": "npm",
+          "label": "Observed npm version",
+          "kind": "input",
+          "max": 128,
+          "phase": "core",
+          "default": "",
+          "help": "Record the value actually observed or UNKNOWN with reason. Never prefill the project reference as a measurement."
+        },
+        {
+          "id": "dependencies",
+          "label": "Observed Sequelize, sqlite3 and Express resolution/load status",
+          "kind": "input",
+          "max": 128,
+          "phase": "core",
+          "default": "",
+          "help": "Give resolution/native-load state or a short block message. Link longer preflight output in traceability. A version lookup is not a native-driver test."
+        },
+        {
+          "id": "evidence_date",
+          "label": "Date of this evidence record (YYYY-MM-DD)",
+          "kind": "input",
+          "max": 128,
+          "phase": "core",
+          "default": "",
+          "help": "Enter the actual local date of your record. This is separate from the seminar ID, kit version and package identity."
+        },
+        {
+          "id": "seminar_id",
+          "label": "Seminar ID",
+          "kind": "input",
+          "max": 128,
+          "phase": "core",
+          "default": "",
+          "help": "Enter S06 after checking the package label. This is not the course C06 identifier."
+        },
+        {
+          "id": "kit_version",
+          "label": "Observed S06 kit version",
+          "kind": "input",
+          "max": 128,
+          "phase": "core",
+          "default": "",
+          "help": "Read the actual VERSION.txt or start-page label. Never copy a required version as a measurement."
+        },
+        {
+          "id": "package_id",
+          "label": "Observed S06 PACKAGE_ID",
+          "kind": "input",
+          "max": 128,
+          "phase": "core",
+          "default": "",
+          "help": "Copy the 64 hexadecimal characters from this extracted student package PACKAGE_ID.txt. This identifies content, not the running Node process PID."
+        },
+        {
+          "id": "client_version",
+          "label": "Observed HTTP client/browser version or UNKNOWN with reason",
+          "kind": "input",
+          "max": 128,
+          "phase": "core",
+          "default": "",
+          "help": "Record the actual client and version. CLI HTTP evidence is sufficient; a browser screenshot is not required. UNKNOWN with a reason is allowed in a core draft."
+        }
+      ]
+    },
+    {
+      "id": "main",
+      "title": "Prediction and central P02 result",
+      "intro": "Preserve the prediction before execution. P02 is the only required complete implementation.",
+      "fields": [
+        {
+          "id": "query_input",
+          "label": "Exact method, path and query",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "default": "",
+          "help": "Copy the exact GET /api/notes query, including repeated keys, encoding and selected fields. Keep the URL before execution."
+        },
+        {
+          "id": "prediction",
+          "label": "Prediction A: original combined-query IDs, order and fields",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "default": "",
+          "help": "Before running, predict the IDs, ordering and field set from the four supplied rows. Do not replace a wrong prediction retrospectively."
+        },
+        {
+          "id": "prediction_b",
+          "label": "Prediction B: original literal-percent result",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "default": "",
+          "help": "Before running search=%25, record predicted IDs and why percent should be literal. Preserve a wrong prediction instead of replacing it with the observed result."
+        },
+        {
+          "id": "prediction_recorded_at",
+          "label": "Original prediction time and reference",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "default": "",
+          "help": "Record when and where Predictions A, B and the lifecycle prediction were recorded before execution. If imported or written after execution, say so explicitly; this field cannot authenticate timing."
+        },
+        {
+          "id": "fixture",
+          "label": "Seed and database instance used",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "default": "",
+          "help": "Identify 02_PROJECTS/p02/src/database.js, the fresh in-memory instance and any deliberately different fixture. P02 :memory: is not a disk file."
+        },
+        {
+          "id": "allowed_edit",
+          "label": "Allowed edit path",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "default": "",
+          "help": "Only 02_PROJECTS/p02/src/note-query.js is required. State that path; measured differences belong in the diff field."
+        },
+        {
+          "id": "command",
+          "label": "Actual command or check identifier",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "default": "",
+          "help": "Copy the actual command/check identifier and label its original output. A command written but not run is PENDING."
+        },
+        {
+          "id": "observed",
+          "label": "Observed output or explicit prerequisite block",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "default": "",
+          "help": "Paste a bounded actual status/header/body excerpt, result IDs and evidence reference, or BLOCKED with the real reason."
+        },
+        {
+          "id": "comparison",
+          "label": "Prediction versus observation",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "default": "",
+          "help": "Explain agreement or discrepancy with the original prediction and the next discriminating change."
+        },
+        {
+          "id": "evidence_class",
+          "label": "Class of the central evidence",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "default": "",
+          "help": "For the standard final route link ACTUAL_ORM_SQLITE: evidence-id and LOCAL_HTTP: evidence-id from the real supplied application. Source/model evidence remains labelled separately."
+        },
+        {
+          "id": "implementation",
+          "label": "Current implementation state",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "default": "",
+          "help": "State untouched, partial or completed implementation and what the last actual check establishes. Do not equate a complete form with a correct translator."
+        }
+      ]
+    },
+    {
+      "id": "boundaries",
+      "title": "Filtering, ordering and rejection evidence",
+      "intro": "Identify each witness and its limit. A single response or a plausible options object is not a universal database guarantee.",
+      "fields": [
+        {
+          "id": "combined",
+          "label": "Combined owner and archived comparison",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Record a query combining trimmed owner and the exact archived token, its predicted set, actual rows and a limitation."
+        },
+        {
+          "id": "search_literal",
+          "label": "Literal-percent and ASCII-case witness",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Record search=%25 and an ASCII-case query. Preserve literal-percent results; do not infer general Unicode folding."
+        },
+        {
+          "id": "sorts",
+          "label": "Evidence for all three sort modes",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Give evidence for updated_desc, updated_asc and title_asc on the identified seed. Include exact query and ordered IDs."
+        },
+        {
+          "id": "tie",
+          "label": "Equal-key case and ID tie-breaker",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Use the two equal updatedAt values. Record ascending ID and the specified order; removing a tie-breaker need not visibly shuffle one small run."
+        },
+        {
+          "id": "projection",
+          "label": "Bounded selected fields including ID",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Record fields=title,owner and the actual returned keys including id. Distinguish requested order from JSON object key-order guarantees."
+        },
+        {
+          "id": "invalid",
+          "label": "Invalid token and public error evidence",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Record one invalid token, its 400 invalid_query envelope and the input. A missing dependency is not a student assertion failure."
+        },
+        {
+          "id": "repeated",
+          "label": "Repeated or unknown parameter witness",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Record a repeated key and an unknown key separately, with actual public responses and evidence IDs."
+        },
+        {
+          "id": "no_query",
+          "label": "Evidence about rejection before findAll",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Use the supplied objective spy or query observer: count findAll calls for a specific rejected query. State whether this was source/model, real route or actual ORM evidence; 400 alone proves no call count."
+        },
+        {
+          "id": "recovery",
+          "label": "Valid query after rejection",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Record a valid query immediately after rejection against the same server/fixture. Give status and actual row evidence."
+        }
+      ]
+    },
+    {
+      "id": "lifecycle",
+      "title": "Separate course lifecycle observation",
+      "intro": "This small course observation uses a temporary file separately from P02. Full Persistent Notes API implementation is not required.",
+      "fields": [
+        {
+          "id": "lifecycle_prediction",
+          "label": "Predict the minimal file-example outcome",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Before the separate temporary-file observation, predict the row marker after ordinary close/reopen and after explicit reset. Preserve the original prediction; this is not a full P01 implementation."
+        },
+        {
+          "id": "storage",
+          "label": "Memory or exact owned temporary file; no personal path dump",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Record the owned temporary file path from the observation, not a personal database path. Distinguish this file from P02 :memory:."
+        },
+        {
+          "id": "lifecycle_command",
+          "label": "Example or observation helper actually used",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Copy the supplied separate lifecycle helper command and raw output reference, or PENDING. This is the minimal course observation, not full P01."
+        },
+        {
+          "id": "close_reopen",
+          "label": "Row before close and after reopening",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Record the marker and rows before and after the connection closes and reopens the same file. Never copy a supplied transcript as your own execution."
+        },
+        {
+          "id": "process_boundary",
+          "label": "Same process or genuinely separate processes",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Start with SAME_PROCESS_CONNECTION_REOPEN: evidence-id or SEPARATE_PROCESS_RESTART: evidence-id only if genuinely observed. Record the actual process PID separately in the excerpt; it is not PACKAGE_ID. The supplied observation reopens connections in one child process."
+        },
+        {
+          "id": "reset",
+          "label": "Normal initialisation versus explicit reset",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Record the explicit reset flag, observed removal of the marker and temporary-directory cleanup state. Do not reset a personal database."
+        },
+        {
+          "id": "lifecycle_limit",
+          "label": "Persistence claim and remaining limitation",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "State what the observation does not prove, such as crash recovery or power-loss durability."
+        }
+      ]
+    },
+    {
+      "id": "gemini",
+      "title": "Bounded Gemini review",
+      "intro": "Verify one bounded claim independently. A synthetic practice claim is not an actual Gemini interaction.",
+      "fields": [
+        {
+          "id": "gemini_state",
+          "label": "Actual interaction, pending or separate approved alternative",
+          "kind": "select",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Choose ACTUAL_INTERACTION only after performing it. SYNTHETIC_PRACTICE and PENDING do not satisfy the standard final requirement.",
+          "options": [
+            "",
+            "PENDING",
+            "SYNTHETIC_PRACTICE",
+            "ACTUAL_INTERACTION",
+            "TEACHER_APPROVED_ALTERNATIVE"
+          ]
+        },
+        {
+          "id": "gemini_prompt",
+          "label": "Sanitised relevant prompt",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Paste only the relevant sanitised prompt. No full conversation, credentials or private records."
+        },
+        {
+          "id": "gemini_claim",
+          "label": "One selected claim",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Quote or faithfully paraphrase the single claim selected for review. Do not attribute the supplied synthetic text to an actual session."
+        },
+        {
+          "id": "gemini_classification",
+          "label": "Selected claim: Observed / Inferred / Unknown",
+          "kind": "select",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Classify what supports the selected claim at the time you inspect it. This is separate from your final ACCEPTED/REJECTED/PARTIALLY ACCEPTED/UNKNOWN verdict. An AI assertion is not automatically observed evidence.",
+          "options": [
+            "",
+            "OBSERVED",
+            "INFERRED",
+            "UNKNOWN"
+          ]
+        },
+        {
+          "id": "gemini_check",
+          "label": "Independent verification",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Record the independent input, command, output and evidence class. A second AI opinion is not the independent check."
+        },
+        {
+          "id": "gemini_verdict",
+          "label": "ACCEPTED / REJECTED / PARTIALLY ACCEPTED / UNKNOWN",
+          "kind": "select",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Choose the conclusion justified by evidence. REJECTED or UNKNOWN is allowed; agreement earns no special credit.",
+          "options": [
+            "",
+            "ACCEPTED",
+            "REJECTED",
+            "PARTIALLY ACCEPTED",
+            "UNKNOWN"
+          ]
+        },
+        {
+          "id": "gemini_correction",
+          "label": "Correction or justified NONE",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Give the smallest correction or NONE with a reason. Do not add an untested feature."
+        },
+        {
+          "id": "gemini_limit",
+          "label": "What the check cannot establish",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "State the bounded scope and remaining uncertainty of the independent check."
+        }
+      ]
+    },
+    {
+      "id": "checks",
+      "title": "Checks, edit boundary and traceability",
+      "intro": "Preserve named checks, exact edit boundaries and evidence links. Labels do not authenticate observations.",
+      "fields": [
+        {
+          "id": "baseline",
+          "label": "Actual baseline status and excerpt",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Preserve raw baseline status and evidence identifier. BLOCKED is an environment state, not an expected assertion."
+        },
+        {
+          "id": "objective",
+          "label": "Actual objective status and excerpt",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Preserve the actual named objective tests and counts. Initial expected failures require the exact untouched target; complete work requires real passing checks."
+        },
+        {
+          "id": "regression",
+          "label": "Actual regression status and excerpt",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Record the real regression outcome and recovery evidence without duplicating it as independent coverage."
+        },
+        {
+          "id": "diff",
+          "label": "One-file diff summary and protected-file status",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Copy the protected-boundary result and summarise the one allowed change; tests, seed, models and lockfiles must remain unchanged."
+        },
+        {
+          "id": "traceability",
+          "label": "Evidence identifiers and reproducible sequence",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Map E1-E6 to filenames or evidence excerpts and commands. Include the fresh-options/input-preservation witness here (E4). Keep local JSON drafts out of the final Moodle upload."
+        },
+        {
+          "id": "next_check",
+          "label": "Next minimum unresolved check or justified NONE",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "State the smallest remaining discriminating check or NONE with a reason."
+        }
+      ]
+    },
+    {
+      "id": "closing",
+      "title": "Final status and declaration",
+      "intro": "Save an honest draft at minute 60. Standard final submission includes remaining P02 work and the separate lifecycle observation.",
+      "fields": [
+        {
+          "id": "final_mode",
+          "label": "Standard completed evidence or separately authorised alternative",
+          "kind": "select",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "STANDARD requires actual application and lifecycle evidence. An alternative must already have been granted separately, with reference and scope recorded below.",
+          "options": [
+            "",
+            "STANDARD",
+            "TEACHER_APPROVED_ALTERNATIVE"
+          ]
+        },
+        {
+          "id": "alternative_ref",
+          "label": "Separate teacher decision reference, when applicable",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "For STANDARD write NONE. Otherwise start AUTHORISATION: and record teacher, date, decision reference, affected requirements and replacement evidence. The form cannot authenticate this."
+        },
+        {
+          "id": "counterexample",
+          "label": "One counterexample and its measured or proposed limit",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "State one input that exposes an over-broad claim, the expected mechanism, what you actually checked and what remains unmeasured. For example distinguish the string false from Boolean false; do not copy a teacher solution."
+        },
+        {
+          "id": "exit_ticket",
+          "label": "Minute-60 exit ticket",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "default": "",
+          "help": "Explain why an ordered HTTP response alone cannot establish translator options, zero database calls on rejection or durability across power loss. Add the smallest next check. Preserve your own explanation."
+        },
+        {
+          "id": "reflection",
+          "label": "Mechanism-based reflection",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Explain one mechanism you now understand and which observation changed or confirmed your initial view."
+        },
+        {
+          "id": "uncertainty",
+          "label": "Specific remaining uncertainty",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "State a specific untested case or limitation. Do not claim universal correctness from the supplied tests."
+        },
+        {
+          "id": "export_inspection",
+          "label": "PDF/export inspection record or PENDING before saving",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "After a first PDF export, open it and inspect every page, long values, code, names and declaration. Record the filename, inspection result and any repaired clipping. Re-export after repairs. This field records a student check, not a Moodle receipt."
+        },
+        {
+          "id": "declaration",
+          "label": "Truthful individual-work and evidence declaration",
+          "kind": "checkbox",
+          "max": null,
+          "phase": "final",
+          "default": false,
+          "help": "I performed or accurately identified the work, preserved original predictions and distinguished measured, imported and synthetic evidence. No secrets or private third-party data are included."
+        }
+      ]
+    }
+  ],
+  "status": "PHASE2_LOCAL_CANDIDATE_NOT_RELEASE",
+  "legacyVersion": "1.1.0",
+  "legacyFieldDefinitions": [
+    {
+      "id": "surname",
+      "label": "Surname",
+      "kind": "input",
+      "max": 128,
+      "phase": "core",
+      "default": "",
+      "help": "Your surname as used in the private assessment submission; do not put this completed form in a public repository."
+    },
+    {
+      "id": "given",
+      "label": "Given name",
+      "kind": "input",
+      "max": 128,
+      "phase": "core",
+      "default": "",
+      "help": "Your given name. Keep the resulting filename readable and check it before saving."
+    },
+    {
+      "id": "group",
+      "label": "Group",
+      "kind": "input",
+      "max": 128,
+      "phase": "core",
+      "default": "",
+      "help": "Your seminar group. No invented demonstration identifier belongs in a real submission."
+    },
+    {
+      "id": "kits",
+      "label": "Actual C06/S06 version or package identity",
+      "kind": "input",
+      "max": 128,
+      "phase": "core",
+      "default": "",
+      "help": "Record C06 and S06 v1.1.0 or their package identifiers from PACKAGE_ID.txt."
+    },
+    {
+      "id": "os",
+      "label": "Operating system",
+      "kind": "input",
+      "max": 128,
+      "phase": "core",
+      "default": "",
+      "help": "Record the operating system and relevant version actually used."
+    },
+    {
+      "id": "terminal",
+      "label": "Terminal and client used",
+      "kind": "input",
+      "max": 128,
+      "phase": "core",
+      "default": "",
+      "help": "Record the terminal and HTTP client; CLI observations are sufficient for the client evidence."
+    },
+    {
+      "id": "node",
+      "label": "Observed Node version",
+      "kind": "input",
+      "max": 128,
+      "phase": "core",
+      "default": "",
+      "help": "Record the value actually observed or UNKNOWN with reason. Never prefill the project reference as a measurement."
+    },
+    {
+      "id": "npm",
+      "label": "Observed npm version",
+      "kind": "input",
+      "max": 128,
+      "phase": "core",
+      "default": "",
+      "help": "Record the value actually observed or UNKNOWN with reason. Never prefill the project reference as a measurement."
+    },
+    {
+      "id": "dependencies",
+      "label": "Observed Sequelize, sqlite3 and Express resolution/load status",
+      "kind": "input",
+      "max": 128,
+      "phase": "core",
+      "default": "",
+      "help": "Give resolution/native-load state or a short block message. Link longer preflight output in traceability. A version lookup is not a native-driver test."
+    },
+    {
+      "id": "query_input",
+      "label": "Exact method, path and query",
+      "kind": "textarea",
+      "max": 12000,
+      "phase": "core",
+      "default": "",
+      "help": "Copy the exact GET /api/notes query, including repeated keys, encoding and selected fields. Keep the URL before execution."
+    },
+    {
+      "id": "prediction",
+      "label": "Original predicted IDs, order and fields",
+      "kind": "textarea",
+      "max": 12000,
+      "phase": "core",
+      "default": "",
+      "help": "Before running, predict the IDs, ordering and field set from the four supplied rows. Do not replace a wrong prediction retrospectively."
+    },
+    {
+      "id": "fixture",
+      "label": "Seed and database instance used",
+      "kind": "textarea",
+      "max": 12000,
+      "phase": "core",
+      "default": "",
+      "help": "Identify projects/p02/src/database.js, the fresh in-memory instance and any deliberately different fixture. Do not claim that :memory: is a disk file."
+    },
+    {
+      "id": "allowed_edit",
+      "label": "Allowed edit path",
+      "kind": "textarea",
+      "max": 12000,
+      "phase": "core",
+      "default": "",
+      "help": "Only projects/p02/src/note-query.js is required. State that path; measured differences belong in the diff field."
+    },
+    {
+      "id": "command",
+      "label": "Actual command or check identifier",
+      "kind": "textarea",
+      "max": 12000,
+      "phase": "core",
+      "default": "",
+      "help": "Copy the actual command/check identifier and label its original output. A command written but not run is PENDING."
+    },
+    {
+      "id": "observed",
+      "label": "Observed output or explicit prerequisite block",
+      "kind": "textarea",
+      "max": 12000,
+      "phase": "core",
+      "default": "",
+      "help": "Paste a bounded actual status/header/body excerpt, result IDs and evidence reference, or BLOCKED with the real reason."
+    },
+    {
+      "id": "comparison",
+      "label": "Prediction versus observation",
+      "kind": "textarea",
+      "max": 12000,
+      "phase": "core",
+      "default": "",
+      "help": "Explain agreement or discrepancy with the original prediction and the next discriminating change."
+    },
+    {
+      "id": "evidence_class",
+      "label": "Class of the central evidence",
+      "kind": "textarea",
+      "max": 12000,
+      "phase": "core",
+      "default": "",
+      "help": "For the standard final route link ACTUAL_ORM_SQLITE: evidence-id and LOCAL_HTTP: evidence-id from the real supplied application. Source/model evidence remains labelled separately."
+    },
+    {
+      "id": "implementation",
+      "label": "Current implementation state",
+      "kind": "textarea",
+      "max": 12000,
+      "phase": "core",
+      "default": "",
+      "help": "State untouched, partial or completed implementation and what the last actual check establishes. Do not equate a complete form with a correct translator."
+    },
+    {
+      "id": "combined",
+      "label": "Combined owner and archived comparison",
+      "kind": "textarea",
+      "max": 12000,
+      "phase": "final",
+      "default": "",
+      "help": "Record a query combining trimmed owner and the exact archived token, its predicted set, actual rows and a limitation."
+    },
+    {
+      "id": "search_literal",
+      "label": "Literal-percent and ASCII-case witness",
+      "kind": "textarea",
+      "max": 12000,
+      "phase": "final",
+      "default": "",
+      "help": "Record search=%25 and an ASCII-case query. Preserve literal-percent results; do not infer general Unicode folding."
+    },
+    {
+      "id": "sorts",
+      "label": "Evidence for all three sort modes",
+      "kind": "textarea",
+      "max": 12000,
+      "phase": "final",
+      "default": "",
+      "help": "Give evidence for updated_desc, updated_asc and title_asc on the identified seed. Include exact query and ordered IDs."
+    },
+    {
+      "id": "tie",
+      "label": "Equal-key case and ID tie-breaker",
+      "kind": "textarea",
+      "max": 12000,
+      "phase": "final",
+      "default": "",
+      "help": "Use the two equal updatedAt values. Record ascending ID and the specified order; removing a tie-breaker need not visibly shuffle one small run."
+    },
+    {
+      "id": "projection",
+      "label": "Bounded selected fields including ID",
+      "kind": "textarea",
+      "max": 12000,
+      "phase": "final",
+      "default": "",
+      "help": "Record fields=title,owner and the actual returned keys including id. Distinguish requested order from JSON object key-order guarantees."
+    },
+    {
+      "id": "invalid",
+      "label": "Invalid token and public error evidence",
+      "kind": "textarea",
+      "max": 12000,
+      "phase": "final",
+      "default": "",
+      "help": "Record one invalid token, its 400 invalid_query envelope and the input. A missing dependency is not a student assertion failure."
+    },
+    {
+      "id": "repeated",
+      "label": "Repeated or unknown parameter witness",
+      "kind": "textarea",
+      "max": 12000,
+      "phase": "final",
+      "default": "",
+      "help": "Record a repeated key and an unknown key separately, with actual public responses and evidence IDs."
+    },
+    {
+      "id": "no_query",
+      "label": "Evidence about rejection before findAll",
+      "kind": "textarea",
+      "max": 12000,
+      "phase": "final",
+      "default": "",
+      "help": "Use the supplied objective spy or query observer: count findAll calls for a specific rejected query. State whether this was source/model, real route or actual ORM evidence; 400 alone proves no call count."
+    },
+    {
+      "id": "recovery",
+      "label": "Valid query after rejection",
+      "kind": "textarea",
+      "max": 12000,
+      "phase": "final",
+      "default": "",
+      "help": "Record a valid query immediately after rejection against the same server/fixture. Give status and actual row evidence."
+    },
+    {
+      "id": "lifecycle_prediction",
+      "label": "Predict the minimal file-example outcome",
+      "kind": "textarea",
+      "max": 12000,
+      "phase": "final",
+      "default": "",
+      "help": "Before the C06 Example 02 observation, predict the row marker after ordinary reopen and after explicit reset."
+    },
+    {
+      "id": "storage",
+      "label": "Memory or exact owned temporary file; no personal path dump",
+      "kind": "textarea",
+      "max": 12000,
+      "phase": "final",
+      "default": "",
+      "help": "Record the owned temporary file path from the observation, not a personal database path. Distinguish this file from P02 :memory:."
+    },
+    {
+      "id": "lifecycle_command",
+      "label": "Example or observation helper actually used",
+      "kind": "textarea",
+      "max": 12000,
+      "phase": "final",
+      "default": "",
+      "help": "Copy the course lifecycle command and raw output reference, or PENDING. This reuses the minimal C06 helper, not a complete P01 implementation."
+    },
+    {
+      "id": "close_reopen",
+      "label": "Row before close and after reopening",
+      "kind": "textarea",
+      "max": 12000,
+      "phase": "final",
+      "default": "",
+      "help": "Record the marker and rows before and after the connection closes and reopens the same file. Never copy a supplied transcript as your own execution."
+    },
+    {
+      "id": "process_boundary",
+      "label": "Same process or genuinely separate processes",
+      "kind": "textarea",
+      "max": 12000,
+      "phase": "final",
+      "default": "",
+      "help": "Start with SAME_PROCESS_CONNECTION_REOPEN: evidence-id or SEPARATE_PROCESS_RESTART: evidence-id, whichever actually occurred. The supplied helper uses one process."
+    },
+    {
+      "id": "reset",
+      "label": "Normal initialisation versus explicit reset",
+      "kind": "textarea",
+      "max": 12000,
+      "phase": "final",
+      "default": "",
+      "help": "Record the explicit reset flag, observed removal of the marker and temporary-directory cleanup state. Do not reset a personal database."
+    },
+    {
+      "id": "lifecycle_limit",
+      "label": "Persistence claim and remaining limitation",
+      "kind": "textarea",
+      "max": 12000,
+      "phase": "final",
+      "default": "",
+      "help": "State what the observation does not prove, such as crash recovery or power-loss durability."
+    },
+    {
+      "id": "gemini_state",
+      "label": "Actual interaction, pending or separate approved alternative",
+      "kind": "select",
+      "max": 12000,
+      "phase": "final",
+      "default": "",
+      "help": "Choose ACTUAL_INTERACTION only after performing it. SYNTHETIC_PRACTICE and PENDING do not satisfy the standard final requirement.",
+      "options": [
+        "",
+        "PENDING",
+        "SYNTHETIC_PRACTICE",
+        "ACTUAL_INTERACTION",
+        "TEACHER_APPROVED_ALTERNATIVE"
+      ]
+    },
+    {
+      "id": "gemini_prompt",
+      "label": "Sanitised relevant prompt",
+      "kind": "textarea",
+      "max": 12000,
+      "phase": "final",
+      "default": "",
+      "help": "Paste only the relevant sanitised prompt. No full conversation, credentials or private records."
+    },
+    {
+      "id": "gemini_claim",
+      "label": "One selected claim",
+      "kind": "textarea",
+      "max": 12000,
+      "phase": "final",
+      "default": "",
+      "help": "Quote or faithfully paraphrase the single claim selected for review. Do not attribute the supplied synthetic text to an actual session."
+    },
+    {
+      "id": "gemini_check",
+      "label": "Independent verification",
+      "kind": "textarea",
+      "max": 12000,
+      "phase": "final",
+      "default": "",
+      "help": "Record the independent input, command, output and evidence class. A second AI opinion is not the independent check."
+    },
+    {
+      "id": "gemini_verdict",
+      "label": "ACCEPTED / REJECTED / PARTIALLY ACCEPTED / UNKNOWN",
+      "kind": "select",
+      "max": 12000,
+      "phase": "final",
+      "default": "",
+      "help": "Choose the conclusion justified by evidence. REJECTED or UNKNOWN is allowed; agreement earns no special credit.",
+      "options": [
+        "",
+        "ACCEPTED",
+        "REJECTED",
+        "PARTIALLY ACCEPTED",
+        "UNKNOWN"
+      ]
+    },
+    {
+      "id": "gemini_correction",
+      "label": "Correction or justified NONE",
+      "kind": "textarea",
+      "max": 12000,
+      "phase": "final",
+      "default": "",
+      "help": "Give the smallest correction or NONE with a reason. Do not add an untested feature."
+    },
+    {
+      "id": "gemini_limit",
+      "label": "What the check cannot establish",
+      "kind": "textarea",
+      "max": 12000,
+      "phase": "final",
+      "default": "",
+      "help": "State the bounded scope and remaining uncertainty of the independent check."
+    },
+    {
+      "id": "baseline",
+      "label": "Actual baseline status and excerpt",
+      "kind": "textarea",
+      "max": 12000,
+      "phase": "final",
+      "default": "",
+      "help": "Preserve raw baseline status and evidence identifier. BLOCKED is an environment state, not an expected assertion."
+    },
+    {
+      "id": "objective",
+      "label": "Actual objective status and excerpt",
+      "kind": "textarea",
+      "max": 12000,
+      "phase": "final",
+      "default": "",
+      "help": "Preserve the actual named objective tests and counts. Initial expected failures require the exact untouched target; complete work requires real passing checks."
+    },
+    {
+      "id": "regression",
+      "label": "Actual regression status and excerpt",
+      "kind": "textarea",
+      "max": 12000,
+      "phase": "final",
+      "default": "",
+      "help": "Record the real regression outcome and recovery evidence without duplicating it as independent coverage."
+    },
+    {
+      "id": "diff",
+      "label": "One-file diff summary and protected-file status",
+      "kind": "textarea",
+      "max": 12000,
+      "phase": "final",
+      "default": "",
+      "help": "Copy the protected-boundary result and summarise the one allowed change; tests, seed, models and lockfiles must remain unchanged."
+    },
+    {
+      "id": "traceability",
+      "label": "Evidence identifiers and reproducible sequence",
+      "kind": "textarea",
+      "max": 12000,
+      "phase": "final",
+      "default": "",
+      "help": "Map E1-E6 to filenames or evidence excerpts and commands. Include the fresh-options/input-preservation witness here (E4). Keep local JSON drafts out of the final Moodle upload."
+    },
+    {
+      "id": "next_check",
+      "label": "Next minimum unresolved check or justified NONE",
+      "kind": "textarea",
+      "max": 12000,
+      "phase": "final",
+      "default": "",
+      "help": "State the smallest remaining discriminating check or NONE with a reason."
+    },
+    {
+      "id": "final_mode",
+      "label": "Standard completed evidence or separately authorised alternative",
+      "kind": "select",
+      "max": 12000,
+      "phase": "final",
+      "default": "",
+      "help": "STANDARD requires actual application and lifecycle evidence. An alternative must already have been granted separately, with reference and scope recorded below.",
+      "options": [
+        "",
+        "STANDARD",
+        "TEACHER_APPROVED_ALTERNATIVE"
+      ]
+    },
+    {
+      "id": "alternative_ref",
+      "label": "Separate teacher decision reference, when applicable",
+      "kind": "textarea",
+      "max": 12000,
+      "phase": "final",
+      "default": "",
+      "help": "For STANDARD write NONE. Otherwise start AUTHORISATION: and record teacher, date, decision reference, affected requirements and replacement evidence. The form cannot authenticate this."
+    },
+    {
+      "id": "reflection",
+      "label": "Mechanism-based reflection",
+      "kind": "textarea",
+      "max": 12000,
+      "phase": "final",
+      "default": "",
+      "help": "Explain one mechanism you now understand and which observation changed or confirmed your initial view."
+    },
+    {
+      "id": "uncertainty",
+      "label": "Specific remaining uncertainty",
+      "kind": "textarea",
+      "max": 12000,
+      "phase": "final",
+      "default": "",
+      "help": "State a specific untested case or limitation. Do not claim universal correctness from the supplied tests."
+    },
+    {
+      "id": "declaration",
+      "label": "Truthful individual-work and evidence declaration",
+      "kind": "checkbox",
+      "max": null,
+      "phase": "final",
+      "default": false,
+      "help": "I performed or accurately identified the work, preserved original predictions and distinguished measured, imported and synthetic evidence. No secrets or private third-party data are included."
+    }
+  ],
+  "counts": {
+    "historicalFields": 52,
+    "historicalCore": 18,
+    "historicalFinal": 34,
+    "addedCore": 8,
+    "addedFinal": 3,
+    "totalFields": 63,
+    "core": 26,
+    "final": 37
+  }
+}

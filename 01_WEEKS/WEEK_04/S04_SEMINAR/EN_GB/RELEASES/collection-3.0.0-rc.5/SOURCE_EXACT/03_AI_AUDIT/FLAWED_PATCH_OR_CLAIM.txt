@@ -1,0 +1,5 @@
+Synthetic offline claim — this is not a real Gemini conversation.
+
+“Sequential await is equivalent to independent initiation because Promise.all eventually returns the same values. Also, fetch rejects automatically for every HTTP 404.”
+
+Audit both statements with the supplied deferred witness and HTTP boundary test. Label the evidence class.

@@ -1,0 +1,148 @@
+{
+  "schema": "TW2026_S12_P01_SUPPLIED_WITNESS/1.0",
+  "version": "v1.2.1",
+  "source_sha256": "f87960752648455ad55d27e47632bb6817b1f7dacffb13a0935e07cc91b536df",
+  "execution_class": "PURE_JS_FAKE_SOCKET",
+  "http_executed": false,
+  "websocket_executed": false,
+  "express_imported": false,
+  "identity_values": "synthetic fixtures, not production authentication",
+  "source_policy": "Unmodified private original. These observations expose source limits and do not certify a repaired P01 service.",
+  "events": [
+    {
+      "id": "T01_ACCEPTANCE",
+      "expected": "Accepted before completion; no completed frame yet",
+      "observed": {
+        "acceptance": {
+          "requestId": "r1",
+          "status": "accepted"
+        },
+        "diagnostics": {
+          "connectionCount": 2,
+          "pendingCount": 1
+        },
+        "a_frames": 1
+      },
+      "locator": "app.js:15-20; reply-coordinator.js:48-60",
+      "evidence_class": "SUPPLIED_PURE_JS_FAKE_SOCKET_SOURCE_WITNESS",
+      "student_execution": false
+    },
+    {
+      "id": "T02_TARGET",
+      "expected": "Same connectionId under another principal must not receive A result",
+      "observed": {
+        "a_frames": [
+          {
+            "type": "registered",
+            "connectionId": "desk"
+          },
+          {
+            "type": "calculation.completed",
+            "requestId": "r1",
+            "result": 5
+          }
+        ],
+        "b_frames": [
+          {
+            "type": "registered",
+            "connectionId": "desk"
+          }
+        ],
+        "pendingCount": 0
+      },
+      "locator": "reply-coordinator.js:1-2,26-30,40-45",
+      "evidence_class": "SUPPLIED_PURE_JS_FAKE_SOCKET_SOURCE_WITNESS",
+      "student_execution": false
+    },
+    {
+      "id": "T03_UNREGISTERED",
+      "expected": "Unregistered principal is refused before calculation",
+      "observed": {
+        "status": 409,
+        "code": "reply_connection_required",
+        "work_count": 1
+      },
+      "locator": "reply-coordinator.js:48-54",
+      "evidence_class": "SUPPLIED_PURE_JS_FAKE_SOCKET_SOURCE_WITNESS",
+      "student_execution": false
+    },
+    {
+      "id": "T04_DUPLICATE_ID_DEFECT",
+      "expected": "Original duplicate ID overwrites ownership; first A work goes to B",
+      "observed": {
+        "a_frames": [
+          {
+            "type": "registered",
+            "connectionId": "desk"
+          }
+        ],
+        "b_frames": [
+          {
+            "type": "registered",
+            "connectionId": "desk"
+          },
+          {
+            "type": "calculation.completed",
+            "requestId": "same-ID",
+            "result": 111
+          }
+        ],
+        "pendingCount": 0,
+        "later_B_result_dropped": true
+      },
+      "locator": "reply-coordinator.js:51-52,40-45",
+      "evidence_class": "SUPPLIED_PURE_JS_FAKE_SOCKET_SOURCE_WITNESS",
+      "student_execution": false
+    },
+    {
+      "id": "T05_DISCONNECT_DEFECT",
+      "expected": "Disconnect removes registered socket but pending work persists until completion",
+      "observed": {
+        "diagnostics": {
+          "connectionCount": 0,
+          "pendingCount": 1
+        },
+        "remote_cancellation_observed": false
+      },
+      "locator": "reply-coordinator.js:32-37,43-45",
+      "evidence_class": "SUPPLIED_PURE_JS_FAKE_SOCKET_SOURCE_WITNESS",
+      "student_execution": false
+    },
+    {
+      "id": "T06_LATE_AFTER_DISCONNECT",
+      "expected": "Later completion clears pending and has no open delivery target",
+      "observed": {
+        "diagnostics": {
+          "connectionCount": 0,
+          "pendingCount": 0
+        },
+        "frames": [
+          {
+            "type": "registered",
+            "connectionId": "desk"
+          }
+        ]
+      },
+      "locator": "reply-coordinator.js:40-45",
+      "evidence_class": "SUPPLIED_PURE_JS_FAKE_SOCKET_SOURCE_WITNESS",
+      "student_execution": false
+    },
+    {
+      "id": "T07_REPLACEMENT",
+      "expected": "Current registration replaces old connection; old cleanup must not remove new socket",
+      "observed": {
+        "old_close_codes": [
+          4401
+        ],
+        "diagnostics": {
+          "connectionCount": 1,
+          "pendingCount": 0
+        }
+      },
+      "locator": "reply-coordinator.js:26-34",
+      "evidence_class": "SUPPLIED_PURE_JS_FAKE_SOCKET_SOURCE_WITNESS",
+      "student_execution": false
+    }
+  ],
+  "checks_passed": 7
+}

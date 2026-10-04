@@ -1,0 +1,570 @@
+{
+  "schema": "TW2026-S07-EVIDENCE",
+  "version": "1.1.0",
+  "maxImportBytes": 2000000,
+  "sections": [
+    {
+      "id": "identity",
+      "title": "Identity and observed environment",
+      "intro": "Record measured versions and the actual dependency state. Missing prerequisites are not failed objectives.",
+      "fields": [
+        {
+          "id": "surname",
+          "label": "Surname",
+          "kind": "input",
+          "max": 128,
+          "phase": "core",
+          "default": "",
+          "help": "Your surname for the private assessment submission. Do not publish this completed form."
+        },
+        {
+          "id": "given",
+          "label": "Given name",
+          "kind": "input",
+          "max": 128,
+          "phase": "core",
+          "default": "",
+          "help": "Your given name. Check the generated filename before saving."
+        },
+        {
+          "id": "group",
+          "label": "Group",
+          "kind": "input",
+          "max": 128,
+          "phase": "core",
+          "default": "",
+          "help": "Your actual seminar group."
+        },
+        {
+          "id": "kits",
+          "label": "Kit version or package ID",
+          "kind": "input",
+          "max": 128,
+          "phase": "core",
+          "default": "",
+          "help": "Record C07 and S07 v1.1.0 or their PACKAGE_ID.txt values."
+        },
+        {
+          "id": "os",
+          "label": "Operating system",
+          "kind": "input",
+          "max": 128,
+          "phase": "core",
+          "default": "",
+          "help": "Name the operating system and version actually used."
+        },
+        {
+          "id": "terminal",
+          "label": "Terminal and client used",
+          "kind": "input",
+          "max": 128,
+          "phase": "core",
+          "default": "",
+          "help": "Name the terminal and HTTP client. Browser screenshots are optional, not a substitute for a reproducible command."
+        },
+        {
+          "id": "node",
+          "label": "Observed Node version",
+          "kind": "input",
+          "max": 128,
+          "phase": "core",
+          "default": "",
+          "help": "Copy node --version or UNKNOWN: reason. The reference v24.21.0 is not a measurement."
+        },
+        {
+          "id": "npm",
+          "label": "Observed npm version",
+          "kind": "input",
+          "max": 128,
+          "phase": "core",
+          "default": "",
+          "help": "Copy npm --version or UNKNOWN: reason. The reference 11.19.0 is not a measurement."
+        },
+        {
+          "id": "dependencies",
+          "label": "Actual project dependency and native-driver state",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "default": "",
+          "help": "Record preflight output and distinguish version resolution from loading sqlite3 and actually running Sequelize. Cite the original log."
+        }
+      ]
+    },
+    {
+      "id": "prediction",
+      "title": "Prediction and starting state",
+      "intro": "Keep the original prediction. Use a fresh named fixture and separate the unsafe comparison from your implementation.",
+      "fields": [
+        {
+          "id": "input_fixture",
+          "label": "Exact fixture and booking input",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "default": "",
+          "help": "Identify the fresh P02 seed, event, attendee and seats. Use returned IDs rather than guessing later generated IDs."
+        },
+        {
+          "id": "prediction",
+          "label": "Prediction recorded before execution",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "default": "",
+          "help": "Before execution predict availability, booking count and audit count for success and for a controlled failure. Never replace this prediction retrospectively."
+        },
+        {
+          "id": "invariant",
+          "label": "Booking invariant and its scope",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "default": "",
+          "help": "Name the facts which must agree and scope the invariant to the supplied fixture and operations. State what concurrency or crash behaviour is not covered."
+        },
+        {
+          "id": "edit_path",
+          "label": "Allowed edit and diff summary",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "default": "",
+          "help": "Only projects/p02/src/book-seats.js. Record your diff summary; models, tests and locks are protected."
+        },
+        {
+          "id": "initial_checks",
+          "label": "Initial baseline/objective/regression status",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "default": "",
+          "help": "Copy the baseline/objective/regression results or the exact prerequisite block. A TypeError, timeout or native-load error is not an intended assertion failure."
+        },
+        {
+          "id": "before_state",
+          "label": "Initial inventory, bookings and audits",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "default": "",
+          "help": "Record the state before the call and name the command or witness. Source expectations must not be labelled as measured rows."
+        },
+        {
+          "id": "unsafe_observation",
+          "label": "Supplied unsafe comparison: actual result or pending",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "default": "",
+          "help": "Use the supplied unsafe comparator in a fresh fixture when possible. Record its actual partial state or PENDING with the reason."
+        },
+        {
+          "id": "unsafe_limit",
+          "label": "What the comparison does not establish",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "default": "",
+          "help": "Explain why this sequential counterexample is not a concurrency test or a qualified production design."
+        }
+      ]
+    },
+    {
+      "id": "transaction",
+      "title": "Implementation and failure evidence",
+      "intro": "Record the command, evidence class and actual result. A module model is not SQL rollback.",
+      "fields": [
+        {
+          "id": "operation_sequence",
+          "label": "Observed sequence and awaited operations",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Identify the order of event lookup, duplicate lookup, event save, booking creation, callback and audit creation. Link the observer trace."
+        },
+        {
+          "id": "transaction_witness",
+          "label": "Same transaction identity at all five database operations",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Account for all five database operations, including event.save, plus the callback. State whether one non-null transaction identity was observed and name the evidence class."
+        },
+        {
+          "id": "success_state",
+          "label": "Committed success state and returned values",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Give availability and actual booking/audit rows after success, plus the detached result. Distinguish the model from genuine ORM execution."
+        },
+        {
+          "id": "success_http",
+          "label": "HTTP status, Location and body or pending",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Record the actual POST status, Location and response body with its client command. The supplied application has no GET /api/bookings/:id route; do not invent one."
+        },
+        {
+          "id": "callback_failure",
+          "label": "Controlled callback failure: input and actual error",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Identify the controlled afterBookingCreated rejection, its origin and observed error. Label any injection."
+        },
+        {
+          "id": "audit_failure",
+          "label": "Controlled audit-create rejection: input and actual error",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Identify the separately injected BookingAudit.create rejection. This differs from throwing before the call."
+        },
+        {
+          "id": "rollback_state",
+          "label": "State before and after each failed attempt",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "For each failed attempt record before and after availability, bookings and audits. A passing substitute is not physical rollback."
+        },
+        {
+          "id": "error_identity",
+          "label": "Known outcomes and unexpected error identity",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Record preserved unexpected-error identity and known error codes. UniqueConstraintError alone does not identify the failing operation."
+        },
+        {
+          "id": "commit_boundary",
+          "label": "Callback completion versus outer transaction settlement",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Separate callback completion from the returned transaction promise settling and the caller receiving a result. Label any delayed model gate as a model."
+        },
+        {
+          "id": "recovery",
+          "label": "Successful independent booking after a failed attempt",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "After a controlled failed booking, record an independent successful booking on the same database instance and check all three state components."
+        }
+      ]
+    },
+    {
+      "id": "limits",
+      "title": "Evidence classes and interpretation",
+      "intro": "Name the scope of each observation and the checks that remain outstanding.",
+      "fields": [
+        {
+          "id": "invalid_outcomes",
+          "label": "Invalid, missing, sold-out and duplicate cases",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Record invalid seats, missing event, sold-out and duplicate outcomes with unchanged state. Source order checks sold-out before duplicate; do not reverse it."
+        },
+        {
+          "id": "fixture_identity",
+          "label": "Environment and fixture identity of each witness",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Map evidence IDs to source fixture, runtime and commands. Label ACTUAL_ORM_SQLITE and LOCAL_HTTP only for genuine execution, MODULE_MODEL for substitutes and SOURCE_REASONING for reading."
+        },
+        {
+          "id": "actual_stack_state",
+          "label": "Actual ORM/HTTP evidence state",
+          "kind": "select",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "ACTUAL_RECORDED means that you declare the actual required ORM and HTTP observations below. The form cannot authenticate them. An alternative needs separate teacher authority.",
+          "options": [
+            "",
+            "PENDING",
+            "ACTUAL_RECORDED",
+            "SEPARATELY_APPROVED_ALTERNATIVE"
+          ]
+        },
+        {
+          "id": "atomicity_limits",
+          "label": "Limits of the atomicity observation",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "State exactly which sequential failure points were exercised. Do not claim crash durability, reversible external side effects or general transaction coverage."
+        },
+        {
+          "id": "concurrency_scope",
+          "label": "What was and was not tested about concurrent requests",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Name untested schedules and isolation assumptions. No new production mutex, lock policy or load experiment is required for P02."
+        },
+        {
+          "id": "remaining_checks",
+          "label": "Checks not yet executed and reasons",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "default": "",
+          "help": "List unexecuted checks or NONE with a reason. Do not convert missing dependencies into a PASS."
+        }
+      ]
+    },
+    {
+      "id": "gemini",
+      "title": "Bounded Gemini review",
+      "intro": "Use one sanitised claim and an independent witness. Agreement with Gemini is not the target.",
+      "fields": [
+        {
+          "id": "gemini_state",
+          "label": "Actual Gemini activity state",
+          "kind": "select",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Use ACTUAL_RECORDED for an actual bounded interaction. Synthetic offline practice remains pending. Any alternative requires prior separate approval.",
+          "options": [
+            "",
+            "PENDING",
+            "ACTUAL_RECORDED",
+            "SEPARATELY_APPROVED_ALTERNATIVE"
+          ]
+        },
+        {
+          "id": "gemini_context",
+          "label": "Sanitised context and date",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "State the small sanitised code or contract context. No passwords, tokens, cookies or private datasets."
+        },
+        {
+          "id": "gemini_prompt",
+          "label": "Relevant prompt only",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Copy only the relevant prompt, not the full conversation."
+        },
+        {
+          "id": "gemini_claim",
+          "label": "One claim selected for verification",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Quote or accurately restate one claim selected for audit."
+        },
+        {
+          "id": "gemini_check",
+          "label": "Independent witness and evidence class",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Give an independent command, test, diff or exact contract passage and the observed result. Name its evidence class."
+        },
+        {
+          "id": "gemini_verdict",
+          "label": "ACCEPTED / REJECTED / PARTIALLY ACCEPTED / UNKNOWN",
+          "kind": "select",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Choose ACCEPTED, REJECTED, PARTIALLY ACCEPTED or UNKNOWN on the evidence, not on confidence of wording.",
+          "options": [
+            "",
+            "ACCEPTED",
+            "REJECTED",
+            "PARTIALLY ACCEPTED",
+            "UNKNOWN"
+          ]
+        },
+        {
+          "id": "gemini_correction",
+          "label": "Correction or justified NONE",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Give the minimal correction or NONE with a justification."
+        },
+        {
+          "id": "gemini_limit",
+          "label": "Limit of the verification",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "State what your independent check does not establish."
+        }
+      ]
+    },
+    {
+      "id": "adr",
+      "title": "Required architecture decision record",
+      "intro": "Required analysis, not a second full programming project. About 300–500 words plus a small client-effect table is a suggested scope.",
+      "fields": [
+        {
+          "id": "adr_context",
+          "label": "Decision context and invariant",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Use a sanitised semester-project context. Where undecided, label a provisional course-domain decision and when it will be revisited."
+        },
+        {
+          "id": "adr_resources",
+          "label": "Resource identity and intended public representation",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Identify the resource and its stable identity. Distinguish registration membership from a booking POST operation."
+        },
+        {
+          "id": "adr_alternatives",
+          "label": "At least two realistic alternatives",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Compare at least two realistic alternatives, including action-shaped endpoints and a membership resource where relevant. Do not merely list names."
+        },
+        {
+          "id": "adr_decision",
+          "label": "Chosen design and reason",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Choose and justify an option against stated criteria. A rejected Gemini proposal can be a sound decision."
+        },
+        {
+          "id": "adr_transaction",
+          "label": "Transaction boundary, reads, writes and failure policy",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Identify state that must change together, its owner, transaction membership and excluded side effects. Separate atomicity from concurrency and durability."
+        },
+        {
+          "id": "adr_retry_table",
+          "label": "Repeat-request effect and response table",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Use the P03 contract rows: collection GET; first member PUT; identical PUT; changed ticketType PUT; first DELETE; repeated DELETE; invalid query/body; missing parent. Add method/path, intended effect, expected response category, evidence class and remaining uncertainty. Discuss an uncertain response separately as a thought experiment unless actually observed."
+        },
+        {
+          "id": "adr_evidence",
+          "label": "Source or experiment evidence supporting the decision",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Cite contract paths, observed witnesses or a declared source-based comparison. Full P03 implementation is not required for this analysis."
+        },
+        {
+          "id": "adr_consequences",
+          "label": "Trade-offs and a condition for revisiting the decision",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Explain costs, operational limits and a condition for revisiting the decision. Do not assume Location is a retrievable endpoint in P02."
+        }
+      ]
+    },
+    {
+      "id": "closing",
+      "title": "Completion and individual declaration",
+      "intro": "Save a truthful draft at minute 60. Finish P02 and the ADR before the separately configured deadline.",
+      "fields": [
+        {
+          "id": "exit_state",
+          "label": "Actual state at minute60 and at final export",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "default": "",
+          "help": "At minute 60 record IMPLEMENTATION_PENDING, EVIDENCE_PENDING, ADR_PENDING or your actual state. The time limit does not produce a PASS."
+        },
+        {
+          "id": "next_check",
+          "label": "Next smallest unresolved check",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "core",
+          "default": "",
+          "help": "Name the smallest useful next check or NONE with a reason."
+        },
+        {
+          "id": "reflection",
+          "label": "Mechanism-based reflection",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Explain one mechanism and which observation changed or confirmed your view."
+        },
+        {
+          "id": "uncertainty",
+          "label": "Remaining uncertainty",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "State one specific untested assumption or boundary, not a generic confidence claim."
+        },
+        {
+          "id": "authority_reference",
+          "label": "Separately obtained teacher decision, when applicable",
+          "kind": "textarea",
+          "max": 12000,
+          "phase": "final",
+          "default": "",
+          "help": "Write NONE for the standard route. For any separately approved alternative start AUTHORISATION: and give teacher, date, decision reference, exact affected requirement and replacement evidence. This field cannot grant approval."
+        },
+        {
+          "id": "declaration",
+          "label": "Truthful individual-work and evidence declaration",
+          "kind": "checkbox",
+          "max": null,
+          "phase": "final",
+          "default": false,
+          "help": "I performed or accurately attributed the work, preserved predictions and distinguished measured, imported and synthetic evidence. No secrets or private third-party data are included."
+        }
+      ]
+    }
+  ]
+}

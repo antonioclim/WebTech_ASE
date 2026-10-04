@@ -1,0 +1,24 @@
+group_id,group_en_gb,group_maximum_exact,criterion_id,criterion_maximum_exact,observable_en_gb
+G1,Experiment and technical result,3.0,T1,0.6,Correct P01 routes/list/detail/root/missing data/unknown-page and URL parameter identity
+G1,Experiment and technical result,3.0,T2,0.6,"Shared controlled new/edit form, trim/blank rejection, target reset and no-write cancel"
+G1,Experiment and technical result,3.0,T3,0.6,"Create returned id, addressed edit identity and intended successful replacement policy"
+G1,Experiment and technical result,3.0,T4,0.8,P03 one-file policy preserves API/static bytes and bounds GET/HEAD HTML navigation against namespace/resource/method/Accept exclusions
+G1,Experiment and technical result,3.0,T5,0.4,"P03 ordinary 404, missing-document pre-header sanitized error and post-header delegation are correctly bounded"
+G2,Reproducible evidence,2.0,E1,0.5,"P01 exact seed/initial route, allowed-file diff, named commands/check source and inspectable output locators"
+G2,Reproducible evidence,2.0,E2,0.4,"P01 actual history-sensitive witness establishes initial stack, Back/Forward and evidence class"
+G2,Reproducible evidence,2.0,E3,0.5,"P03 broken-mode contrasts, unaffected API positive control and bounded HTTP eligibility matrix are inspectable"
+G2,Reproducible evidence,2.0,E4,0.4,"P03 exact served/local byte identity, request-log order and actual nested browser boot are separately located"
+G2,Reproducible evidence,2.0,E5,0.2,At least two distinct falsifiable P01 predictions precede observation; P03 predictions precede its later experiment
+G3,Explanation of mechanism,2.0,M1,0.5,Explain URL/parameter identity versus component draft/selection state
+G3,Explanation of mechanism,2.0,M2,0.5,"Explain target initialization/reset, validation, mutation identity and push/replace/cancel causality"
+G3,Explanation of mechanism,2.0,M3,0.5,"Explain server document/resource decision versus client route interpretation, method/Accept and API namespace"
+G3,Explanation of mechanism,2.0,M4,0.5,Use middleware/error causality and a counterexample to delimit a general rule
+G4,Critical Gemini audit,1.5,A1,0.5,"Genuine bounded actual prompt and relevant response excerpt, sanitized and individually attributable"
+G4,Critical Gemini audit,1.5,A2,0.5,Independent falsifiable source comparison or actual observation directly tests the chosen AI claim
+G4,Critical Gemini audit,1.5,A3,0.5,Evidence-supported ACCEPTED/REJECTED/PARTIALLY_ACCEPTED/UNKNOWN with bounded correction
+G5,Limitations and reflection,1.0,L1,0.4,"State per-witness limits, external blocks and open conclusions truthfully"
+G5,Limitations and reflection,1.0,L2,0.3,Concrete changed mental model and useful exit ticket
+G5,Limitations and reflection,1.0,L3,0.3,Precise order/invoice transfer and conceptual P02 confirmed-note/draft/submission mapping
+G6,Completeness and format,0.5,F1,0.15,Individual identity/date/S09/version/PACKAGE_ID and required filename are clear
+G6,Completeness and format,0.5,F2,0.15,One readable PDF has a consistent internal evidence index and genuine included captures where cited
+G6,Completeness and format,0.5,F3,0.2,"Privacy, accuracy declaration, explicit pending work and pre-export checklist are complete and truthful"

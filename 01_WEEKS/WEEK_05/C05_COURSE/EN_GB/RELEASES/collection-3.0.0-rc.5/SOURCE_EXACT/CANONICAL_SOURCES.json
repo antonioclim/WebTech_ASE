@@ -1,0 +1,152 @@
+[
+  {
+    "path": "canonical/01-express-request-flow/README.md",
+    "source": "lectures/05-server-rest-api/en/examples/01-express-request-flow/README.md",
+    "sha256": "92f018437804c4e4f0ff1c959a6efefd5405b63e48a304f01a289c4af37d0114"
+  },
+  {
+    "path": "canonical/01-express-request-flow/app.js",
+    "source": "lectures/05-server-rest-api/en/examples/01-express-request-flow/app.js",
+    "sha256": "c21da6da07513a94ddad78a860c29ae5486b60d3aeee949c9ddc836a35ef3e9f"
+  },
+  {
+    "path": "canonical/01-express-request-flow/check.test.js",
+    "source": "lectures/05-server-rest-api/en/examples/01-express-request-flow/check.test.js",
+    "sha256": "a3d1359fe6b442f4dd7b52f696296faa719014470f149417c51bb08a621f7e5c"
+  },
+  {
+    "path": "canonical/01-express-request-flow/package-lock.json",
+    "source": "lectures/05-server-rest-api/en/examples/01-express-request-flow/package-lock.json",
+    "sha256": "9a49488b3f20e167983c938782b7cd22c86b29c50ce920a221badf03cd2094ed"
+  },
+  {
+    "path": "canonical/01-express-request-flow/package.json",
+    "source": "lectures/05-server-rest-api/en/examples/01-express-request-flow/package.json",
+    "sha256": "926e9276e7c32200eaa6781e5cc911a445af0f78d0c22afaed21c599183f2ad7"
+  },
+  {
+    "path": "canonical/01-express-request-flow/public/index.html",
+    "source": "lectures/05-server-rest-api/en/examples/01-express-request-flow/public/index.html",
+    "sha256": "c51fbc127ddfbea6b72da5996e231b6569a36caae770017cc2f97c5da2392207"
+  },
+  {
+    "path": "canonical/02-route-match-boundary/README.md",
+    "source": "lectures/05-server-rest-api/en/examples/02-route-match-boundary/README.md",
+    "sha256": "285997d451fcb82753664aa10f02ee33ca558b3f8fe13330e629be26bbe9af1c"
+  },
+  {
+    "path": "canonical/02-route-match-boundary/app.js",
+    "source": "lectures/05-server-rest-api/en/examples/02-route-match-boundary/app.js",
+    "sha256": "71bb8b5e2946b2ddadf1509b954a3301e443a532dc3cc71f971610244d817d44"
+  },
+  {
+    "path": "canonical/02-route-match-boundary/check.test.js",
+    "source": "lectures/05-server-rest-api/en/examples/02-route-match-boundary/check.test.js",
+    "sha256": "625440e1a37eb77559395a7a78cafcdb80a4cced6733a087f47149b7cda64a94"
+  },
+  {
+    "path": "canonical/02-route-match-boundary/package-lock.json",
+    "source": "lectures/05-server-rest-api/en/examples/02-route-match-boundary/package-lock.json",
+    "sha256": "1cde92fbb7dd5458196e5d89454c85e298f09b58a25c5ab85dd4ee6620a291ff"
+  },
+  {
+    "path": "canonical/02-route-match-boundary/package.json",
+    "source": "lectures/05-server-rest-api/en/examples/02-route-match-boundary/package.json",
+    "sha256": "7943c092a662c7825a8e9da2dfbcf46a320a5ea287e5e24d24fed8fa638dc660"
+  },
+  {
+    "path": "canonical/02-route-match-boundary/server.js",
+    "source": "lectures/05-server-rest-api/en/examples/02-route-match-boundary/server.js",
+    "sha256": "289cfb0acc20b0ed551ce6a543d44b5a5f98303cfde436db810e72a02cf88443"
+  },
+  {
+    "path": "canonical/03-resource-contract-table/README.md",
+    "source": "lectures/05-server-rest-api/en/examples/03-resource-contract-table/README.md",
+    "sha256": "0006e41ef5b35a374ab42afd38599db37c13e18fb2199af73233f10d0b9caee8"
+  },
+  {
+    "path": "canonical/03-resource-contract-table/app.js",
+    "source": "lectures/05-server-rest-api/en/examples/03-resource-contract-table/app.js",
+    "sha256": "e38155506ed59334f70ca61fb4daee8326262b4de567eee3e41be0ab16e009d6"
+  },
+  {
+    "path": "canonical/03-resource-contract-table/check.test.js",
+    "source": "lectures/05-server-rest-api/en/examples/03-resource-contract-table/check.test.js",
+    "sha256": "9eaa9d1a8573a9c3d1a86a7e0e47ac9101839c0bd541659a6e67f309402c6f78"
+  },
+  {
+    "path": "canonical/03-resource-contract-table/package-lock.json",
+    "source": "lectures/05-server-rest-api/en/examples/03-resource-contract-table/package-lock.json",
+    "sha256": "ac609c9550e04e2d6fb828797ece4714e2d661e279f5526ab97a1f5a4e5b3eac"
+  },
+  {
+    "path": "canonical/03-resource-contract-table/package.json",
+    "source": "lectures/05-server-rest-api/en/examples/03-resource-contract-table/package.json",
+    "sha256": "8f7d1a264de439b1fecf49b25bf10207ef84210bc998fa8940ea13f86a38e40d"
+  },
+  {
+    "path": "canonical/03-resource-contract-table/server.js",
+    "source": "lectures/05-server-rest-api/en/examples/03-resource-contract-table/server.js",
+    "sha256": "1e90de000e944732c16d1a7414e02a6b96b272bc20b8f94b788f749a234f4e4f"
+  },
+  {
+    "path": "canonical/04-request-body-boundary/README.md",
+    "source": "lectures/05-server-rest-api/en/examples/04-request-body-boundary/README.md",
+    "sha256": "e5650f03dd3ab35545bc3afed9bbf4f7891af454206c498257b70cf36e8233e2"
+  },
+  {
+    "path": "canonical/04-request-body-boundary/app.js",
+    "source": "lectures/05-server-rest-api/en/examples/04-request-body-boundary/app.js",
+    "sha256": "3863718ead66f4f0c962ad38c2c84de0c091ace6906346185510fdd6cd4cfa6f"
+  },
+  {
+    "path": "canonical/04-request-body-boundary/check.test.js",
+    "source": "lectures/05-server-rest-api/en/examples/04-request-body-boundary/check.test.js",
+    "sha256": "752c00d5f96c7984c9ce1004ae1d09cd7115ce8b06b6fb16971649d8c7f26a21"
+  },
+  {
+    "path": "canonical/04-request-body-boundary/package-lock.json",
+    "source": "lectures/05-server-rest-api/en/examples/04-request-body-boundary/package-lock.json",
+    "sha256": "72a7c6aa894e9ab7e47b19517257fa4b184f80eaa3074e44f6853a526b7ee25d"
+  },
+  {
+    "path": "canonical/04-request-body-boundary/package.json",
+    "source": "lectures/05-server-rest-api/en/examples/04-request-body-boundary/package.json",
+    "sha256": "4dccfe459e636abdc06bb77c1bf3e874ddea7325524c87bab00a93db0cd8fda1"
+  },
+  {
+    "path": "canonical/04-request-body-boundary/server.js",
+    "source": "lectures/05-server-rest-api/en/examples/04-request-body-boundary/server.js",
+    "sha256": "25933ff70f8a970a827017158db9aa5eaab94aef393e7953a4a271c45e109544"
+  },
+  {
+    "path": "canonical/05-error-boundary/README.md",
+    "source": "lectures/05-server-rest-api/en/examples/05-error-boundary/README.md",
+    "sha256": "fa5f61cf234623acb9caec740fb71a889e300f65fe2c872acf2536a339c978bf"
+  },
+  {
+    "path": "canonical/05-error-boundary/app.js",
+    "source": "lectures/05-server-rest-api/en/examples/05-error-boundary/app.js",
+    "sha256": "bcdf975daae4dc915ad7b2a8546a6f1f8fb25ac8e510ee0d7112be13bc98d247"
+  },
+  {
+    "path": "canonical/05-error-boundary/check.test.js",
+    "source": "lectures/05-server-rest-api/en/examples/05-error-boundary/check.test.js",
+    "sha256": "d04e64475d5af7ba43f28b95a046e1ed3d97e7e7e6bb8194138dfdae3cfd1cd6"
+  },
+  {
+    "path": "canonical/05-error-boundary/package-lock.json",
+    "source": "lectures/05-server-rest-api/en/examples/05-error-boundary/package-lock.json",
+    "sha256": "3d945bed9dba9b7d1edec240e6aa66a59a403d7331bf15580870efe824d1bc22"
+  },
+  {
+    "path": "canonical/05-error-boundary/package.json",
+    "source": "lectures/05-server-rest-api/en/examples/05-error-boundary/package.json",
+    "sha256": "5392351493a0f28fa809fc9e10c3a619c6a3f30e70c297d91670c40d70e5092c"
+  },
+  {
+    "path": "canonical/05-error-boundary/server.js",
+    "source": "lectures/05-server-rest-api/en/examples/05-error-boundary/server.js",
+    "sha256": "f1d4f1ded1abe283deec0b910433130df00ca30b22b688a83bdef350ce770121"
+  }
+]

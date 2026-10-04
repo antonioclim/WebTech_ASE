@@ -1,0 +1,217 @@
+{
+  "schema": "webtech-derived-carrier/v1",
+  "object_id": "SETUP_MACOS_LINUX",
+  "carrier_version": "2.2.2-rc.4",
+  "distribution_version": "3.0.0-rc.4",
+  "source_commit": "7f88fecfa972bfb41d4fffec3e47616842c7e067",
+  "intentional_baseline_commit": "1850118b3f619b233f89941802212fe59d8d5dfe",
+  "derived_from": {
+    "archive": "00_SETUP/MACOS_LINUX/DOWNLOAD/WEBTECH_ASE_ENVIRONMENT_MACOS_LINUX_EN_GB_v2.2.1_RC2.zip",
+    "archive_sha256": "c12335b1c86c7dda4ff37338aca1c44accedb26107c7abc9c9b9342afcb71476",
+    "package_id": "189addf1da56a507a49cbb5140eb50e80f071e584725f88859d753ac204592f3",
+    "carrier_version": "2.2.1"
+  },
+  "status": "LOCAL_RELEASE_CANDIDATE_PENDING_EXTERNAL_ACCEPTANCE",
+  "native_acceptance": "PENDING",
+  "identity_is_runtime_qualification": false,
+  "original_carrier_overwritten": false,
+  "original_external_bindings_are_history_not_current_byte_identity": true,
+  "content_and_mode_changes_before_sealing": [
+    {
+      "path": "00_START_HERE/QUICK_START.md",
+      "change": "BYTES",
+      "before_sha256": "86ae5d6350b346a3174ebc64e357dfe417f23e7969c4437ae5c92a726a6d077c",
+      "after_sha256": "ca0764d2d38f99f395cf2596fabcef290d19f939e44e5300bda8e2cb4ca82905",
+      "before_bytes": 348,
+      "after_bytes": 4203,
+      "before_mode": 420,
+      "after_mode": 420
+    },
+    {
+      "path": "00_START_HERE/SUPPORT_MATRIX.md",
+      "change": "BYTES",
+      "before_sha256": "3f8a0f104444f1123ee2080b8023becd7b3fc31973f76fbee402a7d72bf65601",
+      "after_sha256": "624df0b06719996028c40336ead318890f1fdd7cb61f9d3ad854680e0dcdfb01",
+      "before_bytes": 581,
+      "after_bytes": 861,
+      "before_mode": 420,
+      "after_mode": 420
+    },
+    {
+      "path": "01_VERIFY_KIT/VERIFY_SETUP_KIT.sh",
+      "change": "MODE",
+      "before_sha256": "70eb420e83318a669f58b872268179f5d2c412633ce9af4b72f2bb35d2b1df51",
+      "after_sha256": "70eb420e83318a669f58b872268179f5d2c412633ce9af4b72f2bb35d2b1df51",
+      "before_bytes": 1635,
+      "after_bytes": 1635,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "02_PREFLIGHT/CHECK_TW2026_ENVIRONMENT.sh",
+      "change": "MODE",
+      "before_sha256": "e16e83d22c29cf0c1914757d156cb2ee5acdf870607f06ba4d491fff7099ebfb",
+      "after_sha256": "e16e83d22c29cf0c1914757d156cb2ee5acdf870607f06ba4d491fff7099ebfb",
+      "before_bytes": 22923,
+      "after_bytes": 22923,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "03_DIAGNOSTICS/DIAGNOSE_PATH.sh",
+      "change": "MODE",
+      "before_sha256": "aed80f2bd919b883f16f0e1750682336dab7a6d8634c9ecc11b1984694508777",
+      "after_sha256": "aed80f2bd919b883f16f0e1750682336dab7a6d8634c9ecc11b1984694508777",
+      "before_bytes": 509,
+      "after_bytes": 509,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "03_DIAGNOSTICS/TEST_LOCALHOST.sh",
+      "change": "MODE",
+      "before_sha256": "3c9c8d4f3b4f3ba3590282b795a59105b28e9626bf0042f55ff0ccd62230a0b4",
+      "after_sha256": "3c9c8d4f3b4f3ba3590282b795a59105b28e9626bf0042f55ff0ccd62230a0b4",
+      "before_bytes": 243,
+      "after_bytes": 243,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "07_EVIDENCE/COLLECT_ENVIRONMENT_EVIDENCE.sh",
+      "change": "MODE",
+      "before_sha256": "fc40ccdaa87e3478a20b84340ece8c23c670ea92fbefa27f8f9d615e39d02416",
+      "after_sha256": "fc40ccdaa87e3478a20b84340ece8c23c670ea92fbefa27f8f9d615e39d02416",
+      "before_bytes": 1650,
+      "after_bytes": 1650,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "COLLECT_EVIDENCE.sh",
+      "change": "MODE",
+      "before_sha256": "66e0b6fead8195be951e54ba82ce0674f2bd8c8fd1267e6ba7ea334d5c3b3287",
+      "after_sha256": "66e0b6fead8195be951e54ba82ce0674f2bd8c8fd1267e6ba7ea334d5c3b3287",
+      "before_bytes": 135,
+      "after_bytes": 135,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "DIAGNOSE_PATH.sh",
+      "change": "MODE",
+      "before_sha256": "d6f2e610428d12c1c7e4018bd1b683014824bf35b879a5be91c1cfce789839ba",
+      "after_sha256": "d6f2e610428d12c1c7e4018bd1b683014824bf35b879a5be91c1cfce789839ba",
+      "before_bytes": 123,
+      "after_bytes": 123,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "OPEN_DAY0_FORM.sh",
+      "change": "MODE",
+      "before_sha256": "2234dc536dc565b7dfb67470f77ce20d4590e0c6cdea65ef5ad4555cba26aede",
+      "after_sha256": "2234dc536dc565b7dfb67470f77ce20d4590e0c6cdea65ef5ad4555cba26aede",
+      "before_bytes": 388,
+      "after_bytes": 388,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "README.md",
+      "change": "BYTES",
+      "before_sha256": "5aa026396f4f8493772ff7286d96e7f9ffe9e31dd0c084849e10855fe1728a53",
+      "after_sha256": "22c912f16cfaecb081d6f19c4a6b5157138743c6ed0933692f94812593c8447d",
+      "before_bytes": 501,
+      "after_bytes": 1029,
+      "before_mode": 420,
+      "after_mode": 420
+    },
+    {
+      "path": "RUN_PREFLIGHT.sh",
+      "change": "MODE",
+      "before_sha256": "5990ba6ce043ab97ed6bdafbb2aee3d216a253dabbe77df037c45a625a93b6b2",
+      "after_sha256": "5990ba6ce043ab97ed6bdafbb2aee3d216a253dabbe77df037c45a625a93b6b2",
+      "before_bytes": 132,
+      "after_bytes": 132,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "RUN_PREFLIGHT_JSON.sh",
+      "change": "MODE",
+      "before_sha256": "09bfb0b1a9ae523376012e8389607b3521b885495336b4fe0d939359c0b702a2",
+      "after_sha256": "09bfb0b1a9ae523376012e8389607b3521b885495336b4fe0d939359c0b702a2",
+      "before_bytes": 146,
+      "after_bytes": 146,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "RUN_PREFLIGHT_VERBOSE.sh",
+      "change": "MODE",
+      "before_sha256": "7c07a99ff10013c2725bfb46c7467cb495f1e7f2d200e573999c117e666aa972",
+      "after_sha256": "7c07a99ff10013c2725bfb46c7467cb495f1e7f2d200e573999c117e666aa972",
+      "before_bytes": 142,
+      "after_bytes": 142,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "TEST_LOCALHOST.sh",
+      "change": "MODE",
+      "before_sha256": "b80689e3c21548c0b020c53cb742ec4542495e9095c81d8b668ac86bc4b2ebfc",
+      "after_sha256": "b80689e3c21548c0b020c53cb742ec4542495e9095c81d8b668ac86bc4b2ebfc",
+      "before_bytes": 124,
+      "after_bytes": 124,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "VERIFY_SETUP_KIT.sh",
+      "change": "MODE",
+      "before_sha256": "88eb193bfef5bb2f3f8ea66c07a8e70932ac90f0e6eb40cf1cb3c209fddff8bd",
+      "after_sha256": "88eb193bfef5bb2f3f8ea66c07a8e70932ac90f0e6eb40cf1cb3c209fddff8bd",
+      "before_bytes": 125,
+      "after_bytes": 125,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "index.html",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "1c004080d252a945da0074a546d7e8a8f357fe98a06eb555d9ead8e8ed9008a2",
+      "before_bytes": null,
+      "after_bytes": 5503,
+      "before_mode": null,
+      "after_mode": 420
+    }
+  ],
+  "current_binding_changes": [],
+  "identity_contract": {
+    "method": "manifest-sha256",
+    "manifest": "SHA256SUMS.txt",
+    "package_id": "PACKAGE_ID.txt",
+    "manifest_exclusions": [
+      "SHA256SUMS.txt",
+      "PACKAGE_ID.txt"
+    ],
+    "path_order": "unicode-codepoint",
+    "encoding": "UTF-8",
+    "line_ending": "LF",
+    "record_format": "sha256 + two ASCII spaces + relative POSIX path + LF"
+  },
+  "edit_contract": {
+    "distribution_scope": "PRISTINE_EXACT_ALL_ARCHIVE_MEMBERS",
+    "student_work_scope": "DECLARED_PACKAGE_SPECIFIC_EDIT_BOUNDARY",
+    "policy_files": [],
+    "editable_files": [],
+    "project_roots": [],
+    "generated_directory_names": [],
+    "generated_exclusions_apply_only_to_declared_project_working_copies": true,
+    "generated_entries_in_release_carrier": "FORBIDDEN"
+  },
+  "mode_policy": "recognized shell .sh 0755; all other regular members 0644; source PID hashes bytes, outer ZIP SHA256 also authenticates entry modes",
+  "descriptor_repair": null
+}

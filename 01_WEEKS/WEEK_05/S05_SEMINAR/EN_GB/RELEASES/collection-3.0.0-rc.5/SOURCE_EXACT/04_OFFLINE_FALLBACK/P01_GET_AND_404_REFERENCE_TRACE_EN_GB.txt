@@ -1,0 +1,5 @@
+SOURCE_REASONING / REFERENCE TRACE
+GET /api/tasks -> 200 data array
+GET /api/tasks/task-1 -> 200 data object
+GET /api/tasks/missing -> 404 task_not_found
+GET /api/unknown -> 404 not_found

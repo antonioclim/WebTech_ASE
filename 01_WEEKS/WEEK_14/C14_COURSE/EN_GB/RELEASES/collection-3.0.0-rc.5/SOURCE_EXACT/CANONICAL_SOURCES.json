@@ -1,0 +1,185 @@
+{
+  "files": [
+    {
+      "bytes": 1019,
+      "public_path": "canonical/01-test-boundary-selector/README.md",
+      "sha256": "c086eaf98ab9fb97c87f8120a0e9e3bda0ba1c291a66e87849253fb295368fae",
+      "source_path": "SOURCE_EXACT/lectures/14-quality-production/en/examples/01-test-boundary-selector/README.md"
+    },
+    {
+      "bytes": 610,
+      "public_path": "canonical/01-test-boundary-selector/api.test.mjs",
+      "sha256": "1c39f1a2e389077beabf379ef49a2af1a990e1a7cdbec3bc6cc77b0a08fe61ea",
+      "source_path": "SOURCE_EXACT/lectures/14-quality-production/en/examples/01-test-boundary-selector/api.test.mjs"
+    },
+    {
+      "bytes": 355,
+      "public_path": "canonical/01-test-boundary-selector/integration.test.mjs",
+      "sha256": "f2b96338aeec7c7092379493ca43aeb31a05df22220799564b236144e712e6e0",
+      "source_path": "SOURCE_EXACT/lectures/14-quality-production/en/examples/01-test-boundary-selector/integration.test.mjs"
+    },
+    {
+      "bytes": 30867,
+      "public_path": "canonical/01-test-boundary-selector/package-lock.json",
+      "sha256": "efbf9a01db640c9850cf2e5a7a607d84141a34dbe1c5ef12d4374c2f3ccd732b",
+      "source_path": "SOURCE_EXACT/lectures/14-quality-production/en/examples/01-test-boundary-selector/package-lock.json"
+    },
+    {
+      "bytes": 346,
+      "public_path": "canonical/01-test-boundary-selector/package.json",
+      "sha256": "cd9fd94ffa7ca60d9ae23bb50c2d41093b740519eec5f21d0b375080b019823e",
+      "source_path": "SOURCE_EXACT/lectures/14-quality-production/en/examples/01-test-boundary-selector/package.json"
+    },
+    {
+      "bytes": 823,
+      "public_path": "canonical/01-test-boundary-selector/system.mjs",
+      "sha256": "8f1d42a5a2d62b1580036dd61fd8cd791478b02c015d4e56958e34410fc52d00",
+      "source_path": "SOURCE_EXACT/lectures/14-quality-production/en/examples/01-test-boundary-selector/system.mjs"
+    },
+    {
+      "bytes": 205,
+      "public_path": "canonical/01-test-boundary-selector/unit.test.mjs",
+      "sha256": "e2b76e9bbc1dc9699395998147e67992742ea04ea91d042f44cd1813b1ea04af",
+      "source_path": "SOURCE_EXACT/lectures/14-quality-production/en/examples/01-test-boundary-selector/unit.test.mjs"
+    },
+    {
+      "bytes": 732,
+      "public_path": "canonical/02-seeded-defect-sensitivity/README.md",
+      "sha256": "20649f41f508b8f70da6e935f25cae471d70e344f11af30569e23c6e5145d727",
+      "source_path": "SOURCE_EXACT/lectures/14-quality-production/en/examples/02-seeded-defect-sensitivity/README.md"
+    },
+    {
+      "bytes": 30865,
+      "public_path": "canonical/02-seeded-defect-sensitivity/package-lock.json",
+      "sha256": "6fd512f88112e1359e632b55904a357be89ee7eb56cf9761186349fd9eed98df",
+      "source_path": "SOURCE_EXACT/lectures/14-quality-production/en/examples/02-seeded-defect-sensitivity/package-lock.json"
+    },
+    {
+      "bytes": 150,
+      "public_path": "canonical/02-seeded-defect-sensitivity/package.json",
+      "sha256": "e99fa465398de257b7128d328b4a5fd638cb3ed8598924aa82f804e920c55299",
+      "source_path": "SOURCE_EXACT/lectures/14-quality-production/en/examples/02-seeded-defect-sensitivity/package.json"
+    },
+    {
+      "bytes": 544,
+      "public_path": "canonical/02-seeded-defect-sensitivity/service.mjs",
+      "sha256": "f4a442aba9d6f576c0f38cbd7abc1f94459bc4bfb4c0daab7a26a9cda29c5b6a",
+      "source_path": "SOURCE_EXACT/lectures/14-quality-production/en/examples/02-seeded-defect-sensitivity/service.mjs"
+    },
+    {
+      "bytes": 1092,
+      "public_path": "canonical/02-seeded-defect-sensitivity/service.test.mjs",
+      "sha256": "341763b5c04a477916ac5b42d8066c829409c83911624ce20a06cbaeea1789f2",
+      "source_path": "SOURCE_EXACT/lectures/14-quality-production/en/examples/02-seeded-defect-sensitivity/service.test.mjs"
+    },
+    {
+      "bytes": 974,
+      "public_path": "canonical/03-tail-latency-trace/README.md",
+      "sha256": "2f55de2d4b6e4f51eaa5562523306cbe9ed9290879f74143dcaf01826540c9d5",
+      "source_path": "SOURCE_EXACT/lectures/14-quality-production/en/examples/03-tail-latency-trace/README.md"
+    },
+    {
+      "bytes": 30861,
+      "public_path": "canonical/03-tail-latency-trace/package-lock.json",
+      "sha256": "a9e605ffeb82ab23450c39874fe66fe6676a2e9c06cd4ed306a03c8e8e0b878e",
+      "source_path": "SOURCE_EXACT/lectures/14-quality-production/en/examples/03-tail-latency-trace/package-lock.json"
+    },
+    {
+      "bytes": 171,
+      "public_path": "canonical/03-tail-latency-trace/package.json",
+      "sha256": "c296cc2b2ca6c00ffdb6be002da524533fcfe96530d608535af22b262114d1f4",
+      "source_path": "SOURCE_EXACT/lectures/14-quality-production/en/examples/03-tail-latency-trace/package.json"
+    },
+    {
+      "bytes": 858,
+      "public_path": "canonical/03-tail-latency-trace/probe.mjs",
+      "sha256": "f20282bb5aa1e591f1142418a45444f950cc30b8b51fb47faf5f7c50ce3e0067",
+      "source_path": "SOURCE_EXACT/lectures/14-quality-production/en/examples/03-tail-latency-trace/probe.mjs"
+    },
+    {
+      "bytes": 450,
+      "public_path": "canonical/03-tail-latency-trace/probe.test.mjs",
+      "sha256": "94adf6c879e76add3d3ff94f9c026541dc12f10bc28ce34eee0ff03442766585",
+      "source_path": "SOURCE_EXACT/lectures/14-quality-production/en/examples/03-tail-latency-trace/probe.test.mjs"
+    },
+    {
+      "bytes": 963,
+      "public_path": "canonical/04-safe-log-projection/README.md",
+      "sha256": "fb56956c90a681e300037dd659f3a18aea3d66143cd5aa6914104c845242cbd2",
+      "source_path": "SOURCE_EXACT/lectures/14-quality-production/en/examples/04-safe-log-projection/README.md"
+    },
+    {
+      "bytes": 30861,
+      "public_path": "canonical/04-safe-log-projection/package-lock.json",
+      "sha256": "9aadc0d8dc08aebac28c29f5aaa35646ca099ad91776bb4a6611d69e995a4e11",
+      "source_path": "SOURCE_EXACT/lectures/14-quality-production/en/examples/04-safe-log-projection/package-lock.json"
+    },
+    {
+      "bytes": 173,
+      "public_path": "canonical/04-safe-log-projection/package.json",
+      "sha256": "56eee90b3c16fe0c0af095400f6c22b5da4b05ed389d755f20c0daef870e2c52",
+      "source_path": "SOURCE_EXACT/lectures/14-quality-production/en/examples/04-safe-log-projection/package.json"
+    },
+    {
+      "bytes": 716,
+      "public_path": "canonical/04-safe-log-projection/server.mjs",
+      "sha256": "59dc51c3777d93336771516089ee8c82ed252648f1742104606753846912077c",
+      "source_path": "SOURCE_EXACT/lectures/14-quality-production/en/examples/04-safe-log-projection/server.mjs"
+    },
+    {
+      "bytes": 833,
+      "public_path": "canonical/04-safe-log-projection/server.test.mjs",
+      "sha256": "b989cd17c2ba7640d1f4bcf1649e591b014835ab3450fc4775b24deae281c2f3",
+      "source_path": "SOURCE_EXACT/lectures/14-quality-production/en/examples/04-safe-log-projection/server.test.mjs"
+    },
+    {
+      "bytes": 1024,
+      "public_path": "canonical/05-evidence-tristate-gate/README.md",
+      "sha256": "adf80a7d7e9fc4c50c218b2803dba41d9697f336e4bc3df0e75eeadd6fc10cff",
+      "source_path": "SOURCE_EXACT/lectures/14-quality-production/en/examples/05-evidence-tristate-gate/README.md"
+    },
+    {
+      "bytes": 157,
+      "public_path": "canonical/05-evidence-tristate-gate/package-lock.json",
+      "sha256": "16c71ec25dc41cf72f8f34019824ca0aae12bf08f200ede6368b857235039dd7",
+      "source_path": "SOURCE_EXACT/lectures/14-quality-production/en/examples/05-evidence-tristate-gate/package-lock.json"
+    },
+    {
+      "bytes": 139,
+      "public_path": "canonical/05-evidence-tristate-gate/package.json",
+      "sha256": "5a1a77f15f382926bd751aa614cc654c806f1ab3f51982fd4c437ecc86b35eca",
+      "source_path": "SOURCE_EXACT/lectures/14-quality-production/en/examples/05-evidence-tristate-gate/package.json"
+    },
+    {
+      "bytes": 840,
+      "public_path": "canonical/05-evidence-tristate-gate/review.mjs",
+      "sha256": "ee6adbc1f158d1c8040b48a364c990f8f33fb08de0e6bab457c6f07533343ca3",
+      "source_path": "SOURCE_EXACT/lectures/14-quality-production/en/examples/05-evidence-tristate-gate/review.mjs"
+    },
+    {
+      "bytes": 425,
+      "public_path": "canonical/05-evidence-tristate-gate/review.test.mjs",
+      "sha256": "894082e888c9abf4d262d3fab87175b65e639b30e75ffed01c63c2cb80f7a20c",
+      "source_path": "SOURCE_EXACT/lectures/14-quality-production/en/examples/05-evidence-tristate-gate/review.test.mjs"
+    },
+    {
+      "bytes": 25,
+      "public_path": "canonical/05-evidence-tristate-gate/sample-app.mjs",
+      "sha256": "60b6addc968c08a7327c4dcf02600ca33a83edcb3e3c28457613d57b74ccce95",
+      "source_path": "SOURCE_EXACT/lectures/14-quality-production/en/examples/05-evidence-tristate-gate/sample-app.mjs"
+    },
+    {
+      "bytes": 151,
+      "public_path": "canonical/reading-list-next.md",
+      "sha256": "770bce381e095146df8e0fc18c6e620656731f712b4cadee07e26902e31e2591",
+      "source_path": "SOURCE_EXACT/lectures/14-quality-production/en/reading-list-next.md"
+    },
+    {
+      "bytes": 555,
+      "public_path": "canonical/deeper-understanding.md",
+      "sha256": "7debca12b5085aa5a85e2516fb3cffd091fb06d2df9d087db00d355bf341e01d",
+      "source_path": "SOURCE_EXACT/lectures/14-quality-production/en/deeper-understanding.md"
+    }
+  ],
+  "schema": "TW2026_C14_CANONICAL_PUBLIC/1.0"
+}

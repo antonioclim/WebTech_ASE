@@ -1,0 +1,3 @@
+# Retired original input archives
+
+Eight ZIPs and their original SHA sidecars were present in baseline 1850118b3f619b233f89941802212fe59d8d5dfe and were absent at their original paths in reviewed main 6c558434d6051b70c90eeb1e4fb65cbfbbdb2082. These exact bytes are restored here as history, not as active student downloads. metadata/preserved-main.json binds their source commit, original paths and complete file hashes. Selected candidate objects remain governed by metadata/student-selection.json. Do not replace a new candidate with a historical archive merely because its original filename says FINAL.

@@ -1,0 +1,6 @@
+services:
+  redis:
+    image: docker.io/library/redis:7.4-alpine
+    command: ["redis-server", "--save", "", "--appendonly", "no"]
+    ports:
+      - "6387:6379"

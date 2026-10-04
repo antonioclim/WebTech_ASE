@@ -1,0 +1,6 @@
+MODULE_MODEL
+G1 attach finish and close listeners
+G2 finish occurs -> completed log written once
+G3 sibling listener removed or guarded
+G4 later close does not add a second terminal record
+LIMIT: a synthetic close event is not a real client abort.

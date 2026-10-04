@@ -1,0 +1,227 @@
+{
+  "schema": "webtech-derived-carrier/v1",
+  "object_id": "S12",
+  "carrier_version": "1.2.3-rc.4",
+  "distribution_version": "3.0.0-rc.4",
+  "source_commit": "7f88fecfa972bfb41d4fffec3e47616842c7e067",
+  "intentional_baseline_commit": "1850118b3f619b233f89941802212fe59d8d5dfe",
+  "derived_from": {
+    "archive": "01_WEEKS/WEEK_12/S12_SEMINAR/EN_GB/DOWNLOAD/WEBTECH_ASE_S12_EN_GB_v1.2.2_RC2.zip",
+    "archive_sha256": "10a2ae0b7c0687bf83cfb6f34545a9f24289df888e2cbc62beb986bcc5433747",
+    "package_id": "21ddb9e4b1da7edfc2fb04cd45d174f0b5022e915dd1408d9292a3deedd9caf2",
+    "carrier_version": "1.2.2"
+  },
+  "status": "LOCAL_RELEASE_CANDIDATE_PENDING_EXTERNAL_ACCEPTANCE",
+  "native_acceptance": "PENDING",
+  "identity_is_runtime_qualification": false,
+  "original_carrier_overwritten": false,
+  "original_external_bindings_are_history_not_current_byte_identity": true,
+  "content_and_mode_changes_before_sealing": [
+    {
+      "path": "ACTIVE_FIELDS_GUIDE.html",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "3fb182cebfcfa20b46c381550960335628757987a120bff76f37fb3cf81b60a6",
+      "before_bytes": null,
+      "after_bytes": 3323,
+      "before_mode": null,
+      "after_mode": 420
+    },
+    {
+      "path": "ACTIVE_FIELDS_GUIDE.md",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "a333dffb96509c9b3847dfd3267beaa05c5f4e59df2632f9eded0bf7b0c17d0c",
+      "before_bytes": null,
+      "after_bytes": 2854,
+      "before_mode": null,
+      "after_mode": 420
+    },
+    {
+      "path": "CHECK_ENVIRONMENT.sh",
+      "change": "MODE",
+      "before_sha256": "635e72a147036ebcb19cffa199b1442dc13aefa78d3ebabdc202d59f78a9fe98",
+      "after_sha256": "635e72a147036ebcb19cffa199b1442dc13aefa78d3ebabdc202d59f78a9fe98",
+      "before_bytes": 712,
+      "after_bytes": 712,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "FORM_S12_EN_GB.html",
+      "change": "BYTES",
+      "before_sha256": "e0ce0a2021eec54af9735a51d594e910e5472066bf11bfa901addeca4323a49d",
+      "after_sha256": "6eed27d9b5bc7258a4d73ba9c295c6213a2c3bb2980a17cfbcec1d9786cf4d99",
+      "before_bytes": 3542,
+      "after_bytes": 3594,
+      "before_mode": 420,
+      "after_mode": 420
+    },
+    {
+      "path": "OBSERVE_P03_CASES.sh",
+      "change": "MODE",
+      "before_sha256": "1a9429e1b759c9602de9ba832f9a227377e618af4ea275092d1b1ba8aadc28cd",
+      "after_sha256": "1a9429e1b759c9602de9ba832f9a227377e618af4ea275092d1b1ba8aadc28cd",
+      "before_bytes": 706,
+      "after_bytes": 706,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "OPEN_BEGINNER_GUIDE.sh",
+      "change": "MODE",
+      "before_sha256": "dc340e469d2bc4e77a18b9ee87e143ffe85cf6587abe67e4605903972d98335e",
+      "after_sha256": "dc340e469d2bc4e77a18b9ee87e143ffe85cf6587abe67e4605903972d98335e",
+      "before_bytes": 501,
+      "after_bytes": 501,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "OPEN_MOODLE_FORM.sh",
+      "change": "MODE",
+      "before_sha256": "c9ab2d32a5073e72d3c787b32565b2dfd7a5636efc0bd5e9ebd1d7df880f30fc",
+      "after_sha256": "c9ab2d32a5073e72d3c787b32565b2dfd7a5636efc0bd5e9ebd1d7df880f30fc",
+      "before_bytes": 469,
+      "after_bytes": 469,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "S12_INTERACTIVE_ULTRA_BEGINNER_GUIDE_EN_GB_v1.2.1.html",
+      "change": "BYTES",
+      "before_sha256": "b314a4d78b24f039b619839baa5bf9611f686778556ff51e85988889d3e09608",
+      "after_sha256": "40a4b33fa9bc108ed51d61d2dbec88e725144d63b4dc2eb0b23a7a7a901e40dc",
+      "before_bytes": 144174,
+      "after_bytes": 144394,
+      "before_mode": 420,
+      "after_mode": 420
+    },
+    {
+      "path": "S12_RUBRIC_DESCRIPTORS_PROPOSED.html",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "b3a02ad37ebfd354ad1dd48fb45e3e0eb57767bf2f7d3be3d425b58fc9084d87",
+      "before_bytes": null,
+      "after_bytes": 3699,
+      "before_mode": null,
+      "after_mode": 420
+    },
+    {
+      "path": "S12_RUBRIC_DESCRIPTORS_PROPOSED.md",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "d8c253d6737c064292566acd96df6b699f859e1784fac34753592c2bc442278e",
+      "before_bytes": null,
+      "after_bytes": 3175,
+      "before_mode": null,
+      "after_mode": 420
+    },
+    {
+      "path": "TEST_P03_UNIT.sh",
+      "change": "MODE",
+      "before_sha256": "67bce4505a48e715d21d529a046e4dc90c8950389afe7bc0daa0c5fa9b53738c",
+      "after_sha256": "67bce4505a48e715d21d529a046e4dc90c8950389afe7bc0daa0c5fa9b53738c",
+      "before_bytes": 707,
+      "after_bytes": 707,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "VERIFY_BOUNDARY.sh",
+      "change": "MODE",
+      "before_sha256": "078c8b8d6740f164f570cc8c58d8f8877ae9fe58c559a742b60ee92e62383f20",
+      "after_sha256": "078c8b8d6740f164f570cc8c58d8f8877ae9fe58c559a742b60ee92e62383f20",
+      "before_bytes": 710,
+      "after_bytes": 710,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "VERIFY_INITIAL_STATE.sh",
+      "change": "MODE",
+      "before_sha256": "662b23d3596ea701212e1565beb9fe189c42b1d57427f1db8a76e72fc317af0a",
+      "after_sha256": "662b23d3596ea701212e1565beb9fe189c42b1d57427f1db8a76e72fc317af0a",
+      "before_bytes": 715,
+      "after_bytes": 715,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "VERIFY_PACKAGE.sh",
+      "change": "MODE",
+      "before_sha256": "50c703dbadb6391303fe30d6fe006005146e79346cff7a6cc50419b8a46262e6",
+      "after_sha256": "50c703dbadb6391303fe30d6fe006005146e79346cff7a6cc50419b8a46262e6",
+      "before_bytes": 709,
+      "after_bytes": 709,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "VERIFY_WORK_RESULT.sh",
+      "change": "MODE",
+      "before_sha256": "5b611686f4f46c09163656475b1f9e4aeef533e6f35114de3f405ba3d91f779f",
+      "after_sha256": "5b611686f4f46c09163656475b1f9e4aeef533e6f35114de3f405ba3d91f779f",
+      "before_bytes": 713,
+      "after_bytes": 713,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "assets/student-form-focus.js",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "ac0326f7a6967b46201b928f1743c66df94da3d8c04424a559442aba869694ce",
+      "before_bytes": null,
+      "after_bytes": 7539,
+      "before_mode": null,
+      "after_mode": 420
+    }
+  ],
+  "current_binding_changes": [],
+  "identity_contract": {
+    "method": "manifest-sha256",
+    "manifest": "SHA256SUMS.txt",
+    "package_id": "PACKAGE_ID.txt",
+    "manifest_exclusions": [
+      "SHA256SUMS.txt",
+      "PACKAGE_ID.txt"
+    ],
+    "path_order": "unicode-codepoint",
+    "encoding": "UTF-8",
+    "line_ending": "LF",
+    "record_format": "sha256 + two ASCII spaces + relative POSIX path + LF",
+    "index": "FILE_INDEX.csv",
+    "index_exclusions": [
+      "FILE_INDEX.csv",
+      "SHA256SUMS.txt",
+      "PACKAGE_ID.txt"
+    ],
+    "index_columns": [
+      "relative_path",
+      "bytes",
+      "sha256",
+      "classification"
+    ]
+  },
+  "edit_contract": {
+    "distribution_scope": "PRISTINE_EXACT_ALL_ARCHIVE_MEMBERS",
+    "student_work_scope": "DECLARED_PACKAGE_SPECIFIC_EDIT_BOUNDARY",
+    "policy_files": [
+      "PROJECT_BOUNDARY.json"
+    ],
+    "editable_files": [
+      "projects/p03/student/src/request-dispatcher.mjs"
+    ],
+    "project_roots": [
+      "projects/p03/student"
+    ],
+    "generated_directory_names": [
+      "node_modules"
+    ],
+    "generated_exclusions_apply_only_to_declared_project_working_copies": true,
+    "generated_entries_in_release_carrier": "FORBIDDEN"
+  },
+  "mode_policy": "recognized shell .sh 0755; all other regular members 0644; source PID hashes bytes, outer ZIP SHA256 also authenticates entry modes",
+  "descriptor_repair": null
+}

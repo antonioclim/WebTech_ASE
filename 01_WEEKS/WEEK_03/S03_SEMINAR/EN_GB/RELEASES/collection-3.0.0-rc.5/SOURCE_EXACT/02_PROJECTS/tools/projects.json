@@ -1,0 +1,95 @@
+{
+  "P01": {
+    "path": "P01/student",
+    "allowed": "src/transform-tasks.js",
+    "hashes": {
+      "README.md": "df0fa7decd3bb33011247fd8d704b6c832dd291089d65da2f053298939c59194",
+      "data/tasks.json": "d9c697df54ed03c481db4b7bcdf05f0b84fd8f38f6e6e6648a059427472feb50",
+      "package-lock.json": "7faa2f7dbd9860e7af15f5bd04cfbec86e0e35175626c347c7e4e6f7e2b50f81",
+      "package.json": "07c610d41a6226fb8a00033d6ba8f9632d49914ef3206bb7a30a274fc3f2038e",
+      "src/cli.js": "3d995f5656fdec563e59eca0b919c589a46496cb8c4c53f4cc964333f7a0b6e0",
+      "src/transform-tasks.js": "bbea19595ca79a3a6ee72c1d42d0800d67d860b4ee357bfb7b1cbaab1ab825e6",
+      "tests/baseline.test.js": "07f1e936a12476b693aed0ca51293e1e92df12e21df41a02d3235877c8ab30a6",
+      "tests/objective.test.js": "33e92d909aee9bded44ec645149bbf1097297ff68b957c286b23a9f1a64fe19f",
+      "tests/regression.test.js": "e8455b31f597b5b3daa3595507253299f7a0df0c8490014aba23c262296115d1"
+    },
+    "tests": {
+      "baseline": [
+        "fixture is a JSON array",
+        "help and missing file behavior work"
+      ],
+      "objective": [
+        "pipeline filters, projects, sorts, and summarizes",
+        "options filter and empty result is explicit",
+        "invalid shapes fail without coercion"
+      ],
+      "regression": [
+        "input records and options are not mutated",
+        "CLI success output is valid JSON"
+      ]
+    }
+  },
+  "P02": {
+    "path": "P02/student",
+    "allowed": "src/rule-engine.js",
+    "hashes": {
+      "README.md": "d10db891f267e99398b1fea01cff12f9eb18467ee7517019f2cbe0f65537c1b9",
+      "data/scenario.json": "caa908590e8b179918dec558ac1f4a7deac2d3b40404d4f57fff088137672570",
+      "package-lock.json": "89827aa347a5fb42a5b0c22a74a13e973cf59e6a593384416f8ca8c8f1a279a1",
+      "package.json": "e9705ff9f442ff47f8709329453b9e8419e3b087039b3ca5db604abf8580513c",
+      "src/cli.js": "9a7dc5da60cb39e1364381b39faaaf89feda412ac01ad7080594bdc13e440723",
+      "src/rule-engine.js": "f0ec94ff141fd9d992c48a0382fa20627d377545f9e543d792601338a8d885ef",
+      "tests/baseline.test.js": "466a98dc1b22ea5a43ddefde8754dba48fafd9d8064dad02e42bc8c10837fa4f",
+      "tests/objective.test.js": "e0b755c84b3a96d66c11499035068d819f112a425219c427769c142a1ecb4779",
+      "tests/regression.test.js": "03fba1965ecd09ff641f96c562ff009d8ac05852475617ba3c530088a8d6caeb"
+    },
+    "tests": {
+      "baseline": [
+        "scenario shape and help work"
+      ],
+      "objective": [
+        "leaf operators preserve strict types",
+        "leaf operators reject inherited record fields",
+        "nested rules partition in input order",
+        "invalid rules fail during compilation"
+      ],
+      "regression": [
+        "frozen inputs are unchanged",
+        "composites short circuit",
+        "CLI emits valid JSON"
+      ]
+    }
+  },
+  "P03": {
+    "path": "P03/student",
+    "allowed": "src/safe-normalizer.js",
+    "hashes": {
+      "README.md": "6bbef7246ffb6f0ed070d989b759cdeb7e3e26fee262a5634f1c303fdf338172",
+      "data/events.json": "ff881d0047578b8e51293a7fa4e6ae318a9f02ed2e09363a48cf7489f71918d2",
+      "package-lock.json": "9d33c72bfa56ca5a3fd22a5a3df671de7b097ee7f726fead33a2d434c66eda00",
+      "package.json": "869f6d57c8fce38848cbf554d179e6bda08094eed3a09557073441f66025434e",
+      "src/cli.js": "87cc5581e354d24556575d31779dbee89a9514b7de27ba5180544cb5b6c250e2",
+      "src/safe-normalizer.js": "69edc71234564d14fa915fd04d3a59d648c273c6edf7f69382660dbdf3aa141b",
+      "src/unsafe-generated.js": "e7111b4bcc44a2d5e5075fd4c2b6fae85a2b8f17c6aa3986470a7a2b93cf9194",
+      "tests/baseline.test.js": "1b09537dc43375e9ee981fb982e1a92bef95616443bf70b449586c05d99887c3",
+      "tests/objective.test.js": "6ef1df43ea7d3ef80c1dd775dee4682fbfc94f43055e1c9438c2f79aaf30370f",
+      "tests/regression.test.js": "45825345ef2812e7ddb604e417c7c47aba35ef1375625aeb34acdd51ca6f822e"
+    },
+    "tests": {
+      "baseline": [
+        "unsafe artifact reproducibly coerces and mutates",
+        "unsafe artifact accepts an inherited required field"
+      ],
+      "objective": [
+        "normalizes new projected records in order",
+        "rejects invalid shapes without coercion",
+        "rejects inherited required fields",
+        "summarizes strict normalized values",
+        "equal timestamps use id tie breaker"
+      ],
+      "regression": [
+        "frozen input is unchanged and output does not alias records"
+      ]
+    }
+  }
+}

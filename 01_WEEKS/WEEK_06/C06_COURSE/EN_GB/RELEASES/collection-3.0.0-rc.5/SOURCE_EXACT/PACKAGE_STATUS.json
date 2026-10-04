@@ -1,0 +1,12 @@
+{
+  "object": "C06",
+  "version": "1.1.0",
+  "production": "PHASE_2_C06_PRODUCTION_COMPLETE",
+  "qualification": "PRODUCED_PENDING_DEFERRED_ACCEPTANCE",
+  "reference_runtime": "NOT_EXECUTED",
+  "ORM_SQLITE": "NOT_EXECUTED_MISSING_PREREQUISITES",
+  "native_driver": "NOT_LOADED",
+  "real_browser": "NOT_EXECUTED",
+  "native_platforms": "DEFERRED",
+  "public_admission": false
+}

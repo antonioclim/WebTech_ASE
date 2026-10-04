@@ -1,0 +1,2 @@
+/* HTML-text representation only; not URL policy, HTML sanitisation or JavaScript encoding. */
+(function(root){'use strict';function represent(value){if(typeof value!=='string'||value.length>4000)throw new TypeError('Expected bounded text');return value.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;');}const api=Object.freeze({represent});if(typeof module==='object'&&module.exports)module.exports=api;else root.C11Text=api;})(typeof window==='object'?window:globalThis);

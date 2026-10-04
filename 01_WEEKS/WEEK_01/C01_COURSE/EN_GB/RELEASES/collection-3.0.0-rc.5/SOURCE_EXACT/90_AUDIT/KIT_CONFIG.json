@@ -1,0 +1,33 @@
+{
+  "kind": "c01_student",
+  "requiredNode": "v24.21.0",
+  "examples": {
+    "01": {
+      "path": "04_CANONICAL_EXAMPLES/01-url-boundaries",
+      "entry": "example.js"
+    },
+    "02": {
+      "path": "04_CANONICAL_EXAMPLES/02-request-response-anatomy",
+      "entry": "verify.mjs"
+    },
+    "03": {
+      "path": "04_CANONICAL_EXAMPLES/03-response-contract-check",
+      "entry": "check.js"
+    },
+    "04": {
+      "path": "04_CANONICAL_EXAMPLES/04-representation-contract",
+      "entry": "example.js"
+    },
+    "05": {
+      "path": "04_CANONICAL_EXAMPLES/05-bounded-change-review",
+      "entry": "verify-http.mjs"
+    }
+  },
+  "requiredNpm": "11.19.0",
+  "version": "2.0.3-rc.4",
+  "derived_carrier_version": "2.0.3-rc.4",
+  "previous_carrier_version": "2.0.2-rc.1",
+  "previous_descriptor_sha256": "14dbda6aef88e78313fe13847374be16541c27270d6e8632a73f82c9f579625c",
+  "current_derivation_record": "DERIVED_CARRIER.json",
+  "previous_observations_not_transferred_to_current_carrier": true
+}

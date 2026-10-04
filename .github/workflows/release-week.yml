@@ -7,7 +7,7 @@ on:
         description: 'Week number from RELEASE_PLAN.json'
         type: choice
         required: true
-        options: ['01', '02']
+        options: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14']
       preview:
         description: 'Allow declared candidate assets, retaining plan draft/prerelease status and pending gates'
         type: boolean
@@ -34,10 +34,12 @@ jobs:
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version: '24.21.0'
+      - name: Install the pinned workflow parser
+        run: python -m pip install --requirement 00_TOOLS/qa/requirements.txt
       - name: Verify deterministic weekly bundles
-        run: python 00_TOOLS/publishing/build_week_bundle.py --verify-all --weeks '${{ inputs.week }}' --language EN_GB
+        run: python 00_TOOLS/publishing/build_week_bundle.py --verify-all --plan 90_RELEASES/FULL_COLLECTION_PLAN.json
       - name: Validate repository
-        run: python 00_TOOLS/qa/validate_public_repo.py --strict --weeks '${{ inputs.week }}' --language EN_GB
+        run: python 00_TOOLS/qa/validate_public_repo.py --strict
       - name: Resolve and verify release plan
         id: plan
         env:
@@ -48,7 +50,7 @@ jobs:
           if [[ "$PREVIEW" == "true" ]]; then
             preview_args+=(--allow-preview)
           fi
-          python 00_TOOLS/publishing/resolve_release.py --week "$WEEK" --language EN_GB --github-output "$GITHUB_OUTPUT" "${preview_args[@]}"
+          python 00_TOOLS/publishing/resolve_release.py --plan 90_RELEASES/FULL_COLLECTION_PLAN.json --week "$WEEK" --language EN_GB --workflow-output --github-output "$GITHUB_OUTPUT" "${preview_args[@]}"
       - name: Refuse an existing tag or release
         env:
           GH_TOKEN: ${{ github.token }}

@@ -1,16 +1,6 @@
-* text=auto eol=lf
-*.cmd text eol=crlf
-*.bat text eol=crlf
-*.ps1 text eol=crlf
-*.sh text eol=lf
+# Preserve exact committed bytes, including historic sealed carriers.
+* -text
 *.zip binary
 *.docx binary
 *.pdf binary
 *.png binary
-*.jpg binary
-*.jpeg binary
-*.gif binary
-*.webp binary
-00_SETUP/**/PACKAGE_EXACT/** -text
-01_WEEKS/**/PACKAGE_EXACT/** -text
-00_SETUP/ALTERNATIVES/**/GUIDE/** -text

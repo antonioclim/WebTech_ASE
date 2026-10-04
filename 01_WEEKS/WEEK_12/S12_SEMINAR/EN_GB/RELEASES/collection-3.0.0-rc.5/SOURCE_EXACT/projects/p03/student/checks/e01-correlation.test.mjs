@@ -1,0 +1,4 @@
+import assert from "node:assert/strict";
+import test from "node:test";
+import { fixture, observed, counters, trace } from "./fixture.mjs";
+test("E01 reversed replies retain caller ownership", async t => { const f=fixture(); t.after(()=>f.dispatcher.dispose()); const promises=[1,2,3].map(value=>observed(f.dispatcher.dispatch("work",{value}))); for(const id of [3,1,2]) f.transport.emitMessage({type:"work.completed",requestId:`r${id}`,result:id*10}); f.timers.fireAll(); const results=await Promise.all(promises); assert.deepEqual(results,[{resolved:true,value:10},{resolved:true,value:20},{resolved:true,value:30}]); assert.equal(f.dispatcher.pendingCount,0); const settled=counters(f); assert.deepEqual(settled,{pending:0,timers:0,abortListeners:0,messageListeners:1,closeListeners:1}); f.dispatcher.dispose(); trace(t,"E01",{replyOrder:["r3","r1","r2"],callerResults:[10,20,30],settled,disposed:counters(f)}); });

@@ -1,0 +1,30 @@
+[
+  {
+    "original_path": "projects/p02/README.md",
+    "derived_path": "02_PROJECTS/p02/README.md",
+    "original_sha256": "fb5e0e4147929291d72770d8820c9ad0fc1c8fff6160acfbc1c114f9e6ce9f45",
+    "derived_sha256": "523d0bd698826171c321a0f79540440fffa04ddbd279527421d93facf4494698",
+    "reason": "Versioned EN-GB operational guidance and new launcher paths; technical source remains unchanged."
+  },
+  {
+    "original_path": "optional/p01/README.md",
+    "derived_path": "02_PROJECTS/optional/p01/README.md",
+    "original_sha256": "2cda1c42844871d67a450a76de818bb76bc19ccaf9bfc7d862f36171cc0f94ae",
+    "derived_sha256": "147c4a462cc25ca354036e2c1163c6988f57a8f62aa00b0e5dc5ee4c11d48960",
+    "reason": "Versioned EN-GB operational guidance and new launcher paths; technical source remains unchanged."
+  },
+  {
+    "original_path": "optional/p03/README.md",
+    "derived_path": "02_PROJECTS/optional/p03/README.md",
+    "original_sha256": "768da401f9c005c8db0ae543cf5ee39676c825de1c14ad027d64bab2f501c93a",
+    "derived_sha256": "b904060c850b1454fb496f93fc945259348539dec3cbe193888e308b18c01b6f",
+    "reason": "Versioned EN-GB operational guidance and new launcher paths; technical source remains unchanged."
+  },
+  {
+    "original_path": "canonical/02-initialization-policy/README.md",
+    "derived_path": "02_PROJECTS/canonical/02-initialization-policy/README.md",
+    "original_sha256": "56e782664d419cf14e28243dc24f54afa92cb281209a59d78fc4097ee7f40cc6",
+    "derived_sha256": "5420621e5433be4589f2df5b7a30c812a2d818d1a1fc6ce1d7cc9c244617c4da",
+    "reason": "Versioned EN-GB operational guidance and new launcher paths; technical source remains unchanged."
+  }
+]

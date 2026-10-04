@@ -1,0 +1,2 @@
+self.addEventListener("install",()=>self.skipWaiting());self.addEventListener("activate",event=>event.waitUntil(self.clients.claim()));
+self.addEventListener("message",event=>{const{type,request}=event.data??{};if(type!=="route-request")return;let path="network";try{const url=new URL(request.url);if(request.method==="GET"&&url.origin===self.location.origin&&/^\/api\/tasks\/[^/]+$/.test(url.pathname))path="message";}catch{}event.ports[0].postMessage({url:request.url,path});});

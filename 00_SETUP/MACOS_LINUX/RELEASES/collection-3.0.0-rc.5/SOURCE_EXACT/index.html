@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Day 0 setup: macOS and Linux</title><style>body{max-width:70rem;margin:2rem auto;padding:0 1rem;font:18px/1.6 system-ui}table{border-collapse:collapse;width:100%}td,th{padding:.5rem;border:1px solid #aaa;text-align:left}code,pre{overflow-wrap:anywhere}pre{white-space:pre-wrap;background:#f4f4f4;padding:1rem}details{margin:1rem 0}a:focus{outline:3px solid #1867ad}h1,h2,h3{line-height:1.3}</style></head><body><main><h1>Day 0 setup: macOS and Linux</h1>
+<h2>Day 0 quick start: macOS and Linux</h2>
+<ol>
+<li>Extract the complete ZIP into a new writable folder under your user profile. Do not run files from inside the archive. The full student collection already contains this extracted kit in <code>PACKAGES/SETUP_MACOS_LINUX</code>; use the kit&#x27;s innermost folder containing its launchers.</li>
+<li>Open <a href="00_START_HERE/../index.html">the HTML Day 0 instructions</a> for the clickable route. Open the extracted folder that contains <code>VERIFY_SETUP_KIT.sh</code> in VS Code using File → Open Folder, then Terminal → New Terminal. Use a Bash terminal. On macOS, the default interactive shell can be zsh; the <code>bash NAME.sh</code> commands below explicitly run the supplied script with Bash. On Linux, install Bash through your approved setup route if it is missing.</li>
+<li>From that kit folder, verify the supplied files before checking the computer:</li>
+</ol>
+<pre><code>bash VERIFY_SETUP_KIT.sh</code></pre>
+<p>Stop if integrity fails. Keep the error and obtain the lecturer&#x27;s correct package; do not edit its hashes.</p>
+<ol>
+<li>Run the Day 0 preflight:</li>
+</ol>
+<pre><code>bash RUN_PREFLIGHT.sh DAY0 --redact</code></pre>
+<p>Read each reported status and remediation ID. A missing installation or account acknowledgement can produce a nonzero exit code. This is an environment result, not a package-integrity result. Choose the instructions for your actual operating system: <a href="00_START_HERE/../04_INSTALL_GUIDES/NODE_MACOS.md">Node on macOS</a> or <a href="00_START_HERE/../04_INSTALL_GUIDES/NODE_LINUX.md">Node on Linux</a>; <a href="00_START_HERE/../04_INSTALL_GUIDES/VSCODE_MACOS.md">VS Code on macOS</a> or <a href="00_START_HERE/../04_INSTALL_GUIDES/VSCODE_LINUX.md">VS Code on Linux</a>; and <a href="00_START_HERE/../04_INSTALL_GUIDES/GIT_GITHUB_GEMINI.md">Git, GitHub and Gemini</a>.</p>
+<p>The configured baseline is Node.js <code>v24.21.0</code> and npm <code>11.19.0</code>. If that exact distribution or a prerequisite is unavailable, preserve the result and request the lecturer&#x27;s approved alternative; do not guess a replacement version. Installations and account sign-in require network access. Intended platform support is described in <a href="00_START_HERE/SUPPORT_MATRIX.md">the support matrix</a>; it is separate from observed native-platform acceptance.</p>
+<ol>
+<li>Verify your own GitHub account, its 2FA and your permitted Gemini access separately. The kit does not log in or inspect those accounts. Only after you have checked those facts, rerun with the truthful acknowledgements:</li>
+</ol>
+<pre><code>bash RUN_PREFLIGHT.sh DAY0 --redact --ack-github --ack-github-2fa --ack-gemini</code></pre>
+<p>Each <code>--ack-...</code> flag is your statement, not automated proof. If the account or AI tool is unavailable, tell the lecturer and request the permitted continuation. Do not invent an account, an AI exchange or a successful check.</p>
+<ol>
+<li>If the report points to a path or localhost problem, collect the relevant diagnostic from the kit folder:</li>
+</ol>
+<pre><code>bash DIAGNOSE_PATH.sh
+bash TEST_LOCALHOST.sh</code></pre>
+<ol>
+<li>Open the English evidence form:</li>
+</ol>
+<pre><code>bash OPEN_DAY0_FORM.sh</code></pre>
+<p>If the launcher cannot open a browser, open <code>11_DAY0_MOODLE/FORMULAR_DAY0_EN_GB.html</code> directly in Chrome, Edge or Chromium. Enter only the required evidence. Keep credentials, account recovery codes, tokens, cookies and private tabs out of screenshots and documents.</p>
+<ol>
+<li>An optional redacted diagnostic archive can help the lecturer troubleshoot:</li>
+</ol>
+<pre><code>bash COLLECT_EVIDENCE.sh --stage DAY0</code></pre>
+<p>Read the printed output location and inspect the files yourself before sharing. The collector runs fresh checks without the account acknowledgements: account rows in that archive can remain unacknowledged even when your separately acknowledged preflight was successful. Collection alone does not establish readiness or complete the evidence form. <code>--kits-dir</code> is not available in this edition.</p>
+<ol>
+<li>Export the reviewed form to PDF and follow <a href="00_START_HERE/../11_DAY0_MOODLE/MOODLE_UPLOAD_GUIDE_DAY0.md">the Day 0 Moodle upload guide</a>. Use <code>TW2026_DAY0_GROUP_Family_Given.pdf</code>. Check every page, upload privately to the lecturer&#x27;s Day 0 Assignment on <code>online.ase.ro</code>, check the uploaded PDF, and use the final Submit action when available. Deadlines and acceptance belong to the lecturer and institution.</li>
+</ol>
+<p>The instructions and form can be read offline. Missing downloads, account access and Moodle submission cannot be completed offline; keep progress and follow the lecturer&#x27;s continuation route.</p><p><a href="README.md">Kit README source</a> · <a href="00_START_HERE/QUICK_START.md">Quick-start source</a></p></main></body></html>

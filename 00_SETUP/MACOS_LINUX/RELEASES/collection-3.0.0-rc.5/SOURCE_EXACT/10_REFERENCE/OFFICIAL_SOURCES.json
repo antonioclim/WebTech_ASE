@@ -1,0 +1,96 @@
+{
+  "schema": "tw2026.official_sources.v1",
+  "verified_on": "2026-09-27",
+  "sources": [
+    {
+      "tool": "Node.js 24.21.0",
+      "url": "https://nodejs.org/en/download/archive/v24.21.0",
+      "purpose": "exact course runtime, binaries and npm 11.19.0"
+    },
+    {
+      "tool": "Node.js signed SHASUMS",
+      "url": "https://nodejs.org/dist/v24.21.0/SHASUMS256.txt.asc",
+      "purpose": "installer and archive verification"
+    },
+    {
+      "tool": "Node supported platforms",
+      "url": "https://github.com/nodejs/node/blob/v24.x/BUILDING.md",
+      "purpose": "OS, architecture, kernel and glibc constraints"
+    },
+    {
+      "tool": "VS Code requirements",
+      "url": "https://code.visualstudio.com/docs/supporting/requirements",
+      "purpose": "supported desktop platforms"
+    },
+    {
+      "tool": "VS Code Windows setup",
+      "url": "https://code.visualstudio.com/docs/setup/windows",
+      "purpose": "User Setup and PATH"
+    },
+    {
+      "tool": "VS Code macOS setup",
+      "url": "https://code.visualstudio.com/docs/setup/mac",
+      "purpose": "application install and code CLI"
+    },
+    {
+      "tool": "VS Code Linux setup",
+      "url": "https://code.visualstudio.com/docs/setup/linux",
+      "purpose": "official deb, rpm and Snap routes"
+    },
+    {
+      "tool": "VS Code CLI",
+      "url": "https://code.visualstudio.com/docs/configure/command-line",
+      "purpose": "version and extension checks"
+    },
+    {
+      "tool": "Git downloads",
+      "url": "https://git-scm.com/downloads",
+      "purpose": "Git installation"
+    },
+    {
+      "tool": "GitHub account",
+      "url": "https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github",
+      "purpose": "account and verified email"
+    },
+    {
+      "tool": "GitHub 2FA",
+      "url": "https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication",
+      "purpose": "second factor and recovery"
+    },
+    {
+      "tool": "Gemini access",
+      "url": "https://support.google.com/gemini/answer/13278668?hl=en",
+      "purpose": "supported accounts and browsers"
+    },
+    {
+      "tool": "Postman requirements",
+      "url": "https://learning.postman.com/docs/getting-started/installation/system-requirements",
+      "purpose": "supported operating systems"
+    },
+    {
+      "tool": "Postman installation",
+      "url": "https://learning.postman.com/docs/getting-started/installation/installation-and-updates",
+      "purpose": "desktop application"
+    },
+    {
+      "tool": "SQLite downloads",
+      "url": "https://sqlite.org/download.html",
+      "purpose": "SQLite CLI from S06"
+    },
+    {
+      "tool": "Vite guide",
+      "url": "https://vite.dev/guide/",
+      "purpose": "local Vite use and Node compatibility"
+    },
+    {
+      "tool": "Prettier VS Code",
+      "url": "https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode",
+      "purpose": "required formatter extension"
+    },
+    {
+      "tool": "ESLint VS Code",
+      "url": "https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint",
+      "purpose": "required lint integration"
+    }
+  ]
+}

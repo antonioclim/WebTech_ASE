@@ -1,0 +1,1 @@
+Assess one sanitised browser-boundary or lifecycle claim against the minimal excerpt below. State what evidence would support or refute it, identify assumptions and do not generate the complete assessed project.

@@ -25,3 +25,7 @@ TW2026_*_EVIDENCE.tar.gz
 ~$*
 .validation-venv/
 _site/
+
+# Generated Python bytecode is outside the sealed source inventory.
+__pycache__/
+*.py[cod]

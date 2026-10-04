@@ -1,0 +1,29 @@
+COURSE 02 v1.1 AUDIT — INTERFACE AUTOPSY
+
+You receive:
+1. the HTML fragment and CSS rules;
+2. a limited screenshot or trace;
+3. the state matrix: 320 px, 200% zoom, translated text, keyboard and reduced motion;
+4. the business-operation contract;
+5. the permitted change surface.
+
+For each problem:
+- classify it as SEMANTICS / CASCADE / SIZING / LAYOUT / INTERACTION / EVIDENCE;
+- separate OBSERVED / INFERRED / UNKNOWN;
+- name the owner of the contract;
+- identify the exact element, relationship, winning declaration or missing evidence;
+- propose the smallest change in the layer that owns the problem;
+- request a check that could falsify the proposal;
+- state the limitation of the evidence.
+
+Do not propose without justification:
+- rewriting the markup;
+- reflexive !important;
+- hidden overflow;
+- fixed heights;
+- removal of the focus indicator;
+- visual reordering without auditing logical order;
+- accessibility claims without testing.
+
+Format:
+PROBLEM | OWNER | MECHANISM | EVIDENCE | MINIMUM CORRECTION | LIMITATION.

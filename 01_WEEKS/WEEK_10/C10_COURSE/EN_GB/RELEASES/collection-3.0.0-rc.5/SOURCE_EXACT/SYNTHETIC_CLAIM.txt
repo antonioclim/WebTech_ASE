@@ -1,0 +1,3 @@
+SYNTHETIC PRACTICE CLAIM — NOT AN ACTUAL GEMINI RESPONSE.
+“Because the project is large and a selector returns a count, all state belongs in Redux and the view is proven faster.”
+Identify the unsupported inferences. This text is not a student observation or a real AI exchange.

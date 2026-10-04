@@ -1,0 +1,113 @@
+{
+  "schema": "TW2026_S09_PROJECT_BASELINES/1.2.0",
+  "classification": "SOURCE_IDENTITY_ONLY_NOT_CORRECTNESS",
+  "projects": {
+    "p01": {
+      "root": "projects/p01/student",
+      "allowed_changes": [
+        "src/NotesApp.jsx"
+      ],
+      "generated_exclusions": [
+        "node_modules",
+        "dist",
+        ".git"
+      ],
+      "files": {
+        "README.md": "d6b35a55d8e8f64e7df25d3d9e56ae0e82ee9ecd202ba70a5ad396d18a146632",
+        "index.html": "fa20b54bcf4eb54062ab9294123abae3c036577b0f13e72be563c7f7618b8c35",
+        "package-lock.json": "3d97f86d0401d8f60ac9210af1478bb7711559b920043c583db5bd4be9fb81c1",
+        "package.json": "aaabccd90d50de7583d3ab6e0d294f4585c807b29085aa32e98d230d8ae5431d",
+        "s09_checks/additional.check.jsx": "e9346c7f0e4f9aff0b0d55ba1e3614fe6118a2dfaa22dcf99ab3c4c85d6b70ed",
+        "s09_checks/config.js": "b6b2bd37859e7f0324503959251f6cb269ed6b31da46099e01496a0e28edc236",
+        "src/NotesApp.jsx": "300c4b72c65d982ed2a85370c694b54a0d33d0c26c0113e25bf5bd7a32f6d152",
+        "src/main.jsx": "24c9847ad5bea6713920f95170ea004aab9bcea1aea6d03ec538684d4dfe917f",
+        "src/notes-store.js": "fd91495c7dcfec84899ce2210a2b6f822e44d01932215d5815a974190c28242b",
+        "src/styles.css": "f067203fb3c91f2f4acb97938eb3f75af2a398d86ef69461a01f8a81f5989b86",
+        "tests/baseline.test.js": "68cb35409f039c4c3aa87d59a52a8256d44702b48e5b3095c6e57e0f112301e8",
+        "tests/helpers.jsx": "85f26e2fffcd04588dad85b9776eccf874c5a905a3116b896a3f5f16a6dc5546",
+        "tests/objective.test.jsx": "ea8eb8781975e33fc0f360f39f00cd74eeee89f6908178f97ce5240f1b8fb684",
+        "tests/regression.test.jsx": "8c795fdd28abf3611ed7c1118365706976f5affdc05315a75eebe902cb307918",
+        "tests/setup.js": "f6a3591a31193bda3fae485d3ff6a05ae21237b3633b46d8c52dd3155b634fdd",
+        "vite.config.js": "6d5d9601345ee02b422bc6b327a6d2e969e77664b048beb349f5f3b0fb94ad2e"
+      }
+    },
+    "p02": {
+      "root": "capstone/p02/student",
+      "allowed_changes": [
+        "client/src/NotesWorkspace.jsx"
+      ],
+      "generated_exclusions": [
+        "node_modules",
+        "client/dist",
+        ".git",
+        "client/node_modules"
+      ],
+      "files": {
+        "README.md": "fbac09e153a0811bb74f9fbae58801f3777444bc4781d68dfcc124a7964b2443",
+        "client/index.html": "90d54f0d676de15a61da6a4b048b5f972ff51579f20897c1d93fa4f04a787916",
+        "client/s09_checks/additional.check.jsx": "c09131031f7b962a6fdf1eefd38ccf8f3f0fd9d1a4256a3cc26fd2a1923fdf6f",
+        "client/s09_checks/config.js": "b6b2bd37859e7f0324503959251f6cb269ed6b31da46099e01496a0e28edc236",
+        "client/src/NotesWorkspace.jsx": "b9530a57f7bce7f7ca3ed8697c3a4641bcc5ce378cda5bd8f161af4d680a4f77",
+        "client/src/main.jsx": "ef01761c01d3f1e8e1909590d16b79354b12755ed805363e4867bcbebb347ff6",
+        "client/src/notes-api.js": "058b74017d497b6a20de8de7a43278d162b3f81e1505f8901e8005638cd2f0bb",
+        "client/src/styles.css": "3edc348bbc51fa807eabb856d0dfdce96c8693c7141e71fddbe217bb68857ac7",
+        "client/tests/baseline.test.js": "d403be8a89bde2a1af1348ebd8fff26fef36759853c511c8050f757a4b7d2d74",
+        "client/tests/helpers.jsx": "f47726beb13e46e95a7978555bb47a9ebb6e6e262fada6bc6ef0087b65276302",
+        "client/tests/objective.test.jsx": "6ba91e184447ccc056c3fdd2bbac57ecabc174f7dc6cb4f8bc89a874294d951a",
+        "client/tests/regression.test.jsx": "d56a28b03eb4bd3de12626c98bea5795d96c92322f3cd7075bd388d527b26537",
+        "client/tests/setup.js": "f6a3591a31193bda3fae485d3ff6a05ae21237b3633b46d8c52dd3155b634fdd",
+        "client/vite.config.js": "c760a4b9b36baaecf705208f8ddd8c3fe72efd595878fdc45c76a10558d9d142",
+        "package-lock.json": "1be9698f06e8e6f98d4b279c8189b92c743b5217aa04d6bbcfa8ab7d1dcfb1db",
+        "package.json": "e73800e94de690fe88d8924f603f9b7ef92006396753b53bfd4ca2232fdf9183",
+        "server/app.js": "13ef39ff01037ded5948a6562aa3ccc52d1604e825765bb380e5323c6106ddf7",
+        "server/server.js": "461ae527ed8398f201e3aac84e9a1dff0b1c18a33ad744f31dee8d29146cff39"
+      }
+    },
+    "p03": {
+      "root": "portfolio/p03/student",
+      "allowed_changes": [
+        "server/create-production-app.js"
+      ],
+      "generated_exclusions": [
+        "node_modules",
+        ".git",
+        "client/node_modules",
+        "client/dist"
+      ],
+      "files": {
+        "README.md": "dc6fff62b8e673647ead9da5e039bc0b13757610afe6dab595143c7a1233bd8d",
+        "client-dist/assets/app-a1b2c3.js": "536d91f6282172caa4c348454b9c3ff9d778c0b719b531ad8caef2037eabb1cd",
+        "client-dist/icon.svg": "beef4fe8e85ba2dd78ea491d9e4602d0ec1932d29368432b7ea900d50b824b99",
+        "client-dist/index.html": "a979c9ea42a2f084c7cbb366b70b66119723c97bfad7ac9b967655b17228bec3",
+        "client/index.html": "5e3fdeec7f9815de017bb440291cd163bc3142d199e9391f6781ce23cc29093a",
+        "client/public/icon.svg": "beef4fe8e85ba2dd78ea491d9e4602d0ec1932d29368432b7ea900d50b824b99",
+        "client/src/main.jsx": "55c75096c187a3094ab3d8d5b68d1f12162ec38b26613cbe41d1727bd07c64e3",
+        "client/vite.config.js": "b3782299d3495eb9cf63025547829f465543aa4eca224ab79b0b584e805665d0",
+        "evidence/broken-server.js": "7e29f11835e8650b13076b1ef978a46fc69e82539a3dd78fb17cf9880c50dddd",
+        "package-lock.json": "53add72f08cfeeed066f42e17b1ffabf49b7b366418b5550c4fc909003095d28",
+        "package.json": "cffe70e760adb4ca3a98a91a42d971e1dccf9d6daa28b170a2e24ced474a7de4",
+        "s09_checks/additional.check.mjs": "7557ca2011f195b1504a4e86874ec452bafe5c3f75895f3dd6c2ed23fe843485",
+        "server/api-router.js": "1fe1d3f0c95666697407fbcc04905265662f31b7f96710d089c7dadfd68335e3",
+        "server/create-production-app.js": "ede130b2fa65e2b9fd5d73b7a689bde689213a4ee5149b4147fca5a1a68139ba",
+        "server/server.js": "b515fe885d3dd1194083f1700527e509c7e8a43ff902b1b60b506922d2c4a65e",
+        "tests/baseline.test.js": "c310bd117da501a9699bf60f7e365145c26d37668ea6721b81b8ee28d5c1c79e",
+        "tests/helpers.js": "6f277d10a75c908e8265fd85c2e71eb8989a025e5fb5b7935f85ee0be03ce47a",
+        "tests/objective.test.js": "bb4dac3ef912a6d81733f4f7ef64d36aad3392b40627455fd7234676d9ee6f81",
+        "tests/regression.test.js": "4b770e13769ff4b5d91790380dcba24d0dd60cec80dc195dddc3d479ac9790e5"
+      }
+    }
+  },
+  "protected_counts": {
+    "p01": 16,
+    "p02": 18,
+    "p03": 19
+  },
+  "original_version": "v1.1.0 exact starters",
+  "current_support_version": "v1.2.0",
+  "prescribed_environment": {
+    "node": "v24.21.0",
+    "npm": "11.19.0",
+    "availability": "NOT_VERIFIED"
+  },
+  "actual_application_execution": "NOT_EXECUTED"
+}

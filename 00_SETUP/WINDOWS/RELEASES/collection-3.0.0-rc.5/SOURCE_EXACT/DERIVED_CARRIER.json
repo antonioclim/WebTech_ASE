@@ -1,0 +1,97 @@
+{
+  "schema": "webtech-derived-carrier/v1",
+  "object_id": "SETUP_WINDOWS",
+  "carrier_version": "2.2.2-rc.4",
+  "distribution_version": "3.0.0-rc.4",
+  "source_commit": "7f88fecfa972bfb41d4fffec3e47616842c7e067",
+  "intentional_baseline_commit": "1850118b3f619b233f89941802212fe59d8d5dfe",
+  "derived_from": {
+    "archive": "00_SETUP/WINDOWS/DOWNLOAD/WEBTECH_ASE_ENVIRONMENT_WINDOWS_EN_GB_v2.2.1_RC2.zip",
+    "archive_sha256": "19103e6df91ab8df6f5618b1458e7eedc90f360ee7f10238b6188b6f10672fcb",
+    "package_id": "c595de3d0cf03856db5d230609d733add6e88e6ea2b70baebcdc90f69e7c2367",
+    "carrier_version": "2.2.1"
+  },
+  "status": "LOCAL_RELEASE_CANDIDATE_PENDING_EXTERNAL_ACCEPTANCE",
+  "native_acceptance": "PENDING",
+  "identity_is_runtime_qualification": false,
+  "original_carrier_overwritten": false,
+  "original_external_bindings_are_history_not_current_byte_identity": true,
+  "content_and_mode_changes_before_sealing": [
+    {
+      "path": "00_START_HERE/QUICK_START.md",
+      "change": "BYTES",
+      "before_sha256": "86ae5d6350b346a3174ebc64e357dfe417f23e7969c4437ae5c92a726a6d077c",
+      "after_sha256": "cb134994b016b74f481fb2808b4f2d6f2461a9e93604c794d594f21c13105f41",
+      "before_bytes": 348,
+      "after_bytes": 4098,
+      "before_mode": 420,
+      "after_mode": 420
+    },
+    {
+      "path": "00_START_HERE/SUPPORT_MATRIX.md",
+      "change": "BYTES",
+      "before_sha256": "3f8a0f104444f1123ee2080b8023becd7b3fc31973f76fbee402a7d72bf65601",
+      "after_sha256": "624df0b06719996028c40336ead318890f1fdd7cb61f9d3ad854680e0dcdfb01",
+      "before_bytes": 581,
+      "after_bytes": 861,
+      "before_mode": 420,
+      "after_mode": 420
+    },
+    {
+      "path": "04_INSTALL_GUIDES/NODE_WINDOWS.md",
+      "change": "BYTES",
+      "before_sha256": "f12004b7d854a79f2890272b183b7772bca4c94afeee4e196e98cb2f568517b6",
+      "after_sha256": "499d231285e94e6b8d3f298dcee9d1274872c4833d7226f17ec4aeb493590e93",
+      "before_bytes": 849,
+      "after_bytes": 1223,
+      "before_mode": 420,
+      "after_mode": 420
+    },
+    {
+      "path": "README.md",
+      "change": "BYTES",
+      "before_sha256": "5aa026396f4f8493772ff7286d96e7f9ffe9e31dd0c084849e10855fe1728a53",
+      "after_sha256": "a75eeb48a518bbd65496a888876ddcaafea572da30dabe6dbd95a4d06ab6d7d4",
+      "before_bytes": 501,
+      "after_bytes": 1021,
+      "before_mode": 420,
+      "after_mode": 420
+    },
+    {
+      "path": "index.html",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "117d311f1a351b6721b320066a377ca92805960666bf80c57ffff8da197d2a56",
+      "before_bytes": null,
+      "after_bytes": 5332,
+      "before_mode": null,
+      "after_mode": 420
+    }
+  ],
+  "current_binding_changes": [],
+  "identity_contract": {
+    "method": "manifest-sha256",
+    "manifest": "SHA256SUMS.txt",
+    "package_id": "PACKAGE_ID.txt",
+    "manifest_exclusions": [
+      "SHA256SUMS.txt",
+      "PACKAGE_ID.txt"
+    ],
+    "path_order": "unicode-codepoint",
+    "encoding": "UTF-8",
+    "line_ending": "LF",
+    "record_format": "sha256 + two ASCII spaces + relative POSIX path + LF"
+  },
+  "edit_contract": {
+    "distribution_scope": "PRISTINE_EXACT_ALL_ARCHIVE_MEMBERS",
+    "student_work_scope": "DECLARED_PACKAGE_SPECIFIC_EDIT_BOUNDARY",
+    "policy_files": [],
+    "editable_files": [],
+    "project_roots": [],
+    "generated_directory_names": [],
+    "generated_exclusions_apply_only_to_declared_project_working_copies": true,
+    "generated_entries_in_release_carrier": "FORBIDDEN"
+  },
+  "mode_policy": "recognized shell .sh 0755; all other regular members 0644; source PID hashes bytes, outer ZIP SHA256 also authenticates entry modes",
+  "descriptor_repair": null
+}

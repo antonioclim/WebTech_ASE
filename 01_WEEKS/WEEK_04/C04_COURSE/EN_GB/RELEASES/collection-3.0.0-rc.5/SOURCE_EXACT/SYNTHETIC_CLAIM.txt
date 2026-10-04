@@ -1,0 +1,5 @@
+SYNTHETIC TEACHING PRACTICE — not a real Gemini response.
+
+Claim: Promise.all starts its requests and cancels the remaining requests when one rejects.
+
+Predict the relevant initiation and settlement trace before running a controlled example. Record what the trace establishes and what it cannot establish about real HTTP. This practice does not satisfy an actual-Gemini requirement by itself.

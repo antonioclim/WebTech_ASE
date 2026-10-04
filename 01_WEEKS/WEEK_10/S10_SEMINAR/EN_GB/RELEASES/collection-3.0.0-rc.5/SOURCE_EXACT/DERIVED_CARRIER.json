@@ -1,0 +1,299 @@
+{
+  "schema": "webtech-derived-carrier/v1",
+  "object_id": "S10",
+  "carrier_version": "1.2.3-rc.4",
+  "distribution_version": "3.0.0-rc.4",
+  "source_commit": "7f88fecfa972bfb41d4fffec3e47616842c7e067",
+  "intentional_baseline_commit": "1850118b3f619b233f89941802212fe59d8d5dfe",
+  "derived_from": {
+    "archive": "01_WEEKS/WEEK_10/S10_SEMINAR/EN_GB/DOWNLOAD/WEBTECH_ASE_S10_EN_GB_v1.2.2_RC2.zip",
+    "archive_sha256": "136db01d0adc3da2090b87f3c09e26936cf183a96e4a36c9923d2b5ad1771c09",
+    "package_id": "e5bdab6ea5023dc1b46610756893f411f973e09f83be921323b6c48877fc8809",
+    "carrier_version": "1.2.2"
+  },
+  "status": "LOCAL_RELEASE_CANDIDATE_PENDING_EXTERNAL_ACCEPTANCE",
+  "native_acceptance": "PENDING",
+  "identity_is_runtime_qualification": false,
+  "original_carrier_overwritten": false,
+  "original_external_bindings_are_history_not_current_byte_identity": true,
+  "content_and_mode_changes_before_sealing": [
+    {
+      "path": "05_MOODLE_SUBMISSION/FORM_S10_EN_GB.html",
+      "change": "BYTES",
+      "before_sha256": "85380b8e347222043b13c8723f6877f1530fe5c132c27f35d5cc13e99c226a6d",
+      "after_sha256": "72e6127131c63634bab50d3bb8ab0bcaf762ca152e37dcafb3858ebc91b6e20a",
+      "before_bytes": 2636,
+      "after_bytes": 2691,
+      "before_mode": 420,
+      "after_mode": 420
+    },
+    {
+      "path": "05_MOODLE_SUBMISSION/MOODLE_ASSIGNMENT_S10_SETUP_EN_GB.md",
+      "change": "REMOVED",
+      "before_sha256": "3bec6743f745511e99ced70e61fec64b7e7805623459ca4da35ee6718558e726",
+      "after_sha256": null,
+      "before_bytes": 658,
+      "after_bytes": null,
+      "before_mode": 420,
+      "after_mode": null
+    },
+    {
+      "path": "ACTIVE_FIELDS_GUIDE.html",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "4e2d414cdd00931579c9010defd7e6adfdabfff681a2a866d911ffc79a29ac7b",
+      "before_bytes": null,
+      "after_bytes": 3105,
+      "before_mode": null,
+      "after_mode": 420
+    },
+    {
+      "path": "ACTIVE_FIELDS_GUIDE.md",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "614fdf943273159747af8a4e8545ca9899118aba9710397d3a59919a7fafae6d",
+      "before_bytes": null,
+      "after_bytes": 2606,
+      "before_mode": null,
+      "after_mode": 420
+    },
+    {
+      "path": "BUILD_P01.sh",
+      "change": "MODE",
+      "before_sha256": "0add6ff926fc582f91db55908599fba9f3199324ef7d7169d6969d7cbe067645",
+      "after_sha256": "0add6ff926fc582f91db55908599fba9f3199324ef7d7169d6969d7cbe067645",
+      "before_bytes": 208,
+      "after_bytes": 208,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "CHECK_ENVIRONMENT.sh",
+      "change": "MODE",
+      "before_sha256": "6cfc69388cb99571b42db18bfb4e51ec40adb8a61f546aa7f38ce4d29a88d0b1",
+      "after_sha256": "6cfc69388cb99571b42db18bfb4e51ec40adb8a61f546aa7f38ce4d29a88d0b1",
+      "before_bytes": 208,
+      "after_bytes": 208,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "CLEANUP.sh",
+      "change": "MODE",
+      "before_sha256": "518c9e358f103380a227d192ec81fceab06e7447fb13a40e6a62d0ff88be6890",
+      "after_sha256": "518c9e358f103380a227d192ec81fceab06e7447fb13a40e6a62d0ff88be6890",
+      "before_bytes": 206,
+      "after_bytes": 206,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "OPEN_BEGINNER_GUIDE.sh",
+      "change": "MODE",
+      "before_sha256": "be223c3ad85bcfc63e50421f2a5ff2870de709898f3225d920105e1b5f5ee861",
+      "after_sha256": "be223c3ad85bcfc63e50421f2a5ff2870de709898f3225d920105e1b5f5ee861",
+      "before_bytes": 387,
+      "after_bytes": 387,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "OPEN_MOODLE_FORM.sh",
+      "change": "MODE",
+      "before_sha256": "12b14db2f5a21ca8b1130a1c53bf9a57536f969019b0bb9ca1138967315fea5e",
+      "after_sha256": "12b14db2f5a21ca8b1130a1c53bf9a57536f969019b0bb9ca1138967315fea5e",
+      "before_bytes": 359,
+      "after_bytes": 359,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "START_P01.sh",
+      "change": "MODE",
+      "before_sha256": "339165b565c6a40d8d4a168695060213fc65b3506f15fe9b9d6c9d42db385c70",
+      "after_sha256": "339165b565c6a40d8d4a168695060213fc65b3506f15fe9b9d6c9d42db385c70",
+      "before_bytes": 208,
+      "after_bytes": 208,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "START_P02_OPTIONAL.sh",
+      "change": "MODE",
+      "before_sha256": "7b8af54631d65cf17f020dcbede024e7339456ea0d09308c9c62d3b4aa83e4f1",
+      "after_sha256": "7b8af54631d65cf17f020dcbede024e7339456ea0d09308c9c62d3b4aa83e4f1",
+      "before_bytes": 208,
+      "after_bytes": 208,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "START_P03_OPTIONAL.sh",
+      "change": "MODE",
+      "before_sha256": "733feb03361f9889bc8ae71b0936dc42d27de2ba7ac975512f881df4c6e9cd5d",
+      "after_sha256": "733feb03361f9889bc8ae71b0936dc42d27de2ba7ac975512f881df4c6e9cd5d",
+      "before_bytes": 208,
+      "after_bytes": 208,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "TEST_P01.sh",
+      "change": "MODE",
+      "before_sha256": "f7070048349303e77d97dcd3056be57d00969131283dca83e4c78e431c888fc9",
+      "after_sha256": "f7070048349303e77d97dcd3056be57d00969131283dca83e4c78e431c888fc9",
+      "before_bytes": 207,
+      "after_bytes": 207,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "TEST_P02_OPTIONAL.sh",
+      "change": "MODE",
+      "before_sha256": "f6b8a069d25cf2641d9635feb8800e9a8dcc4ee33cbe2a031c7e129dbb07d4ed",
+      "after_sha256": "f6b8a069d25cf2641d9635feb8800e9a8dcc4ee33cbe2a031c7e129dbb07d4ed",
+      "before_bytes": 207,
+      "after_bytes": 207,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "TEST_P03_OPTIONAL.sh",
+      "change": "MODE",
+      "before_sha256": "88d337ce46fe976790537e0f3a0e4435baffca83ff2f80bcc6600675b1b329f6",
+      "after_sha256": "88d337ce46fe976790537e0f3a0e4435baffca83ff2f80bcc6600675b1b329f6",
+      "before_bytes": 207,
+      "after_bytes": 207,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "VERIFY_INITIAL_STATE.sh",
+      "change": "MODE",
+      "before_sha256": "fa4f3112e0c02d31db6e6a55bd41fa4d8edff070d5b66274f6fc24c530a615d6",
+      "after_sha256": "fa4f3112e0c02d31db6e6a55bd41fa4d8edff070d5b66274f6fc24c530a615d6",
+      "before_bytes": 213,
+      "after_bytes": 213,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "VERIFY_PACKAGE.sh",
+      "change": "MODE",
+      "before_sha256": "ea0f0c7a01a7a2e66c25958b96dfcc60b06c68bf22dace9078bcb49e9cffa5ad",
+      "after_sha256": "ea0f0c7a01a7a2e66c25958b96dfcc60b06c68bf22dace9078bcb49e9cffa5ad",
+      "before_bytes": 213,
+      "after_bytes": 213,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "VERIFY_WORK_RESULT.sh",
+      "change": "MODE",
+      "before_sha256": "cfe0c739a5a850b02a123a8bf755ed247ebda49b349d61a4661cc8de869674fd",
+      "after_sha256": "cfe0c739a5a850b02a123a8bf755ed247ebda49b349d61a4661cc8de869674fd",
+      "before_bytes": 210,
+      "after_bytes": 210,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "assets/student-form-focus.js",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "18c6816e282c16999c83e2ece0583574fed8aee6c2346732d20f7ec6528208e2",
+      "before_bytes": null,
+      "after_bytes": 7170,
+      "before_mode": null,
+      "after_mode": 420
+    }
+  ],
+  "current_binding_changes": [
+    {
+      "descriptor": "00_START_HERE/SOURCE_DERIVATION_MAP_v1.2.1.json",
+      "target": "02_PROJECTS/P01_SHARED_WORKSHOP_STATE/student/package-lock.json",
+      "previous_binding_sha256": "ac469844b804618708c8745492c1ecafba3280950c13e0bac2aa600d23c46604",
+      "current_sha256": "bd286189eefb7493833c306f8dd33b0b0be5fd96456a8671f478b6e6fd7ba244"
+    },
+    {
+      "descriptor": "00_START_HERE/SOURCE_DERIVATION_MAP_v1.2.1.json",
+      "target": "02_PROJECTS/P01_SHARED_WORKSHOP_STATE/student/package.json",
+      "previous_binding_sha256": "a6395f45e84e29fbe9274d18d1e9ba01a11ebee01ddde91be7c16ebd267bbe17",
+      "current_sha256": "ca8a43f1e0119ee2fbec9ceff122d38e3133a31e5e51552bc65ff05d2e4bd0f0"
+    },
+    {
+      "descriptor": "00_START_HERE/SOURCE_DERIVATION_MAP_v1.2.1.json",
+      "target": "02_PROJECTS/P03_ARCHITECTURE_COMPARISON/student/package-lock.json",
+      "previous_binding_sha256": "d687dbe2ccb635eb9f70e5be1eefa77cee6e55c423787df245d3c5045a6bb856",
+      "current_sha256": "485fbd5b91c81ddd5ca119fbbbdf5b8a561c7ea6b885f327d511128412c0a8c6"
+    },
+    {
+      "descriptor": "00_START_HERE/SOURCE_DERIVATION_MAP_v1.2.1.json",
+      "target": "02_PROJECTS/P03_ARCHITECTURE_COMPARISON/student/package.json",
+      "previous_binding_sha256": "606a2a627a13932f0a4245fe0352ab0477d05e3b67a61cae19ff554eb1bd746d",
+      "current_sha256": "6c5afb8249540d992dbc4195b1764cd53f3cbe22ad76d83e020d4fcd577c3154"
+    }
+  ],
+  "identity_contract": {
+    "method": "compact-manifest-json-sha256",
+    "manifest": "90_AUDIT/MANIFEST.json",
+    "package_id": "90_AUDIT/PACKAGE_ID.txt",
+    "manifest_exclusions": [
+      "90_AUDIT/MANIFEST.json",
+      "90_AUDIT/PACKAGE_ID.txt"
+    ],
+    "path_order": "unicode-codepoint",
+    "encoding": "UTF-8",
+    "line_ending": "LF",
+    "record_format": "sha256 + two ASCII spaces + relative POSIX path + LF",
+    "descriptor_array": "entries",
+    "identity_json_keys": [
+      "schema",
+      "entries"
+    ],
+    "entry_json_keys": [
+      "path",
+      "sha256",
+      "bytes",
+      "mutable"
+    ],
+    "index": "90_AUDIT/FILE_INDEX.csv",
+    "index_exclusions": [
+      "90_AUDIT/FILE_INDEX.csv",
+      "90_AUDIT/MANIFEST.json",
+      "90_AUDIT/PACKAGE_ID.txt"
+    ],
+    "index_columns": [
+      "path",
+      "bytes",
+      "mutable"
+    ]
+  },
+  "edit_contract": {
+    "distribution_scope": "PRISTINE_EXACT_ALL_ARCHIVE_MEMBERS",
+    "student_work_scope": "DECLARED_PACKAGE_SPECIFIC_EDIT_BOUNDARY",
+    "policy_files": [
+      "90_AUDIT/package-integrity.mjs"
+    ],
+    "editable_files": [
+      "02_PROJECTS/P01_SHARED_WORKSHOP_STATE/student/src/state/workshop-state.jsx",
+      "02_PROJECTS/P02_NOTIFICATION_CENTER_OPTIONAL/student/src/store/notifications-slice.js",
+      "02_PROJECTS/P03_ARCHITECTURE_COMPARISON/student/src/decision/compare-architectures.js"
+    ],
+    "project_roots": [
+      "02_PROJECTS/P01_SHARED_WORKSHOP_STATE/student",
+      "02_PROJECTS/P02_NOTIFICATION_CENTER_OPTIONAL/student",
+      "02_PROJECTS/P03_ARCHITECTURE_COMPARISON/student"
+    ],
+    "generated_directory_names": [
+      ".vite",
+      "coverage",
+      "dist",
+      "node_modules"
+    ],
+    "generated_exclusions_apply_only_to_declared_project_working_copies": true,
+    "generated_entries_in_release_carrier": "FORBIDDEN"
+  },
+  "mode_policy": "recognized shell .sh 0755; all other regular members 0644; source PID hashes bytes, outer ZIP SHA256 also authenticates entry modes",
+  "descriptor_repair": null
+}

@@ -1,0 +1,15 @@
+{
+  "name": "correlated-request-dispatcher-reference",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node example.mjs",
+    "test": "npm run test:baseline && npm run test:objective && npm run test:regression && npm run test:integration",
+    "test:baseline": "node --test tests/baseline.test.mjs",
+    "test:objective": "node --test tests/objective.test.mjs",
+    "test:regression": "node --test tests/regression.test.mjs",
+    "test:integration": "node --test tests/websocket.integration.test.mjs"
+  },
+  "dependencies": { "ws": "8.21.3" }
+}

@@ -1,0 +1,128 @@
+{
+  "schema": "webtech-derived-carrier/v1",
+  "object_id": "S04",
+  "carrier_version": "1.2.1-rc.4",
+  "distribution_version": "3.0.0-rc.4",
+  "source_commit": "7f88fecfa972bfb41d4fffec3e47616842c7e067",
+  "intentional_baseline_commit": "1850118b3f619b233f89941802212fe59d8d5dfe",
+  "derived_from": {
+    "archive": "01_WEEKS/WEEK_04/S04_SEMINAR/EN_GB/DOWNLOAD/TW2026_S04_STUDENT_EN_GB_v1.2.0_FINAL.zip",
+    "archive_sha256": "d4dc8ba5b85dbbe0e269a5cd1a3ab5a722e30a7d9cb59d168bc2045e0c80e2eb",
+    "package_id": "829b297bb59a2ab24c4b2572208a874918d00eaca58bfc88c2bb0e79fd68e285",
+    "carrier_version": "1.2.0"
+  },
+  "status": "LOCAL_RELEASE_CANDIDATE_PENDING_EXTERNAL_ACCEPTANCE",
+  "native_acceptance": "PENDING",
+  "identity_is_runtime_qualification": false,
+  "original_carrier_overwritten": false,
+  "original_external_bindings_are_history_not_current_byte_identity": true,
+  "content_and_mode_changes_before_sealing": [
+    {
+      "path": "05_MOODLE_SUBMISSION/FORM_S04_EN_GB.html",
+      "change": "BYTES",
+      "before_sha256": "156de2d83f4e2237a8e1c5ec3899069bab4d50ffe1b1b2e106f9b238cfc03e76",
+      "after_sha256": "4b21b3d676220f332f37311f022e30901ba80d5b5906f641717331020ac137a5",
+      "before_bytes": 9922,
+      "after_bytes": 8610,
+      "before_mode": 420,
+      "after_mode": 420
+    },
+    {
+      "path": "05_MOODLE_SUBMISSION/assets/s04-form-core.js",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "0a75a75a3f4cae88ce546ddbef423838bd33dfbd47f17d9cfaa86b0614056d8e",
+      "before_bytes": null,
+      "after_bytes": 4244,
+      "before_mode": null,
+      "after_mode": 420
+    },
+    {
+      "path": "05_MOODLE_SUBMISSION/assets/s04-form-ui.js",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "8b59fd11001ee4e45ffbf2c2b8c9f319d47ead8a48faa545431b323ab75b9869",
+      "before_bytes": null,
+      "after_bytes": 5166,
+      "before_mode": null,
+      "after_mode": 420
+    },
+    {
+      "path": "ACTIVE_FIELDS_GUIDE.html",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "c1b999e13cbdb08e224491e30771919b729e5480eede077e95f10e80a1d0854b",
+      "before_bytes": null,
+      "after_bytes": 2567,
+      "before_mode": null,
+      "after_mode": 420
+    },
+    {
+      "path": "ACTIVE_FIELDS_GUIDE.md",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "5551d1334a78287f9dc28a7b5298613d7024ecf92d923207dfcbc8c7f7a38a91",
+      "before_bytes": null,
+      "after_bytes": 2086,
+      "before_mode": null,
+      "after_mode": 420
+    },
+    {
+      "path": "assets/student-form-focus.js",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "efec72f721b7d69b67f8366253f6613e1446e7b8d93ac698e1e2f71c0e6bf717",
+      "before_bytes": null,
+      "after_bytes": 6838,
+      "before_mode": null,
+      "after_mode": 420
+    }
+  ],
+  "current_binding_changes": [],
+  "identity_contract": {
+    "method": "manifest-sha256",
+    "manifest": "90_AUDIT/IMMUTABLE_MANIFEST.sha256",
+    "package_id": "90_AUDIT/PACKAGE_ID.txt",
+    "manifest_exclusions": [
+      "90_AUDIT/IMMUTABLE_MANIFEST.sha256",
+      "90_AUDIT/PACKAGE_ID.txt",
+      "02_PROJECTS/P01_MULTI_SOURCE_DASHBOARD/public/dashboard.js",
+      "02_PROJECTS/P02_INTERACTIVE_TASK_LIST/public/task-view.js",
+      "02_PROJECTS/P03_RESILIENT_FETCH_OPTIONAL/public/fetch-policy.js"
+    ],
+    "path_order": "unicode-codepoint",
+    "encoding": "UTF-8",
+    "line_ending": "LF",
+    "record_format": "sha256 + two ASCII spaces + relative POSIX path + LF",
+    "index": "90_AUDIT/FILE_INDEX.csv",
+    "index_exclusions": [
+      "90_AUDIT/FILE_INDEX.csv",
+      "90_AUDIT/IMMUTABLE_MANIFEST.sha256",
+      "90_AUDIT/PACKAGE_ID.txt"
+    ],
+    "index_columns": [
+      "path",
+      "bytes",
+      "sha256",
+      "mode"
+    ]
+  },
+  "edit_contract": {
+    "distribution_scope": "PRISTINE_EXACT_ALL_ARCHIVE_MEMBERS",
+    "student_work_scope": "DECLARED_PACKAGE_SPECIFIC_EDIT_BOUNDARY",
+    "policy_files": [
+      "90_AUDIT/MUTABLE_PATHS.txt"
+    ],
+    "editable_files": [
+      "02_PROJECTS/P01_MULTI_SOURCE_DASHBOARD/public/dashboard.js",
+      "02_PROJECTS/P02_INTERACTIVE_TASK_LIST/public/task-view.js",
+      "02_PROJECTS/P03_RESILIENT_FETCH_OPTIONAL/public/fetch-policy.js"
+    ],
+    "project_roots": [],
+    "generated_directory_names": [],
+    "generated_exclusions_apply_only_to_declared_project_working_copies": true,
+    "generated_entries_in_release_carrier": "FORBIDDEN"
+  },
+  "mode_policy": "recognized shell .sh 0755; all other regular members 0644; source PID hashes bytes, outer ZIP SHA256 also authenticates entry modes",
+  "descriptor_repair": null
+}

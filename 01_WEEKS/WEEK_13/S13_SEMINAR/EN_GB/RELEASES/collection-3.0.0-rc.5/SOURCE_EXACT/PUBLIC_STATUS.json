@@ -1,0 +1,34 @@
+{
+  "schema": "TW2026_S13_PHASE3_PUBLIC_STATUS/1.0",
+  "seminar": "S13",
+  "target_version": "1.2.1-rc.4",
+  "source_version": "1.1.0",
+  "phase": 3,
+  "status": "LOCAL_DERIVED_RC4_PENDING_COMPLETE_QUALIFICATION",
+  "FINAL_LOCAL_admission": false,
+  "unqualified_FINAL_admission": false,
+  "native_acceptance": false,
+  "live_acceptance": false,
+  "remote_mutations": 0,
+  "owner_steps_now": [],
+  "roles": {
+    "P01": "IN_CLASS_CORE_FULL_IMPLEMENTATION_REQUIRED",
+    "P02": "REQUIRED_INDIVIDUAL_GUIDED_TRACE_NO_FULL_IMPLEMENTATION",
+    "P03": "OPTIONAL_ADVANCED",
+    "RH": "REQUIRED_PORTFOLIO_LAUNCH_COMPLETE_BEFORE_S14",
+    "C13": "NO_ASSIGNMENT"
+  },
+  "runtime_pins": {
+    "node": "24.21.0",
+    "npm": "11.19.0"
+  },
+  "submission": "TW2026_S13_<institution-permitted-code-or-approved-alias>.pdf",
+  "class_content_minutes": 60,
+  "administration_minutes": 30,
+  "local_acceptance_scope": "Locally audited corpus and independently admitted final carrier identities; exact-runtime, native, live, owner and publication gates remain separate.",
+  "derived_carrier_version": "1.2.1-rc.4",
+  "previous_carrier_version": "1.2.0",
+  "previous_descriptor_sha256": "dad4e45d67a12f1df744b333c81e49d7ba0cef068971c7b1fbaead6a074c76d1",
+  "current_derivation_record": "DERIVED_CARRIER.json",
+  "previous_observations_not_transferred_to_current_carrier": true
+}

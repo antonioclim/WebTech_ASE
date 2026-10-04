@@ -1,78 +1,38 @@
 #!/usr/bin/env python3
-"""Resolve assets locally; this command never publishes or starts a workflow."""
-from __future__ import annotations
-
-import argparse
-import zipfile
+"""Resolve checked English candidate assets; pending gates block final release."""
+import argparse,json,re,sys
 from pathlib import Path
+import release_contract as rc
+import build_week_bundle as week_builder
+ROOT=Path(__file__).resolve().parents[2]
+sys.path.insert(0,str(ROOT/'00_TOOLS/qa'))
+import student_release as student
 
-from build_week_bundle import verify
-from release_contract import ROOT, read_plan, repo_path, selection, sha, state, validate_week
+def resolve(week,preview=False,receipt=None,plan_path=week_builder.PLAN):
+    if type(preview) is not bool:raise ValueError('Preview must be a real boolean')
+    plan=week_builder.read_plan(plan_path)
+    rc.source_identity(ROOT)
+    if week not in plan['weeks']:raise ValueError('Unknown week')
+    item=plan['weeks'][week];week_builder.verify(week,item)
+    if not preview:
+        if not receipt:raise ValueError('Final release requires the ten observed qualification gates')
+        rc.qualify(receipt,student.REGISTRY.read_bytes(),ROOT)
+        # This edition is permanently labelled candidate; qualification alone
+        # does not silently change plan flags or a version into a final release.
+        raise ValueError('Current plan is a candidate; a reviewed successor final plan is required')
+    tag='week-'+week+'-en-gb-v3.0.0-rc.5';out=week_builder.bundle_path(week,item)
+    notes=rc.checked_path(ROOT,item['notes'])
+    if not notes.is_file():raise ValueError('Release notes absent')
+    fields={'tag':tag,'title':'Web Technologies Week '+week+' English candidate 3.0.0-rc.5','notes':item['notes'],'assets':out.relative_to(ROOT).as_posix()+' '+Path(str(out)+'.sha256').relative_to(ROOT).as_posix(),'draft':'true','prerelease':'true'}
+    if any('\n' in v or '\r' in v for v in fields.values()):raise ValueError('Output injection')
+    return fields
 
-
-def emit(path: Path, key: str, value: str) -> None:
-    if '\n' in value or '\r' in value:
-        raise ValueError(f'Unsafe multiline GitHub output: {key}')
-    with path.open('a', encoding='utf-8') as stream:
-        stream.write(f'{key}={value}\n')
-
-
-def gate_passes(value) -> bool:
-    return value is True or value == 'pass' or (isinstance(value, dict) and value.get('status') == 'pass')
-
-
-def main() -> int:
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--week', required=True)
-    parser.add_argument('--language', help='Select one language; default: all languages declared for this week')
-    parser.add_argument('--github-output', type=Path, required=True)
-    parser.add_argument('--allow-preview', action='store_true', help='Resolve preview assets for review, retaining pending gates and draft/prerelease status')
-    args = parser.parse_args()
-    try:
-        plan = read_plan()
-        selected = list(selection(plan, args.week, args.language))
-        week, _, entry, _ = selected[0]
-        validate_week(plan, week, entry)
-        qualification = state(plan, entry)
-        required = qualification['required_gates'] or []
-        gates = qualification['gates'] or {}
-        if not isinstance(required, list) or not isinstance(gates, dict):
-            raise ValueError('required_gates must be a list and gates a map')
-        pending = [str(name) for name in required if not gate_passes(gates.get(name))]
-        preview = qualification['status'] != 'final' or qualification['draft'] is True or qualification['prerelease'] is True
-        if pending and qualification['status'] == 'final':
-            raise ValueError(f'A final release cannot have pending required gates: {pending}; --allow-preview cannot bypass this inconsistency')
-        if args.allow_preview and pending and qualification['draft'] is not True:
-            raise ValueError(f'A preview with pending gates must explicitly declare draft: true: {pending}')
-        if not args.allow_preview and (preview or pending):
-            raise ValueError(f'Release is not publication-qualified: status={qualification["status"]}, pending gates={pending}. --allow-preview resolves assets only for review.')
-        assets = []
-        for _, language, _, item in selected:
-            verify(week, language, item, plan, entry)
-            package = repo_path(item['bundle'])
-            side = Path(str(package) + '.sha256')
-            if sha(package) not in side.read_text(encoding='utf-8'):
-                raise ValueError(f'Sidecar mismatch: {package}')
-            for path in (package, side):
-                rel = path.relative_to(ROOT).as_posix()
-                if any(c.isspace() for c in rel):
-                    raise ValueError('Release asset paths cannot contain whitespace')
-                assets.append(rel)
-        notes = repo_path(entry['notes'])
-        if not notes.is_file():
-            raise ValueError(f'Missing release notes: {entry["notes"]}')
-        # All checks finish before writing any workflow output.
-        outputs = {'tag': entry['tag'], 'title': entry['title'], 'notes': entry['notes'],
-                   'assets': ' '.join(assets), 'draft': str(bool(qualification['draft'])).lower(),
-                   'prerelease': str(bool(qualification['prerelease'])).lower(),
-                   'status': str(qualification['status']), 'pending_gates': ','.join(pending)}
-        for key, value in outputs.items():
-            emit(args.github_output, key, value)
-        print(f'RESOLVED_ASSETS: {entry["tag"]}; status={qualification["status"]}; pending_gates={pending}; no publication performed')
-        return 0
-    except (ValueError, KeyError, OSError, zipfile.BadZipFile) as exc:
-        parser.exit(2, f'FAIL_RELEASE_RESOLUTION: {exc}\n')
-
-
-if __name__ == '__main__':
-    raise SystemExit(main())
+def main():
+    ap=argparse.ArgumentParser();ap.add_argument('--week',required=True);ap.add_argument('--language',choices=['EN_GB'],default='EN_GB');ap.add_argument('--plan',default=week_builder.PLAN);ap.add_argument('--allow-preview',action='store_true');ap.add_argument('--receipt');ap.add_argument('--github-output',required=True);ap.add_argument('--workflow-output',action='store_true');a=ap.parse_args()
+    fields=resolve(a.week,a.allow_preview,a.receipt,a.plan);data=''.join(k+'='+v+'\n' for k,v in fields.items()).encode()
+    if a.workflow_output:rc.github_output(a.github_output,data)
+    else:rc.atomic_write(rc.output_path(a.github_output),data)
+    print(json.dumps({'status':'PASS_RESOLUTION_ONLY','draft':True,'prerelease':True,'fields':fields,'release_created':False}))
+if __name__=='__main__':
+    try:main()
+    except (ValueError,OSError,KeyError,TypeError) as e:raise SystemExit('STOP: '+str(e))
