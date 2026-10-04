@@ -1,0 +1,9 @@
+/* Three complete classroom microprojects share this one mutable stylesheet. */
+* { box-sizing: border-box; } body { margin:0; font:18px/1.5 system-ui; }
+main,.site-header { width:calc(100% - 2rem);max-width:72rem;margin:auto; }
+.card-grid { gap:1rem; } .site-header {gap:1rem; padding:1rem 0;}
+.card {padding:1rem;border:1px solid #64748b;gap:.5rem;background:#f1f5f9;}
+.card-media {background:#dbeafe;} .card-link {margin-top:auto;transition:background-color 200ms;}
+/* P01 TODO: grid 1/2/4 tracks at base/40rem/64rem; flexible header/card; media16/9. */
+/* P02 TODO: grid items min-width:0 and long-token overflow-wrap:anywhere. */
+/* P03 TODO: :focus-visible outline and prefers-reduced-motion transition:none. */

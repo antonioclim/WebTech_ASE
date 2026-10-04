@@ -1,0 +1,49 @@
+{
+  "seminar": "S01",
+  "classroomVersion": "1.0.0-rc.6",
+  "projects": [
+    {
+      "id": "P01",
+      "title": "HTTP exchange classifier",
+      "mutableTarget": "targets/p01.mjs",
+      "mutablePathBase": "CLASSROOM_RC6",
+      "packageRootMutableTarget": "CLASSROOM_RC6/targets/p01.mjs",
+      "completeScope": "Classify the three real loopback exchanges as CSS GET, query GET and JSON POST, preserving method/path/status/media boundaries.",
+      "requiredEvidence": [
+        "Preserved three-row prediction",
+        "Actual origin, request/response records",
+        "Classifier output and one header-vs-body explanation"
+      ],
+      "minutes": 15
+    },
+    {
+      "id": "P02",
+      "title": "Precise greeting resource",
+      "mutableTarget": "targets/p02.mjs",
+      "mutablePathBase": "CLASSROOM_RC6",
+      "packageRootMutableTarget": "CLASSROOM_RC6/targets/p02.mjs",
+      "completeScope": "Implement exact GET greeting path recognition, percent decoding, trimming, blank/extra-segment rejection and a stable JSON envelope.",
+      "requiredEvidence": [
+        "Encoded name response",
+        "Blank and extra-segment responses",
+        "Check log and unsupported-method limit"
+      ],
+      "minutes": 21
+    }
+  ],
+  "initialAssertionFailures": [
+    "P01.real-exchange-shape",
+    "P02.encoded-and-trimmed-name",
+    "P02.blank-and-encoding-boundaries",
+    "P02.extra-segment-and-method",
+    "P02.actual-http"
+  ],
+  "evidenceScope": "GENUINE_NODE_MODULE_AND_LOOPBACK_HTTP",
+  "limitation": "This new bounded classroom implementation is separate from the historical original full projects. Loopback HTTP does not qualify a native browser, another OS or every HTTP input.",
+  "qualification": {
+    "native": false,
+    "pilot60min": false,
+    "humanLanguage": false,
+    "Moodle": false
+  }
+}

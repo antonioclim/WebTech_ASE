@@ -1,0 +1,190 @@
+{
+  "schema": "webtech-derived-carrier/v1",
+  "object_id": "S11",
+  "carrier_version": "1.2.4-rc.6",
+  "distribution_version": "3.0.0-rc.6",
+  "source_commit": "4eea8de416cb03cf4f718fb802f868a391abb192",
+  "derived_from": {
+    "archive": "01_WEEKS/WEEK_11/S11_SEMINAR/EN_GB/CURRENT/WEBTECH_ASE_S11_EN_GB_RECONSTRUCTED_RC5.zip",
+    "archive_sha256": "ab5b1bf98f8f4e7a7483877eefd9f252f1edeacf7bc465f920d7c8d674bf05b6",
+    "package_id": "4ef7b9cdcf46545a6412a23b088690e93a5d34b02bfb054f302e90449905c5a7",
+    "carrier_version": "1.2.3-rc.4",
+    "projection": "01_WEEKS/WEEK_11/S11_SEMINAR/EN_GB/RELEASES/collection-3.0.0-rc.5/SOURCE_EXACT"
+  },
+  "preceding_descriptor_sha256": "0f7dbcfadcbad75c84608bf6835c84ebeb011d98b70e10d582526db7d83c7d58",
+  "status": "LOCAL_RELEASE_CANDIDATE_PENDING_EXTERNAL_ACCEPTANCE",
+  "native_acceptance": "PENDING",
+  "identity_is_runtime_qualification": false,
+  "original_carrier_overwritten": false,
+  "original_external_bindings_are_history_not_current_byte_identity": true,
+  "content_changes_before_sealing": [
+    {
+      "path": "CHANGELOG_RC6.md",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "b58d528fd96563a6bbaab669752394811d03b54e7d8194ae9e6379600c92e0db",
+      "before_bytes": null,
+      "after_bytes": 759
+    },
+    {
+      "path": "CLASSROOM_RC6/CLASSROOM_BOUNDARY.json",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "44536aaf0b91c1b20b0dd9f757bca1a3765cd7f3ccffc6f5e6cc5ba814fd3474",
+      "before_bytes": null,
+      "after_bytes": 1881
+    },
+    {
+      "path": "CLASSROOM_RC6/CLASSROOM_PLAN_EN_GB.md",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "4818967cc600baa11113bb247d496f6fabfbaaac4589b6ba0e9336138daeca58",
+      "before_bytes": null,
+      "after_bytes": 7083
+    },
+    {
+      "path": "CLASSROOM_RC6/CLASSROOM_SCOPE.json",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "729183280a8483761e34ec3fa3b58179f39b719a0cb5e3c3c6dc47a452f201ab",
+      "before_bytes": null,
+      "after_bytes": 2673
+    },
+    {
+      "path": "CLASSROOM_RC6/EVIDENCE_FORM.html",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "15b1b19c7fa835a04d607428ffcdd879de53f8408d22ff63add36f01b109d95d",
+      "before_bytes": null,
+      "after_bytes": 37058
+    },
+    {
+      "path": "CLASSROOM_RC6/GUIDE.html",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "dffee478fa9d5d1631ce03cfd3de0043d6d2b8040b470437464093a317c30849",
+      "before_bytes": null,
+      "after_bytes": 9739
+    },
+    {
+      "path": "CLASSROOM_RC6/README.md",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "4818967cc600baa11113bb247d496f6fabfbaaac4589b6ba0e9336138daeca58",
+      "before_bytes": null,
+      "after_bytes": 7083
+    },
+    {
+      "path": "CLASSROOM_RC6/START.html",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "ed4af5b5ab800271bcb302c0eac05b9694cb3423e4303b49dcf361398b55950c",
+      "before_bytes": null,
+      "after_bytes": 2544
+    },
+    {
+      "path": "CLASSROOM_RC6/check.mjs",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "a727fade6aa0b77074562309a3de19910bbfd28a1a86581f7a0d74656cb002bf",
+      "before_bytes": null,
+      "after_bytes": 2128
+    },
+    {
+      "path": "CLASSROOM_RC6/student/p01.mjs",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "f7e4efc6dd02c46cd27d1d7fcc09f288c30f772e215d402689ede0b4b8eed51b",
+      "before_bytes": null,
+      "after_bytes": 553
+    },
+    {
+      "path": "CLASSROOM_RC6/student/p02.mjs",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "69fd664538ff6666f9d263e29ca68e2684b0373e83b06b87aaf30775f2c1eddb",
+      "before_bytes": null,
+      "after_bytes": 604
+    },
+    {
+      "path": "CLASSROOM_RC6/student/p03.mjs",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "ec4a62ca9b31b036a3c9b0839a8367c254111667b5d4ab56b0ce9d911f6a2109",
+      "before_bytes": null,
+      "after_bytes": 617
+    },
+    {
+      "path": "CLASSROOM_RC6/support/cases.json",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "9acd017845125d38df2cf2397e59d735e12f69ede7adda17556fd9066f72545e",
+      "before_bytes": null,
+      "after_bytes": 2711
+    },
+    {
+      "path": "CLASSROOM_RC6/tests/baseline.test.mjs",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "51756d6385bdcc1ad819062297090e5671997e3ab1cae959ffc3bd1142ae5a2d",
+      "before_bytes": null,
+      "after_bytes": 501
+    },
+    {
+      "path": "CLASSROOM_RC6/tests/objective.test.mjs",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "e5e284d863ab04d9dd8719eb978ada959ce0dbe7f2c66425e3652269d5351d4e",
+      "before_bytes": null,
+      "after_bytes": 1404
+    },
+    {
+      "path": "CLASSROOM_RC6/try.mjs",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "c78e4b34de44d875339008ff6b64c10a0f9de8dad362c7d9e5a7a9b04d7f4263",
+      "before_bytes": null,
+      "after_bytes": 1147
+    },
+    {
+      "path": "CLASSROOM_RC6/verify.mjs",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "e0928e6062d1b0f86409c229291cf6511d2f19550a9396d5c07a2943226df6ff",
+      "before_bytes": null,
+      "after_bytes": 4944
+    }
+  ],
+  "identity_controls_regenerated_using_fixed_contract": true,
+  "identity_contract": {
+    "method": "manifest-sha256",
+    "manifest": "SHA256SUMS.txt",
+    "package_id": "PACKAGE_ID.txt",
+    "manifest_exclusions": [
+      "CLASSROOM_RC6/student/p01.mjs",
+      "CLASSROOM_RC6/student/p02.mjs",
+      "CLASSROOM_RC6/student/p03.mjs",
+      "PACKAGE_ID.txt",
+      "SHA256SUMS.txt"
+    ],
+    "path_order": "unicode-codepoint",
+    "encoding": "UTF-8",
+    "line_ending": "LF",
+    "record_format": "sha256 + two ASCII spaces + relative POSIX path + LF",
+    "index": "FILE_INDEX.csv",
+    "index_exclusions": [
+      "CLASSROOM_RC6/student/p01.mjs",
+      "CLASSROOM_RC6/student/p02.mjs",
+      "CLASSROOM_RC6/student/p03.mjs",
+      "FILE_INDEX.csv",
+      "PACKAGE_ID.txt",
+      "SHA256SUMS.txt"
+    ],
+    "index_columns": [
+      "relative_path",
+      "bytes",
+      "sha256",
+      "classification"
+    ]
+  }
+}

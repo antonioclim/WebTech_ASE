@@ -1,0 +1,76 @@
+[
+  {
+    "project_id": "P01",
+    "export_name": "persistenceWitness",
+    "inputs": [
+      {
+        "defect": null,
+        "title": "  Classroom witness  "
+      },
+      {
+        "defect": "missing-persistence",
+        "title": "  Classroom witness  "
+      }
+    ],
+    "expected": [
+      {
+        "createdTitle": "Classroom witness",
+        "storedTitle": "Classroom witness",
+        "persisted": true
+      },
+      {
+        "createdTitle": "Classroom witness",
+        "storedTitle": null,
+        "persisted": false
+      }
+    ]
+  },
+  {
+    "project_id": "P03",
+    "export_name": "evidenceGate",
+    "inputs": [
+      {
+        "rows": [
+          {
+            "id": "BUILD",
+            "state": "pass",
+            "required": true
+          },
+          {
+            "id": "DEPLOYMENT",
+            "state": "unknown",
+            "required": false
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "BUILD",
+            "state": "unknown",
+            "required": true
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "BUILD",
+            "state": "fail",
+            "required": true
+          },
+          {
+            "id": "AUDIT",
+            "state": "unknown",
+            "required": true
+          }
+        ]
+      }
+    ],
+    "expected": [
+      "PASS",
+      "UNKNOWN",
+      "FAIL"
+    ]
+  }
+]

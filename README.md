@@ -1,18 +1,43 @@
-# Web Technologies — English student collection
+# Web Technologies — current English candidate 3.0.0-rc.6
 
-The current complete course candidate is **3.0.0-rc.5**, an explicit selection of 14 courses, 14 seminars and two Day 0 setup kits. It is reconstructed from the preserved RC4 student collection with a new S02 Windows correction and newly checked maintenance controls. Native and institutional acceptance remain separate.
+The current selection contains 14 courses,14 seminars and 2 Day 0setup kits. **Candidate, not FINAL.** Native Windows/macOS, actual browser/PDF/Word, live Moodle, linguistic fluency, human feasibility and institutional acceptance remain separate.
 
-- [Start and browse the English materials](index.html).
-- [Environment and setup](ENTRY/ENVIRONMENT.html).
-- [Course plan](ENTRY/COURSE_PLAN.html).
-- [Authoritative 30-object selection](metadata/student-selection.json).
-- [Reconstruction and limitations](00_TOOLS/maintainer/RECONSTRUCTED_RC5.md).
+[Start with the current English index](index.html) · [Environment](ENTRY/ENVIRONMENT.html) · [Course plan](ENTRY/COURSE_PLAN.html) · [Evidence and privacy](ENTRY/HELP_AND_PRIVACY.html)
 
-Use the filtered student ZIP once supplied as a release asset. GitHub's **Source code** ZIP is the maintenance repository and includes historical editions, Romanian materials and publishing controls. They are retained for provenance; they are not the intended student download. The previous Weeks 01–02 RC2 distribution and native integrity evidence remain preserved under 90_RELEASES with their original scope.
+Every seminar contains 2–3 required bounded microprojects, completed **individually in class**. Each student records observations, evidence, results and reflection, performs one genuine bounded Gemini/approved-LLM critique with an independent check and submits **one reviewed PDF** to the private seminar Assignment. The 60-minute allocation is **UNPILOTED**. Prepare runtimes and pinned dependencies before class.
 
-## Maintainers
+The classroom contracts are declared successors with smaller scope. A classroom PASS does not complete or certify the retained original full applications, tests or advanced evidence forms. Use the current classroom initial/work route; historical VERIFY_WORK_RESULT commands retain their full-project meaning.
 
-Reference: Python 3.12, Node **24.21.0** and `PyYAML==6.0.3`. After installing the pinned parser, run:
+## Immediately included weekly materials
+
+| Week | Course | Seminar | Actual weekly ZIP and sidecar |
+| --- | --- | --- | --- |
+| 01 | [C01](ENTRY/C01.html) | [S01](ENTRY/S01.html) | [ZIP](90_RELEASES/assets/WebTech_ASE_WEEK_01_EN_GB_v3.0.0-rc.6.zip) · [SHA-256](90_RELEASES/assets/WebTech_ASE_WEEK_01_EN_GB_v3.0.0-rc.6.zip.sha256) |
+| 02 | [C02](ENTRY/C02.html) | [S02](ENTRY/S02.html) | [ZIP](90_RELEASES/assets/WebTech_ASE_WEEK_02_EN_GB_v3.0.0-rc.6.zip) · [SHA-256](90_RELEASES/assets/WebTech_ASE_WEEK_02_EN_GB_v3.0.0-rc.6.zip.sha256) |
+| 03 | [C03](ENTRY/C03.html) | [S03](ENTRY/S03.html) | [ZIP](90_RELEASES/assets/WebTech_ASE_WEEK_03_EN_GB_v3.0.0-rc.6.zip) · [SHA-256](90_RELEASES/assets/WebTech_ASE_WEEK_03_EN_GB_v3.0.0-rc.6.zip.sha256) |
+| 04 | [C04](ENTRY/C04.html) | [S04](ENTRY/S04.html) | [ZIP](90_RELEASES/assets/WebTech_ASE_WEEK_04_EN_GB_v3.0.0-rc.6.zip) · [SHA-256](90_RELEASES/assets/WebTech_ASE_WEEK_04_EN_GB_v3.0.0-rc.6.zip.sha256) |
+| 05 | [C05](ENTRY/C05.html) | [S05](ENTRY/S05.html) | [ZIP](90_RELEASES/assets/WebTech_ASE_WEEK_05_EN_GB_v3.0.0-rc.6.zip) · [SHA-256](90_RELEASES/assets/WebTech_ASE_WEEK_05_EN_GB_v3.0.0-rc.6.zip.sha256) |
+| 06 | [C06](ENTRY/C06.html) | [S06](ENTRY/S06.html) | [ZIP](90_RELEASES/assets/WebTech_ASE_WEEK_06_EN_GB_v3.0.0-rc.6.zip) · [SHA-256](90_RELEASES/assets/WebTech_ASE_WEEK_06_EN_GB_v3.0.0-rc.6.zip.sha256) |
+| 07 | [C07](ENTRY/C07.html) | [S07](ENTRY/S07.html) | [ZIP](90_RELEASES/assets/WebTech_ASE_WEEK_07_EN_GB_v3.0.0-rc.6.zip) · [SHA-256](90_RELEASES/assets/WebTech_ASE_WEEK_07_EN_GB_v3.0.0-rc.6.zip.sha256) |
+| 08 | [C08](ENTRY/C08.html) | [S08](ENTRY/S08.html) | [ZIP](90_RELEASES/assets/WebTech_ASE_WEEK_08_EN_GB_v3.0.0-rc.6.zip) · [SHA-256](90_RELEASES/assets/WebTech_ASE_WEEK_08_EN_GB_v3.0.0-rc.6.zip.sha256) |
+| 09 | [C09](ENTRY/C09.html) | [S09](ENTRY/S09.html) | [ZIP](90_RELEASES/assets/WebTech_ASE_WEEK_09_EN_GB_v3.0.0-rc.6.zip) · [SHA-256](90_RELEASES/assets/WebTech_ASE_WEEK_09_EN_GB_v3.0.0-rc.6.zip.sha256) |
+| 10 | [C10](ENTRY/C10.html) | [S10](ENTRY/S10.html) | [ZIP](90_RELEASES/assets/WebTech_ASE_WEEK_10_EN_GB_v3.0.0-rc.6.zip) · [SHA-256](90_RELEASES/assets/WebTech_ASE_WEEK_10_EN_GB_v3.0.0-rc.6.zip.sha256) |
+| 11 | [C11](ENTRY/C11.html) | [S11](ENTRY/S11.html) | [ZIP](90_RELEASES/assets/WebTech_ASE_WEEK_11_EN_GB_v3.0.0-rc.6.zip) · [SHA-256](90_RELEASES/assets/WebTech_ASE_WEEK_11_EN_GB_v3.0.0-rc.6.zip.sha256) |
+| 12 | [C12](ENTRY/C12.html) | [S12](ENTRY/S12.html) | [ZIP](90_RELEASES/assets/WebTech_ASE_WEEK_12_EN_GB_v3.0.0-rc.6.zip) · [SHA-256](90_RELEASES/assets/WebTech_ASE_WEEK_12_EN_GB_v3.0.0-rc.6.zip.sha256) |
+| 13 | [C13](ENTRY/C13.html) | [S13](ENTRY/S13.html) | [ZIP](90_RELEASES/assets/WebTech_ASE_WEEK_13_EN_GB_v3.0.0-rc.6.zip) · [SHA-256](90_RELEASES/assets/WebTech_ASE_WEEK_13_EN_GB_v3.0.0-rc.6.zip.sha256) |
+| 14 | [C14](ENTRY/C14.html) | [S14](ENTRY/S14.html) | [ZIP](90_RELEASES/assets/WebTech_ASE_WEEK_14_EN_GB_v3.0.0-rc.6.zip) · [SHA-256](90_RELEASES/assets/WebTech_ASE_WEEK_14_EN_GB_v3.0.0-rc.6.zip.sha256) |
+
+Each outer weekly ZIP contains the course and seminar inner ZIPs. Extract both levels into separate folders. Every 30 object entry links its actual individually selected archive and exact sidecar.
+
+The complete filtered student ZIP is a **future manual release asset**, not a claimed file already present in this repository. GitHub Source code ZIPs contain historical and maintenance material and are not the intended filtered student distribution.
+
+[Authoritative 30-object registry](metadata/student-selection.json) · [Fourteen-week plan](90_RELEASES/FULL_COLLECTION_PLAN.json) · [Complete filtered candidate plan](90_RELEASES/COLLECTION_RELEASE_PLAN.json)
+
+## Manual maintenance and publication
+
+The owner alone starts Actions. Workflow preparation does not dispatch Actions, publish Pages or create a release. The complete collection publisher remains manual, draft and prerelease. It cannot convert absent qualifications into a FINAL decision.
+
+Run the complete local integrity and weekly-container checks before preparing any candidate:
 
 ```sh
 python 00_TOOLS/qa/validate_public_repo.py --strict
@@ -20,12 +45,10 @@ python 00_TOOLS/qa/student_release.py --mode integrity
 python 00_TOOLS/publishing/build_week_bundle.py --verify-all --plan 90_RELEASES/FULL_COLLECTION_PLAN.json
 ```
 
-Build the student ZIP or static site only into a new directory outside this checkout:
+Build the complete filtered ZIP only into a new path outside the checkout:
 
 ```sh
-python 00_TOOLS/publishing/build_student_collection.py --zip ../WEBTECH_ASE_EN_GB_v3.0.0-rc.5.zip
-python 00_TOOLS/publishing/build_pages_site.py --output ../webtech-student-site
-python 00_TOOLS/qa/validate_pages_payload.py --site ../webtech-student-site
+python 00_TOOLS/publishing/build_student_collection.py --zip ../WEBTECH_ASE_EN_GB_v3.0.0-rc.6.zip
 ```
 
-All three GitHub workflows are manual only. This reconstruction does not dispatch them. Final mode refuses absent or incomplete real observations for all ten fixed gates. A preview resolution retains draft and prerelease flags and does not grant qualification.
+These build/check commands are maintainer operations and do not start a GitHub workflow. Reference maintenance requires Python 3.12, Node 24.21.0 and the pinned PyYAML parser in 00_TOOLS/qa/requirements.txt. The candidate retains all ten qualification gates.

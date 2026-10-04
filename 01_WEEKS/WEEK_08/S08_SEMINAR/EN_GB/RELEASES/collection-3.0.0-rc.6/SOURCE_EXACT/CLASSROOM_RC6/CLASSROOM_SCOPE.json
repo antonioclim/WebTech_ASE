@@ -1,0 +1,67 @@
+{
+  "schema": "webtech-classroom-scope/v1",
+  "seminar": "S08",
+  "classroom_version": "1.0.0-rc.6",
+  "individual": true,
+  "all_projects_required": true,
+  "projects": [
+    {
+      "id": "P01",
+      "title": "Reading queue: immutable trimmed addition",
+      "editable_path": "CLASSROOM_RC6/student/p01.mjs",
+      "completeScope": "Implement an immutable addition to a reading queue: trim a title, ignore blank input and retain existing items. Return a new array for a valid addition; preserve the input array. The supplied opaque ID is the sole new ID. This is the state transition of the retained React project, not its complete component or browser persistence contract."
+    },
+    {
+      "id": "P02",
+      "title": "Component decomposition: derived capacity",
+      "editable_path": "CLASSROOM_RC6/student/p02.mjs",
+      "completeScope": "Compute used and remaining seats from the supplied capacity and attendee array. Refuse negative/noninteger capacity and over-capacity fixtures. Do not add mirrored state or effects. This pure projection does not implement five React child components."
+    },
+    {
+      "id": "P03",
+      "title": "Effects: permission to publish",
+      "editable_path": "CLASSROOM_RC6/student/p03.mjs",
+      "completeScope": "Implement the bounded publication predicate: publication needs an active lifecycle and the same request ID as the current owner. Abort alone is not the criterion. Test B before A and inactive/unmounted ownership. This is an explicit logical model, not a React effect, abortable request or browser observation."
+    }
+  ],
+  "scope": "BOUNDED_JS_MODELS_AND_SEPARATELY_TESTED_REACT_COMPANION",
+  "source_commit": "4eea8de416cb03cf4f718fb802f868a391abb192",
+  "retained_original_full_project_completed_by_classroom_checks": false,
+  "legacy_form": "form.html",
+  "legacy_guide": "guide.html",
+  "timeline": [
+    {
+      "activity": "Environment and privacy",
+      "from_minute": 0,
+      "to_minute": 4
+    },
+    {
+      "activity": "P01",
+      "from_minute": 4,
+      "to_minute": 18
+    },
+    {
+      "activity": "P02",
+      "from_minute": 18,
+      "to_minute": 31
+    },
+    {
+      "activity": "P03",
+      "from_minute": 31,
+      "to_minute": 45
+    },
+    {
+      "activity": "Actual bounded Gemini/LLM claim and independent check",
+      "from_minute": 45,
+      "to_minute": 52
+    },
+    {
+      "activity": "Individual evidence, reflection and one reviewed PDF",
+      "from_minute": 52,
+      "to_minute": 60
+    }
+  ],
+  "timing_empirically_validated": false,
+  "native_acceptance": false,
+  "genuine_llm_exchange_performed_by_maintainer": false
+}

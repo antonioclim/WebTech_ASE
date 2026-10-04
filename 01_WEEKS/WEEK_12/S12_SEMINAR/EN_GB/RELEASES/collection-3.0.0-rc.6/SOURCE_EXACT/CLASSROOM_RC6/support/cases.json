@@ -1,0 +1,168 @@
+[
+  {
+    "project_id": "P01",
+    "export_name": "recipientKey",
+    "inputs": [
+      {
+        "principalId": "a",
+        "connectionId": "desk"
+      },
+      {
+        "principalId": "b",
+        "connectionId": "desk"
+      },
+      {
+        "principalId": "",
+        "connectionId": "desk"
+      }
+    ],
+    "expected": [
+      "[\"a\",\"desk\"]",
+      "[\"b\",\"desk\"]",
+      null
+    ]
+  },
+  {
+    "project_id": "P02",
+    "export_name": "jobTransition",
+    "inputs": [
+      {
+        "state": {
+          "status": "queued",
+          "progress": 0
+        },
+        "event": {
+          "type": "active"
+        }
+      },
+      {
+        "state": {
+          "status": "active",
+          "progress": 50
+        },
+        "event": {
+          "type": "progress",
+          "progress": 30
+        }
+      },
+      {
+        "state": {
+          "status": "completed",
+          "progress": 100
+        },
+        "event": {
+          "type": "progress",
+          "progress": 70
+        }
+      },
+      {
+        "state": {
+          "status": "active",
+          "progress": 50
+        },
+        "event": {
+          "type": "completed"
+        }
+      }
+    ],
+    "expected": [
+      {
+        "status": "active",
+        "progress": 0
+      },
+      {
+        "status": "active",
+        "progress": 50
+      },
+      {
+        "status": "completed",
+        "progress": 100
+      },
+      {
+        "status": "completed",
+        "progress": 100
+      }
+    ]
+  },
+  {
+    "project_id": "P03",
+    "export_name": "settleOwned",
+    "inputs": [
+      {
+        "pending": [
+          {
+            "id": "A",
+            "type": "calculate"
+          },
+          {
+            "id": "B",
+            "type": "calculate"
+          }
+        ],
+        "reply": {
+          "requestId": "B",
+          "type": "calculate.completed",
+          "result": 2
+        }
+      },
+      {
+        "pending": [
+          {
+            "id": "A",
+            "type": "calculate"
+          }
+        ],
+        "reply": {
+          "requestId": "B",
+          "type": "calculate.completed",
+          "result": 2
+        }
+      },
+      {
+        "pending": [
+          {
+            "id": "A",
+            "type": "calculate"
+          }
+        ],
+        "reply": {
+          "requestId": "A",
+          "type": "other.completed",
+          "result": 2
+        }
+      }
+    ],
+    "expected": [
+      {
+        "pending": [
+          {
+            "id": "A",
+            "type": "calculate"
+          }
+        ],
+        "settled": {
+          "id": "B",
+          "result": 2
+        }
+      },
+      {
+        "pending": [
+          {
+            "id": "A",
+            "type": "calculate"
+          }
+        ],
+        "settled": null
+      },
+      {
+        "pending": [
+          {
+            "id": "A",
+            "type": "calculate"
+          }
+        ],
+        "settled": null
+      }
+    ]
+  }
+]

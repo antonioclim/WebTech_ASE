@@ -1,21 +1,30 @@
-# S08 — React state, effects and request ownership
+# S08 — Vanilla-to-React Reading Queue
 
-Current local release: **v1.2.0**. The sealed student package contains the beginner guide, projects, evidence form and one individual Moodle Assignment.
+Current English collection candidate **3.0.0-rc.6**; selected object edition **1.2.3-rc.6**. Qualification and classroom acceptance remain pending.
 
-- [Start here](PACKAGES/v1.2.0/index.html)
-- [Beginner guide](PACKAGES/v1.2.0/guide.html)
-- [Evidence form](PACKAGES/v1.2.0/form.html)
-- [Seminar screens](PACKAGES/v1.2.0/seminar.html)
-- [Download the exact student ZIP](DOWNLOAD/TW2026_S08_STUDENT_EN_GB_v1.2.0_FINAL_LOCAL.zip)
-- [ZIP SHA-256](DOWNLOAD/TW2026_S08_STUDENT_EN_GB_v1.2.0_FINAL_LOCAL.zip.sha256)
-- [Release source of truth](SOURCE_OF_TRUTH_v1.2.0.json)
-- [Release file index](PUBLIC_FILE_INDEX.csv)
-- [Release SHA-256 list](PUBLIC_SHA256SUMS.txt)
+## Download and open
 
-The meeting lasts 90 minutes: 60 minutes of content followed by 30 minutes of logistics. Stop assessed content at minute 60. P01 includes an 18-minute progress checkpoint. P03 receives a five-minute introduction and is completed after the meeting. P02 is optional and has no marking cap.
+1. Download the complete student ZIP and its SHA-256 sidecar below.
+2. Extract the whole ZIP into a new writable folder. Do not open files inside the compressed archive.
+3. Start with `CLASSROOM_RC6/START.html` in the extracted package then follow `CLASSROOM_RC6/GUIDE.html`. Use the exact project folders and commands stated there.
+4. Complete the classroom microprojects individually and record the requested observations and evidence. Use the current guide to distinguish classroom work from further reading.
+5. Complete the linked submission form, review the exported PDF and submit it privately to the assignment specified by your lecturer. Local JSON exports, where supported, are backups.
 
-Submit one PDF named `TW2026_S08_GROUP_Surname_Firstname.pdf` to the single S08 Assignment. Include an actual bounded, sanitised Gemini claim and an independent check. A seed or synthetic claim does not automatically replace the actual witness. The teacher sets the deadline later.
+| Current resource | Link |
+| --- | --- |
+| Complete student ZIP | [Complete student ZIP](CURRENT/WEBTECH_ASE_S08_EN_GB_SUCCESSOR_RC6.zip) |
+| SHA-256 sidecar | [SHA-256 sidecar](CURRENT/WEBTECH_ASE_S08_EN_GB_SUCCESSOR_RC6.zip.sha256) |
+| Start here | [Start here](RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/CLASSROOM_RC6/START.html) |
+| Current guide | [Current guide](RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/CLASSROOM_RC6/GUIDE.html) |
+| Submission form | [Submission form](RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/CLASSROOM_RC6/EVIDENCE_FORM.html) |
+| Package identity | [Package identity](RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/PACKAGE_ID.txt) |
 
-`LOCAL_PUBLISHED_READY_WITH_PLATFORM_LIMITS` qualifies local source, stored-data integrity and transport preparation. No application or browser was executed in Phase4. Inherited Phase3 document-render and source/model evidence remains inherited. The current live repository and manual-only workflow configuration are unknown. This work did not publish, trigger Actions or configure Moodle. A GitHub file view is not an HTML-hosting service.
+GitHub shows HTML source. Download and extract the selected ZIP to use the interactive lesson. A matching checksum establishes package identity; it does not establish successful execution on your own computer.
 
-The two public indices list all 303 release files except themselves. Their own bytes are bound by the external browser-patch index and sealed transport manifests. They identify bytes, not the authenticity of evidence or authority to publish. Historical v1.1.0 material remains retained and superseded. Use only the current links above.
+[Authoritative current selection](../../../../metadata/student-selection.json) · [Whole-week navigation](../../README.md) · [All current weeks](../../../README.md)
+
+## Historical material
+
+Older `DOWNLOAD`, `PACKAGE_EXACT`, `PACKAGES` and versioned release folders remain for comparison. They are outside the current English selection. Use the current ZIP and guide linked above for class work. Romanian materials, where present, are retained legacy alternatives and have a separate status.
+
+[Preserved predecessor navigation](../../../../90_ARCHIVE/MAIN_4eea8de_NAVIGATION/README.md). Historical filenames containing `FINAL` do not qualify the current collection.

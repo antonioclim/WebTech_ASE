@@ -1,0 +1,10 @@
+// Explicitly derived real WebSocket qualification lane. NOT_EXECUTED in Phase 2.
+import assert from "node:assert/strict";
+import test from "node:test";
+import WebSocket from "ws";
+import { startDemoServer } from "../src/demo-server.mjs";
+import { createWebSocketTransport } from "../src/websocket-transport.mjs";
+import { createRequestDispatcher } from "../src/request-dispatcher.mjs";
+import { publicError } from "../src/public-errors.mjs";
+function openWithin(socket,ms){return new Promise((resolve,reject)=>{const deadline=setTimeout(()=>finish(new Error("Socket open deadline exceeded")),ms);function finish(error){clearTimeout(deadline);socket.removeEventListener("open",open);socket.removeEventListener("error",errorEvent);socket.removeEventListener("close",closed);error?reject(error):resolve();}function open(){finish();}function errorEvent(){finish(new Error("Socket open failed"));}function closed(){finish(new Error("Socket closed before open"));}socket.addEventListener("open",open,{once:true});socket.addEventListener("error",errorEvent,{once:true});socket.addEventListener("close",closed,{once:true});});}
+test("DERIVED real WebSocket correlates with bounded startup and cleanup",{timeout:6000},async t=>{let socket,transport,dispatcher;const server=await startDemoServer({startupMs:1500,cleanupMs:1500});t.after(async()=>{dispatcher?.dispose();transport?.dispose();if(socket&&socket.readyState!==socket.CLOSED)socket.terminate();await server.close();assert.equal(server.diagnostics().scheduledTimers,0);assert.equal(server.diagnostics().clients,0);});socket=new WebSocket(server.url);await openWithin(socket,1500);transport=createWebSocketTransport(socket);let seq=0;dispatcher=createRequestDispatcher({transport,nextId:()=>`ws-${++seq}`,makeError:publicError,defaultTimeoutMs:1000});const slow=dispatcher.dispatch("calculation",{value:2,delay:30}),fast=dispatcher.dispatch("calculation",{value:5,delay:1});assert.deepEqual(await Promise.all([slow,fast]),[4,10]);assert.equal(dispatcher.pendingCount,0);});

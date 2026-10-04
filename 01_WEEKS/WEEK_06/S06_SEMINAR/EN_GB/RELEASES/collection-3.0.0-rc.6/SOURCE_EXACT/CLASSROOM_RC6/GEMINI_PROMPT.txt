@@ -1,0 +1,5 @@
+S06 classroom claim audit. Review only one claim about the bounded project; do not provide a completed assessed implementation or modify tests.
+My preserved prediction: [one specific claim]
+Synthetic fixture and relevant contract: [small input plus rule]
+My actual observation: [output/error or NOT EXECUTED]
+State whether the claim is observed, inferred or unknown. Propose one minimum independent counterexample. Explain one limitation. I will run the witness myself and record ACCEPTED, REJECTED, PARTIALLY ACCEPTED or UNKNOWN. Model text is not test evidence. Do not invent execution.

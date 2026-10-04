@@ -1,0 +1,281 @@
+#!/usr/bin/env python3
+"""Render the blank, locally usable RC6 classroom evidence form.
+
+This form records the new bounded classroom contracts. It deliberately retains a
+separate link to the original full-project form and cannot certify that contract.
+No network, automatic grading, invented observations or affirmative defaults.
+"""
+import html
+import json
+import re
+
+EDITION = "1.0.0-rc.6"
+SCOPE = "BOUNDED_CLASSROOM_MICROPROJECTS_NOT_FULL_CANONICAL_APPLICATIONS"
+PROJECT_IDS = {f"S{i:02}": (("P01", "P02") if i == 1 else
+                          ("P01", "P03") if i == 14 else
+                          ("P01", "P02", "P03")) for i in range(1, 15)}
+
+
+def render(sem, projects, legacy_form_relative):
+    """Return a self-contained English HTML form for two or three fixed projects."""
+    if not isinstance(sem, str) or not re.fullmatch(r"S(?:0[1-9]|1[0-4])", sem):
+        raise ValueError("Expected seminar S01–S14")
+    if not isinstance(projects, list) or len(projects) not in (2, 3):
+        raise ValueError("Every classroom form needs exactly two or three projects")
+    if tuple(p.get("id") if isinstance(p, dict) else None for p in projects) != PROJECT_IDS[sem]:
+        raise ValueError("Project IDs must match this seminar's exact classroom contract")
+    clean = []
+    for index, project in enumerate(projects, 1):
+        if not isinstance(project, dict) or project.get("id") != PROJECT_IDS[sem][index - 1]:
+            raise ValueError("Expected unique, ordered classroom project IDs")
+        title = project.get("title", project.get("name"))
+        if not isinstance(title, str) or not title.strip() or len(title) > 512:
+            raise ValueError("Each project needs a bounded nonempty title")
+        clean.append({"id": project["id"], "title": title})
+    if (not isinstance(legacy_form_relative, str) or not legacy_form_relative
+            or len(legacy_form_relative) > 2048
+            or re.search(r"[:\\?#%\x00-\x20]", legacy_form_relative)
+            or legacy_form_relative.startswith("/")):
+        raise ValueError("The original form link must be an explicit relative path")
+    metadata = {"seminar": sem, "edition": EDITION,
+                "branchCID": f"WEBTECH_ASE_{sem}_CLASSROOM_RC6_1.0",
+                "scope": SCOPE, "projects": clean}
+    data = json.dumps(metadata, ensure_ascii=True, separators=(",", ":")).replace("<", "\\u003c")
+    fields = [
+        ("prediction", "Prediction made before running", 1024,
+         "State the predicted result and why you expect it. Preserve your original prediction."),
+        ("change", "Your own implementation or change", 1536,
+         "Name the edited target and explain your own change within this classroom contract."),
+        ("command", "Exact command or action you actually executed", 1536,
+         "Include the working directory, relevant input and the exact command or browser action."),
+        ("actualResult", "Actual result and copied output", 3072,
+         "Record the observed output or behaviour, including failures. A prepared example is not an observation."),
+        ("negativeCase", "Your own falsifying or boundary case", 1536,
+         "Record the input, prediction, actual command or action and actual outcome of your additional case."),
+        ("evidence", "Evidence locator and relevant copied evidence", 1536,
+         "Give an exact locator in this PDF or include concise real output. A filename does not embed an image."),
+        ("reflection", "Explanation, limitation and reflection", 1536,
+         "Explain the causal mechanism, one limit and what the result changed in your understanding."),
+    ]
+    cards = []
+    for p in clean:
+        pid = p["id"]
+        area = [f'<fieldset class="project" id="card-{pid}"><legend>{pid}: {html.escape(p["title"])}</legend>',
+                '<p>Required individual microproject. Complete the whole bounded classroom contract in class. '
+                'This record does not claim completion of the retained full application.</p>',
+                f'<label for="{pid}-status">Your project record status</label>'
+                f'<select id="{pid}-status" data-material><option value="draft">DRAFT — unfinished</option>'
+                '<option value="blocked">BLOCKED — explain below</option>'
+                '<option value="completed">COMPLETED — the bounded contract only</option></select>']
+        for key, label, limit, hint in fields:
+            area.append(f'<label for="{pid}-{key}">{label}</label>'
+                        f'<p class="hint" id="{pid}-{key}-help">{hint} Maximum {limit} UTF-8 bytes.</p>'
+                        f'<textarea id="{pid}-{key}" data-material rows="4" aria-describedby="{pid}-{key}-help"></textarea>')
+        area.append(f'<label class="check"><input id="{pid}-confirmed" type="checkbox" data-confirm>'
+                    f'I personally completed and ran every required part of the {pid} classroom contract. '
+                    'I have checked the actual results and my additional boundary case.</label></fieldset>')
+        cards.append("\n".join(area))
+    return (_HTML.replace("@@SEMINAR@@", sem)
+            .replace("@@COUNT@@", str(len(clean)))
+            .replace("@@LEGACY@@", html.escape(legacy_form_relative, quote=True))
+            .replace("@@CARDS@@", "\n".join(cards))
+            .replace("@@META@@", data))
+
+
+_HTML = r'''<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>@@SEMINAR@@ — individual classroom evidence — RC6</title>
+<style>
+:root{color-scheme:light}body{font:17px/1.5 system-ui,sans-serif;color:#182635;background:#f3f6f9;margin:0}
+main{max-width:960px;margin:0 auto;padding:24px}h1,h2{line-height:1.25}fieldset{background:white;border:1px solid #9daebf;border-radius:6px;padding:20px;margin:20px 0}
+legend{font-weight:700;padding:0 8px}label{display:block;font-weight:600;margin-top:14px}.hint{font-size:.9em;margin:3px 0 8px;color:#35495d}
+input:not([type=checkbox]):not([type=file]),textarea,select{box-sizing:border-box;width:100%;font:inherit;padding:8px;border:1px solid #64778a;border-radius:3px;background:white;color:#182635}
+textarea{resize:vertical;min-height:95px}input:focus-visible,textarea:focus-visible,select:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid #075cbd;outline-offset:3px}
+.check{font-weight:400;display:flex;gap:12px;align-items:flex-start}.check input{width:20px;height:20px;flex:none;margin-top:3px}.notice{border-left:5px solid #8b5900;background:#fff4dc;padding:14px}
+.toolbar{display:flex;gap:12px;flex-wrap:wrap}button{font:inherit;background:#163f68;color:white;border:1px solid #163f68;border-radius:4px;padding:10px 14px;cursor:pointer}
+#record-status,#feedback{white-space:pre-wrap;padding:12px;border:1px solid #93a6b8;background:white;overflow-wrap:anywhere}a{color:#064a90}#print-output{display:none}
+.print-value{white-space:pre-wrap;overflow-wrap:anywhere;word-break:normal;height:auto;max-height:none;overflow:visible;break-inside:auto}
+@media print{
+ @page{margin:15mm}body{background:white;font:11pt/1.4 serif;color:black}main.screen{display:none!important}#print-output{display:block!important;margin:0;padding:0}
+ #print-output h1{font-size:17pt}#print-output h2{font-size:14pt;break-after:avoid}#print-output h3{font-size:12pt;break-after:avoid}
+ #print-output p,#print-output section{height:auto;max-height:none;overflow:visible;break-inside:auto}#print-output .print-value{white-space:pre-wrap;overflow-wrap:anywhere;height:auto;max-height:none;overflow:visible}
+ .print-banner{font-weight:bold;border:2px solid black;padding:8px;white-space:pre-wrap}a{color:black}
+}
+</style></head><body>
+<main class="screen"><h1>@@SEMINAR@@: individual classroom evidence</h1>
+<p>RC6 classroom scope 1.0: all @@COUNT@@ microprojects are required, individual and completed in class within their explicitly bounded contracts. Record your own predictions, changes and actual observations. This is a student evidence record, not an automatic grade or a certificate.</p>
+<p class="notice">This form records the successor classroom lane only. The <a id="legacy-form" href="@@LEGACY@@">original full-project evidence form</a> is retained as a separate route with its original fields and completion conditions. It has not been ignored or completed by this form. Do not transfer a classroom PASS into a full-application completion or canonical-test field.</p>
+<p>Save a JSON draft while working. Import restores text and statuses but resets every confirmation. Any material edit clears confirmations. Keep the JSON private: it contains your identity and evidence. No data is sent by this page. Browser reload can lose unsaved work.</p>
+<form id="evidence-form" novalidate>
+<fieldset><legend>Student identity and actual context</legend>
+<label for="givenName">Given name</label><input id="givenName" data-material autocomplete="given-name">
+<label for="surname">Surname</label><input id="surname" data-material autocomplete="family-name">
+<label for="group">Group</label><input id="group" data-material autocomplete="off">
+<label for="studentDate">Date of your classroom work</label><input id="studentDate" type="date" data-material>
+<label for="packageId">Released PACKAGE_ID copied from this actual package</label><p class="hint">Copy the 64 lowercase hexadecimal characters from the released PACKAGE_ID.txt. This page cannot authenticate your copy or turn it into a mark.</p><input id="packageId" data-material autocomplete="off" spellcheck="false">
+<label for="environment">Actual environment and version evidence</label><p class="hint">Record your actual OS, Node/tool versions and relevant browser. Copy observed version output; do not assert a provided reference version without checking it.</p><textarea id="environment" data-material rows="4"></textarea>
+</fieldset>
+@@CARDS@@
+<fieldset><legend>One genuine, bounded AI exchange and your independent check</legend>
+<p>Use Gemini or the approved LLM for one narrow critique, not for your completed implementation. Send synthetic inputs and a short non-private excerpt. Record an exchange that actually occurred. Prepared prompts and model examples are not observations. If access is blocked, preserve a BLOCKED draft; the requirement remains unfinished.</p>
+<label for="ai-access">Actual access state</label><select id="ai-access" data-material><option value="not-started">NOT STARTED</option><option value="available">A genuine exchange occurred</option><option value="blocked">BLOCKED — no genuine exchange</option></select>
+<label for="ai-tool">Actual tool and relevant model/version information</label><input id="ai-tool" data-material autocomplete="off">
+<label for="ai-date">Date of the actual exchange</label><input id="ai-date" type="date" data-material>
+<label for="ai-prompt">Sanitised prompt you actually sent</label><textarea id="ai-prompt" data-material rows="4"></textarea>
+<label for="ai-claim">Relevant claim you actually received</label><textarea id="ai-claim" data-material rows="4"></textarea>
+<label for="ai-independentCheck">Your independent check: command/action, evidence and observed outcome</label><textarea id="ai-independentCheck" data-material rows="4"></textarea>
+<label for="ai-outcome">Your justified outcome for that claim</label><select id="ai-outcome" data-material><option value="unknown">UNKNOWN — do not invent certainty</option><option value="accepted">ACCEPTED within the checked scope</option><option value="rejected">REJECTED by the checked evidence</option><option value="partly-accepted">PARTLY ACCEPTED — state the limit</option></select>
+<label for="ai-evidence">Evidence of the actual exchange and independent check</label><p class="hint">Use exact locators and relevant sanitised quotations or actual copied output in this record. An image filename alone does not embed the image.</p><textarea id="ai-evidence" data-material rows="4"></textarea>
+<label for="ai-reflection">Reason for your verdict, correction and scope limit</label><textarea id="ai-reflection" data-material rows="4"></textarea>
+<label class="check"><input id="ai-confirmed" type="checkbox" data-confirm>I actually held the recorded bounded exchange and personally performed the independent check. The evidence and uncertainty are reported truthfully.</label>
+</fieldset>
+<fieldset><legend>Blockers and manual declarations</legend>
+<label for="blockers">Actual blockers or unfinished work</label><p class="hint">State what failed or was unavailable, what you observed and what remains unfinished. Never invent a result to obtain COMPLETED.</p><textarea id="blockers" data-material rows="4"></textarea>
+<label class="check"><input id="individualWork" type="checkbox" data-confirm>I completed all required classroom microprojects individually and the implementation is my own within the declared assistance.</label>
+<label class="check"><input id="truthfulEvidence" type="checkbox" data-confirm>The commands, results, evidence and AI record describe my actual work. I have reviewed this record and have not replaced missing observations with supplied examples.</label>
+<label class="check"><input id="scopeUnderstood" type="checkbox" data-confirm>I understand that this record covers the bounded classroom contracts only. It does not certify the retained full applications, native platforms, institutional acceptance or an automatic grade.</label>
+</fieldset>
+<h2>Current record status</h2><p id="record-status" role="status" aria-live="polite">DRAFT — not complete.</p>
+<p>COMPLETED requires all project records, actual AI evidence, identity/context and renewed manual declarations. This is a checked record structure and your assertion; the page cannot prove authorship, that an exchange occurred or that an evidence locator is authentic.</p>
+<div class="toolbar"><button id="export-json" type="button">Save JSON draft</button><button id="print-draft" type="button">Print draft or blocked PDF</button><button id="print-complete" type="button">Print completed scoped record</button><button id="reset-form" type="button">Reset after confirmation</button></div>
+<label for="import-json">Import a private JSON draft (maximum 64 KiB)</label><input id="import-json" type="file" accept=".json,application/json">
+<p id="feedback" role="status" aria-live="polite">No file has been imported. All answers are blank and confirmations are unchecked.</p>
+<p>Printing expands every answer into plain text, including all textarea lines. Save one PDF using your seminar assignment filename, reopen the actual saved PDF and inspect every page before submitting it. Browser printing, paper size and the saved PDF still require your review. Text-only locators do not include screenshot files.</p>
+</form></main>
+<article id="print-output" aria-label="Printable evidence record"><h1>@@SEMINAR@@ — DRAFT, not complete</h1><p>Open the form and prepare a reviewed record before printing.</p></article>
+<script>
+(() => {
+'use strict';
+const META=@@META@@;
+for(const project of META.projects)Object.freeze(project);Object.freeze(META.projects);Object.freeze(META);
+const SCHEMA='webtech-classroom-evidence/v1';
+const MAX_BYTES=65536;
+const $=id=>document.getElementById(id);
+const projectKeys=['prediction','change','command','actualResult','negativeCase','evidence','reflection'];
+const projectLimits={prediction:1024,change:1536,command:1536,actualResult:3072,negativeCase:1536,evidence:1536,reflection:1536};
+const aiKeys=['tool','date','prompt','claim','independentCheck','outcome','evidence','reflection'];
+const aiLimits={tool:128,date:10,prompt:2048,claim:2048,independentCheck:2048,evidence:1536,reflection:1536};
+const declarations=['individualWork','truthfulEvidence','scopeUnderstood'];
+let revision=0,importTicket=0,printMode='draft';
+const bytes=text=>new TextEncoder().encode(text).byteLength;
+function ownObject(value,keys,label){
+ if(!value||typeof value!=='object'||Array.isArray(value)||![Object.prototype,null].includes(Object.getPrototypeOf(value)))throw Error(label+' must be a plain object');
+ const actual=Reflect.ownKeys(value);
+ if(actual.length!==keys.length||actual.some(k=>typeof k!=='string'||!keys.includes(k)))throw Error(label+' has missing or unknown fields');
+ for(const k of keys){const p=Object.getOwnPropertyDescriptor(value,k);if(!p||!('value'in p))throw Error(label+' has an invalid field descriptor');}
+}
+function validUnicode(value){
+ for(let i=0;i<value.length;i++){const n=value.charCodeAt(i);if(n>=0xD800&&n<=0xDBFF){const next=value.charCodeAt(++i);if(!(next>=0xDC00&&next<=0xDFFF))return false;}else if(n>=0xDC00&&n<=0xDFFF)return false;}return true;
+}
+function text(value,limit,label){if(typeof value!=='string'||!validUnicode(value)||/[\u0000-\u0008\u000B\u000C\u000E-\u001F]/.test(value)||bytes(value)>limit)throw Error(label+' must be bounded UTF-8 text ('+limit+' bytes maximum)');}
+function boolean(value,label){if(typeof value!=='boolean')throw Error(label+' must be true or false, not a string or number');}
+function oneOf(value,values,label){if(typeof value!=='string'||!values.includes(value))throw Error(label+' has an invalid option');}
+function today(){const d=new Date();return [d.getFullYear(),String(d.getMonth()+1).padStart(2,'0'),String(d.getDate()).padStart(2,'0')].join('-');}
+function date(value,label){text(value,10,label);if(value&&(!/^\d{4}-\d{2}-\d{2}$/.test(value)||!Number.isFinite(Date.parse(value+'T00:00:00Z'))||new Date(value+'T00:00:00Z').toISOString().slice(0,10)!==value||value>today()))throw Error(label+' must be a real, nonfuture date');}
+function missing(record){
+ const list=[];
+ for(const k of ['givenName','surname','group','date','packageId'])if(!record.student[k].trim())list.push('Student '+k);
+ if(!record.environment.trim())list.push('Actual environment/version evidence');
+ for(const p of record.projects){if(p.status!=='completed')list.push(p.id+' is '+p.status);for(const k of projectKeys)if(!p[k].trim())list.push(p.id+' '+k);if(!p.confirmed)list.push(p.id+' personal confirmation');}
+ if(record.ai.access!=='available')list.push('Actual AI exchange: '+record.ai.access);
+ for(const k of ['tool','date','prompt','claim','independentCheck','evidence','reflection'])if(!record.ai[k].trim())list.push('AI '+k);
+ if(!record.ai.confirmed)list.push('AI personal confirmation');
+ for(const k of declarations)if(!record.declarations[k])list.push('Declaration '+k);
+ return list;
+}
+function state(record){if(record.projects.some(p=>p.status==='blocked')||record.ai.access==='blocked')return 'blocked';return missing(record).length?'draft':'completed';}
+function validate(record){
+ ownObject(record,['schema','seminar','edition','branchCID','scope','status','student','environment','projects','ai','declarations','blockers'],'Record');
+ for(const [key,expected]of Object.entries({schema:SCHEMA,seminar:META.seminar,edition:META.edition,branchCID:META.branchCID,scope:META.scope}))if(record[key]!==expected)throw Error('Wrong fixed metadata: '+key);
+ ownObject(record.student,['givenName','surname','group','date','packageId'],'Student');
+ text(record.student.givenName,256,'Given name');text(record.student.surname,256,'Surname');text(record.student.group,128,'Group');date(record.student.date,'Student date');text(record.student.packageId,64,'PACKAGE_ID');
+ if(record.student.packageId&&!/^[a-f0-9]{64}$/.test(record.student.packageId))throw Error('PACKAGE_ID must be exactly 64 lowercase hexadecimal characters');
+ text(record.environment,1536,'Environment');text(record.blockers,3072,'Blockers');
+ if(!Array.isArray(record.projects)||record.projects.length!==META.projects.length)throw Error('Record must contain every required project');
+ for(let i=0;i<record.projects.length;i++){
+  const p=record.projects[i];ownObject(p,['id','status',...projectKeys,'confirmed'],'Project');
+  if(p.id!==META.projects[i].id)throw Error('Project IDs/order differ from the released classroom scope');
+  oneOf(p.status,['draft','blocked','completed'],p.id+' status');boolean(p.confirmed,p.id+' confirmed');
+  for(const key of projectKeys)text(p[key],projectLimits[key],p.id+' '+key);
+  if(p.status==='completed'&&projectKeys.some(k=>!p[k].trim()))throw Error(p.id+' is marked completed but its evidence record is incomplete');
+ }
+ ownObject(record.ai,['access',...aiKeys,'confirmed'],'AI');oneOf(record.ai.access,['not-started','available','blocked'],'AI access');oneOf(record.ai.outcome,['unknown','accepted','rejected','partly-accepted'],'AI outcome');
+ for(const k of Object.keys(aiLimits))text(record.ai[k],aiLimits[k],'AI '+k);date(record.ai.date,'AI date');boolean(record.ai.confirmed,'AI confirmed');
+ ownObject(record.declarations,declarations,'Declarations');for(const k of declarations)boolean(record.declarations[k],k);
+ oneOf(record.status,['draft','blocked','completed'],'Record status');if(record.status!==state(record))throw Error('Record status contradicts its evidence and declarations');
+ const encoded=JSON.stringify(record);if(bytes(encoded)>MAX_BYTES)throw Error('Record exceeds 64 KiB UTF-8');
+ return record;
+}
+function snapshot(){
+ const record={schema:SCHEMA,seminar:META.seminar,edition:META.edition,branchCID:META.branchCID,scope:META.scope,status:'draft',student:{givenName:$('givenName').value,surname:$('surname').value,group:$('group').value,date:$('studentDate').value,packageId:$('packageId').value},environment:$('environment').value,projects:META.projects.map(p=>{const result={id:p.id,status:$(p.id+'-status').value};for(const k of projectKeys)result[k]=$(p.id+'-'+k).value;result.confirmed=$(p.id+'-confirmed').checked;return result;}),ai:{access:$('ai-access').value},declarations:{},blockers:$('blockers').value};
+ for(const k of aiKeys)record.ai[k]=$('ai-'+k).value;record.ai.confirmed=$('ai-confirmed').checked;
+ for(const k of declarations)record.declarations[k]=$(k).checked;
+ record.status=state(record);return record;
+}
+function clearConfirmations(){for(const el of document.querySelectorAll('[data-confirm]'))el.checked=false;printMode='draft';}
+function feedback(message){$('feedback').textContent=message;}
+function refresh(){try{const r=validate(snapshot());const todo=missing(r);$('record-status').textContent=r.status.toUpperCase()+(r.status==='completed'?' — scoped classroom record only; not a grade.':' — not complete.\n'+todo.join('\n'));}catch(e){$('record-status').textContent='DRAFT — invalid or unfinished record.\n'+e.message;}}
+function strictParse(source){
+ if(typeof source!=='string'||bytes(source)>MAX_BYTES)throw Error('JSON input exceeds 64 KiB UTF-8');
+ let at=0,nodes=0;
+ function ws(){while(/[\x20\t\r\n]/.test(source[at]||'!'))at++;}
+ function string(){const start=at++;while(at<source.length){const c=source[at++];if(c==='"'){const v=JSON.parse(source.slice(start,at));if(!validUnicode(v))throw Error('Invalid Unicode string');return v;}if(c==='\\')at++;}throw Error('Unterminated JSON string');}
+ function value(depth){if(++nodes>1000||depth>8)throw Error('JSON nesting or value count exceeds the bound');ws();const c=source[at];
+  if(c==='"')return string();
+  if(c==='{'||c==='['){const object=c==='{',result=object?Object.create(null):[],keys=new Set();at++;ws();const end=object?'}':']';if(source[at]===end){at++;return result;}
+   while(true){ws();let key;if(object){if(source[at]!=='"')throw Error('Expected JSON object key');key=string();if(keys.has(key)||['__proto__','constructor','prototype'].includes(key))throw Error('Duplicate or forbidden JSON key');keys.add(key);ws();if(source[at++]!==':')throw Error('Expected JSON colon');}const child=value(depth+1);if(object)result[key]=child;else result.push(child);ws();const next=source[at++];if(next===end)return result;if(next!==',')throw Error('Invalid JSON separator');}
+  }
+  for(const [token,result]of [['true',true],['false',false],['null',null]])if(source.startsWith(token,at)){at+=token.length;return result;}
+  const number=/-?(?:0|[1-9]\d*)(?:\.\d+)?(?:[eE][+-]?\d+)?/y;number.lastIndex=at;const match=number.exec(source);if(match){at=number.lastIndex;const result=Number(match[0]);if(!Number.isFinite(result))throw Error('Nonfinite JSON number');return result;}
+  throw Error('Invalid JSON value');
+ }
+ const parsed=value(0);ws();if(at!==source.length)throw Error('Trailing JSON input');return parsed;
+}
+function applyImported(record){
+ // No mutation occurs until the entire candidate has passed parsing and validation.
+ for(const [key,id]of Object.entries({givenName:'givenName',surname:'surname',group:'group',date:'studentDate',packageId:'packageId'}))$(id).value=record.student[key];
+ $('environment').value=record.environment;$('blockers').value=record.blockers;
+ for(const p of record.projects){$(p.id+'-status').value=p.status;for(const k of projectKeys)$(p.id+'-'+k).value=p[k];}
+ $('ai-access').value=record.ai.access;for(const k of aiKeys)$('ai-'+k).value=record.ai[k];
+ clearConfirmations();revision++;refresh();feedback('Imported valid text and statuses. Every project, AI and manual confirmation has been reset. Recheck the actual evidence before renewing them.');
+}
+function importText(source){const candidate=validate(strictParse(source));importTicket++;applyImported(candidate);return snapshot();}
+async function readFile(file){if(typeof file.text==='function')return file.text();return new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=()=>reject(Error('File could not be read'));reader.readAsText(file,'UTF-8');});}
+async function importFile(file){
+ const ticket=++importTicket,startedRevision=revision;
+ try{if(!file||typeof file.size!=='number'||!Number.isFinite(file.size)||file.size<0||file.size>MAX_BYTES)throw Error('Select a JSON file no larger than 64 KiB');const source=await readFile(file);const candidate=validate(strictParse(source));
+  if(ticket!==importTicket||startedRevision!==revision){feedback('Import refused: newer input or another import superseded this file. Your current answers were preserved.');return false;}
+  applyImported(candidate);return true;
+ }catch(e){if(ticket===importTicket)feedback('Import refused; current answers preserved. '+e.message);return false;}
+}
+function filename(){const r=snapshot();const part=value=>value.normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/[^A-Za-z0-9_-]+/g,'_').slice(0,60)||'UNFILLED';return META.seminar+'_'+part(r.student.surname)+'_'+part(r.student.givenName)+'_'+part(r.student.group)+'_RC6_Classroom';}
+function saveJSON(){try{const r=validate(snapshot());const encoded=JSON.stringify(r,null,2)+'\n';if(bytes(encoded)>MAX_BYTES)throw Error('Formatted JSON exceeds 64 KiB; shorten actual quotations without removing relevant evidence');const url=URL.createObjectURL(new Blob([encoded],{type:'application/json;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download=filename()+'.json';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),0);feedback('JSON draft saved locally. This download is not evidence submission or an automatic grade.');}catch(e){feedback('Save refused. '+e.message);}}
+function printText(parent,label,value){const h=document.createElement('h3');h.textContent=label;const p=document.createElement('p');p.className='print-value';p.textContent=typeof value==='boolean'?(value?'Student manually confirmed':'NOT CONFIRMED'):(value||'[NOT PROVIDED]');parent.append(h,p);}
+function buildPrintable(record,completed){
+ validate(record);if(completed&&record.status!=='completed')throw Error('Complete printing requires every project, actual AI evidence and renewed manual declarations');
+ const out=$('print-output');out.replaceChildren();const title=document.createElement('h1');title.textContent=META.seminar+' — individual classroom evidence';out.append(title);
+ const banner=document.createElement('p');banner.className='print-banner';banner.textContent=completed?'COMPLETED SCOPED CLASSROOM RECORD — STUDENT DECLARATION; NOT A GRADE':(record.status==='blocked'?'BLOCKED DRAFT — NOT COMPLETE':'DRAFT FOR REVIEW — NOT COMPLETE');out.append(banner);
+ printText(out,'Fixed classroom scope',META.branchCID+'\n'+META.edition+'\n'+META.scope+'\nEvery listed bounded microproject is required, individual and completed in class. This record does not certify the retained full applications, native platforms or institutional acceptance.');
+ const legacy=document.createElement('p');legacy.textContent='The retained original full-project evidence form remains a separate contract: '+$('legacy-form').getAttribute('href');out.append(legacy);
+ for(const [k,label]of Object.entries({givenName:'Given name',surname:'Surname',group:'Group',date:'Classroom date',packageId:'Released PACKAGE_ID copied by the student'}))printText(out,label,record.student[k]);
+ printText(out,'Actual environment and versions',record.environment);
+ for(let i=0;i<record.projects.length;i++){const p=record.projects[i],section=document.createElement('section'),heading=document.createElement('h2');heading.textContent=p.id+': '+META.projects[i].title;section.append(heading);printText(section,'Student project status',p.status.toUpperCase());for(const key of projectKeys)printText(section,key,p[key]);printText(section,'Project confirmation',p.confirmed);out.append(section);}
+ const section=document.createElement('section'),heading=document.createElement('h2');heading.textContent='Genuine bounded AI exchange and independent check';section.append(heading);printText(section,'Actual access state',record.ai.access);for(const key of aiKeys)printText(section,key,record.ai[key]);printText(section,'AI confirmation',record.ai.confirmed);out.append(section);
+ printText(out,'Actual blockers or unfinished work',record.blockers);for(const key of declarations)printText(out,key,record.declarations[key]);
+ const note=document.createElement('p');note.textContent='All text answers are reproduced in full. Text-only evidence locators do not embed screenshots or other files. Reopen the actual saved PDF and inspect every page. These declarations are student assertions and this page provides no automatic grade or independent authentication.';out.append(note);
+ document.title=filename()+(completed?'_ScopedRecord':'_DRAFT');return out;
+}
+function printRecord(completed){try{const record=validate(snapshot());buildPrintable(record,completed);printMode=completed?'completed':'draft';window.print();feedback(completed?'Print dialogue requested for the scoped record. Inspect the actual saved PDF before submission.':'Print dialogue requested for an explicitly unfinished draft. It does not fulfil the incomplete requirements.');return true;}catch(e){feedback('Print refused. '+e.message);return false;}}
+function reset(){if(!window.confirm('Reset every answer and confirmation? Unsaved work will be lost. Cancel keeps your current record.'))return false;importTicket++;revision++;$('evidence-form').reset();clearConfirmations();$('print-output').replaceChildren();refresh();feedback('Reset completed. All answers are blank and all confirmations are unchecked.');return true;}
+for(const el of document.querySelectorAll('[data-material],[data-confirm]')){const edited=()=>{revision++;if(el.hasAttribute('data-material'))clearConfirmations();refresh();};el.addEventListener('input',edited);el.addEventListener('change',edited);}
+$('evidence-form').addEventListener('submit',event=>event.preventDefault());
+$('import-json').addEventListener('change',()=>{void importFile($('import-json').files[0]);});
+$('export-json').addEventListener('click',saveJSON);$('print-draft').addEventListener('click',()=>printRecord(false));$('print-complete').addEventListener('click',()=>printRecord(true));$('reset-form').addEventListener('click',reset);
+window.addEventListener('beforeprint',()=>{try{buildPrintable(validate(snapshot()),printMode==='completed');}catch(e){const out=$('print-output');out.replaceChildren();const warning=document.createElement('h1');warning.textContent='DRAFT — PRINT RECORD REFUSED';const reason=document.createElement('p');reason.textContent=e.message+' No completed evidence is asserted.';out.append(warning,reason);}});
+window.addEventListener('afterprint',()=>{printMode='draft';});
+window.WEBTECH_CLASSROOM_FORM=Object.freeze({schema:SCHEMA,metadata:Object.freeze(META),snapshot,validate,strictParse,importText,importFile,buildPrintable,printRecord,reset,refresh,saveJSON});
+refresh();
+})();
+</script></body></html>
+'''

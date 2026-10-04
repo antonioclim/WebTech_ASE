@@ -1,0 +1,132 @@
+[
+  {
+    "project_id": "P01",
+    "export_name": "acceptWorkerResult",
+    "inputs": [
+      {
+        "currentId": "A",
+        "reply": {
+          "type": "analysis.completed",
+          "requestId": "A",
+          "result": "opaque"
+        }
+      },
+      {
+        "currentId": "A",
+        "reply": {
+          "type": "analysis.completed",
+          "requestId": "B",
+          "result": 4
+        }
+      },
+      {
+        "currentId": "A",
+        "reply": {
+          "type": "analysis.completed",
+          "requestId": "A"
+        }
+      }
+    ],
+    "expected": [
+      {
+        "accepted": true,
+        "result": "opaque"
+      },
+      {
+        "accepted": false
+      },
+      {
+        "accepted": false
+      }
+    ]
+  },
+  {
+    "project_id": "P02",
+    "export_name": "serviceWorkerLane",
+    "inputs": [
+      {
+        "controlled": true,
+        "origin": "https://course.example",
+        "url": "https://course.example/api/tasks/t1",
+        "method": "GET"
+      },
+      {
+        "controlled": false,
+        "origin": "https://course.example",
+        "url": "https://course.example/api/tasks/t1",
+        "method": "GET"
+      },
+      {
+        "controlled": true,
+        "origin": "https://course.example",
+        "url": "https://other.example/api/tasks/t1",
+        "method": "GET"
+      },
+      {
+        "controlled": true,
+        "origin": "https://course.example",
+        "url": "https://course.example/api/tasks/t1",
+        "method": "POST"
+      }
+    ],
+    "expected": [
+      "controlled",
+      "direct",
+      "direct",
+      "direct"
+    ]
+  },
+  {
+    "project_id": "P03",
+    "export_name": "trustedFrame",
+    "inputs": [
+      {
+        "registered": {
+          "source": "frameA",
+          "origin": "https://a.example",
+          "generation": 2
+        },
+        "message": {
+          "source": "frameA",
+          "origin": "https://a.example",
+          "type": "fragment.ready",
+          "version": 1,
+          "generation": 2
+        }
+      },
+      {
+        "registered": {
+          "source": "frameA",
+          "origin": "https://a.example",
+          "generation": 2
+        },
+        "message": {
+          "source": "frameB",
+          "origin": "https://a.example",
+          "type": "fragment.ready",
+          "version": 1,
+          "generation": 2
+        }
+      },
+      {
+        "registered": {
+          "source": "frameA",
+          "origin": "https://a.example",
+          "generation": 2
+        },
+        "message": {
+          "source": "frameA",
+          "origin": "https://a.example",
+          "type": "fragment.ready",
+          "version": 1,
+          "generation": 1
+        }
+      }
+    ],
+    "expected": [
+      true,
+      false,
+      false
+    ]
+  }
+]

@@ -1,24 +1,20 @@
-# Week 7 — Transactional Booking
+# Week 07
 
-> **WIP student preview. Content is produced; runtime/browser/platform qualification remains pending. This is not a final release.**
+Current English collection candidate **3.0.0-rc.6**. The links below select one course and one seminar from the same current collection. Qualification and classroom acceptance remain pending.
 
-[Open the complete week ZIP](DOWNLOAD/WebTech_ASE_WEEK_07_EN_GB_v1.2.0_PREVIEW.zip) · [SHA-256](DOWNLOAD/WebTech_ASE_WEEK_07_EN_GB_v1.2.0_PREVIEW.zip.sha256)
+| Object | Current navigation | ZIP | Start | Guide | Submission |
+| --- | --- | --- | --- | --- | --- |
+| C07 — Relationships, transactions and API design | [Open](C07_COURSE/EN_GB/README.md) | [ZIP](C07_COURSE/EN_GB/CURRENT/WEBTECH_ASE_C07_EN_GB_SUCCESSOR_RC6.zip) | [Start](C07_COURSE/EN_GB/RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/index.html) | [Guide](C07_COURSE/EN_GB/RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/course.html) | Lecturer-defined, if required |
+| S07 — Transactional Booking | [Open](S07_SEMINAR/EN_GB/README.md) | [ZIP](S07_SEMINAR/EN_GB/CURRENT/WEBTECH_ASE_S07_EN_GB_SUCCESSOR_RC6.zip) | [Start](S07_SEMINAR/EN_GB/RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/CLASSROOM_RC6/START.html) | [Guide](S07_SEMINAR/EN_GB/RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/CLASSROOM_RC6/GUIDE.html) | [Form](S07_SEMINAR/EN_GB/RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/CLASSROOM_RC6/EVIDENCE_FORM.html) |
 
-| Object | British English |
-| --- | --- |
-| C07 — Relationships, Transactions and API Design | [Course package](C07_COURSE/EN_GB/README.md) |
-| S07 — Transactional Booking | [Seminar package](S07_SEMINAR/EN_GB/README.md) |
+[Current whole-week ZIP](../../90_RELEASES/assets/WebTech_ASE_WEEK_07_EN_GB_v3.0.0-rc.6.zip) · [SHA-256 sidecar](../../90_RELEASES/assets/WebTech_ASE_WEEK_07_EN_GB_v3.0.0-rc.6.zip.sha256).
 
-P02 Transactional Booking is the only required complete implementation. The P03-informed architecture decision record is required; full P01 and P03 implementations are optional.
+The whole-week ZIP contains the selected course and seminar as nested ZIPs. Extract the outer bundle, read its README, extract each object into its own folder then follow that object's guide. Alternatively use the individual ZIP links above.
 
-After downloading the whole-week ZIP, extract it to a new short folder and open `index.html`. COURSE and SEMINAR are already extracted inside it. The ZIP copies in DOWNLOAD are for exact distribution, not a second required extraction. GitHub displays source files; it does not play this HTML lesson in the repository file view.
+[Authoritative current selection](../../metadata/student-selection.json) · [All current weeks](../README.md)
 
-One final individual PDF: `TW2026_S07_GROUP_Surname_GivenName.pdf`. Personal assessment evidence belongs only in the private Moodle submission, never here.
+## Historical material
 
-## Browse individual files
+Older `DOWNLOAD`, `PACKAGE_EXACT`, `PACKAGES` and versioned release folders remain for comparison. They are outside the current English selection. Use the current ZIP and guide linked above for class work. Romanian materials, where present, are retained legacy alternatives and have a separate status.
 
-Open the [C07 British English index](C07_COURSE/EN_GB/README.md) or [S07 British English index](S07_SEMINAR/EN_GB/README.md) for direct links to the extracted documents, HTML sources and student projects. The complete exact trees are [C07 PACKAGE_EXACT](C07_COURSE/EN_GB/PACKAGE_EXACT/) and [S07 PACKAGE_EXACT](S07_SEMINAR/EN_GB/PACKAGE_EXACT/). All existing ZIPs and checksums remain unchanged.
-
-GitHub file browsing is not HTML hosting. Use the ZIP instructions above for local interactive reading; no Pages deployment or qualification upgrade is implied.
-
-[Qualification and limits](QUALIFICATION_STATUS.md) · [All weeks](../README.md)
+[Preserved predecessor navigation](../../90_ARCHIVE/MAIN_4eea8de_NAVIGATION/README.md). Historical filenames containing `FINAL` do not qualify the current collection.

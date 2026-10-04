@@ -1,0 +1,9 @@
+I am auditing one claim in my own S09 work.
+Claim: [one bounded claim about URL/history ownership or production document/resource delivery]
+Minimal sanitised source/diff/trace excerpt: [necessary excerpt only]
+Before-run prediction and falsifier: [my own recorded prediction]
+Please distinguish OBSERVED, INFERRED and UNKNOWN in your reasoning.
+Identify one assumption and propose one falsifiable counterexample or independent check.
+Do not implement the project, alter tests or fixtures, request secrets or claim that you ran my code.
+Do not treat a final address, a model, an HTTP response or a source excerpt as proof of every other evidence class.
+I will check the claim independently and record a supported verdict, correction and limitation.

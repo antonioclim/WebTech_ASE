@@ -1,0 +1,134 @@
+[
+  {
+    "project_id": "P01",
+    "export_name": "noteRoute",
+    "inputs": [
+      {
+        "path": "/notes/new"
+      },
+      {
+        "path": "/notes/n1"
+      },
+      {
+        "path": "/notes/n1/edit"
+      },
+      {
+        "path": "/other"
+      },
+      {
+        "path": "/notes/n1/edit/extra"
+      }
+    ],
+    "expected": [
+      {
+        "kind": "create",
+        "id": null
+      },
+      {
+        "kind": "read",
+        "id": "n1"
+      },
+      {
+        "kind": "edit",
+        "id": "n1"
+      },
+      {
+        "kind": "unknown",
+        "id": null
+      },
+      {
+        "kind": "unknown",
+        "id": null
+      }
+    ]
+  },
+  {
+    "project_id": "P02",
+    "export_name": "applyRefresh",
+    "inputs": [
+      {
+        "currentId": "B",
+        "replyId": "A",
+        "items": [
+          1
+        ],
+        "received": [
+          2
+        ]
+      },
+      {
+        "currentId": "B",
+        "replyId": "B",
+        "items": [
+          1
+        ],
+        "received": [
+          2,
+          3
+        ]
+      }
+    ],
+    "expected": [
+      [
+        1
+      ],
+      [
+        2,
+        3
+      ]
+    ]
+  },
+  {
+    "project_id": "P03",
+    "export_name": "deliveryLane",
+    "inputs": [
+      {
+        "path": "/api/missing",
+        "method": "GET",
+        "accept": [
+          "text/html"
+        ],
+        "exists": false
+      },
+      {
+        "path": "/assets/missing.js",
+        "method": "GET",
+        "accept": [
+          "text/html"
+        ],
+        "exists": false
+      },
+      {
+        "path": "/notes/42",
+        "method": "GET",
+        "accept": [
+          "text/html"
+        ],
+        "exists": false
+      },
+      {
+        "path": "/notes/42",
+        "method": "POST",
+        "accept": [
+          "text/html"
+        ],
+        "exists": false
+      },
+      {
+        "path": "/assets/app.js",
+        "method": "GET",
+        "accept": [
+          "*/*"
+        ],
+        "exists": true
+      }
+    ],
+    "expected": [
+      "api",
+      "404",
+      "spa",
+      "404",
+      "file"
+    ]
+  }
+]

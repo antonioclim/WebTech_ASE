@@ -1,0 +1,17 @@
+# S09 Routed Notes Application
+
+Start with `OPEN_BEGINNER_GUIDE.cmd` on Windows or `OPEN_BEGINNER_GUIDE.sh` on macOS or Linux. Alternatively open `guide/S09_INTERACTIVE_ULTRA_BEGINNER_GUIDE_EN_GB_v1.2.1.html` directly. The guide works without a mandatory online resource and opens no project server automatically.
+
+This v1.2.1 package is the final local source release after the Phase3 hostile audit and remediation. Source, data, synthetic models and document layout have local checks; real Node, npm, browser, operating-system and Moodle acceptance remain open. Phase4 has not started. A successful integrity check does not prove that your implementation works.
+
+The meeting has 60 minutes of content and 30 minutes for attendance, setup, evidence administration and incidents. P01 is the central individual implementation obligation, estimated at 55–65 minutes in total. The class implementation segment is 12–30 minutes; save an honest draft and STOP content at minute60. P03 is required individual reproduce–repair–verify work, estimated at 40–55 minutes, with continuation outside the class segment. These durations are estimates, not measurements. P02 is a separate later capstone, estimated at 70–90 minutes; its conceptual transfer is part of S09 but completing its implementation is not an additional S09 gate.
+
+Keep the original ZIP and extract a new copy into a new empty directory. Do not merge it into a previous working directory. In P01 edit only `projects/p01/student/src/NotesApp.jsx`. In P03 edit only `portfolio/p03/student/server/create-production-app.js`. The later P02 target is `capstone/p02/student/client/src/NotesWorkspace.jsx`. Read the protected project baselines and contract before changing anything. Starter TODOs are deliberate. Do not replace protected files, tests, locks or the fixed P03 compiled assets.
+
+Use `companion/` for the student guide, the required P03 portfolio and the P02 transfer guide. Use `form/FORM_S09_EN_GB.html` for the evidence draft, or `form/FORM_S09_EN_GB.docx` when genuine inline captures are needed. The HTML form is text-only: writing a capture filename does not insert the capture. Word uses a manual equivalent of the record checklist. Read the source and qualification notes before any later separately authorised execution. The supplied project tests and launchers were not run during Phase2 or Phase3.
+
+Write at least two falsifiable predictions for P01 and two for P03 before their respective actual experiments. Keep case-level input, expected result, actual observation or truthful pending status, evidence locator, mechanism and limitation. A source inference, synthetic model, HTTP response and real browser observation are different evidence classes.
+
+Use one bounded real Gemini Web exchange, sanitised and independently checked. If none exists, record PENDING. Prepared exercises cannot become actual exchanges or teacher approvals. Record the causal transfer to an order or invoice workflow, an exit ticket and an individual declaration.
+
+Submit one individual PDF named `TW2026_S09_GROUP_Surname_Firstname.pdf` to the actual assigned S09 activity. Include P01, P03, Gemini evidence, transfer and limitations in that PDF. Save the first PDF before reviewing the exact saved file. Reopen and inspect every page, fix defects in a successor if needed, then follow the actual Moodle upload and final-submit controls. Record the later observed submission status privately outside the already-saved PDF. A Draft status means STOP. No deadline or Moodle upload was created by this package.

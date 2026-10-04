@@ -1,0 +1,24 @@
+{
+  "schema": "webtech-classroom-source/v1",
+  "protected": {
+    "CLASSROOM_BOUNDARY.json": "0744e17200b2f71bb571faa5a21a360ea8db53c68385c7c3bab2a551abcde1de",
+    "CLASSROOM_SCOPE.json": "9549b3ef81104a998236b1914f62e6fc975b02f677fc068de81046846f876d1c",
+    "EVIDENCE_FORM.html": "edfe39392422423e6d830cf1eec5e63104a16492ca63adcead356c349e8aa9ed",
+    "GEMINI_PROMPT.txt": "6c6333b82a5f5f18f7ebb1baa834efb11670b80583b63d0393278850ce038858",
+    "GUIDE.html": "2b6d9ae7b07fd716dd66b7ec4e83fcf5d76c8817b97e361f0f79668950dce677",
+    "README.md": "838cbe214f70fe1978c799b72f95d1de3f5e2c84f5c51e4961f940e94a8e3610",
+    "START.html": "b31154fbfe34c87399662d73fbfddc6fcc86a31111ced8b03bfe08fdaba76b39",
+    "checks.mjs": "499a7231a5b6e214b4675246f872f1e623b96631fc29222c6322bfdd67bb7a95",
+    "contract.json": "1bb463db9e8e0a7c72cbf5c5101754a5308a1dc8066aff59db5cfc323ee79380",
+    "experiments.mjs": "98d31326956cec43e1d94faec36713f217fc9e25802a66c25bcf4456d8c2401b",
+    "http.mjs": "e0c129b2daf3f1884ae8cfdbcc8623f1abfa11a552a1cf05dda59d38cdebd7e6",
+    "kit.mjs": "5a2a9b6e08b5de0b1fbeb5e9ba735331939ea78183599925f48137e1a9ad20d9",
+    "lesson-http.mjs": "0568cf05a81c27d6ea93fb517aa0dd01250c02ea1647593377f4406198335ce9",
+    "server.mjs": "23ea285b1c81fa3106995447570e09e87a3e878854c8f7eb25634a092015863c",
+    "verify.mjs": "e0928e6062d1b0f86409c229291cf6511d2f19550a9396d5c07a2943226df6ff"
+  },
+  "targets": {
+    "targets/p01.mjs": "e411ebade63d5586fa137093076e84e7ff5a565f5324b27154218207a3b5fc4d",
+    "targets/p02.mjs": "9b4aa358fc020eb19a6ff09f3252a07cc9231df10dd3b4d8e1cc1d26c7c53a66"
+  }
+}

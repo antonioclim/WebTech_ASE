@@ -1,0 +1,14 @@
+Deliberately flawed proposal for audit - do not apply as a solution
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 320px);
+  overflow-x: hidden;
+}
+
+.card { width: 320px; }
+a:focus { outline: none; }
+
+Claim: "This guarantees a responsive four-card layout on every screen because hidden overflow prevents horizontal scrolling."
+
+Expected counterexamples include a 320 CSS pixel viewport, a 768 CSS pixel viewport, long unbroken content, keyboard navigation and 200% zoom.

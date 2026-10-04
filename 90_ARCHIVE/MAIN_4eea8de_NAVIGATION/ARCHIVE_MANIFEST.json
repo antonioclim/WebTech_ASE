@@ -1,0 +1,586 @@
+{
+  "schema": "webtech-navigation-archive/v1",
+  "source_commit": "4eea8de416cb03cf4f718fb802f868a391abb192",
+  "files": {
+    "00_SETUP/MACOS_LINUX/README.md": {
+      "sha256": "d51d9046c967bee7597fe70440945bc1b569561a1c4741ba21a04198095a57e9",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/00_SETUP/MACOS_LINUX/README.md"
+    },
+    "00_SETUP/README.md": {
+      "sha256": "d3ac8363b5b441a02a2a194be3ce76cbce17f04c22aa42b70e8e3c637a7e0237",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/00_SETUP/README.md"
+    },
+    "00_SETUP/WINDOWS/README.md": {
+      "sha256": "82e5bfd32f932d856a9c22b36adfffc7c6faf01d3be34cf93ba11e5504107d8a",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/00_SETUP/WINDOWS/README.md"
+    },
+    "00_START_HERE/DOWNLOAD_A_WEEK.md": {
+      "sha256": "3e843ecd14cbc83baa08fc7f9829d7fdb236c281972a12123987cbb6c3c1826e",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/00_START_HERE/DOWNLOAD_A_WEEK.md"
+    },
+    "00_START_HERE/README.md": {
+      "sha256": "ec9338085deddef489bcbf44e0cbece7d89e2929982405c16b1700accceb3fe9",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/00_START_HERE/README.md"
+    },
+    "00_START_HERE/STUDENT_QUICK_START.md": {
+      "sha256": "92afce059725752e4182ed03517b66900e7bbc02fe6af53eb76857892ee55a21",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/00_START_HERE/STUDENT_QUICK_START.md"
+    },
+    "00_START_HERE/WEEKS_01_14_DOWNLOADS.md": {
+      "sha256": "442996b156888f312811171c64de6e291368d5bf1e742639553eb92248c7f67b",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/00_START_HERE/WEEKS_01_14_DOWNLOADS.md"
+    },
+    "00_TOOLS/maintainer/PREVIEW_DOWNLOAD_POLICY.md": {
+      "sha256": "535d265a43da2c62c377886007c705aa969f0d7628cb19b63d2b07366e5c27f2",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/00_TOOLS/maintainer/PREVIEW_DOWNLOAD_POLICY.md"
+    },
+    "01_WEEKS/README.md": {
+      "sha256": "68751178e915cfd2f8a4c508b2823bfea97844af08fb05d6ea9054c55594bbf7",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/README.md"
+    },
+    "01_WEEKS/WEEK_01/C01_COURSE/EN_GB/README.md": {
+      "sha256": "a6ca0872da95eb1407296a6173293046e5300a2279c2c5f135f912f1a94e11a7",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_01/C01_COURSE/EN_GB/README.md"
+    },
+    "01_WEEKS/WEEK_01/C01_COURSE/README.md": {
+      "sha256": "063c3f2cab5c7cd3892e4d07760d5dffcfaba31fe34e2f32ecc6a6e2d4b00c1b",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_01/C01_COURSE/README.md"
+    },
+    "01_WEEKS/WEEK_01/README.md": {
+      "sha256": "59022dcaf17269a0cdef52e637587b09728e3d2d4594744e0a632845519a1937",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_01/README.md"
+    },
+    "01_WEEKS/WEEK_01/S01_SEMINAR/EN_GB/README.md": {
+      "sha256": "acead02afdf33fcc780e6cb6a77eae94961c2148dd3ccb09c35b7af643d198e1",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_01/S01_SEMINAR/EN_GB/README.md"
+    },
+    "01_WEEKS/WEEK_01/S01_SEMINAR/README.md": {
+      "sha256": "1491894f071c84bfad4517a80d2444fab4027af071ee6a43771fbd026ac5d78f",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_01/S01_SEMINAR/README.md"
+    },
+    "01_WEEKS/WEEK_02/C02_COURSE/EN_GB/README.md": {
+      "sha256": "06da024ccccc081c1bf7d2aa72af79006ae4ed232476d42d4dd04a94e93ad315",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_02/C02_COURSE/EN_GB/README.md"
+    },
+    "01_WEEKS/WEEK_02/C02_COURSE/README.md": {
+      "sha256": "a7df96e01bdfff429afcd09b0aaf7a8b42ed6255ff7f67af6fa1f8c12cecf7d2",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_02/C02_COURSE/README.md"
+    },
+    "01_WEEKS/WEEK_02/README.md": {
+      "sha256": "996ebe5c8f39843c51102d717deae40fb9be32eded1b6be2860e3cdc34628f35",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_02/README.md"
+    },
+    "01_WEEKS/WEEK_02/S02_SEMINAR/EN_GB/README.md": {
+      "sha256": "1a5f5408f2677b706b6bf87ded62ab51b9bdb63a7ec47e7b1312295030839deb",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_02/S02_SEMINAR/EN_GB/README.md"
+    },
+    "01_WEEKS/WEEK_02/S02_SEMINAR/README.md": {
+      "sha256": "332af258d34ee5cd965b9a2f486d11abe0c5a09c018b67533dbead82b8d62d8d",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_02/S02_SEMINAR/README.md"
+    },
+    "01_WEEKS/WEEK_03/C03_COURSE/EN_GB/README.md": {
+      "sha256": "b7e1c1cfb1cfdd220fbb9495ca72b1e84ccc81c5771280e40bf4a37806bf7674",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_03/C03_COURSE/EN_GB/README.md"
+    },
+    "01_WEEKS/WEEK_03/C03_COURSE/README.md": {
+      "sha256": "2f2e5d32216029f942dea633fe37402a7ba69f16da94858d88837568b8b86a37",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_03/C03_COURSE/README.md"
+    },
+    "01_WEEKS/WEEK_03/README.md": {
+      "sha256": "ea8176e5d1170419c916dab34699b6baa364da28fbbc62ff8bb3ddd0dfcf5213",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_03/README.md"
+    },
+    "01_WEEKS/WEEK_03/S03_SEMINAR/EN_GB/README.md": {
+      "sha256": "538e01927816b4b8115e06da754d52fe26aec0ee28d0d63f0496988948ce7d8f",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_03/S03_SEMINAR/EN_GB/README.md"
+    },
+    "01_WEEKS/WEEK_03/S03_SEMINAR/README.md": {
+      "sha256": "a2e46e260840c3cf02d087b5a4f67093bf0e0d777ec12860a90eeed76f0a1d2c",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_03/S03_SEMINAR/README.md"
+    },
+    "01_WEEKS/WEEK_04/C04_COURSE/EN_GB/README.md": {
+      "sha256": "2a3c39fdeff2cf881590f3258b7d1a33ea15e58e3f87dd8c708e8fe3724e7e65",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_04/C04_COURSE/EN_GB/README.md"
+    },
+    "01_WEEKS/WEEK_04/C04_COURSE/README.md": {
+      "sha256": "d4a5604b35f36320b0ca75c02b079629d26fbb14cdbfde06bd8660699a7e3963",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_04/C04_COURSE/README.md"
+    },
+    "01_WEEKS/WEEK_04/README.md": {
+      "sha256": "31bac18f7a97c6f97615eb95c40150b89a3bb0080f9098cc0902a5910d6c6ec0",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_04/README.md"
+    },
+    "01_WEEKS/WEEK_04/S04_SEMINAR/EN_GB/README.md": {
+      "sha256": "1d5a68a70693345e5fd910b577f6e0fbbd747140a42e7f88b6c8b68a11c30922",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_04/S04_SEMINAR/EN_GB/README.md"
+    },
+    "01_WEEKS/WEEK_04/S04_SEMINAR/README.md": {
+      "sha256": "d36821f0be116ce64cb6a8845b9ccd468c021fc65583a822a2416b75271df143",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_04/S04_SEMINAR/README.md"
+    },
+    "01_WEEKS/WEEK_05/C05_COURSE/EN_GB/README.md": {
+      "sha256": "096ec74c545d9d88e55f4e56bbbbf234aa4458171198d2af4b3bd324282b7729",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_05/C05_COURSE/EN_GB/README.md"
+    },
+    "01_WEEKS/WEEK_05/C05_COURSE/README.md": {
+      "sha256": "1d558387678e66cc98b5e2f8e8df57eb6d778f5ca0462073ddcc5582fa157d1c",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_05/C05_COURSE/README.md"
+    },
+    "01_WEEKS/WEEK_05/README.md": {
+      "sha256": "4cd1fbedcd2bae54aca5c623a39c55897138df7324d992f014a8a57706f42187",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_05/README.md"
+    },
+    "01_WEEKS/WEEK_05/S05_SEMINAR/EN_GB/README.md": {
+      "sha256": "8cca67e9140d81a0f293d8c5c9309179c981e849850e6cea5ecf5fe99e4188f0",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_05/S05_SEMINAR/EN_GB/README.md"
+    },
+    "01_WEEKS/WEEK_05/S05_SEMINAR/README.md": {
+      "sha256": "2f11e3fe894aabff91bf5c25cc835d79d14eab20bf1797ac6fc55c0d2e6137a1",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_05/S05_SEMINAR/README.md"
+    },
+    "01_WEEKS/WEEK_06/C06_COURSE/EN_GB/README.md": {
+      "sha256": "8856db0d27c1de68c78a988da443716388c920c4a319dde6f64eeaaae9729501",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_06/C06_COURSE/EN_GB/README.md"
+    },
+    "01_WEEKS/WEEK_06/C06_COURSE/README.md": {
+      "sha256": "c32a1c7334c07102551d3528bacd4f2b8b6e1ec7ef512fe5abd0855c028c9fd8",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_06/C06_COURSE/README.md"
+    },
+    "01_WEEKS/WEEK_06/README.md": {
+      "sha256": "8b9d9e118afd489d50d6b8a7e46afe69e452f0a235d6bbf5375441069726b4a7",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_06/README.md"
+    },
+    "01_WEEKS/WEEK_06/S06_SEMINAR/EN_GB/README.md": {
+      "sha256": "ebc7cc60dd432b373b48b9a5b2d5e4c9104289426894c8b0212740b1bc65fe32",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_06/S06_SEMINAR/EN_GB/README.md"
+    },
+    "01_WEEKS/WEEK_06/S06_SEMINAR/README.md": {
+      "sha256": "97c9a107e07ae1740100ab5107de718c4fe35c652258449d9590aa565f6a1037",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_06/S06_SEMINAR/README.md"
+    },
+    "01_WEEKS/WEEK_07/C07_COURSE/EN_GB/README.md": {
+      "sha256": "1667850b0e298706b965cf677d6aee7d997a24fbb5420f748280974a06c64623",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_07/C07_COURSE/EN_GB/README.md"
+    },
+    "01_WEEKS/WEEK_07/C07_COURSE/README.md": {
+      "sha256": "afdd975a3b447678e65c8ae6d7ea8c4f9f95678ae5199bd718f0ee3812d21610",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_07/C07_COURSE/README.md"
+    },
+    "01_WEEKS/WEEK_07/README.md": {
+      "sha256": "90481afcb681fc4002ab2a324814690c6a2075d4b8f28d3ddb8d582326ef657e",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_07/README.md"
+    },
+    "01_WEEKS/WEEK_07/S07_SEMINAR/EN_GB/README.md": {
+      "sha256": "1cac903682aaf021063245267ddc14df5eb26b2179572441915ed2f5082ce14a",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_07/S07_SEMINAR/EN_GB/README.md"
+    },
+    "01_WEEKS/WEEK_07/S07_SEMINAR/README.md": {
+      "sha256": "610d5f130c3cf6c6800792fe6bd24507997ddfdb9caa3727041ee10d6fbfc7c8",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_07/S07_SEMINAR/README.md"
+    },
+    "01_WEEKS/WEEK_08/C08_COURSE/EN_GB/README.md": {
+      "sha256": "96555a294f28e47011bd133e2f451c8f890b8fea34b5e28a66fbbebc70771f4b",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_08/C08_COURSE/EN_GB/README.md"
+    },
+    "01_WEEKS/WEEK_08/C08_COURSE/EN_GB/index.html": {
+      "sha256": "2513254d26081ff7e77999ece473a5fff2c8111b2d2770506e46414640bdcd9a",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_08/C08_COURSE/EN_GB/index.html"
+    },
+    "01_WEEKS/WEEK_08/C08_COURSE/README.md": {
+      "sha256": "01fab8c194ac4855492e900b1934e9cd93af13798cba7cbe6d3810acbe2b2d68",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_08/C08_COURSE/README.md"
+    },
+    "01_WEEKS/WEEK_08/C08_COURSE/index.html": {
+      "sha256": "94438a8f2cc04763251062b5e7b436ba031a810e9c920cb1a14516ae431a137c",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_08/C08_COURSE/index.html"
+    },
+    "01_WEEKS/WEEK_08/README.md": {
+      "sha256": "63ddc06a85ce147daab8552b5c6b14518d0c1e176cecc38f6df18a3b0060391c",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_08/README.md"
+    },
+    "01_WEEKS/WEEK_08/S08_SEMINAR/EN_GB/README.md": {
+      "sha256": "bb81b0441a96348dcc89fc77a1719ab1e1568209133cd77b8e8f35191a1448b1",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_08/S08_SEMINAR/EN_GB/README.md"
+    },
+    "01_WEEKS/WEEK_08/S08_SEMINAR/EN_GB/index.html": {
+      "sha256": "9d9252c7529b19f41bca52761c57003ca47d5793cd0fbf48439d29248428d5b2",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_08/S08_SEMINAR/EN_GB/index.html"
+    },
+    "01_WEEKS/WEEK_08/S08_SEMINAR/README.md": {
+      "sha256": "974687b42d5a6cb5b6a9ebf1af7f0c6b22b2dc040d113d5f1fa848bf32fae2b8",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_08/S08_SEMINAR/README.md"
+    },
+    "01_WEEKS/WEEK_08/S08_SEMINAR/index.html": {
+      "sha256": "1d00b061582fc6ef0bcbe2f3d0ff34c6fc5831f2dc98fb29358e6d2b2260260d",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_08/S08_SEMINAR/index.html"
+    },
+    "01_WEEKS/WEEK_08/index.html": {
+      "sha256": "eabaac83e8cf4c8b4636fff6127ec5e4eb22839abcc35e2ebb55df658a2e8407",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_08/index.html"
+    },
+    "01_WEEKS/WEEK_09/C09_COURSE/EN_GB/README.md": {
+      "sha256": "ad8df0e05abfb2c5d230232fd7adbf839d7a1a9aeb3f59b11095f947bbcf3da0",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_09/C09_COURSE/EN_GB/README.md"
+    },
+    "01_WEEKS/WEEK_09/C09_COURSE/EN_GB/index.html": {
+      "sha256": "4b05d7f2756b2fb9b8f102e93bc784c8198670f0d2a2873a3971c269cc12bd5a",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_09/C09_COURSE/EN_GB/index.html"
+    },
+    "01_WEEKS/WEEK_09/C09_COURSE/README.md": {
+      "sha256": "22af5f207fb3c6a3144d9ece3f5e6acaf828a33c79561f8f8c19d2541621fe54",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_09/C09_COURSE/README.md"
+    },
+    "01_WEEKS/WEEK_09/C09_COURSE/index.html": {
+      "sha256": "78bb7cd907c140f0712f813f03949b3b11e75f9cdb1b35100b4d11aeaad5e19b",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_09/C09_COURSE/index.html"
+    },
+    "01_WEEKS/WEEK_09/README.md": {
+      "sha256": "cd605acf784a75006e294b005e7a0166269da195923653a37969a2ae10364847",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_09/README.md"
+    },
+    "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/README.md": {
+      "sha256": "d2cde672949a1a0f2672bbf5c6f95a5686f5c946a5ec16abeb2d24957f4b75bd",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/README.md"
+    },
+    "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/index.html": {
+      "sha256": "162a12d98c31031d6556d8e98f6898f183b340393d20c23bef44df3258eb4c01",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/index.html"
+    },
+    "01_WEEKS/WEEK_09/S09_SEMINAR/README.md": {
+      "sha256": "ce8acefd906b83f78b16b6746b22e958d91b22aa0383f29b8414614e22e77910",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_09/S09_SEMINAR/README.md"
+    },
+    "01_WEEKS/WEEK_09/S09_SEMINAR/index.html": {
+      "sha256": "4591334bac0ecf75f6c2c8dbc37f9cea9ac10c9aa1d1dbac1af62650add0a6ca",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_09/S09_SEMINAR/index.html"
+    },
+    "01_WEEKS/WEEK_09/index.html": {
+      "sha256": "8a4cd480ca63883ae02e46077f2ffb27b7ec2605073a1b04ae6819a9693f26c3",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_09/index.html"
+    },
+    "01_WEEKS/WEEK_10/C10_COURSE/EN_GB/README.md": {
+      "sha256": "437faf9fcef198dc4d29262680a5e9f1f1bbec8e64854a311b5876aa5ff02565",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_10/C10_COURSE/EN_GB/README.md"
+    },
+    "01_WEEKS/WEEK_10/C10_COURSE/EN_GB/index.html": {
+      "sha256": "c77751a72828c0c1a459809c6c80c17f1cefefaec131ab1f63515fd9b56fbee4",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_10/C10_COURSE/EN_GB/index.html"
+    },
+    "01_WEEKS/WEEK_10/C10_COURSE/README.md": {
+      "sha256": "6951d7a185fa65f5ee39410e90dbefedf680f114a4692b7de928d3d9014d8de4",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_10/C10_COURSE/README.md"
+    },
+    "01_WEEKS/WEEK_10/C10_COURSE/index.html": {
+      "sha256": "fc4a27315bc7928e32cddf5c6b09fa125b241a0c3b87eba10e2a23d8aee0d899",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_10/C10_COURSE/index.html"
+    },
+    "01_WEEKS/WEEK_10/README.md": {
+      "sha256": "744cbf02a8c9f523b12876d85e438087174c9b197886b20d11be3e1974bc20ab",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_10/README.md"
+    },
+    "01_WEEKS/WEEK_10/S10_SEMINAR/EN_GB/README.md": {
+      "sha256": "ccdc6e987a3238d8cce131e79f93f1c714fd45648aa94eed8ede261b72ef6e76",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_10/S10_SEMINAR/EN_GB/README.md"
+    },
+    "01_WEEKS/WEEK_10/S10_SEMINAR/EN_GB/index.html": {
+      "sha256": "bcd5c507f231f0fa5e4d194e3323d6442084f76e58841d9a05555614292b3c0f",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_10/S10_SEMINAR/EN_GB/index.html"
+    },
+    "01_WEEKS/WEEK_10/S10_SEMINAR/README.md": {
+      "sha256": "bfb2858c6a735cab3158c2023506eb359db9001401b4b9e39ce9a3ad01eba2c5",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_10/S10_SEMINAR/README.md"
+    },
+    "01_WEEKS/WEEK_10/S10_SEMINAR/index.html": {
+      "sha256": "919dfd660f8ee45cb3109c61f25a1315a5e918b0ee857a5a31870959d041ab42",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_10/S10_SEMINAR/index.html"
+    },
+    "01_WEEKS/WEEK_10/index.html": {
+      "sha256": "b36bfe0e73887883ab91af2f198c8ed9ac7d83f264e882aedac9c4f321de483f",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_10/index.html"
+    },
+    "01_WEEKS/WEEK_11/C11_COURSE/EN_GB/README.md": {
+      "sha256": "7a89c82625f949072b3ea8690c6fdf33de19b001613052c72ab42fcabd3a035a",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_11/C11_COURSE/EN_GB/README.md"
+    },
+    "01_WEEKS/WEEK_11/C11_COURSE/EN_GB/index.html": {
+      "sha256": "3fd95e58bd75b00e0a7faddd4a0b36bc1867b1e04e399ee023846acd598166a4",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_11/C11_COURSE/EN_GB/index.html"
+    },
+    "01_WEEKS/WEEK_11/C11_COURSE/README.md": {
+      "sha256": "55eb245d79871f0ede7f210ed06d5ad1fbdb146daf5aa14add64cb5984a07bfe",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_11/C11_COURSE/README.md"
+    },
+    "01_WEEKS/WEEK_11/C11_COURSE/index.html": {
+      "sha256": "96337ccfd7dad756174b42bad406e61d1f7cb45acc4f43f83c13a47760dc502d",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_11/C11_COURSE/index.html"
+    },
+    "01_WEEKS/WEEK_11/README.md": {
+      "sha256": "1ca5dadaa9f664aff859afbfbacdca9c3768f17c56eccb527d4915058b1cb30e",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_11/README.md"
+    },
+    "01_WEEKS/WEEK_11/S11_SEMINAR/EN_GB/README.md": {
+      "sha256": "bb9167c22f893ecdf1bc268ee954cdf90ef58dc0af717b1f8b7f2031a51b3a6b",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_11/S11_SEMINAR/EN_GB/README.md"
+    },
+    "01_WEEKS/WEEK_11/S11_SEMINAR/EN_GB/index.html": {
+      "sha256": "b358a10059834889606d0465b3938783156e0ff88c3fbd9cd0b4bac992800531",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_11/S11_SEMINAR/EN_GB/index.html"
+    },
+    "01_WEEKS/WEEK_11/S11_SEMINAR/README.md": {
+      "sha256": "b42d045bba460617cee7c704841368b913c75ef4c7adc6c92be518914bd32565",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_11/S11_SEMINAR/README.md"
+    },
+    "01_WEEKS/WEEK_11/S11_SEMINAR/index.html": {
+      "sha256": "74f26b1257a859abc50d231e8de523d7c929c467d31577d72fd9809ae09189b1",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_11/S11_SEMINAR/index.html"
+    },
+    "01_WEEKS/WEEK_11/index.html": {
+      "sha256": "76174c02d8a6647bc463af826c5fc535152a956741dcb97be76c4037f2167aaf",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_11/index.html"
+    },
+    "01_WEEKS/WEEK_12/C12_COURSE/EN_GB/README.md": {
+      "sha256": "773e0d98512f3dd8f6f0729ff05a5b45524c358f8ec8d09985228c4d01e8ff4a",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_12/C12_COURSE/EN_GB/README.md"
+    },
+    "01_WEEKS/WEEK_12/C12_COURSE/EN_GB/index.html": {
+      "sha256": "23819379a9e31503a41279fc139be21589cb7a965f299da33635d7a41957be32",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_12/C12_COURSE/EN_GB/index.html"
+    },
+    "01_WEEKS/WEEK_12/C12_COURSE/README.md": {
+      "sha256": "db3630815bd03ee8b6d77a17775fb61e3f1b861e0d6987e9555744b2891db42f",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_12/C12_COURSE/README.md"
+    },
+    "01_WEEKS/WEEK_12/C12_COURSE/index.html": {
+      "sha256": "f2d1a9546e78bd71785304e14b6e662d434f23487bfdcc5234118990b91b4aa2",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_12/C12_COURSE/index.html"
+    },
+    "01_WEEKS/WEEK_12/README.md": {
+      "sha256": "8fea6e8da76ebda834517d9ba9b4890fd72a53c3cb950ee929887761def5dc00",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_12/README.md"
+    },
+    "01_WEEKS/WEEK_12/S12_SEMINAR/EN_GB/README.md": {
+      "sha256": "4da1b925d60914f2d77e34bd5ec17049f5a12032d952800d66b136dcf809cc6c",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_12/S12_SEMINAR/EN_GB/README.md"
+    },
+    "01_WEEKS/WEEK_12/S12_SEMINAR/EN_GB/index.html": {
+      "sha256": "9c701910164ad7a1ebe9b8444df42f85dd6e3e7cc703a5a64a5042fefd6927a7",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_12/S12_SEMINAR/EN_GB/index.html"
+    },
+    "01_WEEKS/WEEK_12/S12_SEMINAR/README.md": {
+      "sha256": "27ca57a0c920f5fc01af58f8c0124dcd9601917da870f31f95fc31608befc5ba",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_12/S12_SEMINAR/README.md"
+    },
+    "01_WEEKS/WEEK_12/S12_SEMINAR/index.html": {
+      "sha256": "09044c14d627637bc73745dcf00f82fed0b0f260ad06e83f4a995ad06142e72c",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_12/S12_SEMINAR/index.html"
+    },
+    "01_WEEKS/WEEK_12/index.html": {
+      "sha256": "5088d7b24c88b20da1c8daf2b51faa91034306e9dbecdbe3e2a832faa33a27b5",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_12/index.html"
+    },
+    "01_WEEKS/WEEK_13/C13_COURSE/EN_GB/README.md": {
+      "sha256": "5f44438853e96d3d4035c26f0a884f5a73f94ce6d50f3b818daa60b3e4e03461",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_13/C13_COURSE/EN_GB/README.md"
+    },
+    "01_WEEKS/WEEK_13/C13_COURSE/EN_GB/index.html": {
+      "sha256": "f5091c170d6d91c9c250b2b0dca92e1aaa6dfdd29d455493981172bf7ea20fda",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_13/C13_COURSE/EN_GB/index.html"
+    },
+    "01_WEEKS/WEEK_13/C13_COURSE/README.md": {
+      "sha256": "6e4460e8371ed8d4798c9b3d8caaa292c95406971d63694c169f985d66ef5c5c",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_13/C13_COURSE/README.md"
+    },
+    "01_WEEKS/WEEK_13/C13_COURSE/index.html": {
+      "sha256": "f7e142de284c23d5b91a31d9c2c7b07b1239df429ef4bc472eaaaea731f28d3f",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_13/C13_COURSE/index.html"
+    },
+    "01_WEEKS/WEEK_13/README.md": {
+      "sha256": "551ea768327c3e1e12dfb6da4bba9bf1dd9b7d61d7c559db3055d06c44787b02",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_13/README.md"
+    },
+    "01_WEEKS/WEEK_13/S13_SEMINAR/EN_GB/README.md": {
+      "sha256": "df41751df8e9575d983e5e1c9fd7819eff9ecb34d1054760ba91a732cd92271d",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_13/S13_SEMINAR/EN_GB/README.md"
+    },
+    "01_WEEKS/WEEK_13/S13_SEMINAR/EN_GB/index.html": {
+      "sha256": "52603c25d60006bb483266709847d2cce3abec543332a0275034794c19501d5e",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_13/S13_SEMINAR/EN_GB/index.html"
+    },
+    "01_WEEKS/WEEK_13/S13_SEMINAR/README.md": {
+      "sha256": "9bfde3cbadf979e7fe4f897c2b09dc3feca2a2f7741c3835877703d1f9d266b0",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_13/S13_SEMINAR/README.md"
+    },
+    "01_WEEKS/WEEK_13/S13_SEMINAR/index.html": {
+      "sha256": "b65ff4d2a38b1947099d57a595296214e35f46332b14a2d6bbb9d9fe54793d54",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_13/S13_SEMINAR/index.html"
+    },
+    "01_WEEKS/WEEK_13/index.html": {
+      "sha256": "b9ed851e3b33f48a8bffdfe5d4017073836e5d23694deee0d978eed90b7d1a9c",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_13/index.html"
+    },
+    "01_WEEKS/WEEK_14/C14_COURSE/EN_GB/README.md": {
+      "sha256": "05f20754efab45e3afe74e7eba6db25f6ea11212587f26114c3aa811fb3c5743",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_14/C14_COURSE/EN_GB/README.md"
+    },
+    "01_WEEKS/WEEK_14/C14_COURSE/EN_GB/index.html": {
+      "sha256": "bdfc89c68f94995a7196d391c2dd7d6d1788b92f35d174108a8960454b1ad3de",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_14/C14_COURSE/EN_GB/index.html"
+    },
+    "01_WEEKS/WEEK_14/C14_COURSE/README.md": {
+      "sha256": "da638368541e8274467e64206c45c194a35c76b7f21ccb4ad1aad189e12c4772",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_14/C14_COURSE/README.md"
+    },
+    "01_WEEKS/WEEK_14/C14_COURSE/index.html": {
+      "sha256": "94dc7c7db41e77706c547a3baf2dc6ddc3e2cfeafc02f96187d0a629f5085e52",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_14/C14_COURSE/index.html"
+    },
+    "01_WEEKS/WEEK_14/README.md": {
+      "sha256": "1ed7a3b6aac6297d3d365db57a70cef7c816a32bbe140936aa4662be299c70b4",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_14/README.md"
+    },
+    "01_WEEKS/WEEK_14/S14_SEMINAR/EN_GB/README.md": {
+      "sha256": "e9be905a63a3970134988b5bc9359770b42a183a0ced2b43e113082341f30ceb",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_14/S14_SEMINAR/EN_GB/README.md"
+    },
+    "01_WEEKS/WEEK_14/S14_SEMINAR/EN_GB/index.html": {
+      "sha256": "4e4e940fe359de69a51bb27f19bef902c9036d30f32980aaf40eafb0f85b34e7",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_14/S14_SEMINAR/EN_GB/index.html"
+    },
+    "01_WEEKS/WEEK_14/S14_SEMINAR/README.md": {
+      "sha256": "c207c0128f2e3da09ce0123f8d4d0afd8c1d837c4acf05a63ee8e0107e825c47",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_14/S14_SEMINAR/README.md"
+    },
+    "01_WEEKS/WEEK_14/S14_SEMINAR/index.html": {
+      "sha256": "9bb5ded59a8bdb3ef6348b0d420478d415ae94d982632fdd4a5b74c86893e1eb",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_14/S14_SEMINAR/index.html"
+    },
+    "01_WEEKS/WEEK_14/index.html": {
+      "sha256": "b2e7ad38ce140e7b5c1d47ef7336109457d338f2d1203e6043250880865e90d0",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/01_WEEKS/WEEK_14/index.html"
+    },
+    "90_RELEASES/HISTORICAL_OBJECTS.md": {
+      "sha256": "3656ec45684a32a2bfff2bb4aa49cc635a0bebdcdc5620b1145486eaf5c51f3d",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/90_RELEASES/HISTORICAL_OBJECTS.md"
+    },
+    "90_RELEASES/README.md": {
+      "sha256": "e3a26c027b8590b08f52f63541aeeffd7c9a0276c3ae95b1d60e3ffb707eda71",
+      "mode": "100644",
+      "archive": "90_ARCHIVE/MAIN_4eea8de_NAVIGATION/90_RELEASES/README.md"
+    }
+  }
+}

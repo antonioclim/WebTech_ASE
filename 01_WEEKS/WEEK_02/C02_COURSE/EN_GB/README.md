@@ -1,26 +1,30 @@
 # C02 — Semantic HTML, CSS, responsive UI and accessibility
 
-English student release candidate **1.2.2 RC1**. This is the active EN-GB object in the [current registry](../../../../90_RELEASES/CURRENT_OBJECTS.json). Native platform, Microsoft Word, Moodle, human classroom pilot and owner acceptance remain separate gates.
+Current English collection candidate **3.0.0-rc.6**; selected object edition **1.2.3-rc.4**. Qualification and classroom acceptance remain pending.
 
 ## Download and open
 
-1. Download the [complete student ZIP](DOWNLOAD/TW2026_C02_STUDENT_EN_GB_v1.2.2_RC1.zip) and its [SHA-256 sidecar](DOWNLOAD/TW2026_C02_STUDENT_EN_GB_v1.2.2_RC1.zip.sha256).
-2. Extract it completely into a new writable folder, for example a folder under your user profile. Avoid opening files inside the ZIP.
-3. Read `00_START_HERE/README_STUDENT.txt` and run `VERIFY_PACKAGE.cmd` on Windows or `bash VERIFY_PACKAGE.sh` on macOS/Linux.
-4. Open `START_COURSE_02.cmd` on Windows or run `bash START_COURSE_02.sh` on macOS/Linux. The named HTML is inside the extracted package; there is no generic root `index.html` in these four objects.
-5. Follow the package's allowed-edit and evidence contract. Course work supports learning; it does not require a second Moodle submission by default.
+1. Download the complete student ZIP and its SHA-256 sidecar below.
+2. Extract the whole ZIP into a new writable folder. Do not open files inside the compressed archive.
+3. Start with `00_START_HERE/README_STUDENT.txt` in the extracted package then follow `01_PRESENTATION/COURSE_02_SEMANTIC_HTML_CSS_RESPONSIVE_UI_AND_ACCESSIBILITY_60_MIN_INTERACTIVE_v1.1_EN_GB.html`. Use the exact project folders and commands stated there.
+4. Follow the lesson and worked examples. Your lecturer supplies any assessment or submission requirement.
 
-## Browse individual files
+| Current resource | Link |
+| --- | --- |
+| Complete student ZIP | [Complete student ZIP](CURRENT/WEBTECH_ASE_C02_EN_GB_RECONSTRUCTED_RC5.zip) |
+| SHA-256 sidecar | [SHA-256 sidecar](CURRENT/WEBTECH_ASE_C02_EN_GB_RECONSTRUCTED_RC5.zip.sha256) |
+| Start here | [Start here](RELEASES/collection-3.0.0-rc.5/SOURCE_EXACT/00_START_HERE/README_STUDENT.txt) |
+| Current guide | [Current guide](RELEASES/collection-3.0.0-rc.5/SOURCE_EXACT/01_PRESENTATION/COURSE_02_SEMANTIC_HTML_CSS_RESPONSIVE_UI_AND_ACCESSIBILITY_60_MIN_INTERACTIVE_v1.1_EN_GB.html) |
+| Package identity | [Package identity](RELEASES/collection-3.0.0-rc.5/SOURCE_EXACT/06_AUDIT/PACKAGE_ID.txt) |
 
-GitHub displays HTML source. Download the package to run the lesson offline. The [exact extracted tree](PACKAGE_EXACT/TW2026_C02_STUDENT_EN_GB_v1.2.2_RC1) has the same bytes as the ZIP.
+GitHub shows HTML source. Download and extract the selected ZIP to use the interactive lesson. A matching checksum establishes package identity; it does not establish successful execution on your own computer.
 
-- [Start here](PACKAGE_EXACT/TW2026_C02_STUDENT_EN_GB_v1.2.2_RC1/00_START_HERE/README_STUDENT.txt)
-- [Presentation](PACKAGE_EXACT/TW2026_C02_STUDENT_EN_GB_v1.2.2_RC1/01_PRESENTATION/COURSE_02_SEMANTIC_HTML_CSS_RESPONSIVE_UI_AND_ACCESSIBILITY_60_MIN_INTERACTIVE_v1.1_EN_GB.html)
-- [Student handout](PACKAGE_EXACT/TW2026_C02_STUDENT_EN_GB_v1.2.2_RC1/02_STUDENT_MATERIALS/STUDENT_HANDOUT_COURSE_02_v1.1_EN_GB.docx)
-- [Preparation](PACKAGE_EXACT/TW2026_C02_STUDENT_EN_GB_v1.2.2_RC1/02_STUDENT_MATERIALS/PREPARATION_AND_TRANSFER_COURSE_02_v1.1_EN_GB.docx)
-- [Gemini prompt](PACKAGE_EXACT/TW2026_C02_STUDENT_EN_GB_v1.2.2_RC1/03_ACTIVITIES/GEMINI_PROMPT_COURSE_02_v1.1_EN_GB.txt)
-- [Offline laboratory](PACKAGE_EXACT/TW2026_C02_STUDENT_EN_GB_v1.2.2_RC1/03_ACTIVITIES/INTERFACE_AUDIT_LAB_COURSE_02_v1.1_EN_GB.html)
+[Authoritative current selection](../../../../metadata/student-selection.json) · [Whole-week navigation](../../README.md) · [All current weeks](../../../README.md)
 
-## Status and history
+[Legacy Romanian route (separate status)](../RO/README.md).
 
-Checksums establish identity. Local runtime and headless browser evidence establish only the cases actually tested. They do not establish native Windows/macOS, Word, Moodle or classroom acceptance. See [qualification](../../QUALIFICATION_STATUS.md) and the [historical catalogue](../../../../90_RELEASES/HISTORICAL_OBJECTS.md). Superseded EN packages remain accessible in Git history.
+## Historical material
+
+Older `DOWNLOAD`, `PACKAGE_EXACT`, `PACKAGES` and versioned release folders remain for comparison. They are outside the current English selection. Use the current ZIP and guide linked above for class work. Romanian materials, where present, are retained legacy alternatives and have a separate status.
+
+[Preserved predecessor navigation](../../../../90_ARCHIVE/MAIN_4eea8de_NAVIGATION/README.md). Historical filenames containing `FINAL` do not qualify the current collection.

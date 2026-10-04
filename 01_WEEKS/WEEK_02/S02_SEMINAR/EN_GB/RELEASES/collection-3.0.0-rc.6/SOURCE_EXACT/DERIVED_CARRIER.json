@@ -1,0 +1,195 @@
+{
+  "schema": "webtech-derived-carrier/v1",
+  "object_id": "S02",
+  "carrier_version": "2.3.4-rc.6",
+  "distribution_version": "3.0.0-rc.6",
+  "source_commit": "4eea8de416cb03cf4f718fb802f868a391abb192",
+  "derived_from": {
+    "archive": "01_WEEKS/WEEK_02/S02_SEMINAR/EN_GB/CURRENT/WEBTECH_ASE_S02_EN_GB_RECONSTRUCTED_RC5.zip",
+    "archive_sha256": "c984577d6aa650670d76d023dc890769b77dc10bcb02003ea1034a5f70523679",
+    "package_id": "d1ee5c340d5bf25e8acea0794e256017a2caf7392ed351a070552d8ba4c3f650",
+    "carrier_version": "2.3.3-rc.5",
+    "projection": "01_WEEKS/WEEK_02/S02_SEMINAR/EN_GB/RELEASES/collection-3.0.0-rc.5/SOURCE_EXACT"
+  },
+  "preceding_descriptor_sha256": "f08a9cb8af6e9a686fbc0a5c2b0ddaad8bcbecaccb3f2cb303def65ee0eb88eb",
+  "status": "LOCAL_RELEASE_CANDIDATE_PENDING_EXTERNAL_ACCEPTANCE",
+  "native_acceptance": "PENDING",
+  "identity_is_runtime_qualification": false,
+  "original_carrier_overwritten": false,
+  "original_external_bindings_are_history_not_current_byte_identity": true,
+  "content_changes_before_sealing": [
+    {
+      "path": "CHANGELOG_RC6.md",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "e146b80dcf0ee4dd50bd46912a2d98ac6744dc71451e1d0cfeaa69b0479b6e67",
+      "before_bytes": null,
+      "after_bytes": 759
+    },
+    {
+      "path": "CLASSROOM_RC6/CLASSROOM_BOUNDARY.json",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "5e94df46a3fa80a664a967fee6320cdcec5dfb6a466e00f7c08ab61a01370fd5",
+      "before_bytes": null,
+      "after_bytes": 1868
+    },
+    {
+      "path": "CLASSROOM_RC6/CLASSROOM_SCOPE.json",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "0f853a587e5bd3814bf292dc880fd42169ad0a04a0d5df03b6d39096536237b0",
+      "before_bytes": null,
+      "after_bytes": 2436
+    },
+    {
+      "path": "CLASSROOM_RC6/EVIDENCE_FORM.html",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "bbd132954d8f0a4c9b74f4fd808e8f11bf3c570144d7dfe590cc93d44ea7c8c3",
+      "before_bytes": null,
+      "after_bytes": 37070
+    },
+    {
+      "path": "CLASSROOM_RC6/GEMINI_PROMPT.txt",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "4084a0f307db8fa7c5aaeb8a1b0f8ba1e569c3e625fc8cb3560affa1893095bd",
+      "before_bytes": null,
+      "after_bytes": 589
+    },
+    {
+      "path": "CLASSROOM_RC6/GUIDE.html",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "c9d2ee30e210d40934766d20ede2e97d65f6f58564113b145d0737c4275ff6d3",
+      "before_bytes": null,
+      "after_bytes": 8167
+    },
+    {
+      "path": "CLASSROOM_RC6/README.md",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "e24e26577466a60b4f113417ebe76ea3d1734db0f44a6c902b1d670e6bf030b3",
+      "before_bytes": null,
+      "after_bytes": 5537
+    },
+    {
+      "path": "CLASSROOM_RC6/SOURCE_MANIFEST.json",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "ec7cd06e4639bf481b101931865e20f9e34f2f3419ea901abd4f11dfb3b728ba",
+      "before_bytes": null,
+      "after_bytes": 1510
+    },
+    {
+      "path": "CLASSROOM_RC6/START.html",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "93be00fd3fa15ec2556109996ae90f5443760efc9e66dde551ea068053ec95a4",
+      "before_bytes": null,
+      "after_bytes": 2572
+    },
+    {
+      "path": "CLASSROOM_RC6/checks.mjs",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "499a7231a5b6e214b4675246f872f1e623b96631fc29222c6322bfdd67bb7a95",
+      "before_bytes": null,
+      "after_bytes": 1718
+    },
+    {
+      "path": "CLASSROOM_RC6/contract.json",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "1ccfa56dabdbf0fc4b90ea41fb831c3cae9f9bd802f2943fe8fbd2489ea9d0cd",
+      "before_bytes": null,
+      "after_bytes": 2476
+    },
+    {
+      "path": "CLASSROOM_RC6/experiments.mjs",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "560cb25e6cc18158d8b1ea81f7d83f8ec4a57211c4a2b3eabca7049aac276913",
+      "before_bytes": null,
+      "after_bytes": 1923
+    },
+    {
+      "path": "CLASSROOM_RC6/http.mjs",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "e0c129b2daf3f1884ae8cfdbcc8623f1abfa11a552a1cf05dda59d38cdebd7e6",
+      "before_bytes": null,
+      "after_bytes": 1841
+    },
+    {
+      "path": "CLASSROOM_RC6/index.html",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "6d14abca28e0274210c428d0b786d991a83df64e220025772ad657bf0a385a44",
+      "before_bytes": null,
+      "after_bytes": 1459
+    },
+    {
+      "path": "CLASSROOM_RC6/kit.mjs",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "5a2a9b6e08b5de0b1fbeb5e9ba735331939ea78183599925f48137e1a9ad20d9",
+      "before_bytes": null,
+      "after_bytes": 3441
+    },
+    {
+      "path": "CLASSROOM_RC6/server.mjs",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "b69873679c3e69c2642999ba466d5ebe2ca7e425a625f170f5b7799d69fd377c",
+      "before_bytes": null,
+      "after_bytes": 546
+    },
+    {
+      "path": "CLASSROOM_RC6/targets/styles.css",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "2d848b69979ce3665c4f0994c5b7861ab5385d083f38f7165f1c40a2abbe6519",
+      "before_bytes": null,
+      "after_bytes": 718
+    },
+    {
+      "path": "CLASSROOM_RC6/verify.mjs",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "e0928e6062d1b0f86409c229291cf6511d2f19550a9396d5c07a2943226df6ff",
+      "before_bytes": null,
+      "after_bytes": 4944
+    }
+  ],
+  "identity_controls_regenerated_using_fixed_contract": true,
+  "identity_contract": {
+    "method": "manifest-sha256",
+    "manifest": "90_AUDIT/IMMUTABLE_MANIFEST.sha256",
+    "package_id": "90_AUDIT/PACKAGE_ID.txt",
+    "manifest_exclusions": [
+      "02_PROJECTS/RESPONSIVE_CARD_GRID/public/styles.css",
+      "90_AUDIT/IMMUTABLE_MANIFEST.sha256",
+      "90_AUDIT/PACKAGE_ID.txt",
+      "CLASSROOM_RC6/targets/styles.css"
+    ],
+    "path_order": "unicode-codepoint",
+    "encoding": "UTF-8",
+    "line_ending": "LF",
+    "record_format": "sha256 + two ASCII spaces + relative POSIX path + LF",
+    "index": "90_AUDIT/FILE_INDEX.csv",
+    "index_exclusions": [
+      "02_PROJECTS/RESPONSIVE_CARD_GRID/public/styles.css",
+      "90_AUDIT/FILE_INDEX.csv",
+      "90_AUDIT/IMMUTABLE_MANIFEST.sha256",
+      "90_AUDIT/PACKAGE_ID.txt",
+      "CLASSROOM_RC6/targets/styles.css"
+    ],
+    "index_columns": [
+      "path",
+      "size_bytes",
+      "sha256"
+    ]
+  }
+}

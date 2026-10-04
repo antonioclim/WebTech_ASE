@@ -1,0 +1,231 @@
+{
+  "schema": "webtech-derived-carrier/v1",
+  "object_id": "S07",
+  "carrier_version": "1.1.3-rc.6",
+  "distribution_version": "3.0.0-rc.6",
+  "source_commit": "4eea8de416cb03cf4f718fb802f868a391abb192",
+  "derived_from": {
+    "archive": "01_WEEKS/WEEK_07/S07_SEMINAR/EN_GB/CURRENT/WEBTECH_ASE_S07_EN_GB_RECONSTRUCTED_RC5.zip",
+    "archive_sha256": "6235e463b2e8f7e763f7b514e94114a6394243b640a6087470582491b5484f10",
+    "package_id": "f5d0e079d6171baace900282853ad261af98cd5ad50cc3c57f152202f27bf79a",
+    "carrier_version": "1.1.2-rc.4",
+    "projection": "01_WEEKS/WEEK_07/S07_SEMINAR/EN_GB/RELEASES/collection-3.0.0-rc.5/SOURCE_EXACT"
+  },
+  "preceding_descriptor_sha256": "ad818eee98fa9234bdc3932c41ac09e796bfaaa571aadfb75f0dc44466bc5765",
+  "status": "LOCAL_RELEASE_CANDIDATE_PENDING_EXTERNAL_ACCEPTANCE",
+  "native_acceptance": "PENDING",
+  "identity_is_runtime_qualification": false,
+  "original_carrier_overwritten": false,
+  "original_external_bindings_are_history_not_current_byte_identity": true,
+  "content_changes_before_sealing": [
+    {
+      "path": "CHANGELOG_RC6.md",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "c0cf55f7aad65bc563f9611c26360a71d17cafc045392539ad77ce78baf6891d",
+      "before_bytes": null,
+      "after_bytes": 887
+    },
+    {
+      "path": "CLASSROOM_RC6/CLASSROOM_BOUNDARY.json",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "06d3eac50d59467222c54b6d8ce6dda0b1cf2562240e58bcc683ebff31ed4d0b",
+      "before_bytes": null,
+      "after_bytes": 2137
+    },
+    {
+      "path": "CLASSROOM_RC6/CLASSROOM_SCOPE.json",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "b87b6afb9ed14e27956e959d143245aac576961a22f9718588fbe1b354a257ae",
+      "before_bytes": null,
+      "after_bytes": 2411
+    },
+    {
+      "path": "CLASSROOM_RC6/EVIDENCE_FORM.html",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "17c06f8cac6e545d4d687abfa8df485ae9aa5ef2ff6d1db4aebcc76f2762f932",
+      "before_bytes": null,
+      "after_bytes": 36979
+    },
+    {
+      "path": "CLASSROOM_RC6/GEMINI_PROMPT.txt",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "16124e9ec7d35ab9ad7f79eefcf838e5617b55ac861c7c1d77c2d5c45b920502",
+      "before_bytes": null,
+      "after_bytes": 589
+    },
+    {
+      "path": "CLASSROOM_RC6/GUIDE.html",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "50ea0c8072797eec7e46754e4a3de027c088da7576fd015aef0240ee80d29aa6",
+      "before_bytes": null,
+      "after_bytes": 7561
+    },
+    {
+      "path": "CLASSROOM_RC6/README.md",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "f51e2c8e1f95692d0b65dd82483e74f0ce8836fdf38243c4379fd4357bbcaea9",
+      "before_bytes": null,
+      "after_bytes": 5024
+    },
+    {
+      "path": "CLASSROOM_RC6/SOURCE_MANIFEST.json",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "e7cb2c1e55c721f7b4b755c5dcd57175699870841250883f66bf8a933d820307",
+      "before_bytes": null,
+      "after_bytes": 1779
+    },
+    {
+      "path": "CLASSROOM_RC6/START.html",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "f5e631a41375bd1744fc99a90ba446d440b89ff25fa7a261e573ac85a5982785",
+      "before_bytes": null,
+      "after_bytes": 2457
+    },
+    {
+      "path": "CLASSROOM_RC6/checks.mjs",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "499a7231a5b6e214b4675246f872f1e623b96631fc29222c6322bfdd67bb7a95",
+      "before_bytes": null,
+      "after_bytes": 1718
+    },
+    {
+      "path": "CLASSROOM_RC6/contract.json",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "1a1ab84ad216bfab0163410ae038c2ec8c018d7fe7e183a682280359ee4c9124",
+      "before_bytes": null,
+      "after_bytes": 2502
+    },
+    {
+      "path": "CLASSROOM_RC6/experiments.mjs",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "d0307ca810b0b7e9dbb7799045893febb29b2cceec575f5cdbf3497dac30baea",
+      "before_bytes": null,
+      "after_bytes": 4285
+    },
+    {
+      "path": "CLASSROOM_RC6/http.mjs",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "e0c129b2daf3f1884ae8cfdbcc8623f1abfa11a552a1cf05dda59d38cdebd7e6",
+      "before_bytes": null,
+      "after_bytes": 1841
+    },
+    {
+      "path": "CLASSROOM_RC6/kit.mjs",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "5a2a9b6e08b5de0b1fbeb5e9ba735331939ea78183599925f48137e1a9ad20d9",
+      "before_bytes": null,
+      "after_bytes": 3441
+    },
+    {
+      "path": "CLASSROOM_RC6/lesson-http.mjs",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "84537d79ae9aa3fed327e57509a4b07aeadd6acadb281fb2a845685c073e6dc5",
+      "before_bytes": null,
+      "after_bytes": 858
+    },
+    {
+      "path": "CLASSROOM_RC6/server.mjs",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "a55ae37d9e2d114b3fad3263e4686e5afc250ddc27a6d9fc646c6b5514a0db76",
+      "before_bytes": null,
+      "after_bytes": 148
+    },
+    {
+      "path": "CLASSROOM_RC6/store.mjs",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "3900df8444b79ac69cbeb1048c0b19de322c08f9e5ea0be684341fa96ef77ac6",
+      "before_bytes": null,
+      "after_bytes": 2624
+    },
+    {
+      "path": "CLASSROOM_RC6/targets/p01.mjs",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "021411debaff8ba2dd1f7a935c70d47921bede24ee887c79cce400e08a2cbcca",
+      "before_bytes": null,
+      "after_bytes": 332
+    },
+    {
+      "path": "CLASSROOM_RC6/targets/p02.mjs",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "77d9c0ab173d56b4ab50a75cbac1af1c4711fbb994328dd9427e543b3b20892d",
+      "before_bytes": null,
+      "after_bytes": 663
+    },
+    {
+      "path": "CLASSROOM_RC6/targets/p03.mjs",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "479a150e05bfbc88cde09b58a4dc1384d31ca89315d27e7c1db60e19e32ca129",
+      "before_bytes": null,
+      "after_bytes": 437
+    },
+    {
+      "path": "CLASSROOM_RC6/verify.mjs",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "e0928e6062d1b0f86409c229291cf6511d2f19550a9396d5c07a2943226df6ff",
+      "before_bytes": null,
+      "after_bytes": 4944
+    },
+    {
+      "path": "projects/p02/package-lock.json",
+      "change": "BYTES",
+      "before_sha256": "4ba39016eda60029f451b304a7a143178065dfc61c145b0ce79fad22780579ac",
+      "after_sha256": "bb79adafb80c77c1012220682a2f667c131382f6da7681552a60d9ac78a800a0",
+      "before_bytes": 61969,
+      "after_bytes": 62025
+    },
+    {
+      "path": "projects/p02/package.json",
+      "change": "BYTES",
+      "before_sha256": "a291f4d6370c92bca01feb05784a3006b0f1884e332a50975198fcd257b7332c",
+      "after_sha256": "41f824a96021c27c06ad511f5db549dcf8a0c58a3cfc4b4328391edeff042863",
+      "before_bytes": 599,
+      "after_bytes": 643
+    },
+    {
+      "path": "projects/p02/src/database.js",
+      "change": "BYTES",
+      "before_sha256": "a9877a5cd905926104e7b0a0d0b5590123012002cd6399d0c58e00fd23f2ebc3",
+      "after_sha256": "dc4be8a9312584f09f778a95c3768d18f7d2c40de934c6b7eb1c2c7d120e15d2",
+      "before_bytes": 492,
+      "after_bytes": 513
+    }
+  ],
+  "identity_controls_regenerated_using_fixed_contract": true,
+  "identity_contract": {
+    "method": "manifest-sha256",
+    "manifest": "SHA256SUMS.txt",
+    "package_id": "PACKAGE_ID.txt",
+    "manifest_exclusions": [
+      "CLASSROOM_RC6/targets/p01.mjs",
+      "CLASSROOM_RC6/targets/p02.mjs",
+      "CLASSROOM_RC6/targets/p03.mjs",
+      "PACKAGE_ID.txt",
+      "SHA256SUMS.txt"
+    ],
+    "path_order": "unicode-codepoint",
+    "encoding": "UTF-8",
+    "line_ending": "LF",
+    "record_format": "sha256 + two ASCII spaces + relative POSIX path + LF"
+  }
+}

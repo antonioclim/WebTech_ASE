@@ -1,18 +1,30 @@
-# S09 — Routed Notes — English (British)
+# S09 — Routed Notes Application
 
-Local final source release with external acceptance gates open. This is a prepared local integration. Remote publication has not occurred. Applications need a separately qualified environment. Viewing HTML source in GitHub does not host a site.
+Current English collection candidate **3.0.0-rc.6**; selected object edition **1.2.4-rc.6**. Qualification and classroom acceptance remain pending.
 
-- [Beginner guide](RELEASES/v1.2.1/SOURCE_EXACT/guide/S09_INTERACTIVE_ULTRA_BEGINNER_GUIDE_EN_GB_v1.2.1.html)
-- [Student guide](RELEASES/v1.2.1/SOURCE_EXACT/companion/S09_STUDENT_GUIDE_EN_GB_v1.2.1.html)
-- [Required P03 portfolio](RELEASES/v1.2.1/SOURCE_EXACT/companion/S09_P03_PORTFOLIO_GUIDE_EN_GB_v1.2.1.html)
-- [Later P02 transfer](RELEASES/v1.2.1/SOURCE_EXACT/companion/S09_P02_TRANSFER_GUIDE_EN_GB_v1.2.1.html)
-- [54-field evidence form](RELEASES/v1.2.1/SOURCE_EXACT/form/FORM_S09_EN_GB.html)
-- [Seminar projection](RELEASES/v1.2.1/SOURCE_EXACT/projection/S09_SEMINAR_INTERACTIVE_PROJECTION_EN_GB_v1.2.0.html)
-- [Download the exact v1.2.1 student ZIP](RELEASES/v1.2.1/DOWNLOAD/TW2026_S09_STUDENT_EN_GB_v1.2.1_LOCAL_FINAL_SOURCE_ONLY.zip)
-- [Read the exact ZIP checksum](RELEASES/v1.2.1/DOWNLOAD/TW2026_S09_STUDENT_EN_GB_v1.2.1_LOCAL_FINAL_SOURCE_ONLY.zip.sha256)
-- [Read the current pointer](CURRENT_RELEASE_v1.2.1.json)
-- [Read the migration record](MIGRATION_FROM_PREVIOUS_VERSION_EN_GB.md)
+## Download and open
 
-The v1.1.0 package and unversioned PACKAGE_EXACT tree are superseded for new work. They remain historical cleanup candidates; their present remote existence and identity have not been reconfirmed. This navigation links only the new release. No remote object has been deleted. Phase3 source and archive labels are preserved as provenance and the separate outer Phase4 state records this integration.
+1. Download the complete student ZIP and its SHA-256 sidecar below.
+2. Extract the whole ZIP into a new writable folder. Do not open files inside the compressed archive.
+3. Start with `CLASSROOM_RC6/START.html` in the extracted package then follow `CLASSROOM_RC6/GUIDE.html`. Use the exact project folders and commands stated there.
+4. Complete the classroom microprojects individually and record the requested observations and evidence. Use the current guide to distinguish classroom work from further reading.
+5. Complete the linked submission form, review the exported PDF and submit it privately to the assignment specified by your lecturer. Local JSON exports, where supported, are backups.
 
-P01 is central individual work, P03 is required in the same PDF and P02 is conceptual transfer to a separate later capstone. Stop content after 60 minutes; the other 30 minutes are reserved. Submit one individual PDF named `TW2026_S09_GROUP_Surname_Firstname.pdf` through the actual assigned S09 activity after the save, reopen and review sequence in the guides. The actual deadline, upload size limit and service controls have not been verified here.
+| Current resource | Link |
+| --- | --- |
+| Complete student ZIP | [Complete student ZIP](RELEASES/v1.2.1/CURRENT/WEBTECH_ASE_S09_EN_GB_SUCCESSOR_RC6.zip) |
+| SHA-256 sidecar | [SHA-256 sidecar](RELEASES/v1.2.1/CURRENT/WEBTECH_ASE_S09_EN_GB_SUCCESSOR_RC6.zip.sha256) |
+| Start here | [Start here](RELEASES/v1.2.1/RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/CLASSROOM_RC6/START.html) |
+| Current guide | [Current guide](RELEASES/v1.2.1/RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/CLASSROOM_RC6/GUIDE.html) |
+| Submission form | [Submission form](RELEASES/v1.2.1/RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/CLASSROOM_RC6/EVIDENCE_FORM.html) |
+| Package identity | [Package identity](RELEASES/v1.2.1/RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/PACKAGE_ID.txt) |
+
+GitHub shows HTML source. Download and extract the selected ZIP to use the interactive lesson. A matching checksum establishes package identity; it does not establish successful execution on your own computer.
+
+[Authoritative current selection](../../../../metadata/student-selection.json) · [Whole-week navigation](../../README.md) · [All current weeks](../../../README.md)
+
+## Historical material
+
+Older `DOWNLOAD`, `PACKAGE_EXACT`, `PACKAGES` and versioned release folders remain for comparison. They are outside the current English selection. Use the current ZIP and guide linked above for class work. Romanian materials, where present, are retained legacy alternatives and have a separate status.
+
+[Preserved predecessor navigation](../../../../90_ARCHIVE/MAIN_4eea8de_NAVIGATION/README.md). Historical filenames containing `FINAL` do not qualify the current collection.

@@ -1,0 +1,67 @@
+{
+  "schema": "webtech-classroom-scope/v1",
+  "seminar": "S03",
+  "classroom_version": "1.0.0-rc.6",
+  "individual": true,
+  "all_projects_required": true,
+  "projects": [
+    {
+      "id": "P01",
+      "title": "Fresh task summary",
+      "editable_path": "CLASSROOM_RC6/targets/p01.mjs",
+      "completeScope": "Validate fixed task types, select Ada open tasks at threshold3 and return fresh ID/title/estimate records ordered by estimate then ID, with count/total."
+    },
+    {
+      "id": "P02",
+      "title": "Declarative leaf rule",
+      "editable_path": "CLASSROOM_RC6/targets/p02.mjs",
+      "completeScope": "Compile only one own-field leaf: equals or atLeast, reject an unknown operator and never coerce or use dynamic evaluation."
+    },
+    {
+      "id": "P03",
+      "title": "Defensive event normaliser",
+      "editable_path": "CLASSROOM_RC6/targets/p03.mjs",
+      "completeScope": "Validate own id/time/active/duration fields, reject stringfalse, sort a fresh array by time/id and create fresh output records."
+    }
+  ],
+  "scope": "GENUINE_NODE_MODULE_FIXED_FIXTURE_AND_IDENTITY_WITNESSES",
+  "source_commit": "4eea8de416cb03cf4f718fb802f868a391abb192",
+  "retained_original_full_project_completed_by_classroom_checks": false,
+  "legacy_form": "05_MOODLE_SUBMISSION/FORM_S03_EN_GB.html",
+  "legacy_guide": "00_START_HERE/S03_INTERACTIVE_ULTRA_BEGINNER_GUIDE_EN_GB_v1.2.html",
+  "timeline": [
+    {
+      "start": 0,
+      "end": 4,
+      "activity": "Record all project predictions and environment; original package and runtime prepared before class."
+    },
+    {
+      "start": 4,
+      "end": 16,
+      "activity": "P01 complete bounded scope; save evidence immediately."
+    },
+    {
+      "start": 16,
+      "end": 26,
+      "activity": "P02 complete bounded scope; save evidence immediately."
+    },
+    {
+      "start": 26,
+      "end": 40,
+      "activity": "P03 complete bounded scope; save evidence immediately."
+    },
+    {
+      "start": 40,
+      "end": 46,
+      "activity": "One genuine bounded Gemini/LLM claim and independent witness; unavailable interactions remain NOT_EXECUTED."
+    },
+    {
+      "start": 46,
+      "end": 60,
+      "activity": "Complete one private current-form PDF, inspect every page, stop owned listener and submit one file to the separate assignment if available."
+    }
+  ],
+  "timing_empirically_validated": false,
+  "native_acceptance": false,
+  "genuine_llm_exchange_performed_by_maintainer": false
+}

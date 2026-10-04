@@ -1,0 +1,1 @@
+export async function checkStatus({policy,render}){render({state:'loading'});try{const data=await policy();const model={state:'success',data};render(model);return model}catch(error){const model={state:'error',message:error.message};render(model);return model}}

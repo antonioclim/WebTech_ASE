@@ -1,9 +1,20 @@
-# Week 09 — Routing, Forms and Full-Stack React
+# Week 09
 
-WIP/PREVIEW; a local review bundle, not FINAL and not a browser-upload kit.
+Current English collection candidate **3.0.0-rc.6**. The links below select one course and one seminar from the same current collection. Qualification and classroom acceptance remain pending.
 
-[Open local index](index.html) · [C09](C09_COURSE/README.md) · [S09](S09_SEMINAR/README.md)
+| Object | Current navigation | ZIP | Start | Guide | Submission |
+| --- | --- | --- | --- | --- | --- |
+| C09 — Routing, forms and full-stack React | [Open](C09_COURSE/EN_GB/README.md) | [ZIP](C09_COURSE/EN_GB/CURRENT/WEBTECH_ASE_C09_EN_GB_RECONSTRUCTED_RC5.zip) | [Start](C09_COURSE/EN_GB/RELEASES/collection-3.0.0-rc.5/SOURCE_EXACT/index.html) | [Guide](C09_COURSE/EN_GB/RELEASES/collection-3.0.0-rc.5/SOURCE_EXACT/course.html) | Lecturer-defined, if required |
+| S09 — Routed Notes Application | [Open](S09_SEMINAR/EN_GB/README.md) | [ZIP](S09_SEMINAR/EN_GB/RELEASES/v1.2.1/CURRENT/WEBTECH_ASE_S09_EN_GB_SUCCESSOR_RC6.zip) | [Start](S09_SEMINAR/EN_GB/RELEASES/v1.2.1/RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/CLASSROOM_RC6/START.html) | [Guide](S09_SEMINAR/EN_GB/RELEASES/v1.2.1/RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/CLASSROOM_RC6/GUIDE.html) | [Form](S09_SEMINAR/EN_GB/RELEASES/v1.2.1/RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/CLASSROOM_RC6/EVIDENCE_FORM.html) |
 
-P01 Routed Notes is the sole full central implementation. P03 Deep-Link Failure Repair is required individual portfolio work. P02 Full-Stack Notes CRUD transfers to the semester project; it is not an extra full implementation or hidden marking criterion in the S09 hour. Each meeting has 60 minutes of content and an explicit STOP. The other 30 reserved minutes are not overflow. One final PDF is submitted to the private S09 Assignment after actual completion; there is no C09 Assignment or invented deadline.
+[Current whole-week ZIP](../../90_RELEASES/assets/WebTech_ASE_WEEK_09_EN_GB_v3.0.0-rc.6.zip) · [SHA-256 sidecar](../../90_RELEASES/assets/WebTech_ASE_WEEK_09_EN_GB_v3.0.0-rc.6.zip.sha256).
 
-PACKAGE_EXACT contains each entire public package. DOWNLOAD contains the exact original ZIP and sidecar. No private reference or teacher console belongs in this bundle. No new qualification, installation, site activation or remote change is implied.
+The whole-week ZIP contains the selected course and seminar as nested ZIPs. Extract the outer bundle, read its README, extract each object into its own folder then follow that object's guide. Alternatively use the individual ZIP links above.
+
+[Authoritative current selection](../../metadata/student-selection.json) · [All current weeks](../README.md)
+
+## Historical material
+
+Older `DOWNLOAD`, `PACKAGE_EXACT`, `PACKAGES` and versioned release folders remain for comparison. They are outside the current English selection. Use the current ZIP and guide linked above for class work. Romanian materials, where present, are retained legacy alternatives and have a separate status.
+
+[Preserved predecessor navigation](../../90_ARCHIVE/MAIN_4eea8de_NAVIGATION/README.md). Historical filenames containing `FINAL` do not qualify the current collection.

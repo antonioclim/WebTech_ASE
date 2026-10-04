@@ -1,0 +1,15 @@
+{
+  "schema": "TW2026_S09_PUBLIC_MOODLE_GUIDANCE/1.2.0",
+  "audience": "PUBLIC_STUDENT",
+  "status": "LOCAL_GUIDANCE_CANDIDATE_NOT_APPLIED",
+  "actual_deadline": null,
+  "actual_maximum_file_size": null,
+  "actual_ui_verified": false,
+  "live_operations": 0,
+  "private_answer_key_included": false,
+  "marks_awarded": false,
+  "institutional_pass_rule": null,
+  "rubric_groups": 6,
+  "rubric_atomic_criteria": 23,
+  "rubric_maximum_exact": "10.00"
+}

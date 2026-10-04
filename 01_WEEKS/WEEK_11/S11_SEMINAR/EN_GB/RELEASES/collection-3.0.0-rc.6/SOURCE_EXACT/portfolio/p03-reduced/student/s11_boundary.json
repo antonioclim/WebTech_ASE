@@ -1,0 +1,15 @@
+{
+  "root": "portfolio/p03-reduced/student",
+  "allowed": "src/security-boundary.js",
+  "files": {
+    "README.md": "528aa7e9f08023b03f2c67c445432b4b919037907ec8e41d92cd84d5db81687d",
+    "checks/infrastructure.test.mjs": "6ba07145528f5a434c091da496fc8383a721631b3193fe2009b94a462c00c374",
+    "checks/successor-inputs.test.mjs": "9fdeed493575dd31aefd097b28e212bf7056a020aaad842796608beabc6c8c92",
+    "package.json": "fd84ae6e2e35dc10533c10a3de9dfec43368789b71052e007d857e3e252edc29",
+    "src/security-boundary.js": "8f941136b714b75f698afa63595251b838cc07ebdaae100d22dfebb07fd66020",
+    "src/support.js": "35b274e17a45e0c45e80ed49a601be19f53faa4c33a15707c311744a7d7d7cc6",
+    "tests/baseline.test.mjs": "c482c88d1d97445d1cda843c9a23fe0295a4a56e1e88274a51742242384b4dcd",
+    "tests/objective.test.mjs": "8c71f9e9f5da050d46dbc091643d1627378ae1f7b2b85fdbc1945793c9243f2a",
+    "tests/regression.test.mjs": "d7cf4f1f16f74ab26f6d5039f8abbd2b233aab22a9e25b4cdff7bc364e3e49ab"
+  }
+}

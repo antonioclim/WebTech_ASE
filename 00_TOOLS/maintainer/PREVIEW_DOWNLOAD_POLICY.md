@@ -1,27 +1,25 @@
-# Student WIP preview distribution — Weeks 03–14
+# Current English candidate distribution policy
 
-## Distribution and qualification are different decisions
+Current English collection candidate **3.0.0-rc.6**. Qualification and classroom acceptance remain pending.
 
-The student-content candidates are made browsable and downloadable with explicit warnings. This lane does not assert that qualified-release admission gates passed. Weeks 01–02, their paths, original archives and the live S01 addition remain unchanged.
+[Authoritative current selection](../../metadata/student-selection.json) · [Current whole-week plan](../../90_RELEASES/FULL_COLLECTION_PLAN.json) · [Complete collection release plan](../../90_RELEASES/COLLECTION_RELEASE_PLAN.json) · [All current weeks](../../01_WEEKS/README.md)
 
-Weeks 03–14 follow `week → course/seminar → language`. Original course and seminar ZIPs remain in `DOWNLOAD`; complete byte-identical extracted copies remain in `PACKAGE_EXACT` with flat package roots. GitHub displays HTML source rather than running the lesson and no Pages deployment is implied.
+The registry selects exactly thirty objects and the full-week plan pins all fourteen course/seminar pairs. Current navigation must use those exact archives, projections, start files, guides and forms. Historical `DOWNLOAD`, `PACKAGE_EXACT`, scoped RC2 and old PREVIEW routes are retained as evidence and are outside the current selection.
 
-Weeks 03–07 retain the already published WIP preview objects and whole-week preview ZIPs. Weeks 08–14 add public-only course and seminar objects from the locally audited candidates. They do not add teacher packages, private references, consoles, marking material, Moodle administration or internal QA.
+## Integrity and qualification
 
-## Immutable object payloads
+The current repository identity covers the actual current source file set. Package manifests, sidecars and deterministic replay establish consistency and byte identity within their declared scopes. They are not authenticated observer statements and do not establish runtime, native browser, database-driver, Microsoft Word, Moodle or classroom acceptance. Real observations must bind the current registry and current source identity before a qualified successor can be considered.
 
-Course and seminar packages retain their original versions, manifests, `PACKAGE_ID` values and bytes. Wrapper metadata records WIP preview status. It does not promote runtime, browser, database, security, platform, Word or Moodle status to PASS.
+## Manual publication
 
-## Repository identity during WIP
+Validation, release and Pages workflows have manual triggers. The owner alone launches Actions. The complete collection release plan declares the filtered student ZIP and checksum. Publication must use that generated filtered artifact rather than GitHub's automatic whole-source archive. Pages likewise uses the filtered payload. Candidate publication, if explicitly selected by the owner, remains a draft/prerelease and cannot manufacture missing qualification.
 
-`REPOSITORY_SHA256SUMS.txt` and `REPOSITORY_PACKAGE_ID.txt` continue to describe the last frozen baseline, as required by `REPOSITORY_PACKAGE_ID_METHOD.md`. They are not regenerated for this WIP preview expansion. A final freeze would require its own complete validation and explicit authorisation.
+## Public content boundary
 
-## What remains blocked
+Retain student starter projects, public rubrics, protected assessment tests and student-facing evidence forms. Exclude teacher solutions, private positive controls, student evidence, account data and Moodle administration. A public repository branch is public. Existing historical public material is retained rather than represented as a private vault.
 
-Do not treat a preview as a qualified release, deploy Pages, run publication workflows, create Releases or apply historical cumulative patches. Full application execution, genuine database/driver observations, browser/platform checks and Moodle configuration remain separate gates.
+## Historical material
 
-A branch of a public repository is public. Never upload a teacher package, restricted solution, console, internal QA archive, student evidence or private handover.
+Older `DOWNLOAD`, `PACKAGE_EXACT`, `PACKAGES` and versioned release folders remain for comparison. They are outside the current English selection. Use the current ZIP and guide linked above for class work. Romanian materials, where present, are retained legacy alternatives and have a separate status.
 
-## Owner operation
-
-Use the browser-only upload kit on one short-lived review branch based on the pinned commit. Upload only the contents of each `UPLOAD_CONTENTS` directory at repository root. Review the exact changed paths and stop before merge for a read-only audit. This projection changes access to student material, not its qualification.
+[Preserved predecessor navigation](../../90_ARCHIVE/MAIN_4eea8de_NAVIGATION/README.md). Historical filenames containing `FINAL` do not qualify the current collection.

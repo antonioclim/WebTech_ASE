@@ -1,16 +1,20 @@
-# Week 06 — Persistence with Sequelize and SQLite
+# Week 06
 
-- [S06 Query API v1.2.0 student route](S06_SEMINAR/EN_GB/README.md)
-- [Existing C06 course route](C06_COURSE/EN_GB/README.md)
-- [Distribution status](DISTRIBUTION_STATUS.json)
-- [Qualification status](QUALIFICATION_STATUS.md)
+Current English collection candidate **3.0.0-rc.6**. The links below select one course and one seminar from the same current collection. Qualification and classroom acceptance remain pending.
 
-S06 v1.2.0 is the locally audited teaching edition prepared for a WIP preview. C06 course files and its v1.1.0 ZIP are unchanged by this S06 patch. The old paired week ZIP is not regenerated and is not the current S06 download.
+| Object | Current navigation | ZIP | Start | Guide | Submission |
+| --- | --- | --- | --- | --- | --- |
+| C06 — Persistence with Sequelize and SQLite | [Open](C06_COURSE/EN_GB/README.md) | [ZIP](C06_COURSE/EN_GB/CURRENT/WEBTECH_ASE_C06_EN_GB_RECONSTRUCTED_RC5.zip) | [Start](C06_COURSE/EN_GB/RELEASES/collection-3.0.0-rc.5/SOURCE_EXACT/index.html) | [Guide](C06_COURSE/EN_GB/RELEASES/collection-3.0.0-rc.5/SOURCE_EXACT/course.html) | Lecturer-defined, if required |
+| S06 — Query API | [Open](S06_SEMINAR/EN_GB/README.md) | [ZIP](S06_SEMINAR/EN_GB/CURRENT/WEBTECH_ASE_S06_EN_GB_SUCCESSOR_RC6.zip) | [Start](S06_SEMINAR/EN_GB/RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/CLASSROOM_RC6/START.html) | [Guide](S06_SEMINAR/EN_GB/RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/CLASSROOM_RC6/GUIDE.html) | [Form](S06_SEMINAR/EN_GB/RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/CLASSROOM_RC6/EVIDENCE_FORM.html) |
 
-P02 is the only required complete implementation. The short SQLite file observation is required separately; complete P01 and P03 are optional. One S06 PDF submission covers the evidence, including bounded actual Gemini review; there is no C06 Assignment.
+[Current whole-week ZIP](../../90_RELEASES/assets/WebTech_ASE_WEEK_06_EN_GB_v3.0.0-rc.6.zip) · [SHA-256 sidecar](../../90_RELEASES/assets/WebTech_ASE_WEEK_06_EN_GB_v3.0.0-rc.6.zip.sha256).
 
-Content and package checks passed locally. Genuine Express/Sequelize/sqlite3 application, native driver, query and file lifecycle execution, Windows/macOS, native browser and Word acceptance, actual Gemini interaction, Moodle live and owner acceptance remain open. Source-derived expectations and synthetic evidence do not qualify these properties.
+The whole-week ZIP contains the selected course and seminar as nested ZIPs. Extract the outer bundle, read its README, extract each object into its own folder then follow that object's guide. Alternatively use the individual ZIP links above.
 
-The v1.1.0 download and unversioned PACKAGE_EXACT leaves are superseded for the S06 route. They remain physically present for history until a separately authorised final-freeze cleanup. This navigation does not link to them.
+[Authoritative current selection](../../metadata/student-selection.json) · [All current weeks](../README.md)
 
-This is a bounded Week 06/S06 delta. No current full-repository identity is regenerated during WIP production. Any retained historical week/repository manifests bind their original scope, not the proposed composite WIP state.
+## Historical material
+
+Older `DOWNLOAD`, `PACKAGE_EXACT`, `PACKAGES` and versioned release folders remain for comparison. They are outside the current English selection. Use the current ZIP and guide linked above for class work. Romanian materials, where present, are retained legacy alternatives and have a separate status.
+
+[Preserved predecessor navigation](../../90_ARCHIVE/MAIN_4eea8de_NAVIGATION/README.md). Historical filenames containing `FINAL` do not qualify the current collection.

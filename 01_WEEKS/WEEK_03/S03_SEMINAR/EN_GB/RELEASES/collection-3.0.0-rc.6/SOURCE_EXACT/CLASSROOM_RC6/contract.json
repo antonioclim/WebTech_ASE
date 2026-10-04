@@ -1,0 +1,64 @@
+{
+  "seminar": "S03",
+  "classroomVersion": "1.0.0-rc.6",
+  "projects": [
+    {
+      "id": "P01",
+      "title": "Fresh task summary",
+      "mutableTarget": "targets/p01.mjs",
+      "mutablePathBase": "CLASSROOM_RC6",
+      "packageRootMutableTarget": "CLASSROOM_RC6/targets/p01.mjs",
+      "completeScope": "Validate fixed task types, select Ada open tasks at threshold3 and return fresh ID/title/estimate records ordered by estimate then ID, with count/total.",
+      "requiredEvidence": [
+        "Prediction for T2/T3",
+        "Result and immutable-input witness",
+        "Invalid string estimate observation"
+      ],
+      "minutes": 12
+    },
+    {
+      "id": "P02",
+      "title": "Declarative leaf rule",
+      "mutableTarget": "targets/p02.mjs",
+      "mutablePathBase": "CLASSROOM_RC6",
+      "packageRootMutableTarget": "CLASSROOM_RC6/targets/p02.mjs",
+      "completeScope": "Compile only one own-field leaf: equals or atLeast, reject an unknown operator and never coerce or use dynamic evaluation.",
+      "requiredEvidence": [
+        "Strict numeric/string counterexample",
+        "Inherited field counterexample",
+        "Reusable predicate result"
+      ],
+      "minutes": 10
+    },
+    {
+      "id": "P03",
+      "title": "Defensive event normaliser",
+      "mutableTarget": "targets/p03.mjs",
+      "mutablePathBase": "CLASSROOM_RC6",
+      "packageRootMutableTarget": "CLASSROOM_RC6/targets/p03.mjs",
+      "completeScope": "Validate own id/time/active/duration fields, reject stringfalse, sort a fresh array by time/id and create fresh output records.",
+      "requiredEvidence": [
+        "Before/after input snapshots",
+        "Stringfalse rejection",
+        "Record identity and equal-time tie result"
+      ],
+      "minutes": 14
+    }
+  ],
+  "initialAssertionFailures": [
+    "P01.selected-summary",
+    "P01.validate-filtered-record",
+    "P02.strict-leaf",
+    "P02.invalid-definition",
+    "P03.fresh-tie-order",
+    "P03.exact-boolean-and-own-fields"
+  ],
+  "evidenceScope": "GENUINE_NODE_MODULE_FIXED_FIXTURE_AND_IDENTITY_WITNESSES",
+  "limitation": "The leaf rule is a completed bounded language, not the original recursive full rule engine. Fixed synthetic data and finite checks do not prove all JavaScript objects.",
+  "qualification": {
+    "native": false,
+    "pilot60min": false,
+    "humanLanguage": false,
+    "Moodle": false
+  }
+}

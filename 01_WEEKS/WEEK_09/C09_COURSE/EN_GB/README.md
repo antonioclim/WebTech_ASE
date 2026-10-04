@@ -1,12 +1,28 @@
-# C09 — English (British)
+# C09 — Routing, forms and full-stack React
 
-WIP/PREVIEW, not FINAL.
+Current English collection candidate **3.0.0-rc.6**; selected object edition **1.1.0**. Qualification and classroom acceptance remain pending.
 
-- [Open the complete student package](PACKAGE_EXACT/index.html)
-- [Open the interactive course](PACKAGE_EXACT/course.html)
-- [Download the exact student ZIP](DOWNLOAD/WEBTECH_ASE_C09_STUDENT_EN_GB_v1.1.0_PUBLIC.zip)
-- [Original ZIP checksum](DOWNLOAD/WEBTECH_ASE_C09_STUDENT_EN_GB_v1.1.0_PUBLIC.zip.sha256)
+## Download and open
 
-P01 Routed Notes is the sole full central implementation. P03 Deep-Link Failure Repair is required individual portfolio work. P02 Full-Stack Notes CRUD transfers to the semester project; it is not an extra full implementation or hidden marking criterion in the S09 hour. Each meeting has 60 minutes of content and an explicit STOP. The other 30 reserved minutes are not overflow. One final PDF is submitted to the private S09 Assignment after actual completion; there is no C09 Assignment or invented deadline.
+1. Download the complete student ZIP and its SHA-256 sidecar below.
+2. Extract the whole ZIP into a new writable folder. Do not open files inside the compressed archive.
+3. Start with `index.html` in the extracted package then follow `course.html`. Use the exact project folders and commands stated there.
+4. Follow the lesson and worked examples. Your lecturer supplies any assessment or submission requirement.
 
-PACKAGE_EXACT preserves the complete public archive. DOWNLOAD remains unchanged. Opening source on GitHub does not host a site or activate Pages.
+| Current resource | Link |
+| --- | --- |
+| Complete student ZIP | [Complete student ZIP](CURRENT/WEBTECH_ASE_C09_EN_GB_RECONSTRUCTED_RC5.zip) |
+| SHA-256 sidecar | [SHA-256 sidecar](CURRENT/WEBTECH_ASE_C09_EN_GB_RECONSTRUCTED_RC5.zip.sha256) |
+| Start here | [Start here](RELEASES/collection-3.0.0-rc.5/SOURCE_EXACT/index.html) |
+| Current guide | [Current guide](RELEASES/collection-3.0.0-rc.5/SOURCE_EXACT/course.html) |
+| Package identity | [Package identity](RELEASES/collection-3.0.0-rc.5/SOURCE_EXACT/PACKAGE_ID.txt) |
+
+GitHub shows HTML source. Download and extract the selected ZIP to use the interactive lesson. A matching checksum establishes package identity; it does not establish successful execution on your own computer.
+
+[Authoritative current selection](../../../../metadata/student-selection.json) · [Whole-week navigation](../../README.md) · [All current weeks](../../../README.md)
+
+## Historical material
+
+Older `DOWNLOAD`, `PACKAGE_EXACT`, `PACKAGES` and versioned release folders remain for comparison. They are outside the current English selection. Use the current ZIP and guide linked above for class work. Romanian materials, where present, are retained legacy alternatives and have a separate status.
+
+[Preserved predecessor navigation](../../../../90_ARCHIVE/MAIN_4eea8de_NAVIGATION/README.md). Historical filenames containing `FINAL` do not qualify the current collection.
