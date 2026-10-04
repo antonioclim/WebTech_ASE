@@ -11,7 +11,7 @@ For a single download covering both weeks, use the [combined English student arc
 
 Extract the outer bundle, then extract each selected object ZIP into a fresh writable folder. Use the named launcher; these four objects have no generic root `index.html`.
 
-The [hotfix QA record](WINDOWS_PATH_HOTFIX_QA.json) distinguishes fresh observations from inherited checks. Returned Windows logs established integrity passes for the unchanged C01, S01 and C02 objects, while S02 RC1 failed at its quoted root argument. RC2 needs native retesting. All seven native, human and owner acceptance gates remain pending; these candidates are not FINAL.
+The [hotfix QA record](WINDOWS_PATH_HOTFIX_QA.json) distinguishes fresh observations from inherited checks and preserves the original S02 RC1 root-argument failure. A subsequent [native RC2 integrity review](NATIVE_WINDOWS_INTEGRITY_RC2.md) records four successful verifiers and all 256 pristine files on the owner's Windows configuration, including S02 RC2. Package-root spaces and invocation from a different current directory remain unobserved native regressions. All seven broader native, human and owner acceptance gates remain pending; these candidates are not FINAL.
 
 ## Retained history
 
