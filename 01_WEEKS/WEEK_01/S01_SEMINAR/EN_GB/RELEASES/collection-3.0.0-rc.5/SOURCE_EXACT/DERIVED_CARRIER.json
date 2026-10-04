@@ -1,0 +1,172 @@
+{
+  "schema": "webtech-derived-carrier/v1",
+  "object_id": "S01",
+  "carrier_version": "6.1.2-rc.4",
+  "distribution_version": "3.0.0-rc.4",
+  "source_commit": "7f88fecfa972bfb41d4fffec3e47616842c7e067",
+  "intentional_baseline_commit": "1850118b3f619b233f89941802212fe59d8d5dfe",
+  "derived_from": {
+    "archive": "01_WEEKS/WEEK_01/S01_SEMINAR/EN_GB/DOWNLOAD/TW2026_S01_STUDENT_EN_GB_v6.1.1_RC1.zip",
+    "archive_sha256": "e454210ed5d8e3b59e76de233dc9464f5f19d7ca01ea1353323a119e34ff4439",
+    "package_id": "3b23b11995d12baf24c2ea9cdb2fde284663428303e7b327352e248c99b9325c",
+    "carrier_version": "6.1.1-rc.1"
+  },
+  "status": "LOCAL_RELEASE_CANDIDATE_PENDING_EXTERNAL_ACCEPTANCE",
+  "native_acceptance": "PENDING",
+  "identity_is_runtime_qualification": false,
+  "original_carrier_overwritten": false,
+  "original_external_bindings_are_history_not_current_byte_identity": true,
+  "content_and_mode_changes_before_sealing": [
+    {
+      "path": "CHECK_ENVIRONMENT.sh",
+      "change": "MODE",
+      "before_sha256": "9a35e0d048051ccd5fecddfc650881df11d0d4fbe5b976ac2eaf61836870fdbb",
+      "after_sha256": "9a35e0d048051ccd5fecddfc650881df11d0d4fbe5b976ac2eaf61836870fdbb",
+      "before_bytes": 288,
+      "after_bytes": 288,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "OPEN_BEGINNER_GUIDE.sh",
+      "change": "MODE",
+      "before_sha256": "b6cc905f901a13397a5b67744a423a8730224d02fd49dd30fe2281db0cd7d1d9",
+      "after_sha256": "b6cc905f901a13397a5b67744a423a8730224d02fd49dd30fe2281db0cd7d1d9",
+      "before_bytes": 465,
+      "after_bytes": 465,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "OPEN_MOODLE_FORM.sh",
+      "change": "MODE",
+      "before_sha256": "a8928e79488c84c6c35aaa4ba7c1c5316f93605885d0c2968959420368bb8a9f",
+      "after_sha256": "a8928e79488c84c6c35aaa4ba7c1c5316f93605885d0c2968959420368bb8a9f",
+      "before_bytes": 439,
+      "after_bytes": 439,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "START_PROJECT_1.sh",
+      "change": "MODE",
+      "before_sha256": "598851efdaf2325f59add7c18aa8a2eb1afa08b48bdbeab40e86679920f1e0dc",
+      "after_sha256": "598851efdaf2325f59add7c18aa8a2eb1afa08b48bdbeab40e86679920f1e0dc",
+      "before_bytes": 293,
+      "after_bytes": 293,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "START_PROJECT_2.sh",
+      "change": "MODE",
+      "before_sha256": "65376c16ecc37133872a481ee434bd7ec62ac404a45927484628ec831bc2275d",
+      "after_sha256": "65376c16ecc37133872a481ee434bd7ec62ac404a45927484628ec831bc2275d",
+      "before_bytes": 293,
+      "after_bytes": 293,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "STATUS_SERVERS.sh",
+      "change": "MODE",
+      "before_sha256": "f33e3df175b86fce696aaef83ffba4f9a73ad17bafd2d9bb131b1e979f4011cc",
+      "after_sha256": "f33e3df175b86fce696aaef83ffba4f9a73ad17bafd2d9bb131b1e979f4011cc",
+      "before_bytes": 291,
+      "after_bytes": 291,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "STOP_SERVERS.sh",
+      "change": "MODE",
+      "before_sha256": "d901788242675849f6969f1a625f71434a8305ab737b135c4ad5b37986e4f8e5",
+      "after_sha256": "d901788242675849f6969f1a625f71434a8305ab737b135c4ad5b37986e4f8e5",
+      "before_bytes": 289,
+      "after_bytes": 289,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "TEST_PROJECT_1.sh",
+      "change": "MODE",
+      "before_sha256": "ceb4464723c1d94bd0488bd9b753e67945f25fe6b0e4dccebfe696f1fc4af6da",
+      "after_sha256": "ceb4464723c1d94bd0488bd9b753e67945f25fe6b0e4dccebfe696f1fc4af6da",
+      "before_bytes": 292,
+      "after_bytes": 292,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "TEST_PROJECT_2.sh",
+      "change": "MODE",
+      "before_sha256": "ee8dc17c6b927ff1573dc9eab2fedb009bf599556b007cd6a10796c69bdedc39",
+      "after_sha256": "ee8dc17c6b927ff1573dc9eab2fedb009bf599556b007cd6a10796c69bdedc39",
+      "before_bytes": 292,
+      "after_bytes": 292,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "VERIFY_INITIAL_STATE.sh",
+      "change": "MODE",
+      "before_sha256": "c4cfc33505a7e77f2e207823c8c2a40ba5bf85f21e3d12ac3414565946e6d9ba",
+      "after_sha256": "c4cfc33505a7e77f2e207823c8c2a40ba5bf85f21e3d12ac3414565946e6d9ba",
+      "before_bytes": 292,
+      "after_bytes": 292,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "VERIFY_PACKAGE.sh",
+      "change": "MODE",
+      "before_sha256": "e98fb17abd6d2f3809c5a47d971bf21e821183741c05e8321e17b1ba5459ed45",
+      "after_sha256": "e98fb17abd6d2f3809c5a47d971bf21e821183741c05e8321e17b1ba5459ed45",
+      "before_bytes": 291,
+      "after_bytes": 291,
+      "before_mode": 420,
+      "after_mode": 493
+    },
+    {
+      "path": "VERIFY_WORK_RESULT.sh",
+      "change": "MODE",
+      "before_sha256": "03d035e4857a338086c5776d17dd1b4f1b5b1a0d6a6c77c5b3f2c26a64b3aada",
+      "after_sha256": "03d035e4857a338086c5776d17dd1b4f1b5b1a0d6a6c77c5b3f2c26a64b3aada",
+      "before_bytes": 291,
+      "after_bytes": 291,
+      "before_mode": 420,
+      "after_mode": 493
+    }
+  ],
+  "current_binding_changes": [],
+  "identity_contract": {
+    "method": "manifest-sha256",
+    "manifest": "90_AUDIT/PAYLOAD_SHA256SUMS.txt",
+    "package_id": "90_AUDIT/PACKAGE_ID.txt",
+    "manifest_exclusions": [
+      "90_AUDIT/PAYLOAD_SHA256SUMS.txt",
+      "90_AUDIT/PACKAGE_ID.txt"
+    ],
+    "path_order": "unicode-codepoint",
+    "encoding": "UTF-8",
+    "line_ending": "LF",
+    "record_format": "sha256 + two ASCII spaces + relative POSIX path + LF"
+  },
+  "edit_contract": {
+    "distribution_scope": "PRISTINE_EXACT_ALL_ARCHIVE_MEMBERS",
+    "student_work_scope": "DECLARED_PACKAGE_SPECIFIC_EDIT_BOUNDARY",
+    "policy_files": [
+      "90_AUDIT/KIT_CONFIG.json"
+    ],
+    "editable_files": [
+      "02_PROJECTS/P01_HTTP_DETECTIVE/case-report.json",
+      "02_PROJECTS/P02_TINY_HTTP_SERVER/src/application-handler.js"
+    ],
+    "project_roots": [],
+    "generated_directory_names": [],
+    "generated_exclusions_apply_only_to_declared_project_working_copies": true,
+    "generated_entries_in_release_carrier": "FORBIDDEN"
+  },
+  "mode_policy": "recognized shell .sh 0755; all other regular members 0644; source PID hashes bytes, outer ZIP SHA256 also authenticates entry modes",
+  "descriptor_repair": null
+}

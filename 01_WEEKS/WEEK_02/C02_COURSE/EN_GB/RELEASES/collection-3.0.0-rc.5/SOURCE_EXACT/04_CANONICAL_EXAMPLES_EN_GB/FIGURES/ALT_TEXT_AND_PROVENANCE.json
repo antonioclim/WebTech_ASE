@@ -1,0 +1,37 @@
+[
+  {
+    "file": "01_five_interface_gates.svg",
+    "title": "Five gates of an interface",
+    "alt_text": "A route from document meaning to the evidence that supports a claim.",
+    "provenance": "Generated for C02 v1.1 from the C02-A didactic contract; editable SVG; no external artwork."
+  },
+  {
+    "file": "02_form_relationships.svg",
+    "title": "Relationships of a form control",
+    "alt_text": "Name, description, grouping and state are distinct relationships connected to the control.",
+    "provenance": "Generated for C02 v1.1 from the C02-A didactic contract; editable SVG; no external artwork."
+  },
+  {
+    "file": "03_cascade_pipeline.svg",
+    "title": "Cascade process in the C02 demonstration",
+    "alt_text": "The declared demonstration stages: relevance, origin and importance, layer, specificity and order.",
+    "provenance": "Generated for C02 v1.1 from the C02-A didactic contract; editable SVG; no external artwork."
+  },
+  {
+    "file": "04_layout_map.svg",
+    "title": "Layout responsibility map",
+    "alt_text": "Four layout mechanisms, each associated with the relationship it expresses.",
+    "provenance": "Generated for C02 v1.1 from the C02-A didactic contract; editable SVG; no external artwork."
+  },
+  {
+    "file": "05_evidence_matrix.svg",
+    "title": "Evidence matrix",
+    "alt_text": "Examples of claims mapped to suitable evidence and the limit of that evidence.",
+    "provenance": "Generated for C02 v1.1 from the C02-A didactic contract; editable SVG; no external artwork."
+  },
+  {
+    "file": "06_interface_autopsy.svg",
+    "alt": "Diagram of an expense-claim interface with six callouts identifying a non-native control, an unstable name, hidden status, fixed height, divergent visual order and compulsory motion.",
+    "provenance": "Original diagram generated for C02 v1.1; historical 2025 materials supplied only the motif of interface diagnosis, not the artwork or code."
+  }
+]

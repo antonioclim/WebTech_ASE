@@ -1,0 +1,178 @@
+{
+  "schema": "C05_GUIDED_RECORDS",
+  "version": 1,
+  "recorded_runtime": "v22.16.0",
+  "classification": "RECORDED_MODULE_MODEL",
+  "records": [
+    {
+      "id": "G1",
+      "evidence_class": "MODULE_MODEL",
+      "inputs": {
+        "id": "G1",
+        "suppliedId": "  demo-7  ",
+        "start": 100,
+        "commit": 112,
+        "finish": 135,
+        "events": [
+          "finish"
+        ]
+      },
+      "observed": {
+        "requestId": "demo-7",
+        "generatorCalls": 0,
+        "nextCalls": 1,
+        "setHeaders": {
+          "x-request-id": "demo-7",
+          "x-response-time-ms": "12"
+        },
+        "committedHeaders": {
+          "x-request-id": "demo-7",
+          "x-response-time-ms": "12"
+        },
+        "logs": [
+          {
+            "requestId": "demo-7",
+            "method": "POST",
+            "path": "/api/reports",
+            "status": 201,
+            "durationMs": 12,
+            "outcome": "completed"
+          }
+        ],
+        "errors": [],
+        "listenersRemaining": {
+          "finish": 0,
+          "close": 0
+        }
+      },
+      "limit": "Executed reference observer only against doubles. No Express parser, HTTP bytes, real socket abort or browser."
+    },
+    {
+      "id": "G2",
+      "evidence_class": "MODULE_MODEL",
+      "inputs": {
+        "id": "G2",
+        "suppliedId": "   ",
+        "start": 100,
+        "commit": 112,
+        "finish": 135,
+        "events": [
+          "finish"
+        ]
+      },
+      "observed": {
+        "requestId": "generated-demo-1",
+        "generatorCalls": 1,
+        "nextCalls": 1,
+        "setHeaders": {
+          "x-request-id": "generated-demo-1",
+          "x-response-time-ms": "12"
+        },
+        "committedHeaders": {
+          "x-request-id": "generated-demo-1",
+          "x-response-time-ms": "12"
+        },
+        "logs": [
+          {
+            "requestId": "generated-demo-1",
+            "method": "POST",
+            "path": "/api/reports",
+            "status": 201,
+            "durationMs": 12,
+            "outcome": "completed"
+          }
+        ],
+        "errors": [],
+        "listenersRemaining": {
+          "finish": 0,
+          "close": 0
+        }
+      },
+      "limit": "Executed reference observer only against doubles. No Express parser, HTTP bytes, real socket abort or browser."
+    },
+    {
+      "id": "G3",
+      "evidence_class": "MODULE_MODEL",
+      "inputs": {
+        "id": "G3",
+        "suppliedId": "demo-7",
+        "start": 100,
+        "commit": 112,
+        "finish": 135,
+        "events": [
+          "finish",
+          "close"
+        ]
+      },
+      "observed": {
+        "requestId": "demo-7",
+        "generatorCalls": 0,
+        "nextCalls": 1,
+        "setHeaders": {
+          "x-request-id": "demo-7",
+          "x-response-time-ms": "12"
+        },
+        "committedHeaders": {
+          "x-request-id": "demo-7",
+          "x-response-time-ms": "12"
+        },
+        "logs": [
+          {
+            "requestId": "demo-7",
+            "method": "POST",
+            "path": "/api/reports",
+            "status": 201,
+            "durationMs": 12,
+            "outcome": "completed"
+          }
+        ],
+        "errors": [],
+        "listenersRemaining": {
+          "finish": 0,
+          "close": 0
+        }
+      },
+      "limit": "Executed reference observer only against doubles. No Express parser, HTTP bytes, real socket abort or browser."
+    },
+    {
+      "id": "G4",
+      "evidence_class": "MODULE_MODEL",
+      "inputs": {
+        "id": "G4",
+        "suppliedId": "demo-7",
+        "start": 100,
+        "commit": null,
+        "finish": 109,
+        "events": [
+          "close"
+        ]
+      },
+      "observed": {
+        "requestId": "demo-7",
+        "generatorCalls": 0,
+        "nextCalls": 1,
+        "setHeaders": {
+          "x-request-id": "demo-7"
+        },
+        "committedHeaders": null,
+        "logs": [
+          {
+            "requestId": "demo-7",
+            "method": "POST",
+            "path": "/api/reports",
+            "status": 200,
+            "durationMs": 9,
+            "outcome": "aborted"
+          }
+        ],
+        "errors": [],
+        "listenersRemaining": {
+          "finish": 0,
+          "close": 0
+        }
+      },
+      "limit": "Executed reference observer only against doubles. No Express parser, HTTP bytes, real socket abort or browser."
+    }
+  ],
+  "replay_command": "node tools/guided.mjs (private teacher package only)"
+}

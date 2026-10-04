@@ -1,0 +1,166 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Guided P02 observations</title><link rel="stylesheet" href="assets/theme.css"></head><body><a class="skip" href="#main">Skip to content</a><header><div class="brand">Web Technologies · Week 05 · C05 · v1.1.0</div><p>Guided P02 observations</p></header><main id="main"><p><a href="index.html">Course home</a> · <a href="lab.html">Current teaching-model laboratory</a></p><h1>One identity, one duration, one terminal record</h1><p class="notice">These records were produced locally by the private teacher driver using the exact P02 reference module on v22.16.0. They are recorded module observations, not HTTP measurements or browser captures. The complete implementation stays private. Use G1–G4 for the required guided observation, not as proof that your own code has run.</p><p>Predict first: identity, captured duration and log count. Then compare the record and state a limit. G1/G2 compare identity; G1 separates commitment from finish; G3 checks once-only logging; G4 models a pre-commit close.</p><p><a href="data/guided.json" download>Recorded observation JSON</a></p><section class="panel"><h2>G1 · Recorded MODULE_MODEL observation</h2><p>Inputs and result from the exact private P02 observer using declared doubles. Reading this is not a new execution.</p><pre>{
+  &quot;id&quot;: &quot;G1&quot;,
+  &quot;evidence_class&quot;: &quot;MODULE_MODEL&quot;,
+  &quot;inputs&quot;: {
+    &quot;id&quot;: &quot;G1&quot;,
+    &quot;suppliedId&quot;: &quot;  demo-7  &quot;,
+    &quot;start&quot;: 100,
+    &quot;commit&quot;: 112,
+    &quot;finish&quot;: 135,
+    &quot;events&quot;: [
+      &quot;finish&quot;
+    ]
+  },
+  &quot;observed&quot;: {
+    &quot;requestId&quot;: &quot;demo-7&quot;,
+    &quot;generatorCalls&quot;: 0,
+    &quot;nextCalls&quot;: 1,
+    &quot;setHeaders&quot;: {
+      &quot;x-request-id&quot;: &quot;demo-7&quot;,
+      &quot;x-response-time-ms&quot;: &quot;12&quot;
+    },
+    &quot;committedHeaders&quot;: {
+      &quot;x-request-id&quot;: &quot;demo-7&quot;,
+      &quot;x-response-time-ms&quot;: &quot;12&quot;
+    },
+    &quot;logs&quot;: [
+      {
+        &quot;requestId&quot;: &quot;demo-7&quot;,
+        &quot;method&quot;: &quot;POST&quot;,
+        &quot;path&quot;: &quot;/api/reports&quot;,
+        &quot;status&quot;: 201,
+        &quot;durationMs&quot;: 12,
+        &quot;outcome&quot;: &quot;completed&quot;
+      }
+    ],
+    &quot;errors&quot;: [],
+    &quot;listenersRemaining&quot;: {
+      &quot;finish&quot;: 0,
+      &quot;close&quot;: 0
+    }
+  },
+  &quot;limit&quot;: &quot;Executed reference observer only against doubles. No Express parser, HTTP bytes, real socket abort or browser.&quot;
+}</pre></section><section class="panel"><h2>G2 · Recorded MODULE_MODEL observation</h2><p>Inputs and result from the exact private P02 observer using declared doubles. Reading this is not a new execution.</p><pre>{
+  &quot;id&quot;: &quot;G2&quot;,
+  &quot;evidence_class&quot;: &quot;MODULE_MODEL&quot;,
+  &quot;inputs&quot;: {
+    &quot;id&quot;: &quot;G2&quot;,
+    &quot;suppliedId&quot;: &quot;   &quot;,
+    &quot;start&quot;: 100,
+    &quot;commit&quot;: 112,
+    &quot;finish&quot;: 135,
+    &quot;events&quot;: [
+      &quot;finish&quot;
+    ]
+  },
+  &quot;observed&quot;: {
+    &quot;requestId&quot;: &quot;generated-demo-1&quot;,
+    &quot;generatorCalls&quot;: 1,
+    &quot;nextCalls&quot;: 1,
+    &quot;setHeaders&quot;: {
+      &quot;x-request-id&quot;: &quot;generated-demo-1&quot;,
+      &quot;x-response-time-ms&quot;: &quot;12&quot;
+    },
+    &quot;committedHeaders&quot;: {
+      &quot;x-request-id&quot;: &quot;generated-demo-1&quot;,
+      &quot;x-response-time-ms&quot;: &quot;12&quot;
+    },
+    &quot;logs&quot;: [
+      {
+        &quot;requestId&quot;: &quot;generated-demo-1&quot;,
+        &quot;method&quot;: &quot;POST&quot;,
+        &quot;path&quot;: &quot;/api/reports&quot;,
+        &quot;status&quot;: 201,
+        &quot;durationMs&quot;: 12,
+        &quot;outcome&quot;: &quot;completed&quot;
+      }
+    ],
+    &quot;errors&quot;: [],
+    &quot;listenersRemaining&quot;: {
+      &quot;finish&quot;: 0,
+      &quot;close&quot;: 0
+    }
+  },
+  &quot;limit&quot;: &quot;Executed reference observer only against doubles. No Express parser, HTTP bytes, real socket abort or browser.&quot;
+}</pre></section><section class="panel"><h2>G3 · Recorded MODULE_MODEL observation</h2><p>Inputs and result from the exact private P02 observer using declared doubles. Reading this is not a new execution.</p><pre>{
+  &quot;id&quot;: &quot;G3&quot;,
+  &quot;evidence_class&quot;: &quot;MODULE_MODEL&quot;,
+  &quot;inputs&quot;: {
+    &quot;id&quot;: &quot;G3&quot;,
+    &quot;suppliedId&quot;: &quot;demo-7&quot;,
+    &quot;start&quot;: 100,
+    &quot;commit&quot;: 112,
+    &quot;finish&quot;: 135,
+    &quot;events&quot;: [
+      &quot;finish&quot;,
+      &quot;close&quot;
+    ]
+  },
+  &quot;observed&quot;: {
+    &quot;requestId&quot;: &quot;demo-7&quot;,
+    &quot;generatorCalls&quot;: 0,
+    &quot;nextCalls&quot;: 1,
+    &quot;setHeaders&quot;: {
+      &quot;x-request-id&quot;: &quot;demo-7&quot;,
+      &quot;x-response-time-ms&quot;: &quot;12&quot;
+    },
+    &quot;committedHeaders&quot;: {
+      &quot;x-request-id&quot;: &quot;demo-7&quot;,
+      &quot;x-response-time-ms&quot;: &quot;12&quot;
+    },
+    &quot;logs&quot;: [
+      {
+        &quot;requestId&quot;: &quot;demo-7&quot;,
+        &quot;method&quot;: &quot;POST&quot;,
+        &quot;path&quot;: &quot;/api/reports&quot;,
+        &quot;status&quot;: 201,
+        &quot;durationMs&quot;: 12,
+        &quot;outcome&quot;: &quot;completed&quot;
+      }
+    ],
+    &quot;errors&quot;: [],
+    &quot;listenersRemaining&quot;: {
+      &quot;finish&quot;: 0,
+      &quot;close&quot;: 0
+    }
+  },
+  &quot;limit&quot;: &quot;Executed reference observer only against doubles. No Express parser, HTTP bytes, real socket abort or browser.&quot;
+}</pre></section><section class="panel"><h2>G4 · Recorded MODULE_MODEL observation</h2><p>Inputs and result from the exact private P02 observer using declared doubles. Reading this is not a new execution.</p><pre>{
+  &quot;id&quot;: &quot;G4&quot;,
+  &quot;evidence_class&quot;: &quot;MODULE_MODEL&quot;,
+  &quot;inputs&quot;: {
+    &quot;id&quot;: &quot;G4&quot;,
+    &quot;suppliedId&quot;: &quot;demo-7&quot;,
+    &quot;start&quot;: 100,
+    &quot;commit&quot;: null,
+    &quot;finish&quot;: 109,
+    &quot;events&quot;: [
+      &quot;close&quot;
+    ]
+  },
+  &quot;observed&quot;: {
+    &quot;requestId&quot;: &quot;demo-7&quot;,
+    &quot;generatorCalls&quot;: 0,
+    &quot;nextCalls&quot;: 1,
+    &quot;setHeaders&quot;: {
+      &quot;x-request-id&quot;: &quot;demo-7&quot;
+    },
+    &quot;committedHeaders&quot;: null,
+    &quot;logs&quot;: [
+      {
+        &quot;requestId&quot;: &quot;demo-7&quot;,
+        &quot;method&quot;: &quot;POST&quot;,
+        &quot;path&quot;: &quot;/api/reports&quot;,
+        &quot;status&quot;: 200,
+        &quot;durationMs&quot;: 9,
+        &quot;outcome&quot;: &quot;aborted&quot;
+      }
+    ],
+    &quot;errors&quot;: [],
+    &quot;listenersRemaining&quot;: {
+      &quot;finish&quot;: 0,
+      &quot;close&quot;: 0
+    }
+  },
+  &quot;limit&quot;: &quot;Executed reference observer only against doubles. No Express parser, HTTP bytes, real socket abort or browser.&quot;
+}</pre></section></main><footer>C05 v1.1.0 · Local teaching candidate · No automatic assessment, publication or platform qualification.</footer></body></html>

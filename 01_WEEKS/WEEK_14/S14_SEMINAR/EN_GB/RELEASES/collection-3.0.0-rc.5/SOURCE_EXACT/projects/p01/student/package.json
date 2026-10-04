@@ -1,0 +1,13 @@
+{
+  "name": "regression-harness-reference",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node example.mjs",
+    "test": "npm run test:baseline && npm run test:objective && npm run test:regression",
+    "test:baseline": "node --test tests/baseline.test.mjs",
+    "test:objective": "node --test tests/objective.test.mjs",
+    "test:regression": "node --test tests/regression.test.mjs"
+  }
+}

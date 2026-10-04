@@ -1,0 +1,3 @@
+You are reviewing one small course example, not completing an assessed project. Explain who starts the asynchronous operation, who owns its returned promise and what evidence would refute the selected claim. Distinguish source reasoning, injected/model execution, local HTTP and a real browser. Do not assert that tests were executed. Give one bounded check, a provisional verdict and one remaining limitation. Do not request credentials, private data or a complete conversation. I will independently verify the claim.
+
+Selected sanitised excerpt or claim: [paste only the relevant non-private course excerpt here]

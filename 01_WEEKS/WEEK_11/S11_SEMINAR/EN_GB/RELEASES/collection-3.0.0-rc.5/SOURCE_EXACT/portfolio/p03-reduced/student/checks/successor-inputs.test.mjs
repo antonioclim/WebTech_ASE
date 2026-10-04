@@ -1,0 +1,16 @@
+import assert from "node:assert/strict";
+import test from "node:test";
+import { createReducedSecurityBoundary } from "../src/security-boundary.js";
+const make = (extra = {}) => createReducedSecurityBoundary({ trustedOrigins: ["https://course.example"], expectedCsrfToken: "synthetic-token-0001", compareTokens: (a, b) => a === b, ...extra });
+test("successor P03 absent origin has no sharing header", () => { const x = make().corsDecision({ method: "GET" }); assert.equal(x.allowed, true); assert.equal("Access-Control-Allow-Origin" in x.headers, false); assert.equal(x.headers.Vary, "Origin"); });
+test("successor P03 unsupported sharing method is refused", () => { assert.equal(make().corsDecision({ origin: "https://course.example", method: "DELETE" }).allowed, false); });
+test("successor P03 noncanonical method is refused", () => { assert.equal(make().corsDecision({ origin: "https://course.example", method: "get" }).allowed, false); });
+test("successor P03 nonstring origin is refused", () => { assert.equal(make().corsDecision({ origin: null, method: "GET" }).allowed, false); });
+test("successor P03 origin line breaks are refused", () => { assert.equal(make().corsDecision({ origin: "https://course.example\r\n", method: "GET" }).allowed, false); });
+test("successor P03 nonstring unsafe token is refused", () => { assert.equal(make().csrfDecision({ method: "PATCH", authMethod: "cookie", suppliedToken: [] }).allowed, false); });
+test("successor P03 malformed safe-method token is still refused", () => { assert.equal(make().csrfDecision({ method: "GET", authMethod: "cookie", suppliedToken: [] }).allowed, false); });
+test("successor P03 unknown unsafe authentication label is refused", () => { assert.equal(make().csrfDecision({ method: "PATCH", authMethod: "unknown" }).allowed, false); });
+test("successor P03 unknown safe authentication label is refused", () => { assert.equal(make().csrfDecision({ method: "GET", authMethod: "unknown" }).allowed, false); });
+test("successor P03 authentication labels are not case-coerced", () => { assert.equal(make().csrfDecision({ method: "PATCH", authMethod: "COOKIE" }).allowed, false); });
+test("successor P03 truthy nonboolean comparison does not grant access", () => { assert.equal(make({ compareTokens: () => "yes" }).csrfDecision({ method: "PATCH", authMethod: "cookie", suppliedToken: "synthetic-token-0001" }).allowed, false); });
+test("successor P03 configured token line breaks are rejected", () => { assert.throws(() => make({ expectedCsrfToken: "synthetic-token-0001\r\n" }), TypeError); });

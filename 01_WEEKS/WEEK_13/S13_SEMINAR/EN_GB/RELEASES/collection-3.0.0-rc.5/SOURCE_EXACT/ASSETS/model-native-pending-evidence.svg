@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+<title id="title">Keep evidence classes visible</title><desc id="desc">Separate evidence cards for source reading, model execution and native browser execution, with an explicit pending reason.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8" fill="#005B96"/></marker></defs>
+<rect x="0" y="0" width="1600" height="1000" rx="0" fill="#F3F6FA" stroke="none" stroke-width="2"/>
+<rect x="0" y="0" width="1600" height="158" rx="0" fill="#13263F" stroke="none" stroke-width="2"/>
+<text x="50" y="43" font-family="DejaVu Sans" font-size="22" font-weight="bold" fill="#FFFFFF" text-anchor="start">S13  /  VI09  /  ILLUSTRATIVE INTERFACE DIAGRAM</text>
+<text x="50" y="91" font-family="DejaVu Sans" font-size="38" font-weight="bold" fill="#FFFFFF" text-anchor="start">Keep evidence classes visible</text>
+<text x="50" y="132" font-family="DejaVu Sans" font-size="23" font-weight="normal" fill="#DCE8F7" text-anchor="start">Example classification table • no model result becomes a native browser receipt.</text>
+<rect x="50" y="203" width="1500" height="521" rx="16" fill="#FFFFFF" stroke="#A6B4C5" stroke-width="2"/>
+<rect x="52" y="205" width="1496" height="69" rx="16" fill="#E6F1FA" stroke="none" stroke-width="2"/>
+<text x="79" y="250" font-family="DejaVu Sans" font-size="23" font-weight="bold" fill="#13263F" text-anchor="start">CLASS</text>
+<text x="491" y="250" font-family="DejaVu Sans" font-size="23" font-weight="bold" fill="#13263F" text-anchor="start">WITNESS TO RETAIN</text>
+<text x="1081" y="250" font-family="DejaVu Sans" font-size="23" font-weight="bold" fill="#13263F" text-anchor="start">LIMIT</text>
+<circle cx="90" cy="332" r="22" fill="#005B96"/>
+<text x="90" y="340" font-family="DejaVu Sans" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle">1</text>
+<text x="124" y="340" font-family="DejaVu Sans" font-size="25" font-weight="bold" fill="#13263F" text-anchor="start">SOURCE</text>
+<text x="491" y="340" font-family="DejaVu Sans" font-size="24" font-weight="normal" fill="#13263F" text-anchor="start">File, hash and exact lines</text>
+<text x="1081" y="325" font-family="DejaVu Sans" font-size="23" font-weight="normal" fill="#13263F" text-anchor="start">Describes admitted code</text>
+<text x="1081" y="356" font-family="DejaVu Sans" font-size="23" font-weight="normal" fill="#13263F" text-anchor="start">without executing a browser.</text>
+<line x1="52" y1="392" x2="1548" y2="392" stroke="#A6B4C5" stroke-width="1"/>
+<rect x="52" y="401" width="1496" height="107" rx="0" fill="#F3F6FA" stroke="none" stroke-width="2"/>
+<circle cx="90" cy="441" r="22" fill="#005B96"/>
+<text x="90" y="449" font-family="DejaVu Sans" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle">2</text>
+<text x="124" y="449" font-family="DejaVu Sans" font-size="25" font-weight="bold" fill="#13263F" text-anchor="start">MODEL</text>
+<text x="491" y="449" font-family="DejaVu Sans" font-size="24" font-weight="normal" fill="#13263F" text-anchor="start">Named fixture and actual result</text>
+<text x="1081" y="434" font-family="DejaVu Sans" font-size="23" font-weight="normal" fill="#13263F" text-anchor="start">Supports that fixture only.</text>
+<text x="1081" y="465" font-family="DejaVu Sans" font-size="23" font-weight="normal" fill="#13263F" text-anchor="start">No real Worker/SW claim.</text>
+<line x1="52" y1="501" x2="1548" y2="501" stroke="#A6B4C5" stroke-width="1"/>
+<circle cx="90" cy="550" r="22" fill="#805300"/>
+<text x="90" y="558" font-family="DejaVu Sans" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle">3</text>
+<text x="124" y="558" font-family="DejaVu Sans" font-size="25" font-weight="bold" fill="#13263F" text-anchor="start">NATIVE WORKER</text>
+<text x="491" y="558" font-family="DejaVu Sans" font-size="24" font-weight="normal" fill="#13263F" text-anchor="start">Actual browser/context trace</text>
+<text x="1081" y="543" font-family="DejaVu Sans" font-size="23" font-weight="normal" fill="#13263F" text-anchor="start">NOT_EXECUTED in this</text>
+<text x="1081" y="574" font-family="DejaVu Sans" font-size="23" font-weight="normal" fill="#13263F" text-anchor="start">local production scope.</text>
+<line x1="52" y1="610" x2="1548" y2="610" stroke="#A6B4C5" stroke-width="1"/>
+<rect x="52" y="619" width="1496" height="107" rx="0" fill="#F3F6FA" stroke="none" stroke-width="2"/>
+<circle cx="90" cy="659" r="22" fill="#805300"/>
+<text x="90" y="667" font-family="DejaVu Sans" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle">4</text>
+<text x="124" y="667" font-family="DejaVu Sans" font-size="25" font-weight="bold" fill="#13263F" text-anchor="start">NATIVE SW</text>
+<text x="491" y="667" font-family="DejaVu Sans" font-size="24" font-weight="normal" fill="#13263F" text-anchor="start">Actual origin, states and trace</text>
+<text x="1081" y="652" font-family="DejaVu Sans" font-size="23" font-weight="normal" fill="#13263F" text-anchor="start">NOT_EXECUTED in this</text>
+<text x="1081" y="683" font-family="DejaVu Sans" font-size="23" font-weight="normal" fill="#13263F" text-anchor="start">local production scope.</text>
+<line x1="52" y1="719" x2="1548" y2="719" stroke="#A6B4C5" stroke-width="1"/>
+<rect x="50" y="755" width="1500" height="112" rx="12" fill="#FFF2D6" stroke="none" stroke-width="2"/>
+<text x="72" y="789.0" font-family="DejaVu Sans" font-size="25" font-weight="normal" fill="#13263F" text-anchor="start">When a route is unavailable, retain its actual reason, the missing observation and the next</text>
+<text x="72" y="821.5" font-family="DejaVu Sans" font-size="25" font-weight="normal" fill="#13263F" text-anchor="start">authorised action. A reasoned pending record remains a draft, not an automatic completed experiment.</text>
+<line x1="50" y1="891" x2="1550" y2="891" stroke="#A6B4C5" stroke-width="3"/>
+<text x="50" y="926" font-family="DejaVu Sans" font-size="21" font-weight="bold" fill="#13263F" text-anchor="start">Illustrative interface diagram: record a blocked native route without converting a model into a browser result.</text>
+<text x="50" y="981" font-family="DejaVu Sans" font-size="19" font-weight="normal" fill="#40516A" text-anchor="start">Locally authored diagram • No actual interface capture • Record your own browser, version, origin and evidence.</text>
+</svg>

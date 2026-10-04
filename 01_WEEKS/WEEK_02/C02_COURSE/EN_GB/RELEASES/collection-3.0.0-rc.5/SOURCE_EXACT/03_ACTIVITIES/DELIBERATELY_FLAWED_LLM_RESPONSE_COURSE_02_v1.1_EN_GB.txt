@@ -1,0 +1,12 @@
+DELIBERATELY FLAWED LLM RESPONSE — COURSE 02 v1.1 AUDIT OBJECT
+
+1. Keep <div class="approve"> and add cursor:pointer; this makes it equivalent to a button.
+2. Remove the outline for a cleaner appearance; browser focus still exists.
+3. Add height:12rem and overflow:hidden to every card so that cards remain equal.
+4. Apply .status { display:none !important; } whenever the status does not fit.
+5. Add overflow-x:hidden to body to remove scrolling at 320px.
+6. Move the action visually before the data with order:-1; keyboard order will adapt automatically.
+7. If the status remains invisible, add z-index:9999; specificity is probably the cause.
+8. One screenshot at 1280px is sufficient to confirm responsive design.
+
+Conclusion: the patch is accessible because it looks coherent, has four columns on desktop and no longer shows visible overflow.

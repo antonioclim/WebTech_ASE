@@ -1,0 +1,23 @@
+{
+  "object": "C02",
+  "releaseVersion": "1.2.3-rc.4",
+  "coreContentVersion": "v1.1 didactic core with audited C02 corrections",
+  "status": "LOCAL_DERIVED_RC4_PENDING_COMPLETE_QUALIFICATION",
+  "requiredNode": "v24.21.0",
+  "requiredNpm": "11.19.0",
+  "repositoryModified": true,
+  "moodleWorkflow": false,
+  "independentHostileAudit": false,
+  "gates": {
+    "automatedLocal": "Recorded separately in remediation evidence",
+    "nativeWindows": "PENDING",
+    "nativeWord": "PENDING",
+    "classroomPilot": "PENDING",
+    "githubActions": "NOT_EXECUTED"
+  },
+  "derived_carrier_version": "1.2.3-rc.4",
+  "previous_carrier_version": "1.2.2-rc.1",
+  "previous_descriptor_sha256": "5f941547764ed3e2957e6cd60fbf73be22d49837504b328cce6c5c4322e86142",
+  "current_derivation_record": "DERIVED_CARRIER.json",
+  "previous_observations_not_transferred_to_current_carrier": true
+}

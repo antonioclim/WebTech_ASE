@@ -1,0 +1,9 @@
+# S12 P03 public contract — central correlated request dispatcher
+
+The sole assessed root path is `projects/p03/student/src/request-dispatcher.mjs`. Relative to this P03 workspace use `student/src/request-dispatcher.mjs`. Read `spec.md` for the complete active contract. Preserve supplied infrastructure, tests, dependencies and lockfile. The supplied canonical source scripts have not been rewritten into a hidden install/network preflight.
+
+Pending ownership exists before send. Each request settles once on success, mapped remote/send failure, timeout, abort, close or disposal. Each terminal settlement removes its pending entry, timeout and per-request abort handler. The usable dispatcher intentionally retains one transport message/close subscription pair; dispatcher disposal removes that pair. The adapter separately owns two socket listeners and its own disposal. Local abort does not cancel remote execution. Zero pending is not global cleanup.
+
+Close permanently refuses later dispatch without sending. Retired IDs cannot be reused during the instance lifetime. A throwing ID generator returns a sanitised rejected promise. The default retained-ID limit is 1024 with an explicitly configured finite range 1..100000; capacity exhaustion refuses without send. Dispose permanently forbids dispatch and may release retained IDs. Automatic retries/reconnection and unbounded-lifetime guarantees are outside scope.
+
+The initial verifier admits only five named derived ERR_ASSERTION obligations, with canonical baseline2 and regression3 PASS. Direct dispatcher_unavailable rejection in the unchanged canonical starter objective is a real failure, not an intended assertion. Completed work requires canonical10 plus six derived lifecycle and two supplied adapter cases, total18. The real ws lane remains separately prepared and NOT_EXECUTED in Phase 2. P01 is an individual guided source/model trace and P02 is optional.

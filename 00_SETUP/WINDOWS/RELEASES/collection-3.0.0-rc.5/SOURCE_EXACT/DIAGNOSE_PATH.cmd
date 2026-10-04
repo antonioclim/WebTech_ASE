@@ -1,0 +1,1 @@
+@echo offsetlocalpowershell.exe -NoProfile -ExecutionPolicy Bypass -File "%~dp003_DIAGNOSTICS\DIAGNOSE_PATH.ps1" %*set "RC=%ERRORLEVEL%"echo.exit /b %RC%

@@ -1,0 +1,1 @@
+{"name":"lecture-bullmq-lifecycle","private":true,"type":"module","scripts":{"start":"node service.mjs","test":"node --test service.test.mjs"},"dependencies":{"bullmq":"6.0.10","express":"5.1.0","ioredis":"6.0.0"}}

@@ -1,0 +1,9 @@
+import assert from "node:assert/strict";
+import test from "node:test";
+import { SAFE_METHODS, normaliseOriginSet, isCanonicalHttpMethod, isHeaderText, isSupportedAuthMethod } from "../src/support.js";
+test("successor P03 safe-method collection has readonly compatible iteration", () => { assert.deepEqual([...SAFE_METHODS], ["GET", "HEAD", "OPTIONS"]); assert.equal(SAFE_METHODS.has("GET"), true); assert.equal(SAFE_METHODS.has("PATCH"), false); assert.equal(SAFE_METHODS.add, undefined); assert.equal(SAFE_METHODS.delete, undefined); assert.equal(Object.isFrozen(SAFE_METHODS), true); });
+test("successor P03 trusted origins require exact string HTTP origins", () => { assert.equal(normaliseOriginSet(["https://course.example"]).has("https://course.example"), true); for (const value of [null, [], {}, "https://course.example/path", "https://user@course.example", "file:///tmp/local"]) assert.throws(() => normaliseOriginSet([value]), TypeError); });
+test("successor P03 empty origin configuration is rejected", () => { assert.throws(() => normaliseOriginSet([]), TypeError); });
+test("successor P03 method predicate accepts only canonical uppercase names", () => { for (const value of ["GET", "PATCH", "OPTIONS"]) assert.equal(isCanonicalHttpMethod(value), true); for (const value of ["get", " GET", "", null, [], "GET\r\n"]) assert.equal(isCanonicalHttpMethod(value), false); });
+test("successor P03 header predicate rejects coercion and line breaks", () => { assert.equal(isHeaderText("synthetic-token-0001"), true); assert.equal(isHeaderText(""), true); for (const value of [null, undefined, [], {}, "token\r\nvalue"]) assert.equal(isHeaderText(value), false); });
+test("successor P03 authentication labels are explicit teaching inputs", () => { assert.equal(isSupportedAuthMethod("cookie"), true); assert.equal(isSupportedAuthMethod("bearer"), true); for (const value of ["COOKIE", "unknown", "", null, []]) assert.equal(isSupportedAuthMethod(value), false); });

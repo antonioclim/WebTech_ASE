@@ -1,72 +1,31 @@
-# WebTech_ASE — Web Technologies at ASE
+# Web Technologies — English student collection
 
-> **Repository work in progress. Automated validation, Pages deployment and weekly release publication remain manual-only while runtime and platform gates are open.**
+The current complete course candidate is **3.0.0-rc.5**, an explicit selection of 14 courses, 14 seminars and two Day 0 setup kits. It is reconstructed from the preserved RC4 student collection with a new S02 Windows correction and newly checked maintenance controls. Native and institutional acceptance remain separate.
 
-`WebTech_ASE` is the public, student-facing repository for the Web Technologies module at the Bucharest University of Economic Studies.
+- [Start and browse the English materials](index.html).
+- [Environment and setup](ENTRY/ENVIRONMENT.html).
+- [Course plan](ENTRY/COURSE_PLAN.html).
+- [Authoritative 30-object selection](metadata/student-selection.json).
+- [Reconstruction and limitations](00_TOOLS/maintainer/RECONSTRUCTED_RC5.md).
 
-## Available material
+Use the filtered student ZIP once supplied as a release asset. GitHub's **Source code** ZIP is the maintenance repository and includes historical editions, Romanian materials and publishing controls. They are retained for provenance; they are not the intended student download. The previous Weeks 01–02 RC2 distribution and native integrity evidence remain preserved under 90_RELEASES with their original scope.
 
-The working repository contains:
+## Maintainers
 
-- Day 0 setup for Windows, macOS and Linux;
-- weeks 1–2 as filtered English release candidates, with legacy Romanian alternatives;
-- weeks 3–14 as English student WIP previews;
-- offline student packages and evidence-oriented seminar forms;
-- Moodle submission guidance;
-- public checksums, extracted packages and repository validation tools.
+Reference: Python 3.12, Node **24.21.0** and `PyYAML==6.0.3`. After installing the pinned parser, run:
 
-## Start in three steps
-
-1. Complete [Day 0 setup](00_SETUP/README.md).
-2. Open [the student quick start](00_START_HERE/STUDENT_QUICK_START.md).
-3. Choose a week, then course or seminar, then language.
-
-For the English Weeks 01–02 route, [download both weeks together](90_RELEASES/assets/WEBTECH_ASE_WEEKS_01_02_EN_GB_v2.1.0-rc.2.zip) and read the [distribution catalogue](90_RELEASES/README.md). Extract the outer archive and then the selected object ZIPs. The material remains a release candidate with declared pending gates.
-
-```text
-week → course/seminar → language
+```sh
+python 00_TOOLS/qa/validate_public_repo.py --strict
+python 00_TOOLS/qa/student_release.py --mode integrity
+python 00_TOOLS/publishing/build_week_bundle.py --verify-all --plan 90_RELEASES/FULL_COLLECTION_PLAN.json
 ```
 
-## Week 01–14 material index
+Build the student ZIP or static site only into a new directory outside this checkout:
 
-[Choose a week, course or seminar](01_WEEKS/README.md).
-
-Weeks 01–02 provide one active EN package per course/seminar, corrected English guides, and a filtered candidate bundle. Legacy EN packages are retained in Git history; the duplicate standalone S01 guide is superseded. Weeks 03–14 are **student WIP previews**, not qualified final releases. Each course and seminar keeps its original ZIP in `DOWNLOAD` and a complete byte-identical extracted copy in `EN_GB/PACKAGE_EXACT`. GitHub displays HTML source rather than running the lesson. Pages is not activated by this distribution route.
-
-Runtime, native-platform, browser, Microsoft Word and Moodle acceptance remain separate gates. Read the [preview policy](00_TOOLS/maintainer/PREVIEW_DOWNLOAD_POLICY.md) and each package guide before running an application.
-
-## Seminar evidence and Moodle
-
-Seminar work follows this individual loop:
-
-```text
-prediction → experiment → evidence → Gemini audit → limitation → PDF → Moodle
+```sh
+python 00_TOOLS/publishing/build_student_collection.py --zip ../WEBTECH_ASE_EN_GB_v3.0.0-rc.5.zip
+python 00_TOOLS/publishing/build_pages_site.py --output ../webtech-student-site
+python 00_TOOLS/qa/validate_pages_payload.py --site ../webtech-student-site
 ```
 
-Read the [Moodle submission guide](00_START_HERE/MOODLE_SUBMISSION.md) before uploading work to `online.ase.ro`.
-
-## Public/private boundary
-
-This repository excludes teacher guides, answer keys, teacher consoles, restricted reference solutions, internal grading material, student submissions and internal QA archives. See [PRIVATE_CONTENT_POLICY.md](PRIVATE_CONTENT_POLICY.md).
-
-## Citation and rights
-
-Citation metadata is available in [CITATION.cff](CITATION.cff) and [codemeta.json](codemeta.json). During the WIP period these identify the last stable repository baseline rather than a newly frozen release. Copyright © 2026 Antonio Clim. All rights reserved. Public access does not create an open licence.
-
-## Support
-
-Use the issue forms for reproducible technical problems or content corrections. Do not post passwords, tokens, cookies, private Moodle data or student work. See [SUPPORT.md](SUPPORT.md) and [SECURITY.md](SECURITY.md).
-
-## Development status
-
-```text
-Stable baseline version: 2.0.1
-Current state: work in progress
-Automatic workflow triggers: none; manual execution controlled by the owner
-Pages deployment: intentionally deferred
-Repository identity: frozen baseline; regeneration deferred until final freeze
-Day 0: existing setup; weeks 1–2: English release candidates
-Additional material: weeks 3–14, unqualified WIP previews; DOWNLOAD + PACKAGE_EXACT
-Guidance language: English
-Legacy Romanian alternatives: C01, S01, C02 and S02
-```
+All three GitHub workflows are manual only. This reconstruction does not dispatch them. Final mode refuses absent or incomplete real observations for all ten fixed gates. A preview resolution retains draft and prerelease flags and does not grant qualification.

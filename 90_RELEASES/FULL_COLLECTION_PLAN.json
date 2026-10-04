@@ -1,0 +1,262 @@
+{
+  "schema": "webtech-full-collection-plan/v2",
+  "distribution_version": "3.0.0-rc.5",
+  "source_commit": "6c558434d6051b70c90eeb1e4fb65cbfbbdb2082",
+  "registry": "metadata/student-selection.json",
+  "registry_sha256": "a7a17cfb7d0bf58ff0d2d89a52919c491d2b64144c94f5aa7d2db1d03fe8b98a",
+  "status": "candidate",
+  "draft": true,
+  "prerelease": true,
+  "required_gates": [
+    "local_integrity",
+    "reference_runtime",
+    "headless_browser",
+    "native_windows",
+    "native_macos",
+    "manual_browser",
+    "word",
+    "moodle_live",
+    "human_pilot",
+    "owner_acceptance"
+  ],
+  "gates": {
+    "local_integrity": {
+      "status": "pending",
+      "scope": "current full 30-object collection; prior observations are not transferred"
+    },
+    "reference_runtime": {
+      "status": "pending",
+      "scope": "current full 30-object collection; prior observations are not transferred"
+    },
+    "headless_browser": {
+      "status": "pending",
+      "scope": "current full 30-object collection; prior observations are not transferred"
+    },
+    "native_windows": {
+      "status": "pending",
+      "scope": "current full 30-object collection; prior observations are not transferred"
+    },
+    "native_macos": {
+      "status": "pending",
+      "scope": "current full 30-object collection; prior observations are not transferred"
+    },
+    "manual_browser": {
+      "status": "pending",
+      "scope": "current full 30-object collection; prior observations are not transferred"
+    },
+    "word": {
+      "status": "pending",
+      "scope": "current full 30-object collection; prior observations are not transferred"
+    },
+    "moodle_live": {
+      "status": "pending",
+      "scope": "current full 30-object collection; prior observations are not transferred"
+    },
+    "human_pilot": {
+      "status": "pending",
+      "scope": "current full 30-object collection; prior observations are not transferred"
+    },
+    "owner_acceptance": {
+      "status": "pending",
+      "scope": "current full 30-object collection; prior observations are not transferred"
+    }
+  },
+  "weeks": {
+    "01": {
+      "bundle": "90_RELEASES/assets/WebTech_ASE_WEEK_01_EN_GB_v3.0.0-rc.5.zip",
+      "notes": "90_RELEASES/NOTES_WEEK_01_RC5.md",
+      "objects": {
+        "C01": {
+          "archive": "01_WEEKS/WEEK_01/C01_COURSE/EN_GB/CURRENT/WEBTECH_ASE_C01_EN_GB_RECONSTRUCTED_RC5.zip",
+          "sha256": "98b174777bba6940e9fc0dfd9d1549b5ea1891f67d07ae02ec010dc880b4e620"
+        },
+        "S01": {
+          "archive": "01_WEEKS/WEEK_01/S01_SEMINAR/EN_GB/CURRENT/WEBTECH_ASE_S01_EN_GB_RECONSTRUCTED_RC5.zip",
+          "sha256": "bb4f7c7fd04658f466eb33e0ba3a568efbbb5a893bfc51d79a01488a19d19f76"
+        }
+      }
+    },
+    "02": {
+      "bundle": "90_RELEASES/assets/WebTech_ASE_WEEK_02_EN_GB_v3.0.0-rc.5.zip",
+      "notes": "90_RELEASES/NOTES_WEEK_02_RC5.md",
+      "objects": {
+        "C02": {
+          "archive": "01_WEEKS/WEEK_02/C02_COURSE/EN_GB/CURRENT/WEBTECH_ASE_C02_EN_GB_RECONSTRUCTED_RC5.zip",
+          "sha256": "fe7e85054eec47c95e09bfe580aebe27f918590651694d74170251031c7c6404"
+        },
+        "S02": {
+          "archive": "01_WEEKS/WEEK_02/S02_SEMINAR/EN_GB/CURRENT/WEBTECH_ASE_S02_EN_GB_RECONSTRUCTED_RC5.zip",
+          "sha256": "c984577d6aa650670d76d023dc890769b77dc10bcb02003ea1034a5f70523679"
+        }
+      }
+    },
+    "03": {
+      "bundle": "90_RELEASES/assets/WebTech_ASE_WEEK_03_EN_GB_v3.0.0-rc.5.zip",
+      "notes": "90_RELEASES/NOTES_WEEK_03_RC5.md",
+      "objects": {
+        "C03": {
+          "archive": "01_WEEKS/WEEK_03/C03_COURSE/EN_GB/CURRENT/WEBTECH_ASE_C03_EN_GB_RECONSTRUCTED_RC5.zip",
+          "sha256": "eb210cf4809150d4a3b4e582b3172f8cebe826c4b8b28315c76d6d5ee0941141"
+        },
+        "S03": {
+          "archive": "01_WEEKS/WEEK_03/S03_SEMINAR/EN_GB/CURRENT/WEBTECH_ASE_S03_EN_GB_RECONSTRUCTED_RC5.zip",
+          "sha256": "ddd1ef4a7db54bb931b8ca603c434db2c9bb792fc0848eba87b3928153e2138a"
+        }
+      }
+    },
+    "04": {
+      "bundle": "90_RELEASES/assets/WebTech_ASE_WEEK_04_EN_GB_v3.0.0-rc.5.zip",
+      "notes": "90_RELEASES/NOTES_WEEK_04_RC5.md",
+      "objects": {
+        "C04": {
+          "archive": "01_WEEKS/WEEK_04/C04_COURSE/EN_GB/CURRENT/WEBTECH_ASE_C04_EN_GB_RECONSTRUCTED_RC5.zip",
+          "sha256": "f50d13d7a27190feda6095d1afad9fe17a838ed864279824d94730c1dc09fb9d"
+        },
+        "S04": {
+          "archive": "01_WEEKS/WEEK_04/S04_SEMINAR/EN_GB/CURRENT/WEBTECH_ASE_S04_EN_GB_RECONSTRUCTED_RC5.zip",
+          "sha256": "910d6c114872937816f08a23348adc2042a75271654e502a64f5768701443448"
+        }
+      }
+    },
+    "05": {
+      "bundle": "90_RELEASES/assets/WebTech_ASE_WEEK_05_EN_GB_v3.0.0-rc.5.zip",
+      "notes": "90_RELEASES/NOTES_WEEK_05_RC5.md",
+      "objects": {
+        "C05": {
+          "archive": "01_WEEKS/WEEK_05/C05_COURSE/EN_GB/CURRENT/WEBTECH_ASE_C05_EN_GB_RECONSTRUCTED_RC5.zip",
+          "sha256": "f2892b0a3d643aa3e6d726db15815dda4d8fdffc25a812ea5cd6f431482b0316"
+        },
+        "S05": {
+          "archive": "01_WEEKS/WEEK_05/S05_SEMINAR/EN_GB/CURRENT/WEBTECH_ASE_S05_EN_GB_RECONSTRUCTED_RC5.zip",
+          "sha256": "e2e33faf59ad48a9d43723efd0af82c279fe0b083bdd1a54c03606ecf168049e"
+        }
+      }
+    },
+    "06": {
+      "bundle": "90_RELEASES/assets/WebTech_ASE_WEEK_06_EN_GB_v3.0.0-rc.5.zip",
+      "notes": "90_RELEASES/NOTES_WEEK_06_RC5.md",
+      "objects": {
+        "C06": {
+          "archive": "01_WEEKS/WEEK_06/C06_COURSE/EN_GB/CURRENT/WEBTECH_ASE_C06_EN_GB_RECONSTRUCTED_RC5.zip",
+          "sha256": "1360ec20479cf169f50514a1108f4281d5daaf6be3f57075c4b59667cb6a6ecc"
+        },
+        "S06": {
+          "archive": "01_WEEKS/WEEK_06/S06_SEMINAR/EN_GB/CURRENT/WEBTECH_ASE_S06_EN_GB_RECONSTRUCTED_RC5.zip",
+          "sha256": "bd7e7033d8b91beff74613c1c6220b5a74ff2df37e91fb5b320f693812934c0e"
+        }
+      }
+    },
+    "07": {
+      "bundle": "90_RELEASES/assets/WebTech_ASE_WEEK_07_EN_GB_v3.0.0-rc.5.zip",
+      "notes": "90_RELEASES/NOTES_WEEK_07_RC5.md",
+      "objects": {
+        "C07": {
+          "archive": "01_WEEKS/WEEK_07/C07_COURSE/EN_GB/CURRENT/WEBTECH_ASE_C07_EN_GB_RECONSTRUCTED_RC5.zip",
+          "sha256": "68691ab132ab490a9c03878a070c6afd68713729698761f380a7e9e4fc987134"
+        },
+        "S07": {
+          "archive": "01_WEEKS/WEEK_07/S07_SEMINAR/EN_GB/CURRENT/WEBTECH_ASE_S07_EN_GB_RECONSTRUCTED_RC5.zip",
+          "sha256": "6235e463b2e8f7e763f7b514e94114a6394243b640a6087470582491b5484f10"
+        }
+      }
+    },
+    "08": {
+      "bundle": "90_RELEASES/assets/WebTech_ASE_WEEK_08_EN_GB_v3.0.0-rc.5.zip",
+      "notes": "90_RELEASES/NOTES_WEEK_08_RC5.md",
+      "objects": {
+        "C08": {
+          "archive": "01_WEEKS/WEEK_08/C08_COURSE/EN_GB/CURRENT/WEBTECH_ASE_C08_EN_GB_RECONSTRUCTED_RC5.zip",
+          "sha256": "74f8179da3fc93766a6c99350b1d47a61d4e9517e1501f4153e0b3f9ca545df5"
+        },
+        "S08": {
+          "archive": "01_WEEKS/WEEK_08/S08_SEMINAR/EN_GB/CURRENT/WEBTECH_ASE_S08_EN_GB_RECONSTRUCTED_RC5.zip",
+          "sha256": "df180f22e03061142d7d3f8539c1881b0df720d069fcdb2c778f49ad15e584c8"
+        }
+      }
+    },
+    "09": {
+      "bundle": "90_RELEASES/assets/WebTech_ASE_WEEK_09_EN_GB_v3.0.0-rc.5.zip",
+      "notes": "90_RELEASES/NOTES_WEEK_09_RC5.md",
+      "objects": {
+        "C09": {
+          "archive": "01_WEEKS/WEEK_09/C09_COURSE/EN_GB/CURRENT/WEBTECH_ASE_C09_EN_GB_RECONSTRUCTED_RC5.zip",
+          "sha256": "d993457d77c60b3758eec374cfc75407baf6b644ed60644240e8e6d527cfe822"
+        },
+        "S09": {
+          "archive": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/RELEASES/v1.2.1/CURRENT/WEBTECH_ASE_S09_EN_GB_RECONSTRUCTED_RC5.zip",
+          "sha256": "0906f775f097f0bbcc8688939fd20ac8307ccee0006acdfcbef99bf05594caa1"
+        }
+      }
+    },
+    "10": {
+      "bundle": "90_RELEASES/assets/WebTech_ASE_WEEK_10_EN_GB_v3.0.0-rc.5.zip",
+      "notes": "90_RELEASES/NOTES_WEEK_10_RC5.md",
+      "objects": {
+        "C10": {
+          "archive": "01_WEEKS/WEEK_10/C10_COURSE/EN_GB/CURRENT/WEBTECH_ASE_C10_EN_GB_RECONSTRUCTED_RC5.zip",
+          "sha256": "7c54b078a44e055ae97cc82ade83fdd2bc57f0b5f8d3e7c502a1713ae2bab78c"
+        },
+        "S10": {
+          "archive": "01_WEEKS/WEEK_10/S10_SEMINAR/EN_GB/CURRENT/WEBTECH_ASE_S10_EN_GB_RECONSTRUCTED_RC5.zip",
+          "sha256": "4954d3f21ea3b6dd36622bb17df5d62e4195315cb4b9dbd1e9152bfcc9415bd1"
+        }
+      }
+    },
+    "11": {
+      "bundle": "90_RELEASES/assets/WebTech_ASE_WEEK_11_EN_GB_v3.0.0-rc.5.zip",
+      "notes": "90_RELEASES/NOTES_WEEK_11_RC5.md",
+      "objects": {
+        "C11": {
+          "archive": "01_WEEKS/WEEK_11/C11_COURSE/EN_GB/CURRENT/WEBTECH_ASE_C11_EN_GB_RECONSTRUCTED_RC5.zip",
+          "sha256": "83f320517eead22fccb47e69e172330bf5df9dc16fc3bf649a87c719abebdbd4"
+        },
+        "S11": {
+          "archive": "01_WEEKS/WEEK_11/S11_SEMINAR/EN_GB/CURRENT/WEBTECH_ASE_S11_EN_GB_RECONSTRUCTED_RC5.zip",
+          "sha256": "ab5b1bf98f8f4e7a7483877eefd9f252f1edeacf7bc465f920d7c8d674bf05b6"
+        }
+      }
+    },
+    "12": {
+      "bundle": "90_RELEASES/assets/WebTech_ASE_WEEK_12_EN_GB_v3.0.0-rc.5.zip",
+      "notes": "90_RELEASES/NOTES_WEEK_12_RC5.md",
+      "objects": {
+        "C12": {
+          "archive": "01_WEEKS/WEEK_12/C12_COURSE/EN_GB/CURRENT/WEBTECH_ASE_C12_EN_GB_RECONSTRUCTED_RC5.zip",
+          "sha256": "7246bc915e12fc72aef18c562642bcec2150aec4c4152030da007edabaa128af"
+        },
+        "S12": {
+          "archive": "01_WEEKS/WEEK_12/S12_SEMINAR/EN_GB/CURRENT/WEBTECH_ASE_S12_EN_GB_RECONSTRUCTED_RC5.zip",
+          "sha256": "da2d8b581741d724876ae7d267a50913cd34ad96f2034edf8f2e1d4698697c8c"
+        }
+      }
+    },
+    "13": {
+      "bundle": "90_RELEASES/assets/WebTech_ASE_WEEK_13_EN_GB_v3.0.0-rc.5.zip",
+      "notes": "90_RELEASES/NOTES_WEEK_13_RC5.md",
+      "objects": {
+        "C13": {
+          "archive": "01_WEEKS/WEEK_13/C13_COURSE/EN_GB/CURRENT/WEBTECH_ASE_C13_EN_GB_RECONSTRUCTED_RC5.zip",
+          "sha256": "22d6f7e4100bd2d9787585505cbf85c187e48b74649ff020a30cfd292df9bb73"
+        },
+        "S13": {
+          "archive": "01_WEEKS/WEEK_13/S13_SEMINAR/EN_GB/CURRENT/WEBTECH_ASE_S13_EN_GB_RECONSTRUCTED_RC5.zip",
+          "sha256": "9b61309e7db12fa2b5f98105ef9b1f8bc905b4728a3a635588cd48c4c050133c"
+        }
+      }
+    },
+    "14": {
+      "bundle": "90_RELEASES/assets/WebTech_ASE_WEEK_14_EN_GB_v3.0.0-rc.5.zip",
+      "notes": "90_RELEASES/NOTES_WEEK_14_RC5.md",
+      "objects": {
+        "C14": {
+          "archive": "01_WEEKS/WEEK_14/C14_COURSE/EN_GB/CURRENT/WEBTECH_ASE_C14_EN_GB_RECONSTRUCTED_RC5.zip",
+          "sha256": "757dc13fb3a76a5a10702b0df53188a290efff9f97a144c6246990c1fe6d2715"
+        },
+        "S14": {
+          "archive": "01_WEEKS/WEEK_14/S14_SEMINAR/EN_GB/CURRENT/WEBTECH_ASE_S14_EN_GB_RECONSTRUCTED_RC5.zip",
+          "sha256": "c58661ae6e98888e7730df0ba3b3eb6c59de6f74ea330adb12d07b34b6339c86"
+        }
+      }
+    }
+  }
+}

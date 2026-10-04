@@ -1,1 +1,2 @@
-# The integrity validators use only the Python standard library.
+# Required by parsed, duplicate-aware YAML and workflow policy checks.
+PyYAML==6.0.3

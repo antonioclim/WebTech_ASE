@@ -1,0 +1,5 @@
+SYNTHETIC PRACTICE CLAIM — NOT A GEMINI RESPONSE
+
+“Rejecting pending promises on transport close is sufficient; later dispatch can safely continue without an explicit closed-state policy.”
+
+Use this only to practise independent verification. It is not a real model response or student observation.

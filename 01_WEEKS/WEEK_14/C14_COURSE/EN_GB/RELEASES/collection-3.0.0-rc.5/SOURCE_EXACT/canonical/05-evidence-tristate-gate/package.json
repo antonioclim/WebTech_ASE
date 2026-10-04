@@ -1,0 +1,1 @@
+{"name":"lecture-evidence-gate","private":true,"type":"module","scripts":{"start":"node review.mjs","test":"node --test review.test.mjs"}}

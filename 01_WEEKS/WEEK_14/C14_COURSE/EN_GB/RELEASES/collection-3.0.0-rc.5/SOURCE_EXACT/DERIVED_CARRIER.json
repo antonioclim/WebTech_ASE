@@ -1,0 +1,77 @@
+{
+  "schema": "webtech-derived-carrier/v1",
+  "object_id": "C14",
+  "carrier_version": "1.1.1-rc.4",
+  "distribution_version": "3.0.0-rc.4",
+  "source_commit": "7f88fecfa972bfb41d4fffec3e47616842c7e067",
+  "intentional_baseline_commit": "1850118b3f619b233f89941802212fe59d8d5dfe",
+  "derived_from": {
+    "archive": "01_WEEKS/WEEK_14/C14_COURSE/EN_GB/DOWNLOAD/WEBTECH_ASE_C14_STUDENT_EN_GB_v1.1.0_PUBLIC.zip",
+    "archive_sha256": "0e51e702f6c3a1e09308a3ea7927e1e33fa9fc3c42bf8cf43398b7e3ff53385f",
+    "package_id": "3997a731b8d3fea447e3d16fbc43b66815dc87222a845af6c012ee3f4be2e0a4",
+    "carrier_version": "1.1.0"
+  },
+  "status": "LOCAL_RELEASE_CANDIDATE_PENDING_EXTERNAL_ACCEPTANCE",
+  "native_acceptance": "PENDING",
+  "identity_is_runtime_qualification": false,
+  "original_carrier_overwritten": false,
+  "original_external_bindings_are_history_not_current_byte_identity": true,
+  "content_and_mode_changes_before_sealing": [
+    {
+      "path": "documents/C14_HANDOUT.md",
+      "change": "BYTES",
+      "before_sha256": "8028605117b55d1b8e0a9cc9b315cf4d7476e57df47563d77ce806c6fe332d7d",
+      "after_sha256": "185a21d3b3fb5bfccf6e2c957fe6d1f89f2ea345eec91ff6ee5a5d2cef3229c8",
+      "before_bytes": 11329,
+      "after_bytes": 11565,
+      "before_mode": 420,
+      "after_mode": 420
+    },
+    {
+      "path": "reading.html",
+      "change": "BYTES",
+      "before_sha256": "006c1dbe4203bcce9728e0a9fa2a70277cddae9add26320464f630151b2955cc",
+      "after_sha256": "d65743eb107912b8fe8c72e2bb56da3b23c172b46af71301d83462fd83e4c468",
+      "before_bytes": 13625,
+      "after_bytes": 14041,
+      "before_mode": 420,
+      "after_mode": 420
+    },
+    {
+      "path": "worked-mechanisms.html",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "059f23ae35bacb9f227b0954ba7b27e8258a222c2a2fa3983ccded883ba81af8",
+      "before_bytes": null,
+      "after_bytes": 25103,
+      "before_mode": null,
+      "after_mode": 420
+    }
+  ],
+  "current_binding_changes": [],
+  "identity_contract": {
+    "method": "manifest-sha256",
+    "manifest": "SHA256SUMS.txt",
+    "package_id": "PACKAGE_ID.txt",
+    "manifest_exclusions": [
+      "SHA256SUMS.txt",
+      "PACKAGE_ID.txt"
+    ],
+    "path_order": "unicode-codepoint",
+    "encoding": "UTF-8",
+    "line_ending": "LF",
+    "record_format": "sha256 + two ASCII spaces + relative POSIX path + LF"
+  },
+  "edit_contract": {
+    "distribution_scope": "PRISTINE_EXACT_ALL_ARCHIVE_MEMBERS",
+    "student_work_scope": "DECLARED_PACKAGE_SPECIFIC_EDIT_BOUNDARY",
+    "policy_files": [],
+    "editable_files": [],
+    "project_roots": [],
+    "generated_directory_names": [],
+    "generated_exclusions_apply_only_to_declared_project_working_copies": true,
+    "generated_entries_in_release_carrier": "FORBIDDEN"
+  },
+  "mode_policy": "recognized shell .sh 0755; all other regular members 0644; source PID hashes bytes, outer ZIP SHA256 also authenticates entry modes",
+  "descriptor_repair": null
+}

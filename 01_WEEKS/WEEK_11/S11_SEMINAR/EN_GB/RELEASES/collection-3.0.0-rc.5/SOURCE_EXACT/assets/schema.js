@@ -1,0 +1,547 @@
+globalThis.S11_SCHEMA = {
+  "schema": "TW2026_S11_EVIDENCE",
+  "version": "1.2.1",
+  "maxImportBytes": 2000000,
+  "sections": [
+    {
+      "id": "identity",
+      "title": "Identity and execution",
+      "intro": "Record your own evidence with class, result, locator and limitation. Keep the opening privacy rule throughout this section.",
+      "fields": [
+        {
+          "id": "student_alias",
+          "label": "Student alias, not a new institutional identifier",
+          "kind": "text",
+          "default": "",
+          "max": 16000,
+          "help": "Use the alias already known privately to your teacher, not an invented institutional identifier. Moodle retains the private association with your student account.",
+          "phase": "core"
+        },
+        {
+          "id": "group",
+          "label": "Teaching group",
+          "kind": "text",
+          "default": "",
+          "max": 16000,
+          "help": "Enter your real teaching group. The group and alias propose TW2026_S11_GROUP_ALIAS.pdf; check the saved name yourself.",
+          "phase": "core"
+        },
+        {
+          "id": "package_identity",
+          "label": "Package and version",
+          "kind": "text",
+          "default": "",
+          "max": 16000,
+          "help": "Record the package filename, v1.2.1 and PACKAGE_ID.txt value. A hash establishes byte identity, not execution or security.",
+          "phase": "core"
+        },
+        {
+          "id": "actual_environment",
+          "label": "Actual environment; do not copy the prescribed pin as measured",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "help": "Record measured Node/npm and platform, available tools and any incident. The prescribed Node 24.21.0/npm 11.19.0 pair is a requirement, not a measurement. Source/model fallback remains a draft.",
+          "phase": "core"
+        },
+        {
+          "id": "execution_status",
+          "label": "Actual execution class and status",
+          "kind": "select",
+          "default": "",
+          "max": 16000,
+          "help": "ACTUAL_RECORDED means your actual qualified normal execution; record the exact evidence class in each observation. SOURCE_ONLY, MODEL_ONLY, BLOCKED and a separately authorised alternative remain drafts in this candidate.",
+          "phase": "core",
+          "options": [
+            "",
+            "SOURCE_ONLY",
+            "MODEL_ONLY",
+            "ACTUAL_RECORDED",
+            "SEPARATELY_AUTHORISED_ALTERNATIVE",
+            "BLOCKED"
+          ]
+        },
+        {
+          "id": "source_revision",
+          "label": "Source and allowed-file identity",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "help": "Name the source version, allowed assessed file and diff locator. Preserve supplied support/tests/lockfiles. P02 policy and reduced P03 boundary are different assessed files.",
+          "phase": "core"
+        }
+      ]
+    },
+    {
+      "id": "trust",
+      "title": "Trust boundaries and prediction",
+      "intro": "Record your own evidence with class, result, locator and limitation. Keep the opening privacy rule throughout this section.",
+      "fields": [
+        {
+          "id": "principal_provenance",
+          "label": "Where the principal comes from; no credential values",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "help": "Trace the principal from the supplied local authentication fixture. State its limitation: it is not a production identity system. Do not record credential or session values.",
+          "phase": "core"
+        },
+        {
+          "id": "action_resource",
+          "label": "Constant action and server resource being considered",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "help": "Name the constant route action and the server-loaded report. Keep body-supplied role/owner/state claims separate from trusted authority.",
+          "phase": "core"
+        },
+        {
+          "id": "trust_map",
+          "label": "Trusted inputs and untrusted fields, without attack payloads",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "help": "List trusted principal/action/server resource and untrusted request fields. Use only supplied benign local fixtures; no exploit payloads or external targets.",
+          "phase": "core"
+        },
+        {
+          "id": "policy_prediction",
+          "label": "Predicted allowance or denial before observation",
+          "kind": "select",
+          "default": "",
+          "max": 16000,
+          "help": "Before observing, predict ALLOW, FORBID, CONCEAL or UNKNOWN for one named benign case. This selector is a prediction, not an execution result.",
+          "phase": "core",
+          "options": [
+            "",
+            "ALLOW",
+            "FORBID",
+            "CONCEAL",
+            "UNKNOWN"
+          ]
+        },
+        {
+          "id": "state_prediction",
+          "label": "Predicted distinction between permission and state precondition",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "help": "Predict whether the actor is allowed, then whether report state permits the transition. A state conflict differs from a permission denial.",
+          "phase": "core"
+        },
+        {
+          "id": "threat_table",
+          "label": "Asset, boundary, control, expected evidence and limitation",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "help": "Record asset, trust boundary, protective control, expected evidence and limitation. Use a compact text table; exclude private records and secrets.",
+          "phase": "core"
+        }
+      ]
+    },
+    {
+      "id": "p02",
+      "title": "Complete central P02 evidence",
+      "intro": "Record your own evidence with class, result, locator and limitation. Keep the opening privacy rule throughout this section.",
+      "fields": [
+        {
+          "id": "p02_diff",
+          "label": "Changed file and bounded diff locator",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "help": "Name projects/p02/student/src/authorization-policy.js and your bounded diff/capture locator. Do not claim support-file edits as permitted student work.",
+          "phase": "final"
+        },
+        {
+          "id": "p02_completion",
+          "label": "Full P02 completion status",
+          "kind": "select",
+          "default": "",
+          "max": 16000,
+          "help": "Record actual progress. COMPLETE_RECORDED is a claim requiring your evidence, not a status the form can verify.",
+          "phase": "final",
+          "options": [
+            "",
+            "NOT_STARTED",
+            "IN_PROGRESS",
+            "COMPLETE_RECORDED",
+            "BLOCKED"
+          ]
+        },
+        {
+          "id": "p02_checks",
+          "label": "Named checks and exact result class",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "help": "For standard completion record exactly one ACTUAL_RECORDED line, followed by four separate rows: BASELINE: PASS; COUNT: 2/2; LOCATOR: your actual redacted log locator / OBJECTIVE: PASS; COUNT: 5/5; LOCATOR: your actual redacted log locator / REGRESSION: PASS; COUNT: 3/3; LOCATOR: your actual redacted log locator / INFRASTRUCTURE: PASS; COUNT: 10/10; LOCATOR: your actual redacted log locator. Replace each / between rows with a line break; keep the semicolons within a row. Each locator must be nonempty and contain no semicolon or vertical bar. The counts are the frozen expected contract, not supplied measurements; use PASS only from your actual qualified required results. The ledger has no extra lines or conflicting suffix. Record evidence class and measured environment in their existing fields and contextual log notes in p02_evidence_index. Source/model, initial assertion failures, missing suites and incidents remain drafts. Structural checks do not authenticate any claim.",
+          "phase": "final"
+        },
+        {
+          "id": "resource_loads",
+          "label": "Resource-loader call count and how measured",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "help": "Record count and how measured, including the case and locator. Distinguish a pure/callback model count from an actual Express request.",
+          "phase": "final"
+        },
+        {
+          "id": "allow_observation",
+          "label": "Allowed-case observation and evidence locator",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "help": "Record case, prediction, evidence class, observed allowance, locator and limitation. Use a fresh synthetic fixture so a prior mutation does not contaminate the observation.",
+          "phase": "final"
+        },
+        {
+          "id": "forbid_observation",
+          "label": "Forbidden-case observation and evidence locator",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "help": "Record an ordinary forbidden case, configured route, result class, locator and limitation. Status 403 alone does not establish which guard ran.",
+          "phase": "final"
+        },
+        {
+          "id": "conceal_observation",
+          "label": "Concealed-case observation and evidence locator",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "help": "Record a configured concealed result and distinguish it from a missing report. Include route configuration, evidence class and locator.",
+          "phase": "final"
+        },
+        {
+          "id": "state_observation",
+          "label": "State precondition observation, distinct from policy denial",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "help": "Record trusted report state before/after and the permitted action with a state-precondition conflict. Keep permission denial distinct.",
+          "phase": "final"
+        },
+        {
+          "id": "principal_resource_independence",
+          "label": "Evidence that authority comes from trusted principal/resource, not body fields",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "help": "Compare trusted principal/resource with a benign contradictory body claim in the supplied local fixture. Record the outcome and the evidence class, without secrets.",
+          "phase": "final"
+        },
+        {
+          "id": "snapshot_observation",
+          "label": "Snapshot property checked and limit",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "help": "Record one-load and flat frozen snapshot properties with locator. Do not infer deep immutability, a transaction or a database lock.",
+          "phase": "final"
+        },
+        {
+          "id": "p02_unresolved",
+          "label": "Unresolved P02 cases; UNKNOWN is not PASS",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "help": "Name genuine unresolved cases and limits, or state none only when true. UNKNOWN is not implementation PASS; honest omissions remain visible.",
+          "phase": "final"
+        },
+        {
+          "id": "p02_evidence_index",
+          "label": "Individual evidence index; no raw HTTP credentials",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "help": "Index your own embedded captures and redacted excerpts by case/check. A filename alone is not an embedded capture; no raw HTTP credentials.",
+          "phase": "final"
+        }
+      ]
+    },
+    {
+      "id": "portfolio",
+      "title": "Required P03 reduced two-class portfolio",
+      "intro": "Record your own evidence with class, result, locator and limitation. Keep the opening privacy rule throughout this section.",
+      "fields": [
+        {
+          "id": "portfolio_route",
+          "label": "11.3A: CORS and CSRF; local design choice",
+          "kind": "select",
+          "default": "",
+          "max": 16000,
+          "help": "Normal completion uses CORS_CSRF_STANDARD only. An alternative can be recorded for teacher review but remains a draft here; the selector grants no authority.",
+          "phase": "final",
+          "options": [
+            "",
+            "CORS_CSRF_STANDARD",
+            "SEPARATELY_AUTHORISED_ALTERNATIVE"
+          ]
+        },
+        {
+          "id": "cors_trace",
+          "label": "Static CORS source-to-decision trace",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "help": "Trace a benign origin from source to exact-origin decision, status and response-sharing headers. Separate application refusal from browser sharing.",
+          "phase": "final"
+        },
+        {
+          "id": "cors_controls",
+          "label": "Benign allowed/refused control and actual evidence class",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "help": "Record benign allowed/refused origin controls, actual evidence class, status/headers where observed and locator. PURE_FUNCTION/CALLBACK_MODEL do not qualify browser or cache behaviour.",
+          "phase": "final"
+        },
+        {
+          "id": "csrf_trace",
+          "label": "Static CSRF source-to-decision trace",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "help": "Trace safe-method and cookie-authenticated unsafe-method decisions to the protective boundary. Describe token presence/comparison outcomes without exporting values.",
+          "phase": "final"
+        },
+        {
+          "id": "csrf_controls",
+          "label": "Benign protective control and actual evidence class",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "help": "Record supplied benign match/missing/mismatch controls and class/result/locator/limit. A synthetic fixture is not a production secret or real site test.",
+          "phase": "final"
+        },
+        {
+          "id": "portfolio_patch",
+          "label": "Named corrective boundary or patch locator; do not broaden the allowed file",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "help": "Name portfolio/p03-reduced/student/src/security-boundary.js and your narrow diff locator first; preserve support/tests. Then add a separate line --- P03 SUITE LEDGER ---, one ACTUAL_RECORDED line and five separate rows: BASELINE: PASS; COUNT: 2/2; LOCATOR: your actual redacted log locator / OBJECTIVE: PASS; COUNT: 4/4; LOCATOR: your actual redacted log locator / REGRESSION: PASS; COUNT: 2/2; LOCATOR: your actual redacted log locator / INFRASTRUCTURE: PASS; COUNT: 6/6; LOCATOR: your actual redacted log locator / SUCCESSOR_INPUTS: PASS; COUNT: 12/12; LOCATOR: your actual redacted log locator. Replace each / between rows with a line break; retain row semicolons. The ledger ends after these five rows, with no extra status suffix. Locators must be nonempty and contain no semicolon or vertical bar. Counts are the declared expected contract, not observations. Only your actual required reduced-P03 results justify these claims; SOURCE/model, failures or missing suites remain a draft. Record PURE_FUNCTION class and browser/cache limitations in cors_controls and csrf_controls. The form authenticates neither execution nor truth.",
+          "phase": "final"
+        },
+        {
+          "id": "portfolio_retained",
+          "label": "Controls deliberately retained and why",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "help": "Name protective controls deliberately retained and why. Do not weaken a guard to manufacture an outcome.",
+          "phase": "final"
+        },
+        {
+          "id": "portfolio_limits",
+          "label": "What two-class evidence does not establish about the other three classes",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "help": "Explain what CORS/CSRF evidence does not establish about query safety, output encoding or configuration-secret handling. No all-five PASS follows from two classes.",
+          "phase": "final"
+        },
+        {
+          "id": "portfolio_completion",
+          "label": "Reduced portfolio completion status, not all-five-suite PASS",
+          "kind": "select",
+          "default": "",
+          "max": 16000,
+          "help": "Record whether both reduced classes and all five required P03 suites are complete with your evidence ledger in portfolio_patch. COMPLETE_RECORDED is your unverified declaration. No selector executes checks, authenticates the ledger or confirms browser behaviour.",
+          "phase": "final",
+          "options": [
+            "",
+            "NOT_STARTED",
+            "IN_PROGRESS",
+            "COMPLETE_RECORDED",
+            "BLOCKED"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai",
+      "title": "Bounded Gemini critique",
+      "intro": "Record your own evidence with class, result, locator and limitation. Keep the opening privacy rule throughout this section.",
+      "fields": [
+        {
+          "id": "ai_route",
+          "label": "Actual Gemini or prior separately authorised alternative",
+          "kind": "select",
+          "default": "",
+          "max": 16000,
+          "help": "ACTUAL_RECORDED requires a genuine bounded Gemini exchange. PENDING records an access block or unfinished exchange in a draft. Alternatives stay draft-only unless the teacher separately establishes an assessment contract outside this candidate.",
+          "phase": "final",
+          "options": [
+            "",
+            "PENDING",
+            "ACTUAL_RECORDED",
+            "SEPARATELY_AUTHORISED_ALTERNATIVE"
+          ]
+        },
+        {
+          "id": "ai_claim",
+          "label": "One falsifiable, sanitised claim",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "help": "Use one falsifiable sanitised policy claim. FLAWED_PATCH_OR_CLAIM.txt supplies an intentionally flawed benign claim for critique, not an observation or solution.",
+          "phase": "final"
+        },
+        {
+          "id": "ai_prompt",
+          "label": "Relevant actual prompt excerpt; no secrets",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "help": "Record the actual date/time, visible model label (UNKNOWN if unavailable), minimal actual prompt excerpt and sanitised locator. Never submit an account identity or complete conversation.",
+          "phase": "final"
+        },
+        {
+          "id": "ai_response",
+          "label": "Relevant actual response excerpt, not synthetic dialogue",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "help": "Record only the relevant actual response excerpt and sanitised locator. If access is blocked, state BLOCKED/NOT_EXECUTED in a draft; do not invent dialogue.",
+          "phase": "final"
+        },
+        {
+          "id": "ai_check",
+          "label": "Independent source/test/observation and locator",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "help": "Independently check the claim against a source, named check or actual observation. Give evidence class, result, locator and limitation; Gemini is not its own independent check.",
+          "phase": "final"
+        },
+        {
+          "id": "ai_verdict",
+          "label": "ACCEPTED / REJECTED / PARTIALLY ACCEPTED / UNKNOWN",
+          "kind": "select",
+          "default": "",
+          "max": 16000,
+          "help": "Choose a justified verdict. A reasoned UNKNOWN can support critical reflection but does not prove implementation PASS.",
+          "phase": "final",
+          "options": [
+            "",
+            "ACCEPTED",
+            "REJECTED",
+            "PARTIALLY_ACCEPTED",
+            "UNKNOWN"
+          ]
+        },
+        {
+          "id": "ai_correction_limit",
+          "label": "Correction and remaining limitation",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "help": "State your correction and what remains unverified. Record an actual access block honestly, or a reference to genuine prior teacher authority; this text never grants approval.",
+          "phase": "final"
+        }
+      ]
+    },
+    {
+      "id": "reflection",
+      "title": "Transfer and reflection",
+      "intro": "Record your own evidence with class, result, locator and limitation. Keep the opening privacy rule throughout this section.",
+      "fields": [
+        {
+          "id": "p01_capstone",
+          "label": "P01 integration plan; not a second in-class implementation",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "help": "Give a short future P01 integration plan and limit. No full P01 implementation or advanced 11.3B is required for S11 completion.",
+          "phase": "final"
+        },
+        {
+          "id": "remaining_work",
+          "label": "Outstanding compulsory work, explicitly none only when true",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "help": "List compulsory work still outstanding. Only when all required work is complete, begin with REQUIRED: NONE. A truthful draft may list BLOCKED or NOT_EXECUTED.",
+          "phase": "final"
+        },
+        {
+          "id": "reflection",
+          "label": "What the evidence changed and what remains unverified",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "help": "Explain what changed between your prediction and evidence, what you checked independently and what remains limited.",
+          "phase": "final"
+        },
+        {
+          "id": "alternative_authority",
+          "label": "Reference to prior genuine authorisation when applicable, not an authorisation granted here",
+          "kind": "textarea",
+          "default": "",
+          "max": 16000,
+          "help": "On the standard route enter NOT_APPLICABLE. Otherwise identify genuine prior teacher authority and the proposed replacement contract for review. Alternative records stay drafts here; text and selectors do not authenticate approval.",
+          "phase": "final"
+        }
+      ]
+    },
+    {
+      "id": "declaration",
+      "title": "Declaration and PDF route",
+      "intro": "Record your own evidence with class, result, locator and limitation. Keep the opening privacy rule throughout this section.",
+      "fields": [
+        {
+          "id": "authorship_decl",
+          "label": "I distinguish my actual observations from models and imported draft data",
+          "kind": "checkbox",
+          "default": false,
+          "max": null,
+          "help": "Check only after reviewing your own observations, distinguishing models and imported unverified text. This declaration is not authenticated by the form.",
+          "phase": "final"
+        },
+        {
+          "id": "redaction_decl",
+          "label": "I have removed credentials, tokens, private records and unnecessary personal data",
+          "kind": "checkbox",
+          "default": false,
+          "max": null,
+          "help": "Check only after removing credential/cookie/session/CSRF values, configured secrets, private records and unnecessary personal data from text and captures.",
+          "phase": "final"
+        },
+        {
+          "id": "pdf_review",
+          "label": "PDF review status; a selector does not verify file existence",
+          "kind": "select",
+          "default": "",
+          "max": 16000,
+          "help": "Choose the real unsaved-candidate or reviewed-local-PDF state. The selector cannot verify a file, captures, page layout or Moodle receipt.",
+          "phase": "final",
+          "options": [
+            "",
+            "DRAFT_NOT_REVIEWED",
+            "FINAL_CANDIDATE_NOT_YET_SAVED",
+            "LOCAL_PDF_REVIEWED_NOT_MOODLE_RECEIPT"
+          ]
+        },
+        {
+          "id": "submission_status",
+          "label": "Submission status; form validation does not submit to Moodle",
+          "kind": "select",
+          "default": "",
+          "max": 16000,
+          "help": "Record your actual submission state. This form never uploads to Moodle or checks its receipt; a receipt claim needs your private recorded evidence.",
+          "phase": "final",
+          "options": [
+            "",
+            "DRAFT",
+            "READY_FOR_TEACHER_REVIEW",
+            "ACTUAL_MOODLE_RECEIPT_RECORDED"
+          ]
+        }
+      ]
+    }
+  ]
+};

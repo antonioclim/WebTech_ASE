@@ -1,0 +1,4 @@
+Review exactly one sanitised server-side claim that I provide. Do not implement the assessed router, add dependencies or rewrite the app. Identify which boundary owns the decision and suggest one independent discriminating check. State what your evidence does not establish. I will record your claim, check it independently and assign ACCEPTED, REJECTED, PARTIALLY ACCEPTED or UNKNOWN. Use only the supplied synthetic context; no credentials, private datasets or complete conversations.
+
+My bounded claim: [replace with one statement]
+Relevant non-sensitive source excerpt or observation: [replace]

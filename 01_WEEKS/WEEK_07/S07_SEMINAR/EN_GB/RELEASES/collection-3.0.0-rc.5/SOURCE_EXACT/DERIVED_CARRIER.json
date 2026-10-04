@@ -1,0 +1,149 @@
+{
+  "schema": "webtech-derived-carrier/v1",
+  "object_id": "S07",
+  "carrier_version": "1.1.2-rc.4",
+  "distribution_version": "3.0.0-rc.4",
+  "source_commit": "7f88fecfa972bfb41d4fffec3e47616842c7e067",
+  "intentional_baseline_commit": "1850118b3f619b233f89941802212fe59d8d5dfe",
+  "derived_from": {
+    "archive": "01_WEEKS/WEEK_07/S07_SEMINAR/EN_GB/DOWNLOAD/WEBTECH_ASE_S07_EN_GB_v1.1.1_RC2.zip",
+    "archive_sha256": "23b7ea9b1965634e843bdf3b63271276a12dcba660348389e49ea54b7d0fc791",
+    "package_id": "6afc25ee7f6ca936645c16a057727c09122826c0f3797569b9b999f5c77e1042",
+    "carrier_version": "1.1.1"
+  },
+  "status": "LOCAL_RELEASE_CANDIDATE_PENDING_EXTERNAL_ACCEPTANCE",
+  "native_acceptance": "PENDING",
+  "identity_is_runtime_qualification": false,
+  "original_carrier_overwritten": false,
+  "original_external_bindings_are_history_not_current_byte_identity": true,
+  "content_and_mode_changes_before_sealing": [
+    {
+      "path": "ACTIVE_FIELDS_GUIDE.html",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "2c526d4a1c00699cc61c1a16b3fc3af43f42d49e28e8c1565fa93c6a671c9d30",
+      "before_bytes": null,
+      "after_bytes": 3124,
+      "before_mode": null,
+      "after_mode": 420
+    },
+    {
+      "path": "ACTIVE_FIELDS_GUIDE.md",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "a9dcca0fd2a28272dbd8a1afe85285f0dad19336f676768ff80418e0c5d35677",
+      "before_bytes": null,
+      "after_bytes": 2661,
+      "before_mode": null,
+      "after_mode": 420
+    },
+    {
+      "path": "GUIDE.md",
+      "change": "BYTES",
+      "before_sha256": "45c1e388a957c146ade8d13ce512aec218c9ed4b89f7f785c81f95bfc1701370",
+      "after_sha256": "ceb49b4bde14096fc43a51908d934d9dea6395c34a14a6547c3ed503e7077654",
+      "before_bytes": 10174,
+      "after_bytes": 10818,
+      "before_mode": 420,
+      "after_mode": 420
+    },
+    {
+      "path": "assets/student-form-focus.js",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "ec49cc2b4830fbccbb61022d4111aabe76d6ea57ff023565d87ea1cde270ed3d",
+      "before_bytes": null,
+      "after_bytes": 7482,
+      "before_mode": null,
+      "after_mode": 420
+    },
+    {
+      "path": "evidence.html",
+      "change": "BYTES",
+      "before_sha256": "ab35986f53eadc769c2b8c48c2d74ac501bc4b2638fc5e3a8c634b74f86722f7",
+      "after_sha256": "1205fb393060f52da9919a4a9faf06413907e6d52eccf7cdd295308971980d1f",
+      "before_bytes": 2724,
+      "after_bytes": 2777,
+      "before_mode": 420,
+      "after_mode": 420
+    },
+    {
+      "path": "guide.html",
+      "change": "BYTES",
+      "before_sha256": "49d572e9a0c558ccf7ae7746a0f055dfb9aa93f6ff48ed5e0887defcb6bdcea5",
+      "after_sha256": "c2bee34071f020a9d1a66da2597fe58cd9b628b348d0f578a1a4b5daa78c4cd6",
+      "before_bytes": 11820,
+      "after_bytes": 12647,
+      "before_mode": 420,
+      "after_mode": 420
+    },
+    {
+      "path": "optional/p01/package-lock.json",
+      "change": "BYTES",
+      "before_sha256": "9e50617c37ace77f39d5756ba68cb778449683e90e88d0c0c7cb48bd86e342ff",
+      "after_sha256": "8a1016dbd7983d7127134775364d78c644e0caba232de257771c803888962ff6",
+      "before_bytes": 62032,
+      "after_bytes": 62037,
+      "before_mode": 420,
+      "after_mode": 420
+    },
+    {
+      "path": "optional/p01/package.json",
+      "change": "BYTES",
+      "before_sha256": "3194884ab2a1ba0464a23b9a99a40037c23220eb0c90f7f82889ec1e0447b70b",
+      "after_sha256": "fe8621a1cfaebf1b1e8988cb3048e0781c7d056de192be650795b99f33a759f7",
+      "before_bytes": 644,
+      "after_bytes": 649,
+      "before_mode": 420,
+      "after_mode": 420
+    },
+    {
+      "path": "tools/check.mjs",
+      "change": "BYTES",
+      "before_sha256": "091f231041fe55f848fb4e418c854c4ac6acdb36e0d23e79f8486ff1a13bfb83",
+      "after_sha256": "92c92ea3939b41743f4dfb385a63b91a7f2f02247f60a48e32d913f90ff2b668",
+      "before_bytes": 2873,
+      "after_bytes": 3973,
+      "before_mode": 420,
+      "after_mode": 420
+    }
+  ],
+  "current_binding_changes": [],
+  "identity_contract": {
+    "method": "manifest-sha256",
+    "manifest": "SHA256SUMS.txt",
+    "package_id": "PACKAGE_ID.txt",
+    "manifest_exclusions": [
+      "SHA256SUMS.txt",
+      "PACKAGE_ID.txt"
+    ],
+    "path_order": "unicode-codepoint",
+    "encoding": "UTF-8",
+    "line_ending": "LF",
+    "record_format": "sha256 + two ASCII spaces + relative POSIX path + LF"
+  },
+  "edit_contract": {
+    "distribution_scope": "PRISTINE_EXACT_ALL_ARCHIVE_MEMBERS",
+    "student_work_scope": "DECLARED_PACKAGE_SPECIFIC_EDIT_BOUNDARY",
+    "policy_files": [
+      "PROJECT_CONTRACT.json"
+    ],
+    "editable_files": [
+      "optional/p01/src/conference-model.js",
+      "optional/p03/src/registration-router.js",
+      "projects/p02/src/book-seats.js"
+    ],
+    "project_roots": [
+      "optional/p01",
+      "optional/p03",
+      "projects/p02"
+    ],
+    "generated_directory_names": [
+      "node_modules"
+    ],
+    "generated_exclusions_apply_only_to_declared_project_working_copies": true,
+    "generated_entries_in_release_carrier": "FORBIDDEN"
+  },
+  "mode_policy": "recognized shell .sh 0755; all other regular members 0644; source PID hashes bytes, outer ZIP SHA256 also authenticates entry modes",
+  "descriptor_repair": null
+}

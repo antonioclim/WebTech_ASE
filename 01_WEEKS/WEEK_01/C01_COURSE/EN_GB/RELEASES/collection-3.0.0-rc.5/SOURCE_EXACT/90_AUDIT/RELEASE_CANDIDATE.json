@@ -1,0 +1,23 @@
+{
+  "object": "C01",
+  "version": "2.0.3-rc.4",
+  "status": "LOCAL_DERIVED_RC4_PENDING_COMPLETE_QUALIFICATION",
+  "requiredNode": "v24.21.0",
+  "requiredNpm": "11.19.0",
+  "sourceCommit": "7f88fecfa972bfb41d4fffec3e47616842c7e067",
+  "qualification": {
+    "localAutomatedChecks": "recorded in repository remediation evidence",
+    "nativeWindows": "PENDING",
+    "nativeMacOS": "PENDING",
+    "studentPilot": "PENDING",
+    "moodle": "PENDING"
+  },
+  "note": "Package identity proves byte integrity, not platform or classroom qualification.",
+  "previousSourceCommit": "1850118b3f619b233f89941802212fe59d8d5dfe",
+  "intentionalBaselineCommit": "1850118b3f619b233f89941802212fe59d8d5dfe",
+  "derived_carrier_version": "2.0.3-rc.4",
+  "previous_carrier_version": "2.0.2-rc.1",
+  "previous_descriptor_sha256": "1bf58833b296556dc7bc48d43c3dc8f052f2632c7bb1681bfab4d6f7a79a179a",
+  "current_derivation_record": "DERIVED_CARRIER.json",
+  "previous_observations_not_transferred_to_current_carrier": true
+}

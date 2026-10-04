@@ -1,0 +1,7 @@
+FLAWED CLAIM A
+“Two cloned initial state objects prove that two mounted WorkshopProvider instances are isolated.”
+
+FLAWED CLAIM B
+“Context is automatically the best architecture whenever consumers are distant.”
+
+Audit one claim only. Use a mounted-provider witness or an ADR capability gate as appropriate. Do not ask Gemini to implement the assessed file.
