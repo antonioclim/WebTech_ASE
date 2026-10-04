@@ -20,6 +20,9 @@ from html.parser import HTMLParser
 from pathlib import Path, PurePosixPath
 from typing import Iterable
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "publishing"))
+from release_contract import repo_path, safe_relative, zip_files, read_plan, selection, validate_week, state, VERSION_RE
+
 
 ROOT = Path(__file__).resolve().parents[2]
 VERSION = "2.0.1"
@@ -82,6 +85,8 @@ def repository_files() -> list[Path]:
 
 def parse_hash_manifest(data: str) -> dict[str, str]:
     rows: dict[str, str] = {}
+    seen: set[str] = set()
+    spellings: dict[str, str] = {}
     for number, line in enumerate(data.splitlines(), 1):
         if not line.strip():
             continue
@@ -90,8 +95,18 @@ def parse_hash_manifest(data: str) -> dict[str, str]:
         digest, rel = line.split("  ", 1)
         if not re.fullmatch(r"[0-9a-f]{64}", digest):
             raise ValueError(f"line {number} has an invalid SHA-256")
-        if rel in rows:
-            raise ValueError(f"duplicate manifest path: {rel}")
+        safe_relative(rel)
+        key = normal_key(rel)
+        if key in seen:
+            raise ValueError(f"duplicate or case/Unicode-colliding manifest path: {rel}")
+        seen.add(key)
+        components = rel.split('/')
+        for count in range(1, len(components) + 1):
+            prefix = '/'.join(components[:count])
+            prefix_key = normal_key(prefix)
+            if prefix_key in spellings and spellings[prefix_key] != prefix:
+                raise ValueError(f"case/Unicode-colliding manifest path components: {rel}")
+            spellings[prefix_key] = prefix
         rows[rel] = digest
     return rows
 
@@ -110,11 +125,21 @@ class HTMLLinks(HTMLParser):
 
 
 class Audit:
-    def __init__(self, strict: bool) -> None:
+    def __init__(self, strict: bool, weeks: str | None = None, language: str | None = None) -> None:
         self.strict = strict
+        self.weeks = weeks
+        self.language = language
+        self.selected_weeks = {v.strip().zfill(2) for v in weeks.split(",")} if weeks else None
         self.errors: list[str] = []
         self.warnings: list[str] = []
         self.counts: dict[str, int] = {}
+        self.registry = None
+        registry_path = ROOT / "90_RELEASES/CURRENT_OBJECTS.json"
+        if registry_path.is_file():
+            try:
+                self.registry = json.loads(registry_path.read_text(encoding="utf-8"))
+            except (ValueError, OSError) as exc:
+                self.fail(f"current-object registry: {exc}")
         try:
             self.development_state = json.loads(DEVELOPMENT_STATE_PATH.read_text(encoding="utf-8"))
         except Exception:
@@ -142,28 +167,13 @@ class Audit:
             return
         try:
             with zipfile.ZipFile(__import__("io").BytesIO(data)) as z:
+                members = zip_files(z)
                 bad = z.testzip()
                 if bad:
                     self.fail(f"CRC failure in {label}: {bad}")
-                seen: set[str] = set()
-                for info in z.infolist():
-                    name = info.filename
-                    pp = PurePosixPath(name)
-                    key = normal_key(name)
-                    if pp.is_absolute() or ".." in pp.parts or re.match(r"^[A-Za-z]:", name):
-                        self.fail(f"unsafe ZIP member in {label}: {name}")
-                    if key in seen:
-                        self.fail(f"case/Unicode collision in {label}: {name}")
-                    seen.add(key)
-                    if info.flag_bits & 0x1:
-                        self.fail(f"encrypted ZIP member in {label}: {name}")
-                    mode = (info.external_attr >> 16) & 0xFFFF
-                    if stat.S_ISLNK(mode):
-                        self.fail(f"symbolic-link ZIP member in {label}: {name}")
-                    if len(name) > 240:
-                        self.fail(f"ZIP member path exceeds 240 characters in {label}: {name}")
-                    if not info.is_dir() and name.lower().endswith(".zip"):
-                        self.check_zip_bytes(z.read(info), f"{label}!{name}", depth + 1)
+                for name, member in members.items():
+                    if name.lower().endswith(".zip"):
+                        self.check_zip_bytes(z.read(member), f"{label}!{name}", depth + 1)
                 self.count("zip_archives")
         except Exception as exc:
             self.fail(f"cannot inspect ZIP {label}: {exc}")
@@ -190,13 +200,18 @@ class Audit:
         root, archive = roots[0], zips[0]
         try:
             with zipfile.ZipFile(archive) as z:
-                file_members = [i.filename for i in z.infolist() if not i.is_dir()]
+                file_members = list(zip_files(z))
                 top = {PurePosixPath(n).parts[0] for n in file_members}
                 if len(top) != 1:
                     self.fail(f"student ZIP must contain one root: {archive.relative_to(ROOT)}")
                     return
                 prefix = next(iter(top)) + "/"
+                if prefix != root.name + "/":
+                    self.fail(f"ZIP root name differs from extracted package: {archive.relative_to(ROOT)}")
                 zfiles = {n[len(prefix):]: sha256_bytes(z.read(n)) for n in file_members if n.startswith(prefix)}
+            for path in root.rglob("*"):
+                if path.is_symlink():
+                    self.fail(f"symbolic link in extracted package: {path.relative_to(ROOT)}")
             dfiles = {p.relative_to(root).as_posix(): sha256_path(p) for p in root.rglob("*") if p.is_file()}
             if zfiles != dfiles:
                 self.fail(f"PACKAGE_EXACT differs from DOWNLOAD ZIP: {unit.relative_to(ROOT)}")
@@ -209,6 +224,30 @@ class Audit:
             self.fail(f"exact-package verification failed for {unit.relative_to(ROOT)}: {exc}")
 
     def verify_internal_package(self, root: Path) -> None:
+        # S02 v2.3+: immutable manifest plus a protected editable-path declaration.
+        if (root / "90_AUDIT/IMMUTABLE_MANIFEST.sha256").is_file():
+            audit = root / "90_AUDIT"
+            manifest_path = audit / "IMMUTABLE_MANIFEST.sha256"
+            mutable_file = audit / "MUTABLE_PATHS.txt"
+            mutable = [line.strip() for line in mutable_file.read_text(encoding="utf-8").splitlines() if line.strip()]
+            if len(mutable) != 1 or len(set(mutable)) != 1:
+                self.fail(f"S02 must declare exactly one editable file: {root.name}")
+            for relative in mutable:
+                safe_relative(relative)
+                if not relative.startswith("02_PROJECTS/") or not relative.endswith("/public/styles.css"):
+                    self.fail(f"unexpected S02 editable file: {relative}")
+                if not (root / relative).is_file():
+                    self.fail(f"missing S02 editable file: {relative}")
+            excluded = set(mutable) | {"90_AUDIT/IMMUTABLE_MANIFEST.sha256", "90_AUDIT/PACKAGE_ID.txt"}
+            rows = parse_hash_manifest(manifest_path.read_text(encoding="utf-8"))
+            actual = {p.relative_to(root).as_posix(): sha256_path(p) for p in root.rglob("*")
+                      if p.is_file() and p.relative_to(root).as_posix() not in excluded}
+            if rows != actual:
+                self.fail(f"internal immutable manifest mismatch: {root.name}")
+            package_id = (audit / "PACKAGE_ID.txt").read_text(encoding="utf-8").strip()
+            if not re.fullmatch(r"[0-9a-f]{64}", package_id) or package_id != sha256_path(manifest_path):
+                self.fail(f"internal PACKAGE_ID mismatch: {root.name}")
+            return
         # S01/C01 hardened packages.
         if (root / "90_AUDIT/PAYLOAD_SHA256SUMS.txt").is_file():
             audit = root / "90_AUDIT"
@@ -241,7 +280,7 @@ class Audit:
             if calculated != stored:
                 self.fail(f"internal S02 PACKAGE_ID mismatch: {root.name}")
             return
-        # C02 hardened packages.
+        # C02: legacy case-folded identity and the explicitly declared RC ordinal contract.
         if (root / "06_AUDIT/SHA256SUMS.txt").is_file():
             audit = root / "06_AUDIT"
             manifest_path = audit / "SHA256SUMS.txt"
@@ -249,10 +288,30 @@ class Audit:
             actual = {p.relative_to(root).as_posix(): sha256_path(p) for p in root.rglob("*") if p.is_file() and p != manifest_path}
             if rows != actual:
                 self.fail(f"internal C02 manifest mismatch: {root.name}")
-            lines = []
-            for p in sorted((p for p in root.rglob("*") if p.is_file() and p not in {manifest_path, audit / "PACKAGE_ID.txt"}), key=lambda x: x.relative_to(root).as_posix().casefold()):
-                lines.append(f"{sha256_path(p)}  {p.relative_to(root).as_posix()}\n")
-            calculated = sha256_bytes("".join(lines).encode())
+            method_path = audit / "PACKAGE_ID_METHOD.txt"
+            method = method_path.read_text(encoding="utf-8") if method_path.is_file() else ""
+            ordinal = "sorted by exact ordinal relative path" in method
+            identity_relative = "06_AUDIT/PACKAGE_ID.txt"
+            if ordinal:
+                ordered = sorted(rows)
+                if list(rows) != ordered:
+                    self.fail(f"internal C02 noncanonical ordinal manifest order: {root.name}")
+                canonical = "".join(f"{rows[relative]}  {relative}\n" for relative in ordered).encode("utf-8")
+                if manifest_path.read_bytes() != canonical:
+                    self.fail(f"internal C02 noncanonical manifest bytes: {root.name}")
+                if identity_relative not in rows:
+                    self.fail(f"internal C02 PACKAGE_ID is not manifested: {root.name}")
+                identity_bytes = (audit / "PACKAGE_ID.txt").read_bytes()
+                if not re.fullmatch(rb"[0-9a-f]{64}\n", identity_bytes):
+                    self.fail(f"internal C02 PACKAGE_ID format mismatch: {root.name}")
+                # Every manifested hash has already been compared with the actual file.
+                # Derive identity from the declared canonical order, excluding the ID.
+                lines = [f"{rows[relative]}  {relative}\n" for relative in ordered if relative != identity_relative]
+            else:
+                # Existing FINAL editions used case-folded path order. Preserve that contract.
+                paths = sorted((p for p in root.rglob("*") if p.is_file() and p not in {manifest_path, audit / "PACKAGE_ID.txt"}), key=lambda path: path.relative_to(root).as_posix().casefold())
+                lines = [f"{sha256_path(path)}  {path.relative_to(root).as_posix()}\n" for path in paths]
+            calculated = sha256_bytes("".join(lines).encode("utf-8"))
             stored = (audit / "PACKAGE_ID.txt").read_text(encoding="utf-8").strip()
             if calculated != stored:
                 self.fail(f"internal C02 PACKAGE_ID mismatch: {root.name}")
@@ -272,12 +331,12 @@ class Audit:
     def check_local_links(self) -> None:
         md_rx = re.compile(r"!?(?:\[[^\]]*\])\(([^)]+)\)")
         for path in ROOT.rglob("*.md"):
-            if "PACKAGE_EXACT" in path.parts:
+            if not self.selected_path(path) or "PACKAGE_EXACT" in path.parts:
                 continue
             for target in md_rx.findall(path.read_text(encoding="utf-8", errors="replace")):
                 self.check_link(path, target)
         for path in ROOT.rglob("*.html"):
-            if "PACKAGE_EXACT" in path.parts:
+            if not self.selected_path(path) or "PACKAGE_EXACT" in path.parts:
                 continue
             parser = HTMLLinks()
             parser.feed(path.read_text(encoding="utf-8", errors="replace"))
@@ -426,25 +485,192 @@ class Audit:
 
     def check_release_plan(self) -> None:
         try:
-            plan = json.loads((ROOT / "90_RELEASES/RELEASE_PLAN.json").read_text(encoding="utf-8"))
-            self.require(plan.get("repository_version") == VERSION, "release-plan version")
-            self.require(plan.get("status") == "final" and plan.get("prerelease") is False, "release plan final state")
-            for week, item in plan["weeks"].items():
-                self.require(item["tag"] == f"week-{week}-v2.0.0", f"final release tag for week {week}")
-                for lang, data in item["languages"].items():
-                    for key in ("bundle", "course", "seminar"):
-                        p = ROOT / data[key]
-                        self.require(p.is_file(), f"missing release-plan {key}: {data[key]}")
-                    bundle = ROOT / data["bundle"]
-                    side = Path(str(bundle) + ".sha256")
-                    self.require(side.is_file(), f"missing weekly sidecar: {data['bundle']}")
-                    if side.is_file():
-                        self.require(side.read_text(encoding="utf-8").strip() == f"{sha256_path(bundle)}  {bundle.name}", f"weekly sidecar mismatch: {data['bundle']}")
-            cp = subprocess.run([sys.executable, str(ROOT / "00_TOOLS/publishing/build_week_bundle.py"), "--verify-all"], cwd=ROOT, capture_output=True, text=True, timeout=60)
+            plan = read_plan(ROOT)
+            self.require(plan.get("repository_version") == VERSION, "release-plan repository version")
+            selected = list(selection(plan, self.weeks, self.language))
+            for week, language, entry, data in selected:
+                validate_week(plan, week, entry)
+                for key in ("bundle", "course", "seminar"):
+                    path = repo_path(data[key], ROOT)
+                    self.require(path.is_file(), f"missing release-plan {key}: {data[key]}")
+                self.require(repo_path(entry["notes"], ROOT).is_file(), f"missing notes for week {week}")
+                bundle = repo_path(data["bundle"], ROOT)
+                side = Path(str(bundle) + ".sha256")
+                self.require(side.is_file(), f"missing weekly sidecar: {data['bundle']}")
+                if side.is_file() and bundle.is_file():
+                    self.require(side.read_text(encoding="utf-8").strip() == f"{sha256_path(bundle)}  {bundle.name}", f"weekly sidecar mismatch: {data['bundle']}")
+            command = [sys.executable, str(ROOT / "00_TOOLS/publishing/build_week_bundle.py"), "--verify-all"]
+            if self.weeks:
+                command.extend(["--weeks", self.weeks])
+            if self.language:
+                command.extend(["--language", self.language])
+            cp = subprocess.run(command, cwd=ROOT, capture_output=True, text=True, timeout=60)
             if cp.returncode:
                 self.fail(f"weekly bundle verification failed: {cp.stdout} {cp.stderr}")
         except Exception as exc:
             self.fail(f"RELEASE_PLAN.json: {exc}")
+
+    def check_current_objects(self) -> list[Path]:
+        if self.registry is None:
+            if self.weeks or self.language:
+                self.fail("scoped distribution validation requires 90_RELEASES/CURRENT_OBJECTS.json")
+            return []
+        units = []
+        try:
+            registry = self.registry
+            self.require(registry.get("schema") == "webtech-ase-current-objects-v1", "current-object registry schema")
+            self.require(isinstance(registry.get("objects"), list), "current-object registry objects list")
+            self.require(re.fullmatch(r"[0-9a-f]{40}", str(registry.get("source_commit", ""))) is not None, "registry needs an exact source commit")
+            self.require(VERSION_RE.fullmatch(str(registry.get("distribution_version", ""))) is not None, "registry distribution version")
+            objects = registry["objects"]
+            selected = [item for item in objects if (not self.selected_weeks or item.get("week") in self.selected_weeks)
+                        and (not self.language or item.get("language") == self.language)]
+            if not selected:
+                self.fail("current-object registry has no objects for the requested scope")
+                return []
+            seen = set()
+            plan = read_plan(ROOT)
+            for item in selected:
+                week, unit, language = item["week"], item["unit"], item["language"]
+                self.require(re.fullmatch(r"[0-9]{2}", week) is not None, f"invalid registry week: {week}")
+                self.require(unit in (f"C{week}", f"S{week}"), f"invalid registry unit for week {week}: {unit}")
+                identity = (week, unit, language)
+                self.require(identity not in seen, f"duplicate current-object identity: {identity}")
+                seen.add(identity)
+                root = repo_path(item["path"], ROOT)
+                archive = repo_path(item["zip"], ROOT)
+                self.require(root.is_dir(), f"missing current package root: {item['path']}")
+                self.require(archive.is_file(), f"missing current archive: {item['zip']}")
+                self.require(root.name == item["package_root"] and archive.name == root.name + ".zip", f"registry root/archive mismatch: {unit}")
+                self.require(root.parent.name == "PACKAGE_EXACT" and root.parent.parent.name == language, f"registry package route mismatch: {unit}")
+                self.require(archive.parent == root.parent.parent / "DOWNLOAD", f"registry download route mismatch: {unit}")
+                expected_unit = f"{unit}_{'COURSE' if unit.startswith('C') else 'SEMINAR'}"
+                self.require(root.parent.parent.parent.name == expected_unit and root.parent.parent.parent.parent.name == f"WEEK_{week}", f"registry week/unit route mismatch: {unit}")
+                version = item.get("version")
+                version_matches = isinstance(version, str) and f"_v{version}_" in root.name
+                candidate = re.fullmatch(r"([0-9]+\.[0-9]+\.[0-9]+)-rc\.([0-9]+)", str(version))
+                if candidate:
+                    version_matches = root.name.endswith(f"_v{candidate[1]}_RC{candidate[2]}")
+                self.require(version_matches, f"registry package version mismatch: {unit}")
+                self.require(item.get("status") == registry.get("status"), f"registry status mismatch: {unit}")
+                self.require(isinstance(item.get("gates"), dict), f"registry gates must be a map: {unit}")
+                if archive.is_file():
+                    self.require(item["sha256"] == sha256_path(archive), f"registry archive hash mismatch: {unit}")
+                identity_files = [root / folder / "PACKAGE_ID.txt" for folder in ("90_AUDIT", "06_AUDIT", "05_AUDIT")]
+                identity_path = next((path for path in identity_files if path.is_file()), None)
+                self.require(identity_path is not None, f"registry package identity missing: {unit}")
+                self.require(re.fullmatch(r"[0-9a-f]{64}", str(item.get("package_id", ""))) is not None, f"registry invalid PACKAGE_ID: {unit}")
+                if identity_path:
+                    self.require(identity_path.read_text(encoding="utf-8").strip() == item.get("package_id"), f"registry PACKAGE_ID mismatch: {unit}")
+                for key, value in item.get("entrypoints", {}).items():
+                    targets = value if isinstance(value, list) else [value]
+                    for relative in targets:
+                        self.require(repo_path(relative, root).is_file(), f"missing registry entrypoint {unit}/{key}: {relative}")
+                self.require(bool(item.get("entrypoints")), f"registry needs explicit entrypoints: {unit}")
+                planned = plan["weeks"][week]["languages"][language]
+                role = "course" if unit.startswith("C") else "seminar"
+                self.require(planned[role] == item["zip"], f"release-plan and current registry disagree: {unit}")
+                self.require(plan["weeks"][week]["version"] == registry.get("distribution_version"), f"registry and release distribution versions disagree: {week}")
+                units.append(root.parent.parent)
+            for week, language in {(item["week"], item["language"]) for item in selected}:
+                expected = {(week, f"C{week}", language), (week, f"S{week}", language)}
+                self.require(expected.issubset(seen), f"registry needs course and seminar for week {week}/{language}")
+            if self.selected_weeks:
+                self.require(self.selected_weeks.issubset({item["week"] for item in selected}), "registry omits a requested week")
+            if isinstance(registry.get("languages"), list):
+                self.require({item["language"] for item in objects}.issubset(set(registry["languages"])), "registry objects use an undeclared language")
+            else:
+                self.fail("registry languages must be a list")
+        except Exception as exc:
+            self.fail(f"current-object registry: {exc}")
+        return units
+
+    def selected_path(self, path: Path) -> bool:
+        """Scope teaching objects, while retaining shared navigation and tooling checks."""
+        if not self.weeks and not self.language:
+            return True
+        relative = path.relative_to(ROOT).as_posix()
+        parts = path.relative_to(ROOT).parts
+        if parts and parts[0] == "01_WEEKS":
+            if len(parts) > 1 and parts[1].startswith("WEEK_"):
+                if self.selected_weeks and parts[1][5:] not in self.selected_weeks:
+                    return False
+                if len(parts) > 3 and parts[3] in ("RO", "EN_GB") and self.language and parts[3] != self.language:
+                    return False
+            return True
+        if parts and parts[0] == "00_SETUP":
+            return False
+        if len(parts) > 1 and parts[:2] == ("90_RELEASES", "assets"):
+            try:
+                return any(relative == data["bundle"] or relative == data["bundle"] + ".sha256"
+                           for _, _, _, data in selection(read_plan(ROOT), self.weeks, self.language))
+            except Exception:
+                return False
+        return not relative.startswith(".git/")
+
+    def run_scoped(self) -> int:
+        required = ("README.md", "index.html", "00_START_HERE/STUDENT_QUICK_START.md",
+                    "00_START_HERE/DOWNLOAD_A_WEEK.md", "01_WEEKS/README.md",
+                    "90_RELEASES/CURRENT_OBJECTS.json", "90_RELEASES/RELEASE_PLAN.json",
+                    "metadata/development-state.json", ".github/workflows/validate.yml",
+                    ".github/workflows/pages.yml", ".github/workflows/release-week.yml")
+        for relative in required:
+            self.require((ROOT / relative).is_file(), f"missing required shared path: {relative}")
+        units = self.check_current_objects()
+        for unit in units:
+            self.require((unit / "README.md").is_file(), f"missing current unit README: {unit.relative_to(ROOT)}")
+            self.require((unit.parent.parent / "README.md").is_file(), f"missing selected week README: {unit.parent.parent.relative_to(ROOT)}")
+        for unit in dict.fromkeys(units):
+            for archive in (unit / "DOWNLOAD").glob("*.zip"):
+                self.check_zip_file(archive)
+            self.verify_exact_package(unit)
+        selected_files = [path for path in repository_files() if self.selected_path(path)]
+        seen = set()
+        for path in selected_files:
+            relative = path.relative_to(ROOT).as_posix()
+            key = normal_key(relative)
+            self.require(key not in seen, f"case/Unicode duplicate in selected scope: {relative}")
+            seen.add(key)
+            self.require(not path.is_symlink(), f"symbolic link in selected scope: {relative}")
+            self.require(len(relative) <= 220, f"selected path exceeds 220 characters: {relative}")
+            self.require(path.stat().st_size <= 95 * 1024 * 1024, f"selected file approaches GitHub limit: {relative}")
+            if FORBIDDEN_PUBLIC_PATHS.search(relative) and "PACKAGE_EXACT" not in path.parts:
+                self.fail(f"private/teacher path in selected scope: {relative}")
+            if path.suffix.lower() in TEXT_SUFFIXES:
+                text = path.read_text(encoding="utf-8-sig", errors="replace")
+                for label, pattern in STRONG_SECRET_PATTERNS.items():
+                    if pattern.search(text):
+                        self.fail(f"{label} detected in {relative}")
+                if "PACKAGE_EXACT" not in path.parts and not relative.startswith(ROMANIAN_ALLOWED_PREFIXES) and ROMANIAN_MARKERS.search(text):
+                    self.fail(f"Romanian text outside permitted objects: {relative}")
+            if path.suffix == ".json" and "PACKAGE_EXACT" not in path.parts:
+                try:
+                    json.loads(path.read_text(encoding="utf-8-sig"))
+                except Exception as exc:
+                    self.fail(f"JSON parse failure {relative}: {exc}")
+        self.check_local_links()
+        for path in selected_files:
+            if "PACKAGE_EXACT" in path.parts:
+                continue
+            command = None
+            if path.suffix == ".sh":
+                command = ["bash", "-n", str(path)]
+            elif path.suffix in (".js", ".mjs", ".cjs"):
+                command = ["node", "--check", str(path)]
+            if command:
+                cp = subprocess.run(command, capture_output=True, text=True, timeout=20)
+                if cp.returncode:
+                    self.fail(f"syntax failure {path.relative_to(ROOT)}: {cp.stderr.strip()}")
+        self.check_metadata()
+        self.check_action_lock()
+        self.check_automation_policy()
+        self.check_release_plan()
+        self.check_repo_identity()
+        if self.errors:
+            print(f"VERDICT: FAIL_SCOPED_DISTRIBUTION_INTEGRITY ({len(self.errors)} findings)")
+            return 2
+        print(f"VERDICT: PASS_SCOPED_DISTRIBUTION_INTEGRITY (weeks={self.weeks or 'registry'}, language={self.language or 'declared'}, objects={len(units)}, files={len(selected_files)}; qualification is separate)")
+        return 0
 
     def _identity_from_committed_tree(self, excluded: set[str]) -> dict[str, str] | None:
         """Hash committed Git blobs, avoiding checkout/export EOL conversion.
@@ -545,6 +771,9 @@ class Audit:
             self.fail(f"repository manifest mismatch: unexpected={unexpected}, absent={absent}, mismatch={mismatch}")
 
     def run(self) -> int:
+        if self.weeks or self.language:
+            return self.run_scoped()
+        self.check_current_objects()
         required = [
             "README.md", "current-outline.md", "CHANGELOG.md", "COPYRIGHT.md",
             "CITATION.cff", "codemeta.json", "SECURITY.md", "SUPPORT.md",
@@ -628,7 +857,7 @@ class Audit:
         if self.errors:
             print(f"VERDICT: FAIL_PUBLIC_REPOSITORY ({len(self.errors)} findings)")
             return 2
-        verdict = "PASS_PUBLIC_REPOSITORY_WIP" if self.repository_state == "work-in-progress" else "PASS_PUBLIC_REPOSITORY_FINAL"
+        verdict = "PASS_PUBLIC_REPOSITORY_INTEGRITY_WIP" if self.repository_state == "work-in-progress" else "PASS_PUBLIC_REPOSITORY_INTEGRITY"
         print(
             f"VERDICT: {verdict} "
             f"(files={len(all_paths)}, zips={self.counts.get('zip_archives',0)}, exact_packages={self.counts.get('exact_packages',0)}, alternatives={self.counts.get('alternative_packages',0)}, warnings={len(self.warnings)})"
@@ -639,8 +868,12 @@ class Audit:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--strict", action="store_true")
+    parser.add_argument("--weeks", help="Comma-separated current week numbers; checks shared navigation and the selected distribution")
+    parser.add_argument("--language", help="Current distribution language, such as EN_GB")
     args = parser.parse_args()
-    return Audit(args.strict).run()
+    if args.weeks and (not re.fullmatch(r"[0-9]{1,2}(?:,[0-9]{1,2})*", args.weeks) or len(set(args.weeks.split(","))) != len(args.weeks.split(","))):
+        parser.error("--weeks must list distinct week numbers, such as 01,02")
+    return Audit(args.strict, args.weeks, args.language).run()
 
 
 if __name__ == "__main__":

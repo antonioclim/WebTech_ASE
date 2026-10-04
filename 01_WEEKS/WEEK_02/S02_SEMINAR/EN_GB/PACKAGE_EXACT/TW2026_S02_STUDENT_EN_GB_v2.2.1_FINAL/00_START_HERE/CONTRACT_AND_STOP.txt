@@ -1,6 +1,0 @@
-S02 v2.1 CONTRACT
-- Edit only public/styles.css.
-- 1/2/4 columns at 320/768/1280 px.
-- Do not conceal overflow and do not modify the HTML.
-- STOP at 60:00 for the core. The 60–73 extension is optional.
-- Timeout/crash/signal/leak is not an expected pedagogical FAIL.

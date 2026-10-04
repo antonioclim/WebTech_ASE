@@ -1,0 +1,29 @@
+{
+  "schema": "webtech-ase-week-distribution-v1",
+  "week": 2,
+  "distribution_version": "2.1.0-rc.1",
+  "status": "release-candidate",
+  "qualified_release": false,
+  "active_languages": [
+    "EN_GB"
+  ],
+  "objects": [
+    "C02",
+    "S02"
+  ],
+  "registry": "90_RELEASES/CURRENT_OBJECTS.json",
+  "pending_gates": [
+    "local_integrity",
+    "reference_runtime",
+    "headless_browser",
+    "native_windows",
+    "native_macos",
+    "manual_browser",
+    "word",
+    "moodle_live",
+    "human_pilot",
+    "owner_acceptance"
+  ],
+  "actions_requested": false,
+  "legacy_ro": "preserved; not remediated"
+}

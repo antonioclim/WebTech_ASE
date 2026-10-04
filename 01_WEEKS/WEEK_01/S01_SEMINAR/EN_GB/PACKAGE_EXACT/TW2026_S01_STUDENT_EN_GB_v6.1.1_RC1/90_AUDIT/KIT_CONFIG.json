@@ -1,0 +1,71 @@
+{
+  "schema": "TW2026_S01_KIT_6_1",
+  "version": "6.1.1",
+  "role": "student",
+  "requiredNode": "v24.21.0",
+  "requiredNpm": "11.19.0",
+  "suiteTimeoutMs": 10000,
+  "outputLimitBytes": 2097152,
+  "serverLifetimeMinutes": 100,
+  "projects": {
+    "p1": {
+      "path": "02_PROJECTS/P01_HTTP_DETECTIVE",
+      "editable": "02_PROJECTS/P01_HTTP_DETECTIVE/case-report.json",
+      "tests": {
+        "baseline": {
+          "names": [
+            "investigation page and assets are available",
+            "browser module contains the three investigation requests"
+          ],
+          "initial_failures": 0
+        },
+        "objective": {
+          "names": [
+            "case report matches live HTTP observations"
+          ],
+          "initial_failures": 1
+        },
+        "regression": {
+          "names": [
+            "clues preserve query identity in payload and header",
+            "verdict represents the submission and created resource",
+            "unknown paths fail without stopping the server",
+            "invalid case identifiers return 400 and preserve subsequent requests",
+            "malformed request targets return 400 and preserve subsequent requests"
+          ],
+          "initial_failures": 0
+        }
+      }
+    },
+    "p2": {
+      "path": "02_PROJECTS/P02_TINY_HTTP_SERVER",
+      "editable": "02_PROJECTS/P02_TINY_HTTP_SERVER/src/application-handler.js",
+      "tests": {
+        "baseline": {
+          "names": [
+            "server starts and health route works independently",
+            "root page and stylesheet are served from disk"
+          ],
+          "initial_failures": 0
+        },
+        "objective": {
+          "names": [
+            "path greeting route decodes and trims the final path segment",
+            "path greeting route rejects an empty decoded segment"
+          ],
+          "initial_failures": 2
+        },
+        "regression": {
+          "names": [
+            "query greeting route still validates and uses the query value",
+            "echo route creates an unchanged JSON representation and rejects invalid requests",
+            "unknown path and unsupported method use the supplied fallback",
+            "a failed request does not stop health behavior"
+          ],
+          "initial_failures": 0
+        }
+      }
+    }
+  },
+  "qualification": "RELEASE_CANDIDATE"
+}

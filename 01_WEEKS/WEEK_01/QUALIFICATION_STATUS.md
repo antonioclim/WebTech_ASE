@@ -1,7 +1,9 @@
 # Week 01 qualification
 
-S01 v6.1.0 content and packaging passed the local hostile audit and post-package verification. The repository lane remains **STUDENT_WIP_PREVIEW**, not a qualified platform release.
+Distribution 2.1.0-rc.1 is an English release candidate. Each selected object has a new version and regenerated identity. Completed solutions and mutation fixtures are kept outside the student distribution.
 
-Open gates: exact Node.js v24.21.0 and npm 11.19.0, native Chrome/Edge/Firefox, native Windows/macOS, Microsoft Word, Moodle live, owner acceptance and remote publication review.
+The [current registry](../../90_RELEASES/CURRENT_OBJECTS.json) records local integrity, runtime and browser checks. The [remediation record](../../90_RELEASES/REMEDIATION_WEEK_01_02.md) describes their evidence and limits.
 
-The older v6.0.1 download, v6.0.1 folder whose recovered metadata declared v6.0.2 and the standalone v1.0 guide package remain historical objects. No deletion is included in this update. No Pages, Release, tag or Actions run is implied.
+Open acceptance gates: native Windows and macOS launchers, native Microsoft Word, Moodle upload/review, a timed classroom pilot, and owner acceptance. Headless Chromium on Linux does not close these gates. The intended 60-minute seminar core is a design budget until the human pilot confirms it.
+
+No workflow dispatch, tag, Release publication or Pages deployment is part of this candidate preparation. All workflows remain manual-only; the owner controls their eventual execution.

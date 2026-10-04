@@ -8,6 +8,11 @@ on:
         type: choice
         required: true
         options: ['01', '02']
+      preview:
+        description: 'Allow declared candidate assets, retaining plan draft/prerelease status and pending gates'
+        type: boolean
+        required: true
+        default: false
 
 permissions:
   contents: write
@@ -30,15 +35,20 @@ jobs:
         with:
           node-version: '24.21.0'
       - name: Verify deterministic weekly bundles
-        run: python 00_TOOLS/publishing/build_week_bundle.py --verify-all
+        run: python 00_TOOLS/publishing/build_week_bundle.py --verify-all --weeks '${{ inputs.week }}' --language EN_GB
       - name: Validate repository
-        run: python 00_TOOLS/qa/validate_public_repo.py --strict
+        run: python 00_TOOLS/qa/validate_public_repo.py --strict --weeks '${{ inputs.week }}' --language EN_GB
       - name: Resolve and verify release plan
         id: plan
-        run: >-
-          python 00_TOOLS/publishing/resolve_release.py
-          --week '${{ inputs.week }}'
-          --github-output "$GITHUB_OUTPUT"
+        env:
+          WEEK: ${{ inputs.week }}
+          PREVIEW: ${{ inputs.preview }}
+        run: |
+          preview_args=()
+          if [[ "$PREVIEW" == "true" ]]; then
+            preview_args+=(--allow-preview)
+          fi
+          python 00_TOOLS/publishing/resolve_release.py --week "$WEEK" --language EN_GB --github-output "$GITHUB_OUTPUT" "${preview_args[@]}"
       - name: Refuse an existing tag or release
         env:
           GH_TOKEN: ${{ github.token }}
@@ -59,6 +69,15 @@ jobs:
           TITLE: ${{ steps.plan.outputs.title }}
           NOTES: ${{ steps.plan.outputs.notes }}
           ASSETS: ${{ steps.plan.outputs.assets }}
+          DRAFT: ${{ steps.plan.outputs.draft }}
+          PRERELEASE: ${{ steps.plan.outputs.prerelease }}
         run: |
           read -r -a asset_array <<< "$ASSETS"
-          gh release create "$TAG" "${asset_array[@]}" --target "$GITHUB_SHA" --title "$TITLE" --notes-file "$NOTES" --verify-tag=false
+          release_args=()
+          if [[ "$DRAFT" == "true" ]]; then
+            release_args+=(--draft)
+          fi
+          if [[ "$PRERELEASE" == "true" ]]; then
+            release_args+=(--prerelease)
+          fi
+          gh release create "$TAG" "${asset_array[@]}" --target "$GITHUB_SHA" --title "$TITLE" --notes-file "$NOTES" --verify-tag=false "${release_args[@]}"

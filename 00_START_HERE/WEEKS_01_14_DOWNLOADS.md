@@ -1,6 +1,6 @@
 # Browse, download and open Weeks 01–14
 
-Start with [the weekly index](../01_WEEKS/README.md). Weeks 01–02 keep their established bilingual pages and original ZIPs. The additional interactive S01 guide remains at its live Week 01 path.
+Start with [the weekly index](../01_WEEKS/README.md). Weeks 01–02 provide one corrected English candidate per object. The S01 interactive guide is included in its current package; the old standalone copy is superseded.
 
 ## Browse individual files
 
@@ -8,11 +8,11 @@ Follow `week → course/seminar → language` and open `PACKAGE_EXACT`. For Week
 
 ## Download a ZIP
 
-- Weeks 01–02: use their established bundle and object download routes.
+- Weeks 01–02: use their current EN candidate bundle or object download route. Whole-week bundles contain two nested object ZIPs; extract the outer ZIP and then the selected object ZIP.
 - Weeks 03–07: use either the whole-week PREVIEW ZIP or a separate course/seminar ZIP.
 - Weeks 08–14: use the separate course or seminar ZIP under the selected object's `EN_GB/DOWNLOAD` directory.
 
-Save the selected ZIP locally. On Windows, use a short new extraction folder such as `D:\WTW14\WEEK`. Extract the archive completely and open the extracted `index.html`. Do not open HTML from inside the ZIP. Do not extract the duplicate ZIP under `DOWNLOAD` merely to browse the already extracted `PACKAGE_EXACT` tree.
+Save the selected ZIP locally. Use a new writable extraction folder under your user profile. For Weeks 01–02, follow the named launchers in [quick start](STUDENT_QUICK_START.md). For Weeks 03–14, follow the extracted root `index.html` instructions. Do not open HTML from inside the ZIP. Do not extract the duplicate ZIP under `DOWNLOAD` merely to browse the already extracted `PACKAGE_EXACT` tree.
 
 ## Qualification limits
 

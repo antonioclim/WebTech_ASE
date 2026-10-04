@@ -9,10 +9,14 @@
       "course_id": "C01",
       "course": "The Web as a system, HTTP and AI-assisted development",
       "seminar_id": "S01",
-      "seminar": "From click to contract",
+      "seminar": "HTTP Detective + Tiny HTTP Server",
       "public": true,
       "languages": [
         "RO",
+        "EN_GB"
+      ],
+      "status": "EN_RELEASE_CANDIDATE_RO_LEGACY_ALTERNATIVE",
+      "active_distribution_languages": [
         "EN_GB"
       ]
     },
@@ -21,10 +25,14 @@
       "course_id": "C02",
       "course": "Semantic HTML, CSS, responsive UI and accessibility",
       "seminar_id": "S02",
-      "seminar": "CSS as a constraint system",
+      "seminar": "Responsive Card Grid",
       "public": true,
       "languages": [
         "RO",
+        "EN_GB"
+      ],
+      "status": "EN_RELEASE_CANDIDATE_RO_LEGACY_ALTERNATIVE",
+      "active_distribution_languages": [
         "EN_GB"
       ]
     },

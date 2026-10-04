@@ -1,27 +1,57 @@
-# Development workflow while the repository is incomplete
+# Development and qualification while the repository is incomplete
 
-The repository is currently under active construction. Validation, GitHub Pages
-and weekly release publication must not run automatically.
+The full repository is work in progress. Its stable citation and repository
+identity remain **2.0.1**. The scoped English Week 01–02 distribution
+**2.1.0-rc.1** is a separate candidate; it does not rename or certify the full
+fourteen-week repository.
 
-## During development
+## Development and scoped integration
 
-1. Upload public files through the browser.
+1. Prepare changes on an isolated branch and review their exact scope.
 2. Keep `validate.yml`, `pages.yml` and `release-week.yml` manual-only.
+   Only the owner executes Actions for the Week 01–02 remediation.
 3. Keep Dependabot version-update pull requests disabled.
-4. Do not regenerate repository identity after every commit.
-5. Do not publish weekly GitHub Releases from a changing tree.
-6. Do not promote alternative release candidates on the Pages landing page.
+4. Keep historical identities separate from the current object registry;
+   do not regenerate the stable repository identity after every commit.
+5. Preserve the deliberately incomplete seminar starters and their allowed-edit
+   contracts. Keep completed solutions, private fixtures and student submissions
+   outside the public student route.
+6. Integrate locally reviewed candidates with their qualification status intact.
+   A merge is source integration, not native acceptance, Release publication,
+   Pages deployment or Moodle configuration.
 
-## Final freeze
+## The current Week 01–02 English candidate
 
-1. Complete the intended public corpus.
-2. Remove temporary flat alternative ZIP aliases and their sidecars.
-3. Change `metadata/development-state.json` and repository metadata to `final`.
-4. Regenerate the repository manifest and package ID once.
-5. Run the full local validator.
-6. Select **Settings → Pages → GitHub Actions**.
-7. Run **Deploy GitHub Pages** manually once.
-8. Publish weekly Releases only after the Pages workflow is green.
+After the candidate is merged and its selected source commit is reviewed, the
+owner can manually prepare a draft prerelease with `preview=true`. Follow
+[Manual weekly releases](WEEKLY_RELEASE_PUBLISHING.md) for the exact branch,
+week, tags, attached files and duplicate-refusal behaviour. The default
+`preview=false` route rejects the candidate while its required gates are
+pending. A successful draft-preparation run does not publish the draft.
 
-Historical failed jobs must not be re-run because they refer to older repository
-states and validators.
+The local remediation and checks cover only C01, S01, C02 and S02 EN. Native
+Windows/macOS, manual browser/keyboard/zoom, Microsoft Word, Moodle, a human
+pilot and owner acceptance remain separate. Historical workflow failures and
+other weeks are not repaired or certified by a scoped candidate merge.
+
+The existing general validation and Pages workflows have repository-wide
+checks. Do not treat them as prerequisite proof for this scoped candidate, or
+deploy Pages merely to prepare its draft. Repository-wide readiness and Pages
+publication are separate work with their own review.
+
+## A future repository-wide final freeze
+
+1. Complete and review the intended public corpus.
+2. Reconcile current object selection, historical alternatives and distribution
+   aliases throughout that corpus.
+3. Collect the relevant platform, browser, Word, Moodle and human acceptance
+   evidence. Record genuine results and remaining limitations.
+4. When that evidence qualifies the repository, update its development state and
+   metadata, then regenerate its manifest and identity once.
+5. Run and review the full local validator and Pages payload checks.
+6. The owner may then configure Pages and run its deployment workflow manually,
+   followed by any separately approved final Releases.
+
+Do not rerun historical failed jobs as a substitute for checking the current
+commit. A correction receives a new version and identity; existing published
+release assets and history are preserved.

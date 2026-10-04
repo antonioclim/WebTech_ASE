@@ -1,0 +1,18 @@
+{
+  "object": "C02",
+  "releaseVersion": "v1.2.2 RC1",
+  "coreContentVersion": "v1.1 didactic core with audited C02 corrections",
+  "status": "RELEASE_CANDIDATE",
+  "requiredNode": "v24.21.0",
+  "requiredNpm": "11.19.0",
+  "repositoryModified": true,
+  "moodleWorkflow": false,
+  "independentHostileAudit": false,
+  "gates": {
+    "automatedLocal": "Recorded separately in remediation evidence",
+    "nativeWindows": "PENDING",
+    "nativeWord": "PENDING",
+    "classroomPilot": "PENDING",
+    "githubActions": "NOT_EXECUTED"
+  }
+}
