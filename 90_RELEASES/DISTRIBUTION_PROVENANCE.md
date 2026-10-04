@@ -1,47 +1,24 @@
 # Week 01–02 English distribution provenance
 
-The four corrected RC1 object archives are present in the reviewed source
-snapshot **`6e5cc0a917429d7120f71fd153e8853f05729c9d`**, tree
-`5e5075f924f1b15b9d6c18b095be9d9a721f0455`. PR #16 integrated this snapshot.
-This describes the reviewed English Week 01–02 payload. It does not qualify
-the rest of the fourteen-week repository.
+The active filtered candidate is **2.1.0-rc.2**. Its selected student archives are present in payload commit `b631bc9400012c59527a72f6676d94f307460780`, tree `3119127801a15cc067fa4e1333feec707576e390`. S02 is 2.3.1 RC2; C01, S01 and C02 retain their exact RC1 ZIP bytes. Distribution metadata and bundles are committed after this payload snapshot. This scope covers only Weeks 01–02 EN.
 
-## Two source identities with different roles
+## Source identities and roles
 
 | Identity | Role |
 | --- | --- |
-| `1850118b3f619b233f89941802212fe59d8d5dfe` | Pre-remediation baseline. It does not contain the four corrected RC1 archives. |
-| `6e5cc0a917429d7120f71fd153e8853f05729c9d` | Reviewed source snapshot containing the corrected RC1 payload. |
+| `1850118b3f619b233f89941802212fe59d8d5dfe` | Original pre-remediation audit baseline. |
+| `6e5cc0a917429d7120f71fd153e8853f05729c9d` | Historical reviewed RC1 payload; retained whole-source study-beta branch snapshot. |
+| `7f88fecfa972bfb41d4fffec3e47616842c7e067` | Main snapshot preceding this Windows hotfix; contains the frozen RC1 distribution and known S02 launcher defect. |
+| `b631bc9400012c59527a72f6676d94f307460780` | Reviewed payload snapshot containing all four selected archives, including corrected S02 RC2. |
 
-The retained `source_commit` field in `CURRENT_OBJECTS.json`,
-`RELEASE_PLAN.json`, `LOCAL_QA_WEEK01_02.json` and the existing RC1 bundle
-metadata means **pre-remediation baseline**, not the commit from which the
-corrected RC1 archives can be downloaded. This legacy field is ambiguous when
-read alone. The explicit provenance in `SCOPED_DISTRIBUTION.json` resolves its
-meaning for the combined download.
+RC2 `CURRENT_OBJECTS.json`, `RELEASE_PLAN.json` and bundle `RELEASE.json` use `source_commit_role: reviewed-payload` and bind `source_commit` to the actual payload snapshot. The catalog declares the baseline and hotfix parent separately. The payload commit does not claim to contain subsequently assembled distribution metadata or to establish native platform acceptance.
 
-The older field is preserved to avoid changing frozen bundle bytes under an
-existing RC1 identity. A future candidate should use explicit baseline and
-reviewed-payload fields from the outset. It must receive a new identity if its
-downloadable content changes.
+Historical RC1 metadata retained the audit baseline in its `source_commit`. The original RC1 archives, sidecars, recipes and `LOCAL_QA_WEEK01_02.json` remain unchanged. The RC1 catalog and metadata are retrievable at the pinned pre-hotfix main snapshot above. RC1 evidence must not be presented as a fresh RC2 execution.
 
 ## What the checksums establish
 
-`SCOPED_DISTRIBUTION.json` identifies the combined archive, its exact hash,
-the four selected object inputs and the provenance roles. Its object inputs
-must agree with the frozen current registry. The accompanying verifier checks
-the outer ZIP and all four nested packages without executing student code.
+`SCOPED_DISTRIBUTION.json` binds the exact combined ZIP, frozen metadata inputs and selected object archives. Its verifier checks the outer ZIP, complete nested file sets, manifest hashes and package identity derivations without running student code. The combined `PACKAGE_ID.txt` hashes `SHA256SUMS.txt`, binding the four inner ZIPs. The outer SHA-256 also covers the wrapper README and RELEASE.json.
 
-The combined `PACKAGE_ID.txt` hashes the exact bytes of its
-`SHA256SUMS.txt`. That inner manifest binds the four object ZIPs. It does not
-cover the wrapper README or `RELEASE.json`; the **outer archive SHA-256** binds
-those files too. Use both identities according to their stated scope.
+`WINDOWS_PATH_HOTFIX_QA.json` records the observed RC1 incident, fresh local RC2 checks and the precise scope of inherited evidence. The Windows argument model is a portable regression test; execution of the corrected native launcher remains pending. All seven qualification gates remain pending. Integrity, rendered DOCX checks and headless browser observations do not close those gates.
 
-The repository-level `REPOSITORY_SHA256SUMS.txt` and
-`REPOSITORY_PACKAGE_ID.txt` remain receipts for the frozen **2.0.1** baseline
-while the repository is work in progress. They are not checksums for the current
-work-in-progress tree or for the proposed whole-source study beta.
-
-Integrity and provenance do not establish native platform, Word, Moodle,
-browser-interaction or teaching-pilot acceptance. The seven pending gates
-remain pending. No GitHub Release, tag or deployment is created by these files.
+Repository-level `REPOSITORY_SHA256SUMS.txt` and `REPOSITORY_PACKAGE_ID.txt` remain receipts for the frozen 2.0.1 baseline. They do not describe the current work tree. No workflow execution, tag, Release or deployment accompanies this candidate. The whole-source beta proposal remains separate from the filtered RC2.

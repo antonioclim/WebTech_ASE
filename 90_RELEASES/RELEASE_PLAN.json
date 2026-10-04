@@ -1,8 +1,8 @@
 {
   "schema": "webtech-ase-release-plan-v2",
-  "source_commit": "1850118b3f619b233f89941802212fe59d8d5dfe",
+  "source_commit": "b631bc9400012c59527a72f6676d94f307460780",
   "repository_version": "2.0.1",
-  "distribution_version": "2.1.0-rc.1",
+  "distribution_version": "2.1.0-rc.2",
   "status": "release-candidate",
   "draft": true,
   "prerelease": true,
@@ -21,18 +21,18 @@
   "gates": {
     "local_integrity": {
       "status": "pass",
-      "evidence": "90_RELEASES/LOCAL_QA_WEEK01_02.json",
-      "scope": "exercised local cases; native acceptance separate"
+      "evidence": "90_RELEASES/WINDOWS_PATH_HOTFIX_QA.json",
+      "scope": "fresh RC2 static integrity for the four selected ZIPs, trees and identities; native acceptance separate"
     },
     "reference_runtime": {
       "status": "pass",
-      "evidence": "90_RELEASES/LOCAL_QA_WEEK01_02.json",
-      "scope": "exercised local cases; native acceptance separate"
+      "evidence": "90_RELEASES/WINDOWS_PATH_HOTFIX_QA.json",
+      "scope": "fresh local S02 RC2 checks; inherited exercised RC1 results for byte-identical C01/S01/C02 ZIPs; not a fresh native run"
     },
     "headless_browser": {
       "status": "pass",
-      "evidence": "90_RELEASES/LOCAL_QA_WEEK01_02.json",
-      "scope": "exercised local cases; native acceptance separate"
+      "evidence": "90_RELEASES/WINDOWS_PATH_HOTFIX_QA.json",
+      "scope": "fresh targeted S02 RC2 headless checks and version-only delta review; inherited exercised RC1 results for byte-identical C01/S01/C02 ZIPs; manual browser acceptance separate"
     },
     "native_windows": {
       "status": "pending",
@@ -65,36 +65,40 @@
   },
   "weeks": {
     "01": {
-      "version": "2.1.0-rc.1",
-      "tag": "week-01-en-v2.1.0-rc.1",
-      "title": "WebTech_ASE Week 01 EN 2.1.0-rc.1",
+      "version": "2.1.0-rc.2",
+      "tag": "week-01-en-v2.1.0-rc.2",
+      "title": "WebTech_ASE Week 01 EN 2.1.0-rc.2",
       "notes": "90_RELEASES/RELEASE_NOTES_WEEK_01.md",
       "status": "release-candidate",
       "draft": true,
       "prerelease": true,
       "languages": {
         "EN_GB": {
-          "bundle": "90_RELEASES/assets/WebTech_ASE_WEEK_01_EN_GB_v2.1.0-rc.1.zip",
+          "bundle": "90_RELEASES/assets/WebTech_ASE_WEEK_01_EN_GB_v2.1.0-rc.2.zip",
           "course": "01_WEEKS/WEEK_01/C01_COURSE/EN_GB/DOWNLOAD/TW2026_C01_STUDENT_EN_GB_v2.0.2_RC1.zip",
           "seminar": "01_WEEKS/WEEK_01/S01_SEMINAR/EN_GB/DOWNLOAD/TW2026_S01_STUDENT_EN_GB_v6.1.1_RC1.zip"
         }
       }
     },
     "02": {
-      "version": "2.1.0-rc.1",
-      "tag": "week-02-en-v2.1.0-rc.1",
-      "title": "WebTech_ASE Week 02 EN 2.1.0-rc.1",
+      "version": "2.1.0-rc.2",
+      "tag": "week-02-en-v2.1.0-rc.2",
+      "title": "WebTech_ASE Week 02 EN 2.1.0-rc.2",
       "notes": "90_RELEASES/RELEASE_NOTES_WEEK_02.md",
       "status": "release-candidate",
       "draft": true,
       "prerelease": true,
       "languages": {
         "EN_GB": {
-          "bundle": "90_RELEASES/assets/WebTech_ASE_WEEK_02_EN_GB_v2.1.0-rc.1.zip",
+          "bundle": "90_RELEASES/assets/WebTech_ASE_WEEK_02_EN_GB_v2.1.0-rc.2.zip",
           "course": "01_WEEKS/WEEK_02/C02_COURSE/EN_GB/DOWNLOAD/TW2026_C02_STUDENT_EN_GB_v1.2.2_RC1.zip",
-          "seminar": "01_WEEKS/WEEK_02/S02_SEMINAR/EN_GB/DOWNLOAD/TW2026_S02_STUDENT_EN_GB_v2.3.1_RC1.zip"
+          "seminar": "01_WEEKS/WEEK_02/S02_SEMINAR/EN_GB/DOWNLOAD/TW2026_S02_STUDENT_EN_GB_v2.3.1_RC2.zip"
         }
       }
     }
-  }
+  },
+  "audit_baseline_commit": "1850118b3f619b233f89941802212fe59d8d5dfe",
+  "hotfix_parent_commit": "7f88fecfa972bfb41d4fffec3e47616842c7e067",
+  "supersedes_distribution_version": "2.1.0-rc.1",
+  "source_commit_role": "reviewed-payload"
 }

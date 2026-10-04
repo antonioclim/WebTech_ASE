@@ -1,7 +1,7 @@
 # Manual weekly releases: English Weeks 01 and 02
 
-The active distribution is **2.1.0-rc.1**, a release candidate. Its three local
-qualification gates pass; seven native, human and owner gates remain pending in
+The active distribution is **2.1.0-rc.2**, a release candidate. Its local
+qualification record distinguishes fresh hotfix checks and inherited results; seven native, human and owner gates remain pending in
 `90_RELEASES/RELEASE_PLAN.json`. A merge makes the reviewed source available on
 `main`; it does not qualify this candidate as FINAL or publish a Release.
 
@@ -14,13 +14,13 @@ that GitHub permissions prevent every other writer from dispatching a workflow.
 1. Confirm that the reviewed Week 01–02 EN pull request has been merged. Select
    `main` at the reviewed merge commit; if it has moved, inspect the intervening
    changes before using it. The workflow targets its captured `GITHUB_SHA`.
-   Do not publish this workflow-changing candidate from an unmerged branch:
+   If a future candidate changes workflow files, do not publish it from an unmerged branch:
    GitHub may require Workflows write permission when the release target changes
    workflow files relative to the default branch. The built-in token has only
    the declared Contents write permission.
 2. Inspect `90_RELEASES/CURRENT_OBJECTS.json`, `WEEKLY_BUNDLES.csv` and
    `RELEASE_PLAN.json` at that same commit. The four selected object versions are
-   C01 2.0.2-rc.1, S01 6.1.1-rc.1, C02 1.2.2-rc.1 and S02 2.3.1-rc.1.
+   C01 2.0.2-rc.1, S01 6.1.1-rc.1, C02 1.2.2-rc.1 and S02 2.3.1-rc.2.
 3. The local review commands are scoped to this remediation:
 
    ```bash
@@ -47,15 +47,10 @@ that GitHub permissions prevent every other writer from dispatching a workflow.
 
 | Week | Candidate tag | Expected attached files |
 | --- | --- | --- |
-| 01 | `week-01-en-v2.1.0-rc.1` | `WebTech_ASE_WEEK_01_EN_GB_v2.1.0-rc.1.zip` and its `.zip.sha256` sidecar |
-| 02 | `week-02-en-v2.1.0-rc.1` | `WebTech_ASE_WEEK_02_EN_GB_v2.1.0-rc.1.zip` and its `.zip.sha256` sidecar |
+| 01 | `week-01-en-v2.1.0-rc.2` | `WebTech_ASE_WEEK_01_EN_GB_v2.1.0-rc.2.zip` and its `.zip.sha256` sidecar |
+| 02 | `week-02-en-v2.1.0-rc.2` | `WebTech_ASE_WEEK_02_EN_GB_v2.1.0-rc.2.zip` and its `.zip.sha256` sidecar |
 
-The ZIP hashes recorded in `WEEKLY_BUNDLES.csv` are:
-
-```text
-729be6b83cdbea3a8f81aadeb7d1c15f881dbe24ed1cdb2a2c56521d8693a1c8  WebTech_ASE_WEEK_01_EN_GB_v2.1.0-rc.1.zip
-ef8aaedda68c5542ed2ade05a049db982c43eff0a6862717b9d4a929063b2399  WebTech_ASE_WEEK_02_EN_GB_v2.1.0-rc.1.zip
-```
+Read the exact RC2 ZIP hashes from `90_RELEASES/WEEKLY_BUNDLES.csv` and compare both `.zip.sha256` sidecars at the same reviewed commit. The retained RC1 hashes belong to different outer assets and must not be relabelled as RC2.
 
 The workflow verifies deterministic bundles and the selected EN week, resolves
 the declared assets and preserves both `draft=true` and `prerelease=true`.
@@ -80,7 +75,7 @@ Before qualifying a new version as FINAL, collect actual evidence for native
 Windows, native macOS, manual browser/keyboard/zoom, Microsoft Word, live Moodle,
 a timed human pilot and owner acceptance. Update the qualification records,
 regenerate the affected package identities and bundles, select a new release
-version and review it. Do not relabel RC1 or change protected student metadata
+version and review it. Do not relabel an existing candidate or change protected student metadata
 to manufacture acceptance.
 
 Release immutability is enforced by GitHub only when enabled and after

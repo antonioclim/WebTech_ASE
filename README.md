@@ -21,7 +21,7 @@ The working repository contains:
 2. Open [the student quick start](00_START_HERE/STUDENT_QUICK_START.md).
 3. Choose a week, then course or seminar, then language.
 
-For the English Weeks 01–02 route, [download both weeks together](90_RELEASES/assets/WEBTECH_ASE_WEEKS_01_02_EN_GB_v2.1.0-rc.1.zip) and read the [distribution catalogue](90_RELEASES/README.md). Extract the outer archive and then the selected object ZIPs. The material remains a release candidate with declared pending gates.
+For the English Weeks 01–02 route, [download both weeks together](90_RELEASES/assets/WEBTECH_ASE_WEEKS_01_02_EN_GB_v2.1.0-rc.2.zip) and read the [distribution catalogue](90_RELEASES/README.md). Extract the outer archive and then the selected object ZIPs. The material remains a release candidate with declared pending gates.
 
 ```text
 week → course/seminar → language

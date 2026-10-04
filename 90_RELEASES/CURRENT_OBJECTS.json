@@ -1,7 +1,7 @@
 {
   "schema": "webtech-ase-current-objects-v1",
-  "source_commit": "1850118b3f619b233f89941802212fe59d8d5dfe",
-  "distribution_version": "2.1.0-rc.1",
+  "source_commit": "b631bc9400012c59527a72f6676d94f307460780",
+  "distribution_version": "2.1.0-rc.2",
   "status": "release-candidate",
   "languages": [
     "EN_GB"
@@ -27,18 +27,18 @@
       "gates": {
         "local_integrity": {
           "status": "pass",
-          "evidence": "90_RELEASES/LOCAL_QA_WEEK01_02.json",
-          "scope": "exercised local cases; native acceptance separate"
+          "evidence": "90_RELEASES/WINDOWS_PATH_HOTFIX_QA.json",
+          "scope": "fresh RC2 static integrity; pristine ZIP/tree/manifest/ID checked; native acceptance separate"
         },
         "reference_runtime": {
           "status": "pass",
-          "evidence": "90_RELEASES/LOCAL_QA_WEEK01_02.json",
-          "scope": "exercised local cases; native acceptance separate"
+          "evidence": "90_RELEASES/WINDOWS_PATH_HOTFIX_QA.json",
+          "scope": "inherited exercised RC1 checks because this student ZIP is byte-identical; not a fresh native run"
         },
         "headless_browser": {
           "status": "pass",
-          "evidence": "90_RELEASES/LOCAL_QA_WEEK01_02.json",
-          "scope": "exercised local cases; native acceptance separate"
+          "evidence": "90_RELEASES/WINDOWS_PATH_HOTFIX_QA.json",
+          "scope": "inherited exercised RC1 checks because this student ZIP is byte-identical; not a fresh native run"
         },
         "native_windows": {
           "status": "pending",
@@ -94,18 +94,18 @@
       "gates": {
         "local_integrity": {
           "status": "pass",
-          "evidence": "90_RELEASES/LOCAL_QA_WEEK01_02.json",
-          "scope": "exercised local cases; native acceptance separate"
+          "evidence": "90_RELEASES/WINDOWS_PATH_HOTFIX_QA.json",
+          "scope": "fresh RC2 static integrity; pristine ZIP/tree/manifest/ID checked; native acceptance separate"
         },
         "reference_runtime": {
           "status": "pass",
-          "evidence": "90_RELEASES/LOCAL_QA_WEEK01_02.json",
-          "scope": "exercised local cases; native acceptance separate"
+          "evidence": "90_RELEASES/WINDOWS_PATH_HOTFIX_QA.json",
+          "scope": "inherited exercised RC1 checks because this student ZIP is byte-identical; not a fresh native run"
         },
         "headless_browser": {
           "status": "pass",
-          "evidence": "90_RELEASES/LOCAL_QA_WEEK01_02.json",
-          "scope": "exercised local cases; native acceptance separate"
+          "evidence": "90_RELEASES/WINDOWS_PATH_HOTFIX_QA.json",
+          "scope": "inherited exercised RC1 checks because this student ZIP is byte-identical; not a fresh native run"
         },
         "native_windows": {
           "status": "pending",
@@ -161,18 +161,18 @@
       "gates": {
         "local_integrity": {
           "status": "pass",
-          "evidence": "90_RELEASES/LOCAL_QA_WEEK01_02.json",
-          "scope": "exercised local cases; native acceptance separate"
+          "evidence": "90_RELEASES/WINDOWS_PATH_HOTFIX_QA.json",
+          "scope": "fresh RC2 static integrity; pristine ZIP/tree/manifest/ID checked; native acceptance separate"
         },
         "reference_runtime": {
           "status": "pass",
-          "evidence": "90_RELEASES/LOCAL_QA_WEEK01_02.json",
-          "scope": "exercised local cases; native acceptance separate"
+          "evidence": "90_RELEASES/WINDOWS_PATH_HOTFIX_QA.json",
+          "scope": "inherited exercised RC1 checks because this student ZIP is byte-identical; not a fresh native run"
         },
         "headless_browser": {
           "status": "pass",
-          "evidence": "90_RELEASES/LOCAL_QA_WEEK01_02.json",
-          "scope": "exercised local cases; native acceptance separate"
+          "evidence": "90_RELEASES/WINDOWS_PATH_HOTFIX_QA.json",
+          "scope": "inherited exercised RC1 checks because this student ZIP is byte-identical; not a fresh native run"
         },
         "native_windows": {
           "status": "pending",
@@ -215,31 +215,31 @@
       "kind": "seminar",
       "title": "Responsive Card Grid",
       "language": "EN_GB",
-      "version": "2.3.1-rc.1",
-      "candidate": "RC1",
-      "package_root": "TW2026_S02_STUDENT_EN_GB_v2.3.1_RC1",
-      "zip": "01_WEEKS/WEEK_02/S02_SEMINAR/EN_GB/DOWNLOAD/TW2026_S02_STUDENT_EN_GB_v2.3.1_RC1.zip",
-      "path": "01_WEEKS/WEEK_02/S02_SEMINAR/EN_GB/PACKAGE_EXACT/TW2026_S02_STUDENT_EN_GB_v2.3.1_RC1",
-      "sha256": "6f1f20ab87880d44d45a31908599379cf5f77de0af8df11f8286648c5069b4dd",
-      "bytes": 1200640,
+      "version": "2.3.1-rc.2",
+      "candidate": "RC2",
+      "package_root": "TW2026_S02_STUDENT_EN_GB_v2.3.1_RC2",
+      "zip": "01_WEEKS/WEEK_02/S02_SEMINAR/EN_GB/DOWNLOAD/TW2026_S02_STUDENT_EN_GB_v2.3.1_RC2.zip",
+      "path": "01_WEEKS/WEEK_02/S02_SEMINAR/EN_GB/PACKAGE_EXACT/TW2026_S02_STUDENT_EN_GB_v2.3.1_RC2",
+      "sha256": "2b18b94bd8e75dceaba7a7e1872f88828c73c72e616a13c98c7642259dbdc323",
+      "bytes": 1201805,
       "files": 81,
-      "package_id": "26d9097cb09b63ec93cbcf43943845670027b4d8ee74cd78b837401c093bb746",
+      "package_id": "6855c2ff9bd87c58539ee7e8465b6c96c0825a25555b22ff80218574182f8a82",
       "status": "release-candidate",
       "gates": {
         "local_integrity": {
           "status": "pass",
-          "evidence": "90_RELEASES/LOCAL_QA_WEEK01_02.json",
-          "scope": "exercised local cases; native acceptance separate"
+          "evidence": "90_RELEASES/WINDOWS_PATH_HOTFIX_QA.json",
+          "scope": "fresh RC2 static integrity; pristine ZIP/tree/manifest/ID checked; native acceptance separate"
         },
         "reference_runtime": {
           "status": "pass",
-          "evidence": "90_RELEASES/LOCAL_QA_WEEK01_02.json",
-          "scope": "exercised local cases; native acceptance separate"
+          "evidence": "90_RELEASES/WINDOWS_PATH_HOTFIX_QA.json",
+          "scope": "fresh local S02 RC2 checks plus version-only delta review; not native qualification"
         },
         "headless_browser": {
           "status": "pass",
-          "evidence": "90_RELEASES/LOCAL_QA_WEEK01_02.json",
-          "scope": "exercised local cases; native acceptance separate"
+          "evidence": "90_RELEASES/WINDOWS_PATH_HOTFIX_QA.json",
+          "scope": "fresh local S02 RC2 checks plus version-only delta review; not native qualification"
         },
         "native_windows": {
           "status": "pending",
@@ -275,5 +275,9 @@
         "macos_linux": "OPEN_BEGINNER_GUIDE.sh"
       }
     }
-  ]
+  ],
+  "audit_baseline_commit": "1850118b3f619b233f89941802212fe59d8d5dfe",
+  "hotfix_parent_commit": "7f88fecfa972bfb41d4fffec3e47616842c7e067",
+  "supersedes_distribution_version": "2.1.0-rc.1",
+  "source_commit_role": "reviewed-payload"
 }

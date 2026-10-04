@@ -1,0 +1,102 @@
+{
+  "schema": "webtech-ase-windows-path-hotfix-qa-v1",
+  "distribution_version": "2.1.0-rc.2",
+  "audit_baseline_commit": "1850118b3f619b233f89941802212fe59d8d5dfe",
+  "hotfix_parent_commit": "7f88fecfa972bfb41d4fffec3e47616842c7e067",
+  "supersedes_distribution": "2.1.0-rc.1",
+  "qualification_status": "release-candidate",
+  "incident": "WIN-S02-01",
+  "returned_native_rc1_observation": {
+    "kind": "Owner-supplied Windows observations; narrow integrity scope",
+    "summary_sha256": "388f66aa2a67a6a2f2b840e2d7423fdcb8eab7239affe5becec53d1623773d1e",
+    "node": "24.21.0",
+    "npm": "11.19.0",
+    "pristine_files_verified": 256,
+    "C01": "PASS_INTEGRITY_EXIT_0",
+    "S01": "PASS_INTEGRITY_EXIT_0",
+    "C02": "PASS_INTEGRITY_EXIT_0",
+    "S02": "FAIL_ROOT_ARGUMENT_RESOLVE_PATH_EXIT_1",
+    "timeout_or_forced_termination": false,
+    "cause": "Quoted terminal backslash yielded a literal double quote in the PowerShell Root argument",
+    "private_paths_and_raw_logs_published": false
+  },
+  "correction": {
+    "file": "VERIFY_PACKAGE.cmd",
+    "old": "-Root \"%~dp0\"",
+    "new": "-Root \"%~dp0.\"",
+    "old_bytes": 323,
+    "new_bytes": 324,
+    "bytes_added": 1,
+    "crlf_preserved": true,
+    "exit_propagation_unchanged": true,
+    "old_sha256": "3fa0a4ddedf7b16e70b37ab97ce986f79099e2212b168ca4fe72456f14891cbf",
+    "new_sha256": "b656c3deacb3c5d2df50111d800b3efc88ef1f5f108a8a24fd6eebca39e41c4d"
+  },
+  "S02_successor": {
+    "version": "2.3.1-rc.2",
+    "package_root": "TW2026_S02_STUDENT_EN_GB_v2.3.1_RC2",
+    "package_id": "6855c2ff9bd87c58539ee7e8465b6c96c0825a25555b22ff80218574182f8a82",
+    "sha256": "2b18b94bd8e75dceaba7a7e1872f88828c73c72e616a13c98c7642259dbdc323",
+    "bytes": 1201805,
+    "files": 81,
+    "file_delta_counts": {
+      "DOCX_VERSION_METADATA_ONLY": 3,
+      "FUNCTIONAL_ONE_BYTE_WINDOWS_ARGUMENT_FIX": 1,
+      "PROVENANCE_QUALIFICATION_VERSION_METADATA": 4,
+      "REBUILT_IDENTITY_CONTROL": 3,
+      "UNCHANGED": 64,
+      "VERSION_METADATA_ONLY": 6
+    },
+    "unchanged_behavior": "PowerShell, other launchers, JS logic, tests, server, CSS and persisted-state keys; version labels updated without logic change"
+  },
+  "checks": {
+    "local_integrity": {
+      "method": "Fresh S02 package/index/manifest/ZIP validation, permitted mutable change and rejected protected mutation",
+      "checks_passed": 4,
+      "platform": "Linux",
+      "native_windows": false
+    },
+    "reference_runtime": {
+      "method": "Fresh S02 initial assertion taxonomy under exact Node 24.21.0/npm11.19.0, overrides off; three other object ZIPs unchanged",
+      "initial_taxonomy": "baseline1pass; objective3 expected assertion failures; regression2pass"
+    },
+    "headless_browser": {
+      "fresh_RC2_label_pages": 3,
+      "page_errors": 0,
+      "method": "Fresh Linux headless loading/RC2 labels; full previous functional checks transferred through proven unchanged logic/version-only normalisation",
+      "historical_evidence": "90_RELEASES/LOCAL_QA_WEEK01_02.json"
+    },
+    "portable_argument_model": {
+      "cases_passed": 12,
+      "native_execution": false,
+      "reference": "https://learn.microsoft.com/en-us/cpp/c-language/parsing-c-command-line-arguments?view=msvc-170"
+    },
+    "docx": {
+      "documents": 3,
+      "pages_rendered_and_independently_inspected": 7,
+      "OOXML_scope": "Only RC1 to RC2 labels in document/footer XML; other components unchanged",
+      "native_word": false
+    }
+  },
+  "native_retest": {
+    "status": "pending",
+    "required": "RC2 on actual Windows, including spaces and # and invocation from a different working directory; exact PACKAGE_ID, exit0 and PASS marker"
+  },
+  "pending_gates": [
+    "native_windows",
+    "native_macos",
+    "manual_browser",
+    "word",
+    "moodle_live",
+    "human_pilot",
+    "owner_acceptance"
+  ],
+  "actions_dispatched": 0,
+  "publication_performed": false,
+  "limits": [
+    "Portable argv model is not native Windows execution",
+    "Three original native integrity passes do not close full native qualification",
+    "Original LOCAL_QA_WEEK01_02.json remains historical and unchanged",
+    "Only Weeks01\u201302 EN are remediated"
+  ]
+}
