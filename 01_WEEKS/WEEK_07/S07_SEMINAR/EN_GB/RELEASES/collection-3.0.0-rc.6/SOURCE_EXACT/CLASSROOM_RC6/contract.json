@@ -1,0 +1,64 @@
+{
+  "seminar": "S07",
+  "classroomVersion": "1.0.0-rc.6",
+  "projects": [
+    {
+      "id": "P01",
+      "title": "Junction relationship query",
+      "mutableTarget": "targets/p01.mjs",
+      "mutablePathBase": "CLASSROOM_RC6",
+      "packageRootMutableTarget": "CLASSROOM_RC6/targets/p01.mjs",
+      "completeScope": "Write one eager SQL JOIN over supplied sessions/registrations/attendees, bind session ID and order attendees by ID; return detached mapped rows.",
+      "requiredEvidence": [
+        "Actual joined rows Ada/Grace",
+        "Query and bound parameter",
+        "No extra per-attendee queries limitation"
+      ],
+      "minutes": 10
+    },
+    {
+      "id": "P02",
+      "title": "One owned atomic booking",
+      "mutableTarget": "targets/p02.mjs",
+      "mutablePathBase": "CLASSROOM_RC6",
+      "packageRootMutableTarget": "CLASSROOM_RC6/targets/p02.mjs",
+      "completeScope": "Use supplied managed SQLite transaction adapter, five shared-transaction operations, awaited callback/audit and rollback on callback/audit failures.",
+      "requiredEvidence": [
+        "Five operation IDs",
+        "Success seat/booking/audit state",
+        "Two injectedfailure before/after snapshots and recovery"
+      ],
+      "minutes": 18
+    },
+    {
+      "id": "P03",
+      "title": "Idempotent resource response",
+      "mutableTarget": "targets/p03.mjs",
+      "mutablePathBase": "CLASSROOM_RC6",
+      "packageRootMutableTarget": "CLASSROOM_RC6/targets/p03.mjs",
+      "completeScope": "Map supplied PUTcreated/repeat to201+Location/200 and DELETEremoved/absent to204no body using path pair identity.",
+      "requiredEvidence": [
+        "Real HTTP create/repeat/delete/delete trace",
+        "Resource identity comparison",
+        "What idempotency does not guarantee"
+      ],
+      "minutes": 8
+    }
+  ],
+  "initialAssertionFailures": [
+    "P01.actual-junction-join",
+    "P02.success-five-shared-operations",
+    "P02.callback-rollback",
+    "P02.audit-rollback",
+    "P02.validation-and-recovery",
+    "P03.idempotent-http"
+  ],
+  "evidenceScope": "GENUINE_NODE_BUILTIN_SQLITE_JOIN_TRANSACTION_AND_LOOPBACK_HTTP",
+  "limitation": "The supplied managed adapter owns real SQLite BEGIN/COMMIT/ROLLBACK; learners complete five operation calls. This is not the original Sequelize transaction exercise, production locking or an authentication implementation.",
+  "qualification": {
+    "native": false,
+    "pilot60min": false,
+    "humanLanguage": false,
+    "Moodle": false
+  }
+}

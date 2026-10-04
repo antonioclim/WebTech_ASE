@@ -1,0 +1,5 @@
+transport: fetch implementation rejects before a Response exists
+HTTP non-success: Response exists, status=404, ok=false
+parse failure: Response is successful but json() rejects
+expected controller outcome: explicit error model and final error render
+limit: these bounded cases do not establish retry or cancellation safety.

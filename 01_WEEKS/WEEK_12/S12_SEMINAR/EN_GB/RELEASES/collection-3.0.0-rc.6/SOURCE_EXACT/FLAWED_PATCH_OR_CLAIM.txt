@@ -1,0 +1,4 @@
+Intentionally flawed claim for critique; this is not a requirement or a verified result:
+After a request completes or is aborted, dispatcher.pendingCount === 0 proves that the dispatcher, adapter, socket and remote work are all cleaned up.
+
+Use GEMINI_PROMPT_EN_GB.txt and one minimal sanitised excerpt. Do not ask Gemini for the complete dispatcher. Preserve the actual response and independently check one falsifiable claim.

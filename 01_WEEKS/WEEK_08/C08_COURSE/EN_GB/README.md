@@ -1,9 +1,28 @@
-# C08 Course — EN_GB
+# C08 — React with Vite
 
-Open [the language index](index.html), then [the exact public package](PACKAGE_EXACT/index.html). The standalone [ZIP](DOWNLOAD/WEBTECH_ASE_C08_STUDENT_EN_GB_v1.1.0_PUBLIC.zip) is unchanged.
+Current English collection candidate **3.0.0-rc.6**; selected object edition **1.1.0**. Qualification and classroom acceptance remain pending.
 
-Ownership, components and props, state transitions, controlled forms, identity and effect cleanup. The course has a 60-minute route with an explicit stop.
+## Download and open
 
-Version 1.1.0 remains WIP/PREVIEW, not FINAL. The original manifest and PACKAGE_ID in PACKAGE_EXACT retain their exact byte identities. This wrapper does not change them. No second course Assignment is created. No installation or upload is requested.
+1. Download the complete student ZIP and its SHA-256 sidecar below.
+2. Extract the whole ZIP into a new writable folder. Do not open files inside the compressed archive.
+3. Start with `index.html` in the extracted package then follow `course.html`. Use the exact project folders and commands stated there.
+4. Follow the lesson and worked examples. Your lecturer supplies any assessment or submission requirement.
 
-[Week 08](../../README.md)
+| Current resource | Link |
+| --- | --- |
+| Complete student ZIP | [Complete student ZIP](CURRENT/WEBTECH_ASE_C08_EN_GB_RECONSTRUCTED_RC5.zip) |
+| SHA-256 sidecar | [SHA-256 sidecar](CURRENT/WEBTECH_ASE_C08_EN_GB_RECONSTRUCTED_RC5.zip.sha256) |
+| Start here | [Start here](RELEASES/collection-3.0.0-rc.5/SOURCE_EXACT/index.html) |
+| Current guide | [Current guide](RELEASES/collection-3.0.0-rc.5/SOURCE_EXACT/course.html) |
+| Package identity | [Package identity](RELEASES/collection-3.0.0-rc.5/SOURCE_EXACT/PACKAGE_ID.txt) |
+
+GitHub shows HTML source. Download and extract the selected ZIP to use the interactive lesson. A matching checksum establishes package identity; it does not establish successful execution on your own computer.
+
+[Authoritative current selection](../../../../metadata/student-selection.json) · [Whole-week navigation](../../README.md) · [All current weeks](../../../README.md)
+
+## Historical material
+
+Older `DOWNLOAD`, `PACKAGE_EXACT`, `PACKAGES` and versioned release folders remain for comparison. They are outside the current English selection. Use the current ZIP and guide linked above for class work. Romanian materials, where present, are retained legacy alternatives and have a separate status.
+
+[Preserved predecessor navigation](../../../../90_ARCHIVE/MAIN_4eea8de_NAVIGATION/README.md). Historical filenames containing `FINAL` do not qualify the current collection.

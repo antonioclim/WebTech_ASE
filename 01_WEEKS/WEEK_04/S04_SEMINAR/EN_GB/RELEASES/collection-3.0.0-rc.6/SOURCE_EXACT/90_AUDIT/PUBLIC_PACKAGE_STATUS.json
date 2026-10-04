@@ -1,0 +1,14 @@
+{
+  "seminar": "S04",
+  "title": "Multi-source Data Dashboard",
+  "version": "1.2.0",
+  "status": "FINAL_LOCAL_NOT_REMOTE_PUBLISHED",
+  "student_language": "EN-GB",
+  "teacher_content_included": false,
+  "content_and_packaging": "FINAL_LOCAL",
+  "native_platform_acceptance": "OPEN",
+  "browser_acceptance": "OPEN",
+  "moodle_live": "NOT_ACCESSED",
+  "exact_runtime": "NOT_EXECUTED",
+  "owner_acceptance": "OPEN"
+}

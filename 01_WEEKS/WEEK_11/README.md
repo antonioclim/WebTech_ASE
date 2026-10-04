@@ -1,10 +1,20 @@
-# Week 11 — Authentication, authorisation and web security
+# Week 11
 
-This is a **WIP/PREVIEW** student-only local review bundle. It combines the exact C11 and S11 public packages. It is not a repository upload kit, security certification or FINAL admission.
+Current English collection candidate **3.0.0-rc.6**. The links below select one course and one seminar from the same current collection. Qualification and classroom acceptance remain pending.
 
-- [C11 course](C11_COURSE/EN_GB/index.html)
-- [S11 seminar](S11_SEMINAR/EN_GB/index.html)
+| Object | Current navigation | ZIP | Start | Guide | Submission |
+| --- | --- | --- | --- | --- | --- |
+| C11 — Authentication, authorisation and web security | [Open](C11_COURSE/EN_GB/README.md) | [ZIP](C11_COURSE/EN_GB/CURRENT/WEBTECH_ASE_C11_EN_GB_RECONSTRUCTED_RC5.zip) | [Start](C11_COURSE/EN_GB/RELEASES/collection-3.0.0-rc.5/SOURCE_EXACT/index.html) | [Guide](C11_COURSE/EN_GB/RELEASES/collection-3.0.0-rc.5/SOURCE_EXACT/course.html) | Lecturer-defined, if required |
+| S11 — Role-Protected Moderation Operation | [Open](S11_SEMINAR/EN_GB/README.md) | [ZIP](S11_SEMINAR/EN_GB/CURRENT/WEBTECH_ASE_S11_EN_GB_SUCCESSOR_RC6.zip) | [Start](S11_SEMINAR/EN_GB/RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/CLASSROOM_RC6/START.html) | [Guide](S11_SEMINAR/EN_GB/RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/CLASSROOM_RC6/GUIDE.html) | [Form](S11_SEMINAR/EN_GB/RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/CLASSROOM_RC6/EVIDENCE_FORM.html) |
 
-Each object retains both `DOWNLOAD` and the complete `PACKAGE_EXACT` tree. Opening HTML in GitHub shows source; Pages is not enabled by this bundle.
+[Current whole-week ZIP](../../90_RELEASES/assets/WebTech_ASE_WEEK_11_EN_GB_v3.0.0-rc.6.zip) · [SHA-256 sidecar](../../90_RELEASES/assets/WebTech_ASE_WEEK_11_EN_GB_v3.0.0-rc.6.zip.sha256).
 
-S11 navigation proposes the v1.2.1 remediated candidate. C11 content is retained unchanged. Native/live and FINAL gates remain open; no upload is authorised by this bundle.
+The whole-week ZIP contains the selected course and seminar as nested ZIPs. Extract the outer bundle, read its README, extract each object into its own folder then follow that object's guide. Alternatively use the individual ZIP links above.
+
+[Authoritative current selection](../../metadata/student-selection.json) · [All current weeks](../README.md)
+
+## Historical material
+
+Older `DOWNLOAD`, `PACKAGE_EXACT`, `PACKAGES` and versioned release folders remain for comparison. They are outside the current English selection. Use the current ZIP and guide linked above for class work. Romanian materials, where present, are retained legacy alternatives and have a separate status.
+
+[Preserved predecessor navigation](../../90_ARCHIVE/MAIN_4eea8de_NAVIGATION/README.md). Historical filenames containing `FINAL` do not qualify the current collection.

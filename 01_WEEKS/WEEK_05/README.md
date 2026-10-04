@@ -1,20 +1,20 @@
-# Week 5 — In-memory Task API
+# Week 05
 
-> **WIP student preview. Local content and packaging have been hardened, while exact runtime, Express, native browser and native platform qualification remain pending. This is not a qualified release.**
+Current English collection candidate **3.0.0-rc.6**. The links below select one course and one seminar from the same current collection. Qualification and classroom acceptance remain pending.
 
-[Open the existing whole-week preview ZIP](DOWNLOAD/WebTech_ASE_WEEK_05_EN_GB_v1.2.0_PREVIEW.zip) · [SHA-256](DOWNLOAD/WebTech_ASE_WEEK_05_EN_GB_v1.2.0_PREVIEW.zip.sha256)
+| Object | Current navigation | ZIP | Start | Guide | Submission |
+| --- | --- | --- | --- | --- | --- |
+| C05 — Node, Express and REST | [Open](C05_COURSE/EN_GB/README.md) | [ZIP](C05_COURSE/EN_GB/CURRENT/WEBTECH_ASE_C05_EN_GB_RECONSTRUCTED_RC5.zip) | [Start](C05_COURSE/EN_GB/RELEASES/collection-3.0.0-rc.5/SOURCE_EXACT/index.html) | [Guide](C05_COURSE/EN_GB/RELEASES/collection-3.0.0-rc.5/SOURCE_EXACT/course.html) | Lecturer-defined, if required |
+| S05 — In-memory Task API | [Open](S05_SEMINAR/EN_GB/README.md) | [ZIP](S05_SEMINAR/EN_GB/CURRENT/WEBTECH_ASE_S05_EN_GB_SUCCESSOR_RC6.zip) | [Start](S05_SEMINAR/EN_GB/RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/CLASSROOM_RC6/START.html) | [Guide](S05_SEMINAR/EN_GB/RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/CLASSROOM_RC6/GUIDE.html) | [Form](S05_SEMINAR/EN_GB/RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/CLASSROOM_RC6/EVIDENCE_FORM.html) |
 
-The whole-week ZIP remains the previously published integrated preview and still carries the original C05/S05 payloads. For the current S05 student route, use the versioned seminar package linked below.
+[Current whole-week ZIP](../../90_RELEASES/assets/WebTech_ASE_WEEK_05_EN_GB_v3.0.0-rc.6.zip) · [SHA-256 sidecar](../../90_RELEASES/assets/WebTech_ASE_WEEK_05_EN_GB_v3.0.0-rc.6.zip.sha256).
 
-| Object | British English |
-| --- | --- |
-| C05 — Node, Express and REST | [Course package](C05_COURSE/EN_GB/README.md) |
-| S05 — In-memory Task API v1.2.0 | [Current seminar package](S05_SEMINAR/EN_GB/README.md) |
+The whole-week ZIP contains the selected course and seminar as nested ZIPs. Extract the outer bundle, read its README, extract each object into its own folder then follow that object's guide. Alternatively use the individual ZIP links above.
 
-P01 In-memory Task API is the only required complete implementation. P02 supplies a required guided observation, not a second compulsory implementation. Full P02 and P03 implementations remain optional.
+[Authoritative current selection](../../metadata/student-selection.json) · [All current weeks](../README.md)
 
-One final individual PDF is expected: `TW2026_S05_GROUP_Surname_Firstname.pdf`. Personal assessment evidence belongs only in the private Moodle submission, never in this repository.
+## Historical material
 
-GitHub file browsing shows source files rather than executing the offline lesson. Download the complete seminar ZIP, extract it into a new short writable folder and start with its interactive guide. No Pages deployment, exact-runtime qualification, Express acceptance, Postman acceptance or Moodle acceptance is implied.
+Older `DOWNLOAD`, `PACKAGE_EXACT`, `PACKAGES` and versioned release folders remain for comparison. They are outside the current English selection. Use the current ZIP and guide linked above for class work. Romanian materials, where present, are retained legacy alternatives and have a separate status.
 
-[Qualification and limits](QUALIFICATION_STATUS.md) · [All weeks](../README.md)
+[Preserved predecessor navigation](../../90_ARCHIVE/MAIN_4eea8de_NAVIGATION/README.md). Historical filenames containing `FINAL` do not qualify the current collection.

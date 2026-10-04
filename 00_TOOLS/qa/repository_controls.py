@@ -6,6 +6,7 @@ from urllib.parse import unquote,urlsplit
 ROOT=Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(ROOT/'00_TOOLS/publishing'))
 import release_contract as rc
+import current_navigation
 TEXT_SUFFIXES={'.md','.txt','.html','.css','.csv','.json','.yaml','.yml','.cff','.py','.js','.mjs','.cjs','.jsx','.ts','.tsx','.sh','.cmd','.bat','.ps1','.xml','.svg'}
 LANGUAGE_RECEIPT='metadata/language-review.json'
 CONTROL_PATHS={LANGUAGE_RECEIPT,'metadata/current-integrity/REPOSITORY_SHA256SUMS.txt','metadata/current-integrity/REPOSITORY_PACKAGE_ID.txt'}
@@ -87,7 +88,7 @@ def scan(root=ROOT):
 
 def maintenance_links(root=ROOT):
     from validate_pages_payload import Links
-    scope=['README.md','current-outline.md','index.html','00_TOOLS/maintainer/RECONSTRUCTED_RC5.md']
+    scope=['README.md','current-outline.md','index.html','00_TOOLS/maintainer/SUCCESSOR_RC6.md']
     scope.extend(p.relative_to(root).as_posix() for p in (root/'ENTRY').glob('*.html'))
     count=0
     for name in scope:
@@ -107,7 +108,7 @@ def maintenance_links(root=ROOT):
     return {'current_frontdoor_files':len(scope),'local_links':count,'historical_documents_scope':'Preserved historical bytes; not a claim that every old command/link targets the current edition'}
 
 def run(root=ROOT):
-    return {'schema':'webtech-maintenance-controls/v2','status':'PASS_MAINTENANCE_CONTROLS_ONLY','preserved_source':preserved_source(root),'workflows':workflows(root),'language_review':language_review(root),'maintenance_links':maintenance_links(root),'scan':scan(root),'actions_dispatched':0}
+    return {'schema':'webtech-maintenance-controls/v2','status':'PASS_MAINTENANCE_CONTROLS_ONLY','preserved_source':preserved_source(root),'workflows':workflows(root),'language_review':language_review(root),'maintenance_links':maintenance_links(root),'current_navigation':current_navigation.run(root),'scan':scan(root),'actions_dispatched':0}
 
 if __name__=='__main__':
     try:print(json.dumps(run(),indent=2))

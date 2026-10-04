@@ -1,0 +1,28 @@
+{
+  "schema": "webtech-classroom-boundary/v1",
+  "referenceNode": "v24.21.0",
+  "mutable": {
+    "student/p01.mjs": "b14ab4ca9d7c287250dad4d6972d594107b4becd50a7b574b84e30fae276cfce",
+    "student/p02.mjs": "03b87fedb576c822c596a4fb2933650f3729f1affdeb46880739624776834c8e",
+    "student/p03.mjs": "fe487a20aa1d7c55bdce2a0eae0306a1efa6d700e824b48d9703f90686eb1162"
+  },
+  "protected": {
+    "CLASSROOM_PLAN_EN_GB.md": "21db32ea068a3e85659f80eb7d101aa8743f33e08f10256ac9727a799935089e",
+    "CLASSROOM_SCOPE.json": "baffc8a942b15746f85f7f66f13d4911abdfae5926b794e4aa99bf4e844fe46a",
+    "EVIDENCE_FORM.html": "b4fb8492f424d1aeb729c11d1779eb5b9943502ff59c85c78a95d877fceb18f3",
+    "GUIDE.html": "df55baae2d5b2076f8618060712e632b658b8acbfead0784041dae5a7461399c",
+    "README.md": "21db32ea068a3e85659f80eb7d101aa8743f33e08f10256ac9727a799935089e",
+    "START.html": "636a11d38997b8e4c8d9efd581c574a1f3e5418a68525d2dce1d296b2d874791",
+    "check.mjs": "a727fade6aa0b77074562309a3de19910bbfd28a1a86581f7a0d74656cb002bf",
+    "support/cases.json": "8c4e5d1634f26aeca30104bc90afa69a9b970cd70ae1357daeb0655320f62c89",
+    "tests/baseline.test.mjs": "51756d6385bdcc1ad819062297090e5671997e3ab1cae959ffc3bd1142ae5a2d",
+    "tests/objective.test.mjs": "94507c2540435706c2559755c83eeb6e88606d9de9442a7c4f6b979803ee1b0b",
+    "try.mjs": "1e9af375143ab075e42f93a58345fb4bdec675f8e3b1e32541f710aab92dd8d1",
+    "verify.mjs": "e0928e6062d1b0f86409c229291cf6511d2f19550a9396d5c07a2943226df6ff"
+  },
+  "excludedRuntimeDirectories": [],
+  "sourceManifestExcluded": [
+    "CLASSROOM_BOUNDARY.json"
+  ],
+  "trust": "Unsigned local source self-consistency. Independent release/package identity protects the original manifest. Runtime directories are unverified; lockfiles and supplied React shell remain protected. Initial checks compare untouched targets; work permits only stated target changes."
+}

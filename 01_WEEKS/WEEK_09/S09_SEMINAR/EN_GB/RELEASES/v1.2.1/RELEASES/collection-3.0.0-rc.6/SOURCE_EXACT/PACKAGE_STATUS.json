@@ -1,0 +1,32 @@
+{
+  "seminar": "S09",
+  "title": "Routed Notes Application",
+  "version": "1.2.1",
+  "phase": "3/4",
+  "status": "FINAL_LOCAL_SOURCE_RELEASE_WITH_EXTERNAL_GATES_OPEN",
+  "runtime_acceptance": "NOT_EXECUTED",
+  "browser_acceptance": "NOT_EXECUTED",
+  "owner_acceptance": "NOT_REQUESTED",
+  "remote": "UNKNOWN_NOT_RECONFIRMED",
+  "Actions_run": 0,
+  "P01": "CENTRAL_INDIVIDUAL",
+  "P03": "REQUIRED_SAME_PDF",
+  "P02": "CONCEPTUAL_TRANSFER_SEPARATE_LATER_CAPSTONE",
+  "phase3_local_source_release": "COMPLETE",
+  "phase4_started": false,
+  "S10_started": false,
+  "remaining_normal_phases": 21,
+  "qualification": "SOURCE_DATA_SYNTHETIC_MODELS_DOCUMENT_LAYOUT_ONLY",
+  "form_format_version": "1.2.0",
+  "protected_baseline_metadata_version": "1.2.0",
+  "component_revisions": {
+    "beginner_guide": "1.2.1",
+    "student_companion": "1.2.1",
+    "P03_portfolio": "1.2.1",
+    "private_teacher_master": "1.2.1",
+    "unchanged_document_components": "1.2.0 (form, private key, marking control and lecturer cue card)",
+    "form_schema_format": "1.2.0 (compatible; import cap raised to 5000000 bytes)",
+    "preview_P02_notes_api": "1.2.1 SOURCE_ONLY/UNEXECUTED",
+    "P02_transfer": "1.2.1 (navigation and authoring labels only; technical body unchanged)"
+  }
+}

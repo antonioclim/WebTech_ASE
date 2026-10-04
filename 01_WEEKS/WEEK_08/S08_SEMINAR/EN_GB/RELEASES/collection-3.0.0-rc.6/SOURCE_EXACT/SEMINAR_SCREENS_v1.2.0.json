@@ -1,0 +1,136 @@
+{
+  "schema": "TW2026_S08_SEMINAR_SCREENS_V1_2",
+  "version": "1.2.0",
+  "language": "en-GB",
+  "audience": "STUDENT_PUBLIC",
+  "content_minutes": 60,
+  "logistics_minutes": 30,
+  "source_screens_sha256": "8fbf80cb9b9d803f65527415521cfb29a48ab017dd0f38d7f7f13a169f997b16",
+  "slides": [
+    {
+      "id": "S01",
+      "time": "00–05",
+      "title": "The S08 work contract",
+      "body": "Full P01 and all required P03 parts belong to your individual work. P02 remains optional and its absence does not cap your mark.",
+      "action": "Record your actual package, date and environment. Keep pending work explicit."
+    },
+    {
+      "id": "S02",
+      "time": "00–05",
+      "title": "Evidence has a class",
+      "body": "SOURCE_REASONING, MODEL, REACT_TEST and REACT_BROWSER describe different checks. Saved PDF and Moodle receipt describe later actions.",
+      "action": "Write your prediction before the action. An unavailable runtime leaves an execution block."
+    },
+    {
+      "id": "S03",
+      "time": "05–12",
+      "title": "One complete array, several views",
+      "body": "The complete item array owns the data. The active filter changes the visible view. Counts and empty states follow from rendering.",
+      "action": "Name one prop passed down and one event intent passed up."
+    },
+    {
+      "id": "S04",
+      "time": "05–12",
+      "title": "The common fixture",
+      "body": "HTTP has ID a and is unread. SQLite has ID b and is read. Use valid plain-text titles and the same initial data.",
+      "action": "Record the route and storage namespace. The common comparator is /vanilla.html."
+    },
+    {
+      "id": "S05",
+      "time": "12–30",
+      "title": "The assessed P01 boundary",
+      "body": "Edit only projects/p01/student/src/App.jsx. Preserve entry points, CSS, helpers, fixtures, tests, package files and lockfiles.",
+      "action": "The 18-minute interval is progress towards full P01. The source estimate is 55–65 minutes and has not been measured."
+    },
+    {
+      "id": "S06",
+      "time": "12–30",
+      "title": "Responsibilities in P01",
+      "body": "QueueForm, QueueFilter, QueueList and QueueItem need explicit props and callbacks. Implement controlled input, immutable transitions and derived views.",
+      "action": "Trim and reject blank input before allocating an ID. Allocate the ID in the event before a pure updater."
+    },
+    {
+      "id": "S07",
+      "time": "30–39",
+      "title": "One transition witness",
+      "body": "Record the exact input, previous state, next complete array and visible counts for one add, toggle or remove action.",
+      "action": "Keep expected and observed separate. Include the actual action or command and a locator."
+    },
+    {
+      "id": "S08",
+      "time": "30–39",
+      "title": "The filter prediction",
+      "body": "After the named mount has completed, changing only the active filter should change visible items without changing the complete stored array or adding a persistence write.",
+      "action": "Name mount and StrictMode conditions. Restore any temporary diagnostic dependency edit."
+    },
+    {
+      "id": "S09",
+      "time": "30–39",
+      "title": "Identity after reload",
+      "body": "Shape validity and ID uniqueness answer different questions. The original entry counter can collide after reset. The separate preview has bounded ID reservation.",
+      "action": "Record add, persist, reload and add only if you really performed them. Name the launcher and the remaining limit."
+    },
+    {
+      "id": "S10",
+      "time": "39–45",
+      "title": "One actual bounded Gemini claim",
+      "body": "Use one sanitised excerpt about P01 or P03. Ask for a failure condition and an independent check. Keep the relevant actual prompt and answer extract.",
+      "action": "Keep secrets and institutional data out. The synthetic example and seeded component do not prove an actual conversation."
+    },
+    {
+      "id": "S11",
+      "time": "45–50",
+      "title": "Your independent verdict",
+      "body": "Check the returned claim against a contract, source and a named witness. Record method, result and locator.",
+      "action": "Choose ACCEPTED, REJECTED, PARTIALLY_ACCEPTED or UNKNOWN. Give a correction and a limit."
+    },
+    {
+      "id": "S12",
+      "time": "50–55",
+      "title": "The required P03 handoff",
+      "body": "Predict and diagnose before patching. Full P03 continues after the meeting. Edit only projects/p03/student/src/SearchPanel.jsx.",
+      "action": "P03 has eight required parts. P02 is optional. The P03 source estimate is 45–60 minutes and has not been measured."
+    },
+    {
+      "id": "S13",
+      "time": "50–55",
+      "title": "Permission to publish",
+      "body": "Trace A starts, A cleanup, B starts, B settles and A settles despite abort. A non-cooperative fake can settle old work after abortion.",
+      "action": "Separate timer cancellation, signal abortion and the guard that permits a state update."
+    },
+    {
+      "id": "S14",
+      "time": "50–55",
+      "title": "Three diagnostic guard variants",
+      "body": "A retains guards. B removes numeric comparisons while active/disposed remains. C keeps abort only and removes publication guards.",
+      "action": "Variant B may still reject old work. Record your actual guard conditions and restore the valid assessed file."
+    },
+    {
+      "id": "S15",
+      "time": "55–60",
+      "title": "An honest portable draft",
+      "body": "Use the 55-field form and save your own draft. Record unfinished P01, P03 and actual bounded review. Renew declaration after changing evidence.",
+      "action": "Exit ticket: one data owner, one falsifying observation and one qualification gate still open."
+    },
+    {
+      "id": "S16",
+      "time": "55–60",
+      "title": "One PDF, one Assignment",
+      "body": "Use TW2026_S08_GROUP_Surname_Firstname.pdf. Complete the preflight checklist and review the real saved PDF. Check Moodle status separately after upload.",
+      "action": "The teacher sets the deadline later. STOP if the later submission status is Draft."
+    },
+    {
+      "id": "S17",
+      "time": "60",
+      "title": "STOP at sixty",
+      "body": "Content work ends now. Preserve your draft and pending actions. The remaining 30 scheduled minutes serve logistics.",
+      "action": "Finish full P01, all required P03 parts and the bounded actual review before the configured deadline."
+    }
+  ],
+  "no_private_answers": true,
+  "runtime_observed": false,
+  "source_estimates_not_measured": {
+    "P01": "55–65 minutes",
+    "P03": "45–60 minutes"
+  }
+}

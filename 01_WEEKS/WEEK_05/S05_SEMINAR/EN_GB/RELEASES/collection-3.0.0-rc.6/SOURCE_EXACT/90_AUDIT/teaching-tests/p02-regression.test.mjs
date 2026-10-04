@@ -1,0 +1,1 @@
+import test from "node:test";import assert from "node:assert/strict";import{readFile}from"node:fs/promises";const s=await readFile(new URL("../../02_PROJECTS/P02_MIDDLEWARE_GUIDED_OBSERVATION/src/report-pipeline.js",import.meta.url),"utf8");test("P02 starter contains no hidden install",()=>assert.doesNotMatch(s,/npm install|curl |wget /));

@@ -1,0 +1,44 @@
+{
+  "schema": "tw2026.package-status.v2",
+  "seminar": "S02",
+  "title": "Responsive Card/Grid Reconstruction",
+  "version": "2.3.1-rc.1",
+  "status": "RELEASE_CANDIDATE",
+  "student_language": "en-GB",
+  "source_commit": "1850118b3f619b233f89941802212fe59d8d5dfe",
+  "supersedes_version": "2.3.0",
+  "remote_publication": false,
+  "owner_accepted": false,
+  "exact_runtime_required": {
+    "node": "v24.21.0",
+    "npm": "11.19.0"
+  },
+  "qualification_record": "STUDENT_SAFE_QA_SUMMARY.md",
+  "open_gates": [
+    "native Windows",
+    "native macOS",
+    "native Chrome and Edge",
+    "native Firefox",
+    "native Microsoft Word",
+    "manual Tab sequence and native 200% zoom",
+    "Moodle live",
+    "classroom pilot",
+    "owner acceptance"
+  ],
+  "observed_local_qa": {
+    "node": "v24.21.0",
+    "npm": "11.19.0",
+    "runtime_override": false,
+    "platform": "Linux execution container",
+    "browser": "Google Chrome for Testing 151.0.7922.34 headless",
+    "initial_suite_state": {
+      "baseline": "1/0",
+      "objective": "0/3 intentional assertion failures",
+      "regression": "2/0"
+    },
+    "private_completion": "source checks and five bounded browser scenarios pass",
+    "adversarial_mutants_rejected": 6,
+    "html_pdf": "39 print mirror tails retained across five inspected pages",
+    "docx_render": "form three pages, worksheet three pages, homework one page inspected in LibreOffice renderer"
+  }
+}

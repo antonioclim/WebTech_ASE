@@ -1,20 +1,23 @@
-# Student quick start
+# Current English student quick start
 
-1. Complete [Day 0 setup](../00_SETUP/README.md) for your operating system.
-2. Choose the [week and course/seminar](../01_WEEKS/README.md). For this English class, use `EN_GB`.
-3. Read the object README, download its ZIP and extract it completely into a new writable folder under your user profile.
-4. For a Week 01–02 whole-week bundle, first extract the outer ZIP; then extract the course or seminar ZIP. Read each object's `00_START_HERE` instructions: C02 uses `README_STUDENT.txt`; C01/S01/S02 use `README.md`.
-5. Run the supplied package verifier. A pristine starter deliberately contains failing objective tests; follow `VERIFY_INITIAL_STATE` in seminar packages rather than treating this as package corruption.
-6. Use the launchers below for Weeks 01–02. For Weeks 03–14, follow each object's documented `index.html` and WIP restrictions.
-7. Complete the seminar evidence form, review its exported PDF and upload the final PDF privately to the Moodle Assignment configured by your teacher. Keep optional JSON backups locally.
+Current English collection candidate **3.0.0-rc.6**. Qualification and classroom acceptance remain pending.
 
-For Weeks 01–02 EN, you can [download both weeks together](../90_RELEASES/assets/WEBTECH_ASE_WEEKS_01_02_EN_GB_v2.1.0-rc.2.zip), with its [SHA-256 sidecar](../90_RELEASES/assets/WEBTECH_ASE_WEEKS_01_02_EN_GB_v2.1.0-rc.2.zip.sha256). Extract the outer ZIP, then extract the four object ZIPs into separate folders. Read each object's instructions and use the launchers below. This combined download has no outer lesson launcher.
+[Authoritative current selection](../metadata/student-selection.json) · [Current whole-week plan](../90_RELEASES/FULL_COLLECTION_PLAN.json) · [Complete collection release plan](../90_RELEASES/COLLECTION_RELEASE_PLAN.json) · [All current weeks](../01_WEEKS/README.md)
 
-| Object | Windows | macOS/Linux |
-| --- | --- | --- |
-| C01 | `OPEN_PRESENTATION.cmd` | `bash OPEN_PRESENTATION.sh` |
-| S01 | `OPEN_BEGINNER_GUIDE.cmd` | `bash OPEN_BEGINNER_GUIDE.sh` |
-| C02 | `START_COURSE_02.cmd` | `bash START_COURSE_02.sh` |
-| S02 | `OPEN_BEGINNER_GUIDE.cmd` | `bash OPEN_BEGINNER_GUIDE.sh` |
+1. Use [the current Windows setup](../ENTRY/SETUP_WINDOWS.html) or [the current macOS/Linux setup](../ENTRY/SETUP_MACOS_LINUX.html). Record any preflight failure.
+2. Choose [the current week](../01_WEEKS/README.md) then its course and seminar.
+3. Download the linked current student ZIP and sidecar. Extract the whole archive into a new writable folder.
+4. For a whole-week ZIP, extract the outer archive then the two inner object ZIPs separately. For the complete collection, extract once: its objects are already under `PACKAGES`.
+5. Open the exact start file named on the current object page then follow its guide. For current seminars, the classroom guide is the primary route; older detailed guides remain further reading.
+6. Complete every assigned classroom microproject individually. Record the prediction, actual result, relevant evidence and limitations. Follow allowed-edit boundaries and keep protected tests and manifests intact.
+7. Complete the current form, review the exported PDF and upload it privately to the assignment specified by your lecturer. Keep JSON drafts, where supported, as local backups.
 
-The four Week 01–02 objects are English release candidates. Weeks 03–14 remain WIP previews. Integrity, runtime, browser, native platform, Word, Moodle and classroom acceptance are distinct checks. Follow the allowed-edit contract; never edit protected tests or manifests to manufacture a pass.
+Starter projects may deliberately fail their objective tests before the assigned edits. Use each guide's stated initial and completed expectations; a crash, timeout or fabricated PASS is not a completed observation. Report unavailable tools or services accurately rather than inventing results.
+
+[Help, privacy and submission](../ENTRY/HELP_AND_PRIVACY.html)
+
+## Historical material
+
+Older `DOWNLOAD`, `PACKAGE_EXACT`, `PACKAGES` and versioned release folders remain for comparison. They are outside the current English selection. Use the current ZIP and guide linked above for class work. Romanian materials, where present, are retained legacy alternatives and have a separate status.
+
+[Preserved predecessor navigation](../90_ARCHIVE/MAIN_4eea8de_NAVIGATION/README.md). Historical filenames containing `FINAL` do not qualify the current collection.

@@ -1,9 +1,20 @@
-# Week 10 — Client State and Frontend Architecture
+# Week 10
 
-[Start here](index.html) · [C10](C10_COURSE/EN_GB/index.html) · [S10](S10_SEMINAR/EN_GB/index.html)
+Current English collection candidate **3.0.0-rc.6**. The links below select one course and one seminar from the same current collection. Qualification and classroom acceptance remain pending.
 
-The original public C10 and S10 v1.1.0 files and DOWNLOAD objects remain preserved. C10 retains its existing v1.1.0 package and status. The locally prepared S10 v1.2.1 remediated candidate is in `S10_SEMINAR/EN_GB/PACKAGE_EXACT/TW2026_S10_STUDENT_v1.2.1/`, with its exact ZIP and sidecar in S10 DOWNLOAD. S10 navigation points to the versioned candidate; historical flat files remain accessible. At the Phase 4 preparation snapshot this overlay is PREPARED_LOCAL_ONLY_NOT_PUBLISHED; this phase performed no remote operations. This statement records the build state and does not describe a future deployment.
+| Object | Current navigation | ZIP | Start | Guide | Submission |
+| --- | --- | --- | --- | --- | --- |
+| C10 — State ownership and frontend architecture | [Open](C10_COURSE/EN_GB/README.md) | [ZIP](C10_COURSE/EN_GB/CURRENT/WEBTECH_ASE_C10_EN_GB_RECONSTRUCTED_RC5.zip) | [Start](C10_COURSE/EN_GB/RELEASES/collection-3.0.0-rc.5/SOURCE_EXACT/index.html) | [Guide](C10_COURSE/EN_GB/RELEASES/collection-3.0.0-rc.5/SOURCE_EXACT/course.html) | Lecturer-defined, if required |
+| S10 — Shared Workshop State | [Open](S10_SEMINAR/EN_GB/README.md) | [ZIP](S10_SEMINAR/EN_GB/CURRENT/WEBTECH_ASE_S10_EN_GB_SUCCESSOR_RC6.zip) | [Start](S10_SEMINAR/EN_GB/RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/CLASSROOM_RC6/START.html) | [Guide](S10_SEMINAR/EN_GB/RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/CLASSROOM_RC6/GUIDE.html) | [Form](S10_SEMINAR/EN_GB/RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/CLASSROOM_RC6/EVIDENCE_FORM.html) |
 
-P01 is the full central implementation; P02 is optional advanced; P03 contributes a required state ADR. The full comparator is not a hidden requirement. Both meetings stop at 60 minutes; the reserved 30 minutes are not overflow. One final PDF belongs to one private S10 Assignment. There is no C10 Assignment and no new deadline.
+[Current whole-week ZIP](../../90_RELEASES/assets/WebTech_ASE_WEEK_10_EN_GB_v3.0.0-rc.6.zip) · [SHA-256 sidecar](../../90_RELEASES/assets/WebTech_ASE_WEEK_10_EN_GB_v3.0.0-rc.6.zip.sha256).
 
-S10 status is WIP/PREVIEW_NOT_FINAL / REMEDIATED_CANDIDATE. Rendered HTML browser QA, exact runtime, native platform and owner acceptance remain open. Initial failure diagnostic patterns are declared and remain unqualified against actual Vitest. Models are not React/Redux Toolkit/Immer/browser observations. All creation-time notes inside exact packages remain historical. Current wrapper metadata supersedes their old continuation prompts, without changing their bytes. No installation, publication, Pages, Actions, Releases or Moodle configuration is performed by this bundle.
+The whole-week ZIP contains the selected course and seminar as nested ZIPs. Extract the outer bundle, read its README, extract each object into its own folder then follow that object's guide. Alternatively use the individual ZIP links above.
+
+[Authoritative current selection](../../metadata/student-selection.json) · [All current weeks](../README.md)
+
+## Historical material
+
+Older `DOWNLOAD`, `PACKAGE_EXACT`, `PACKAGES` and versioned release folders remain for comparison. They are outside the current English selection. Use the current ZIP and guide linked above for class work. Romanian materials, where present, are retained legacy alternatives and have a separate status.
+
+[Preserved predecessor navigation](../../90_ARCHIVE/MAIN_4eea8de_NAVIGATION/README.md). Historical filenames containing `FINAL` do not qualify the current collection.

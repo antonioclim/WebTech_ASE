@@ -1,35 +1,28 @@
-# C03 — JavaScript for Reading and Modifying Programs
+# C03 — JavaScript for reading and modifying programs
 
-**Student WIP preview · original object v1.1.0 · qualification pending.**
+Current English collection candidate **3.0.0-rc.6**; selected object edition **1.1.0**. Qualification and classroom acceptance remain pending.
 
-[Open the ZIP file](DOWNLOAD/WEBTECH_ASE_C03_STUDENT_EN_GB_v1.1.0_PUBLIC.zip) · [SHA-256](DOWNLOAD/WEBTECH_ASE_C03_STUDENT_EN_GB_v1.1.0_PUBLIC.zip.sha256)
+## Download and open
 
-On the ZIP's GitHub page, use **Download raw file**. Keep the ZIP intact until it is on your computer. Use **Extract All** into a new short folder, then open `index.html`. Do not open the lesson from inside the compressed archive. The standalone HTML shell is read locally; GitHub's file viewer is not the lesson player.
+1. Download the complete student ZIP and its SHA-256 sidecar below.
+2. Extract the whole ZIP into a new writable folder. Do not open files inside the compressed archive.
+3. Start with `index.html` in the extracted package then follow `course.html`. Use the exact project folders and commands stated there.
+4. Follow the lesson and worked examples. Your lecturer supplies any assessment or submission requirement.
 
-The archive contains the complete original student payload, not a shortcut or an installer. Its internal files and manifest are unchanged. The adjacent `PACKAGE_EXACT` directory contains an exact, fully extracted copy of this same public ZIP, including its original manifest and PACKAGE_ID. No extra wrapper directory is inserted. Weeks 01–02 retain their existing browsing layout.
-
-P01 Dataset Transformer is the central implementation. P03 Generated-Code Audit is required after the meeting. P02 Rule Engine is optional.
-
-Both meetings have a minute-60 stop. Follow the seminar guide for any remaining work and the final private Moodle PDF. No teacher package, reference solution, console or personal submission belongs in this repository.
-
-**Known limits:** reference_runtime, real_browser, native_platform_acceptance remain unqualified. The archive is not a completed runtime installation. Model/static evidence does not establish genuine application, native-browser or platform acceptance. Internal build-time status notes remain historical qualification records; this preview wrapper does not turn them into PASS.
-
-SHA-256: `8e939bb0b71389d0312ce04d63e95301b6cdcd765b32fa6fd09ceac2ebf70c51`  
-PACKAGE_ID: `7e32a923c353c64e57f7369a9208f917ef52402744c2f6852a2e0548e2f1133e`
-
-## Browse the exact extracted files
-
-| Material | Repository file or directory |
+| Current resource | Link |
 | --- | --- |
-| Complete extracted package | [Open](PACKAGE_EXACT/) |
-| Start page — HTML source | [Open](PACKAGE_EXACT/index.html) |
-| Course — HTML source | [Open](PACKAGE_EXACT/course.html) |
-| C03 HANDOUT — Word document | [Open](PACKAGE_EXACT/documents/C03_HANDOUT.docx) |
-| C03 PREPARATION TRANSFER — Word document | [Open](PACKAGE_EXACT/documents/C03_PREPARATION_TRANSFER.docx) |
-| Canonical teaching examples | [Open](PACKAGE_EXACT/canonical/) |
-| Original file checksums | [Open](PACKAGE_EXACT/SHA256SUMS.txt) |
-| Original package identifier | [Open](PACKAGE_EXACT/PACKAGE_ID.txt) |
+| Complete student ZIP | [Complete student ZIP](CURRENT/WEBTECH_ASE_C03_EN_GB_RECONSTRUCTED_RC5.zip) |
+| SHA-256 sidecar | [SHA-256 sidecar](CURRENT/WEBTECH_ASE_C03_EN_GB_RECONSTRUCTED_RC5.zip.sha256) |
+| Start here | [Start here](RELEASES/collection-3.0.0-rc.5/SOURCE_EXACT/index.html) |
+| Current guide | [Current guide](RELEASES/collection-3.0.0-rc.5/SOURCE_EXACT/course.html) |
+| Package identity | [Package identity](RELEASES/collection-3.0.0-rc.5/SOURCE_EXACT/PACKAGE_ID.txt) |
 
-Repository browsing displays HTML source; it does not host or execute the lesson. Use the unchanged ZIP above for the complete local interactive package. This addition does not activate GitHub Pages and does not close any qualification gate.
+GitHub shows HTML source. Download and extract the selected ZIP to use the interactive lesson. A matching checksum establishes package identity; it does not establish successful execution on your own computer.
 
-[Whole-week preview](../../README.md) · [All weeks](../../../README.md)
+[Authoritative current selection](../../../../metadata/student-selection.json) · [Whole-week navigation](../../README.md) · [All current weeks](../../../README.md)
+
+## Historical material
+
+Older `DOWNLOAD`, `PACKAGE_EXACT`, `PACKAGES` and versioned release folders remain for comparison. They are outside the current English selection. Use the current ZIP and guide linked above for class work. Romanian materials, where present, are retained legacy alternatives and have a separate status.
+
+[Preserved predecessor navigation](../../../../90_ARCHIVE/MAIN_4eea8de_NAVIGATION/README.md). Historical filenames containing `FINAL` do not qualify the current collection.

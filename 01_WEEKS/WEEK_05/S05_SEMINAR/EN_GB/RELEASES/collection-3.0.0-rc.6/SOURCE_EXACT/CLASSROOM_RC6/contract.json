@@ -1,0 +1,64 @@
+{
+  "seminar": "S05",
+  "classroomVersion": "1.0.0-rc.6",
+  "projects": [
+    {
+      "id": "P01",
+      "title": "Closed task-body boundary",
+      "mutableTarget": "targets/p01.mjs",
+      "mutablePathBase": "CLASSROOM_RC6",
+      "packageRootMutableTarget": "CLASSROOM_RC6/targets/p01.mjs",
+      "completeScope": "Accept exactly own title(nonblank trimmed string) and completed(boolean); return fresh representation, reject other fields/types before service call.",
+      "requiredEvidence": [
+        "Valid returned body",
+        "Stringfalse andunknown-key rejection",
+        "Input preservation"
+      ],
+      "minutes": 12
+    },
+    {
+      "id": "P02",
+      "title": "Exactly-once terminal logger",
+      "mutableTarget": "targets/p02.mjs",
+      "mutablePathBase": "CLASSROOM_RC6",
+      "packageRootMutableTarget": "CLASSROOM_RC6/targets/p02.mjs",
+      "completeScope": "Build a terminal callback that records request identity/status/elapsed time once even when supplied finish and close events both fire.",
+      "requiredEvidence": [
+        "Callback event order",
+        "One log after two callbacks",
+        "Monotonic-clock duration and limitation"
+      ],
+      "minutes": 10
+    },
+    {
+      "id": "P03",
+      "title": "Public outcome mapping",
+      "mutableTarget": "targets/p03.mjs",
+      "mutablePathBase": "CLASSROOM_RC6",
+      "packageRootMutableTarget": "CLASSROOM_RC6/targets/p03.mjs",
+      "completeScope": "Map created/notfound/conflict to201+Location/404/409 with safe envelopes, never expose an internal error message.",
+      "requiredEvidence": [
+        "Real loopback create response/status/header",
+        "Conflict and internal safe responses",
+        "Claim-vs-observation explanation"
+      ],
+      "minutes": 14
+    }
+  ],
+  "initialAssertionFailures": [
+    "P01.trim-fresh-body",
+    "P01.strict-closed-input",
+    "P02.exactly-one-terminal-record",
+    "P03.created-location-and-envelope",
+    "P03.safe-error-mapping",
+    "P03.actual-loopback-http"
+  ],
+  "evidenceScope": "GENUINE_NODE_MODULE_AND_LOOPBACK_HTTP_WITH_INJECTED_LOGGER_CALLBACKS",
+  "limitation": "The callback witness is a bounded event contract, not Express middleware qualification. Actual HTTP uses a supplied Node adapter, and classroom mapping does not complete the historical full Express projects.",
+  "qualification": {
+    "native": false,
+    "pilot60min": false,
+    "humanLanguage": false,
+    "Moodle": false
+  }
+}

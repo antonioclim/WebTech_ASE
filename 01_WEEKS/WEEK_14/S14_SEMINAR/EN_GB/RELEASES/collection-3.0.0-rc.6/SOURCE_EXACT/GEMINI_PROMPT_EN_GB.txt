@@ -1,0 +1,7 @@
+Review one sanitised readiness claim against the evidence excerpt below. State the supported scope, one falsifier and the missing witness. Separate build, test, runtime and deployment. Identify one counterexample. Do not implement the harness or reviewer, request secrets, infer live execution or certify readiness. Use ACCEPTED, REJECTED, PARTIALLY_ACCEPTED or UNKNOWN and justify your decision.
+
+Claim: [my precise claim]
+Evidence class and version: [actual loopback run / source analysis / synthetic model / missing witness]
+Minimal redacted excerpt: [only what the claim needs]
+My prediction and independent observation: [my own work]
+Known limit: [what remains unknown]

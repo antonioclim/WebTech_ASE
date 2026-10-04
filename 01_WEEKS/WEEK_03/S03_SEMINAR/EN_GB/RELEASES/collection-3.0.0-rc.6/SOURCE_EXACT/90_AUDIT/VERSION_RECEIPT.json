@@ -1,0 +1,15 @@
+{
+  "seminar": "S03",
+  "previous_public_version": "1.1.0",
+  "new_local_version": "1.2.1-rc.4",
+  "bump": "patch",
+  "reason": "The entry point, package architecture, workflow, launchers, teacher materials, visuals, AI audit and Moodle evidence route changed materially.",
+  "phase3_local_final": false,
+  "remote_published": false,
+  "owner_acceptance": "OPEN",
+  "derived_carrier_version": "1.2.1-rc.4",
+  "previous_carrier_version": "1.2.0",
+  "previous_descriptor_sha256": "241bdef62b8e00ed3bb55b3e37bdf1ccd4375e20adf2b8e1e08a50294dc0a093",
+  "current_derivation_record": "DERIVED_CARRIER.json",
+  "previous_observations_not_transferred_to_current_carrier": true
+}

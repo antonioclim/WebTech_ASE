@@ -1,0 +1,25 @@
+{
+  "name": "role-protected-moderation-reference",
+  "version": "1.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test --test-reporter=tap",
+    "test:baseline": "node --test --test-reporter=tap tests/baseline.test.js",
+    "test:objective": "node --test --test-reporter=tap tests/objective.test.js",
+    "test:regression": "node --test --test-reporter=tap tests/regression.test.js",
+    "test:infrastructure": "node --test --test-reporter=tap checks/infrastructure.test.mjs"
+  },
+  "dependencies": {
+    "express": "5.1.0"
+  },
+  "engines": {
+    "node": "24.21.0",
+    "npm": "11.19.0"
+  },
+  "packageManager": "npm@11.19.0",
+  "overrides": {
+    "qs": "6.16.0"
+  }
+}

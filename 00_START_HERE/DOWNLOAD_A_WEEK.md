@@ -1,11 +1,23 @@
-# Download one week or one object
+# Download the current week or object
 
-For Weeks 01–02, choose the active EN candidate in [the weekly index](../01_WEEKS/README.md) or [current release catalogue](../90_RELEASES/README.md). Distribution 2.1.0-rc.2 contains only the corrected English course and seminar packages. Romanian packages remain legacy alternatives and older English candidates remain in Git history.
+Current English collection candidate **3.0.0-rc.6**. Qualification and classroom acceptance remain pending.
 
-To download both English weeks in one file, use the [combined student ZIP](../90_RELEASES/assets/WEBTECH_ASE_WEEKS_01_02_EN_GB_v2.1.0-rc.2.zip) and its [SHA-256 sidecar](../90_RELEASES/assets/WEBTECH_ASE_WEEKS_01_02_EN_GB_v2.1.0-rc.2.zip.sha256). This outer ZIP contains four object ZIPs. Extract the outer archive, then extract each selected object ZIP separately.
+[Authoritative current selection](../metadata/student-selection.json) · [Current whole-week plan](../90_RELEASES/FULL_COLLECTION_PLAN.json) · [Complete collection release plan](../90_RELEASES/COLLECTION_RELEASE_PLAN.json) · [All current weeks](../01_WEEKS/README.md)
 
-A whole-week bundle contains two object ZIPs. Extract the outer ZIP, read its `README.md`, then extract the selected object ZIP into a new writable folder. Run the package verifier and follow its named launcher: C01 `OPEN_PRESENTATION`, S01/S02 `OPEN_BEGINNER_GUIDE`, C02 `START_COURSE_02`, using `.cmd` on Windows or `bash <name>.sh` on macOS/Linux. These objects have no generic root `index.html`.
+Choose the current week then use its course and seminar links. Every current object page names the selected ZIP, SHA-256 sidecar, start file, guide and submission form where applicable. GitHub displays HTML source rather than running the lesson.
 
-Weeks 03–07 retain their WIP whole-week PREVIEW ZIPs and separate course/seminar ZIPs. Weeks 08–14 retain their separate object ZIPs. Follow their object README and root `index.html` instructions. Do not open or run files inside a compressed archive.
+| Download format | Contents | Extraction |
+| --- | --- | --- |
+| Individual object ZIP | One selected course, seminar or setup kit | Extract the whole ZIP into a new writable folder |
+| Whole-week ZIP | Selected course and seminar as two nested ZIPs | Extract the outer ZIP then each object ZIP separately |
+| Complete filtered collection ZIP | All thirty already extracted objects under `PACKAGES` | Extract the collection once |
 
-See [the complete Weeks 01–14 guide](WEEKS_01_14_DOWNLOADS.md).
+Current whole-week ZIPs and individual objects are linked from [the current release catalogue](../90_RELEASES/README.md). The complete collection is described by its release plan; a downloadable published asset exists only after the owner's manual publication. Do not substitute the repository's whole-source download for the filtered collection.
+
+After extracting, open the start file named by that object's current navigation page. Follow the guide's exact project folders and commands because package layouts differ. Do not open or run files inside a compressed archive. A matching checksum establishes package identity; successful execution on a student's own computer remains a separate observation.
+
+## Historical material
+
+Older `DOWNLOAD`, `PACKAGE_EXACT`, `PACKAGES` and versioned release folders remain for comparison. They are outside the current English selection. Use the current ZIP and guide linked above for class work. Romanian materials, where present, are retained legacy alternatives and have a separate status.
+
+[Preserved predecessor navigation](../90_ARCHIVE/MAIN_4eea8de_NAVIGATION/README.md). Historical filenames containing `FINAL` do not qualify the current collection.

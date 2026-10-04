@@ -1,0 +1,108 @@
+[
+  {
+    "project_id": "P01",
+    "export_name": "queueAdd",
+    "inputs": [
+      {
+        "items": [],
+        "title": "  Book  ",
+        "id": "q1"
+      },
+      {
+        "items": [
+          {
+            "id": "q1",
+            "title": "Book",
+            "read": false
+          }
+        ],
+        "title": "   ",
+        "id": "q2"
+      }
+    ],
+    "expected": [
+      [
+        {
+          "id": "q1",
+          "title": "Book",
+          "read": false
+        }
+      ],
+      [
+        {
+          "id": "q1",
+          "title": "Book",
+          "read": false
+        }
+      ]
+    ]
+  },
+  {
+    "project_id": "P02",
+    "export_name": "capacityView",
+    "inputs": [
+      {
+        "capacity": 5,
+        "attendees": [
+          "a",
+          "b"
+        ]
+      },
+      {
+        "capacity": 2,
+        "attendees": [
+          "a",
+          "b"
+        ]
+      },
+      {
+        "capacity": 1,
+        "attendees": [
+          "a",
+          "b"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "used": 2,
+        "remaining": 3,
+        "full": false
+      },
+      {
+        "used": 2,
+        "remaining": 0,
+        "full": true
+      },
+      {
+        "error": "invalid_capacity"
+      }
+    ]
+  },
+  {
+    "project_id": "P03",
+    "export_name": "mayPublish",
+    "inputs": [
+      {
+        "active": true,
+        "currentId": "B",
+        "requestId": "B"
+      },
+      {
+        "active": true,
+        "currentId": "B",
+        "requestId": "A"
+      },
+      {
+        "active": false,
+        "currentId": "A",
+        "requestId": "A"
+      }
+    ],
+    "expected": [
+      true,
+      false,
+      false
+    ]
+  }
+]

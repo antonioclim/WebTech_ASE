@@ -1,41 +1,30 @@
 # S07 — Transactional Booking
 
-**Student WIP preview · original object v1.1.0 · qualification pending.**
+Current English collection candidate **3.0.0-rc.6**; selected object edition **1.1.3-rc.6**. Qualification and classroom acceptance remain pending.
 
-[Open the ZIP file](DOWNLOAD/WEBTECH_ASE_S07_STUDENT_EN_GB_v1.1.0_PUBLIC.zip) · [SHA-256](DOWNLOAD/WEBTECH_ASE_S07_STUDENT_EN_GB_v1.1.0_PUBLIC.zip.sha256)
+## Download and open
 
-On the ZIP's GitHub page, use **Download raw file**. Keep the ZIP intact until it is on your computer. Use **Extract All** into a new short folder, then open `index.html`. Do not open the lesson from inside the compressed archive. The standalone HTML shell is read locally; GitHub's file viewer is not the lesson player.
+1. Download the complete student ZIP and its SHA-256 sidecar below.
+2. Extract the whole ZIP into a new writable folder. Do not open files inside the compressed archive.
+3. Start with `CLASSROOM_RC6/START.html` in the extracted package then follow `CLASSROOM_RC6/GUIDE.html`. Use the exact project folders and commands stated there.
+4. Complete the classroom microprojects individually and record the requested observations and evidence. Use the current guide to distinguish classroom work from further reading.
+5. Complete the linked submission form, review the exported PDF and submit it privately to the assignment specified by your lecturer. Local JSON exports, where supported, are backups.
 
-The archive contains the complete original student payload, not a shortcut or an installer. Its internal files and manifest are unchanged. The adjacent `PACKAGE_EXACT` directory contains an exact, fully extracted copy of this same public ZIP, including its original manifest and PACKAGE_ID. No extra wrapper directory is inserted. Weeks 01–02 retain their existing browsing layout.
-
-P02 Transactional Booking is the only required complete implementation. The P03-informed architecture decision record is required; full P01 and P03 implementations are optional.
-
-Both meetings have a minute-60 stop. Follow the seminar guide for any remaining work and the final private Moodle PDF. No teacher package, reference solution, console or personal submission belongs in this repository.
-
-**Known limits:** reference_runtime, real_browser, native_platform_acceptance, project_dependencies, native_sqlite3_driver, genuine_ORM_SQLite_application remain unqualified. The archive is not a completed runtime installation. Model/static evidence does not establish genuine application, native-browser or platform acceptance. Internal build-time status notes remain historical qualification records; this preview wrapper does not turn them into PASS.
-
-SHA-256: `f9e34b3056e3862c2580b3e847d2ab7d0c38518b58ad751e306fb82be32af369`  
-PACKAGE_ID: `07bf18598e5f217a2b996106012995139e6ebc294aba61346397642ac1188936`
-
-## Browse the exact extracted files
-
-| Material | Repository file or directory |
+| Current resource | Link |
 | --- | --- |
-| Complete extracted package | [Open](PACKAGE_EXACT/) |
-| Start page — HTML source | [Open](PACKAGE_EXACT/index.html) |
-| Seminar — HTML source | [Open](PACKAGE_EXACT/seminar.html) |
-| Evidence form — HTML source | [Open](PACKAGE_EXACT/evidence.html) |
-| Student guide — HTML source | [Open](PACKAGE_EXACT/guide.html) |
-| S07 ADR BRIEF — Word document | [Open](PACKAGE_EXACT/documents/S07_ADR_BRIEF.docx) |
-| S07 EVIDENCE FORM — Word document | [Open](PACKAGE_EXACT/documents/S07_EVIDENCE_FORM.docx) |
-| S07 STUDENT GUIDE — Word document | [Open](PACKAGE_EXACT/documents/S07_STUDENT_GUIDE.docx) |
-| Student projects | [Open](PACKAGE_EXACT/projects/) |
-| Optional or continuation projects | [Open](PACKAGE_EXACT/optional/) |
-| Project contracts | [Open](PACKAGE_EXACT/contracts/) |
-| Student observation and checking tools | [Open](PACKAGE_EXACT/tools/) |
-| Original file checksums | [Open](PACKAGE_EXACT/SHA256SUMS.txt) |
-| Original package identifier | [Open](PACKAGE_EXACT/PACKAGE_ID.txt) |
+| Complete student ZIP | [Complete student ZIP](CURRENT/WEBTECH_ASE_S07_EN_GB_SUCCESSOR_RC6.zip) |
+| SHA-256 sidecar | [SHA-256 sidecar](CURRENT/WEBTECH_ASE_S07_EN_GB_SUCCESSOR_RC6.zip.sha256) |
+| Start here | [Start here](RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/CLASSROOM_RC6/START.html) |
+| Current guide | [Current guide](RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/CLASSROOM_RC6/GUIDE.html) |
+| Submission form | [Submission form](RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/CLASSROOM_RC6/EVIDENCE_FORM.html) |
+| Package identity | [Package identity](RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/PACKAGE_ID.txt) |
 
-Repository browsing displays HTML source; it does not host or execute the lesson. Use the unchanged ZIP above for the complete local interactive package. This addition does not activate GitHub Pages and does not close any qualification gate.
+GitHub shows HTML source. Download and extract the selected ZIP to use the interactive lesson. A matching checksum establishes package identity; it does not establish successful execution on your own computer.
 
-[Whole-week preview](../../README.md) · [All weeks](../../../README.md)
+[Authoritative current selection](../../../../metadata/student-selection.json) · [Whole-week navigation](../../README.md) · [All current weeks](../../../README.md)
+
+## Historical material
+
+Older `DOWNLOAD`, `PACKAGE_EXACT`, `PACKAGES` and versioned release folders remain for comparison. They are outside the current English selection. Use the current ZIP and guide linked above for class work. Romanian materials, where present, are retained legacy alternatives and have a separate status.
+
+[Preserved predecessor navigation](../../../../90_ARCHIVE/MAIN_4eea8de_NAVIGATION/README.md). Historical filenames containing `FINAL` do not qualify the current collection.

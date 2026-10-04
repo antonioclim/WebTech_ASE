@@ -1,0 +1,67 @@
+{
+  "schema": "webtech-classroom-scope/v1",
+  "seminar": "S02",
+  "classroom_version": "1.0.0-rc.6",
+  "individual": true,
+  "all_projects_required": true,
+  "projects": [
+    {
+      "id": "P01",
+      "title": "Responsive relationship reconstruction",
+      "editable_path": "CLASSROOM_RC6/targets/styles.css",
+      "completeScope": "Complete one/two/four grid tracks at explicit breakpoints, flexible header/card relationships and 16:9 media in the supplied card fixture."
+    },
+    {
+      "id": "P02",
+      "title": "Intrinsic sizing and readable content",
+      "editable_path": "CLASSROOM_RC6/targets/styles.css",
+      "completeScope": "Repair shrinkability and wrap an unbroken identifier without concealing overflow or truncating the fixture."
+    },
+    {
+      "id": "P03",
+      "title": "Keyboard focus and motion preference",
+      "editable_path": "CLASSROOM_RC6/targets/styles.css",
+      "completeScope": "Add visible keyboard focus and disable transitions under reduced-motion preference."
+    }
+  ],
+  "scope": "BOUNDED_STATIC_CSS_SOURCE_CHECKLIST_ONLY",
+  "source_commit": "4eea8de416cb03cf4f718fb802f868a391abb192",
+  "retained_original_full_project_completed_by_classroom_checks": false,
+  "legacy_form": "05_MOODLE_SUBMISSION/FORM_S02_EN_GB.html",
+  "legacy_guide": "00_START_HERE/S02_INTERACTIVE_ULTRA_BEGINNER_GUIDE_EN_GB_v2.3.html",
+  "timeline": [
+    {
+      "start": 0,
+      "end": 4,
+      "activity": "Record all project predictions and environment; original package and runtime prepared before class."
+    },
+    {
+      "start": 4,
+      "end": 20,
+      "activity": "P01 complete bounded scope; save evidence immediately."
+    },
+    {
+      "start": 20,
+      "end": 30,
+      "activity": "P02 complete bounded scope; save evidence immediately."
+    },
+    {
+      "start": 30,
+      "end": 40,
+      "activity": "P03 complete bounded scope; save evidence immediately."
+    },
+    {
+      "start": 40,
+      "end": 46,
+      "activity": "One genuine bounded Gemini/LLM claim and independent witness; unavailable interactions remain NOT_EXECUTED."
+    },
+    {
+      "start": 46,
+      "end": 60,
+      "activity": "Complete one private current-form PDF, inspect every page, stop owned listener and submit one file to the separate assignment if available."
+    }
+  ],
+  "timing_empirically_validated": false,
+  "native_acceptance": false,
+  "genuine_llm_exchange_performed_by_maintainer": false
+}

@@ -1,0 +1,10 @@
+Audit one supplied claim against a minimal sanitised excerpt. Do not produce the complete Worker client or request private material.
+
+Claim: For this injectable Worker client it is always safe to register pending state after postMessage because every reply is asynchronous.
+
+Illustrative flawed order only:
+worker.postMessage({type: 'analysis.start', requestId, values});
+pending.set(requestId, {resolve, reject});
+// The response listener reads pending.get(message.requestId).
+
+Evaluate the claim under an injected fake Worker that may call the message listener inside postMessage. Distinguish that model from native browser Worker delivery. Give one small counterexample trace, a correction to the ordering claim and a remaining limitation. Classify each claim as Observed, Inferred or Unknown and identify what independent check could falsify it. Do not infer UI responsiveness from output equality.

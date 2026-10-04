@@ -20,10 +20,10 @@ def resolve(week,preview=False,receipt=None,plan_path=week_builder.PLAN):
         # This edition is permanently labelled candidate; qualification alone
         # does not silently change plan flags or a version into a final release.
         raise ValueError('Current plan is a candidate; a reviewed successor final plan is required')
-    tag='week-'+week+'-en-gb-v3.0.0-rc.5';out=week_builder.bundle_path(week,item)
+    tag='week-'+week+'-en-gb-v'+week_builder.VERSION;out=week_builder.bundle_path(week,item)
     notes=rc.checked_path(ROOT,item['notes'])
     if not notes.is_file():raise ValueError('Release notes absent')
-    fields={'tag':tag,'title':'Web Technologies Week '+week+' English candidate 3.0.0-rc.5','notes':item['notes'],'assets':out.relative_to(ROOT).as_posix()+' '+Path(str(out)+'.sha256').relative_to(ROOT).as_posix(),'draft':'true','prerelease':'true'}
+    fields={'tag':tag,'title':'Web Technologies Week '+week+' English candidate '+week_builder.VERSION,'notes':item['notes'],'assets':out.relative_to(ROOT).as_posix()+' '+Path(str(out)+'.sha256').relative_to(ROOT).as_posix(),'draft':'true','prerelease':'true'}
     if any('\n' in v or '\r' in v for v in fields.values()):raise ValueError('Output injection')
     return fields
 

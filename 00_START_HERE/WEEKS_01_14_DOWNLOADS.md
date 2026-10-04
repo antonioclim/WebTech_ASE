@@ -1,23 +1,23 @@
-# Browse, download and open Weeks 01–14
+# Browse, download and open current Weeks 01–14
 
-Start with [the weekly index](../01_WEEKS/README.md). Weeks 01–02 provide one corrected English candidate per object. The S01 interactive guide is included in its current package; the old standalone copy is superseded.
+Current English collection candidate **3.0.0-rc.6**. Qualification and classroom acceptance remain pending.
 
-## Browse individual files
+[Authoritative current selection](../metadata/student-selection.json) · [Current whole-week plan](../90_RELEASES/FULL_COLLECTION_PLAN.json) · [Complete collection release plan](../90_RELEASES/COLLECTION_RELEASE_PLAN.json) · [All current weeks](../01_WEEKS/README.md)
 
-Follow `week → course/seminar → language` and open `PACKAGE_EXACT`. For Weeks 03–14, the public language is `EN_GB`. Each language README links to the HTML sources, Word documents, student projects and local guidance in that exact student package. GitHub displays HTML source; it is not a hosted lesson player and no Pages deployment is implied.
+Choose the current week then use its course and seminar links. Every current object page names the selected ZIP, SHA-256 sidecar, start file, guide and submission form where applicable. GitHub displays HTML source rather than running the lesson.
 
-## Download a ZIP
+| Download format | Contents | Extraction |
+| --- | --- | --- |
+| Individual object ZIP | One selected course, seminar or setup kit | Extract the whole ZIP into a new writable folder |
+| Whole-week ZIP | Selected course and seminar as two nested ZIPs | Extract the outer ZIP then each object ZIP separately |
+| Complete filtered collection ZIP | All thirty already extracted objects under `PACKAGES` | Extract the collection once |
 
-- Weeks 01–02: use their current EN candidate bundle or object download route, or [download both weeks together](../90_RELEASES/assets/WEBTECH_ASE_WEEKS_01_02_EN_GB_v2.1.0-rc.2.zip) with its [checksum](../90_RELEASES/assets/WEBTECH_ASE_WEEKS_01_02_EN_GB_v2.1.0-rc.2.zip.sha256). Whole-week bundles contain two nested object ZIPs; the combined archive contains four. Extract the outer ZIP and then the selected object ZIP.
-- Weeks 03–07: use either the whole-week PREVIEW ZIP or a separate course/seminar ZIP.
-- Weeks 08–14: use the separate course or seminar ZIP under the selected object's `EN_GB/DOWNLOAD` directory.
+Current whole-week ZIPs and individual objects are linked from [the current release catalogue](../90_RELEASES/README.md). The complete collection is described by its release plan; a downloadable published asset exists only after the owner's manual publication. Do not substitute the repository's whole-source download for the filtered collection.
 
-Save the selected ZIP locally. Use a new writable extraction folder under your user profile. For Weeks 01–02, follow the named launchers in [quick start](STUDENT_QUICK_START.md). For Weeks 03–14, follow the extracted root `index.html` instructions. Do not open HTML from inside the ZIP. Do not extract the duplicate ZIP under `DOWNLOAD` merely to browse the already extracted `PACKAGE_EXACT` tree.
+After extracting, open the start file named by that object's current navigation page. Follow the guide's exact project folders and commands because package layouts differ. Do not open or run files inside a compressed archive. A matching checksum establishes package identity; successful execution on a student's own computer remains a separate observation.
 
-## Qualification limits
+## Historical material
 
-The shells and documents can be read offline. Application execution has separate prerequisites documented by each object. Runtime, native dependencies, databases, Worker/Service Worker, Redis/BullMQ, browser, Microsoft Word and platform acceptance remain pending where declared. A checksum proves identity, not execution.
+Older `DOWNLOAD`, `PACKAGE_EXACT`, `PACKAGES` and versioned release folders remain for comparison. They are outside the current English selection. Use the current ZIP and guide linked above for class work. Romanian materials, where present, are retained legacy alternatives and have a separate status.
 
-Each seminar's reviewed PDF is submitted privately to Moodle after the teacher configures the Assignment. Never commit forms, JSON drafts, tokens, cookies, conversations or student work to the public repository. Teacher packages and Moodle administration are not public downloads.
-
-See [the preview policy](../00_TOOLS/maintainer/PREVIEW_DOWNLOAD_POLICY.md) before treating any WIP object as a qualified release.
+[Preserved predecessor navigation](../90_ARCHIVE/MAIN_4eea8de_NAVIGATION/README.md). Historical filenames containing `FINAL` do not qualify the current collection.

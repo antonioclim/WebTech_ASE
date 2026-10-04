@@ -1,0 +1,27 @@
+REFERENCE TRACE — NOT STUDENT EXECUTION
+Runtime used to generate this trace: Node.js v22.16.0 (reference target remains v24.21.0).
+Command: node src/cli.js --owner Ada --minimum-estimate 3
+
+{
+  "tasks": [
+    {
+      "id": "T-2",
+      "title": "Inspect API",
+      "owner": "Ada",
+      "estimate": 5
+    },
+    {
+      "id": "T-3",
+      "title": "Add tests",
+      "owner": "Ada",
+      "estimate": 3
+    }
+  ],
+  "count": 2,
+  "totalEstimate": 8,
+  "owners": [
+    "Ada"
+  ]
+}
+
+Limit: this demonstrates one synthetic fixture only. It does not prove exact-runtime or platform acceptance.

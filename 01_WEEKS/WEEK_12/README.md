@@ -1,10 +1,20 @@
-# Week 12 — Realtime communication and asynchronous work
+# Week 12
 
-This is a **WIP/PREVIEW** student-only local review bundle. Its C12 course retains its existing WIP/PREVIEW qualification. The S12 route now selects the exact v1.2.1 FINAL_LOCAL student package. It is not a repository upload kit or a runtime, protocol, browser or FINAL acceptance.
+Current English collection candidate **3.0.0-rc.6**. The links below select one course and one seminar from the same current collection. Qualification and classroom acceptance remain pending.
 
-- [C12 course](C12_COURSE/EN_GB/index.html)
-- [S12 seminar](S12_SEMINAR/EN_GB/index.html)
+| Object | Current navigation | ZIP | Start | Guide | Submission |
+| --- | --- | --- | --- | --- | --- |
+| C12 — Realtime and asynchronous work | [Open](C12_COURSE/EN_GB/README.md) | [ZIP](C12_COURSE/EN_GB/CURRENT/WEBTECH_ASE_C12_EN_GB_RECONSTRUCTED_RC5.zip) | [Start](C12_COURSE/EN_GB/RELEASES/collection-3.0.0-rc.5/SOURCE_EXACT/index.html) | [Guide](C12_COURSE/EN_GB/RELEASES/collection-3.0.0-rc.5/SOURCE_EXACT/course.html) | Lecturer-defined, if required |
+| S12 — Correlated Request Dispatcher | [Open](S12_SEMINAR/EN_GB/README.md) | [ZIP](S12_SEMINAR/EN_GB/CURRENT/WEBTECH_ASE_S12_EN_GB_SUCCESSOR_RC6.zip) | [Start](S12_SEMINAR/EN_GB/RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/CLASSROOM_RC6/START.html) | [Guide](S12_SEMINAR/EN_GB/RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/CLASSROOM_RC6/GUIDE.html) | [Form](S12_SEMINAR/EN_GB/RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/CLASSROOM_RC6/EVIDENCE_FORM.html) |
 
-Each object retains both `DOWNLOAD` and the complete `PACKAGE_EXACT` tree. Opening HTML in GitHub shows source; Pages is not enabled by this bundle.
+[Current whole-week ZIP](../../90_RELEASES/assets/WebTech_ASE_WEEK_12_EN_GB_v3.0.0-rc.6.zip) · [SHA-256 sidecar](../../90_RELEASES/assets/WebTech_ASE_WEEK_12_EN_GB_v3.0.0-rc.6.zip.sha256).
 
-S12 content and packaging passed local audit. Native browser, Windows, macOS, prescribed runtime and live-service acceptance remain open. The C12 course has no assignment. The Week 12 bundle identity files describe the earlier WIP snapshot; this S12 navigation overlay does not renew that bundle identity.
+The whole-week ZIP contains the selected course and seminar as nested ZIPs. Extract the outer bundle, read its README, extract each object into its own folder then follow that object's guide. Alternatively use the individual ZIP links above.
+
+[Authoritative current selection](../../metadata/student-selection.json) · [All current weeks](../README.md)
+
+## Historical material
+
+Older `DOWNLOAD`, `PACKAGE_EXACT`, `PACKAGES` and versioned release folders remain for comparison. They are outside the current English selection. Use the current ZIP and guide linked above for class work. Romanian materials, where present, are retained legacy alternatives and have a separate status.
+
+[Preserved predecessor navigation](../../90_ARCHIVE/MAIN_4eea8de_NAVIGATION/README.md). Historical filenames containing `FINAL` do not qualify the current collection.

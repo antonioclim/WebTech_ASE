@@ -1,0 +1,195 @@
+[
+  {
+    "project_id": "P01",
+    "export_name": "workshopTransition",
+    "inputs": [
+      {
+        "state": {
+          "track": "all",
+          "savedIds": []
+        },
+        "action": {
+          "type": "track/selected",
+          "track": "web"
+        }
+      },
+      {
+        "state": {
+          "track": "all",
+          "savedIds": [
+            "a"
+          ]
+        },
+        "action": {
+          "type": "session/toggled",
+          "id": "a"
+        }
+      },
+      {
+        "state": {
+          "track": "web",
+          "savedIds": [
+            "a"
+          ]
+        },
+        "action": {
+          "type": "saved/cleared"
+        }
+      },
+      {
+        "state": {
+          "track": "all",
+          "savedIds": []
+        },
+        "action": {
+          "type": "unknown"
+        }
+      }
+    ],
+    "expected": [
+      {
+        "track": "web",
+        "savedIds": []
+      },
+      {
+        "track": "all",
+        "savedIds": []
+      },
+      {
+        "track": "web",
+        "savedIds": []
+      },
+      {
+        "error": "unsupported_action"
+      }
+    ]
+  },
+  {
+    "project_id": "P02",
+    "export_name": "notificationRefresh",
+    "inputs": [
+      {
+        "owner": "B",
+        "reply": "A",
+        "success": true,
+        "items": [
+          {
+            "id": "a",
+            "read": false
+          }
+        ],
+        "received": []
+      },
+      {
+        "owner": "B",
+        "reply": "B",
+        "success": true,
+        "items": [],
+        "received": [
+          {
+            "id": "b",
+            "read": true
+          }
+        ]
+      },
+      {
+        "owner": "B",
+        "reply": "B",
+        "success": false,
+        "items": [
+          {
+            "id": "a",
+            "read": false
+          }
+        ],
+        "received": []
+      }
+    ],
+    "expected": [
+      {
+        "items": [
+          {
+            "id": "a",
+            "read": false
+          }
+        ],
+        "unread": 1
+      },
+      {
+        "items": [
+          {
+            "id": "b",
+            "read": true
+          }
+        ],
+        "unread": 0
+      },
+      {
+        "items": [
+          {
+            "id": "a",
+            "read": false
+          }
+        ],
+        "unread": 1
+      }
+    ]
+  },
+  {
+    "project_id": "P03",
+    "export_name": "chooseArchitecture",
+    "inputs": [
+      {
+        "required": [
+          "shared"
+        ],
+        "candidates": [
+          {
+            "id": "lifted",
+            "capabilities": [],
+            "cost": 1
+          },
+          {
+            "id": "context",
+            "capabilities": [
+              "shared"
+            ],
+            "cost": 3
+          }
+        ]
+      },
+      {
+        "required": [],
+        "candidates": [
+          {
+            "id": "a",
+            "capabilities": [],
+            "cost": 2
+          },
+          {
+            "id": "b",
+            "capabilities": [],
+            "cost": 2
+          }
+        ]
+      },
+      {
+        "required": [
+          "async"
+        ],
+        "candidates": [
+          {
+            "id": "a",
+            "capabilities": [],
+            "cost": 1
+          }
+        ]
+      }
+    ],
+    "expected": [
+      "context",
+      null,
+      null
+    ]
+  }
+]

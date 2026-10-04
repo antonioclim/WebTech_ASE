@@ -1,9 +1,30 @@
-# S14 — production checks and evidence review
+# S14 — Evidence review and individual defence
 
-Version 1.2.1 is FINAL_LOCAL for content and packaging. Native browser, prescribed runtime and live service acceptance remain pending.
+Current English collection candidate **3.0.0-rc.6**; selected object edition **1.2.3-rc.6**. Qualification and classroom acceptance remain pending.
 
-[Download the Student kit](DOWNLOAD/TW2026_S14_STUDENT_EN_GB_v1.2.1_FINAL_LOCAL.zip) · [Start here](PACKAGE_v1.2.1/README.md)
+## Download and open
 
-The assessed implementation is P01. P02 is optional. P03 requires the ten-row review of your own project; running the full programme is optional. P04 is excluded. Submit one private PDF through the authorised S14 Moodle Assignment. C14 has no Assignment.
+1. Download the complete student ZIP and its SHA-256 sidecar below.
+2. Extract the whole ZIP into a new writable folder. Do not open files inside the compressed archive.
+3. Start with `CLASSROOM_RC6/START.html` in the extracted package then follow `CLASSROOM_RC6/GUIDE.html`. Use the exact project folders and commands stated there.
+4. Complete the classroom microprojects individually and record the requested observations and evidence. Use the current guide to distinguish classroom work from further reading.
+5. Complete the linked submission form, review the exported PDF and submit it privately to the assignment specified by your lecturer. Local JSON exports, where supported, are backups.
 
-The v1.1.0 Student ZIP remains in the tree as superseded history pending final freeze cleanup. It is no longer the current download.
+| Current resource | Link |
+| --- | --- |
+| Complete student ZIP | [Complete student ZIP](CURRENT/WEBTECH_ASE_S14_EN_GB_SUCCESSOR_RC6.zip) |
+| SHA-256 sidecar | [SHA-256 sidecar](CURRENT/WEBTECH_ASE_S14_EN_GB_SUCCESSOR_RC6.zip.sha256) |
+| Start here | [Start here](RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/CLASSROOM_RC6/START.html) |
+| Current guide | [Current guide](RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/CLASSROOM_RC6/GUIDE.html) |
+| Submission form | [Submission form](RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/CLASSROOM_RC6/EVIDENCE_FORM.html) |
+| Package identity | [Package identity](RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/PACKAGE_ID.txt) |
+
+GitHub shows HTML source. Download and extract the selected ZIP to use the interactive lesson. A matching checksum establishes package identity; it does not establish successful execution on your own computer.
+
+[Authoritative current selection](../../../../metadata/student-selection.json) · [Whole-week navigation](../../README.md) · [All current weeks](../../../README.md)
+
+## Historical material
+
+Older `DOWNLOAD`, `PACKAGE_EXACT`, `PACKAGES` and versioned release folders remain for comparison. They are outside the current English selection. Use the current ZIP and guide linked above for class work. Romanian materials, where present, are retained legacy alternatives and have a separate status.
+
+[Preserved predecessor navigation](../../../../90_ARCHIVE/MAIN_4eea8de_NAVIGATION/README.md). Historical filenames containing `FINAL` do not qualify the current collection.

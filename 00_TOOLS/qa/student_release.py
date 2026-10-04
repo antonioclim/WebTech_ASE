@@ -14,10 +14,12 @@ sys.path.insert(0, str(ROOT/'00_TOOLS/publishing'))
 import release_contract as rc
 from identity_policies import POLICIES
 REGISTRY = ROOT/'metadata/student-selection.json'
+VERSION = '3.0.0-rc.6'
+SORTED_IDENTITY_DESCRIPTION = 'SHA256 of UTF8 sorted POSIX-relative payload lines: sha256 + two spaces + path + LF; exclude the exact identity_exclusions listed here and in the fixed derived carrier contract'
 
 def read_registry():
     d = rc.strict_json(REGISTRY.read_bytes())
-    if d.get('schema') != 'webtech-student-selection/v2' or d.get('distribution_version') != '3.0.0-rc.5':
+    if d.get('schema') != 'webtech-student-selection/v2' or d.get('distribution_version') != VERSION:
         raise ValueError('Unsupported current registry')
     objects = d.get('objects')
     if not isinstance(objects, list) or len(objects) != 30 or {o.get('object_id') for o in objects} != rc.OBJECTS:
@@ -64,6 +66,9 @@ def verify_identity(ident, files, expected_pid=None):
             value = rc.sha(rc.manifest(files, excluded))
             if d.get('package_id') != value:
                 raise ValueError('Descriptor embedded ID differs')
+            if any(p.startswith('CLASSROOM_RC6/') for p in excluded):
+                if d.get('identity_exclusions') != policy['manifest_exclusions'] or d.get('identity_method') != SORTED_IDENTITY_DESCRIPTION:
+                    raise ValueError('Current descriptor exclusion explanation differs')
         else:
             compact = {'schema':d['schema'],'entries':[{k:r[k] for k in ('path','sha256','bytes','mutable')} for r in records]}
             value = rc.sha(json.dumps(compact,ensure_ascii=False,separators=(',',':')).encode())

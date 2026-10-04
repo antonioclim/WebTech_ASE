@@ -1,0 +1,56 @@
+{
+  "schema": "webtech-classroom-scope/v1",
+  "seminar": "S14",
+  "classroom_version": "1.0.0-rc.6",
+  "individual": true,
+  "all_projects_required": true,
+  "projects": [
+    {
+      "id": "P01",
+      "title": "Regression: actual persisted follow-up",
+      "editable_path": "CLASSROOM_RC6/student/p01.mjs",
+      "completeScope": "Use the supplied checklist service adapter to create a trimmed title and independently read repository state. Return created/stored titles and whether the stored record matches. The missing-persistence mutation must produce a false decision. This is real local service/repository execution, not HTTP or the complete protected seven-contract harness. Preserve the original runtime oracle and learner TODO unchanged."
+    },
+    {
+      "id": "P03",
+      "title": "Production evidence: fail/unknown/pass gate",
+      "editable_path": "CLASSROOM_RC6/student/p03.mjs",
+      "completeScope": "Review the ten named evidence rows for your own project. In code derive FAIL if any required row fails, otherwise UNKNOWN if a required witness is unknown, otherwise a scoped PASS. DEPLOYMENT remains visible and nonblocking in this classroom policy. Row text is unverified student evidence; missing actual checks remain unknown, never invented pass."
+    }
+  ],
+  "scope": "ACTUAL_LOCAL_SERVICE_P01_AND_BOUNDED_PORTFOLIO_MODEL",
+  "source_commit": "4eea8de416cb03cf4f718fb802f868a391abb192",
+  "retained_original_full_project_completed_by_classroom_checks": false,
+  "legacy_form": "S14_EVIDENCE_FORM_EN_GB_v1.2.1.html",
+  "legacy_guide": "S14_INTERACTIVE_ULTRA_BEGINNER_GUIDE_EN_GB_v1.2.1.html",
+  "timeline": [
+    {
+      "activity": "Environment and privacy",
+      "from_minute": 0,
+      "to_minute": 4
+    },
+    {
+      "activity": "P01",
+      "from_minute": 4,
+      "to_minute": 27
+    },
+    {
+      "activity": "P03",
+      "from_minute": 27,
+      "to_minute": 45
+    },
+    {
+      "activity": "Actual bounded Gemini/LLM claim and independent check",
+      "from_minute": 45,
+      "to_minute": 52
+    },
+    {
+      "activity": "Individual evidence, reflection and one reviewed PDF",
+      "from_minute": 52,
+      "to_minute": 60
+    }
+  ],
+  "timing_empirically_validated": false,
+  "native_acceptance": false,
+  "genuine_llm_exchange_performed_by_maintainer": false
+}

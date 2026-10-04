@@ -1,0 +1,189 @@
+{
+  "schema": "webtech-derived-carrier/v1",
+  "object_id": "S03",
+  "carrier_version": "1.2.2-rc.6",
+  "distribution_version": "3.0.0-rc.6",
+  "source_commit": "4eea8de416cb03cf4f718fb802f868a391abb192",
+  "derived_from": {
+    "archive": "01_WEEKS/WEEK_03/S03_SEMINAR/EN_GB/CURRENT/WEBTECH_ASE_S03_EN_GB_RECONSTRUCTED_RC5.zip",
+    "archive_sha256": "ddd1ef4a7db54bb931b8ca603c434db2c9bb792fc0848eba87b3928153e2138a",
+    "package_id": "4f231ef65fc545929b98558eaca4a0bd91b8164be335e3acb14af433aff8c627",
+    "carrier_version": "1.2.1-rc.4",
+    "projection": "01_WEEKS/WEEK_03/S03_SEMINAR/EN_GB/RELEASES/collection-3.0.0-rc.5/SOURCE_EXACT"
+  },
+  "preceding_descriptor_sha256": "dfd6a227f195b9e28f45e8c9cf3bd85df4565c523396c0b8855bfdf9ab959219",
+  "status": "LOCAL_RELEASE_CANDIDATE_PENDING_EXTERNAL_ACCEPTANCE",
+  "native_acceptance": "PENDING",
+  "identity_is_runtime_qualification": false,
+  "original_carrier_overwritten": false,
+  "original_external_bindings_are_history_not_current_byte_identity": true,
+  "content_changes_before_sealing": [
+    {
+      "path": "CHANGELOG_RC6.md",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "41fed3541e9bb7b8a333f0c43382a20815b415c0ecac7fd8479fd3586104148d",
+      "before_bytes": null,
+      "after_bytes": 759
+    },
+    {
+      "path": "CLASSROOM_RC6/CLASSROOM_BOUNDARY.json",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "79da536bff274d8832e40192953142bc8e789d6770653236c93d73216b72f5e7",
+      "before_bytes": null,
+      "after_bytes": 1791
+    },
+    {
+      "path": "CLASSROOM_RC6/CLASSROOM_SCOPE.json",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "cbbd7ca835f50a9d03189ef725e4b09283867460c33b2bbd1dd2d6f1360071ad",
+      "before_bytes": null,
+      "after_bytes": 2470
+    },
+    {
+      "path": "CLASSROOM_RC6/EVIDENCE_FORM.html",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "029a646ccd5b08dcb5fbdbf64951c0bddd7d1549ab2bfebba0b89e3e9951b7b8",
+      "before_bytes": null,
+      "after_bytes": 36978
+    },
+    {
+      "path": "CLASSROOM_RC6/GEMINI_PROMPT.txt",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "2d172f84ff950f43709c08c433854f246124ed99926e8f4b37cd401e8fea2b38",
+      "before_bytes": null,
+      "after_bytes": 589
+    },
+    {
+      "path": "CLASSROOM_RC6/GUIDE.html",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "cb2576feb05f09f0cfe6ce375a4a4528ccb492df0b2d11847239173b132c3b34",
+      "before_bytes": null,
+      "after_bytes": 7189
+    },
+    {
+      "path": "CLASSROOM_RC6/README.md",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "88cd0b253b977eddeaa769e7709ec4530da42177189ab7dc5371ac926718dd74",
+      "before_bytes": null,
+      "after_bytes": 4640
+    },
+    {
+      "path": "CLASSROOM_RC6/SOURCE_MANIFEST.json",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "3c82bc3254badfab59f1ce78fdfca75a393a72180e2c3512fecd4dc95db2a19c",
+      "before_bytes": null,
+      "after_bytes": 1433
+    },
+    {
+      "path": "CLASSROOM_RC6/START.html",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "ce398ac8c143ce14776f73ec6fdfc440bacbffb0de41fcc769d4cf0efcf95f35",
+      "before_bytes": null,
+      "after_bytes": 2526
+    },
+    {
+      "path": "CLASSROOM_RC6/checks.mjs",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "499a7231a5b6e214b4675246f872f1e623b96631fc29222c6322bfdd67bb7a95",
+      "before_bytes": null,
+      "after_bytes": 1718
+    },
+    {
+      "path": "CLASSROOM_RC6/contract.json",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "a8e055cb2bebcdb71532a18cc836e3532426379bf616fd7c759b657c47a983d1",
+      "before_bytes": null,
+      "after_bytes": 2384
+    },
+    {
+      "path": "CLASSROOM_RC6/experiments.mjs",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "0289ba6ca9323b5367f79a16f861357d3730a47a74edf5aeb4a28304c653432a",
+      "before_bytes": null,
+      "after_bytes": 2943
+    },
+    {
+      "path": "CLASSROOM_RC6/kit.mjs",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "5a2a9b6e08b5de0b1fbeb5e9ba735331939ea78183599925f48137e1a9ad20d9",
+      "before_bytes": null,
+      "after_bytes": 3441
+    },
+    {
+      "path": "CLASSROOM_RC6/targets/p01.mjs",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "9e840d8dcac73cf72c410f10a18858a213d64caed608fdb3a9eb98c8f346acaf",
+      "before_bytes": null,
+      "after_bytes": 414
+    },
+    {
+      "path": "CLASSROOM_RC6/targets/p02.mjs",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "276945b192b884b96588c42b68ab4613113e3dc0f324f9b1d70280009e1bbd98",
+      "before_bytes": null,
+      "after_bytes": 387
+    },
+    {
+      "path": "CLASSROOM_RC6/targets/p03.mjs",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "896ebadd51be8435b2d7ce271e5bb81c9c7ce1797ebebfa5151081afe9d8c7a0",
+      "before_bytes": null,
+      "after_bytes": 302
+    },
+    {
+      "path": "CLASSROOM_RC6/verify.mjs",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "e0928e6062d1b0f86409c229291cf6511d2f19550a9396d5c07a2943226df6ff",
+      "before_bytes": null,
+      "after_bytes": 4944
+    }
+  ],
+  "identity_controls_regenerated_using_fixed_contract": true,
+  "identity_contract": {
+    "method": "manifest-sha256",
+    "manifest": "90_AUDIT/IMMUTABLE_MANIFEST.sha256",
+    "package_id": "90_AUDIT/PACKAGE_ID.txt",
+    "manifest_exclusions": [
+      "02_PROJECTS/P01/student/src/transform-tasks.js",
+      "02_PROJECTS/P02/student/src/rule-engine.js",
+      "02_PROJECTS/P03/student/src/safe-normalizer.js",
+      "90_AUDIT/IMMUTABLE_MANIFEST.sha256",
+      "90_AUDIT/PACKAGE_ID.txt",
+      "CLASSROOM_RC6/targets/p01.mjs",
+      "CLASSROOM_RC6/targets/p02.mjs",
+      "CLASSROOM_RC6/targets/p03.mjs"
+    ],
+    "path_order": "unicode-codepoint",
+    "encoding": "UTF-8",
+    "line_ending": "LF",
+    "record_format": "sha256 + two ASCII spaces + relative POSIX path + LF",
+    "index": "90_AUDIT/FILE_INDEX.csv",
+    "index_exclusions": [
+      "CLASSROOM_RC6/targets/p01.mjs",
+      "CLASSROOM_RC6/targets/p02.mjs",
+      "CLASSROOM_RC6/targets/p03.mjs"
+    ],
+    "index_columns": [
+      "path",
+      "role",
+      "identity_policy"
+    ]
+  }
+}

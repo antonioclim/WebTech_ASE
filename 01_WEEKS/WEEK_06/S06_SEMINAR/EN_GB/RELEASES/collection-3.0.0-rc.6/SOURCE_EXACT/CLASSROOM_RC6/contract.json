@@ -1,0 +1,64 @@
+{
+  "seminar": "S06",
+  "classroomVersion": "1.0.0-rc.6",
+  "projects": [
+    {
+      "id": "P01",
+      "title": "Normal reopen and explicit reset",
+      "mutableTarget": "targets/p01.mjs",
+      "mutablePathBase": "CLASSROOM_RC6",
+      "packageRootMutableTarget": "CLASSROOM_RC6/targets/p01.mjs",
+      "completeScope": "Implement explicit reset vs normal initialisation for the supplied real SQLite notes table; normal close/reopen preserves marker and one seed, reset removes marker.",
+      "requiredEvidence": [
+        "Actual SQLite-file stage rows",
+        "Connection close/reopen/reset marker comparison",
+        "Owned temporary-file cleanup and durability limit"
+      ],
+      "minutes": 12
+    },
+    {
+      "id": "P02",
+      "title": "Closed query translator",
+      "mutableTarget": "targets/p02.mjs",
+      "mutablePathBase": "CLASSROOM_RC6",
+      "packageRootMutableTarget": "CLASSROOM_RC6/targets/p02.mjs",
+      "completeScope": "Parse owner, true/false archived and title/id sort tokens only, return parameterised WHERE bindings and fixed order SQL, reject unknown/invalid tokens.",
+      "requiredEvidence": [
+        "SQLite row IDs for ownerAda/archivedfalse",
+        "Stringfalse interpretation",
+        "Rejectedquery pre-DBcall boundary"
+      ],
+      "minutes": 12
+    },
+    {
+      "id": "P03",
+      "title": "Awaited reservation persistence",
+      "mutableTarget": "targets/p03.mjs",
+      "mutablePathBase": "CLASSROOM_RC6",
+      "packageRootMutableTarget": "CLASSROOM_RC6/targets/p03.mjs",
+      "completeScope": "Validate/trim code, await the supplied delayed real SQLite write, return detached saved data and map only the declared conflict error while preserving unexpected errors.",
+      "requiredEvidence": [
+        "Actual unique conflict",
+        "Deferred returned-promise settlement",
+        "Unexpected error identity"
+      ],
+      "minutes": 12
+    }
+  ],
+  "initialAssertionFailures": [
+    "P01.reopen-and-reset",
+    "P02.real-filter-bindings",
+    "P02.closed-invalid-input",
+    "P03.real-write-and-conflict",
+    "P03.validation-and-error-identity",
+    "P03.awaited-completion"
+  ],
+  "evidenceScope": "GENUINE_NODE_BUILTIN_SQLITE_FILE_MEMORY_AND_ASYNC_ADAPTER",
+  "limitation": "These complete bounded SQLite tasks use Node built-in DatabaseSync and a supplied asynchronous adapter. They do not complete or qualify the original Sequelize/sqlite3 implementation. Same-process reopen is not crash durability.",
+  "qualification": {
+    "native": false,
+    "pilot60min": false,
+    "humanLanguage": false,
+    "Moodle": false
+  }
+}

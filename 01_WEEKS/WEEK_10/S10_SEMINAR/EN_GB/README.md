@@ -1,15 +1,30 @@
-# S10 — English (British)
+# S10 — Shared Workshop State
 
-[Week 10](../../index.html) · [Object](../index.html)
+Current English collection candidate **3.0.0-rc.6**; selected object edition **1.2.4-rc.6**. Qualification and classroom acceptance remain pending.
 
-S10 v1.2.1 is a remediated candidate, WIP/PREVIEW, not FINAL. At the Phase 4 preparation snapshot, this phase performed no remote operations or publication. Rendered HTML browser QA, the exact runtime, native platform and owner acceptance remain open.
+## Download and open
 
-[Interactive beginner guide](PACKAGE_EXACT/TW2026_S10_STUDENT_v1.2.1/00_START_HERE/S10_INTERACTIVE_ULTRA_BEGINNER_GUIDE_EN_GB_v1.2.1.html) · [Start instructions](PACKAGE_EXACT/TW2026_S10_STUDENT_v1.2.1/00_START_HERE/README.md) · [Evidence form](PACKAGE_EXACT/TW2026_S10_STUDENT_v1.2.1/05_MOODLE_SUBMISSION/FORM_S10_EN_GB.html) · [Required State ADR worksheet](PACKAGE_EXACT/TW2026_S10_STUDENT_v1.2.1/01_WORKSHEET/REQUIRED_STATE_ADR_S10_v1.2.1_EN_GB.docx)
+1. Download the complete student ZIP and its SHA-256 sidecar below.
+2. Extract the whole ZIP into a new writable folder. Do not open files inside the compressed archive.
+3. Start with `CLASSROOM_RC6/START.html` in the extracted package then follow `CLASSROOM_RC6/GUIDE.html`. Use the exact project folders and commands stated there.
+4. Complete the classroom microprojects individually and record the requested observations and evidence. Use the current guide to distinguish classroom work from further reading.
+5. Complete the linked submission form, review the exported PDF and submit it privately to the assignment specified by your lecturer. Local JSON exports, where supported, are backups.
 
-[Complete v1.2.1 candidate ZIP](DOWNLOAD/TW2026_S10_STUDENT_EN_GB_v1.2.1_REMEDIATED_CANDIDATE.zip) · [SHA-256](DOWNLOAD/TW2026_S10_STUDENT_EN_GB_v1.2.1_REMEDIATED_CANDIDATE.zip.sha256) · [Package ID](PACKAGE_EXACT/TW2026_S10_STUDENT_v1.2.1/90_AUDIT/PACKAGE_ID.txt) · [Distribution status](DISTRIBUTION_STATUS.json)
+| Current resource | Link |
+| --- | --- |
+| Complete student ZIP | [Complete student ZIP](CURRENT/WEBTECH_ASE_S10_EN_GB_SUCCESSOR_RC6.zip) |
+| SHA-256 sidecar | [SHA-256 sidecar](CURRENT/WEBTECH_ASE_S10_EN_GB_SUCCESSOR_RC6.zip.sha256) |
+| Start here | [Start here](RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/CLASSROOM_RC6/START.html) |
+| Current guide | [Current guide](RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/CLASSROOM_RC6/GUIDE.html) |
+| Submission form | [Submission form](RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/CLASSROOM_RC6/EVIDENCE_FORM.html) |
+| Package identity | [Package identity](RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/90_AUDIT/PACKAGE_ID.txt) |
 
-The versioned `PACKAGE_EXACT/TW2026_S10_STUDENT_v1.2.1/` contains all 157 student archive members with exact bytes. P01 and the State ADR are required; P02 and the full P03 comparator implementation are optional. Download and extract the complete ZIP to a new short folder before editing or executing launchers. Browser-uploaded PACKAGE_EXACT files support source inspection; browser upload does not qualify POSIX executable Git modes. Use the intact ZIP for native execution. The initial-failure diagnostic patterns are declared, not qualified by actual Vitest execution.
+GitHub shows HTML source. Download and extract the selected ZIP to use the interactive lesson. A matching checksum establishes package identity; it does not establish successful execution on your own computer.
 
-[Historical v1.1.0 package](PACKAGE_EXACT/index.html) · [Historical v1.1.0 ZIP](DOWNLOAD/WEBTECH_ASE_S10_STUDENT_EN_GB_v1.1.0_PUBLIC.zip) · [Historical SHA-256](DOWNLOAD/WEBTECH_ASE_S10_STUDENT_EN_GB_v1.1.0_PUBLIC.zip.sha256)
+[Authoritative current selection](../../../../metadata/student-selection.json) · [Whole-week navigation](../../README.md) · [All current weeks](../../../README.md)
 
-The flat predecessor package, its old aliases and its DOWNLOAD objects remain unchanged. The current versioned candidate takes precedence in this navigation. Historical creation-time notes inside either exact package are not proof of publication, current runtime execution or acceptance. GitHub source browsing does not activate Pages.
+## Historical material
+
+Older `DOWNLOAD`, `PACKAGE_EXACT`, `PACKAGES` and versioned release folders remain for comparison. They are outside the current English selection. Use the current ZIP and guide linked above for class work. Romanian materials, where present, are retained legacy alternatives and have a separate status.
+
+[Preserved predecessor navigation](../../../../90_ARCHIVE/MAIN_4eea8de_NAVIGATION/README.md). Historical filenames containing `FINAL` do not qualify the current collection.

@@ -1,28 +1,30 @@
-# S06 — Query API v1.2.0
+# S06 — Query API
 
-Locally audited teaching edition, prepared as a WIP student preview. This local patch does not publish the repository or qualify native platforms.
+Current English collection candidate **3.0.0-rc.6**; selected object edition **1.2.3-rc.6**. Qualification and classroom acceptance remain pending.
 
-- [Download the complete student ZIP](DOWNLOAD/TW2026_S06_STUDENT_EN_GB_v1.2.0_FINAL.zip)
-- [Download SHA-256 sidecar](DOWNLOAD/TW2026_S06_STUDENT_EN_GB_v1.2.0_FINAL.zip.sha256)
-- [Interactive beginner guide](PACKAGE_EXACT/TW2026_S06_STUDENT_EN_GB_v1.2.0_FINAL/00_START_HERE/S06_INTERACTIVE_ULTRA_BEGINNER_GUIDE_EN_GB_v1.2.0.html)
-- [Student worksheet](PACKAGE_EXACT/TW2026_S06_STUDENT_EN_GB_v1.2.0_FINAL/01_WORKSHEET/STUDENT_WORKSHEET_S06_v1.2.0_EN_GB.md)
-- [P02 Query API target](PACKAGE_EXACT/TW2026_S06_STUDENT_EN_GB_v1.2.0_FINAL/02_PROJECTS/p02/README.md)
-- [Bounded Gemini prompt](PACKAGE_EXACT/TW2026_S06_STUDENT_EN_GB_v1.2.0_FINAL/03_AI_AUDIT/GEMINI_PROMPT_EN_GB.txt)
-- [Submission form HTML](PACKAGE_EXACT/TW2026_S06_STUDENT_EN_GB_v1.2.0_FINAL/05_MOODLE_SUBMISSION/S06_MOODLE_SUBMISSION_FORM_EN_GB_v1.2.0.html)
-- [Submission form DOCX](PACKAGE_EXACT/TW2026_S06_STUDENT_EN_GB_v1.2.0_FINAL/05_MOODLE_SUBMISSION/S06_MOODLE_SUBMISSION_FORM_EN_GB_v1.2.0.docx)
-- [Submission guide](PACKAGE_EXACT/TW2026_S06_STUDENT_EN_GB_v1.2.0_FINAL/05_MOODLE_SUBMISSION/MOODLE_UPLOAD_GUIDE_EN_GB_v1.2.0.md)
-- [Current local release pointer](CURRENT_STUDENT_RELEASE.json)
+## Download and open
 
-P02 is the only required complete implementation. Edit only `02_PROJECTS/p02/src/note-query.js`. A short separate temporary SQLite file observation is also required. Full P01 and P03 implementations are optional and are not required for the maximum mark.
+1. Download the complete student ZIP and its SHA-256 sidecar below.
+2. Extract the whole ZIP into a new writable folder. Do not open files inside the compressed archive.
+3. Start with `CLASSROOM_RC6/START.html` in the extracted package then follow `CLASSROOM_RC6/GUIDE.html`. Use the exact project folders and commands stated there.
+4. Complete the classroom microprojects individually and record the requested observations and evidence. Use the current guide to distinguish classroom work from further reading.
+5. Complete the linked submission form, review the exported PDF and submit it privately to the assignment specified by your lecturer. Local JSON exports, where supported, are backups.
 
-Use the 60-minute content route inside the 90-minute meeting, with 30 minutes reserved for logistics. The 26-minute translator slot does not guarantee P02 completion: finish remaining work before the separately announced deadline. Stop at minute 60.
+| Current resource | Link |
+| --- | --- |
+| Complete student ZIP | [Complete student ZIP](CURRENT/WEBTECH_ASE_S06_EN_GB_SUCCESSOR_RC6.zip) |
+| SHA-256 sidecar | [SHA-256 sidecar](CURRENT/WEBTECH_ASE_S06_EN_GB_SUCCESSOR_RC6.zip.sha256) |
+| Start here | [Start here](RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/CLASSROOM_RC6/START.html) |
+| Current guide | [Current guide](RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/CLASSROOM_RC6/GUIDE.html) |
+| Submission form | [Submission form](RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/CLASSROOM_RC6/EVIDENCE_FORM.html) |
+| Package identity | [Package identity](RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/PACKAGE_ID.txt) |
 
-Submit one PDF, `TW2026_S06_GROUP_Surname_Firstname.pdf`, to one S06 Assignment. There is no second C06 upload. The standard final evidence includes a bounded actual Gemini interaction checked independently; synthetic practice does not automatically substitute for it.
+GitHub shows HTML source. Download and extract the selected ZIP to use the interactive lesson. A matching checksum establishes package identity; it does not establish successful execution on your own computer.
 
-Node.js v24.21.0 and npm 11.19.0 are the required reference versions. The production runtime was Node.js v24.19.0 and npm 11.9.0: DOCUMENTED_RUNTIME_MISMATCH.
+[Authoritative current selection](../../../../metadata/student-selection.json) · [Whole-week navigation](../../README.md) · [All current weeks](../../../README.md)
 
-Content and package checks passed locally. Genuine Express/Sequelize/sqlite3 application, native driver, query and file lifecycle execution, Windows/macOS, native browser and Word acceptance, actual Gemini interaction, Moodle live and owner acceptance remain open. Source-derived expectations and synthetic evidence do not qualify these properties.
+## Historical material
 
-The v1.1.0 download and unversioned PACKAGE_EXACT leaves are superseded for the S06 route. They remain physically present for history until a separately authorised final-freeze cleanup. This navigation does not link to them.
+Older `DOWNLOAD`, `PACKAGE_EXACT`, `PACKAGES` and versioned release folders remain for comparison. They are outside the current English selection. Use the current ZIP and guide linked above for class work. Romanian materials, where present, are retained legacy alternatives and have a separate status.
 
-The versioned PACKAGE_EXACT tree is byte-identical to the sealed student ZIP, including its manifest and PACKAGE_ID. SHA-256 of the ZIP: `6a8791695bd4d5777c425f89808b2692f11dcb5aa4c63dde4f36c9a56c8d3fce`. PACKAGE_ID: `f29ef810d6cdf304832629e31990ce089c78a7d8fd55015aeec6c7c24162621d`. Keep the downloaded directory intact; GitHub source previews do not execute an HTML guide. Extract the complete ZIP into a new local folder to use the guide.
+[Preserved predecessor navigation](../../../../90_ARCHIVE/MAIN_4eea8de_NAVIGATION/README.md). Historical filenames containing `FINAL` do not qualify the current collection.

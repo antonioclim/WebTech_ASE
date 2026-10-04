@@ -1,0 +1,91 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>P02 public contract</title><link rel="stylesheet" href="../assets/site.css"></head><body class=""><a class="skip-link" href="#main">Skip to content</a><header><p>WEB TECHNOLOGIES 2026 · WEEK 07 · S07 · v1.1.0</p><h1>P02 public contract</h1><nav><a href="../index.html">Start</a><a href="../guide.html">Working guide</a></nav></header><main id="main"><blockquote>
+<p>Derived public contract: REQUIRED IMPLEMENTATION. Technical requirements and heading order follow the canonical U07 specification. British-English wording, source-generation instructions and the Gemini activity are explicitly adapted; the original specification remains in the teacher package. Historical audit-clean wording below is a source requirement, not a new security or runtime audit.</p>
+</blockquote>
+<blockquote>
+<p>Scope clarification: the reference maps the unique-error class from the entire managed call. It is not proof of the originating constraint. The canonical four-method spy omits Event.save and can pass with undefined transactions; the separate observer closes that gap. The initial source-derived signature is source-derived until actual ORM qualification. The supplied Location has no GET member route.</p>
+</blockquote>
+<h1>Exercise Specification — Transactional Booking</h1>
+<h2>Unit</h2>
+<p>Unit 07 — Relationships, Transactions and API Design</p>
+<h2>Learning objective</h2>
+<p>Implement one explicit Sequelize transaction that enforces a booking consistency boundary across seat inventory, booking creation and audit recording, with complete rollback on every failure.</p>
+<h2>Why this exercise exists</h2>
+<p>Awaiting three database statements is not the same as making them atomic. A booking is valid only when capacity decrement, unique reservation and audit event succeed together. Students need observable commit/rollback behaviour rather than transaction syntax in isolation.</p>
+<h2>Prerequisites</h2>
+<ul>
+<li>Conference Registration API associations and Unit 06 persistence/error ownership.</li>
+<li>Promise rejection, centralised errors and relational uniqueness.</li>
+</ul>
+<h2>Starting context</h2>
+<p>Students receive a supplied Sequelize/SQLite model set and Express booking endpoint:</p>
+<ul>
+<li><code>Event</code> has <code>capacity</code> and <code>availableSeats</code> non-null integers;</li>
+<li><code>Booking</code> has unique <code>(eventId, attendeeId)</code> and positive <code>seats</code>;</li>
+<li><code>BookingAudit</code> records <code>bookingId</code>, <code>eventId</code>, <code>attendeeId</code>, <code>seats</code> and action <code>created</code>;</li>
+<li>foreign keys/associations, schema lifecycle, route parsing, serialisers, domain errors and tests are complete.</li>
+</ul>
+<p>The incomplete <code>src/book-seats.js</code> exports <code>bookSeats({ sequelize, Event, Booking, BookingAudit }, { eventId, attendeeId, seats, afterBookingCreated })</code>. The optional injected callback defaults to a no-op and exists only for deterministic failure injection after booking creation.</p>
+<h2>Required behaviour</h2>
+<ul>
+<li>Reject non-integer or non-positive <code>seats</code> with supplied <code>BookingValidationError</code> before opening a transaction.</li>
+<li>Execute all database reads/writes inside one managed <code>sequelize.transaction(async transaction =&gt; ...)</code> callback and pass the transaction option to every call.</li>
+<li>Load the event inside the transaction; missing event throws supplied <code>EventNotFoundError</code>.</li>
+<li>If <code>availableSeats &lt; seats</code>, throw supplied <code>SoldOutError</code> without changing rows.</li>
+<li>Detect an existing <code>(eventId, attendeeId)</code> booking and throw supplied <code>BookingExistsError</code>.</li>
+<li>Decrement <code>availableSeats</code> by exactly <code>seats</code> and await persistence.</li>
+<li>Create one Booking, invoke/await <code>afterBookingCreated({ booking, transaction })</code>, then create one matching BookingAudit in the same transaction.</li>
+<li>Return detached <code>{ booking, event }</code> only after the managed transaction commits.</li>
+<li>Unique constraint races map to <code>BookingExistsError</code>; known domain errors preserve identity; unexpected callback/database errors propagate unchanged after rollback.</li>
+<li>Any failure after any intermediate step leaves available seats, Booking count and BookingAudit count exactly as before the call.</li>
+<li>A successful second booking observes the committed seat count from the first.</li>
+</ul>
+<h2>Constraints</h2>
+<ul>
+<li>JavaScript ESM, Sequelize 6.37.8, sqlite3 6.0.1, supplied Express 5 code, native <code>fetch</code> and Node's test runner; retain audit-clean pins/override.</li>
+<li>Implement only <code>src/book-seats.js</code>; do not edit models, routes, error middleware, tests or dependencies.</li>
+<li>Use one managed transaction; no manual SQL <code>BEGIN/COMMIT</code>, nested transaction, compensating write or process-local mutex.</li>
+<li>Do not catch and replace unexpected errors.</li>
+<li>SQLite tests demonstrate atomic rollback; production-grade high-concurrency locking differences are explained but out of scope.</li>
+</ul>
+<h2>Observable completion criteria</h2>
+<ul>
+<li>Successful HTTP booking returns <code>201</code>, booking/event data and reduced availability only after commit.</li>
+<li>Missing/sold-out/duplicate/invalid cases return stable errors and change no rows.</li>
+<li>Injected failure after booking creation proves seat update and booking are rolled back and no audit remains.</li>
+<li>Injected audit create failure proves the same full rollback and preserves original error identity.</li>
+<li>Captured query options show the same transaction object on every operation.</li>
+<li>All checks/audit pass and only <code>src/book-seats.js</code> changes.</li>
+</ul>
+<h2>Validation plan</h2>
+<h3>Baseline checks</h3>
+<ul>
+<li>Supplied models/constraints/associations, schema seed, Express endpoint, serialisers/errors and database cleanup work with a known fake atomic booking function.</li>
+</ul>
+<h3>Objective checks</h3>
+<ul>
+<li>Success verifies commit, detached return, exact capacity decrement, booking, audit and callback transaction identity.</li>
+<li>Invalid/missing/sold-out/duplicate behaviour verifies errors and unchanged counts/state.</li>
+<li>Post-booking callback and audit failures verify full rollback and unexpected-error identity.</li>
+<li>Operation spies verify one managed transaction and consistent transaction options.</li>
+<li>Unique constraint is translated without swallowing other Sequelize errors.</li>
+</ul>
+<h3>Regression checks</h3>
+<ul>
+<li>Malformed JSON, unknown route, health/static resources and safe internal error responses remain healthy.</li>
+<li>A failed transaction does not poison a later successful booking.</li>
+<li>No unhandled rejection or open database handle remains.</li>
+<li>Objective module contains no Express code or raw SQL.</li>
+</ul>
+<h2>Provided starter and edit boundary</h2>
+<p>The exact canonical student starter is included. For this route change only <code>projects/p02/src/book-seats.js</code>. Do not recreate the starter or alter dependencies, fixtures or tests. REQUIRED IMPLEMENTATION.</p>
+<h2>Bounded Gemini review</h2>
+<p>Review one sanitised claim or small diff with Gemini. Independently check it, record a verdict, correction and limitation and preserve your original prediction. Use the top-level prompt. This deliberately narrows the canonical full-implementation prompt under the current teaching protocol. No full reference solution or completed ADR is supplied.</p>
+<h2>Debugging / extension task</h2>
+<ul>
+<li>Remove the transaction option from audit creation and inject an audit failure. Compare rollback evidence, identify the escaped consistency boundary and restore the shared transaction.</li>
+</ul>
+<h2>Out of scope</h2>
+<ul>
+<li>Distributed locks, isolation-level comparison across production engines, payment processing, cancellation/refunds, queues or nested transactions.</li>
+</ul>
+</main><footer>Local teaching candidate. Completeness is not correctness, native acceptance or a Moodle receipt.</footer></body></html>

@@ -1,0 +1,67 @@
+{
+  "schema": "webtech-classroom-scope/v1",
+  "seminar": "S09",
+  "classroom_version": "1.0.0-rc.6",
+  "individual": true,
+  "all_projects_required": true,
+  "projects": [
+    {
+      "id": "P01",
+      "title": "Routed notes: URL identity",
+      "editable_path": "CLASSROOM_RC6/student/p01.mjs",
+      "completeScope": "Classify exact notes URLs: /notes/new is create, /notes/<id> is read, /notes/<id>/edit is edit. IDs contain ASCII letters, digits, _ or -. Every other path is unknown. Do not confuse the URL owner with a form draft. This is a parser model, not React Router or native history."
+    },
+    {
+      "id": "P02",
+      "title": "CRUD workspace: authoritative publication",
+      "editable_path": "CLASSROOM_RC6/student/p02.mjs",
+      "completeScope": "Publish a supplied successful refresh only when its request ID matches the current owner; otherwise preserve current items. Authoritative returned items replace the whole list. This is a JavaScript state model, not actual API delivery, loading/error UI or abort."
+    },
+    {
+      "id": "P03",
+      "title": "Deep link: delivery classification",
+      "editable_path": "CLASSROOM_RC6/student/p03.mjs",
+      "completeScope": "Give API paths priority, serve an existing static file, refuse a missing /assets path, and admit a SPA navigation only for GET/HEAD with text/html in the declared Accept token list. This pure decision is not an Express response or actual Content-Type result."
+    }
+  ],
+  "scope": "BOUNDED_JS_MODELS_AND_SEPARATELY_TESTED_REACT_COMPANION",
+  "source_commit": "4eea8de416cb03cf4f718fb802f868a391abb192",
+  "retained_original_full_project_completed_by_classroom_checks": false,
+  "legacy_form": "form/FORM_S09_EN_GB.html",
+  "legacy_guide": "guide/S09_INTERACTIVE_ULTRA_BEGINNER_GUIDE_EN_GB_v1.2.1.html",
+  "timeline": [
+    {
+      "activity": "Environment and privacy",
+      "from_minute": 0,
+      "to_minute": 4
+    },
+    {
+      "activity": "P01",
+      "from_minute": 4,
+      "to_minute": 18
+    },
+    {
+      "activity": "P02",
+      "from_minute": 18,
+      "to_minute": 31
+    },
+    {
+      "activity": "P03",
+      "from_minute": 31,
+      "to_minute": 45
+    },
+    {
+      "activity": "Actual bounded Gemini/LLM claim and independent check",
+      "from_minute": 45,
+      "to_minute": 52
+    },
+    {
+      "activity": "Individual evidence, reflection and one reviewed PDF",
+      "from_minute": 52,
+      "to_minute": 60
+    }
+  ],
+  "timing_empirically_validated": false,
+  "native_acceptance": false,
+  "genuine_llm_exchange_performed_by_maintainer": false
+}

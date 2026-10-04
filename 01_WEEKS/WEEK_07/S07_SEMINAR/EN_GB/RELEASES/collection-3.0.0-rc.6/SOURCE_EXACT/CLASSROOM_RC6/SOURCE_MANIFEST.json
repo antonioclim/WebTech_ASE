@@ -1,0 +1,26 @@
+{
+  "schema": "webtech-classroom-source/v1",
+  "protected": {
+    "CLASSROOM_BOUNDARY.json": "06d3eac50d59467222c54b6d8ce6dda0b1cf2562240e58bcc683ebff31ed4d0b",
+    "CLASSROOM_SCOPE.json": "b87b6afb9ed14e27956e959d143245aac576961a22f9718588fbe1b354a257ae",
+    "EVIDENCE_FORM.html": "17c06f8cac6e545d4d687abfa8df485ae9aa5ef2ff6d1db4aebcc76f2762f932",
+    "GEMINI_PROMPT.txt": "16124e9ec7d35ab9ad7f79eefcf838e5617b55ac861c7c1d77c2d5c45b920502",
+    "GUIDE.html": "50ea0c8072797eec7e46754e4a3de027c088da7576fd015aef0240ee80d29aa6",
+    "README.md": "f51e2c8e1f95692d0b65dd82483e74f0ce8836fdf38243c4379fd4357bbcaea9",
+    "START.html": "f5e631a41375bd1744fc99a90ba446d440b89ff25fa7a261e573ac85a5982785",
+    "checks.mjs": "499a7231a5b6e214b4675246f872f1e623b96631fc29222c6322bfdd67bb7a95",
+    "contract.json": "1a1ab84ad216bfab0163410ae038c2ec8c018d7fe7e183a682280359ee4c9124",
+    "experiments.mjs": "d0307ca810b0b7e9dbb7799045893febb29b2cceec575f5cdbf3497dac30baea",
+    "http.mjs": "e0c129b2daf3f1884ae8cfdbcc8623f1abfa11a552a1cf05dda59d38cdebd7e6",
+    "kit.mjs": "5a2a9b6e08b5de0b1fbeb5e9ba735331939ea78183599925f48137e1a9ad20d9",
+    "lesson-http.mjs": "84537d79ae9aa3fed327e57509a4b07aeadd6acadb281fb2a845685c073e6dc5",
+    "server.mjs": "a55ae37d9e2d114b3fad3263e4686e5afc250ddc27a6d9fc646c6b5514a0db76",
+    "store.mjs": "3900df8444b79ac69cbeb1048c0b19de322c08f9e5ea0be684341fa96ef77ac6",
+    "verify.mjs": "e0928e6062d1b0f86409c229291cf6511d2f19550a9396d5c07a2943226df6ff"
+  },
+  "targets": {
+    "targets/p01.mjs": "021411debaff8ba2dd1f7a935c70d47921bede24ee887c79cce400e08a2cbcca",
+    "targets/p02.mjs": "77d9c0ab173d56b4ab50a75cbac1af1c4711fbb994328dd9427e543b3b20892d",
+    "targets/p03.mjs": "479a150e05bfbc88cde09b58a4dc1384d31ca89315d27e7c1db60e19e32ca129"
+  }
+}

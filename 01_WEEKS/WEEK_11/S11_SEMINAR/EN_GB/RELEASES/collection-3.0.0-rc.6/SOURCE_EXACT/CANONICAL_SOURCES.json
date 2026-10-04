@@ -1,0 +1,297 @@
+{
+  "schema": "TW2026_S11_CANONICAL_PROVENANCE/1.2.1",
+  "source_version": "v1.1.0",
+  "candidate_version": "1.2.3-rc.4",
+  "historical_source_locators_are_not_public_files": true,
+  "historical_exact_archive_retained_privately": true,
+  "members": [
+    {
+      "path": "capstone/p01/spec.md",
+      "historical_source_locator": "SOURCE_EXACT/tutorials/11-auth-security/en/project-01-authenticated-api/spec.md",
+      "historical_source_sha256": "2893fa51fd185a35c66fd6156204446913c5236a0f4524db6503b8028b2964e4",
+      "public_baseline_sha256": "2893fa51fd185a35c66fd6156204446913c5236a0f4524db6503b8028b2964e4",
+      "current_sha256": "5e1e8dac74b872f7a5d6e0e360ff0f0a96950f193f5462064e258e8e549d0e9a",
+      "derivation": "DOCUMENTED_SUPPLIED_INFRASTRUCTURE_OR_OPERATIVE_DOCUMENT_SUCCESSOR",
+      "canonical_test": false
+    },
+    {
+      "path": "capstone/p01/student/README.md",
+      "historical_source_locator": "SOURCE_EXACT/tutorials/11-auth-security/en/project-01-authenticated-api/student/README.md",
+      "historical_source_sha256": "40f8a136d92a16ca39f5d8cf7de60cc4817df87957a57f855fc83812b261b3eb",
+      "public_baseline_sha256": "40f8a136d92a16ca39f5d8cf7de60cc4817df87957a57f855fc83812b261b3eb",
+      "current_sha256": "37b3ec4d2da817e0efc8fe7a8bd90f8a07751a5bed1ea1cb8640ffaabfe99c91",
+      "derivation": "DOCUMENTED_SUPPLIED_INFRASTRUCTURE_OR_OPERATIVE_DOCUMENT_SUCCESSOR",
+      "canonical_test": false
+    },
+    {
+      "path": "capstone/p01/student/package-lock.json",
+      "historical_source_locator": "SOURCE_EXACT/tutorials/11-auth-security/en/project-01-authenticated-api/student/package-lock.json",
+      "historical_source_sha256": "8686348eb3137b202ca04a2d7b89620e05f2ed67e0bffe4063ed3dda8081fdc3",
+      "public_baseline_sha256": "8686348eb3137b202ca04a2d7b89620e05f2ed67e0bffe4063ed3dda8081fdc3",
+      "current_sha256": "eb7a2189cc18103b4ff1074c3e7b4ba1dc42ef9fc82e61bfa699649be4ba2f73",
+      "derivation": "DOCUMENTED_SUPPLIED_INFRASTRUCTURE_OR_OPERATIVE_DOCUMENT_SUCCESSOR",
+      "canonical_test": false,
+      "rc2_derivation": "REVIEWED_PINNED_DEPENDENCY_UPDATE_OR_DOCUMENTATION",
+      "status": "RC2_DERIVED_CURRENT_BYTES_ORIGINAL_HASH_RETAINED"
+    },
+    {
+      "path": "capstone/p01/student/package.json",
+      "historical_source_locator": "SOURCE_EXACT/tutorials/11-auth-security/en/project-01-authenticated-api/student/package.json",
+      "historical_source_sha256": "708c40761c8d7669d3c7e3e6ad16a7c8a4602adaa95e71cd7997811132f24580",
+      "public_baseline_sha256": "708c40761c8d7669d3c7e3e6ad16a7c8a4602adaa95e71cd7997811132f24580",
+      "current_sha256": "cbabc11363a4f9c07718e3eae491dda0f5007e7829bc8bffba8d6ca0dcc4b876",
+      "derivation": "DOCUMENTED_SUPPLIED_INFRASTRUCTURE_OR_OPERATIVE_DOCUMENT_SUCCESSOR",
+      "canonical_test": false,
+      "rc2_derivation": "REVIEWED_PINNED_DEPENDENCY_UPDATE_OR_DOCUMENTATION",
+      "status": "RC2_DERIVED_CURRENT_BYTES_ORIGINAL_HASH_RETAINED"
+    },
+    {
+      "path": "capstone/p01/student/src/app.js",
+      "historical_source_locator": "SOURCE_EXACT/tutorials/11-auth-security/en/project-01-authenticated-api/student/src/app.js",
+      "historical_source_sha256": "9fe396ef6d7ea1df07f3408b9a93bf7a09af4683df71a3f80f8ba0870d0e354d",
+      "public_baseline_sha256": "9fe396ef6d7ea1df07f3408b9a93bf7a09af4683df71a3f80f8ba0870d0e354d",
+      "current_sha256": "9fe396ef6d7ea1df07f3408b9a93bf7a09af4683df71a3f80f8ba0870d0e354d",
+      "derivation": "PRESERVED_BYTE_EXACT",
+      "canonical_test": false
+    },
+    {
+      "path": "capstone/p01/student/src/authentication.js",
+      "historical_source_locator": "SOURCE_EXACT/tutorials/11-auth-security/en/project-01-authenticated-api/student/src/authentication.js",
+      "historical_source_sha256": "e0ab4b6ffba4f35d659fe9d876cdd6dc77d1fe609acd5eb399131ac1eaecd6d3",
+      "public_baseline_sha256": "e0ab4b6ffba4f35d659fe9d876cdd6dc77d1fe609acd5eb399131ac1eaecd6d3",
+      "current_sha256": "e0ab4b6ffba4f35d659fe9d876cdd6dc77d1fe609acd5eb399131ac1eaecd6d3",
+      "derivation": "PRESERVED_BYTE_EXACT",
+      "canonical_test": false
+    },
+    {
+      "path": "capstone/p01/student/src/cookies.js",
+      "historical_source_locator": "SOURCE_EXACT/tutorials/11-auth-security/en/project-01-authenticated-api/student/src/cookies.js",
+      "historical_source_sha256": "f109029c2fb2fc60210851c39bf8a13cc0ae69a1dc61a85cdb6046935dcbdd0f",
+      "public_baseline_sha256": "f109029c2fb2fc60210851c39bf8a13cc0ae69a1dc61a85cdb6046935dcbdd0f",
+      "current_sha256": "95b2ce0a4f0e74652bff3c70d619672088f0fb616e7eb9f66b047107a7a0a05c",
+      "derivation": "DOCUMENTED_SUPPLIED_INFRASTRUCTURE_OR_OPERATIVE_DOCUMENT_SUCCESSOR",
+      "canonical_test": false
+    },
+    {
+      "path": "capstone/p01/student/src/passwords.js",
+      "historical_source_locator": "SOURCE_EXACT/tutorials/11-auth-security/en/project-01-authenticated-api/student/src/passwords.js",
+      "historical_source_sha256": "1004c3bed8199a79d602d625e47672bc502106688d039c4d84e7f1392f299e91",
+      "public_baseline_sha256": "1004c3bed8199a79d602d625e47672bc502106688d039c4d84e7f1392f299e91",
+      "current_sha256": "1004c3bed8199a79d602d625e47672bc502106688d039c4d84e7f1392f299e91",
+      "derivation": "PRESERVED_BYTE_EXACT",
+      "canonical_test": false
+    },
+    {
+      "path": "capstone/p01/student/src/request-security.js",
+      "historical_source_locator": "SOURCE_EXACT/tutorials/11-auth-security/en/project-01-authenticated-api/student/src/request-security.js",
+      "historical_source_sha256": "fe81d3ba7ae41afad8ceea683a013c06a79068b952a0cbfb57137dcc9051160c",
+      "public_baseline_sha256": "fe81d3ba7ae41afad8ceea683a013c06a79068b952a0cbfb57137dcc9051160c",
+      "current_sha256": "3bb7783375fb77c382bb1a03470835a0fb8cdde15bf9305703142f114a0352ff",
+      "derivation": "DOCUMENTED_SUPPLIED_INFRASTRUCTURE_OR_OPERATIVE_DOCUMENT_SUCCESSOR",
+      "canonical_test": false
+    },
+    {
+      "path": "capstone/p01/student/src/server.js",
+      "historical_source_locator": "SOURCE_EXACT/tutorials/11-auth-security/en/project-01-authenticated-api/student/src/server.js",
+      "historical_source_sha256": "53616384b51ce2e2ceb86a00920ff891bfb4d4970257d702225983aa787ec081",
+      "public_baseline_sha256": "53616384b51ce2e2ceb86a00920ff891bfb4d4970257d702225983aa787ec081",
+      "current_sha256": "6b969372d296ccb4bc98a325aba01baceb4891921fc6b8e76e05658cf9f1abc3",
+      "derivation": "DOCUMENTED_SUPPLIED_INFRASTRUCTURE_OR_OPERATIVE_DOCUMENT_SUCCESSOR",
+      "canonical_test": false
+    },
+    {
+      "path": "capstone/p01/student/src/session-store.js",
+      "historical_source_locator": "SOURCE_EXACT/tutorials/11-auth-security/en/project-01-authenticated-api/student/src/session-store.js",
+      "historical_source_sha256": "9f45092d19f22e2f14bf186b104bc351fd6f9761618918c071e57faa7ddfb245",
+      "public_baseline_sha256": "9f45092d19f22e2f14bf186b104bc351fd6f9761618918c071e57faa7ddfb245",
+      "current_sha256": "9f45092d19f22e2f14bf186b104bc351fd6f9761618918c071e57faa7ddfb245",
+      "derivation": "PRESERVED_BYTE_EXACT",
+      "canonical_test": false
+    },
+    {
+      "path": "capstone/p01/student/src/users.js",
+      "historical_source_locator": "SOURCE_EXACT/tutorials/11-auth-security/en/project-01-authenticated-api/student/src/users.js",
+      "historical_source_sha256": "eb031a7874b11d3c7d8207ea14aca291bc43ae28c41fe603b7b911d6c1d25835",
+      "public_baseline_sha256": "eb031a7874b11d3c7d8207ea14aca291bc43ae28c41fe603b7b911d6c1d25835",
+      "current_sha256": "eb031a7874b11d3c7d8207ea14aca291bc43ae28c41fe603b7b911d6c1d25835",
+      "derivation": "PRESERVED_BYTE_EXACT",
+      "canonical_test": false
+    },
+    {
+      "path": "capstone/p01/student/tests/baseline.test.js",
+      "historical_source_locator": "SOURCE_EXACT/tutorials/11-auth-security/en/project-01-authenticated-api/student/tests/baseline.test.js",
+      "historical_source_sha256": "d1be635b37c684443ebf22134e92942d01b55ac043d23d9cc14637d87f172624",
+      "public_baseline_sha256": "d1be635b37c684443ebf22134e92942d01b55ac043d23d9cc14637d87f172624",
+      "current_sha256": "d1be635b37c684443ebf22134e92942d01b55ac043d23d9cc14637d87f172624",
+      "derivation": "PRESERVED_BYTE_EXACT",
+      "canonical_test": true
+    },
+    {
+      "path": "capstone/p01/student/tests/helpers.js",
+      "historical_source_locator": "SOURCE_EXACT/tutorials/11-auth-security/en/project-01-authenticated-api/student/tests/helpers.js",
+      "historical_source_sha256": "0a9b22dd6c8ba6dcea28d561089e9bb858bd8ca05aa6c35ae1e340a543795a5f",
+      "public_baseline_sha256": "0a9b22dd6c8ba6dcea28d561089e9bb858bd8ca05aa6c35ae1e340a543795a5f",
+      "current_sha256": "0a9b22dd6c8ba6dcea28d561089e9bb858bd8ca05aa6c35ae1e340a543795a5f",
+      "derivation": "PRESERVED_BYTE_EXACT",
+      "canonical_test": true
+    },
+    {
+      "path": "capstone/p01/student/tests/objective.test.js",
+      "historical_source_locator": "SOURCE_EXACT/tutorials/11-auth-security/en/project-01-authenticated-api/student/tests/objective.test.js",
+      "historical_source_sha256": "e50c84b658eadb32a4086d17bf5778d8df79df9514a8dbdb7d8481a2865149dc",
+      "public_baseline_sha256": "e50c84b658eadb32a4086d17bf5778d8df79df9514a8dbdb7d8481a2865149dc",
+      "current_sha256": "e50c84b658eadb32a4086d17bf5778d8df79df9514a8dbdb7d8481a2865149dc",
+      "derivation": "PRESERVED_BYTE_EXACT",
+      "canonical_test": true
+    },
+    {
+      "path": "capstone/p01/student/tests/regression.test.js",
+      "historical_source_locator": "SOURCE_EXACT/tutorials/11-auth-security/en/project-01-authenticated-api/student/tests/regression.test.js",
+      "historical_source_sha256": "bc20218dc8e5cd5e301d86f67342c11cdb38f123ca794533fe719bcbe41698fa",
+      "public_baseline_sha256": "bc20218dc8e5cd5e301d86f67342c11cdb38f123ca794533fe719bcbe41698fa",
+      "current_sha256": "bc20218dc8e5cd5e301d86f67342c11cdb38f123ca794533fe719bcbe41698fa",
+      "derivation": "PRESERVED_BYTE_EXACT",
+      "canonical_test": true
+    },
+    {
+      "path": "projects/p02/spec.md",
+      "historical_source_locator": "SOURCE_EXACT/tutorials/11-auth-security/en/project-02-role-protected-operation/spec.md",
+      "historical_source_sha256": "cce6c96ada2535548b0088af8fe26276f3d2bb0fab95c438b9591fea4ff80585",
+      "public_baseline_sha256": "cce6c96ada2535548b0088af8fe26276f3d2bb0fab95c438b9591fea4ff80585",
+      "current_sha256": "e5ebb54a8825196e8eb452a021fa3f50cec81cbd3eef02fdc57ce381997db889",
+      "derivation": "DOCUMENTED_SUPPLIED_INFRASTRUCTURE_OR_OPERATIVE_DOCUMENT_SUCCESSOR",
+      "canonical_test": false
+    },
+    {
+      "path": "projects/p02/student/README.md",
+      "historical_source_locator": "SOURCE_EXACT/tutorials/11-auth-security/en/project-02-role-protected-operation/student/README.md",
+      "historical_source_sha256": "ddadfd0b4217975ba790042f3a5b9492add8d8a1b594be0a042d49308445cb1a",
+      "public_baseline_sha256": "ddadfd0b4217975ba790042f3a5b9492add8d8a1b594be0a042d49308445cb1a",
+      "current_sha256": "2c3498c498e08dfdd0f0c93ba025326b19dd061f096665b34a4d5f902a59667f",
+      "derivation": "DOCUMENTED_SUPPLIED_INFRASTRUCTURE_OR_OPERATIVE_DOCUMENT_SUCCESSOR",
+      "canonical_test": false
+    },
+    {
+      "path": "projects/p02/student/package-lock.json",
+      "historical_source_locator": "SOURCE_EXACT/tutorials/11-auth-security/en/project-02-role-protected-operation/student/package-lock.json",
+      "historical_source_sha256": "1fa7ae02cc9cc746b2b5e7c7a751aa3d2657c6a79a8ac1af78c790245626250b",
+      "public_baseline_sha256": "1fa7ae02cc9cc746b2b5e7c7a751aa3d2657c6a79a8ac1af78c790245626250b",
+      "current_sha256": "19879b7d060840ab95c15ca0f9aedf0bcfad876970b0d001a5f83e2ad92d3f5c",
+      "derivation": "DOCUMENTED_SUPPLIED_INFRASTRUCTURE_OR_OPERATIVE_DOCUMENT_SUCCESSOR",
+      "canonical_test": false,
+      "rc2_derivation": "REVIEWED_PINNED_DEPENDENCY_UPDATE_OR_DOCUMENTATION",
+      "status": "RC2_DERIVED_CURRENT_BYTES_ORIGINAL_HASH_RETAINED"
+    },
+    {
+      "path": "projects/p02/student/package.json",
+      "historical_source_locator": "SOURCE_EXACT/tutorials/11-auth-security/en/project-02-role-protected-operation/student/package.json",
+      "historical_source_sha256": "6c98f763299e97e0944f1660dc31be54ec2d87acf74aa6edd7975e5047ed00be",
+      "public_baseline_sha256": "6c98f763299e97e0944f1660dc31be54ec2d87acf74aa6edd7975e5047ed00be",
+      "current_sha256": "031fc255155a30a96ed8cfd7c19d11509b11a730807d8141f6b9a7d710e00879",
+      "derivation": "DOCUMENTED_SUPPLIED_INFRASTRUCTURE_OR_OPERATIVE_DOCUMENT_SUCCESSOR",
+      "canonical_test": false,
+      "rc2_derivation": "REVIEWED_PINNED_DEPENDENCY_UPDATE_OR_DOCUMENTATION",
+      "status": "RC2_DERIVED_CURRENT_BYTES_ORIGINAL_HASH_RETAINED"
+    },
+    {
+      "path": "projects/p02/student/src/app.js",
+      "historical_source_locator": "SOURCE_EXACT/tutorials/11-auth-security/en/project-02-role-protected-operation/student/src/app.js",
+      "historical_source_sha256": "16aa51921206618c1c8b568e8c155f754952d049ed769d7f875bb9f221bb9ca6",
+      "public_baseline_sha256": "16aa51921206618c1c8b568e8c155f754952d049ed769d7f875bb9f221bb9ca6",
+      "current_sha256": "16aa51921206618c1c8b568e8c155f754952d049ed769d7f875bb9f221bb9ca6",
+      "derivation": "PRESERVED_BYTE_EXACT",
+      "canonical_test": false
+    },
+    {
+      "path": "projects/p02/student/src/authentication.js",
+      "historical_source_locator": "SOURCE_EXACT/tutorials/11-auth-security/en/project-02-role-protected-operation/student/src/authentication.js",
+      "historical_source_sha256": "ee24b0bf051f4bf4e0c9abaf956e7c14db1e9d8312a2ead8abec5e06cf22e5f5",
+      "public_baseline_sha256": "ee24b0bf051f4bf4e0c9abaf956e7c14db1e9d8312a2ead8abec5e06cf22e5f5",
+      "current_sha256": "aa954e4e71c8bc3bd562e9403c26becb8706d7acfd468d0b5a47cc53525378f2",
+      "derivation": "DOCUMENTED_SUPPLIED_INFRASTRUCTURE_OR_OPERATIVE_DOCUMENT_SUCCESSOR",
+      "canonical_test": false
+    },
+    {
+      "path": "projects/p02/student/src/authorization-policy.js",
+      "historical_source_locator": "SOURCE_EXACT/tutorials/11-auth-security/en/project-02-role-protected-operation/student/src/authorization-policy.js",
+      "historical_source_sha256": "b1017f64c79b9c01d9e72f9f1c670c4b8186e1140f452c9d070a262111bab3ff",
+      "public_baseline_sha256": "b1017f64c79b9c01d9e72f9f1c670c4b8186e1140f452c9d070a262111bab3ff",
+      "current_sha256": "b1017f64c79b9c01d9e72f9f1c670c4b8186e1140f452c9d070a262111bab3ff",
+      "derivation": "PRESERVED_BYTE_EXACT",
+      "canonical_test": false
+    },
+    {
+      "path": "projects/p02/student/src/csrf.js",
+      "historical_source_locator": "SOURCE_EXACT/tutorials/11-auth-security/en/project-02-role-protected-operation/student/src/csrf.js",
+      "historical_source_sha256": "870e73c7bd20ddac7c7acbc4f1ca296dd6ee9b3cccc7aef2adb2ecd7fa0f3b25",
+      "public_baseline_sha256": "870e73c7bd20ddac7c7acbc4f1ca296dd6ee9b3cccc7aef2adb2ecd7fa0f3b25",
+      "current_sha256": "6b34a5ae2c8a649032cfd00384a4580f4d2f44a3c4c52ebac347d4937fb60835",
+      "derivation": "DOCUMENTED_SUPPLIED_INFRASTRUCTURE_OR_OPERATIVE_DOCUMENT_SUCCESSOR",
+      "canonical_test": false
+    },
+    {
+      "path": "projects/p02/student/src/permissions.js",
+      "historical_source_locator": "SOURCE_EXACT/tutorials/11-auth-security/en/project-02-role-protected-operation/student/src/permissions.js",
+      "historical_source_sha256": "a4db2f00d5aecf71241e394859ba1dd0c6a77942d21a7832915444583e56884e",
+      "public_baseline_sha256": "a4db2f00d5aecf71241e394859ba1dd0c6a77942d21a7832915444583e56884e",
+      "current_sha256": "64abb0466cd83413b19c7d968401ce3285bf517752bf6e9a2396c9952f9e055f",
+      "derivation": "DOCUMENTED_SUPPLIED_INFRASTRUCTURE_OR_OPERATIVE_DOCUMENT_SUCCESSOR",
+      "canonical_test": false
+    },
+    {
+      "path": "projects/p02/student/src/report-repository.js",
+      "historical_source_locator": "SOURCE_EXACT/tutorials/11-auth-security/en/project-02-role-protected-operation/student/src/report-repository.js",
+      "historical_source_sha256": "b8367577e455e2d941b61c7de280871e390741eb921d74abbd4020800b4a98b5",
+      "public_baseline_sha256": "b8367577e455e2d941b61c7de280871e390741eb921d74abbd4020800b4a98b5",
+      "current_sha256": "b8367577e455e2d941b61c7de280871e390741eb921d74abbd4020800b4a98b5",
+      "derivation": "PRESERVED_BYTE_EXACT",
+      "canonical_test": false
+    },
+    {
+      "path": "projects/p02/student/src/server.js",
+      "historical_source_locator": "SOURCE_EXACT/tutorials/11-auth-security/en/project-02-role-protected-operation/student/src/server.js",
+      "historical_source_sha256": "c36ba67d3ea1a6cf39dc8fad276d12f48df6d8b4973ff044e229a8f6cc48c1c2",
+      "public_baseline_sha256": "c36ba67d3ea1a6cf39dc8fad276d12f48df6d8b4973ff044e229a8f6cc48c1c2",
+      "current_sha256": "2b5362199f171e1662ccf56ce79c8336393ee67c641dbf3d8217c68cdcaedcc3",
+      "derivation": "DOCUMENTED_SUPPLIED_INFRASTRUCTURE_OR_OPERATIVE_DOCUMENT_SUCCESSOR",
+      "canonical_test": false
+    },
+    {
+      "path": "projects/p02/student/tests/baseline.test.js",
+      "historical_source_locator": "SOURCE_EXACT/tutorials/11-auth-security/en/project-02-role-protected-operation/student/tests/baseline.test.js",
+      "historical_source_sha256": "e1207642472e3a8ab41cea0cfe1c7484be60ded82014a572e8e59569efaffcfe",
+      "public_baseline_sha256": "e1207642472e3a8ab41cea0cfe1c7484be60ded82014a572e8e59569efaffcfe",
+      "current_sha256": "e1207642472e3a8ab41cea0cfe1c7484be60ded82014a572e8e59569efaffcfe",
+      "derivation": "PRESERVED_BYTE_EXACT",
+      "canonical_test": true
+    },
+    {
+      "path": "projects/p02/student/tests/helpers.js",
+      "historical_source_locator": "SOURCE_EXACT/tutorials/11-auth-security/en/project-02-role-protected-operation/student/tests/helpers.js",
+      "historical_source_sha256": "5eac76c1bf7c802f216ab88e041a6586c0b1e265af85ddc2cad4ed2c71c82c47",
+      "public_baseline_sha256": "5eac76c1bf7c802f216ab88e041a6586c0b1e265af85ddc2cad4ed2c71c82c47",
+      "current_sha256": "5eac76c1bf7c802f216ab88e041a6586c0b1e265af85ddc2cad4ed2c71c82c47",
+      "derivation": "PRESERVED_BYTE_EXACT",
+      "canonical_test": true
+    },
+    {
+      "path": "projects/p02/student/tests/objective.test.js",
+      "historical_source_locator": "SOURCE_EXACT/tutorials/11-auth-security/en/project-02-role-protected-operation/student/tests/objective.test.js",
+      "historical_source_sha256": "c3918a1f985480924caa8b60f2885ed538a859921fe46188838970a5f8d8854f",
+      "public_baseline_sha256": "c3918a1f985480924caa8b60f2885ed538a859921fe46188838970a5f8d8854f",
+      "current_sha256": "c3918a1f985480924caa8b60f2885ed538a859921fe46188838970a5f8d8854f",
+      "derivation": "PRESERVED_BYTE_EXACT",
+      "canonical_test": true
+    },
+    {
+      "path": "projects/p02/student/tests/regression.test.js",
+      "historical_source_locator": "SOURCE_EXACT/tutorials/11-auth-security/en/project-02-role-protected-operation/student/tests/regression.test.js",
+      "historical_source_sha256": "f08b7a1e8e77f767aabc3ddb9ed1e1caa6a870095efdf091c3294099855dbd02",
+      "public_baseline_sha256": "f08b7a1e8e77f767aabc3ddb9ed1e1caa6a870095efdf091c3294099855dbd02",
+      "current_sha256": "f08b7a1e8e77f767aabc3ddb9ed1e1caa6a870095efdf091c3294099855dbd02",
+      "derivation": "PRESERVED_BYTE_EXACT",
+      "canonical_test": true
+    }
+  ],
+  "phase3_provenance_scope": "Phase3 remediated source retained; Phase4 reconciles v1.2.1 operative assets and refreshes current source hashes before candidate seal. Historical digests are unchanged."
+}

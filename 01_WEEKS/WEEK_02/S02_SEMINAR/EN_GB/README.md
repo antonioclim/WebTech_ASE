@@ -1,29 +1,32 @@
 # S02 — Responsive Card Grid
 
-English student release candidate **2.3.1 RC2**. This is the active EN-GB object in the [current registry](../../../../90_RELEASES/CURRENT_OBJECTS.json). Native platform, Microsoft Word, Moodle, human classroom pilot and owner acceptance remain separate gates.
-
-RC2 corrects the Windows package-verifier path argument and normalises its version labels. Use a fresh extraction of this candidate for current checks. Native Windows retesting remains pending; the earlier RC1 integrity failure is preserved as historical evidence.
+Current English collection candidate **3.0.0-rc.6**; selected object edition **2.3.4-rc.6**. Qualification and classroom acceptance remain pending.
 
 ## Download and open
 
-1. Download the [complete student ZIP](DOWNLOAD/TW2026_S02_STUDENT_EN_GB_v2.3.1_RC2.zip) and its [SHA-256 sidecar](DOWNLOAD/TW2026_S02_STUDENT_EN_GB_v2.3.1_RC2.zip.sha256).
-2. Extract it completely into a new writable folder, for example a folder under your user profile. Avoid opening files inside the ZIP.
-3. Read `00_START_HERE/README.md` and run `VERIFY_PACKAGE.cmd` on Windows or `bash VERIFY_PACKAGE.sh` on macOS/Linux.
-4. Open `OPEN_BEGINNER_GUIDE.cmd` on Windows or run `bash OPEN_BEGINNER_GUIDE.sh` on macOS/Linux. The named HTML is inside the extracted package; there is no generic root `index.html` in these four objects.
-5. Follow the package's allowed-edit and evidence contract. Use the official form, review the exported PDF and submit that PDF privately to Moodle. JSON is an optional local backup.
+1. Download the complete student ZIP and its SHA-256 sidecar below.
+2. Extract the whole ZIP into a new writable folder. Do not open files inside the compressed archive.
+3. Start with `CLASSROOM_RC6/START.html` in the extracted package then follow `CLASSROOM_RC6/GUIDE.html`. Use the exact project folders and commands stated there.
+4. Complete the classroom microprojects individually and record the requested observations and evidence. Use the current guide to distinguish classroom work from further reading.
+5. Complete the linked submission form, review the exported PDF and submit it privately to the assignment specified by your lecturer. Local JSON exports, where supported, are backups.
 
-## Browse individual files
+| Current resource | Link |
+| --- | --- |
+| Complete student ZIP | [Complete student ZIP](CURRENT/WEBTECH_ASE_S02_EN_GB_SUCCESSOR_RC6.zip) |
+| SHA-256 sidecar | [SHA-256 sidecar](CURRENT/WEBTECH_ASE_S02_EN_GB_SUCCESSOR_RC6.zip.sha256) |
+| Start here | [Start here](RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/CLASSROOM_RC6/START.html) |
+| Current guide | [Current guide](RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/CLASSROOM_RC6/GUIDE.html) |
+| Submission form | [Submission form](RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/CLASSROOM_RC6/EVIDENCE_FORM.html) |
+| Package identity | [Package identity](RELEASES/collection-3.0.0-rc.6/SOURCE_EXACT/90_AUDIT/PACKAGE_ID.txt) |
 
-GitHub displays HTML source. Download the package to run the lesson offline. The [exact extracted tree](PACKAGE_EXACT/TW2026_S02_STUDENT_EN_GB_v2.3.1_RC2) has the same bytes as the ZIP.
+GitHub shows HTML source. Download and extract the selected ZIP to use the interactive lesson. A matching checksum establishes package identity; it does not establish successful execution on your own computer.
 
-- [Start-here instructions](PACKAGE_EXACT/TW2026_S02_STUDENT_EN_GB_v2.3.1_RC2/00_START_HERE/README.md)
-- [Interactive ultra-beginner guide](PACKAGE_EXACT/TW2026_S02_STUDENT_EN_GB_v2.3.1_RC2/00_START_HERE/S02_INTERACTIVE_ULTRA_BEGINNER_GUIDE_EN_GB_v2.3.html)
-- [Student worksheet](PACKAGE_EXACT/TW2026_S02_STUDENT_EN_GB_v2.3.1_RC2/01_WORKSHEET/STUDENT_WORKSHEET_S02_v2.3_EN_GB.docx)
-- [Homework](PACKAGE_EXACT/TW2026_S02_STUDENT_EN_GB_v2.3.1_RC2/01_WORKSHEET/HOMEWORK_S02_v2.3_EN_GB.docx)
-- [Moodle form](PACKAGE_EXACT/TW2026_S02_STUDENT_EN_GB_v2.3.1_RC2/05_MOODLE_SUBMISSION/FORM_S02_EN_GB.html)
-- [Gemini audit prompt](PACKAGE_EXACT/TW2026_S02_STUDENT_EN_GB_v2.3.1_RC2/03_AI_AUDIT/GEMINI_PROMPT_EN_GB.txt)
-- [Student-safe QA summary](PACKAGE_EXACT/TW2026_S02_STUDENT_EN_GB_v2.3.1_RC2/90_AUDIT/STUDENT_SAFE_QA_SUMMARY.md)
+[Authoritative current selection](../../../../metadata/student-selection.json) · [Whole-week navigation](../../README.md) · [All current weeks](../../../README.md)
 
-## Status and history
+[Legacy Romanian route (separate status)](../RO/README.md).
 
-Checksums establish identity. Local runtime and headless browser evidence establish only the cases actually tested. They do not establish native Windows/macOS, Word, Moodle or classroom acceptance. See [qualification](../../QUALIFICATION_STATUS.md) and the [historical catalogue](../../../../90_RELEASES/HISTORICAL_OBJECTS.md). Superseded EN packages remain accessible in Git history; RC1 is preserved at `7f88fecfa972bfb41d4fffec3e47616842c7e067`.
+## Historical material
+
+Older `DOWNLOAD`, `PACKAGE_EXACT`, `PACKAGES` and versioned release folders remain for comparison. They are outside the current English selection. Use the current ZIP and guide linked above for class work. Romanian materials, where present, are retained legacy alternatives and have a separate status.
+
+[Preserved predecessor navigation](../../../../90_ARCHIVE/MAIN_4eea8de_NAVIGATION/README.md). Historical filenames containing `FINAL` do not qualify the current collection.

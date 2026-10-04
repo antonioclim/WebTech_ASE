@@ -1,0 +1,1 @@
+import {json}from './http.mjs';import {publicOutcome}from './targets/p03.mjs';export async function handler(req,res){const u=new URL(req.url,'http://127.0.0.1'),kind=u.pathname.slice(1),data={id:7,title:'Synthetic task',completed:false};const result=publicOutcome({kind,data,message:'PRIVATE_INTERNAL_MESSAGE'});json(res,result.status,result.body,result.headers);}

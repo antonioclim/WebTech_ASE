@@ -1,0 +1,120 @@
+{
+  "schema": "webtech-derived-carrier/v1",
+  "object_id": "C07",
+  "carrier_version": "1.1.2-rc.6",
+  "distribution_version": "3.0.0-rc.6",
+  "source_commit": "4eea8de416cb03cf4f718fb802f868a391abb192",
+  "derived_from": {
+    "archive": "01_WEEKS/WEEK_07/C07_COURSE/EN_GB/CURRENT/WEBTECH_ASE_C07_EN_GB_RECONSTRUCTED_RC5.zip",
+    "archive_sha256": "68691ab132ab490a9c03878a070c6afd68713729698761f380a7e9e4fc987134",
+    "package_id": "2818407fba0eb2a2a75a8425288042e8185fa14d9a86c7f88aa20d597aa2c35d",
+    "carrier_version": "1.1.1",
+    "projection": "01_WEEKS/WEEK_07/C07_COURSE/EN_GB/RELEASES/collection-3.0.0-rc.5/SOURCE_EXACT"
+  },
+  "preceding_descriptor_sha256": null,
+  "status": "LOCAL_RELEASE_CANDIDATE_PENDING_EXTERNAL_ACCEPTANCE",
+  "native_acceptance": "PENDING",
+  "identity_is_runtime_qualification": false,
+  "original_carrier_overwritten": false,
+  "original_external_bindings_are_history_not_current_byte_identity": true,
+  "content_changes_before_sealing": [
+    {
+      "path": "CHANGELOG_RC6.md",
+      "change": "ADDED",
+      "before_sha256": null,
+      "after_sha256": "f4b25ac5d84144147ac67de8d185e0cfc957062b1a02e1ea7b5f5862977ce3c9",
+      "before_bytes": null,
+      "after_bytes": 546
+    },
+    {
+      "path": "canonical/01-relationship-shapes/package-lock.json",
+      "change": "BYTES",
+      "before_sha256": "7ff7c1b84f0f3e862c38f638de22b96967ceadc83c755fbfd64c9b5d1a1dc50f",
+      "after_sha256": "cd16ca9f491ddfc5d26ee3fd385d4cc629a9f26a06e14800c5a0ecd151a261e5",
+      "before_bytes": 33596,
+      "after_bytes": 33652
+    },
+    {
+      "path": "canonical/01-relationship-shapes/package.json",
+      "change": "BYTES",
+      "before_sha256": "355399ad388eaeee5a609c24cb28d05881e7b1a8e6523d837138093d3f4d8d21",
+      "after_sha256": "e32e3d9b4a9214bb312bb6105c4163ebd0c7ffebc7c1ce03fbc6a69fd35a393c",
+      "before_bytes": 301,
+      "after_bytes": 345
+    },
+    {
+      "path": "canonical/02-eager-loading-query-count/package-lock.json",
+      "change": "BYTES",
+      "before_sha256": "92e95b50a1e56339b4ebc21bc4a3c03469e12ab1262b1e6594701837ba83b891",
+      "after_sha256": "47d267506ba177f98efd7680fd841241f3ddbe829e2790f3c17845140361057a",
+      "before_bytes": 33596,
+      "after_bytes": 33652
+    },
+    {
+      "path": "canonical/02-eager-loading-query-count/package.json",
+      "change": "BYTES",
+      "before_sha256": "342a5a4004ec4729a4fcf3bc459b308996ded34f36513e926ed43df9e9d542ee",
+      "after_sha256": "875987a53af1641a3cba4ba31a683427dd06cc24d97b02ad36a94d7b3da052cb",
+      "before_bytes": 301,
+      "after_bytes": 345
+    },
+    {
+      "path": "canonical/03-resource-contract/package-lock.json",
+      "change": "BYTES",
+      "before_sha256": "d407329a113a26aca649cba1ce110c0d7d3460dc3b10b83127022bbe91c60a27",
+      "after_sha256": "cbcc96a468fffbdce5569aaf12955af8556ce606e577ce99718693ab9bff0002",
+      "before_bytes": 62623,
+      "after_bytes": 62679
+    },
+    {
+      "path": "canonical/03-resource-contract/package.json",
+      "change": "BYTES",
+      "before_sha256": "523e7ba2722d3944718047ccbe560d42d4b6bbffc13ff77da386604838099184",
+      "after_sha256": "454e6f0c94432d874aa9108c2c8703929bf119808f2c21d281641d3f0a7e1f68",
+      "before_bytes": 321,
+      "after_bytes": 365
+    },
+    {
+      "path": "canonical/04-pagination-stability/package-lock.json",
+      "change": "BYTES",
+      "before_sha256": "f7a4ef5a3f6412ec1457bf732336664639afb65d9844ca36ebd17b0fa947ff3f",
+      "after_sha256": "097b2966d50d9c1e16af2c724bee8d319624b6083bcb5074c6852f4a4af9eed6",
+      "before_bytes": 62613,
+      "after_bytes": 62669
+    },
+    {
+      "path": "canonical/04-pagination-stability/package.json",
+      "change": "BYTES",
+      "before_sha256": "58de03a4a8daeb40eae582cd64ade019e5d0ed2794c4a9515c2fdc1fb58c482d",
+      "after_sha256": "d93db4e3929f201c18c2904d8b46618f016f317fb669bc7319096a0ed411cd8b",
+      "before_bytes": 316,
+      "after_bytes": 360
+    },
+    {
+      "path": "canonical/05-transaction-timeline/package-lock.json",
+      "change": "BYTES",
+      "before_sha256": "cd6df7a231d698f5bd864e8ffdd3e922a0d40bbc6b6c273723137372ade27913",
+      "after_sha256": "be7b182b84d792482289d7ac99fb9053fcbcc5e54e9f3f278e9e4e47f1756fa1",
+      "before_bytes": 33592,
+      "after_bytes": 33648
+    },
+    {
+      "path": "canonical/05-transaction-timeline/package.json",
+      "change": "BYTES",
+      "before_sha256": "efdd8f18e6b9628cfbb9d2955b379da28ecd1870ccc3f4b70a522246fb391679",
+      "after_sha256": "af1207628586e3de9be5ea3bbcc347b4d803b724cbbf3bd93317ada3cdca624e",
+      "before_bytes": 299,
+      "after_bytes": 343
+    }
+  ],
+  "identity_controls_regenerated_using_fixed_contract": true,
+  "identity_contract": {
+    "method": "manifest-sha256",
+    "manifest": "SHA256SUMS.txt",
+    "package_id": "PACKAGE_ID.txt",
+    "manifest_exclusions": [
+      "SHA256SUMS.txt",
+      "PACKAGE_ID.txt"
+    ]
+  }
+}

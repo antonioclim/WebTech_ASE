@@ -1,0 +1,10 @@
+import assert from "node:assert/strict";
+import test from "node:test";
+import { readFileSync } from "node:fs";
+const cases=JSON.parse(readFileSync(new URL("../support/cases.json",import.meta.url)));
+import { principalOwner } from "../student/p01.mjs";
+test("P01: classroom contract and input immutability", () => { const c=cases[0]; for(let i=0;i<c.inputs.length;i++){ const input=structuredClone(c.inputs[i]); const before=structuredClone(input); assert.deepEqual(principalOwner(input),c.expected[i], `${c.project_id} case ${i+1}`); assert.deepEqual(input,before,"inputs remain unchanged"); } });
+import { reportPermission } from "../student/p02.mjs";
+test("P02: classroom contract and input immutability", () => { const c=cases[1]; for(let i=0;i<c.inputs.length;i++){ const input=structuredClone(c.inputs[i]); const before=structuredClone(input); assert.deepEqual(reportPermission(input),c.expected[i], `${c.project_id} case ${i+1}`); assert.deepEqual(input,before,"inputs remain unchanged"); } });
+import { securityDecision } from "../student/p03.mjs";
+test("P03: classroom contract and input immutability", () => { const c=cases[2]; for(let i=0;i<c.inputs.length;i++){ const input=structuredClone(c.inputs[i]); const before=structuredClone(input); assert.deepEqual(securityDecision(input),c.expected[i], `${c.project_id} case ${i+1}`); assert.deepEqual(input,before,"inputs remain unchanged"); } });

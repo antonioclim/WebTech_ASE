@@ -1,0 +1,152 @@
+[
+  {
+    "project_id": "P01",
+    "export_name": "principalOwner",
+    "inputs": [
+      {
+        "trusted": {
+          "id": "u1",
+          "role": "member"
+        },
+        "body": {
+          "id": "u9",
+          "role": "admin"
+        }
+      },
+      {
+        "trusted": null,
+        "body": {
+          "id": "u9",
+          "role": "admin"
+        }
+      },
+      {
+        "trusted": {
+          "id": "u1",
+          "role": "superadmin"
+        },
+        "body": {}
+      }
+    ],
+    "expected": [
+      {
+        "id": "u1",
+        "role": "member"
+      },
+      null,
+      null
+    ]
+  },
+  {
+    "project_id": "P02",
+    "export_name": "reportPermission",
+    "inputs": [
+      {
+        "action": "read",
+        "principal": {
+          "id": "u1",
+          "role": "member"
+        },
+        "report": {
+          "id": "r1",
+          "ownerId": "u1"
+        }
+      },
+      {
+        "action": "read",
+        "principal": {
+          "id": "u2",
+          "role": "member"
+        },
+        "report": {
+          "id": "r1",
+          "ownerId": "u1"
+        }
+      },
+      {
+        "action": "delete",
+        "principal": {
+          "id": "u2",
+          "role": "moderator"
+        },
+        "report": {
+          "id": "r1",
+          "ownerId": "u1"
+        }
+      },
+      {
+        "action": "delete",
+        "principal": {
+          "id": "u9",
+          "role": "admin"
+        },
+        "report": {
+          "id": "r1",
+          "ownerId": "u1"
+        }
+      },
+      {
+        "action": "read",
+        "principal": null,
+        "report": {
+          "id": "r1",
+          "ownerId": "u1"
+        }
+      }
+    ],
+    "expected": [
+      200,
+      404,
+      403,
+      204,
+      401
+    ]
+  },
+  {
+    "project_id": "P03",
+    "export_name": "securityDecision",
+    "inputs": [
+      {
+        "origin": "https://course.example",
+        "trusted": [
+          "https://course.example"
+        ],
+        "method": "POST",
+        "auth": "cookie",
+        "tokenMatches": true
+      },
+      {
+        "origin": "https://evil.example",
+        "trusted": [
+          "https://course.example"
+        ],
+        "method": "GET",
+        "auth": "cookie",
+        "tokenMatches": false
+      },
+      {
+        "origin": "https://course.example",
+        "trusted": [
+          "https://course.example"
+        ],
+        "method": "POST",
+        "auth": "cookie",
+        "tokenMatches": false
+      }
+    ],
+    "expected": [
+      {
+        "share": true,
+        "csrfAllowed": true
+      },
+      {
+        "share": false,
+        "csrfAllowed": true
+      },
+      {
+        "share": true,
+        "csrfAllowed": false
+      }
+    ]
+  }
+]
