@@ -1,7 +1,11 @@
 # Whole-source study beta and next-release development
 
 The proposed **Study snapshot Beta 1** pins the repository source at
-`6e5cc0a917429d7120f71fd153e8853f05729c9d`. The development branch
+`6e5cc0a917429d7120f71fd153e8853f05729c9d`, preserved on the source branch
+`study-beta-1-source`. Do not add development commits or move this source
+branch. Recheck its exact SHA before publication; branch protections and
+platform-enforced immutability are not established by this procedure.
+The development branch
 `next-release` starts from that snapshot and can advance independently.
 This proposed whole-source beta does not reset the repository's frozen **2.0.1**
 baseline or the filtered English distribution **2.1.0-rc.1**.
@@ -23,9 +27,10 @@ already published and is not an executable weekly-release plan.
    ```
 
 2. Confirm the exact proposed source commit. In GitHub's release form, a new
-   tag can target a branch. Select `main` only while its head is the pinned
-   commit. **Stop if main has advanced** and reconcile the candidate before
-   using another source. Do not target the moving `next-release` branch.
+   tag can target a branch. Select **`study-beta-1-source`**, and confirm that
+   its head is the pinned commit. **Stop if that source branch has moved** and
+   reconcile the candidate before publication. `main` may now advance through
+   reviewed integration; do not use it or `next-release` as this beta target.
 3. Confirm that the proposed tag does not already identify another source or
    release. Preserve existing published tags and assets.
 

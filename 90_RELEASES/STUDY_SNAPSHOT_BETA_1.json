@@ -26,10 +26,18 @@
     }
   ],
   "week_01_02_external_gates_pending": [
-    "native_windows", "native_macos", "manual_browser", "word", "moodle_live", "human_pilot", "owner_acceptance"
+    "native_windows",
+    "native_macos",
+    "manual_browser",
+    "word",
+    "moodle_live",
+    "human_pilot",
+    "owner_acceptance"
   ],
   "whole_repository_qualification": "work-in-progress; no new qualification of Weeks 03–14 or Romanian packages",
   "development_branch": "next-release",
   "actions_required_for_this_manual_route": false,
-  "release_immutability_setting": "not verified; preserve published tags and assets as the working procedure"
+  "release_immutability_setting": "not verified; preserve published tags and assets as the working procedure",
+  "source_branch": "study-beta-1-source",
+  "source_branch_policy": "Preserve at source_commit; verify exact SHA before publication. This is a working procedure, not a platform immutability claim."
 }
