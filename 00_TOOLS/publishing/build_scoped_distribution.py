@@ -111,7 +111,10 @@ def prepare(catalog: dict, root: Path = ROOT) -> dict[str, bytes]:
     recipe = catalog['recipe']
     require(recipe['registry'] == '90_RELEASES/CURRENT_OBJECTS.json', 'Unexpected registry path')
     registry = json.loads(repo_path(recipe['registry'], root).read_text(encoding='utf-8'))
-    require(registry['source_commit'] == provenance['remediation_baseline_commit'], 'Registry baseline differs from provenance')
+    source_role = provenance.get('source_commit_role', 'remediation-baseline')
+    require(source_role in ('remediation-baseline', 'reviewed-payload'), 'Unknown registry source commit role')
+    source_key = 'reviewed_source_commit' if source_role == 'reviewed-payload' else 'remediation_baseline_commit'
+    require(registry['source_commit'] == provenance[source_key], 'Registry source commit differs from its declared provenance role')
     require(registry['distribution_version'] == catalog['distribution_version'] and registry['status'] == catalog['status'], 'Registry version/status mismatch')
     require(registry['languages'] == ['EN_GB'], 'Registry language mismatch')
     objects = registry['objects']

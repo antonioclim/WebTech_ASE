@@ -1,7 +1,9 @@
-# Week 02 English 2.1.0-rc.1
+# Week 02 English 2.1.0-rc.2
 
-This filtered English candidate selects **C02 1.2.2 RC1 and S02 2.3.1 RC1**. It corrects stale catalogue selection, preserves historical access, and includes revised student support, evidence forms and strengthened local checks. Extract the outer bundle and then the selected inner object ZIP; follow its named launcher.
+This filtered English candidate selects **C02 1.2.2 RC1 and S02 2.3.1 RC2**. C02 retains its RC1 ZIP bytes. S02 2.3.1 RC2 has a corrected Windows verifier argument, normalised version labels and a regenerated package identity. The collection advances to RC2 after the S02 native Windows package-verifier failure. Extract the outer bundle and then each selected object ZIP; follow its named launcher.
 
-Status: **release candidate**, draft and prerelease. Native Windows/macOS, Word, Moodle, classroom pilot and owner acceptance remain pending. Local checks establish only the cases actually exercised. The repository-wide stable metadata remains at 2.0.1.
+Status: **release candidate**, draft and prerelease. The [hotfix QA record](WINDOWS_PATH_HOTFIX_QA.json) separates fresh checks from inherited results. The subsequent [native RC2 integrity review](NATIVE_WINDOWS_INTEGRITY_RC2.md) records all four package verifiers passing, including the corrected S02, on the owner's Windows configuration. This closes the original failure in that observed scenario; package-root spaces, a different current directory and wider native functional checks remain unobserved. The seven Windows/macOS, manual browser, Word, Moodle, classroom-pilot and owner acceptance gates remain pending.
 
-See [current identities](CURRENT_OBJECTS.json), [remediation and qualification](REMEDIATION_WEEK_01_02.md) and [historical objects](HISTORICAL_OBJECTS.md). Weeks 03–14 and Romanian package bytes are outside this remediation. Existing tags/releases are not overwritten. No Actions, Pages, release publication or Moodle mutation accompanies preparation.
+The original RC1 weekly and combined assets are preserved unchanged. The whole-source study beta remains pinned to `6e5cc0a917429d7120f71fd153e8853f05729c9d`; it contains the superseded S02 launcher. Repository-wide stable metadata remains **2.0.1**.
+
+See [current identities](CURRENT_OBJECTS.json) and [historical objects](HISTORICAL_OBJECTS.md). Weeks 03–14 and Romanian package bytes are outside this hotfix. Existing tags and releases are preserved. No Actions, Pages, release publication or Moodle mutation accompanies preparation.

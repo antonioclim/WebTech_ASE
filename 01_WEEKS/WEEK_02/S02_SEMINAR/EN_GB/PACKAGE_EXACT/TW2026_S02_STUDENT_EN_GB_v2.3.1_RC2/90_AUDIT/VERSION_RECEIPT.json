@@ -1,0 +1,13 @@
+{
+  "schema": "tw2026.s02.version-receipt.v2",
+  "seminar": "S02",
+  "version": "2.3.1-rc.2",
+  "status": "RELEASE_CANDIDATE",
+  "package_role": "student",
+  "supersedes": "2.3.1-rc.1",
+  "source_commit": "7f88fecfa972bfb41d4fffec3e47616842c7e067",
+  "source_archive_sha256": "6f1f20ab87880d44d45a31908599379cf5f77de0af8df11f8286648c5069b4dd",
+  "historical_status_note": "RC1 teaching/runtime/visual checks remain historical evidence. Its owner-supplied Windows package launcher failed before integrity verification. RC2 native Windows acceptance requires an owner rerun; no current acceptance is inferred.",
+  "github_actions_executed_by_remediation": false,
+  "source_package_id": "26d9097cb09b63ec93cbcf43943845670027b4d8ee74cd78b837401c093bb746"
+}

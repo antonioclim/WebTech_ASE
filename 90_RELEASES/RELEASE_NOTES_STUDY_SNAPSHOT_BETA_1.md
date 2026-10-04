@@ -4,9 +4,13 @@ This is the first whole-repository study snapshot in this GitHub release series.
 
 The materials may be used for guided study while the next edition is being developed on the `next-release` branch. Follow the requirements and instructions for the selected activity. This snapshot is not a claim that every exercise, platform or classroom workflow has been validated.
 
+### Known issue in this frozen snapshot
+
+Native Windows checking of the RC1 attachment subsequently found an S02 package-verifier failure: the quoted root argument ends with a backslash. C01, S01 and C02 package-integrity checks passed for their unchanged bytes. The separate **2.1.0-rc.2** candidate corrects S02 and requires native retesting; use the [current catalogue](README.md) for current work. This beta's source and RC1 attachment remain historical snapshots and are not replaced.
+
 ### Choose the appropriate download
 
-- **For the reviewed English Week 01–02 route**, use `WEBTECH_ASE_WEEKS_01_02_EN_GB_v2.1.0-rc.1.zip` and its SHA-256 sidecar. It contains the filtered C01, S01, C02 and S02 student packages. Its identity is **2.1.0-rc.1**, independently of this whole-source snapshot label.
+- **For the historical English Week 01–02 route in this snapshot**, use `WEBTECH_ASE_WEEKS_01_02_EN_GB_v2.1.0-rc.1.zip` and its SHA-256 sidecar. It contains the filtered C01, S01, C02 and S02 student packages. Its identity is **2.1.0-rc.1**, independently of this whole-source snapshot label.
 - GitHub's **Source code** archives contain the full tracked source snapshot, including material outside that reviewed route. They are not filtered student distributions and do not include Git history.
 
 ### Verification and remaining limitations

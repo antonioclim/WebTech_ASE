@@ -2,6 +2,8 @@
 
 Choose a week, then course or seminar, then language. **Weeks 01–02 provide filtered English release candidates. Weeks 03–14 are complete student-content WIP previews, not qualified final releases.**
 
+The current English Week 01–02 distribution is **2.1.0-rc.2**. S02 is the corrected RC2 object; C01, S01 and C02 retain their existing RC1 ZIP bytes. See the [current catalogue](../90_RELEASES/README.md).
+
 | Week | Navigation | Status |
 | --- | --- | --- |
 | 01 | [Week 1](WEEK_01/README.md) | English release candidate; legacy RO alternative |

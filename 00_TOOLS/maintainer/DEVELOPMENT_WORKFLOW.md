@@ -2,7 +2,7 @@
 
 The full repository is work in progress. Its stable citation and repository
 identity remain **2.0.1**. The scoped English Week 01–02 distribution
-**2.1.0-rc.1** is a separate candidate; it does not rename or certify the full
+**2.1.0-rc.2** is a separate candidate; it does not rename or certify the full
 fourteen-week repository.
 
 ## Development and scoped integration
@@ -12,7 +12,7 @@ beta proposal](../../90_RELEASES/STUDY_SNAPSHOT_BETA_1.json) pins the existing
 reviewed source commit independently of that moving branch. Follow the
 [manual snapshot guide](STUDY_SNAPSHOT_PUBLISHING.md) for publication and the
 [distribution provenance](../../90_RELEASES/DISTRIBUTION_PROVENANCE.md) for the
-distinct baseline and reviewed RC1 payload identities.
+distinct audit baseline, historical RC1 payload and current reviewed hotfix payload identities.
 
 1. Prepare changes on an isolated branch and review their exact scope.
 2. Keep `validate.yml`, `pages.yml` and `release-week.yml` manual-only.
@@ -28,6 +28,8 @@ distinct baseline and reviewed RC1 payload identities.
    Pages deployment or Moodle configuration.
 
 ## The current Week 01–02 English candidate
+
+RC2 supersedes the S02 RC1 Windows verifier failure. The other three object ZIPs are unchanged. The frozen study-beta source remains at `6e5cc0a917429d7120f71fd153e8853f05729c9d`; its existing identities and historical asset bytes are preserved.
 
 After the candidate is merged and its selected source commit is reviewed, the
 owner can manually prepare a draft prerelease with `preview=true`. Follow

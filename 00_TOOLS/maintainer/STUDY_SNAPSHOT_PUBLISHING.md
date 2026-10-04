@@ -16,9 +16,13 @@ and [provenance](../../90_RELEASES/DISTRIBUTION_PROVENANCE.md).
 The proposal records what was prepared. It does not claim that a release is
 already published and is not an executable weekly-release plan.
 
+## Known RC1 limitation and the current candidate
+
+The frozen beta source and its RC1 student attachment contain the S02 Windows verifier-argument failure observed during native checking. The RC2 hotfix is a separate candidate, distribution **2.1.0-rc.2**; use the [current catalogue](../../90_RELEASES/README.md) for current Windows checks. Do not replace the beta's attached RC1 asset or change its historical source hashes merely to include the correction.
+
 ## Before owner publication
 
-1. Verify the combined student archive locally:
+1. For this historical beta, verify the original RC1 archive from a separate checkout of `7f88fecfa972bfb41d4fffec3e47616842c7e067`, which contains the additive RC1 packaging records. The beta tag still targets the distinct source snapshot `6e5cc0a917429d7120f71fd153e8853f05729c9d`. The current checkout selects RC2, so its default verifier is not an RC1 verification command:
 
    ```bash
    python 00_TOOLS/publishing/build_scoped_distribution.py --verify

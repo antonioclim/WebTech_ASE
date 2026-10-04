@@ -1,7 +1,7 @@
 {
   "schema": "webtech-ase-week-distribution-v1",
   "week": 1,
-  "distribution_version": "2.1.0-rc.1",
+  "distribution_version": "2.1.0-rc.2",
   "status": "release-candidate",
   "qualified_release": false,
   "active_languages": [
@@ -13,9 +13,6 @@
   ],
   "registry": "90_RELEASES/CURRENT_OBJECTS.json",
   "pending_gates": [
-    "local_integrity",
-    "reference_runtime",
-    "headless_browser",
     "native_windows",
     "native_macos",
     "manual_browser",
@@ -25,5 +22,12 @@
     "owner_acceptance"
   ],
   "actions_requested": false,
-  "legacy_ro": "preserved; not remediated"
+  "legacy_ro": "preserved; not remediated",
+  "supersedes_distribution_version": "2.1.0-rc.1",
+  "passed_local_gates": [
+    "local_integrity",
+    "reference_runtime",
+    "headless_browser"
+  ],
+  "local_evidence": "90_RELEASES/WINDOWS_PATH_HOTFIX_QA.json"
 }

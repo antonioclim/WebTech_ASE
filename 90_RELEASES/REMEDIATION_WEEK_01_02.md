@@ -1,5 +1,8 @@
 # Week 01–02 English remediation candidate
 
+This is the historical **2.1.0-rc.1** remediation record. The [current catalogue](README.md) selects **2.1.0-rc.2** after the S02 native Windows verifier-argument failure. See [hotfix QA](WINDOWS_PATH_HOTFIX_QA.json) for the new checks and explicitly inherited evidence. The original local QA receipt and RC1 asset bytes are preserved.
+
+
 This candidate corrects the English student distribution for C01, S01, C02 and S02. The previous release catalogue selected superseded seminar versions; it now derives from `CURRENT_OBJECTS.json`. Each object has one active ZIP and one byte-identical extracted copy. Historical English downloads and the duplicate standalone S01 guide are accessible through the pinned history catalogue.
 
 The candidate also corrects English support material, strengthens the HTTP and CSS evidence contracts, reduces duplicated S01 form work, and makes S02 PDF export possible before post-export review. Completed solutions, adversarial mutations, student submissions and instructor-only Moodle administration do not belong in these student packages.
@@ -24,6 +27,8 @@ Native Windows/macOS launchers, Microsoft Word, live Moodle upload/review, a tim
 `VERIFY_INITIAL_STATE` must accept the deliberately incomplete starter only when its expected baseline/regression/objective counts match. `VERIFY_WORK_RESULT` checks the student's work, and reports an incomplete browser gate separately. Students must never change protected tests or integrity metadata to make a result pass. Static CSS checks can reject known mistakes; they cannot replace measured layout and manual interaction evidence.
 
 ## Local review commands
+
+In the current checkout these commands validate the active RC2 candidate. To reproduce the historical RC1 record, use a separate checkout of `7f88fecfa972bfb41d4fffec3e47616842c7e067`, which retains the original RC1 registry, packaging records and assets.
 
 ```bash
 python 00_TOOLS/publishing/build_week_bundle.py --verify-all --weeks 01,02 --language EN_GB

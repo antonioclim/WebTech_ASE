@@ -91,6 +91,22 @@
       "bytes": 304875,
       "reason": "stale seminar selection; superseded EN bundle",
       "baseline_commit": "1850118b3f619b233f89941802212fe59d8d5dfe"
+    },
+    {
+      "week": "02",
+      "object": "S02",
+      "language": "EN_GB",
+      "version": "2.3.1-rc.1",
+      "package_id": "26d9097cb09b63ec93cbcf43943845670027b4d8ee74cd78b837401c093bb746",
+      "archive": "01_WEEKS/WEEK_02/S02_SEMINAR/EN_GB/DOWNLOAD/TW2026_S02_STUDENT_EN_GB_v2.3.1_RC1.zip",
+      "sha256": "6f1f20ab87880d44d45a31908599379cf5f77de0af8df11f8286648c5069b4dd",
+      "bytes": 1200640,
+      "reason": "superseded RC1: native Windows verifier argument ended with a literal quote; replaced by separately identified RC2, without replacing RC1 bytes",
+      "baseline_commit": "7f88fecfa972bfb41d4fffec3e47616842c7e067",
+      "retained_in_current_assets": [
+        "90_RELEASES/assets/WebTech_ASE_WEEK_02_EN_GB_v2.1.0-rc.1.zip",
+        "90_RELEASES/assets/WEBTECH_ASE_WEEKS_01_02_EN_GB_v2.1.0-rc.1.zip"
+      ]
     }
   ]
 }

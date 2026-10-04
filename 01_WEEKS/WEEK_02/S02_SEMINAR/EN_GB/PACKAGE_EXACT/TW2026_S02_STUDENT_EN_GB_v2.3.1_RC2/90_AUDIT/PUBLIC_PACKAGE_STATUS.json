@@ -1,0 +1,52 @@
+{
+  "schema": "tw2026.package-status.v2",
+  "seminar": "S02",
+  "title": "Responsive Card/Grid Reconstruction",
+  "version": "2.3.1-rc.2",
+  "status": "RELEASE_CANDIDATE",
+  "student_language": "en-GB",
+  "source_commit": "7f88fecfa972bfb41d4fffec3e47616842c7e067",
+  "supersedes_version": "2.3.1-rc.1",
+  "remote_publication": false,
+  "owner_accepted": false,
+  "exact_runtime_required": {
+    "node": "v24.21.0",
+    "npm": "11.19.0"
+  },
+  "qualification_record": "STUDENT_SAFE_QA_SUMMARY.md",
+  "open_gates": [
+    "native Windows",
+    "native macOS",
+    "native Chrome and Edge",
+    "native Firefox",
+    "native Microsoft Word",
+    "manual Tab sequence and native 200% zoom",
+    "Moodle live",
+    "classroom pilot",
+    "owner acceptance"
+  ],
+  "source_package_id": "26d9097cb09b63ec93cbcf43943845670027b4d8ee74cd78b837401c093bb746",
+  "inherited_rc1_local_qa": {
+    "node": "v24.21.0",
+    "npm": "11.19.0",
+    "runtime_override": false,
+    "platform": "Linux execution container",
+    "browser": "Google Chrome for Testing 151.0.7922.34 headless",
+    "initial_suite_state": {
+      "baseline": "1/0",
+      "objective": "0/3 intentional assertion failures",
+      "regression": "2/0"
+    },
+    "private_completion": "source checks and five bounded browser scenarios pass",
+    "adversarial_mutants_rejected": 6,
+    "html_pdf": "39 print mirror tails retained across five inspected pages",
+    "docx_render": "form three pages, worksheet three pages, homework one page inspected in LibreOffice renderer",
+    "scope": "Historical RC1 evidence for unchanged teaching and runtime code; not a fresh RC2 native qualification."
+  },
+  "hotfix": {
+    "scope": "One-byte correction in VERIFY_PACKAGE.cmd: append a dot to the quoted package-directory argument. All other edits are version, provenance and qualification metadata.",
+    "reported_rc1_windows_incident": "Owner-supplied native Windows log shows Resolve-Path Illegal characters in path, with a literal trailing quote in Root.",
+    "native_windows_retest": "PENDING_OWNER_RUN",
+    "github_actions_executed": false
+  }
+}

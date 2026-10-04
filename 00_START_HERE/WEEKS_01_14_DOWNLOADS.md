@@ -8,7 +8,7 @@ Follow `week → course/seminar → language` and open `PACKAGE_EXACT`. For Week
 
 ## Download a ZIP
 
-- Weeks 01–02: use their current EN candidate bundle or object download route, or [download both weeks together](../90_RELEASES/assets/WEBTECH_ASE_WEEKS_01_02_EN_GB_v2.1.0-rc.1.zip) with its [checksum](../90_RELEASES/assets/WEBTECH_ASE_WEEKS_01_02_EN_GB_v2.1.0-rc.1.zip.sha256). Whole-week bundles contain two nested object ZIPs; the combined archive contains four. Extract the outer ZIP and then the selected object ZIP.
+- Weeks 01–02: use their current EN candidate bundle or object download route, or [download both weeks together](../90_RELEASES/assets/WEBTECH_ASE_WEEKS_01_02_EN_GB_v2.1.0-rc.2.zip) with its [checksum](../90_RELEASES/assets/WEBTECH_ASE_WEEKS_01_02_EN_GB_v2.1.0-rc.2.zip.sha256). Whole-week bundles contain two nested object ZIPs; the combined archive contains four. Extract the outer ZIP and then the selected object ZIP.
 - Weeks 03–07: use either the whole-week PREVIEW ZIP or a separate course/seminar ZIP.
 - Weeks 08–14: use the separate course or seminar ZIP under the selected object's `EN_GB/DOWNLOAD` directory.
 
