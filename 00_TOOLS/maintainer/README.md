@@ -10,7 +10,8 @@ Start with:
 3. `FINAL_UPLOAD_CHECKLIST.md`;
 4. `GITHUB_REPOSITORY_SETTINGS.md`;
 5. `GITHUB_PAGES_SETUP.md`;
-6. `WEEKLY_RELEASE_PUBLISHING.md`.
+6. `WEEKLY_RELEASE_PUBLISHING.md`;
+7. `STUDY_SNAPSHOT_PUBLISHING.md` for the separate whole-source beta and `next-release` branch.
 
 The private instructor staging archive is not a GitHub upload source. GitHub
 Actions workflows are manual-only and must not be run until the final corpus

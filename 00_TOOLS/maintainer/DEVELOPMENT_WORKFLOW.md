@@ -7,6 +7,13 @@ fourteen-week repository.
 
 ## Development and scoped integration
 
+`next-release` is the continuing development branch. The [whole-source study
+beta proposal](../../90_RELEASES/STUDY_SNAPSHOT_BETA_1.json) pins the existing
+reviewed source commit independently of that moving branch. Follow the
+[manual snapshot guide](STUDY_SNAPSHOT_PUBLISHING.md) for publication and the
+[distribution provenance](../../90_RELEASES/DISTRIBUTION_PROVENANCE.md) for the
+distinct baseline and reviewed RC1 payload identities.
+
 1. Prepare changes on an isolated branch and review their exact scope.
 2. Keep `validate.yml`, `pages.yml` and `release-week.yml` manual-only.
    Only the owner executes Actions for the Week 01–02 remediation.

@@ -1,0 +1,35 @@
+{
+  "schema": "webtech-ase-study-snapshot-proposal-v1",
+  "scope": "whole tracked repository source snapshot; audit and remediation limited to Week 01–02 EN",
+  "tag": "repo-beta-1-2026-10-04",
+  "title": "WebTech_ASE — Study snapshot Beta 1 (baseline 2.0.1)",
+  "source_commit": "6e5cc0a917429d7120f71fd153e8853f05729c9d",
+  "source_tree": "5e5075f924f1b15b9d6c18b095be9d9a721f0455",
+  "source_commit_role": "exact proposed release target; not the moving next-release branch",
+  "repository_frozen_baseline_version": "2.0.1",
+  "filtered_student_distribution_version": "2.1.0-rc.1",
+  "draft": true,
+  "prerelease": true,
+  "publication_status_when_prepared": "not published",
+  "execution_route": "owner manually prepares and publishes GitHub Release; this proposal is not consumed by release-week.yml",
+  "notes": "90_RELEASES/RELEASE_NOTES_STUDY_SNAPSHOT_BETA_1.md",
+  "assets": [
+    {
+      "path": "90_RELEASES/assets/WEBTECH_ASE_WEEKS_01_02_EN_GB_v2.1.0-rc.1.zip",
+      "sha256": "cfd8f03ad5e96582e89dcee0dda614688600d642e2c27f58bb7beec28b6b2e9d",
+      "bytes": 1845142,
+      "scope": "filtered C01, S01, C02 and S02 EN student packages"
+    },
+    {
+      "path": "90_RELEASES/assets/WEBTECH_ASE_WEEKS_01_02_EN_GB_v2.1.0-rc.1.zip.sha256",
+      "scope": "checksum sidecar for the filtered archive"
+    }
+  ],
+  "week_01_02_external_gates_pending": [
+    "native_windows", "native_macos", "manual_browser", "word", "moodle_live", "human_pilot", "owner_acceptance"
+  ],
+  "whole_repository_qualification": "work-in-progress; no new qualification of Weeks 03–14 or Romanian packages",
+  "development_branch": "next-release",
+  "actions_required_for_this_manual_route": false,
+  "release_immutability_setting": "not verified; preserve published tags and assets as the working procedure"
+}

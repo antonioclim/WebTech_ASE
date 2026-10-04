@@ -2,3 +2,4 @@
 769a8c35f726d21c1899ec8743ff717cee96300ccab6b03eefd56c7a062df6b3  assets/WebTech_ASE_WEEK_01_RO_v2.0.0.zip
 ef8aaedda68c5542ed2ade05a049db982c43eff0a6862717b9d4a929063b2399  assets/WebTech_ASE_WEEK_02_EN_GB_v2.1.0-rc.1.zip
 11f8bda5690dd98994817ee752f307568ae228e54a5be642719fc73d2daae4c1  assets/WebTech_ASE_WEEK_02_RO_v2.0.0.zip
+cfd8f03ad5e96582e89dcee0dda614688600d642e2c27f58bb7beec28b6b2e9d  assets/WEBTECH_ASE_WEEKS_01_02_EN_GB_v2.1.0-rc.1.zip

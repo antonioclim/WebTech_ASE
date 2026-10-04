@@ -8,6 +8,8 @@
 6. Use the launchers below for Weeks 01–02. For Weeks 03–14, follow each object's documented `index.html` and WIP restrictions.
 7. Complete the seminar evidence form, review its exported PDF and upload the final PDF privately to the Moodle Assignment configured by your teacher. Keep optional JSON backups locally.
 
+For Weeks 01–02 EN, you can [download both weeks together](../90_RELEASES/assets/WEBTECH_ASE_WEEKS_01_02_EN_GB_v2.1.0-rc.1.zip), with its [SHA-256 sidecar](../90_RELEASES/assets/WEBTECH_ASE_WEEKS_01_02_EN_GB_v2.1.0-rc.1.zip.sha256). Extract the outer ZIP, then extract the four object ZIPs into separate folders. Read each object's instructions and use the launchers below. This combined download has no outer lesson launcher.
+
 | Object | Windows | macOS/Linux |
 | --- | --- | --- |
 | C01 | `OPEN_PRESENTATION.cmd` | `bash OPEN_PRESENTATION.sh` |

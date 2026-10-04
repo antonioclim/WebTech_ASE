@@ -2,6 +2,8 @@
 
 The active English distribution is **2.1.0-rc.1**. [Current objects](CURRENT_OBJECTS.json) identifies exactly one course and one seminar per week; [CURRENT_RELEASES.csv](CURRENT_RELEASES.csv) is the corresponding readable catalogue. These are release candidates with explicit qualification gates, not qualified final releases.
 
+For a single download covering both weeks, use the [combined English student archive](assets/WEBTECH_ASE_WEEKS_01_02_EN_GB_v2.1.0-rc.1.zip) and its [SHA-256 sidecar](assets/WEBTECH_ASE_WEEKS_01_02_EN_GB_v2.1.0-rc.1.zip.sha256). It contains the same four unchanged RC1 object ZIPs. Read the [combined distribution record](SCOPED_DISTRIBUTION.json) and [provenance clarification](DISTRIBUTION_PROVENANCE.md): the older `source_commit` field names the pre-remediation baseline, not the reviewed RC1 payload snapshot.
+
 | Week | English bundle | Instructions |
 | --- | --- | --- |
 | 01 | [Week 01 candidate](assets/WebTech_ASE_WEEK_01_EN_GB_v2.1.0-rc.1.zip) | [Week 01](../01_WEEKS/WEEK_01/README.md) |
@@ -17,7 +19,10 @@ Local review:
 
 ```bash
 python 00_TOOLS/publishing/build_week_bundle.py --verify-all --weeks 01,02 --language EN_GB
+python 00_TOOLS/publishing/build_scoped_distribution.py --verify
 python 00_TOOLS/qa/validate_public_repo.py --strict --weeks 01,02 --language EN_GB
 ```
 
 `RELEASE_PLAN.json` supplies explicit versions, languages, draft/prerelease state and pending required gates. All workflows remain manual-only. The owner decides when to run them; the final-publication resolver refuses pending gates.
+
+The [whole-source study beta proposal](STUDY_SNAPSHOT_BETA_1.json) is separate from the weekly plans. Its [manual publication guide](../00_TOOLS/maintainer/STUDY_SNAPSHOT_PUBLISHING.md) pins the source commit and keeps the filtered student asset distinct from GitHub's complete Source code archives. Preparation of these files does not publish a release.
