@@ -1,0 +1,17 @@
+{
+  "schema": "webtech-classroom-filter-policy/v1",
+  "distribution_version": "3.0.0-rc.7",
+  "source_material_commit": "cab9751b6af7ddc6d73961e7768db7c300c72434",
+  "source_material_sha256": "5c9d9a2aa07fe0eccc03239940a1cfbd895d07b906c9b99cfcd5188e4d464ec4",
+  "object_ids": ["C01", "C02", "C03", "C04", "C05", "C06", "C07", "C08", "C09", "C10", "C11", "C12", "C13", "C14", "S01", "S02", "S03", "S04", "S05", "S06", "S07", "S08", "S09", "S10", "S11", "S12", "S13", "S14", "SETUP_MACOS_LINUX", "SETUP_WINDOWS"],
+  "course_policy": "WHOLE_AUTHENTIC_OBJECT_UNCHANGED",
+  "setup_policy": "WHOLE_AUTHENTIC_OBJECT_UNCHANGED",
+  "seminar_policy": "ALL_CLASSROOM_RC6_BYTES_UNCHANGED_WITH_EXPLICIT_REFERENCE_NOTICES",
+  "expected_preserved_source_files": 1156,
+  "expected_classroom_source_files": 266,
+  "expected_microprojects": 40,
+  "expected_editable_files": 38,
+  "expected_retained_docx": 30,
+  "reference_notices": "MANUAL_PINNED_SOURCE_LINK_AND_CURRENT_CLASSROOM_RETURN",
+  "final_acceptance": false
+}

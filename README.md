@@ -1,5 +1,15 @@
 # Web Technologies — current English candidate 3.0.0-rc.6
 
+## Filtered classroom wrapper: prerelease 3.0.0-rc.7
+
+The separate RC7 classroom distribution preserves all fourteen course units, both setup units and the exact bounded classroom files for all fourteen seminars. It removes full seminar applications from the student archive, supplies explicit notices for their retained source references and gives each filtered seminar a new package identity. The source selection and unchanged inner classroom contract remain RC6.
+
+[Filtered release notes](90_RELEASES/NOTES_CLASSROOM_RC7.md) · [Exact filter policy](metadata/classroom-release-policy.json) · [Release plan](90_RELEASES/CLASSROOM_RELEASE_PLAN.json) · [Owner-only preparation instructions](00_TOOLS/maintainer/CLASSROOM_RC7_PUBLISHING.md)
+
+Its dedicated workflow prepares only a draft prerelease after the owner starts it with the exact reviewed commit. These source changes do not constitute publication. Use the generated `WEBTECH_ASE_EN_GB_CLASSROOM_v3.0.0-rc.7.zip` release asset after publication; GitHub's automatic source-code ZIP is the development repository. General qualification remains `NOT_FINAL`.
+
+## Retained RC6 source selection
+
 The current selection contains 14 courses,14 seminars and 2 Day 0setup kits. **Candidate, not FINAL.** Native Windows/macOS, actual browser/PDF/Word, live Moodle, linguistic fluency, human feasibility and institutional acceptance remain separate.
 
 [Start with the current English index](index.html) · [Environment](ENTRY/ENVIRONMENT.html) · [Course plan](ENTRY/COURSE_PLAN.html) · [Evidence and privacy](ENTRY/HELP_AND_PRIVACY.html)
@@ -29,9 +39,9 @@ The classroom contracts are declared successors with smaller scope. A classroom 
 
 Each outer weekly ZIP contains the course and seminar inner ZIPs. Extract both levels into separate folders. Every 30 object entry links its actual individually selected archive and exact sidecar.
 
-The complete filtered student ZIP is a **future manual release asset**, not a claimed file already present in this repository. GitHub Source code ZIPs contain historical and maintenance material and are not the intended filtered student distribution.
+The retained complete RC6 source-collection ZIP is a **future manual release asset**, not a claimed file already present in this repository. It includes the original full seminar payloads. The separate filtered RC7 classroom archive is described above. GitHub Source code ZIPs contain historical and maintenance material and are not the intended classroom distribution.
 
-[Authoritative 30-object registry](metadata/student-selection.json) · [Fourteen-week plan](90_RELEASES/FULL_COLLECTION_PLAN.json) · [Complete filtered candidate plan](90_RELEASES/COLLECTION_RELEASE_PLAN.json)
+[Authoritative 30-object registry](metadata/student-selection.json) · [Fourteen-week plan](90_RELEASES/FULL_COLLECTION_PLAN.json) · [Retained complete RC6 source-collection plan](90_RELEASES/COLLECTION_RELEASE_PLAN.json)
 
 ## Manual maintenance and publication
 
@@ -45,10 +55,12 @@ python 00_TOOLS/qa/student_release.py --mode integrity
 python 00_TOOLS/publishing/build_week_bundle.py --verify-all --plan 90_RELEASES/FULL_COLLECTION_PLAN.json
 ```
 
-Build the complete filtered ZIP only into a new path outside the checkout:
+Build the retained complete RC6 source collection only into a new path outside the checkout:
 
 ```sh
 python 00_TOOLS/publishing/build_student_collection.py --zip ../WEBTECH_ASE_EN_GB_v3.0.0-rc.6.zip
 ```
+
+For the new filtered classroom edition, use the [RC7 resolver instructions](00_TOOLS/maintainer/CLASSROOM_RC7_PUBLISHING.md).
 
 These build/check commands are maintainer operations and do not start a GitHub workflow. Reference maintenance requires Python 3.12, Node 24.21.0 and the pinned PyYAML parser in 00_TOOLS/qa/requirements.txt. The candidate retains all ten qualification gates.
