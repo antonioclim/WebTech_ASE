@@ -1,5 +1,13 @@
 # Web Technologies — current English candidate 3.0.0-rc.6
 
+## Corrected classroom successor: candidate 3.0.0-rc.8
+
+RC8 derives a new C07 carrier to correct ten stale canonical source hashes and reject malformed source registries. The five canonical examples retain their original teaching code, current dependency pins and lockfile bytes. Displaced controls are preserved as history. All fourteen bounded seminar folders remain byte-identical. Existing RC7 assets and retained RC6 source carriers remain unchanged.
+
+[Successor release notes](90_RELEASES/NOTES_CLASSROOM_RC8.md) · [Exact successor policy](metadata/classroom-successor-policy.json) · [Successor release plan](90_RELEASES/CLASSROOM_SUCCESSOR_RELEASE_PLAN.json) · [Owner-only preparation instructions](00_TOOLS/maintainer/CLASSROOM_RC8_PUBLISHING.md)
+
+The new manual workflow prepares a draft prerelease only. The owner decides when to run it and publish the draft. Manual acceptance has been deferred; it is not a prerequisite for preparing this prerelease and is not recorded as PASS. General qualification remains `NOT_FINAL`. The repository's retained whole-source and weekly selections below remain RC6; the correction belongs to the separately derived RC8 classroom distribution.
+
 ## Filtered classroom wrapper: prerelease 3.0.0-rc.7
 
 The separate RC7 classroom distribution preserves all fourteen course units, both setup units and the exact bounded classroom files for all fourteen seminars. It removes full seminar applications from the student archive, supplies explicit notices for their retained source references and gives each filtered seminar a new package identity. The source selection and unchanged inner classroom contract remain RC6.
