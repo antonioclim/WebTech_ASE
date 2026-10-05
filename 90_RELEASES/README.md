@@ -1,10 +1,14 @@
 # Current English release candidates
 
+The separate filtered classroom wrapper is prerelease **3.0.0-rc.7**: [notes](NOTES_CLASSROOM_RC7.md), [plan](CLASSROOM_RELEASE_PLAN.json), [filter policy](../metadata/classroom-release-policy.json) and [owner-only publishing instructions](../00_TOOLS/maintainer/CLASSROOM_RC7_PUBLISHING.md). It keeps complete course/setup units and unchanged classroom seminar files, gives filtered seminars new identities and removes their original full applications from the student archive. Publication is a separate manual owner operation. No generated ZIP is a GitHub release asset until that operation completes.
+
+## Retained RC6 source selection
+
 Current English collection candidate **3.0.0-rc.6**. Qualification and classroom acceptance remain pending.
 
 [Authoritative current selection](../metadata/student-selection.json) · [Current whole-week plan](FULL_COLLECTION_PLAN.json) · [Complete collection release plan](COLLECTION_RELEASE_PLAN.json) · [All current weeks](../01_WEEKS/README.md)
 
-The current collection selects all fourteen courses, fourteen seminars and two Day 0 setup kits. Use the object or whole-week downloads below. The complete filtered collection is declared in its release plan; its publication is a separate manual owner operation. A generated collection ZIP is not a GitHub asset until it has been published.
+The retained RC6 source collection selects all fourteen courses, fourteen seminars and two Day 0 setup kits, including original full seminar payloads. Use the object or whole-week downloads below to obtain those source units. The separate filtered RC7 classroom archive is described above. Publication of either collection is a separate manual owner operation. A generated collection ZIP is not a GitHub asset until it has been published.
 
 | Week | Course | Seminar | Current whole-week ZIP | Checksum |
 | --- | --- | --- | --- | --- |
