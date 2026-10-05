@@ -1,0 +1,115 @@
+name: Prepare a draft corrected classroom RC8 prerelease
+
+on:
+  workflow_dispatch:
+    inputs:
+      preview:
+        description: 'Explicitly prepare this filtered candidate; keep draft and prerelease status'
+        type: boolean
+        required: true
+        default: false
+      expected_source_sha:
+        description: 'Exact reviewed 40-character lowercase Git commit SHA selected for this run'
+        type: string
+        required: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: webtech-corrected-classroom-rc8-candidate-release
+  cancel-in-progress: false
+
+jobs:
+  publish-classroom:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - name: Check out the selected source and all tags
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+      - name: Require the exact reviewed source and explicit preview
+        env:
+          PREVIEW: ${{ inputs.preview }}
+          EXPECTED_SOURCE_SHA: ${{ inputs.expected_source_sha }}
+        run: |
+          set -euo pipefail
+          if [[ "$PREVIEW" != "true" ]]; then
+            echo 'Explicit preview is required. No final-release mode exists.' >&2
+            exit 2
+          fi
+          if [[ ! "$EXPECTED_SOURCE_SHA" =~ ^[0-9a-f]{40}$ ]]; then
+            echo 'Supply the full reviewed lowercase commit SHA. Publication stopped.' >&2
+            exit 2
+          fi
+          if [[ "$(git rev-parse HEAD)" != "$GITHUB_SHA" || "$GITHUB_SHA" != "$EXPECTED_SOURCE_SHA" ]]; then
+            echo 'Selected workflow source differs from the reviewed commit. Publication stopped.' >&2
+            exit 2
+          fi
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.12'
+      - name: Set up exact Node runtime
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: '24.21.0'
+      - name: Install the pinned workflow parser
+        run: python -m pip install --requirement 00_TOOLS/qa/requirements.txt
+      - name: Verify the complete unchanged RC6 source carriers and current repository
+        run: python 00_TOOLS/qa/validate_public_repo.py --strict
+      - name: Run the filtered classroom packaging and refusal checks
+        run: python 00_TOOLS/qa/test_classroom_collection.py
+      - name: Test the C07 correction and the complete RC8 successor
+        run: python 00_TOOLS/qa/test_classroom_successor.py
+      - name: Verify all fourteen existing weekly containers
+        run: python 00_TOOLS/publishing/build_week_bundle.py --verify-all --plan 90_RELEASES/FULL_COLLECTION_PLAN.json
+      - name: Prepare and verify the new filtered classroom assets
+        id: plan
+        run: |
+          set -euo pipefail
+          python 00_TOOLS/publishing/resolve_classroom_successor.py --plan 90_RELEASES/CLASSROOM_SUCCESSOR_RELEASE_PLAN.json --asset-dir "$RUNNER_TEMP/classroom-release" --allow-preview --build --workflow-output --github-output "$GITHUB_OUTPUT"
+      - name: Refuse existing tags and releases, including lookup errors
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ steps.plan.outputs.tag }}
+        run: |
+          set -euo pipefail
+          remote_tags="$(git ls-remote --tags origin "refs/tags/$TAG" "refs/tags/$TAG^{}")"
+          if [[ -n "$remote_tags" ]]; then
+            echo "Tag $TAG already exists. Use a reviewed successor version." >&2
+            exit 2
+          fi
+          response="$RUNNER_TEMP/classroom-release-lookup.headers"
+          errors="$RUNNER_TEMP/classroom-release-lookup.errors"
+          if gh api "repos/$GITHUB_REPOSITORY/releases/tags/$TAG" --include >"$response" 2>"$errors"; then
+            echo "Release $TAG already exists. Use a reviewed successor version." >&2
+            exit 2
+          fi
+          if ! head -n 1 "$response" | grep -Eq '^HTTP/[0-9.]+ 404([[:space:]]|$)'; then
+            cat "$errors" >&2
+            echo 'Could not establish that the release is absent. Publication stopped.' >&2
+            exit 2
+          fi
+      - name: Create only a new tag and a draft classroom prerelease
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ steps.plan.outputs.tag }}
+          TITLE: ${{ steps.plan.outputs.title }}
+          NOTES: ${{ steps.plan.outputs.notes }}
+          ARCHIVE: ${{ steps.plan.outputs.archive }}
+          SIDECAR: ${{ steps.plan.outputs.sidecar }}
+          CHECKSUMS: ${{ steps.plan.outputs.checksums }}
+          DRAFT: ${{ steps.plan.outputs.draft }}
+          PRERELEASE: ${{ steps.plan.outputs.prerelease }}
+        run: |
+          set -euo pipefail
+          if [[ "$DRAFT" != "true" || "$PRERELEASE" != "true" ]]; then
+            echo 'Candidate flags differ. Publication stopped.' >&2
+            exit 2
+          fi
+          # The API refuses a concurrently created tag. Any later failure leaves
+          # the new tag in place; no rerun deletes, retargets or overwrites it.
+          gh api --method POST "repos/$GITHUB_REPOSITORY/git/refs" -f "ref=refs/tags/$TAG" -f "sha=$GITHUB_SHA" >/dev/null
+          gh release create "$TAG" "$ARCHIVE" "$SIDECAR" "$CHECKSUMS" --target "$GITHUB_SHA" --title "$TITLE" --notes-file "$NOTES" --verify-tag --draft --prerelease
