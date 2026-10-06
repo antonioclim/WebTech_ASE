@@ -1,7 +1,13 @@
-# Security policy
+# Security and privacy policy
 
-Do not disclose credentials, tokens, cookies, private Moodle data or student submissions in a public issue.
+This teaching repository does not accept operational secrets or student submissions. Do not post credentials, tokens, cookies, private Moodle data, student records or evidence PDFs in a public issue or pull request.
 
-This teaching repository does not accept operational secrets. If a document or archive appears to expose private data, stop using it and contact the repository owner through an established institutional channel.
+The current support scope is the English classroom route for Weeks 01–14 and the setup materials. **3.0.0-rc.9 is PREPARED_NOT_PUBLISHED**; RC8 is the last published classroom prerelease. Use the [current student portal](00_START_HERE/STUDENT_CLASSROOM_RC9/README.md) to identify your edition. Native and institutional acceptance remain separately observed domains.
 
-Supported public material: Day 0, week 1 and week 2 student-facing content in the current `main` branch.
+If a document or archive appears to expose private data, stop using the affected file and contact the repository owner through an established institutional channel. Send only the affected path, version and a minimal description through that private channel. Do not include the exposed secret in a public report, invent a private disclosure address or use a GitHub issue to transmit a student submission.
+
+For an application defect, use synthetic data and the smallest local reproduction. Retained full applications are optional historical teaching references. They are not production services. The old full S13 static server has a confirmed directory-boundary defect and old optional S03/S06 commands have recorded failures; excluding them from the classroom ZIP does not repair those historical bytes. Read the current derivative's recorded scope before running an advanced example.
+
+Package checksums and `PACKAGE_ID` values check consistency with the declared bytes. They do not prove publisher authenticity, absence of every security defect or safety of deployment. Follow the current classroom guide and keep examples on their stated local route. Store installed dependencies, synthetic QA results, student work and browser profiles outside the public repository and release assets.
+
+Only the owner starts GitHub Actions after final review. RC9 preparation uses an exact reviewed source SHA and produces a new draft prerelease. Existing releases, tags and assets must not be overwritten to conceal or relabel a correction. Report a frozen-payload defect with its version so the fix can be delivered as an identifiable successor.

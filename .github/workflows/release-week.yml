@@ -1,4 +1,4 @@
-name: Publish a weekly GitHub Release
+name: Prepare a draft historical RC6 weekly prerelease
 
 on:
   workflow_dispatch:
@@ -9,13 +9,21 @@ on:
         required: true
         options: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14']
       preview:
-        description: 'Allow declared candidate assets, retaining plan draft/prerelease status and pending gates'
+        description: 'Explicitly prepare historical RC6 assets as a draft prerelease'
         type: boolean
         required: true
         default: false
+      expected_source_sha:
+        description: 'Exact reviewed 40-character lowercase Git commit SHA selected for this run'
+        type: string
+        required: true
 
 permissions:
   contents: write
+
+concurrency:
+  group: webtech-historical-week-${{ inputs.week }}-candidate-release
+  cancel-in-progress: false
 
 jobs:
   publish-week:
@@ -26,6 +34,24 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0
+      - name: Require the exact reviewed source and explicit preview
+        env:
+          PREVIEW: ${{ inputs.preview }}
+          EXPECTED_SOURCE_SHA: ${{ inputs.expected_source_sha }}
+        run: |
+          set -euo pipefail
+          if [[ "$PREVIEW" != "true" ]]; then
+            echo 'Explicit preview is required. No final-release mode exists.' >&2
+            exit 2
+          fi
+          if [[ ! "$EXPECTED_SOURCE_SHA" =~ ^[0-9a-f]{40}$ ]]; then
+            echo 'Supply the full reviewed lowercase commit SHA. Preparation stopped.' >&2
+            exit 2
+          fi
+          if [[ "$(git rev-parse HEAD)" != "$GITHUB_SHA" || "$GITHUB_SHA" != "$EXPECTED_SOURCE_SHA" ]]; then
+            echo 'Selected workflow source differs from the reviewed commit. Preparation stopped.' >&2
+            exit 2
+          fi
       - name: Set up Python
         uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
@@ -44,27 +70,48 @@ jobs:
         id: plan
         env:
           WEEK: ${{ inputs.week }}
-          PREVIEW: ${{ inputs.preview }}
         run: |
-          preview_args=()
-          if [[ "$PREVIEW" == "true" ]]; then
-            preview_args+=(--allow-preview)
+          set -euo pipefail
+          python 00_TOOLS/publishing/resolve_release.py --plan 90_RELEASES/FULL_COLLECTION_PLAN.json --week "$WEEK" --language EN_GB --workflow-output --github-output "$GITHUB_OUTPUT" --allow-preview
+      - name: Copy exactly the verified historical assets outside the checkout
+        env:
+          ASSETS: ${{ steps.plan.outputs.assets }}
+          WEEK: ${{ inputs.week }}
+        run: |
+          set -euo pipefail
+          asset_dir="$RUNNER_TEMP/historical-week-$WEEK-release"
+          mkdir "$asset_dir"
+          read -r -a asset_array <<< "$ASSETS"
+          if [[ "${#asset_array[@]}" != '2' ]]; then
+            echo 'Expected exactly two verified weekly assets. Preparation stopped.' >&2
+            exit 2
           fi
-          python 00_TOOLS/publishing/resolve_release.py --plan 90_RELEASES/FULL_COLLECTION_PLAN.json --week "$WEEK" --language EN_GB --workflow-output --github-output "$GITHUB_OUTPUT" "${preview_args[@]}"
-      - name: Refuse an existing tag or release
+          for source in "${asset_array[@]}"; do
+            cp -- "$source" "$asset_dir/$(basename -- "$source")"
+          done
+      - name: Refuse existing tags and releases and fail closed on lookup errors
         env:
           GH_TOKEN: ${{ github.token }}
           TAG: ${{ steps.plan.outputs.tag }}
         run: |
-          if git ls-remote --exit-code --tags origin "refs/tags/$TAG" >/dev/null 2>&1; then
-            echo "Tag $TAG already exists. Publish a new patch version instead." >&2
+          set -euo pipefail
+          remote_tags="$(git ls-remote --tags origin "refs/tags/$TAG" "refs/tags/$TAG^{}")"
+          if [[ -n "$remote_tags" ]]; then
+            echo "Tag $TAG already exists. Use a reviewed successor version." >&2
             exit 2
           fi
-          if gh release view "$TAG" >/dev/null 2>&1; then
-            echo "Release $TAG already exists. Publish a new patch version instead." >&2
+          response="$RUNNER_TEMP/weekly-release-lookup.headers"
+          errors="$RUNNER_TEMP/weekly-release-lookup.errors"
+          if gh api "repos/$GITHUB_REPOSITORY/releases/tags/$TAG" --include >"$response" 2>"$errors"; then
+            echo "Release $TAG already exists. Use a reviewed successor version." >&2
             exit 2
           fi
-      - name: Publish immutable weekly release
+          if ! head -n 1 "$response" | grep -Eq '^HTTP/[0-9.]+ 404([[:space:]]|$)'; then
+            cat "$errors" >&2
+            echo 'Could not establish that the release is absent. Preparation stopped.' >&2
+            exit 2
+          fi
+      - name: Create only a new tag and a draft historical weekly prerelease
         env:
           GH_TOKEN: ${{ github.token }}
           TAG: ${{ steps.plan.outputs.tag }}
@@ -73,13 +120,24 @@ jobs:
           ASSETS: ${{ steps.plan.outputs.assets }}
           DRAFT: ${{ steps.plan.outputs.draft }}
           PRERELEASE: ${{ steps.plan.outputs.prerelease }}
+          WEEK: ${{ inputs.week }}
         run: |
+          set -euo pipefail
+          if [[ "$DRAFT" != "true" || "$PRERELEASE" != "true" ]]; then
+            echo 'Candidate flags differ. Preparation stopped.' >&2
+            exit 2
+          fi
           read -r -a asset_array <<< "$ASSETS"
-          release_args=()
-          if [[ "$DRAFT" == "true" ]]; then
-            release_args+=(--draft)
+          asset_dir="$RUNNER_TEMP/historical-week-$WEEK-release"
+          archive="$asset_dir/$(basename -- "${asset_array[0]}")"
+          sidecar="$asset_dir/$(basename -- "${asset_array[1]}")"
+          # Ref creation refuses an existing tag, including concurrent creation.
+          # A later failure can leave a tag or partial draft; do not overwrite it.
+          gh api --method POST "repos/$GITHUB_REPOSITORY/git/refs" -f "ref=refs/tags/$TAG" -f "sha=$GITHUB_SHA" >"$RUNNER_TEMP/weekly-created-ref.json"
+          remote_sha="$(gh api "repos/$GITHUB_REPOSITORY/git/ref/tags/$TAG" --jq '.object.sha')"
+          remote_type="$(gh api "repos/$GITHUB_REPOSITORY/git/ref/tags/$TAG" --jq '.object.type')"
+          if [[ "$remote_type" != 'commit' || "$remote_sha" != "$GITHUB_SHA" ]]; then
+            echo 'New remote tag does not point to the reviewed commit. Preparation stopped.' >&2
+            exit 2
           fi
-          if [[ "$PRERELEASE" == "true" ]]; then
-            release_args+=(--prerelease)
-          fi
-          gh release create "$TAG" "${asset_array[@]}" --target "$GITHUB_SHA" --title "$TITLE" --notes-file "$NOTES" --verify-tag=false "${release_args[@]}"
+          gh release create "$TAG" "$archive" "$sidecar" --target "$GITHUB_SHA" --title "$TITLE" --notes-file "$NOTES" --verify-tag --draft --prerelease

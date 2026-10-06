@@ -1,0 +1,48 @@
+repository:
+  owner: antonioclim
+  name: WebTech_ASE
+  default_branch: main
+  visibility: public
+  description: 'Web Technologies teaching repository for ASE: setup, courses, seminars,
+    offline student kits and evidence-based activities.'
+  website: https://antonioclim.github.io/WebTech_ASE/
+  topics:
+  - web-technologies
+  - web-development
+  - javascript
+  - html
+  - css
+  - nodejs
+  - react
+  - teaching
+  - computer-science-education
+  - ase
+  status: work-in-progress
+  automation_mode: manual-only
+  identity_state: frozen-baseline
+  version: 2.0.1
+course:
+  title: Web Technologies
+  institution: Bucharest University of Economic Studies (ASE)
+  academic_year: 2026–2027
+  public_guidance_language: English
+  bilingual_exceptions:
+  - C01
+  - S01
+  - C02
+  - S02
+author:
+  display_name: Antonio Clim
+  public_email: null
+  orcid: null
+rights:
+  policy: all-rights-reserved
+  licence_file: null
+  notice: Copyright © 2026 Antonio Clim. All rights reserved.
+features:
+  issues: true
+  pull_requests_for_corrections: true
+  discussions: false
+  wiki: false
+  projects: false
+  pages: false

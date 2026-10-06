@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check every fixed current week/object navigation wrapper against selection.
+"""Check the prepared RC9 portal and retained RC6 source navigation wrappers.
 
 This is a static route and preservation check. It does not run applications,
 render browsers, qualify native platforms or certify the teaching workload.
@@ -22,6 +22,11 @@ import release_contract as rc
 
 ARCHIVE = "90_ARCHIVE/MAIN_4eea8de_NAVIGATION"
 BASELINE = "4eea8de416cb03cf4f718fb802f868a391abb192"
+ACTIVE_VERSION = "3.0.0-rc.9"
+ACTIVE_STATUS = "PREPARED_NOT_PUBLISHED"
+ACTIVE_PORTAL = "00_START_HERE/STUDENT_CLASSROOM_RC9/README.md"
+ACTIVE_NOTES = "90_RELEASES/NOTES_CLASSROOM_RC9.md"
+ACTIVE_PROCEDURE = "00_TOOLS/maintainer/CLASSROOM_RC9_PUBLISHING.md"
 GLOBAL_PATHS = {
     "90_RELEASES/README.md", "90_RELEASES/HISTORICAL_OBJECTS.md",
     "00_START_HERE/README.md", "00_START_HERE/WEEKS_01_14_DOWNLOADS.md",
@@ -74,11 +79,13 @@ def urls(name, text):
     return re.findall(r"\[[^\]]*\]\(([^\s)]+)\)", text)
 
 
-def targets(root, name, text):
+def targets(root, name, text, allow_external=False):
     result = []
     for url in urls(name, text):
         parsed = urlsplit(url)
         if parsed.scheme or parsed.netloc:
+            if allow_external and parsed.scheme == "https":
+                continue
             raise ValueError("Unexpected external current-navigation URL: " + name)
         if not parsed.path:
             continue
@@ -91,6 +98,71 @@ def targets(root, name, text):
             raise ValueError("Missing current-navigation target: " + name + " -> " + url)
         result.append(target)
     return result
+
+
+def active_route(root, name, text):
+    """Require the new route before collapsed, explicitly historical source."""
+    marker = '<details data-historical-source="rc6">'
+    if marker not in text or text.count(marker) != 1:
+        raise ValueError("One collapsed historical source section is required: " + name)
+    prefix, retained = text.split(marker, 1)
+    if ACTIVE_VERSION not in prefix or ACTIVE_STATUS not in prefix:
+        raise ValueError("Prepared RC9 status must precede retained source: " + name)
+    if ("historical RC6 source" not in prefix
+            or "stale canonical registry hashes" not in prefix
+            or "last published classroom prerelease is RC8" not in prefix):
+        raise ValueError("Current/historical/published distinction missing: " + name)
+    if "advanced, optional" not in retained.split("</summary>", 1)[0]:
+        raise ValueError("Historical source summary must be explicit: " + name)
+    # Markdown and HTML frontdoors must put the real portal and source status
+    # before any retained source ZIP, original full application or old guide.
+    current = set(targets(root, name, prefix, allow_external=True))
+    if not {ACTIVE_PORTAL, ACTIVE_NOTES, ACTIVE_PROCEDURE} <= current:
+        raise ValueError("Prepared RC9 portal or reviewed documentation absent: " + name)
+    if any(n.endswith(".zip") or n.endswith(".zip.sha256")
+           or "/SOURCE_EXACT/" in n or "/PACKAGE_EXACT/" in n for n in current):
+        raise ValueError("Historical payload offered before active portal: " + name)
+    if re.search(r"https://[^\s\"'<>)]*/releases/(?:tag|download)/classroom-en-gb-v3\.0\.0-rc\.9", prefix):
+        raise ValueError("Prepared RC9 frontdoor invents a published release URL: " + name)
+    return {"path": name, "prepared_version": ACTIVE_VERSION,
+            "publication_status": ACTIVE_STATUS, "portal": ACTIVE_PORTAL,
+            "historical_source_collapsed": True, "active_local_links": len(current)}
+
+
+def active_metadata(root):
+    """Keep source-preparation metadata distinct from public release identity."""
+    citation = rc.unique_yaml((root / "CITATION.cff").read_text(encoding="utf-8"))
+    metadata = rc.unique_yaml((root / "metadata/repository-metadata.yml").read_text(encoding="utf-8"))
+    course = rc.strict_json((root / "metadata/course-map.json").read_bytes())
+    code = rc.strict_json((root / "codemeta.json").read_bytes())
+    if (citation.get("version") != ACTIVE_VERSION or "date-released" in citation
+            or ACTIVE_STATUS not in citation.get("message", "")):
+        raise ValueError("Prepared citation must not invent a release date")
+    repository = metadata.get("repository", {})
+    if (repository.get("version") != ACTIVE_VERSION
+            or repository.get("status") != ACTIVE_STATUS
+            or repository.get("last_published_classroom_version") != "3.0.0-rc.8"
+            or repository.get("student_portal") != ACTIVE_PORTAL):
+        raise ValueError("Current repository metadata identity/status differ")
+    if (course.get("repository_version") != ACTIVE_VERSION
+            or course.get("publication_status") != ACTIVE_STATUS
+            or course.get("last_published_classroom_version") != "3.0.0-rc.8"
+            or course.get("student_portal") != ACTIVE_PORTAL
+            or course.get("general_qualification") != "NOT_FINAL"):
+        raise ValueError("Current course-map identity/status differ")
+    if (code.get("version") != ACTIVE_VERSION or code.get("developmentStatus") != ACTIVE_STATUS
+            or "datePublished" in code):
+        raise ValueError("Prepared CodeMeta must not invent publication")
+    weeks = course.get("weeks")
+    if (not isinstance(weeks, list) or len(weeks) != 14
+            or {w.get("week") for w in weeks} != set(range(1, 15))
+            or any(w.get("active_distribution_version") != ACTIVE_VERSION
+                   or w.get("status") != "PREPARED_RC9_NOT_PUBLISHED"
+                   or w.get("active_distribution_languages") != ["EN_GB"]
+                   for w in weeks)):
+        raise ValueError("Current fourteen-week course map differs")
+    return {"prepared_version": ACTIVE_VERSION, "publication_status": ACTIVE_STATUS,
+            "last_published_classroom_version": "3.0.0-rc.8", "qualification": "NOT_FINAL"}
 
 
 def object_targets(obj):
@@ -107,6 +179,7 @@ def object_targets(obj):
 
 
 def run(root=ROOT):
+    metadata = active_metadata(root)
     registry = rc.strict_json((root / "metadata/student-selection.json").read_bytes())
     plan = rc.strict_json((root / "90_RELEASES/FULL_COLLECTION_PLAN.json").read_bytes())
     objects = {o["object_id"]: o for o in registry["objects"]}
@@ -134,9 +207,11 @@ def run(root=ROOT):
     total_links = 0
     zip_links = 0
     records = []
+    active_records = []
     for name in scope:
         file = rc.checked_path(root, name)
         text = file.read_text(encoding="utf-8")
+        active_records.append(active_route(root, name, text))
         if version not in text or "Qualification and classroom acceptance remain pending." not in text:
             raise ValueError("Current edition/status missing from navigation: " + name)
         actual_list = targets(root, name, text)
@@ -212,8 +287,18 @@ def run(root=ROOT):
         if not required <= actual:
             raise ValueError("Required current resource missing from navigation: " + name + " " + repr(sorted(required - actual)))
         records.append({"path": name, "local_links": len(actual_list), "zip_links": len(zips), "sha256": rc.sha(file.read_bytes())})
-    return {"schema": "webtech-current-navigation-qa/v1", "status": "PASS_CURRENT_NAVIGATION_STATIC_ONLY",
-            "distribution_version": version, "scope_files": len(scope), "week_readmes": 14, "object_en_readmes": 28,
+    frontdoors = ["README.md", "index.html", "current-outline.md"]
+    frontdoors.extend(p.relative_to(root).as_posix() for p in sorted((root / "ENTRY").glob("*.html")))
+    for name in frontdoors:
+        text = rc.checked_path(root, name).read_text(encoding="utf-8")
+        active_records.append(active_route(root, name, text))
+        targets(root, name, text, allow_external=True)
+    return {"schema": "webtech-current-navigation-qa/v2", "status": "PASS_CURRENT_NAVIGATION_STATIC_ONLY",
+            "distribution_version": ACTIVE_VERSION, "publication_status": ACTIVE_STATUS,
+            "source_selection_version": version, "current_portal": ACTIVE_PORTAL,
+            "metadata": metadata,
+            "active_frontdoors": len(active_records), "active_records": active_records,
+            "scope_files": len(scope), "week_readmes": 14, "object_en_readmes": 28,
             "parent_object_readmes": 28, "week_html_wrappers": 7, "parent_html_wrappers": 14, "object_en_html_wrappers": 14,
             "all_weeks_readme": 1, "additional_global_frontdoors": len(GLOBAL_PATHS), "preserved_predecessors": len(archive["files"]), "local_links": total_links,
             "selected_zip_link_occurrences": zip_links, "unselected_recommended_zip_links": 0, "records": records,

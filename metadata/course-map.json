@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
   "academic_year": "2026-2027",
-  "repository_version": "2.0.1",
-  "public_boolean_note": "true means visible in the public repository; Weeks 03–14 remain WIP previews rather than qualified releases",
+  "repository_version": "3.0.0-rc.9",
+  "public_boolean_note": "true means the teaching source is visible in the repository; the prepared RC9 classroom successor is not yet published and remains NOT_FINAL",
   "weeks": [
     {
       "week": 1,
@@ -15,10 +15,24 @@
         "RO",
         "EN_GB"
       ],
-      "status": "EN_RELEASE_CANDIDATE_RO_LEGACY_ALTERNATIVE",
+      "status": "PREPARED_RC9_NOT_PUBLISHED",
       "active_distribution_languages": [
         "EN_GB"
-      ]
+      ],
+      "active_distribution_version": "3.0.0-rc.9",
+      "classroom_execution": "Node modules and real local HTTP exchanges",
+      "required_microprojects": [
+        {
+          "id": "P01",
+          "title": "HTTP exchange classifier"
+        },
+        {
+          "id": "P02",
+          "title": "Precise greeting resource"
+        }
+      ],
+      "prerequisites": "Prepared reference Node runtime and the previous week; follow any unit-specific prerequisites in the active guide.",
+      "completion_evidence": "Personal observed results for every required microproject and one reviewed private evidence PDF."
     },
     {
       "week": 2,
@@ -31,10 +45,28 @@
         "RO",
         "EN_GB"
       ],
-      "status": "EN_RELEASE_CANDIDATE_RO_LEGACY_ALTERNATIVE",
+      "status": "PREPARED_RC9_NOT_PUBLISHED",
       "active_distribution_languages": [
         "EN_GB"
-      ]
+      ],
+      "active_distribution_version": "3.0.0-rc.9",
+      "classroom_execution": "CSS source checks; visual and keyboard observations in the browser",
+      "required_microprojects": [
+        {
+          "id": "P01",
+          "title": "Responsive relationship reconstruction"
+        },
+        {
+          "id": "P02",
+          "title": "Intrinsic sizing and readable content"
+        },
+        {
+          "id": "P03",
+          "title": "Keyboard focus and motion preference"
+        }
+      ],
+      "prerequisites": "Prepared reference Node runtime and the previous week; follow any unit-specific prerequisites in the active guide.",
+      "completion_evidence": "Personal observed results for every required microproject and one reviewed private evidence PDF."
     },
     {
       "week": 3,
@@ -45,7 +77,29 @@
       "public": true,
       "languages": [
         "EN_GB"
-      ]
+      ],
+      "status": "PREPARED_RC9_NOT_PUBLISHED",
+      "active_distribution_languages": [
+        "EN_GB"
+      ],
+      "active_distribution_version": "3.0.0-rc.9",
+      "classroom_execution": "Node functions, fixed data and object-identity checks",
+      "required_microprojects": [
+        {
+          "id": "P01",
+          "title": "Fresh task summary"
+        },
+        {
+          "id": "P02",
+          "title": "Declarative leaf rule"
+        },
+        {
+          "id": "P03",
+          "title": "Defensive event normaliser"
+        }
+      ],
+      "prerequisites": "Prepared reference Node runtime and the previous week; follow any unit-specific prerequisites in the active guide.",
+      "completion_evidence": "Personal observed results for every required microproject and one reviewed private evidence PDF."
     },
     {
       "week": 4,
@@ -56,7 +110,29 @@
       "public": true,
       "languages": [
         "EN_GB"
-      ]
+      ],
+      "status": "PREPARED_RC9_NOT_PUBLISHED",
+      "active_distribution_languages": [
+        "EN_GB"
+      ],
+      "active_distribution_version": "3.0.0-rc.9",
+      "classroom_execution": "Node Promise behaviour and a minimal DOM interface",
+      "required_microprojects": [
+        {
+          "id": "P01",
+          "title": "Concurrent request initiation"
+        },
+        {
+          "id": "P02",
+          "title": "Delegated nested click"
+        },
+        {
+          "id": "P03",
+          "title": "Bounded retry classification"
+        }
+      ],
+      "prerequisites": "Prepared reference Node runtime and the previous week; follow any unit-specific prerequisites in the active guide.",
+      "completion_evidence": "Personal observed results for every required microproject and one reviewed private evidence PDF."
     },
     {
       "week": 5,
@@ -67,7 +143,29 @@
       "public": true,
       "languages": [
         "EN_GB"
-      ]
+      ],
+      "status": "PREPARED_RC9_NOT_PUBLISHED",
+      "active_distribution_languages": [
+        "EN_GB"
+      ],
+      "active_distribution_version": "3.0.0-rc.9",
+      "classroom_execution": "Node functions and real local HTTP; injected logger callbacks",
+      "required_microprojects": [
+        {
+          "id": "P01",
+          "title": "Closed task-body boundary"
+        },
+        {
+          "id": "P02",
+          "title": "Exactly-once terminal logger"
+        },
+        {
+          "id": "P03",
+          "title": "Public outcome mapping"
+        }
+      ],
+      "prerequisites": "Prepared reference Node runtime and the previous week; follow any unit-specific prerequisites in the active guide.",
+      "completion_evidence": "Personal observed results for every required microproject and one reviewed private evidence PDF."
     },
     {
       "week": 6,
@@ -78,7 +176,29 @@
       "public": true,
       "languages": [
         "EN_GB"
-      ]
+      ],
+      "status": "PREPARED_RC9_NOT_PUBLISHED",
+      "active_distribution_languages": [
+        "EN_GB"
+      ],
+      "active_distribution_version": "3.0.0-rc.9",
+      "classroom_execution": "Built-in SQLite with real memory/file databases and an asynchronous adapter",
+      "required_microprojects": [
+        {
+          "id": "P01",
+          "title": "Normal reopen and explicit reset"
+        },
+        {
+          "id": "P02",
+          "title": "Closed query translator"
+        },
+        {
+          "id": "P03",
+          "title": "Awaited reservation persistence"
+        }
+      ],
+      "prerequisites": "Prepared reference Node runtime and the previous week; follow any unit-specific prerequisites in the active guide.",
+      "completion_evidence": "Personal observed results for every required microproject and one reviewed private evidence PDF."
     },
     {
       "week": 7,
@@ -89,7 +209,29 @@
       "public": true,
       "languages": [
         "EN_GB"
-      ]
+      ],
+      "status": "PREPARED_RC9_NOT_PUBLISHED",
+      "active_distribution_languages": [
+        "EN_GB"
+      ],
+      "active_distribution_version": "3.0.0-rc.9",
+      "classroom_execution": "Built-in SQLite joins, transactions and real local HTTP",
+      "required_microprojects": [
+        {
+          "id": "P01",
+          "title": "Junction relationship query"
+        },
+        {
+          "id": "P02",
+          "title": "One owned atomic booking"
+        },
+        {
+          "id": "P03",
+          "title": "Idempotent resource response"
+        }
+      ],
+      "prerequisites": "Prepared reference Node runtime and the previous week; follow any unit-specific prerequisites in the active guide.",
+      "completion_evidence": "Personal observed results for every required microproject and one reviewed private evidence PDF."
     },
     {
       "week": 8,
@@ -100,7 +242,29 @@
       "public": true,
       "languages": [
         "EN_GB"
-      ]
+      ],
+      "status": "PREPARED_RC9_NOT_PUBLISHED",
+      "active_distribution_languages": [
+        "EN_GB"
+      ],
+      "active_distribution_version": "3.0.0-rc.9",
+      "classroom_execution": "JavaScript function models; React companion checked separately",
+      "required_microprojects": [
+        {
+          "id": "P01",
+          "title": "Reading queue: immutable trimmed addition"
+        },
+        {
+          "id": "P02",
+          "title": "Component decomposition: derived capacity"
+        },
+        {
+          "id": "P03",
+          "title": "Effects: permission to publish"
+        }
+      ],
+      "prerequisites": "Prepared reference Node runtime and the previous week; follow any unit-specific prerequisites in the active guide.",
+      "completion_evidence": "Personal observed results for every required microproject and one reviewed private evidence PDF."
     },
     {
       "week": 9,
@@ -111,7 +275,29 @@
       "public": true,
       "languages": [
         "EN_GB"
-      ]
+      ],
+      "status": "PREPARED_RC9_NOT_PUBLISHED",
+      "active_distribution_languages": [
+        "EN_GB"
+      ],
+      "active_distribution_version": "3.0.0-rc.9",
+      "classroom_execution": "JavaScript function models; React companion checked separately",
+      "required_microprojects": [
+        {
+          "id": "P01",
+          "title": "Routed notes: URL identity"
+        },
+        {
+          "id": "P02",
+          "title": "CRUD workspace: authoritative publication"
+        },
+        {
+          "id": "P03",
+          "title": "Deep link: delivery classification"
+        }
+      ],
+      "prerequisites": "Prepared reference Node runtime and the previous week; follow any unit-specific prerequisites in the active guide.",
+      "completion_evidence": "Personal observed results for every required microproject and one reviewed private evidence PDF."
     },
     {
       "week": 10,
@@ -122,7 +308,29 @@
       "public": true,
       "languages": [
         "EN_GB"
-      ]
+      ],
+      "status": "PREPARED_RC9_NOT_PUBLISHED",
+      "active_distribution_languages": [
+        "EN_GB"
+      ],
+      "active_distribution_version": "3.0.0-rc.9",
+      "classroom_execution": "JavaScript function models; React companion checked separately",
+      "required_microprojects": [
+        {
+          "id": "P01",
+          "title": "Shared state: pure reducer"
+        },
+        {
+          "id": "P02",
+          "title": "Notifications: latest refresh wins"
+        },
+        {
+          "id": "P03",
+          "title": "Architecture: capability before cost"
+        }
+      ],
+      "prerequisites": "Prepared reference Node runtime and the previous week; follow any unit-specific prerequisites in the active guide.",
+      "completion_evidence": "Personal observed results for every required microproject and one reviewed private evidence PDF."
     },
     {
       "week": 11,
@@ -133,7 +341,29 @@
       "public": true,
       "languages": [
         "EN_GB"
-      ]
+      ],
+      "status": "PREPARED_RC9_NOT_PUBLISHED",
+      "active_distribution_languages": [
+        "EN_GB"
+      ],
+      "active_distribution_version": "3.0.0-rc.9",
+      "classroom_execution": "JavaScript policy models; no complete login service",
+      "required_microprojects": [
+        {
+          "id": "P01",
+          "title": "Authentication transfer: trusted principal"
+        },
+        {
+          "id": "P02",
+          "title": "Authorisation: owner versus role"
+        },
+        {
+          "id": "P03",
+          "title": "CORS and CSRF: two independent decisions"
+        }
+      ],
+      "prerequisites": "Prepared reference Node runtime and the previous week; follow any unit-specific prerequisites in the active guide.",
+      "completion_evidence": "Personal observed results for every required microproject and one reviewed private evidence PDF."
     },
     {
       "week": 12,
@@ -144,7 +374,29 @@
       "public": true,
       "languages": [
         "EN_GB"
-      ]
+      ],
+      "status": "PREPARED_RC9_NOT_PUBLISHED",
+      "active_distribution_languages": [
+        "EN_GB"
+      ],
+      "active_distribution_version": "3.0.0-rc.9",
+      "classroom_execution": "JavaScript lifecycle/correlation models; no Redis queue or socket delivery",
+      "required_microprojects": [
+        {
+          "id": "P01",
+          "title": "HTTP/WebSocket: recipient ownership"
+        },
+        {
+          "id": "P02",
+          "title": "Queue: terminal state does not regress"
+        },
+        {
+          "id": "P03",
+          "title": "Dispatcher: correlation and single settlement"
+        }
+      ],
+      "prerequisites": "Prepared reference Node runtime and the previous week; follow any unit-specific prerequisites in the active guide.",
+      "completion_evidence": "Personal observed results for every required microproject and one reviewed private evidence PDF."
     },
     {
       "week": 13,
@@ -155,7 +407,29 @@
       "public": true,
       "languages": [
         "EN_GB"
-      ]
+      ],
+      "status": "PREPARED_RC9_NOT_PUBLISHED",
+      "active_distribution_languages": [
+        "EN_GB"
+      ],
+      "active_distribution_version": "3.0.0-rc.9",
+      "classroom_execution": "JavaScript message/routing models; native Worker and Service Worker observations are separate",
+      "required_microprojects": [
+        {
+          "id": "P01",
+          "title": "Worker reply: own result and current ID"
+        },
+        {
+          "id": "P02",
+          "title": "Service Worker: controlled routing predicate"
+        },
+        {
+          "id": "P03",
+          "title": "Composable shell: source/origin/generation gate"
+        }
+      ],
+      "prerequisites": "Prepared reference Node runtime and the previous week; follow any unit-specific prerequisites in the active guide.",
+      "completion_evidence": "Personal observed results for every required microproject and one reviewed private evidence PDF."
     },
     {
       "week": 14,
@@ -166,7 +440,31 @@
       "public": true,
       "languages": [
         "EN_GB"
-      ]
+      ],
+      "status": "PREPARED_RC9_NOT_PUBLISHED",
+      "active_distribution_languages": [
+        "EN_GB"
+      ],
+      "active_distribution_version": "3.0.0-rc.9",
+      "classroom_execution": "Actual local service/repository for P01; evidence-decision model for P03",
+      "required_microprojects": [
+        {
+          "id": "P01",
+          "title": "Regression: actual persisted follow-up"
+        },
+        {
+          "id": "P03",
+          "title": "Production evidence: fail/unknown/pass gate"
+        }
+      ],
+      "prerequisites": "Prepared reference Node runtime and the previous week; follow any unit-specific prerequisites in the active guide.",
+      "completion_evidence": "Personal observed results for every required microproject and one reviewed private evidence PDF."
     }
-  ]
+  ],
+  "publication_status": "PREPARED_NOT_PUBLISHED",
+  "general_qualification": "NOT_FINAL",
+  "last_published_classroom_version": "3.0.0-rc.8",
+  "retained_source_selection_version": "3.0.0-rc.6",
+  "historical_repository_baseline": "2.0.1",
+  "student_portal": "00_START_HERE/STUDENT_CLASSROOM_RC9/README.md"
 }

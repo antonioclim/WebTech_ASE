@@ -1,5 +1,19 @@
 # Changelog
 
+## 3.0.0-rc.9 — prepared classroom successor (2026-10-06)
+
+Status: **PREPARED_NOT_PUBLISHED**, **NOT_FINAL**. No RC9 release or Actions run is claimed by this source record. The last published classroom prerelease remains RC8. The exact implemented scope and finite verification observations are recorded in the RC9 derivation and final audit report.
+
+- Put the prepared RC9 student portal before retained RC6 source routes in the root index, object entries, week wrappers and setup guidance. Label old whole-source downloads as historical advanced references, including the stale C07 registry warning.
+- Prepare corrected classroom derivations, clearer step-by-step guides and evidence-form feedback without overwriting the selected historical source carriers or previously published assets.
+- Add an owner-only RC9 draft-prerelease procedure with explicit preview, the exact reviewed source SHA, closed failure handling for remote lookups, atomic new-tag creation and tag verification.
+- Bring the historical weekly publisher to the same source-binding and refusal policy. Keep every workflow manual-only.
+- Distinguish current prepared metadata, last published RC8, retained RC6 source selection and the frozen repository baseline. Keep absent native, Moodle, workload and owner observations pending.
+
+## Historical record
+
+The entries below describe their original preparation stages. Words such as “final”, “published” or “current” in a historical entry do not qualify the prepared RC9 classroom edition. Frozen baseline version 2.0.1 is historical repository provenance, not the current classroom distribution version.
+
 ## Unreleased — repository construction continues
 
 - Prepared Weeks 08–14 as public-only student WIP previews with object ZIPs and byte-identical `PACKAGE_EXACT` trees.
