@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check the prepared RC9 portal and retained RC6 source navigation wrappers.
+"""Check the published RC9 portal and retained RC6 source navigation wrappers.
 
 This is a static route and preservation check. It does not run applications,
 render browsers, qualify native platforms or certify the teaching workload.
@@ -23,10 +23,11 @@ import release_contract as rc
 ARCHIVE = "90_ARCHIVE/MAIN_4eea8de_NAVIGATION"
 BASELINE = "4eea8de416cb03cf4f718fb802f868a391abb192"
 ACTIVE_VERSION = "3.0.0-rc.9"
-ACTIVE_STATUS = "PREPARED_NOT_PUBLISHED"
-ACTIVE_PORTAL = "00_START_HERE/STUDENT_CLASSROOM_RC9/README.md"
-ACTIVE_NOTES = "90_RELEASES/NOTES_CLASSROOM_RC9.md"
+ACTIVE_STATUS = "PUBLISHED_PRERELEASE"
+ACTIVE_PORTAL = "00_START_HERE/STUDENT_CLASSROOM_PUBLISHED/README.md"
+ACTIVE_NOTES = "90_RELEASES/RC9_PUBLICATION.md"
 ACTIVE_PROCEDURE = "00_TOOLS/maintainer/CLASSROOM_RC9_PUBLISHING.md"
+PUBLICATION_DATE = "2026-10-06"
 GLOBAL_PATHS = {
     "90_RELEASES/README.md", "90_RELEASES/HISTORICAL_OBJECTS.md",
     "00_START_HERE/README.md", "00_START_HERE/WEEKS_01_14_DOWNLOADS.md",
@@ -107,10 +108,10 @@ def active_route(root, name, text):
         raise ValueError("One collapsed historical source section is required: " + name)
     prefix, retained = text.split(marker, 1)
     if ACTIVE_VERSION not in prefix or ACTIVE_STATUS not in prefix:
-        raise ValueError("Prepared RC9 status must precede retained source: " + name)
+        raise ValueError("Published RC9 status must precede retained source: " + name)
     if ("historical RC6 source" not in prefix
             or "stale canonical registry hashes" not in prefix
-            or "last published classroom prerelease is RC8" not in prefix):
+            or "last published classroom prerelease is RC9" not in prefix):
         raise ValueError("Current/historical/published distinction missing: " + name)
     if "advanced, optional" not in retained.split("</summary>", 1)[0]:
         raise ValueError("Historical source summary must be explicit: " + name)
@@ -118,51 +119,58 @@ def active_route(root, name, text):
     # before any retained source ZIP, original full application or old guide.
     current = set(targets(root, name, prefix, allow_external=True))
     if not {ACTIVE_PORTAL, ACTIVE_NOTES, ACTIVE_PROCEDURE} <= current:
-        raise ValueError("Prepared RC9 portal or reviewed documentation absent: " + name)
+        raise ValueError("Published RC9 portal or reviewed documentation absent: " + name)
     if any(n.endswith(".zip") or n.endswith(".zip.sha256")
            or "/SOURCE_EXACT/" in n or "/PACKAGE_EXACT/" in n for n in current):
         raise ValueError("Historical payload offered before active portal: " + name)
-    if re.search(r"https://[^\s\"'<>)]*/releases/(?:tag|download)/classroom-en-gb-v3\.0\.0-rc\.9", prefix):
-        raise ValueError("Prepared RC9 frontdoor invents a published release URL: " + name)
-    return {"path": name, "prepared_version": ACTIVE_VERSION,
+    if ("PREPARED_NOT_PUBLISHED" in prefix
+            or re.search(r"https://[^\s\"'<>)]*/releases/(?:tag|download)/classroom-en-gb-v3\.0\.0-rc\.[1-8](?:[^0-9]|$)", prefix)):
+        raise ValueError("Active RC9 frontdoor recommends an obsolete publication: " + name)
+    return {"path": name, "published_version": ACTIVE_VERSION,
             "publication_status": ACTIVE_STATUS, "portal": ACTIVE_PORTAL,
             "historical_source_collapsed": True, "active_local_links": len(current)}
 
 
 def active_metadata(root):
-    """Keep source-preparation metadata distinct from public release identity."""
+    """Bind published metadata to RC9 without claiming final qualification."""
     citation = rc.unique_yaml((root / "CITATION.cff").read_text(encoding="utf-8"))
     metadata = rc.unique_yaml((root / "metadata/repository-metadata.yml").read_text(encoding="utf-8"))
     course = rc.strict_json((root / "metadata/course-map.json").read_bytes())
     code = rc.strict_json((root / "codemeta.json").read_bytes())
-    if (citation.get("version") != ACTIVE_VERSION or "date-released" in citation
-            or ACTIVE_STATUS not in citation.get("message", "")):
-        raise ValueError("Prepared citation must not invent a release date")
+    if (citation.get("version") != ACTIVE_VERSION
+            or citation.get("date-released") != PUBLICATION_DATE
+            or ACTIVE_STATUS not in citation.get("message", "")
+            or "NOT_FINAL" not in citation.get("message", "")):
+        raise ValueError("Published citation identity, date or qualification differ")
     repository = metadata.get("repository", {})
     if (repository.get("version") != ACTIVE_VERSION
             or repository.get("status") != ACTIVE_STATUS
-            or repository.get("last_published_classroom_version") != "3.0.0-rc.8"
+            or repository.get("last_published_classroom_version") != ACTIVE_VERSION
+            or repository.get("general_qualification") != "NOT_FINAL"
             or repository.get("student_portal") != ACTIVE_PORTAL):
         raise ValueError("Current repository metadata identity/status differ")
     if (course.get("repository_version") != ACTIVE_VERSION
             or course.get("publication_status") != ACTIVE_STATUS
-            or course.get("last_published_classroom_version") != "3.0.0-rc.8"
+            or course.get("last_published_classroom_version") != ACTIVE_VERSION
             or course.get("student_portal") != ACTIVE_PORTAL
             or course.get("general_qualification") != "NOT_FINAL"):
         raise ValueError("Current course-map identity/status differ")
     if (code.get("version") != ACTIVE_VERSION or code.get("developmentStatus") != ACTIVE_STATUS
-            or "datePublished" in code):
-        raise ValueError("Prepared CodeMeta must not invent publication")
+            or code.get("datePublished") != PUBLICATION_DATE
+            or "NOT_FINAL" not in code.get("description", "")):
+        raise ValueError("Published CodeMeta identity, date or qualification differ")
     weeks = course.get("weeks")
     if (not isinstance(weeks, list) or len(weeks) != 14
+            or any(not isinstance(w, dict) or type(w.get("week")) is not int for w in weeks)
             or {w.get("week") for w in weeks} != set(range(1, 15))
             or any(w.get("active_distribution_version") != ACTIVE_VERSION
-                   or w.get("status") != "PREPARED_RC9_NOT_PUBLISHED"
+                   or w.get("status") != "PUBLISHED_RC9_PRERELEASE"
                    or w.get("active_distribution_languages") != ["EN_GB"]
                    for w in weeks)):
         raise ValueError("Current fourteen-week course map differs")
-    return {"prepared_version": ACTIVE_VERSION, "publication_status": ACTIVE_STATUS,
-            "last_published_classroom_version": "3.0.0-rc.8", "qualification": "NOT_FINAL"}
+    return {"published_version": ACTIVE_VERSION, "publication_status": ACTIVE_STATUS,
+            "last_published_classroom_version": ACTIVE_VERSION,
+            "publication_date": PUBLICATION_DATE, "qualification": "NOT_FINAL"}
 
 
 def object_targets(obj):
@@ -293,7 +301,7 @@ def run(root=ROOT):
         text = rc.checked_path(root, name).read_text(encoding="utf-8")
         active_records.append(active_route(root, name, text))
         targets(root, name, text, allow_external=True)
-    return {"schema": "webtech-current-navigation-qa/v2", "status": "PASS_CURRENT_NAVIGATION_STATIC_ONLY",
+    return {"schema": "webtech-current-navigation-qa/v3", "status": "PASS_CURRENT_NAVIGATION_STATIC_ONLY",
             "distribution_version": ACTIVE_VERSION, "publication_status": ACTIVE_STATUS,
             "source_selection_version": version, "current_portal": ACTIVE_PORTAL,
             "metadata": metadata,

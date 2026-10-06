@@ -1,0 +1,74 @@
+{
+  "schema": "webtech-classroom-publication/v1",
+  "version": "3.0.0-rc.9",
+  "status": "PUBLISHED_PRERELEASE",
+  "qualificationVerdict": "NOT_FINAL",
+  "source_commit": "60d8f8b86eec812a79db92860dd6d13f16d91f5f",
+  "release_id": 404427362,
+  "tag": "classroom-en-gb-v3.0.0-rc.9",
+  "release_url": "https://github.com/antonioclim/WebTech_ASE/releases/tag/classroom-en-gb-v3.0.0-rc.9",
+  "published_at": "2026-10-06T07:29:24Z",
+  "draft": false,
+  "prerelease": true,
+  "package_id": "c8be1c0dfaa3dfb56ca8c7868d961654859f1e87ebb35b8511e0ea4773e77dd7",
+  "assets": [
+    {
+      "id": 614813352,
+      "name": "WEBTECH_ASE_EN_GB_CLASSROOM_v3.0.0-rc.9.zip",
+      "bytes": 3933082,
+      "sha256": "fe2f187ae106b81319e3a000f592f464ddec159145ef50ea322c1c714b32d0ee",
+      "download_url": "https://github.com/antonioclim/WebTech_ASE/releases/download/classroom-en-gb-v3.0.0-rc.9/WEBTECH_ASE_EN_GB_CLASSROOM_v3.0.0-rc.9.zip"
+    },
+    {
+      "id": 614813358,
+      "name": "WEBTECH_ASE_EN_GB_CLASSROOM_v3.0.0-rc.9.zip.sha256",
+      "bytes": 110,
+      "sha256": "96a8d22b0b7ce897ff1fa319aa356a06200b8f89e56fc1bec684ad1c240194cb",
+      "download_url": "https://github.com/antonioclim/WebTech_ASE/releases/download/classroom-en-gb-v3.0.0-rc.9/WEBTECH_ASE_EN_GB_CLASSROOM_v3.0.0-rc.9.zip.sha256"
+    },
+    {
+      "id": 614813355,
+      "name": "SHA256SUMS.txt",
+      "bytes": 227,
+      "sha256": "738c1dd6f45657182e3ffe2c6da461b6838c463e2d0ae93413df2e441cf4c040",
+      "download_url": "https://github.com/antonioclim/WebTech_ASE/releases/download/classroom-en-gb-v3.0.0-rc.9/SHA256SUMS.txt"
+    }
+  ],
+  "workflow": {
+    "id": 37428880875,
+    "url": "https://github.com/antonioclim/WebTech_ASE/actions/runs/37428880875",
+    "conclusion": "success",
+    "tests": {
+      "defined": 40,
+      "passed": 39,
+      "skipped": 1,
+      "failures": 0,
+      "errors": 0
+    },
+    "skip_reason": "Set WEBTECH_RC9_EXPRESS_NODE_MODULES to existing exact Express 5.1.0 dependencies; no installation performed"
+  },
+  "qualification_gates": {
+    "local_integrity": "pending",
+    "reference_runtime": "pending",
+    "headless_browser": "pending",
+    "native_windows": "pending",
+    "native_macos": "pending",
+    "manual_browser": "pending",
+    "word": "pending",
+    "moodle_live": "pending",
+    "human_pilot": "pending",
+    "owner_acceptance": "pending"
+  },
+  "verification": {
+    "observation_context": "Public-download observations recorded after publication on 6 October 2026: all three public attachments returned HTTP 200 and matched the previously reviewed local assets byte for byte; the complete ZIP CRC, safe paths, 1344-file inventory and extracted collection verifier were checked. These are the previous publication-verification observations, not a new rerun during the documentation update.",
+    "assets_byte_identity": true,
+    "zip_crc": true,
+    "file_count": 1344,
+    "collection_verifier": "PASS_INITIAL_BYTES_ONLY"
+  },
+  "immutable_distribution": {
+    "source_commit": "60d8f8b86eec812a79db92860dd6d13f16d91f5f",
+    "tag": "classroom-en-gb-v3.0.0-rc.9",
+    "reproduction_note": "Reproduce the published assets from a separate checkout at the exact published commit and tag. The candidate plan, builder templates and derivation recipes at that commit record prepublication preparation and remain unchanged. Updated main contains postpublication navigation and receipts; building from that different source may produce different bytes. Preserve the existing tag and three attachments; this policy does not assert that GitHub release immutability is enabled."
+  }
+}

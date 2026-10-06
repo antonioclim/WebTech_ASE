@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "academic_year": "2026-2027",
   "repository_version": "3.0.0-rc.9",
-  "public_boolean_note": "true means the teaching source is visible in the repository; the prepared RC9 classroom successor is not yet published and remains NOT_FINAL",
+  "public_boolean_note": "true means the teaching source is visible in the repository; RC9 is a published classroom prerelease with general qualification NOT_FINAL",
   "weeks": [
     {
       "week": 1,
@@ -15,7 +15,7 @@
         "RO",
         "EN_GB"
       ],
-      "status": "PREPARED_RC9_NOT_PUBLISHED",
+      "status": "PUBLISHED_RC9_PRERELEASE",
       "active_distribution_languages": [
         "EN_GB"
       ],
@@ -45,7 +45,7 @@
         "RO",
         "EN_GB"
       ],
-      "status": "PREPARED_RC9_NOT_PUBLISHED",
+      "status": "PUBLISHED_RC9_PRERELEASE",
       "active_distribution_languages": [
         "EN_GB"
       ],
@@ -78,7 +78,7 @@
       "languages": [
         "EN_GB"
       ],
-      "status": "PREPARED_RC9_NOT_PUBLISHED",
+      "status": "PUBLISHED_RC9_PRERELEASE",
       "active_distribution_languages": [
         "EN_GB"
       ],
@@ -111,7 +111,7 @@
       "languages": [
         "EN_GB"
       ],
-      "status": "PREPARED_RC9_NOT_PUBLISHED",
+      "status": "PUBLISHED_RC9_PRERELEASE",
       "active_distribution_languages": [
         "EN_GB"
       ],
@@ -144,7 +144,7 @@
       "languages": [
         "EN_GB"
       ],
-      "status": "PREPARED_RC9_NOT_PUBLISHED",
+      "status": "PUBLISHED_RC9_PRERELEASE",
       "active_distribution_languages": [
         "EN_GB"
       ],
@@ -177,7 +177,7 @@
       "languages": [
         "EN_GB"
       ],
-      "status": "PREPARED_RC9_NOT_PUBLISHED",
+      "status": "PUBLISHED_RC9_PRERELEASE",
       "active_distribution_languages": [
         "EN_GB"
       ],
@@ -210,7 +210,7 @@
       "languages": [
         "EN_GB"
       ],
-      "status": "PREPARED_RC9_NOT_PUBLISHED",
+      "status": "PUBLISHED_RC9_PRERELEASE",
       "active_distribution_languages": [
         "EN_GB"
       ],
@@ -243,7 +243,7 @@
       "languages": [
         "EN_GB"
       ],
-      "status": "PREPARED_RC9_NOT_PUBLISHED",
+      "status": "PUBLISHED_RC9_PRERELEASE",
       "active_distribution_languages": [
         "EN_GB"
       ],
@@ -276,7 +276,7 @@
       "languages": [
         "EN_GB"
       ],
-      "status": "PREPARED_RC9_NOT_PUBLISHED",
+      "status": "PUBLISHED_RC9_PRERELEASE",
       "active_distribution_languages": [
         "EN_GB"
       ],
@@ -309,7 +309,7 @@
       "languages": [
         "EN_GB"
       ],
-      "status": "PREPARED_RC9_NOT_PUBLISHED",
+      "status": "PUBLISHED_RC9_PRERELEASE",
       "active_distribution_languages": [
         "EN_GB"
       ],
@@ -342,7 +342,7 @@
       "languages": [
         "EN_GB"
       ],
-      "status": "PREPARED_RC9_NOT_PUBLISHED",
+      "status": "PUBLISHED_RC9_PRERELEASE",
       "active_distribution_languages": [
         "EN_GB"
       ],
@@ -375,7 +375,7 @@
       "languages": [
         "EN_GB"
       ],
-      "status": "PREPARED_RC9_NOT_PUBLISHED",
+      "status": "PUBLISHED_RC9_PRERELEASE",
       "active_distribution_languages": [
         "EN_GB"
       ],
@@ -408,7 +408,7 @@
       "languages": [
         "EN_GB"
       ],
-      "status": "PREPARED_RC9_NOT_PUBLISHED",
+      "status": "PUBLISHED_RC9_PRERELEASE",
       "active_distribution_languages": [
         "EN_GB"
       ],
@@ -441,7 +441,7 @@
       "languages": [
         "EN_GB"
       ],
-      "status": "PREPARED_RC9_NOT_PUBLISHED",
+      "status": "PUBLISHED_RC9_PRERELEASE",
       "active_distribution_languages": [
         "EN_GB"
       ],
@@ -461,10 +461,12 @@
       "completion_evidence": "Personal observed results for every required microproject and one reviewed private evidence PDF."
     }
   ],
-  "publication_status": "PREPARED_NOT_PUBLISHED",
+  "publication_status": "PUBLISHED_PRERELEASE",
   "general_qualification": "NOT_FINAL",
-  "last_published_classroom_version": "3.0.0-rc.8",
+  "last_published_classroom_version": "3.0.0-rc.9",
   "retained_source_selection_version": "3.0.0-rc.6",
   "historical_repository_baseline": "2.0.1",
-  "student_portal": "00_START_HERE/STUDENT_CLASSROOM_RC9/README.md"
+  "student_portal": "00_START_HERE/STUDENT_CLASSROOM_PUBLISHED/README.md",
+  "publication_receipt": "90_RELEASES/CLASSROOM_RC9_PUBLICATION.json",
+  "published_at": "2026-10-06T07:29:24Z"
 }

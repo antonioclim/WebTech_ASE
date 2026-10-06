@@ -3,8 +3,8 @@ repository:
   name: WebTech_ASE
   default_branch: main
   visibility: public
-  description: 'Web Technologies teaching repository for ASE: setup, courses, seminars,
-    offline student kits and evidence-based activities.'
+  description: 'Web Technologies teaching repository for ASE: setup, courses, seminars, offline
+    student kits and evidence-based activities.'
   website: https://antonioclim.github.io/WebTech_ASE/
   topics:
   - web-technologies
@@ -17,15 +17,18 @@ repository:
   - teaching
   - computer-science-education
   - ase
-  status: PREPARED_NOT_PUBLISHED
+  status: PUBLISHED_PRERELEASE
   automation_mode: manual-only
   identity_state: current-source-controls-with-preserved-baseline
   version: 3.0.0-rc.9
   general_qualification: NOT_FINAL
-  last_published_classroom_version: 3.0.0-rc.8
+  last_published_classroom_version: 3.0.0-rc.9
   retained_source_selection_version: 3.0.0-rc.6
   historical_repository_baseline: 2.0.1
-  student_portal: 00_START_HERE/STUDENT_CLASSROOM_RC9/README.md
+  student_portal: 00_START_HERE/STUDENT_CLASSROOM_PUBLISHED/README.md
+  publication_receipt: 90_RELEASES/CLASSROOM_RC9_PUBLICATION.json
+  published_at: '2026-10-06T07:29:24Z'
+  classroom_release_url: https://github.com/antonioclim/WebTech_ASE/releases/tag/classroom-en-gb-v3.0.0-rc.9
 course:
   title: Web Technologies
   institution: Bucharest University of Economic Studies (ASE)

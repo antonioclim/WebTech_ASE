@@ -1,12 +1,12 @@
 # Support for the English classroom materials
 
-The prepared classroom successor is **3.0.0-rc.9 — PREPARED_NOT_PUBLISHED**. The last published classroom prerelease is RC8. Use the [current student portal](00_START_HERE/STUDENT_CLASSROOM_RC9/README.md) to identify the edition you actually downloaded. Support covers the active English course and seminar routes for Weeks 01–14 and the setup materials. Retained RC6 whole-source applications are optional historical references with separate known limitations.
+The published classroom version is **3.0.0-rc.9 — PUBLISHED_PRERELEASE**. The last published classroom prerelease is RC9; general qualification remains NOT_FINAL. Use the [current student portal](00_START_HERE/STUDENT_CLASSROOM_PUBLISHED/README.md) to identify the edition you actually downloaded. Support covers the active English course and seminar routes for Weeks 01–14 and the setup materials. Retained RC6 whole-source applications are optional historical references with separate known limitations.
 
 Before reporting a technical problem:
 
 1. Extract the entire classroom ZIP into a new writable folder. Open its `index.html` and follow `START_HERE.html`.
 2. Run the collection's integrity verifier in the mode appropriate to an unedited package or permitted learner edits. Record the exact command and actual output; do not represent an intentional initial TODO result as a completed implementation.
-3. Record the collection version, unit code such as `C09` or `S06` and package identity. State whether you used RC8, the prepared RC9 asset or an older whole-source reference.
+3. Record the collection version, unit code such as `C09` or `S06` and package identity. State whether you used the published RC9 asset, RC8 or an older whole-source reference.
 4. Record the operating system, browser, Node and npm versions. Include the smallest relevant command and its working directory; mention spaces or non-ASCII characters in the path when relevant.
 5. Describe expected behaviour, actual behaviour and the smallest repeatable steps. Copy the relevant error text. A screenshot can supplement the text but should not replace it.
 6. Remove names, student numbers, credentials, cookies, private Moodle content and personal evidence before posting.

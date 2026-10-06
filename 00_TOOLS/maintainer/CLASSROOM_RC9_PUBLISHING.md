@@ -1,3 +1,61 @@
+# Published RC9: reproduction and source maintenance
+
+The owner published [classroom-en-gb-v3.0.0-rc.9](https://github.com/antonioclim/WebTech_ASE/releases/tag/classroom-en-gb-v3.0.0-rc.9) on **6 October 2026 at 07:29:24 UTC**. Release ID `404427362` is a public prerelease, not a draft. Read [the publication receipt](../../90_RELEASES/CLASSROOM_RC9_PUBLICATION.json) and [the factual addendum](../../90_RELEASES/RC9_PUBLICATION.md). General qualification remains `NOT_FINAL`; all ten broad gates remain pending.
+
+For students, use the [published download portal](../../00_START_HERE/STUDENT_CLASSROOM_PUBLISHED/README.md). For maintainers, distinguish the frozen RC9 artifact from subsequent development source. Do not start the RC9 preparation workflow again, delete or move its tag, replace its assets or attach the optional advanced ZIP to its core release.
+
+## Reproduce the exact published artifact
+
+Use Git, Python with the pinned QA dependencies and exact Node `v24.21.0`. Start in a clean local repository checkout. The following commands create a separate worktree at the immutable published commit; they do not change the current branch or operate on GitHub releases. Choose sibling destinations that do not already exist.
+
+```sh
+git worktree add --detach ../webtech-rc9-source 60d8f8b86eec812a79db92860dd6d13f16d91f5f
+cd ../webtech-rc9-source
+git rev-parse HEAD
+node --version
+python -m pip install --requirement 00_TOOLS/qa/requirements.txt
+python 00_TOOLS/publishing/resolve_classroom_rc9.py --plan 90_RELEASES/CLASSROOM_RC9_RELEASE_PLAN.json --asset-dir ../webtech-rc9-reproduction --allow-preview --build --github-output ../webtech-rc9-reproduction-fields.txt
+```
+
+The commit output must be `60d8f8b86eec812a79db92860dd6d13f16d91f5f` and the Node output `v24.21.0`. Stop if either differs or if any command fails. Do not use `--workflow-output` in a local reproduction; it requires a real workflow environment. The resolver checks the frozen source seal and the generated package. Its preview flag permits local preparation and does not publish anything.
+
+Verify the resulting ZIP in PowerShell:
+
+```powershell
+$rc9ZipPath = '../webtech-rc9-reproduction/WEBTECH_ASE_EN_GB_CLASSROOM_v3.0.0-rc.9.zip'
+$rc9ZipExpected = 'fe2f187ae106b81319e3a000f592f464ddec159145ef50ea322c1c714b32d0ee'
+$rc9ZipActual = (Get-FileHash -LiteralPath $rc9ZipPath -Algorithm SHA256).Hash.ToLowerInvariant()
+if ($rc9ZipActual -ne $rc9ZipExpected) { throw 'RC9 ZIP differs from the published artifact. Stop; do not upload it.' }
+'Published RC9 ZIP SHA-256 matches.'
+```
+
+The three expected filenames, byte counts and digests are in the publication receipt. Compare all three outputs before claiming complete reproduction. The published ZIP is **3,933,082 bytes**; its collection package ID is `c8be1c0dfaa3dfb56ca8c7868d961654859f1e87ebb35b8511e0ea4773e77dd7`. GitHub's automatic source archives are not the filtered student package.
+
+Building from a later `main` is not exact RC9 reproduction: its refreshed repository source identity is embedded in generated metadata. The original template, recipes, policies and plans are retained to preserve the historical derivation, not to authorise publication of different bytes under an existing version. Deliver a material artifact correction as a reviewed successor version.
+
+## Check current source maintenance
+
+Run these commands from the current development checkout, with the same pinned QA dependencies and Node reference runtime:
+
+```sh
+python 00_TOOLS/qa/test_publication_controls.py
+python 00_TOOLS/qa/current_navigation.py
+python 00_TOOLS/qa/validate_public_repo.py --strict
+```
+
+These validate the fixed publication receipt, the current local navigation, metadata and whole-source integrity. The receipt records an observed public event; it is not a final-acceptance receipt. Tests refuse changed release identities, asset hashes, boolean or integer types and fabricated qualification. Static validation does not make a live network request or start Actions.
+
+## Optional advanced source and Pages
+
+The retained advanced-source and Pages commands below describe the original preparation snapshot. For an exact historical derivation, run them from the pinned worktree above. The advanced output is separate from the three core release assets. The retained Pages builder still uses the preparation-era banner and RC8 link; do not deploy it unchanged as a current published-RC9 site. A separate reviewed site correction and owner decision are required before deployment. This source update neither configures nor starts Pages.
+
+## Historical preparation procedure
+
+The collapsed text is preserved to explain how the owner prepared and published the artifact. Its future-tense publication statements and workflow start steps are historical and must not be repeated for the existing RC9 identity.
+
+<details>
+<summary>Original RC9 preparation procedure at the published source commit</summary>
+
 # Prepare the remediated RC9 classroom draft prerelease
 
 RC9 is the remediated English classroom successor to RC8. Its version is `3.0.0-rc.9` and its tag is `classroom-en-gb-v3.0.0-rc.9`. It remains a prerelease with the general verdict `NOT_FINAL`. A successful packaging check is scoped evidence; it does not constitute native platform, institutional Moodle, workload or final owner acceptance.
@@ -130,3 +188,5 @@ Read the audit and the final RC9 verification report for observed results. This 
 - [GitHub CLI: API response headers](https://cli.github.com/manual/gh_api)
 - [GitHub CLI: creating a release and verifying its tag](https://cli.github.com/manual/gh_release_create)
 - [GitHub: managing releases](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)
+
+</details>
