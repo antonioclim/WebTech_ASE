@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
   "academic_year": "2026-2027",
-  "repository_version": "3.0.0-rc.9",
-  "public_boolean_note": "true means the teaching source is visible in the repository; RC9 is a published classroom prerelease with general qualification NOT_FINAL",
+  "repository_version": "3.0.0-rc.10",
+  "public_boolean_note": "true means the teaching source is visible in the repository; RC10 is a published classroom prerelease with general qualification NOT_FINAL",
   "weeks": [
     {
       "week": 1,
@@ -15,11 +15,11 @@
         "RO",
         "EN_GB"
       ],
-      "status": "PUBLISHED_RC9_PRERELEASE",
+      "status": "PUBLISHED_RC10_PRERELEASE",
       "active_distribution_languages": [
         "EN_GB"
       ],
-      "active_distribution_version": "3.0.0-rc.9",
+      "active_distribution_version": "3.0.0-rc.10",
       "classroom_execution": "Node modules and real local HTTP exchanges",
       "required_microprojects": [
         {
@@ -45,11 +45,11 @@
         "RO",
         "EN_GB"
       ],
-      "status": "PUBLISHED_RC9_PRERELEASE",
+      "status": "PUBLISHED_RC10_PRERELEASE",
       "active_distribution_languages": [
         "EN_GB"
       ],
-      "active_distribution_version": "3.0.0-rc.9",
+      "active_distribution_version": "3.0.0-rc.10",
       "classroom_execution": "CSS source checks; visual and keyboard observations in the browser",
       "required_microprojects": [
         {
@@ -78,11 +78,11 @@
       "languages": [
         "EN_GB"
       ],
-      "status": "PUBLISHED_RC9_PRERELEASE",
+      "status": "PUBLISHED_RC10_PRERELEASE",
       "active_distribution_languages": [
         "EN_GB"
       ],
-      "active_distribution_version": "3.0.0-rc.9",
+      "active_distribution_version": "3.0.0-rc.10",
       "classroom_execution": "Node functions, fixed data and object-identity checks",
       "required_microprojects": [
         {
@@ -111,11 +111,11 @@
       "languages": [
         "EN_GB"
       ],
-      "status": "PUBLISHED_RC9_PRERELEASE",
+      "status": "PUBLISHED_RC10_PRERELEASE",
       "active_distribution_languages": [
         "EN_GB"
       ],
-      "active_distribution_version": "3.0.0-rc.9",
+      "active_distribution_version": "3.0.0-rc.10",
       "classroom_execution": "Node Promise behaviour and a minimal DOM interface",
       "required_microprojects": [
         {
@@ -144,11 +144,11 @@
       "languages": [
         "EN_GB"
       ],
-      "status": "PUBLISHED_RC9_PRERELEASE",
+      "status": "PUBLISHED_RC10_PRERELEASE",
       "active_distribution_languages": [
         "EN_GB"
       ],
-      "active_distribution_version": "3.0.0-rc.9",
+      "active_distribution_version": "3.0.0-rc.10",
       "classroom_execution": "Node functions and real local HTTP; injected logger callbacks",
       "required_microprojects": [
         {
@@ -177,11 +177,11 @@
       "languages": [
         "EN_GB"
       ],
-      "status": "PUBLISHED_RC9_PRERELEASE",
+      "status": "PUBLISHED_RC10_PRERELEASE",
       "active_distribution_languages": [
         "EN_GB"
       ],
-      "active_distribution_version": "3.0.0-rc.9",
+      "active_distribution_version": "3.0.0-rc.10",
       "classroom_execution": "Built-in SQLite with real memory/file databases and an asynchronous adapter",
       "required_microprojects": [
         {
@@ -210,11 +210,11 @@
       "languages": [
         "EN_GB"
       ],
-      "status": "PUBLISHED_RC9_PRERELEASE",
+      "status": "PUBLISHED_RC10_PRERELEASE",
       "active_distribution_languages": [
         "EN_GB"
       ],
-      "active_distribution_version": "3.0.0-rc.9",
+      "active_distribution_version": "3.0.0-rc.10",
       "classroom_execution": "Built-in SQLite joins, transactions and real local HTTP",
       "required_microprojects": [
         {
@@ -243,11 +243,11 @@
       "languages": [
         "EN_GB"
       ],
-      "status": "PUBLISHED_RC9_PRERELEASE",
+      "status": "PUBLISHED_RC10_PRERELEASE",
       "active_distribution_languages": [
         "EN_GB"
       ],
-      "active_distribution_version": "3.0.0-rc.9",
+      "active_distribution_version": "3.0.0-rc.10",
       "classroom_execution": "JavaScript function models; React companion checked separately",
       "required_microprojects": [
         {
@@ -276,11 +276,11 @@
       "languages": [
         "EN_GB"
       ],
-      "status": "PUBLISHED_RC9_PRERELEASE",
+      "status": "PUBLISHED_RC10_PRERELEASE",
       "active_distribution_languages": [
         "EN_GB"
       ],
-      "active_distribution_version": "3.0.0-rc.9",
+      "active_distribution_version": "3.0.0-rc.10",
       "classroom_execution": "JavaScript function models; React companion checked separately",
       "required_microprojects": [
         {
@@ -309,11 +309,11 @@
       "languages": [
         "EN_GB"
       ],
-      "status": "PUBLISHED_RC9_PRERELEASE",
+      "status": "PUBLISHED_RC10_PRERELEASE",
       "active_distribution_languages": [
         "EN_GB"
       ],
-      "active_distribution_version": "3.0.0-rc.9",
+      "active_distribution_version": "3.0.0-rc.10",
       "classroom_execution": "JavaScript function models; React companion checked separately",
       "required_microprojects": [
         {
@@ -342,11 +342,11 @@
       "languages": [
         "EN_GB"
       ],
-      "status": "PUBLISHED_RC9_PRERELEASE",
+      "status": "PUBLISHED_RC10_PRERELEASE",
       "active_distribution_languages": [
         "EN_GB"
       ],
-      "active_distribution_version": "3.0.0-rc.9",
+      "active_distribution_version": "3.0.0-rc.10",
       "classroom_execution": "JavaScript policy models; no complete login service",
       "required_microprojects": [
         {
@@ -375,11 +375,11 @@
       "languages": [
         "EN_GB"
       ],
-      "status": "PUBLISHED_RC9_PRERELEASE",
+      "status": "PUBLISHED_RC10_PRERELEASE",
       "active_distribution_languages": [
         "EN_GB"
       ],
-      "active_distribution_version": "3.0.0-rc.9",
+      "active_distribution_version": "3.0.0-rc.10",
       "classroom_execution": "JavaScript lifecycle/correlation models; no Redis queue or socket delivery",
       "required_microprojects": [
         {
@@ -408,11 +408,11 @@
       "languages": [
         "EN_GB"
       ],
-      "status": "PUBLISHED_RC9_PRERELEASE",
+      "status": "PUBLISHED_RC10_PRERELEASE",
       "active_distribution_languages": [
         "EN_GB"
       ],
-      "active_distribution_version": "3.0.0-rc.9",
+      "active_distribution_version": "3.0.0-rc.10",
       "classroom_execution": "JavaScript message/routing models; native Worker and Service Worker observations are separate",
       "required_microprojects": [
         {
@@ -441,11 +441,11 @@
       "languages": [
         "EN_GB"
       ],
-      "status": "PUBLISHED_RC9_PRERELEASE",
+      "status": "PUBLISHED_RC10_PRERELEASE",
       "active_distribution_languages": [
         "EN_GB"
       ],
-      "active_distribution_version": "3.0.0-rc.9",
+      "active_distribution_version": "3.0.0-rc.10",
       "classroom_execution": "Actual local service/repository for P01; evidence-decision model for P03",
       "required_microprojects": [
         {
@@ -463,10 +463,10 @@
   ],
   "publication_status": "PUBLISHED_PRERELEASE",
   "general_qualification": "NOT_FINAL",
-  "last_published_classroom_version": "3.0.0-rc.9",
+  "last_published_classroom_version": "3.0.0-rc.10",
   "retained_source_selection_version": "3.0.0-rc.6",
   "historical_repository_baseline": "2.0.1",
-  "student_portal": "00_START_HERE/STUDENT_CLASSROOM_PUBLISHED/README.md",
-  "publication_receipt": "90_RELEASES/CLASSROOM_RC9_PUBLICATION.json",
-  "published_at": "2026-10-06T07:29:24Z"
+  "student_portal": "00_START_HERE/STUDENT_CLASSROOM_PUBLISHED_RC10/README.md",
+  "publication_receipt": "90_RELEASES/CLASSROOM_RC10_PUBLICATION.json",
+  "published_at": "2026-10-06T21:27:43Z"
 }

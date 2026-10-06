@@ -1,0 +1,112 @@
+{
+  "schema": "webtech-classroom-rc10-publication/v1",
+  "version": "3.0.0-rc.10",
+  "status": "PUBLISHED_PRERELEASE",
+  "qualificationVerdict": "NOT_FINAL",
+  "source_commit": "b2bbe3edba9e4d9a1955c0b5edd5cf2247576416",
+  "source_package_id": "9e26cc2c51616e4c2064ac8a317372e5f4e45c45903d1752bb829dd1c1124825",
+  "release_id": 405127973,
+  "tag": "classroom-en-gb-v3.0.0-rc.10",
+  "release_url": "https://github.com/antonioclim/WebTech_ASE/releases/tag/classroom-en-gb-v3.0.0-rc.10",
+  "published_at": "2026-10-06T21:27:43Z",
+  "draft": false,
+  "prerelease": true,
+  "package_id": "1ae203d4bba59319b00406852fd36d283b17baea76bb905dbc7d7ae050a31156",
+  "assets": [
+    {
+      "id": 616617532,
+      "name": "WEBTECH_ASE_EN_GB_CLASSROOM_v3.0.0-rc.10.zip",
+      "bytes": 4357345,
+      "sha256": "a86508783f916e805eb19707cb4ebb92fa8486fde0f2a7414ac32a65395965f9",
+      "state": "uploaded",
+      "download_url": "https://github.com/antonioclim/WebTech_ASE/releases/download/classroom-en-gb-v3.0.0-rc.10/WEBTECH_ASE_EN_GB_CLASSROOM_v3.0.0-rc.10.zip"
+    },
+    {
+      "id": 616617533,
+      "name": "WEBTECH_ASE_EN_GB_CLASSROOM_v3.0.0-rc.10.zip.sha256",
+      "bytes": 111,
+      "sha256": "79206f58218f7e090cca41a26f035635e0b8d1f758b48f37888fc9c397db2f9a",
+      "state": "uploaded",
+      "download_url": "https://github.com/antonioclim/WebTech_ASE/releases/download/classroom-en-gb-v3.0.0-rc.10/WEBTECH_ASE_EN_GB_CLASSROOM_v3.0.0-rc.10.zip.sha256"
+    },
+    {
+      "id": 616617534,
+      "name": "SHA256SUMS.txt",
+      "bytes": 229,
+      "sha256": "6c53320584503c5a2cca779b87c9e69d378b99a3c1bddb63f2c885624c7978e2",
+      "state": "uploaded",
+      "download_url": "https://github.com/antonioclim/WebTech_ASE/releases/download/classroom-en-gb-v3.0.0-rc.10/SHA256SUMS.txt"
+    }
+  ],
+  "workflow": {
+    "id": 37528444879,
+    "url": "https://github.com/antonioclim/WebTech_ASE/actions/runs/37528444879",
+    "conclusion": "success",
+    "run_attempt": 1,
+    "source_commit": "b2bbe3edba9e4d9a1955c0b5edd5cf2247576416",
+    "tests": {
+      "focused_rc10": {
+        "defined": 15,
+        "passed": 15,
+        "skipped": 0,
+        "failures": 0,
+        "errors": 0,
+        "seconds": 133.18
+      },
+      "day0_static": {
+        "defined": 2,
+        "passed": 2,
+        "skipped": 0,
+        "failures": 0,
+        "errors": 0,
+        "seconds": 0.009
+      }
+    }
+  },
+  "qualification_gates": {
+    "local_integrity": "pending",
+    "reference_runtime": "pending",
+    "headless_browser": "pending",
+    "native_windows": "pending",
+    "native_macos": "pending",
+    "manual_browser": "pending",
+    "word": "pending",
+    "moodle_live": "pending",
+    "human_pilot": "pending",
+    "owner_acceptance": "pending"
+  },
+  "verification": {
+    "observation_context": "GitHub API publication observations recorded on 6 October 2026 at 21:28:55 UTC: the former draft is public and remains a prerelease, the tag resolves to the reviewed commit and the three uploaded assets retain the reviewed identities. Their upload-time SHA-256 digests and sizes match the previously byte-verified local assets. Actual hosted preparation and resolver outputs were read. No separate public remote binary was downloaded or ZIP CRC rechecked during this publication observation. Earlier local ZIP checks and 52 local Firefox semantic checks retain their own scope; the Firefox checks were not repeated by the hosted workflow.",
+    "asset_identity_method": "GITHUB_UPLOAD_DIGEST_AND_SIZE_MATCH_LOCAL_VERIFIED_ASSETS",
+    "assets_metadata_match_local": true,
+    "public_remote_binary_downloaded": false,
+    "public_remote_zip_crc_rechecked": false,
+    "local_zip_verified_before_upload": true,
+    "file_count": 1452,
+    "hosted_resolver": "PASS",
+    "local_firefox_semantic_tests": 52,
+    "local_firefox_semantic_tests_repeated_in_workflow": false,
+    "pages_deployment_observed": false
+  },
+  "notes": {
+    "path": "90_RELEASES/NOTES_CLASSROOM_RC10.md",
+    "source_url": "https://github.com/antonioclim/WebTech_ASE/blob/b2bbe3edba9e4d9a1955c0b5edd5cf2247576416/90_RELEASES/NOTES_CLASSROOM_RC10.md",
+    "published_body_sha256": "6ec7778b66c0fc2ba00a45c12a950e43b00cc68af74dc0bf9beb688db3f6e291",
+    "lf_normalised_sha256": "8f1c82fad5a4a3b31573c0ce920727f177ba03af565cdca29d459c368984d796",
+    "lf_to_crlf_count": 35,
+    "content_equal_after_line_ending_normalisation": true,
+    "preparation_wording_retained": true
+  },
+  "preserved_predecessor": {
+    "release_id": 404427362,
+    "tag": "classroom-en-gb-v3.0.0-rc.9",
+    "source_commit": "60d8f8b86eec812a79db92860dd6d13f16d91f5f",
+    "tag_body_and_asset_identities_preserved": true
+  },
+  "immutable_distribution": {
+    "source_commit": "b2bbe3edba9e4d9a1955c0b5edd5cf2247576416",
+    "tag": "classroom-en-gb-v3.0.0-rc.10",
+    "reproduction_method": "EXACT_PUBLISHED_COMMIT",
+    "reproduction_note": "Reproduce the established assets from a separate checkout at the exact published commit and tag. Its sealed candidate plan, builder, notes and derivation recipes remain preparation inputs. Later main includes publication navigation and different control metadata, so a build from later main must not be presented as the published asset without actual complete byte comparison. Preserve the tag and three attachments. This repository policy does not assert that GitHub release immutability is enabled."
+  }
+}

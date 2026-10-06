@@ -1,14 +1,14 @@
-# Web Technologies — English classroom RC9
+# Web Technologies — English classroom RC10
 
-<!-- RC9_ACTIVE_NAVIGATION_BEGIN -->
-**Published classroom version `3.0.0-rc.9` — `PUBLISHED_PRERELEASE`.** Start with the [current English student portal](../00_START_HERE/STUDENT_CLASSROOM_PUBLISHED/README.md). Download the three verified RC9 release assets through that portal. The owner published this prerelease on 6 October 2026.
+<!-- RC10_ACTIVE_NAVIGATION_BEGIN -->
+**Published classroom version `3.0.0-rc.10` — `PUBLISHED_PRERELEASE`.** Start with the [current English student portal](../00_START_HERE/STUDENT_CLASSROOM_PUBLISHED_RC10/README.md). Download the three verified RC10 release assets through that portal. The owner published this prerelease on 7 October 2026 (00:27:43 Europe/Bucharest).
 
-The last published classroom prerelease is RC9. Its source commit, public download identities and finite verification scope are recorded in the publication receipt. Qualification and classroom acceptance remain pending.
+The last published classroom prerelease is RC10. Its source commit, public download identities and finite verification scope are recorded in the publication receipt. Qualification and classroom acceptance remain pending. General qualification remains NOT_FINAL.
 
-[RC9 publication and limitations](RC9_PUBLICATION.md) · [RC9 reproduction and owner procedure](../00_TOOLS/maintainer/CLASSROOM_RC9_PUBLISHING.md)
+[RC10 publication and limitations](RC10_PUBLICATION.md) · [RC10 reproduction and owner procedure](../00_TOOLS/maintainer/CLASSROOM_RC10_PUBLISHED.md)
 
-The material below is **historical RC6 source**, retained only as an optional advanced reference. Its whole-source ZIPs and full applications are not the remediated RC9 classroom download. Older instructions inside the collapsed section describe their own edition. In particular, the old C07 carrier has stale canonical registry hashes; use the corrected classroom route. The full S13 server and old optional S03/S06 commands have separately recorded defects. A classroom check does not certify a historical full application.
-<!-- RC9_ACTIVE_NAVIGATION_END -->
+The material below is **historical RC6 source**, retained only as an optional advanced reference. Its whole-source ZIPs and full applications are not the remediated RC10 classroom download. Older instructions inside the collapsed section describe their own edition. In particular, the old C07 carrier has stale canonical registry hashes; use the corrected classroom route. The full S13 server and old optional S03/S06 commands have separately recorded defects. A classroom check does not certify a historical full application.
+<!-- RC10_ACTIVE_NAVIGATION_END -->
 
 <details data-historical-source="rc6">
 <summary>Historical RC6 source references (advanced, optional)</summary>

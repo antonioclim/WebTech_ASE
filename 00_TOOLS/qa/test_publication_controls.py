@@ -152,23 +152,30 @@ class PublishedNavigation(unittest.TestCase):
         self.root = Path(self.temporary.name)
         for name in (navigation.ACTIVE_PORTAL, navigation.ACTIVE_NOTES, navigation.ACTIVE_PROCEDURE):
             self.write(name, "fixture\n")
-        self.citation = {"version": publication.VERSION, "date-released": "2026-10-06",
-                         "message": "PUBLISHED_PRERELEASE; general qualification NOT_FINAL"}
-        self.repository = {"repository": {"version": publication.VERSION,
+        self.citation = {"version": navigation.ACTIVE_VERSION, "date-released": "2026-10-06",
+                         "message": "PUBLISHED_PRERELEASE; general qualification NOT_FINAL",
+                         "url": navigation.ACTIVE_RELEASE_URL}
+        self.repository = {"repository": {"version": navigation.ACTIVE_VERSION,
                             "status": "PUBLISHED_PRERELEASE", "general_qualification": "NOT_FINAL",
-                            "last_published_classroom_version": publication.VERSION,
-                            "student_portal": navigation.ACTIVE_PORTAL}}
-        self.course = {"repository_version": publication.VERSION,
+                            "last_published_classroom_version": navigation.ACTIVE_VERSION,
+                            "student_portal": navigation.ACTIVE_PORTAL,
+                            "publication_receipt": navigation.ACTIVE_RECEIPT,
+                            "published_at": navigation.PUBLISHED_AT,
+                            "classroom_release_url": navigation.ACTIVE_RELEASE_URL}}
+        self.course = {"repository_version": navigation.ACTIVE_VERSION,
                        "publication_status": "PUBLISHED_PRERELEASE",
-                       "last_published_classroom_version": publication.VERSION,
+                       "last_published_classroom_version": navigation.ACTIVE_VERSION,
                        "student_portal": navigation.ACTIVE_PORTAL,
+                       "publication_receipt": navigation.ACTIVE_RECEIPT,
+                       "published_at": navigation.PUBLISHED_AT,
                        "general_qualification": "NOT_FINAL",
-                       "weeks": [{"week": number, "active_distribution_version": publication.VERSION,
-                                  "status": "PUBLISHED_RC9_PRERELEASE",
+                       "weeks": [{"week": number, "active_distribution_version": navigation.ACTIVE_VERSION,
+                                  "status": "PUBLISHED_RC10_PRERELEASE",
                                   "active_distribution_languages": ["EN_GB"]}
                                  for number in range(1, 15)]}
-        self.code = {"version": publication.VERSION, "developmentStatus": "PUBLISHED_PRERELEASE",
-                     "datePublished": "2026-10-06", "description": "General qualification NOT_FINAL"}
+        self.code = {"version": navigation.ACTIVE_VERSION, "developmentStatus": "PUBLISHED_PRERELEASE",
+                     "datePublished": "2026-10-06", "description": "General qualification NOT_FINAL",
+                     "url": navigation.ACTIVE_RELEASE_URL}
         self.store_metadata()
 
     def tearDown(self):
@@ -188,8 +195,8 @@ class PublishedNavigation(unittest.TestCase):
             self.write(name, json.dumps(value))
 
     def prefix(self):
-        return ("Published 3.0.0-rc.9 PUBLISHED_PRERELEASE. The last published classroom "
-                "prerelease is RC9. Retain historical RC6 source with stale canonical registry hashes.\n"
+        return ("Published 3.0.0-rc.10 PUBLISHED_PRERELEASE NOT_FINAL. The last published classroom "
+                "prerelease is RC10. Retain historical RC6 source with stale canonical registry hashes.\n"
                 + "\n".join("[Current](" + name + ")" for name in
                               (navigation.ACTIVE_PORTAL, navigation.ACTIVE_NOTES, navigation.ACTIVE_PROCEDURE))
                 + '\n<details data-historical-source="rc6"><summary>Historical source, advanced, optional</summary>\n'
@@ -198,16 +205,17 @@ class PublishedNavigation(unittest.TestCase):
     def test_09_published_metadata_and_current_route_accept_retained_history(self):
         self.assertEqual(navigation.active_metadata(self.root)["qualification"], "NOT_FINAL")
         route = navigation.active_route(self.root, "README.md", self.prefix())
-        self.assertEqual(route["published_version"], publication.VERSION)
+        self.assertEqual(route["published_version"], navigation.ACTIVE_VERSION)
         self.assertIs(route["historical_source_collapsed"], True)
-        public_prefix = self.prefix().replace("Published 3.0.0-rc.9", "[Published RC9](" + publication.RELEASE_URL + ") 3.0.0-rc.9")
+        public_prefix = self.prefix().replace("Published 3.0.0-rc.10", "[Published RC10](" + navigation.ACTIVE_RELEASE_URL + ") 3.0.0-rc.10")
         navigation.active_route(self.root, "README.md", public_prefix)
 
     def test_10_stale_active_state_missing_portal_and_historical_payload_are_refused(self):
         variants = [self.prefix().replace("PUBLISHED_PRERELEASE", "PREPARED_NOT_PUBLISHED", 1),
-                    self.prefix().replace("prerelease is RC9", "prerelease is RC8", 1),
+                    self.prefix().replace("prerelease is RC10", "prerelease is RC9", 1),
+                    self.prefix().replace("NOT_FINAL", "FINAL", 1),
                     self.prefix().replace("[Current](" + navigation.ACTIVE_PORTAL + ")", ""),
-                    "[Old RC8](https://github.com/antonioclim/WebTech_ASE/releases/tag/classroom-en-gb-v3.0.0-rc.8)\n" + self.prefix()]
+                    "[Old RC9](https://github.com/antonioclim/WebTech_ASE/releases/tag/classroom-en-gb-v3.0.0-rc.9)\n" + self.prefix()]
         self.write("old.zip", "zip fixture")
         variants.append("[Old payload](old.zip)\n" + self.prefix())
         for index, variant in enumerate(variants):
@@ -219,9 +227,16 @@ class PublishedNavigation(unittest.TestCase):
 
     def test_11_published_metadata_rejects_wrong_date_last_release_and_final_claim(self):
         fixtures = [(self.citation, "date-released", "2026-10-05"),
-                    (self.repository["repository"], "last_published_classroom_version", "3.0.0-rc.8"),
+                    (self.repository["repository"], "last_published_classroom_version", "3.0.0-rc.9"),
+                    (self.repository["repository"], "publication_receipt", "90_RELEASES/CLASSROOM_RC9_PUBLICATION.json"),
+                    (self.repository["repository"], "published_at", "2026-10-06T07:29:24Z"),
+                    (self.repository["repository"], "classroom_release_url", "https://github.com/antonioclim/WebTech_ASE/releases/tag/classroom-en-gb-v3.0.0-rc.9"),
+                    (self.citation, "url", "https://github.com/antonioclim/WebTech_ASE/releases/tag/classroom-en-gb-v3.0.0-rc.9"),
+                    (self.code, "url", "https://github.com/antonioclim/WebTech_ASE/releases/tag/classroom-en-gb-v3.0.0-rc.9"),
                     (self.repository["repository"], "general_qualification", "FINAL"),
                     (self.course, "publication_status", "PREPARED_NOT_PUBLISHED"),
+                    (self.course, "publication_receipt", "90_RELEASES/CLASSROOM_RC9_PUBLICATION.json"),
+                    (self.course, "published_at", "2026-10-06T07:29:24Z"),
                     (self.course, "general_qualification", "FINAL"),
                     (self.code, "datePublished", "2026-10-05"),
                     (self.code, "description", "Fully qualified FINAL"),

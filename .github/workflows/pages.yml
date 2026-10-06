@@ -1,10 +1,10 @@
-name: Deploy the RC9 static reading preview to GitHub Pages
+name: Deploy the RC10 static reading preview to GitHub Pages
 
 on:
   workflow_dispatch:
     inputs:
       preview:
-        description: 'Explicitly deploy the RC9 static reading preview; not a release or execution service'
+        description: 'Explicitly deploy the RC10 static reading preview; not a release or execution service'
         type: boolean
         required: true
         default: false
@@ -61,18 +61,23 @@ jobs:
         run: python 00_TOOLS/publishing/build_week_bundle.py --verify-all --plan 90_RELEASES/FULL_COLLECTION_PLAN.json
       - name: Validate public repository
         run: python 00_TOOLS/qa/validate_public_repo.py --strict
-      - name: Test exact RC9 static composition and output refusals
-        run: python 00_TOOLS/qa/test_classroom_rc9_site.py
-      - name: Build the current RC9 static reading payload outside the checkout
-        run: python 00_TOOLS/publishing/build_classroom_rc9_site.py --output "$RUNNER_TEMP/webtech-rc9-reading-site" --report "$RUNNER_TEMP/webtech-rc9-site-build.json"
-      - name: Independently validate exact RC9 site bytes and static profile
-        run: python 00_TOOLS/qa/validate_classroom_rc9_site.py --site "$RUNNER_TEMP/webtech-rc9-reading-site" --report "$RUNNER_TEMP/webtech-rc9-site-validation.json"
+      - name: Check recorded RC10 publication identity and finite navigation refusals
+        run: |
+          python 00_TOOLS/qa/publication_rc10_controls.py
+          python 00_TOOLS/qa/test_publication_rc10_controls.py
+          python 00_TOOLS/qa/test_publication_controls.py
+      - name: Test exact RC10 static composition and output refusals
+        run: python 00_TOOLS/qa/test_classroom_rc10_site.py
+      - name: Build the current RC10 static reading payload outside the checkout
+        run: python 00_TOOLS/publishing/build_classroom_rc10_site.py --output "$RUNNER_TEMP/webtech-rc10-reading-site" --report "$RUNNER_TEMP/webtech-rc10-site-build.json"
+      - name: Independently validate exact RC10 site bytes and static profile
+        run: python 00_TOOLS/qa/validate_classroom_rc10_site.py --site "$RUNNER_TEMP/webtech-rc10-reading-site" --report "$RUNNER_TEMP/webtech-rc10-site-validation.json"
       - name: Configure Pages
         uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
-          path: ${{ runner.temp }}/webtech-rc9-reading-site
+          path: ${{ runner.temp }}/webtech-rc10-reading-site
 
   deploy-pages:
     environment:

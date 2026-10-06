@@ -20,15 +20,15 @@ repository:
   status: PUBLISHED_PRERELEASE
   automation_mode: manual-only
   identity_state: current-source-controls-with-preserved-baseline
-  version: 3.0.0-rc.9
+  version: 3.0.0-rc.10
   general_qualification: NOT_FINAL
-  last_published_classroom_version: 3.0.0-rc.9
+  last_published_classroom_version: 3.0.0-rc.10
   retained_source_selection_version: 3.0.0-rc.6
   historical_repository_baseline: 2.0.1
-  student_portal: 00_START_HERE/STUDENT_CLASSROOM_PUBLISHED/README.md
-  publication_receipt: 90_RELEASES/CLASSROOM_RC9_PUBLICATION.json
-  published_at: '2026-10-06T07:29:24Z'
-  classroom_release_url: https://github.com/antonioclim/WebTech_ASE/releases/tag/classroom-en-gb-v3.0.0-rc.9
+  student_portal: 00_START_HERE/STUDENT_CLASSROOM_PUBLISHED_RC10/README.md
+  publication_receipt: 90_RELEASES/CLASSROOM_RC10_PUBLICATION.json
+  published_at: '2026-10-06T21:27:43Z'
+  classroom_release_url: https://github.com/antonioclim/WebTech_ASE/releases/tag/classroom-en-gb-v3.0.0-rc.10
 course:
   title: Web Technologies
   institution: Bucharest University of Economic Studies (ASE)
