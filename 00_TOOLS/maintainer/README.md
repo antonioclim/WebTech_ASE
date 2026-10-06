@@ -1,18 +1,20 @@
-# Maintainer documentation — prepared RC9
+# Maintainer documentation — published RC9
 
-The current classroom successor is **3.0.0-rc.9 — PREPARED_NOT_PUBLISHED** and **NOT_FINAL**. RC8 is the last published classroom prerelease. The retained RC6 whole-source selection and frozen baseline are provenance, not the active classroom download.
+The current classroom download is **3.0.0-rc.9 — PUBLISHED_PRERELEASE** and **NOT_FINAL**. RC9 is the last published classroom prerelease. Its tag and three assets are frozen; evolving development source is a separate identity. The retained RC6 whole-source selection and baseline remain provenance.
 
 Start with these current documents:
 
-1. [Current English student portal](../../00_START_HERE/STUDENT_CLASSROOM_RC9/README.md), which distinguishes the prepared RC9 asset from the last published RC8 download.
-2. [RC9 source review, local construction and owner-only draft preparation](CLASSROOM_RC9_PUBLISHING.md).
-3. [RC9 release notes and scope limits](../../90_RELEASES/NOTES_CLASSROOM_RC9.md).
+1. [Published English student download portal](../../00_START_HERE/STUDENT_CLASSROOM_PUBLISHED/README.md).
+2. [Publication receipt and observed verification limits](../../90_RELEASES/RC9_PUBLICATION.md).
+3. [Exact RC9 reproduction and current source maintenance](CLASSROOM_RC9_PUBLISHING.md).
 4. [Current repository status](../../REPOSITORY_STATUS.md), [support](../../SUPPORT.md) and [security/privacy](../../SECURITY.md).
 5. [Historical RC6 weekly publisher](WEEKLY_RELEASE_PUBLISHING.md), only when a separate retained whole-source week is deliberately required.
 
-Only the owner starts Actions after the final review phase. Every workflow remains `workflow_dispatch` only. Preparing files, running local QA or creating an integration commit does not dispatch Actions, deploy Pages or publish a release. The RC9 workflow prepares a new draft prerelease at the exact reviewed source SHA; publishing the draft remains a separate owner decision. No absent native, browser accessibility, Word, Moodle, workload or owner evidence is recorded as PASS.
+Only the owner starts Actions. Every workflow remains `workflow_dispatch` only. The owner has already completed RC9 preparation and publication; do not rerun its existing identity. Source maintenance does not deploy Pages, replace attached files or provide absent native, browser accessibility, Word, Moodle, workload or owner evidence.
 
-The RC9 guide also describes a distinct advanced-source derivation. Its recorded path and containment fixes do not qualify all full applications or make historical whole-package verification commands compatible with changed bytes. Follow the new outer integrity control and the actual report's scope. Keep the optional advanced ZIP outside the three core classroom release assets.
+The existing builder template and published recipes remain preparation snapshots. Exact published RC9 reproduction uses commit `60d8f8b86eec812a79db92860dd6d13f16d91f5f`. A build from later `main` has a different repository source identity and must not be presented as the published ZIP, even if its teaching files appear unchanged.
+
+The separate advanced recipe remains optional. Keep its output outside the three core release assets and follow its own outer integrity control and recorded limitations. The retained Pages recipe describes the preparation snapshot; deployment requires a separate reviewed correction of its publication banner and scope before it can represent current publication.
 
 Private instructor archives, student submissions, browser profiles, installed dependencies, audit fixtures and owner evidence are not GitHub upload sources. Keep them outside the public checkout and release assets.
 

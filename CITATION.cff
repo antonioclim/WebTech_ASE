@@ -1,8 +1,8 @@
 cff-version: 1.2.0
-message: This metadata describes prepared RC9 source, not a published RC9 release.
-  Cite the exact edition and commit you used; RC8 remains the last published classroom
-  prerelease. The prepared RC9 status is PREPARED_NOT_PUBLISHED and NOT_FINAL.
-title: 'WebTech_ASE: prepared English classroom source 3.0.0-rc.9'
+message: This metadata identifies the published RC9 classroom prerelease, PUBLISHED_PRERELEASE
+  and NOT_FINAL. Cite the exact edition and source commit used; evolving main is maintained
+  separately from the frozen release.
+title: 'WebTech_ASE: published English classroom prerelease 3.0.0-rc.9'
 type: software
 version: 3.0.0-rc.9
 authors:
@@ -10,10 +10,10 @@ authors:
   given-names: Antonio
   affiliation: Bucharest University of Economic Studies (ASE)
 repository-code: https://github.com/antonioclim/WebTech_ASE
-url: https://github.com/antonioclim/WebTech_ASE
-abstract: Prepared English classroom teaching materials, offline kits, setup tools
-  and individual course and seminar activities for the 2026–2027 academic year.
-  RC9 is not yet published and its general qualification remains NOT_FINAL.
+url: https://github.com/antonioclim/WebTech_ASE/releases/tag/classroom-en-gb-v3.0.0-rc.9
+abstract: English classroom teaching materials, offline kits, setup tools and individual course
+  and seminar activities for the 2026–2027 academic year. RC9 is published as a prerelease;
+  general qualification remains NOT_FINAL.
 keywords:
 - web-technologies
 - web-development
@@ -25,3 +25,4 @@ keywords:
 - teaching
 - computer-science-education
 - ase
+date-released: '2026-10-06'

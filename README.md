@@ -1,20 +1,20 @@
 # Web Technologies — English classroom RC9
 
 <!-- RC9_ACTIVE_NAVIGATION_BEGIN -->
-**Prepared classroom version `3.0.0-rc.9` — `PREPARED_NOT_PUBLISHED`.** Start with the [current English student portal](00_START_HERE/STUDENT_CLASSROOM_RC9/README.md). The portal explains how to use the prepared classroom asset and how the owner will publish it after final review. No public RC9 release is claimed here.
+**Published classroom version `3.0.0-rc.9` — `PUBLISHED_PRERELEASE`.** Start with the [current English student portal](00_START_HERE/STUDENT_CLASSROOM_PUBLISHED/README.md). Download the three verified RC9 release assets through that portal. The owner published this prerelease on 6 October 2026.
 
-The last published classroom prerelease is RC8: [open the published RC8 download](https://github.com/antonioclim/WebTech_ASE/releases/tag/classroom-en-gb-v3.0.0-rc.8). The current portal identifies that existing download separately from the prepared RC9 successor. Qualification and classroom acceptance remain pending.
+The last published classroom prerelease is RC9. Its source commit, public download identities and finite verification scope are recorded in the publication receipt. Qualification and classroom acceptance remain pending.
 
-[RC9 changes and limitations](90_RELEASES/NOTES_CLASSROOM_RC9.md) · [Owner-only RC9 preparation](00_TOOLS/maintainer/CLASSROOM_RC9_PUBLISHING.md)
+[RC9 publication and limitations](90_RELEASES/RC9_PUBLICATION.md) · [RC9 reproduction and owner procedure](00_TOOLS/maintainer/CLASSROOM_RC9_PUBLISHING.md)
 
 The material below is **historical RC6 source**, retained only as an optional advanced reference. Its whole-source ZIPs and full applications are not the remediated RC9 classroom download. Older instructions inside the collapsed section describe their own edition. In particular, the old C07 carrier has stale canonical registry hashes; use the corrected classroom route. The full S13 server and old optional S03/S06 commands have separately recorded defects. A classroom check does not certify a historical full application.
 <!-- RC9_ACTIVE_NAVIGATION_END -->
 
-Students complete all two or three seminar microprojects individually, record their own observations and submit one reviewed evidence PDF through the private seminar assignment. Prepare the runtime before class. Published or prepared material remains a prerelease; classroom timings are unpiloted.
+Students complete all two or three seminar microprojects individually, record their own observations and submit one reviewed evidence PDF through the private seminar assignment. Prepare the runtime before class. The published classroom material remains a prerelease; classroom timings are unpiloted.
 
 [Fourteen-week course plan](ENTRY/COURSE_PLAN.html) · [Support](SUPPORT.md) · [Security and privacy](SECURITY.md) · [Current repository status](REPOSITORY_STATUS.md)
 
-Only the owner starts GitHub Actions after final review. Source preparation, local checks and this page do not start a workflow or publish a release. The new RC9 workflow prepares a draft prerelease; publishing that draft is a separate owner action.
+Only the owner starts GitHub Actions after final review. Source preparation, local checks and this page do not start a workflow or publish a release. The owner has completed the RC9 preparation and publication; the publication receipt records the observed result. Existing RC9 preparation must not be rerun.
 
 <details data-historical-source="rc6">
 <summary>Historical RC6, RC7 and RC8 source preparation notes (advanced, optional)</summary>
