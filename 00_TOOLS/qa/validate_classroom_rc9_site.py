@@ -52,7 +52,7 @@ def validate_profile(payload):
     publication.validate_receipt(receipt, plan)
     scope = rc.strict_json(payload['SITE_SCOPE.json'])
     fields = {
-        'schema': 'webtech-classroom-rc9-static-site/v2',
+        'schema': 'webtech-classroom-rc9-static-site/v3',
         'source_publication_status': 'PUBLISHED_PRERELEASE',
         'published_classroom_package_id': receipt['package_id'],
         'published_source_commit': receipt['source_commit'],
@@ -65,10 +65,29 @@ def validate_profile(payload):
         'pages_deployment_observed': False, 'actions_dispatched': 0,
         'qualificationVerdict': 'NOT_FINAL',
         'unit_payload_policy': 'ALL_THIRTY_UNIT_BYTES_EXACT_CORE_CLASSROOM_COPY',
-        'entry_policy': 'ALL_THIRTY_ENTRY_BYTES_EXACT_CORE_CLASSROOM_COPY',
+        'entry_policy': 'TWENTY_NINE_EXACT_CORE_ENTRY_COPIES_AND_ONE_DECLARED_CSS_ONLY_DERIVATIVE',
+        'tutorial_policy': 'ALL_FOURTEEN_TUTORIAL_BYTES_EXACT_CORE_CLASSROOM_COPY',
+        'entry_derivatives': [{
+            'path': 'ENTRY/SETUP_MACOS_LINUX.html',
+            'operation': 'INSERT_EXACT_CSS_BEFORE_SOLE_STYLE_CLOSE',
+            'css': 'h1{overflow-wrap:anywhere}', 'bytes_added': 26,
+            'source_sha256': 'ad65f1ba73cc9e0251ed101344a0c3e3b9145696cb13bd235551eabd390f678a',
+            'site_sha256': '2f9c4cef2f9991d554478d0be673c9ee714c52d768ae109f30ecd0fe3e856bbc',
+            'reason': 'Wrap the macOS/Linux setup title on narrow screens',
+            'text_and_links_unchanged': True,
+        }],
     }
     for key, value in fields.items():
         publication.exact(scope.get(key), value, 'static site ' + key)
+    # Authenticate the complete entry independently of the builder's constants.
+    entry = payload['ENTRY/SETUP_MACOS_LINUX.html']
+    marker = b'h1{overflow-wrap:anywhere}</style>'
+    if entry.count(b'</style>') != 1 or entry.count(marker) != 1:
+        raise ValueError('Static setup entry CSS derivative differs')
+    original = entry.replace(marker, b'</style>', 1)
+    if (rc.sha(original) != fields['entry_derivatives'][0]['source_sha256']
+            or rc.sha(entry) != fields['entry_derivatives'][0]['site_sha256']):
+        raise ValueError('Static setup entry derivative bytes differ')
     core_meta = rc.strict_json(payload['CLASSROOM_COLLECTION.json'])
     publication.exact(scope.get('current_repository_package_id'),
                       core_meta['repository_package_id'], 'static source seal')

@@ -47,7 +47,7 @@ EXPECTED_ASSETS = {
 EXPECTED_OBJECTS = {f'{kind}{number:02}' for kind in 'CS' for number in range(1, 15)} | {'SETUP_WINDOWS', 'SETUP_MACOS_LINUX'}
 EXPECTED_CHANGED = {'index.html', 'START_HERE.html', 'QUALIFICATION.html',
                     'COURSE_PLAN.html', 'ASSESSMENT.html', 'README.md',
-                    'SHA256SUMS.txt', 'PACKAGE_ID.txt'}
+                    'ENTRY/SETUP_MACOS_LINUX.html', 'SHA256SUMS.txt', 'PACKAGE_ID.txt'}
 
 
 class ClassroomRC9Site(unittest.TestCase):
@@ -69,7 +69,7 @@ class ClassroomRC9Site(unittest.TestCase):
     def fresh(self):
         return tempfile.TemporaryDirectory(prefix='rc9 static reading with spaces ')
 
-    def test_01_composition_preserves_thirty_unit_and_entry_bytes(self):
+    def test_01_composition_preserves_units_and_declares_one_entry_derivative(self):
         self.assertEqual(set(self.site) - set(self.core), {'.nojekyll', 'SITE_SCOPE.json', 'DOWNLOAD_RC9.html'})
         self.assertEqual(set(self.core) - set(self.site), set())
         changed = {name for name in self.core if self.core[name] != self.site[name]}
@@ -84,13 +84,25 @@ class ClassroomRC9Site(unittest.TestCase):
             for name in names:
                 self.assertEqual(self.site[name], self.core[name], name)
                 count += 1
-            self.assertEqual(self.site[item['entry']], self.core[item['entry']])
+            if item['entry'] != 'ENTRY/SETUP_MACOS_LINUX.html':
+                self.assertEqual(self.site[item['entry']], self.core[item['entry']])
+        self.assertEqual(count, 1284)
+        tutorials = [name for name in self.core if name.startswith('TUTORIALS/')]
+        self.assertEqual(len(tutorials), 14)
+        for name in tutorials:
+            self.assertEqual(self.site[name], self.core[name], name)
+        before = self.core['ENTRY/SETUP_MACOS_LINUX.html']
+        after = self.site['ENTRY/SETUP_MACOS_LINUX.html']
+        self.assertEqual(after, before.replace(b'</style>', b'h1{overflow-wrap:anywhere}</style>', 1))
+        self.assertEqual(after.replace(b'h1{overflow-wrap:anywhere}</style>', b'</style>', 1), before)
         self.assertEqual(builder.build_payload(check_source=False), self.site)
         OBSERVATIONS['composition'] = {'unit_count': 30,
-            'unit_file_comparisons': count, 'entry_pages_unchanged': 30,
+            'unit_file_comparisons': count, 'entry_pages_unchanged': 29,
+            'tutorials_unchanged': 14, 'entry_css_only_derivatives': 1,
+            'entry_derivative_reversible_exactly': True,
             'added_files': ['.nojekyll', 'SITE_SCOPE.json', 'DOWNLOAD_RC9.html'],
             'changed_core_files': sorted(changed),
-            'teaching_unit_and_entry_bytes_unchanged': True}
+            'teaching_unit_bytes_unchanged': True}
 
     def test_02_nojekyll_and_static_profile_are_sealed_and_honest(self):
         self.assertEqual(self.site['.nojekyll'], b'')
@@ -408,6 +420,36 @@ class ClassroomRC9Site(unittest.TestCase):
                 validator.validate_profile(forged)
         OBSERVATIONS['independent_semantic_refusals'] = {
             'mutations_refused': len(cases), 'builder_reproduction_not_used_as_semantic_authority': True}
+
+    def test_13_independent_entry_derivative_admission_refuses_false_scope_and_bytes(self):
+        cases = []
+        for key, value in (('entry_policy', 'ALL_THIRTY_ENTRY_BYTES_EXACT_CORE_CLASSROOM_COPY'),
+                           ('entry_derivatives', [])):
+            forged = dict(self.site)
+            scope = rc.strict_json(forged['SITE_SCOPE.json'])
+            scope[key] = value
+            forged['SITE_SCOPE.json'] = classroom.encoded(scope)
+            cases.append((key, forged))
+        path = 'ENTRY/SETUP_MACOS_LINUX.html'
+        for label, data in (
+            ('missing_css', self.core[path]),
+            ('different_css', self.site[path].replace(b'overflow-wrap:anywhere}', b'overflow-wrap:normal}', 1)),
+            ('changed_link', self.site[path].replace(b'../index.html', b'../START_HERE.html', 1)),
+            ('changed_text', self.site[path].replace(b'macOS/Linux setup</h1>', b'Changed setup</h1>', 1)),
+        ):
+            self.assertNotEqual(data, self.site[path])
+            forged = dict(self.site)
+            forged[path] = data
+            cases.append((label, forged))
+        for label, forged in cases:
+            with self.subTest(label=label), self.assertRaises(ValueError):
+                validator.validate_profile(forged)
+        with self.assertRaises(ValueError):
+            builder.wrap_setup_entry(self.core[path] + b'changed')
+        OBSERVATIONS['entry_derivative_admission'] = {
+            'independent_mutations_refused': len(cases),
+            'builder_changed_source_refused': True,
+            'text_link_and_css_tampering_refused': True}
 
 
 def main():
