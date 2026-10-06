@@ -1,5 +1,18 @@
 # Changelog
 
+## 3.0.0-rc.10 — published classroom successor and current navigation (2026-10-07 Europe/Bucharest)
+
+The owner published RC10 at `2026-10-06T21:27:43Z` (7 October 2026 at 00:27:43 Europe/Bucharest). Status: **PUBLISHED_PRERELEASE**, **NOT_FINAL**. [The publication receipt](90_RELEASES/CLASSROOM_RC10_PUBLICATION.json) records release `405127973`, the tag source `b2bbe3edba9e4d9a1955c0b5edd5cf2247576416` and the three unchanged uploaded asset identities. All ten general qualification gates remain pending.
+
+- Make the published RC10 student portal the current route in repository frontdoors and metadata. Preserve the collapsed RC6 reference sections, source carriers, predecessor records and frozen release identities.
+- Record the actual owner-started preparation run `37528444879`: fifteen focused RC10 tests and two static Day 0 form tests passed. Do not infer new runtime, native, Word, Moodle or classroom observations from publication.
+- Retain the RC10 candidate plan, notes, derivation recipe and original preparation procedure as exact source snapshots. Reproduction of the published assets uses the frozen tag source, rather than evolving `main`.
+- Prepare a separate RC10 static reading preview and owner-only Pages route. This source entry does not claim an RC10 deployment; the last observed public Pages site is RC9.
+
+## Preserved preparation history
+
+All entries below retain their original dated preparation claims. Their “current”, “not published”, “final” or “published” wording applies to the historical stage described, rather than to the current RC10 publication state.
+
 ## 3.0.0-rc.9 — prepared classroom successor (2026-10-06)
 
 Status: **PREPARED_NOT_PUBLISHED**, **NOT_FINAL**. No RC9 release or Actions run is claimed by this source record. The last published classroom prerelease remains RC8. The exact implemented scope and finite verification observations are recorded in the RC9 derivation and final audit report.

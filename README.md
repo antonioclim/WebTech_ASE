@@ -1,22 +1,22 @@
-# Web Technologies — English classroom RC9
+# Web Technologies — English classroom RC10
 
-<!-- RC9_ACTIVE_NAVIGATION_BEGIN -->
-**Published classroom version `3.0.0-rc.9` — `PUBLISHED_PRERELEASE`.** Start with the [current English student portal](00_START_HERE/STUDENT_CLASSROOM_PUBLISHED/README.md). Download the three verified RC9 release assets through that portal. The owner published this prerelease on 6 October 2026.
+<!-- RC10_ACTIVE_NAVIGATION_BEGIN -->
+**Published classroom version `3.0.0-rc.10` — `PUBLISHED_PRERELEASE`.** Start with the [current English student portal](00_START_HERE/STUDENT_CLASSROOM_PUBLISHED_RC10/README.md). Download the three verified RC10 release assets through that portal. The owner published this prerelease on 7 October 2026 (00:27:43 Europe/Bucharest).
 
-The last published classroom prerelease is RC9. Its source commit, public download identities and finite verification scope are recorded in the publication receipt. Qualification and classroom acceptance remain pending.
+The last published classroom prerelease is RC10. Its source commit, public download identities and finite verification scope are recorded in the publication receipt. Qualification and classroom acceptance remain pending. General qualification remains NOT_FINAL.
 
-[RC9 publication and limitations](90_RELEASES/RC9_PUBLICATION.md) · [RC9 reproduction and owner procedure](00_TOOLS/maintainer/CLASSROOM_RC9_PUBLISHING.md)
+[RC10 publication and limitations](90_RELEASES/RC10_PUBLICATION.md) · [RC10 reproduction and owner procedure](00_TOOLS/maintainer/CLASSROOM_RC10_PUBLISHED.md)
 
-The material below is **historical RC6 source**, retained only as an optional advanced reference. Its whole-source ZIPs and full applications are not the remediated RC9 classroom download. Older instructions inside the collapsed section describe their own edition. In particular, the old C07 carrier has stale canonical registry hashes; use the corrected classroom route. The full S13 server and old optional S03/S06 commands have separately recorded defects. A classroom check does not certify a historical full application.
-<!-- RC9_ACTIVE_NAVIGATION_END -->
+The material below is **historical RC6 source**, retained only as an optional advanced reference. Its whole-source ZIPs and full applications are not the remediated RC10 classroom download. Older instructions inside the collapsed section describe their own edition. In particular, the old C07 carrier has stale canonical registry hashes; use the corrected classroom route. The full S13 server and old optional S03/S06 commands have separately recorded defects. A classroom check does not certify a historical full application.
+<!-- RC10_ACTIVE_NAVIGATION_END -->
 
 Students complete all two or three seminar microprojects individually, record their own observations and submit one reviewed evidence PDF through the private seminar assignment. Prepare the runtime before class. The published classroom material remains a prerelease; classroom timings are unpiloted.
 
 [Fourteen-week course plan](ENTRY/COURSE_PLAN.html) · [Support](SUPPORT.md) · [Security and privacy](SECURITY.md) · [Current repository status](REPOSITORY_STATUS.md)
 
-Only the owner starts GitHub Actions after final review. Source preparation, local checks and this page do not start a workflow or publish a release. The owner has completed the RC9 preparation and publication; the publication receipt records the observed result. Existing RC9 preparation must not be rerun.
+Only the owner starts GitHub Actions after final review. Source preparation, local checks and this page do not start a workflow or publish a release. The owner has completed the RC10 preparation and publication; the publication receipt records the observed result. Existing RC10 preparation must not be rerun.
 
-The [RC10 documentary successor](00_TOOLS/maintainer/CLASSROOM_RC10_PUBLISHING.md) is a separate prepared candidate, not a published student download. It derives instruction and Day 0 form corrections from the exact authenticated RC9 ZIP. The current published student portal remains RC9 and all broad acceptance gates remain pending.
+The published RC10 successor derives instruction and Day 0 form corrections from the exact authenticated predecessor ZIP. Follow the current portal and published reproduction guide above. The earlier candidate-preparation guide is retained as a dated procedure; it does not describe the current publication state. Publishing RC10 does not deploy Pages and all broad acceptance gates remain pending.
 
 <details data-historical-source="rc6">
 <summary>Historical RC6, RC7 and RC8 source preparation notes (advanced, optional)</summary>

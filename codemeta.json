@@ -3,12 +3,12 @@
   "@type": "SoftwareSourceCode",
   "name": "WebTech_ASE",
   "alternateName": "Web Technologies at ASE",
-  "description": "Published English Web Technologies classroom prerelease 3.0.0-rc.9 for ASE: fourteen course units, fourteen seminars and setup materials. RC9 is PUBLISHED_PRERELEASE and NOT_FINAL. The publication receipt pins the frozen release separately from evolving source.",
-  "version": "3.0.0-rc.9",
+  "description": "Published English Web Technologies classroom prerelease 3.0.0-rc.10 for ASE: fourteen course units, fourteen seminars and setup materials. RC10 is PUBLISHED_PRERELEASE and NOT_FINAL. The publication receipt pins the frozen release separately from evolving source.",
+  "version": "3.0.0-rc.10",
   "dateCreated": "2026-09-27",
   "dateModified": "2026-10-06",
   "codeRepository": "https://github.com/antonioclim/WebTech_ASE",
-  "url": "https://github.com/antonioclim/WebTech_ASE/releases/tag/classroom-en-gb-v3.0.0-rc.9",
+  "url": "https://github.com/antonioclim/WebTech_ASE/releases/tag/classroom-en-gb-v3.0.0-rc.10",
   "author": [
     {
       "@type": "Person",
