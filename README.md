@@ -16,6 +16,8 @@ Students complete all two or three seminar microprojects individually, record th
 
 Only the owner starts GitHub Actions after final review. Source preparation, local checks and this page do not start a workflow or publish a release. The owner has completed the RC9 preparation and publication; the publication receipt records the observed result. Existing RC9 preparation must not be rerun.
 
+The [RC10 documentary successor](00_TOOLS/maintainer/CLASSROOM_RC10_PUBLISHING.md) is a separate prepared candidate, not a published student download. It derives instruction and Day 0 form corrections from the exact authenticated RC9 ZIP. The current published student portal remains RC9 and all broad acceptance gates remain pending.
+
 <details data-historical-source="rc6">
 <summary>Historical RC6, RC7 and RC8 source preparation notes (advanced, optional)</summary>
 

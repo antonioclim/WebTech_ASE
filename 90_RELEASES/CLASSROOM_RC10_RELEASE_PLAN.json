@@ -1,0 +1,103 @@
+{
+  "schema": "webtech-classroom-rc10-release-plan/v1",
+  "distribution_version": "3.0.0-rc.10",
+  "source_material_commit": "cab9751b6af7ddc6d73961e7768db7c300c72434",
+  "original_material_sha256": "5c9d9a2aa07fe0eccc03239940a1cfbd895d07b906c9b99cfcd5188e4d464ec4",
+  "registry": "metadata/student-selection.json",
+  "registry_sha256": "ec892416370fa0b06a2f904606e0f0e6bde65a3548e446de278f4d2f2e9143a1",
+  "policy": "metadata/classroom-rc10-policy.json",
+  "policy_sha256": "33d05228e1d79dcfeecdc13daf5cef8aff41ad79d854425a5703d79c7b03c620",
+  "status": "candidate",
+  "draft": true,
+  "prerelease": true,
+  "required_gates": [
+    "local_integrity",
+    "reference_runtime",
+    "headless_browser",
+    "native_windows",
+    "native_macos",
+    "manual_browser",
+    "word",
+    "moodle_live",
+    "human_pilot",
+    "owner_acceptance"
+  ],
+  "gates": {
+    "local_integrity": {
+      "status": "pending",
+      "scope": "Broad qualification remains pending. RC10 is a documentary classroom candidate. Scoped source, navigation, derivation, packaging and Day 0 form checks do not establish unobserved corpus execution, native platforms, manual browser use, Word rendering, live Moodle, a timed student pilot or owner acceptance. Manual observations remain deferred by the owner."
+    },
+    "reference_runtime": {
+      "status": "pending",
+      "scope": "Broad qualification remains pending. RC10 is a documentary classroom candidate. Scoped source, navigation, derivation, packaging and Day 0 form checks do not establish unobserved corpus execution, native platforms, manual browser use, Word rendering, live Moodle, a timed student pilot or owner acceptance. Manual observations remain deferred by the owner."
+    },
+    "headless_browser": {
+      "status": "pending",
+      "scope": "Broad qualification remains pending. RC10 is a documentary classroom candidate. Scoped source, navigation, derivation, packaging and Day 0 form checks do not establish unobserved corpus execution, native platforms, manual browser use, Word rendering, live Moodle, a timed student pilot or owner acceptance. Manual observations remain deferred by the owner."
+    },
+    "native_windows": {
+      "status": "pending",
+      "scope": "Broad qualification remains pending. RC10 is a documentary classroom candidate. Scoped source, navigation, derivation, packaging and Day 0 form checks do not establish unobserved corpus execution, native platforms, manual browser use, Word rendering, live Moodle, a timed student pilot or owner acceptance. Manual observations remain deferred by the owner."
+    },
+    "native_macos": {
+      "status": "pending",
+      "scope": "Broad qualification remains pending. RC10 is a documentary classroom candidate. Scoped source, navigation, derivation, packaging and Day 0 form checks do not establish unobserved corpus execution, native platforms, manual browser use, Word rendering, live Moodle, a timed student pilot or owner acceptance. Manual observations remain deferred by the owner."
+    },
+    "manual_browser": {
+      "status": "pending",
+      "scope": "Broad qualification remains pending. RC10 is a documentary classroom candidate. Scoped source, navigation, derivation, packaging and Day 0 form checks do not establish unobserved corpus execution, native platforms, manual browser use, Word rendering, live Moodle, a timed student pilot or owner acceptance. Manual observations remain deferred by the owner."
+    },
+    "word": {
+      "status": "pending",
+      "scope": "Broad qualification remains pending. RC10 is a documentary classroom candidate. Scoped source, navigation, derivation, packaging and Day 0 form checks do not establish unobserved corpus execution, native platforms, manual browser use, Word rendering, live Moodle, a timed student pilot or owner acceptance. Manual observations remain deferred by the owner."
+    },
+    "moodle_live": {
+      "status": "pending",
+      "scope": "Broad qualification remains pending. RC10 is a documentary classroom candidate. Scoped source, navigation, derivation, packaging and Day 0 form checks do not establish unobserved corpus execution, native platforms, manual browser use, Word rendering, live Moodle, a timed student pilot or owner acceptance. Manual observations remain deferred by the owner."
+    },
+    "human_pilot": {
+      "status": "pending",
+      "scope": "Broad qualification remains pending. RC10 is a documentary classroom candidate. Scoped source, navigation, derivation, packaging and Day 0 form checks do not establish unobserved corpus execution, native platforms, manual browser use, Word rendering, live Moodle, a timed student pilot or owner acceptance. Manual observations remain deferred by the owner."
+    },
+    "owner_acceptance": {
+      "status": "pending",
+      "scope": "Broad qualification remains pending. RC10 is a documentary classroom candidate. Scoped source, navigation, derivation, packaging and Day 0 form checks do not establish unobserved corpus execution, native platforms, manual browser use, Word rendering, live Moodle, a timed student pilot or owner acceptance. Manual observations remain deferred by the owner."
+    }
+  },
+  "collection_root": "WEBTECH_ASE_EN_GB_CLASSROOM_RC10/",
+  "tag": "classroom-en-gb-v3.0.0-rc.10",
+  "notes": "90_RELEASES/NOTES_CLASSROOM_RC10.md",
+  "object_ids": [
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C08",
+    "C09",
+    "C10",
+    "C11",
+    "C12",
+    "C13",
+    "C14",
+    "S01",
+    "S02",
+    "S03",
+    "S04",
+    "S05",
+    "S06",
+    "S07",
+    "S08",
+    "S09",
+    "S10",
+    "S11",
+    "S12",
+    "S13",
+    "S14",
+    "SETUP_MACOS_LINUX",
+    "SETUP_WINDOWS"
+  ],
+  "archive": "WEBTECH_ASE_EN_GB_CLASSROOM_v3.0.0-rc.10.zip"
+}
