@@ -1,19 +1,19 @@
 cff-version: 1.2.0
-message: If you use or refer to these teaching materials, please cite the repository
-  using the metadata below.
-title: 'WebTech_ASE: Web Technologies teaching repository'
+message: This metadata describes prepared RC9 source, not a published RC9 release.
+  Cite the exact edition and commit you used; RC8 remains the last published classroom
+  prerelease. The prepared RC9 status is PREPARED_NOT_PUBLISHED and NOT_FINAL.
+title: 'WebTech_ASE: prepared English classroom source 3.0.0-rc.9'
 type: software
-version: 2.0.1
-date-released: '2026-09-27'
+version: 3.0.0-rc.9
 authors:
 - family-names: Clim
   given-names: Antonio
   affiliation: Bucharest University of Economic Studies (ASE)
 repository-code: https://github.com/antonioclim/WebTech_ASE
-url: https://antonioclim.github.io/WebTech_ASE/
-abstract: Student-facing Web Technologies teaching materials, offline kits, setup
-  tools and evidence-based course and seminar activities for the 2026–2027 academic
-  year.
+url: https://github.com/antonioclim/WebTech_ASE
+abstract: Prepared English classroom teaching materials, offline kits, setup tools
+  and individual course and seminar activities for the 2026–2027 academic year.
+  RC9 is not yet published and its general qualification remains NOT_FINAL.
 keywords:
 - web-technologies
 - web-development

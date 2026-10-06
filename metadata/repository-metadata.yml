@@ -17,15 +17,20 @@ repository:
   - teaching
   - computer-science-education
   - ase
-  status: work-in-progress
+  status: PREPARED_NOT_PUBLISHED
   automation_mode: manual-only
-  identity_state: frozen-baseline
-  version: 2.0.1
+  identity_state: current-source-controls-with-preserved-baseline
+  version: 3.0.0-rc.9
+  general_qualification: NOT_FINAL
+  last_published_classroom_version: 3.0.0-rc.8
+  retained_source_selection_version: 3.0.0-rc.6
+  historical_repository_baseline: 2.0.1
+  student_portal: 00_START_HERE/STUDENT_CLASSROOM_RC9/README.md
 course:
   title: Web Technologies
   institution: Bucharest University of Economic Studies (ASE)
   academic_year: 2026–2027
-  public_guidance_language: English
+  public_guidance_language: EN-GB
   bilingual_exceptions:
   - C01
   - S01

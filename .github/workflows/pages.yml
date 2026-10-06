@@ -1,7 +1,17 @@
-name: Deploy GitHub Pages
+name: Deploy the RC9 static reading preview to GitHub Pages
 
 on:
   workflow_dispatch:
+    inputs:
+      preview:
+        description: 'Explicitly deploy the RC9 static reading preview; not a release or execution service'
+        type: boolean
+        required: true
+        default: false
+      expected_source_sha:
+        description: 'Exact reviewed 40-character lowercase commit SHA selected for this run'
+        type: string
+        required: true
 
 permissions:
   contents: read
@@ -10,7 +20,7 @@ permissions:
 
 concurrency:
   group: github-pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build-pages:
@@ -19,6 +29,24 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Require the exact reviewed source and explicit preview
+        env:
+          PREVIEW: ${{ inputs.preview }}
+          EXPECTED_SOURCE_SHA: ${{ inputs.expected_source_sha }}
+        run: |
+          set -euo pipefail
+          if [[ "$PREVIEW" != "true" ]]; then
+            echo 'Explicit preview is required. Pages deployment stopped.' >&2
+            exit 2
+          fi
+          if [[ ! "$EXPECTED_SOURCE_SHA" =~ ^[0-9a-f]{40}$ ]]; then
+            echo 'Supply the full reviewed lowercase commit SHA. Deployment stopped.' >&2
+            exit 2
+          fi
+          if [[ "$(git rev-parse HEAD)" != "$GITHUB_SHA" || "$GITHUB_SHA" != "$EXPECTED_SOURCE_SHA" ]]; then
+            echo 'Selected source differs from the reviewed commit. Deployment stopped.' >&2
+            exit 2
+          fi
       - name: Set up Python
         uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
@@ -33,16 +61,18 @@ jobs:
         run: python 00_TOOLS/publishing/build_week_bundle.py --verify-all --plan 90_RELEASES/FULL_COLLECTION_PLAN.json
       - name: Validate public repository
         run: python 00_TOOLS/qa/validate_public_repo.py --strict
-      - name: Build static Pages payload
-        run: python 00_TOOLS/publishing/build_pages_site.py --output "$RUNNER_TEMP/webtech-student-site"
-      - name: Validate Pages payload
-        run: python 00_TOOLS/qa/validate_pages_payload.py --site "$RUNNER_TEMP/webtech-student-site"
+      - name: Test exact RC9 static composition and output refusals
+        run: python 00_TOOLS/qa/test_classroom_rc9_site.py
+      - name: Build the current RC9 static reading payload outside the checkout
+        run: python 00_TOOLS/publishing/build_classroom_rc9_site.py --output "$RUNNER_TEMP/webtech-rc9-reading-site" --report "$RUNNER_TEMP/webtech-rc9-site-build.json"
+      - name: Independently validate exact RC9 site bytes and static profile
+        run: python 00_TOOLS/qa/validate_classroom_rc9_site.py --site "$RUNNER_TEMP/webtech-rc9-reading-site" --report "$RUNNER_TEMP/webtech-rc9-site-validation.json"
       - name: Configure Pages
         uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
-          path: ${{ runner.temp }}/webtech-student-site
+          path: ${{ runner.temp }}/webtech-rc9-reading-site
 
   deploy-pages:
     environment:

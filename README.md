@@ -1,3 +1,24 @@
+# Web Technologies — English classroom RC9
+
+<!-- RC9_ACTIVE_NAVIGATION_BEGIN -->
+**Prepared classroom version `3.0.0-rc.9` — `PREPARED_NOT_PUBLISHED`.** Start with the [current English student portal](00_START_HERE/STUDENT_CLASSROOM_RC9/README.md). The portal explains how to use the prepared classroom asset and how the owner will publish it after final review. No public RC9 release is claimed here.
+
+The last published classroom prerelease is RC8: [open the published RC8 download](https://github.com/antonioclim/WebTech_ASE/releases/tag/classroom-en-gb-v3.0.0-rc.8). The current portal identifies that existing download separately from the prepared RC9 successor. Qualification and classroom acceptance remain pending.
+
+[RC9 changes and limitations](90_RELEASES/NOTES_CLASSROOM_RC9.md) · [Owner-only RC9 preparation](00_TOOLS/maintainer/CLASSROOM_RC9_PUBLISHING.md)
+
+The material below is **historical RC6 source**, retained only as an optional advanced reference. Its whole-source ZIPs and full applications are not the remediated RC9 classroom download. Older instructions inside the collapsed section describe their own edition. In particular, the old C07 carrier has stale canonical registry hashes; use the corrected classroom route. The full S13 server and old optional S03/S06 commands have separately recorded defects. A classroom check does not certify a historical full application.
+<!-- RC9_ACTIVE_NAVIGATION_END -->
+
+Students complete all two or three seminar microprojects individually, record their own observations and submit one reviewed evidence PDF through the private seminar assignment. Prepare the runtime before class. Published or prepared material remains a prerelease; classroom timings are unpiloted.
+
+[Fourteen-week course plan](ENTRY/COURSE_PLAN.html) · [Support](SUPPORT.md) · [Security and privacy](SECURITY.md) · [Current repository status](REPOSITORY_STATUS.md)
+
+Only the owner starts GitHub Actions after final review. Source preparation, local checks and this page do not start a workflow or publish a release. The new RC9 workflow prepares a draft prerelease; publishing that draft is a separate owner action.
+
+<details data-historical-source="rc6">
+<summary>Historical RC6, RC7 and RC8 source preparation notes (advanced, optional)</summary>
+
 # Web Technologies — current English candidate 3.0.0-rc.6
 
 ## Corrected classroom successor: candidate 3.0.0-rc.8
@@ -72,3 +93,5 @@ python 00_TOOLS/publishing/build_student_collection.py --zip ../WEBTECH_ASE_EN_G
 For the new filtered classroom edition, use the [RC7 resolver instructions](00_TOOLS/maintainer/CLASSROOM_RC7_PUBLISHING.md).
 
 These build/check commands are maintainer operations and do not start a GitHub workflow. Reference maintenance requires Python 3.12, Node 24.21.0 and the pinned PyYAML parser in 00_TOOLS/qa/requirements.txt. The candidate retains all ten qualification gates.
+
+</details>

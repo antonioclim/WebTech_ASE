@@ -1,5 +1,6 @@
 {
   "authorised_change_paths": {
+    ".github/workflows/pages.yml": "Current RC9 static reading preview builder; manual workflow_dispatch only, explicit preview and reviewed commit SHA. Exact prior guarded workflow bytes and mode retained in 90_ARCHIVE/MAIN_97819d8_RC9_METADATA/.github/workflows/pages.yml. No deployment has been started.",
     ".github/workflows/release-week.yml": "Manual RC6 weekly publisher; retain workflow_dispatch-only and locked Action refs.",
     "00_SETUP/MACOS_LINUX/README.md": "Regenerate the current English RC6 wrapper; retain exact raw predecessor bytes/mode in 90_ARCHIVE/MAIN_4eea8de_NAVIGATION/00_SETUP/MACOS_LINUX/README.md.",
     "00_SETUP/README.md": "Regenerate the current English RC6 wrapper; retain exact raw predecessor bytes/mode in 90_ARCHIVE/MAIN_4eea8de_NAVIGATION/00_SETUP/README.md.",
@@ -9,6 +10,8 @@
     "00_START_HERE/STUDENT_QUICK_START.md": "Regenerate the current English RC6 wrapper; retain exact raw predecessor bytes/mode in 90_ARCHIVE/MAIN_4eea8de_NAVIGATION/00_START_HERE/STUDENT_QUICK_START.md.",
     "00_START_HERE/WEEKS_01_14_DOWNLOADS.md": "Regenerate the current English RC6 wrapper; retain exact raw predecessor bytes/mode in 90_ARCHIVE/MAIN_4eea8de_NAVIGATION/00_START_HERE/WEEKS_01_14_DOWNLOADS.md.",
     "00_TOOLS/maintainer/PREVIEW_DOWNLOAD_POLICY.md": "Regenerate the current English RC6 wrapper; retain exact raw predecessor bytes/mode in 90_ARCHIVE/MAIN_4eea8de_NAVIGATION/00_TOOLS/maintainer/PREVIEW_DOWNLOAD_POLICY.md.",
+    "00_TOOLS/maintainer/README.md": "Current RC9 maintainer index with exact guarded predecessor in 90_ARCHIVE/MAIN_97819d8_RC9_METADATA/00_TOOLS/maintainer/README.md",
+    "00_TOOLS/maintainer/WEEKLY_RELEASE_PUBLISHING.md": "RC9 prepared-source metadata or hardened manual publisher. Exact prior guarded bytes/mode retained in 90_ARCHIVE/MAIN_97819d8_RC9_METADATA/00_TOOLS/maintainer/WEEKLY_RELEASE_PUBLISHING.md; RC6 carriers and original source identities remain untouched.",
     "00_TOOLS/publishing/build_student_collection.py": "Build current successor collection without rewriting the 38 old templates.",
     "00_TOOLS/publishing/build_week_bundle.py": "Bind new RC6 weekly containers to the exact current selected source carriers.",
     "00_TOOLS/publishing/resolve_release.py": "Resolve the explicitly requested current RC6 weekly candidate; preserve fail-closed publication policy.",
@@ -124,6 +127,8 @@
     "90_RELEASES/FULL_COLLECTION_PLAN.json": "Pin all fourteen RC6 weeks and the current registry; candidate gates stay pending.",
     "90_RELEASES/HISTORICAL_OBJECTS.md": "Regenerate the current English RC6 wrapper; retain exact raw predecessor bytes/mode in 90_ARCHIVE/MAIN_4eea8de_NAVIGATION/90_RELEASES/HISTORICAL_OBJECTS.md.",
     "90_RELEASES/README.md": "Regenerate the current English RC6 wrapper; retain exact raw predecessor bytes/mode in 90_ARCHIVE/MAIN_4eea8de_NAVIGATION/90_RELEASES/README.md.",
+    "CHANGELOG.md": "RC9 prepared-source metadata or hardened manual publisher. Exact prior guarded bytes/mode retained in 90_ARCHIVE/MAIN_97819d8_RC9_METADATA/CHANGELOG.md; RC6 carriers and original source identities remain untouched.",
+    "CITATION.cff": "RC9 prepared-source metadata or hardened manual publisher. Exact prior guarded bytes/mode retained in 90_ARCHIVE/MAIN_97819d8_RC9_METADATA/CITATION.cff; RC6 carriers and original source identities remain untouched.",
     "ENTRY/C01.html": "Regenerate the RC6 maintainer/current-entry front door; retain exact raw predecessor bytes/mode in 90_ARCHIVE/MAIN_4eea8de_FRONTDOORS/ENTRY/C01.html.",
     "ENTRY/C02.html": "Regenerate the RC6 maintainer/current-entry front door; retain exact raw predecessor bytes/mode in 90_ARCHIVE/MAIN_4eea8de_FRONTDOORS/ENTRY/C02.html.",
     "ENTRY/C03.html": "Regenerate the RC6 maintainer/current-entry front door; retain exact raw predecessor bytes/mode in 90_ARCHIVE/MAIN_4eea8de_FRONTDOORS/ENTRY/C03.html.",
@@ -158,12 +163,18 @@
     "ENTRY/SETUP_MACOS_LINUX.html": "Regenerate the RC6 maintainer/current-entry front door; retain exact raw predecessor bytes/mode in 90_ARCHIVE/MAIN_4eea8de_FRONTDOORS/ENTRY/SETUP_MACOS_LINUX.html.",
     "ENTRY/SETUP_WINDOWS.html": "Regenerate the RC6 maintainer/current-entry front door; retain exact raw predecessor bytes/mode in 90_ARCHIVE/MAIN_4eea8de_FRONTDOORS/ENTRY/SETUP_WINDOWS.html.",
     "README.md": "Regenerate the RC6 maintainer/current-entry front door; retain exact raw predecessor bytes/mode in 90_ARCHIVE/MAIN_4eea8de_FRONTDOORS/README.md.",
+    "REPOSITORY_STATUS.md": "RC9 prepared-source metadata or hardened manual publisher. Exact prior guarded bytes/mode retained in 90_ARCHIVE/MAIN_97819d8_RC9_METADATA/REPOSITORY_STATUS.md; RC6 carriers and original source identities remain untouched.",
+    "SECURITY.md": "RC9 prepared-source metadata or hardened manual publisher. Exact prior guarded bytes/mode retained in 90_ARCHIVE/MAIN_97819d8_RC9_METADATA/SECURITY.md; RC6 carriers and original source identities remain untouched.",
+    "SUPPORT.md": "RC9 prepared-source metadata or hardened manual publisher. Exact prior guarded bytes/mode retained in 90_ARCHIVE/MAIN_97819d8_RC9_METADATA/SUPPORT.md; RC6 carriers and original source identities remain untouched.",
+    "codemeta.json": "RC9 prepared-source metadata or hardened manual publisher. Exact prior guarded bytes/mode retained in 90_ARCHIVE/MAIN_97819d8_RC9_METADATA/codemeta.json; RC6 carriers and original source identities remain untouched.",
     "current-outline.md": "Regenerate the RC6 maintainer/current-entry front door; retain exact raw predecessor bytes/mode in 90_ARCHIVE/MAIN_4eea8de_FRONTDOORS/current-outline.md.",
     "index.html": "Regenerate the RC6 maintainer/current-entry front door; retain exact raw predecessor bytes/mode in 90_ARCHIVE/MAIN_4eea8de_FRONTDOORS/index.html.",
+    "metadata/course-map.json": "RC9 prepared-source metadata or hardened manual publisher. Exact prior guarded bytes/mode retained in 90_ARCHIVE/MAIN_97819d8_RC9_METADATA/metadata/course-map.json; RC6 carriers and original source identities remain untouched.",
     "metadata/current-integrity/REPOSITORY_PACKAGE_ID.txt": "SHA256 of exact repository manifest bytes, followed by one LF; original algorithm retained.",
     "metadata/current-integrity/REPOSITORY_SHA256SUMS.txt": "Bind all current admitted source bytes except the two original self-controls.",
     "metadata/language-review.json": "Rebind finite purpose dispositions to all current text hashes; do not claim human fluency review.",
     "metadata/preserved-main.json": "Replace the narrower historical guard with complete raw-4eea conservation accounting and explicit permitted changes.",
+    "metadata/repository-metadata.yml": "RC9 prepared-source metadata or hardened manual publisher. Exact prior guarded bytes/mode retained in 90_ARCHIVE/MAIN_97819d8_RC9_METADATA/metadata/repository-metadata.yml; RC6 carriers and original source identities remain untouched.",
     "metadata/student-selection.json": "Select fifteen new independent successors and fifteen unchanged carriers; preserve all predecessor bytes."
   },
   "baseline_file_count": 7725,
@@ -1216,13 +1227,6 @@
       "git_blob_id": "ce6a08ee8cf4e655c8bf2ec21fc52e4bc9c905b7",
       "git_mode": "100644",
       "sha256": "1feeec0976d4f38eace1c092d252f638303bce60a79ae1117c26393af3909e65"
-    },
-    ".github/workflows/pages.yml": {
-      "bytes": 2055,
-      "executable": false,
-      "git_blob_id": "4ae6e26b2cf1efe5531e8c2884875e5f9523ea79",
-      "git_mode": "100644",
-      "sha256": "96642f7c2e3965ac5801dd3c41b53753c8fffa171bdd6b226ac14591e8ce71f0"
     },
     ".github/workflows/validate.yml": {
       "bytes": 1429,
@@ -3464,13 +3468,6 @@
       "git_mode": "100644",
       "sha256": "ff3e01a555206284e0b66d9003654535e6a0aec81e111e535ff5fa7a765be50e"
     },
-    "00_TOOLS/maintainer/README.md": {
-      "bytes": 730,
-      "executable": false,
-      "git_blob_id": "06b7c008b05e4ed887a2d6b3f7cc070bec58b49a",
-      "git_mode": "100644",
-      "sha256": "0abea91d68c7f261112855122541cd9c3089b76da6007511f62199b4afa4247b"
-    },
     "00_TOOLS/maintainer/RECONSTRUCTED_RC5.md": {
       "bytes": 4234,
       "executable": false,
@@ -3491,13 +3488,6 @@
       "git_blob_id": "ec41930d184c9a7c2a140bb69c3a7c6c9e69c5da",
       "git_mode": "100644",
       "sha256": "16b08284009a5f6e35d69dace3c8a418f8d6718da7b7ceb65d4571a5b6b555de"
-    },
-    "00_TOOLS/maintainer/WEEKLY_RELEASE_PUBLISHING.md": {
-      "bytes": 5772,
-      "executable": false,
-      "git_blob_id": "6aee396eecad5f37e228218ca1f933b39e487940",
-      "git_mode": "100644",
-      "sha256": "311da75256d2806c7bb1ee646b0150d86f1c9cd055d690b1525ca8de17bc9d0f"
     },
     "00_TOOLS/publishing/build_pages_site.py": {
       "bytes": 623,
@@ -53787,20 +53777,6 @@
       "git_mode": "100644",
       "sha256": "86b5590a6fb1c0d661dd45411da688b765a7f837044476b3c56ade4cdc292c2f"
     },
-    "CHANGELOG.md": {
-      "bytes": 3106,
-      "executable": false,
-      "git_blob_id": "fd84b0fe632dae71d559ca41167885b94cb1f77f",
-      "git_mode": "100644",
-      "sha256": "a1ba410da0b223099ce7ee4b00200d19c2ecd1f73a57775e1efcc47471d58b53"
-    },
-    "CITATION.cff": {
-      "bytes": 784,
-      "executable": false,
-      "git_blob_id": "e0ff91c6ced3d63b2c06407dca01f1cdb0f732c0",
-      "git_mode": "100644",
-      "sha256": "9d4cf2611ca083428e9165c35628be325834e0879befdd205203d92d5d45c104"
-    },
     "CODE_OF_CONDUCT.md": {
       "bytes": 394,
       "executable": false,
@@ -53850,27 +53826,6 @@
       "git_mode": "100644",
       "sha256": "3527d359b4762a3560ddd18fdaed0a01431fb6e3a69b6a490efb8445eb4b6b4c"
     },
-    "REPOSITORY_STATUS.md": {
-      "bytes": 1412,
-      "executable": false,
-      "git_blob_id": "87601a54f7cb7979320551216697d905a29b6578",
-      "git_mode": "100644",
-      "sha256": "a6baac4f8901d32d35efaa094705429b8806b2afa071e7c066dfb050b95c2ec0"
-    },
-    "SECURITY.md": {
-      "bytes": 446,
-      "executable": false,
-      "git_blob_id": "7b0f9977bc39547e4885bb0a3370f79f72605ab8",
-      "git_mode": "100644",
-      "sha256": "6e0e8fadff2fae67e1824a454479b96777c913b4870583ec9fce0ef8942f0e28"
-    },
-    "SUPPORT.md": {
-      "bytes": 480,
-      "executable": false,
-      "git_blob_id": "8f555b47fa24666d480ce43aadac3219b1b53d61",
-      "git_mode": "100644",
-      "sha256": "035e51ada4926e3bf36beae3bdbed3ac020306038e851a2b0c4ecbaa89e135dd"
-    },
     "assets/README.md": {
       "bytes": 359,
       "executable": false,
@@ -53898,13 +53853,6 @@
       "git_blob_id": "4fe220d22049473b518ba38714fe65ea45c87382",
       "git_mode": "100644",
       "sha256": "61e613207183e32ca7483857826b82e6eefbe0197930af679ebeec70d2a4f4e0"
-    },
-    "codemeta.json": {
-      "bytes": 1449,
-      "executable": false,
-      "git_blob_id": "c85af38cf1b2dec8735c22976c22c16fd68a5df9",
-      "git_mode": "100644",
-      "sha256": "a921c6039b00c123a9ac9de8d683be5b814fdcc0ae50ae2d5bebec8460217816"
     },
     "metadata/GITHUB_ABOUT_BOX.md": {
       "bytes": 632,
@@ -53934,13 +53882,6 @@
       "git_mode": "100644",
       "sha256": "37ee5c97d13351e2e5be408ab89322f65f3c069b6aaa36cdfa277857aa033ac2"
     },
-    "metadata/course-map.json": {
-      "bytes": 4136,
-      "executable": false,
-      "git_blob_id": "65698e102616f9ff694c1e2847e3349cadaca1ad",
-      "git_mode": "100644",
-      "sha256": "7bf931011b6e4759623a3e78de2ecbfdb4dfe38387e356ea391d267557094f50"
-    },
     "metadata/development-state.json": {
       "bytes": 701,
       "executable": false,
@@ -53961,13 +53902,6 @@
       "git_blob_id": "705f656d2a973d8b769487598fc22bf7f66a664e",
       "git_mode": "100644",
       "sha256": "f03a1432daae3cf36abd105154864d7414985fbed3b0c8a085a132e5d2ee6907"
-    },
-    "metadata/repository-metadata.yml": {
-      "bytes": 1103,
-      "executable": false,
-      "git_blob_id": "5b2ef4eb1cc686bf54c5dae152acf371d66156ce",
-      "git_mode": "100644",
-      "sha256": "58e5c495134192db37ff2a3679bbf32816f21cdd9728a4f02ebd358ebd395339"
     }
   },
   "intentionally_updated_base_paths": [
@@ -54138,6 +54072,85 @@
     "metadata/student-selection.json"
   ],
   "retired_originals": {
+    "90_ARCHIVE/MAIN_97819d8_RC9_METADATA/.github/workflows/pages.yml": {
+      "bytes": 2055,
+      "executable": false,
+      "git_blob_id": "4ae6e26b2cf1efe5531e8c2884875e5f9523ea79",
+      "git_mode": "100644",
+      "original_path": ".github/workflows/pages.yml",
+      "sha256": "96642f7c2e3965ac5801dd3c41b53753c8fffa171bdd6b226ac14591e8ce71f0",
+      "source_commit": "97819d8d5d1b283299d513e2da178d08cca4dd36"
+    },
+    "90_ARCHIVE/MAIN_97819d8_RC9_METADATA/00_TOOLS/maintainer/README.md": {
+      "bytes": 730,
+      "executable": false,
+      "git_blob_id": "06b7c008b05e4ed887a2d6b3f7cc070bec58b49a",
+      "git_mode": "100644",
+      "sha256": "0abea91d68c7f261112855122541cd9c3089b76da6007511f62199b4afa4247b"
+    },
+    "90_ARCHIVE/MAIN_97819d8_RC9_METADATA/00_TOOLS/maintainer/WEEKLY_RELEASE_PUBLISHING.md": {
+      "bytes": 5772,
+      "executable": false,
+      "git_blob_id": "6aee396eecad5f37e228218ca1f933b39e487940",
+      "git_mode": "100644",
+      "sha256": "311da75256d2806c7bb1ee646b0150d86f1c9cd055d690b1525ca8de17bc9d0f"
+    },
+    "90_ARCHIVE/MAIN_97819d8_RC9_METADATA/CHANGELOG.md": {
+      "bytes": 3106,
+      "executable": false,
+      "git_blob_id": "fd84b0fe632dae71d559ca41167885b94cb1f77f",
+      "git_mode": "100644",
+      "sha256": "a1ba410da0b223099ce7ee4b00200d19c2ecd1f73a57775e1efcc47471d58b53"
+    },
+    "90_ARCHIVE/MAIN_97819d8_RC9_METADATA/CITATION.cff": {
+      "bytes": 784,
+      "executable": false,
+      "git_blob_id": "e0ff91c6ced3d63b2c06407dca01f1cdb0f732c0",
+      "git_mode": "100644",
+      "sha256": "9d4cf2611ca083428e9165c35628be325834e0879befdd205203d92d5d45c104"
+    },
+    "90_ARCHIVE/MAIN_97819d8_RC9_METADATA/REPOSITORY_STATUS.md": {
+      "bytes": 1412,
+      "executable": false,
+      "git_blob_id": "87601a54f7cb7979320551216697d905a29b6578",
+      "git_mode": "100644",
+      "sha256": "a6baac4f8901d32d35efaa094705429b8806b2afa071e7c066dfb050b95c2ec0"
+    },
+    "90_ARCHIVE/MAIN_97819d8_RC9_METADATA/SECURITY.md": {
+      "bytes": 446,
+      "executable": false,
+      "git_blob_id": "7b0f9977bc39547e4885bb0a3370f79f72605ab8",
+      "git_mode": "100644",
+      "sha256": "6e0e8fadff2fae67e1824a454479b96777c913b4870583ec9fce0ef8942f0e28"
+    },
+    "90_ARCHIVE/MAIN_97819d8_RC9_METADATA/SUPPORT.md": {
+      "bytes": 480,
+      "executable": false,
+      "git_blob_id": "8f555b47fa24666d480ce43aadac3219b1b53d61",
+      "git_mode": "100644",
+      "sha256": "035e51ada4926e3bf36beae3bdbed3ac020306038e851a2b0c4ecbaa89e135dd"
+    },
+    "90_ARCHIVE/MAIN_97819d8_RC9_METADATA/codemeta.json": {
+      "bytes": 1449,
+      "executable": false,
+      "git_blob_id": "c85af38cf1b2dec8735c22976c22c16fd68a5df9",
+      "git_mode": "100644",
+      "sha256": "a921c6039b00c123a9ac9de8d683be5b814fdcc0ae50ae2d5bebec8460217816"
+    },
+    "90_ARCHIVE/MAIN_97819d8_RC9_METADATA/metadata/course-map.json": {
+      "bytes": 4136,
+      "executable": false,
+      "git_blob_id": "65698e102616f9ff694c1e2847e3349cadaca1ad",
+      "git_mode": "100644",
+      "sha256": "7bf931011b6e4759623a3e78de2ecbfdb4dfe38387e356ea391d267557094f50"
+    },
+    "90_ARCHIVE/MAIN_97819d8_RC9_METADATA/metadata/repository-metadata.yml": {
+      "bytes": 1103,
+      "executable": false,
+      "git_blob_id": "5b2ef4eb1cc686bf54c5dae152acf371d66156ce",
+      "git_mode": "100644",
+      "sha256": "58e5c495134192db37ff2a3679bbf32816f21cdd9728a4f02ebd358ebd395339"
+    },
     "90_ARCHIVE/RETIRED_BEFORE_RC5/01_WEEKS/WEEK_01/C01_COURSE/EN_GB/DOWNLOAD/TW2026_C01_STUDENT_EN_GB_v2.0.1_FINAL.zip": {
       "executable": false,
       "original_path": "01_WEEKS/WEEK_01/C01_COURSE/EN_GB/DOWNLOAD/TW2026_C01_STUDENT_EN_GB_v2.0.1_FINAL.zip",
@@ -54235,6 +54248,74 @@
       "source_commit": "1850118b3f619b233f89941802212fe59d8d5dfe"
     }
   },
+  "retirement_history": [
+    {
+      "archive": "90_ARCHIVE/MAIN_97819d8_RC9_METADATA/00_TOOLS/maintainer/WEEKLY_RELEASE_PUBLISHING.md",
+      "path": "00_TOOLS/maintainer/WEEKLY_RELEASE_PUBLISHING.md",
+      "sha256": "311da75256d2806c7bb1ee646b0150d86f1c9cd055d690b1525ca8de17bc9d0f",
+      "source_commit": "97819d8d5d1b283299d513e2da178d08cca4dd36"
+    },
+    {
+      "archive": "90_ARCHIVE/MAIN_97819d8_RC9_METADATA/CHANGELOG.md",
+      "path": "CHANGELOG.md",
+      "sha256": "a1ba410da0b223099ce7ee4b00200d19c2ecd1f73a57775e1efcc47471d58b53",
+      "source_commit": "97819d8d5d1b283299d513e2da178d08cca4dd36"
+    },
+    {
+      "archive": "90_ARCHIVE/MAIN_97819d8_RC9_METADATA/CITATION.cff",
+      "path": "CITATION.cff",
+      "sha256": "9d4cf2611ca083428e9165c35628be325834e0879befdd205203d92d5d45c104",
+      "source_commit": "97819d8d5d1b283299d513e2da178d08cca4dd36"
+    },
+    {
+      "archive": "90_ARCHIVE/MAIN_97819d8_RC9_METADATA/REPOSITORY_STATUS.md",
+      "path": "REPOSITORY_STATUS.md",
+      "sha256": "a6baac4f8901d32d35efaa094705429b8806b2afa071e7c066dfb050b95c2ec0",
+      "source_commit": "97819d8d5d1b283299d513e2da178d08cca4dd36"
+    },
+    {
+      "archive": "90_ARCHIVE/MAIN_97819d8_RC9_METADATA/SECURITY.md",
+      "path": "SECURITY.md",
+      "sha256": "6e0e8fadff2fae67e1824a454479b96777c913b4870583ec9fce0ef8942f0e28",
+      "source_commit": "97819d8d5d1b283299d513e2da178d08cca4dd36"
+    },
+    {
+      "archive": "90_ARCHIVE/MAIN_97819d8_RC9_METADATA/SUPPORT.md",
+      "path": "SUPPORT.md",
+      "sha256": "035e51ada4926e3bf36beae3bdbed3ac020306038e851a2b0c4ecbaa89e135dd",
+      "source_commit": "97819d8d5d1b283299d513e2da178d08cca4dd36"
+    },
+    {
+      "archive": "90_ARCHIVE/MAIN_97819d8_RC9_METADATA/codemeta.json",
+      "path": "codemeta.json",
+      "sha256": "a921c6039b00c123a9ac9de8d683be5b814fdcc0ae50ae2d5bebec8460217816",
+      "source_commit": "97819d8d5d1b283299d513e2da178d08cca4dd36"
+    },
+    {
+      "archive": "90_ARCHIVE/MAIN_97819d8_RC9_METADATA/metadata/course-map.json",
+      "path": "metadata/course-map.json",
+      "sha256": "7bf931011b6e4759623a3e78de2ecbfdb4dfe38387e356ea391d267557094f50",
+      "source_commit": "97819d8d5d1b283299d513e2da178d08cca4dd36"
+    },
+    {
+      "archive": "90_ARCHIVE/MAIN_97819d8_RC9_METADATA/metadata/repository-metadata.yml",
+      "path": "metadata/repository-metadata.yml",
+      "sha256": "58e5c495134192db37ff2a3679bbf32816f21cdd9728a4f02ebd358ebd395339",
+      "source_commit": "97819d8d5d1b283299d513e2da178d08cca4dd36"
+    },
+    {
+      "archive": "90_ARCHIVE/MAIN_97819d8_RC9_METADATA/00_TOOLS/maintainer/README.md",
+      "path": "00_TOOLS/maintainer/README.md",
+      "sha256": "0abea91d68c7f261112855122541cd9c3089b76da6007511f62199b4afa4247b",
+      "source_commit": "97819d8d5d1b283299d513e2da178d08cca4dd36"
+    },
+    {
+      "archive": "90_ARCHIVE/MAIN_97819d8_RC9_METADATA/.github/workflows/pages.yml",
+      "path": ".github/workflows/pages.yml",
+      "sha256": "96642f7c2e3965ac5801dd3c41b53753c8fffa171bdd6b226ac14591e8ce71f0",
+      "source_commit": "97819d8d5d1b283299d513e2da178d08cca4dd36"
+    }
+  ],
   "schema": "webtech-preserved-main/v1",
   "scope": "All baseline bytes/modes are guarded except individually authorised actual changes and four regenerated controls. Unchanged allowed paths remain guarded. No old sealed projection, carrier or collection template is excluded.",
   "source_commit": "4eea8de416cb03cf4f718fb802f868a391abb192"

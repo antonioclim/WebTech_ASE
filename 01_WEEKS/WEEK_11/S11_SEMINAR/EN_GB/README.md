@@ -1,3 +1,18 @@
+# Web Technologies — English classroom RC9
+
+<!-- RC9_ACTIVE_NAVIGATION_BEGIN -->
+**Prepared classroom version `3.0.0-rc.9` — `PREPARED_NOT_PUBLISHED`.** Start with the [current English student portal](../../../../00_START_HERE/STUDENT_CLASSROOM_RC9/README.md). The portal explains how to use the prepared classroom asset and how the owner will publish it after final review. No public RC9 release is claimed here.
+
+The last published classroom prerelease is RC8. The current portal identifies that existing download separately from the prepared RC9 successor. Qualification and classroom acceptance remain pending.
+
+[RC9 changes and limitations](../../../../90_RELEASES/NOTES_CLASSROOM_RC9.md) · [Owner-only RC9 preparation](../../../../00_TOOLS/maintainer/CLASSROOM_RC9_PUBLISHING.md)
+
+The material below is **historical RC6 source**, retained only as an optional advanced reference. Its whole-source ZIPs and full applications are not the remediated RC9 classroom download. Older instructions inside the collapsed section describe their own edition. In particular, the old C07 carrier has stale canonical registry hashes; use the corrected classroom route. The full S13 server and old optional S03/S06 commands have separately recorded defects. A classroom check does not certify a historical full application.
+<!-- RC9_ACTIVE_NAVIGATION_END -->
+
+<details data-historical-source="rc6">
+<summary>Historical RC6 source references (advanced, optional)</summary>
+
 # S11 — Role-Protected Moderation Operation
 
 Current English collection candidate **3.0.0-rc.6**; selected object edition **1.2.4-rc.6**. Qualification and classroom acceptance remain pending.
@@ -28,3 +43,5 @@ GitHub shows HTML source. Download and extract the selected ZIP to use the inter
 Older `DOWNLOAD`, `PACKAGE_EXACT`, `PACKAGES` and versioned release folders remain for comparison. They are outside the current English selection. Use the current ZIP and guide linked above for class work. Romanian materials, where present, are retained legacy alternatives and have a separate status.
 
 [Preserved predecessor navigation](../../../../90_ARCHIVE/MAIN_4eea8de_NAVIGATION/README.md). Historical filenames containing `FINAL` do not qualify the current collection.
+
+</details>

@@ -3,12 +3,12 @@
   "@type": "SoftwareSourceCode",
   "name": "WebTech_ASE",
   "alternateName": "Web Technologies at ASE",
-  "description": "Web Technologies teaching repository for ASE: setup, courses, seminars, offline student kits and evidence-based activities.",
-  "version": "2.0.1",
+  "description": "Prepared English Web Technologies classroom successor 3.0.0-rc.9 for ASE: fourteen course units, fourteen seminars and setup materials. RC9 is PREPARED_NOT_PUBLISHED and NOT_FINAL; RC8 remains the last published classroom prerelease.",
+  "version": "3.0.0-rc.9",
   "dateCreated": "2026-09-27",
-  "dateModified": "2026-09-27",
+  "dateModified": "2026-10-06",
   "codeRepository": "https://github.com/antonioclim/WebTech_ASE",
-  "url": "https://antonioclim.github.io/WebTech_ASE/",
+  "url": "https://github.com/antonioclim/WebTech_ASE",
   "author": [
     {
       "@type": "Person",
@@ -56,6 +56,5 @@
     "ase"
   ],
   "isAccessibleForFree": true,
-  "developmentStatus": "active",
-  "datePublished": "2026-09-27"
+  "developmentStatus": "PREPARED_NOT_PUBLISHED"
 }

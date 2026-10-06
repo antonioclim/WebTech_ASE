@@ -1,3 +1,22 @@
+# Web Technologies — English classroom RC9
+
+<!-- RC9_ACTIVE_NAVIGATION_BEGIN -->
+**Prepared classroom version `3.0.0-rc.9` — `PREPARED_NOT_PUBLISHED`.** Start with the [current English student portal](00_START_HERE/STUDENT_CLASSROOM_RC9/README.md). The portal explains how to use the prepared classroom asset and how the owner will publish it after final review. No public RC9 release is claimed here.
+
+The last published classroom prerelease is RC8. The current portal identifies that existing download separately from the prepared RC9 successor. Qualification and classroom acceptance remain pending.
+
+[RC9 changes and limitations](90_RELEASES/NOTES_CLASSROOM_RC9.md) · [Owner-only RC9 preparation](00_TOOLS/maintainer/CLASSROOM_RC9_PUBLISHING.md)
+
+The material below is **historical RC6 source**, retained only as an optional advanced reference. Its whole-source ZIPs and full applications are not the remediated RC9 classroom download. Older instructions inside the collapsed section describe their own edition. In particular, the old C07 carrier has stale canonical registry hashes; use the corrected classroom route. The full S13 server and old optional S03/S06 commands have separately recorded defects. A classroom check does not certify a historical full application.
+<!-- RC9_ACTIVE_NAVIGATION_END -->
+
+The current portal supplies the prepared RC9 route for fourteen course units, fourteen seminars and two setup units. The forty individual seminar microproject contracts are retained. Use the active guides within that asset, including their declared implementation limits and evidence instructions.
+
+[Fourteen-week plan and topics](ENTRY/COURSE_PLAN.html) · [Current repository status](REPOSITORY_STATUS.md)
+
+<details data-historical-source="rc6">
+<summary>Historical RC6 whole-source weekly selection (advanced, optional)</summary>
+
 # Current English selection — 3.0.0-rc.6
 
 Candidate, not FINAL. The 30 selected objects are 14 courses,14 seminars and 2 unchangedDay 0setup payloads.
@@ -22,3 +41,5 @@ All 2–3 seminar classroom microprojects are required, individual and completed
 | 12 | [C12](ENTRY/C12.html) | [S12](ENTRY/S12.html) | [ZIP](90_RELEASES/assets/WebTech_ASE_WEEK_12_EN_GB_v3.0.0-rc.6.zip) · [SHA-256](90_RELEASES/assets/WebTech_ASE_WEEK_12_EN_GB_v3.0.0-rc.6.zip.sha256) |
 | 13 | [C13](ENTRY/C13.html) | [S13](ENTRY/S13.html) | [ZIP](90_RELEASES/assets/WebTech_ASE_WEEK_13_EN_GB_v3.0.0-rc.6.zip) · [SHA-256](90_RELEASES/assets/WebTech_ASE_WEEK_13_EN_GB_v3.0.0-rc.6.zip.sha256) |
 | 14 | [C14](ENTRY/C14.html) | [S14](ENTRY/S14.html) | [ZIP](90_RELEASES/assets/WebTech_ASE_WEEK_14_EN_GB_v3.0.0-rc.6.zip) · [SHA-256](90_RELEASES/assets/WebTech_ASE_WEEK_14_EN_GB_v3.0.0-rc.6.zip.sha256) |
+
+</details>

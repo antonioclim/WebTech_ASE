@@ -1,0 +1,596 @@
+{
+  "schema": "webtech-classroom-course-map/v1",
+  "distribution_version": "3.0.0-rc.9",
+  "academic_year": "2026-2027",
+  "language": "en-GB",
+  "qualification": "NOT_FINAL",
+  "purpose": "Navigation and learning outcomes derived from the current supplied teaching materials. Grading weights and submission deadlines are defined by the lecturer in the actual seminar Assignment.",
+  "required_project_count": 40,
+  "weeks": [
+    {
+      "week": 1,
+      "course_id": "C01",
+      "course_topic": "The Web as a system, HTTP and AI-assisted development",
+      "seminar_id": "S01",
+      "seminar_topic": "HTTP Detective + Tiny HTTP Server",
+      "tutorial": "TUTORIALS/S01.html",
+      "learning_outcomes": [
+        "Read an HTTP request and response as separate method, URL, status, header and body facts.",
+        "Explain the boundary between browser, network and server observations.",
+        "Implement and test a path-based JSON greeting resource."
+      ],
+      "prerequisites": [
+        "Complete the appropriate Day 0 setup and know how to open a VS Code folder and terminal."
+      ],
+      "required_projects": [
+        {
+          "id": "P01",
+          "title": "HTTP exchange classifier",
+          "editable_file": "CLASSROOM_RC6/targets/p01.mjs",
+          "execution_nature": "Actual loopback HTTP plus JavaScript projection"
+        },
+        {
+          "id": "P02",
+          "title": "Precise greeting resource",
+          "editable_file": "CLASSROOM_RC6/targets/p02.mjs",
+          "execution_nature": "JavaScript route function plus actual loopback HTTP"
+        }
+      ],
+      "individual_in_class": true,
+      "pdf_filename_pattern": "TW2026_S01_GROUP_Surname_Firstname.pdf",
+      "schedule_minutes": 60,
+      "timing_evidence": "UNPILOTED_PLANNING_ESTIMATE",
+      "framework_companion": null
+    },
+    {
+      "week": 2,
+      "course_id": "C02",
+      "course_topic": "Semantic HTML, CSS, responsive UI and accessibility",
+      "seminar_id": "S02",
+      "seminar_topic": "Responsive Card Grid",
+      "tutorial": "TUTORIALS/S02.html",
+      "learning_outcomes": [
+        "Use semantic HTML structure and distinguish grid relationships from flex relationships.",
+        "Measure responsive layout, readable long content, keyboard focus and reduced motion in a browser.",
+        "Separate a CSS source checklist from observed rendered behaviour."
+      ],
+      "prerequisites": [
+        "C01/S01: browser, HTTP and evidence boundaries."
+      ],
+      "required_projects": [
+        {
+          "id": "P01",
+          "title": "Responsive relationship reconstruction",
+          "editable_file": "CLASSROOM_RC6/targets/styles.css",
+          "execution_nature": "CSS source checklist plus required actual browser viewport observations"
+        },
+        {
+          "id": "P02",
+          "title": "Intrinsic sizing and readable content",
+          "editable_file": "CLASSROOM_RC6/targets/styles.css",
+          "execution_nature": "CSS source checklist plus required rendered-content measurements"
+        },
+        {
+          "id": "P03",
+          "title": "Keyboard focus and motion preference",
+          "editable_file": "CLASSROOM_RC6/targets/styles.css",
+          "execution_nature": "CSS source checklist plus required keyboard and motion-preference observations"
+        }
+      ],
+      "individual_in_class": true,
+      "pdf_filename_pattern": "TW2026_S02_GROUP_Surname_Firstname.pdf",
+      "schedule_minutes": 60,
+      "timing_evidence": "UNPILOTED_PLANNING_ESTIMATE",
+      "framework_companion": null
+    },
+    {
+      "week": 3,
+      "course_id": "C03",
+      "course_topic": "JavaScript for reading and modifying programs",
+      "seminar_id": "S03",
+      "seminar_topic": "Dataset Transformer CLI",
+      "tutorial": "TUTORIALS/S03.html",
+      "learning_outcomes": [
+        "Validate own fields and exact types before filtering data.",
+        "Produce fresh arrays and records with deterministic ordering.",
+        "Construct a reusable predicate for a bounded declarative leaf rule."
+      ],
+      "prerequisites": [
+        "Day 0: Node runtime and VS Code terminal.",
+        "C01/S01 and C02/S02: basic web data and observed behaviour."
+      ],
+      "required_projects": [
+        {
+          "id": "P01",
+          "title": "Fresh task summary",
+          "editable_file": "CLASSROOM_RC6/targets/p01.mjs",
+          "execution_nature": "Actual JavaScript module and input-identity witnesses"
+        },
+        {
+          "id": "P02",
+          "title": "Declarative leaf rule",
+          "editable_file": "CLASSROOM_RC6/targets/p02.mjs",
+          "execution_nature": "Actual JavaScript module and input-identity witnesses"
+        },
+        {
+          "id": "P03",
+          "title": "Defensive event normaliser",
+          "editable_file": "CLASSROOM_RC6/targets/p03.mjs",
+          "execution_nature": "Actual JavaScript module and input-identity witnesses"
+        }
+      ],
+      "individual_in_class": true,
+      "pdf_filename_pattern": "TW2026_S03_GROUP_Surname_Firstname.pdf",
+      "schedule_minutes": 60,
+      "timing_evidence": "UNPILOTED_PLANNING_ESTIMATE",
+      "framework_companion": null
+    },
+    {
+      "week": 4,
+      "course_id": "C04",
+      "course_topic": "Modules, DOM, events, Promises, async/await and fetch",
+      "seminar_id": "S04",
+      "seminar_topic": "Multi-source Data Dashboard",
+      "tutorial": "TUTORIALS/S04.html",
+      "learning_outcomes": [
+        "Explain promise initiation, awaiting and ownership of results.",
+        "Resolve delegated actions inside an owned list.",
+        "Distinguish transport rejection, HTTP failure and JSON parsing failure."
+      ],
+      "prerequisites": [
+        "C03/S03: functions, arrays, own fields and data ownership."
+      ],
+      "required_projects": [
+        {
+          "id": "P01",
+          "title": "Concurrent request initiation",
+          "editable_file": "CLASSROOM_RC6/targets/p01.mjs",
+          "execution_nature": "Injected deferred promises; actual JavaScript execution"
+        },
+        {
+          "id": "P02",
+          "title": "Delegated nested click",
+          "editable_file": "CLASSROOM_RC6/targets/p02.mjs",
+          "execution_nature": "Minimal injected DOM interface; native browser observation separate"
+        },
+        {
+          "id": "P03",
+          "title": "Bounded retry classification",
+          "editable_file": "CLASSROOM_RC6/targets/p03.mjs",
+          "execution_nature": "Actual JavaScript finite failure-class policy"
+        }
+      ],
+      "individual_in_class": true,
+      "pdf_filename_pattern": "TW2026_S04_GROUP_Surname_Firstname.pdf",
+      "schedule_minutes": 60,
+      "timing_evidence": "UNPILOTED_PLANNING_ESTIMATE",
+      "framework_companion": null
+    },
+    {
+      "week": 5,
+      "course_id": "C05",
+      "course_topic": "Node, Express and REST",
+      "seminar_id": "S05",
+      "seminar_topic": "In-memory Task API",
+      "tutorial": "TUTORIALS/S05.html",
+      "learning_outcomes": [
+        "Define a closed request-body contract before service work.",
+        "Own one terminal logging event through a callback closure.",
+        "Map domain outcomes to safe public status, headers and JSON envelopes."
+      ],
+      "prerequisites": [
+        "C03/S03: validation and fresh representations.",
+        "C04/S04: asynchronous ownership and failure classes."
+      ],
+      "required_projects": [
+        {
+          "id": "P01",
+          "title": "Closed task-body boundary",
+          "editable_file": "CLASSROOM_RC6/targets/p01.mjs",
+          "execution_nature": "Actual JavaScript closed input boundary"
+        },
+        {
+          "id": "P02",
+          "title": "Exactly-once terminal logger",
+          "editable_file": "CLASSROOM_RC6/targets/p02.mjs",
+          "execution_nature": "Injected callback and supplied clock"
+        },
+        {
+          "id": "P03",
+          "title": "Public outcome mapping",
+          "editable_file": "CLASSROOM_RC6/targets/p03.mjs",
+          "execution_nature": "Public mapper plus actual loopback HTTP"
+        }
+      ],
+      "individual_in_class": true,
+      "pdf_filename_pattern": "TW2026_S05_GROUP_Surname_Firstname.pdf",
+      "schedule_minutes": 60,
+      "timing_evidence": "UNPILOTED_PLANNING_ESTIMATE",
+      "framework_companion": null
+    },
+    {
+      "week": 6,
+      "course_id": "C06",
+      "course_topic": "Persistence with Sequelize and SQLite",
+      "seminar_id": "S06",
+      "seminar_topic": "Query API",
+      "tutorial": "TUTORIALS/S06.html",
+      "learning_outcomes": [
+        "Distinguish normal SQLite initialisation from an explicit reset.",
+        "Translate accepted query tokens into parameterised filters and fixed ordering.",
+        "Await a persistence operation and preserve unexpected error identity."
+      ],
+      "prerequisites": [
+        "C05/S05: API boundaries and async functions.",
+        "C03/S03: typed validation and deterministic projection."
+      ],
+      "required_projects": [
+        {
+          "id": "P01",
+          "title": "Normal reopen and explicit reset",
+          "editable_file": "CLASSROOM_RC6/targets/p01.mjs",
+          "execution_nature": "Actual Node built-in SQLite file close/reopen/reset"
+        },
+        {
+          "id": "P02",
+          "title": "Closed query translator",
+          "editable_file": "CLASSROOM_RC6/targets/p02.mjs",
+          "execution_nature": "Actual query translation and Node built-in SQLite selection"
+        },
+        {
+          "id": "P03",
+          "title": "Awaited reservation persistence",
+          "editable_file": "CLASSROOM_RC6/targets/p03.mjs",
+          "execution_nature": "Actual SQLite write through supplied async adapter"
+        }
+      ],
+      "individual_in_class": true,
+      "pdf_filename_pattern": "TW2026_S06_GROUP_Surname_Firstname.pdf",
+      "schedule_minutes": 60,
+      "timing_evidence": "UNPILOTED_PLANNING_ESTIMATE",
+      "framework_companion": null
+    },
+    {
+      "week": 7,
+      "course_id": "C07",
+      "course_topic": "Relationships, transactions and API design",
+      "seminar_id": "S07",
+      "seminar_topic": "Transactional Booking",
+      "tutorial": "TUTORIALS/S07.html",
+      "learning_outcomes": [
+        "Represent relationships through a junction table and one parameterised eager join.",
+        "Keep booking, seat updates and audit within one managed transaction.",
+        "Explain idempotent resource effects and compare actual repeated HTTP responses."
+      ],
+      "prerequisites": [
+        "C06/S06: SQLite persistence, parameter bindings and awaited operations.",
+        "C05/S05: public response envelopes."
+      ],
+      "required_projects": [
+        {
+          "id": "P01",
+          "title": "Junction relationship query",
+          "editable_file": "CLASSROOM_RC6/targets/p01.mjs",
+          "execution_nature": "Actual Node built-in SQLite join"
+        },
+        {
+          "id": "P02",
+          "title": "One owned atomic booking",
+          "editable_file": "CLASSROOM_RC6/targets/p02.mjs",
+          "execution_nature": "Actual Node built-in SQLite managed transaction adapter"
+        },
+        {
+          "id": "P03",
+          "title": "Idempotent resource response",
+          "editable_file": "CLASSROOM_RC6/targets/p03.mjs",
+          "execution_nature": "Response mapper plus actual loopback HTTP"
+        }
+      ],
+      "individual_in_class": true,
+      "pdf_filename_pattern": "TW2026_S07_GROUP_Surname_Firstname.pdf",
+      "schedule_minutes": 60,
+      "timing_evidence": "UNPILOTED_PLANNING_ESTIMATE",
+      "framework_companion": null
+    },
+    {
+      "week": 8,
+      "course_id": "C08",
+      "course_topic": "React with Vite",
+      "seminar_id": "S08",
+      "seminar_topic": "Vanilla-to-React Reading Queue",
+      "tutorial": "TUTORIALS/S08.html",
+      "learning_outcomes": [
+        "Explain React ownership of values, immutability and derived data.",
+        "Implement the state transition, capacity projection and publication gate of bounded classroom tasks.",
+        "Distinguish JavaScript-core, React/JSDOM and actual browser evidence."
+      ],
+      "prerequisites": [
+        "C02/S02: HTML/CSS and browser observation.",
+        "C03/S03 and C04/S04: immutability, callbacks and asynchronous ownership."
+      ],
+      "required_projects": [
+        {
+          "id": "P01",
+          "title": "Reading queue: immutable trimmed addition",
+          "editable_file": "CLASSROOM_RC6/student/p01.mjs",
+          "execution_nature": "Bounded JavaScript function; supplied optional real React companion"
+        },
+        {
+          "id": "P02",
+          "title": "Component decomposition: derived capacity",
+          "editable_file": "CLASSROOM_RC6/student/p02.mjs",
+          "execution_nature": "Bounded JavaScript function; supplied optional real React companion"
+        },
+        {
+          "id": "P03",
+          "title": "Effects: permission to publish",
+          "editable_file": "CLASSROOM_RC6/student/p03.mjs",
+          "execution_nature": "Bounded JavaScript function; supplied optional real React companion"
+        }
+      ],
+      "individual_in_class": true,
+      "pdf_filename_pattern": "TW2026_S08_GROUP_Surname_Firstname.pdf",
+      "schedule_minutes": 60,
+      "timing_evidence": "UNPILOTED_PLANNING_ESTIMATE",
+      "framework_companion": {
+        "supplied": true,
+        "path": "CLASSROOM_RC6/REACT/README.md",
+        "core_pass_is_framework_pass": false
+      }
+    },
+    {
+      "week": 9,
+      "course_id": "C09",
+      "course_topic": "Routing, forms and full-stack React",
+      "seminar_id": "S09",
+      "seminar_topic": "Routed Notes Application",
+      "tutorial": "TUTORIALS/S09.html",
+      "learning_outcomes": [
+        "Explain URL identity and route delivery as distinct concerns.",
+        "Protect authoritative publication of validated application data.",
+        "Interpret a direct deep-link delivery outcome without claiming that a model is a browser deployment."
+      ],
+      "prerequisites": [
+        "C08/S08: React value ownership and derived state.",
+        "C01/S01 and C05/S05: HTTP resources and delivery boundaries."
+      ],
+      "required_projects": [
+        {
+          "id": "P01",
+          "title": "Routed notes: URL identity",
+          "editable_file": "CLASSROOM_RC6/student/p01.mjs",
+          "execution_nature": "Bounded JavaScript function; supplied optional real React companion"
+        },
+        {
+          "id": "P02",
+          "title": "CRUD workspace: authoritative publication",
+          "editable_file": "CLASSROOM_RC6/student/p02.mjs",
+          "execution_nature": "Bounded JavaScript function; supplied optional real React companion"
+        },
+        {
+          "id": "P03",
+          "title": "Deep link: delivery classification",
+          "editable_file": "CLASSROOM_RC6/student/p03.mjs",
+          "execution_nature": "Bounded JavaScript function; supplied optional real React companion"
+        }
+      ],
+      "individual_in_class": true,
+      "pdf_filename_pattern": "TW2026_S09_GROUP_Surname_Firstname.pdf",
+      "schedule_minutes": 60,
+      "timing_evidence": "UNPILOTED_PLANNING_ESTIMATE",
+      "framework_companion": {
+        "supplied": true,
+        "path": "CLASSROOM_RC6/REACT/README.md",
+        "core_pass_is_framework_pass": false
+      }
+    },
+    {
+      "week": 10,
+      "course_id": "C10",
+      "course_topic": "State ownership and frontend architecture",
+      "seminar_id": "S10",
+      "seminar_topic": "Shared Workshop State",
+      "tutorial": "TUTORIALS/S10.html",
+      "learning_outcomes": [
+        "Allocate state to an appropriate owner before selecting a library.",
+        "Implement a pure reducer and latest-refresh publication rule.",
+        "Compare architecture capability requirements before cost."
+      ],
+      "prerequisites": [
+        "C08/S08 and C09/S09: local state, routing and publication ownership."
+      ],
+      "required_projects": [
+        {
+          "id": "P01",
+          "title": "Shared state: pure reducer",
+          "editable_file": "CLASSROOM_RC6/student/p01.mjs",
+          "execution_nature": "Bounded JavaScript function; supplied optional real React companion"
+        },
+        {
+          "id": "P02",
+          "title": "Notifications: latest refresh wins",
+          "editable_file": "CLASSROOM_RC6/student/p02.mjs",
+          "execution_nature": "Bounded JavaScript function; supplied optional real React companion"
+        },
+        {
+          "id": "P03",
+          "title": "Architecture: capability before cost",
+          "editable_file": "CLASSROOM_RC6/student/p03.mjs",
+          "execution_nature": "Bounded JavaScript function; supplied optional real React companion"
+        }
+      ],
+      "individual_in_class": true,
+      "pdf_filename_pattern": "TW2026_S10_GROUP_Surname_Firstname.pdf",
+      "schedule_minutes": 60,
+      "timing_evidence": "UNPILOTED_PLANNING_ESTIMATE",
+      "framework_companion": {
+        "supplied": true,
+        "path": "CLASSROOM_RC6/REACT/README.md",
+        "core_pass_is_framework_pass": false
+      }
+    },
+    {
+      "week": 11,
+      "course_id": "C11",
+      "course_topic": "Authentication, authorisation and web security",
+      "seminar_id": "S11",
+      "seminar_topic": "Role-Protected Moderation Operation",
+      "tutorial": "TUTORIALS/S11.html",
+      "learning_outcomes": [
+        "Distinguish authentication, authorisation, origin sharing and CSRF decisions.",
+        "Use supplied trusted principal and server-loaded resource facts in bounded policy functions.",
+        "State which security decisions require browser or real service execution beyond a pure model."
+      ],
+      "prerequisites": [
+        "C05/S05: trusted request boundaries and public failure mapping.",
+        "C09/S09: full-stack identity and delivery boundaries."
+      ],
+      "required_projects": [
+        {
+          "id": "P01",
+          "title": "Authentication transfer: trusted principal",
+          "editable_file": "CLASSROOM_RC6/student/p01.mjs",
+          "execution_nature": "Bounded JavaScript model; no actual login/session/browser enforcement"
+        },
+        {
+          "id": "P02",
+          "title": "Authorization: owner versus role",
+          "editable_file": "CLASSROOM_RC6/student/p02.mjs",
+          "execution_nature": "Bounded JavaScript model; no actual login/session/browser enforcement"
+        },
+        {
+          "id": "P03",
+          "title": "CORS and CSRF: two independent decisions",
+          "editable_file": "CLASSROOM_RC6/student/p03.mjs",
+          "execution_nature": "Bounded JavaScript model; no actual login/session/browser enforcement"
+        }
+      ],
+      "individual_in_class": true,
+      "pdf_filename_pattern": "TW2026_S11_GROUP_Surname_Firstname.pdf",
+      "schedule_minutes": 60,
+      "timing_evidence": "UNPILOTED_PLANNING_ESTIMATE",
+      "framework_companion": null
+    },
+    {
+      "week": 12,
+      "course_id": "C12",
+      "course_topic": "Realtime and asynchronous work",
+      "seminar_id": "S12",
+      "seminar_topic": "Correlated Request Dispatcher",
+      "tutorial": "TUTORIALS/S12.html",
+      "learning_outcomes": [
+        "Distinguish request acceptance, connection ownership and durable completion.",
+        "Apply a monotonic bounded job-state transition and correlated single settlement.",
+        "Explain the evidence gap between a JavaScript model and an actual WebSocket or queue service."
+      ],
+      "prerequisites": [
+        "C04/S04: promise correlation and lifecycle.",
+        "C05/S05 and C11/S11: service ownership and trusted identity."
+      ],
+      "required_projects": [
+        {
+          "id": "P01",
+          "title": "HTTP/WebSocket: recipient ownership",
+          "editable_file": "CLASSROOM_RC6/student/p01.mjs",
+          "execution_nature": "Bounded JavaScript model; no actual WebSocket/Redis/BullMQ service"
+        },
+        {
+          "id": "P02",
+          "title": "Queue: terminal state does not regress",
+          "editable_file": "CLASSROOM_RC6/student/p02.mjs",
+          "execution_nature": "Bounded JavaScript model; no actual WebSocket/Redis/BullMQ service"
+        },
+        {
+          "id": "P03",
+          "title": "Dispatcher: correlation and single settlement",
+          "editable_file": "CLASSROOM_RC6/student/p03.mjs",
+          "execution_nature": "Bounded JavaScript model; no actual WebSocket/Redis/BullMQ service"
+        }
+      ],
+      "individual_in_class": true,
+      "pdf_filename_pattern": "TW2026_S12_GROUP_Surname_Firstname.pdf",
+      "schedule_minutes": 60,
+      "timing_evidence": "UNPILOTED_PLANNING_ESTIMATE",
+      "framework_companion": null
+    },
+    {
+      "week": 13,
+      "course_id": "C13",
+      "course_topic": "Workers, Service Workers and the cost of composition",
+      "seminar_id": "S13",
+      "seminar_topic": "Worker Offload",
+      "tutorial": "TUTORIALS/S13.html",
+      "learning_outcomes": [
+        "Explain execution-context ownership, correlation and lifecycle at browser boundaries.",
+        "Implement bounded Worker-reply, Service Worker-routing and composable-shell admission predicates.",
+        "Avoid claiming native Worker, offline cache or cross-origin delivery from synthetic flags alone."
+      ],
+      "prerequisites": [
+        "C04/S04: event and request ownership.",
+        "C08/S08–C10/S10: state publication and lifecycle.",
+        "C11/S11: origin and trust boundaries."
+      ],
+      "required_projects": [
+        {
+          "id": "P01",
+          "title": "Worker reply: own result and current ID",
+          "editable_file": "CLASSROOM_RC6/student/p01.mjs",
+          "execution_nature": "Bounded JavaScript model; no native Worker/Service Worker/cross-origin browser observation"
+        },
+        {
+          "id": "P02",
+          "title": "Service Worker: controlled routing predicate",
+          "editable_file": "CLASSROOM_RC6/student/p02.mjs",
+          "execution_nature": "Bounded JavaScript model; no native Worker/Service Worker/cross-origin browser observation"
+        },
+        {
+          "id": "P03",
+          "title": "Composable shell: source/origin/generation gate",
+          "editable_file": "CLASSROOM_RC6/student/p03.mjs",
+          "execution_nature": "Bounded JavaScript model; no native Worker/Service Worker/cross-origin browser observation"
+        }
+      ],
+      "individual_in_class": true,
+      "pdf_filename_pattern": "TW2026_S13_GROUP_Surname_Firstname.pdf",
+      "schedule_minutes": 60,
+      "timing_evidence": "UNPILOTED_PLANNING_ESTIMATE",
+      "framework_companion": null
+    },
+    {
+      "week": 14,
+      "course_id": "C14",
+      "course_topic": "Testing, observability, performance and production evidence",
+      "seminar_id": "S14",
+      "seminar_topic": "Evidence review and individual defence",
+      "tutorial": "TUTORIALS/S14.html",
+      "learning_outcomes": [
+        "Build a regression witness over the supplied actual local service and repository.",
+        "Preserve before/after evidence and distinguish pass, fail and unknown.",
+        "Assess a production-readiness claim against observed evidence and stated limitations."
+      ],
+      "prerequisites": [
+        "C01–C13/S01–S13: distinguish bounded checks from actual system observations.",
+        "C06/S06 and C07/S07: persistence and atomicity evidence."
+      ],
+      "required_projects": [
+        {
+          "id": "P01",
+          "title": "Regression: actual persisted follow-up",
+          "editable_file": "CLASSROOM_RC6/student/p01.mjs",
+          "execution_nature": "Actual local service and repository regression witness; not an HTTP test"
+        },
+        {
+          "id": "P03",
+          "title": "Production evidence: fail/unknown/pass gate",
+          "editable_file": "CLASSROOM_RC6/student/p03.mjs",
+          "execution_nature": "Bounded JavaScript evidence classification"
+        }
+      ],
+      "individual_in_class": true,
+      "pdf_filename_pattern": "TW2026_S14_GROUP_Surname_Firstname.pdf",
+      "schedule_minutes": 60,
+      "timing_evidence": "UNPILOTED_PLANNING_ESTIMATE",
+      "framework_companion": null
+    }
+  ]
+}
