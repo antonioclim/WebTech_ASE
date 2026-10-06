@@ -49,7 +49,7 @@ These validate the fixed publication receipt, the current local navigation, meta
 
 The retained advanced-source and Pages commands below describe the original preparation snapshot. For an exact historical derivation, run them from the pinned worktree above. The advanced output is separate from the three core release assets. Historical templates retain their original preparation-stage wording.
 
-The current static-site builder applies a separate published-RC9 reading profile. Its homepage, global guidance and download page use the validated publication receipt. All thirty unit payloads, thirty entry pages and fourteen tutorials retain the reconstructed core bytes. The site has its own manifest and package identity. `SITE_SCOPE.json` separately records the published classroom package ID, the current reconstructed core ID and the current repository source seal. Rebuilding from later source does not make that reconstructed core or the site byte-identical to the established published ZIP.
+The current static-site builder applies a separate published-RC9 reading profile. Its homepage, global guidance and download page use the validated publication receipt. All thirty unit payloads, twenty-nine entry pages and fourteen tutorials retain the reconstructed core bytes. Only `ENTRY/SETUP_MACOS_LINUX.html` adds `h1{overflow-wrap:anywhere}` before its sole closing style tag to wrap the title on narrow screens. Removing those 26 bytes restores the exact core entry; text and links remain unchanged. `SITE_SCOPE.json` v3 records the single operation and both hashes, separately from the published classroom package ID, the current reconstructed core ID and the current repository source seal. The site has its own manifest and package identity. Rebuilding from later source does not make that reconstructed core or the site byte-identical to the established published ZIP.
 
 Prepare and validate the optional preview locally, using new destinations outside the source checkout:
 
@@ -173,7 +173,7 @@ Inspect the build report's actual inventory, derivations and verification scope 
 
 ## Optional current RC9 GitHub Pages preview
 
-The current manual Pages workflow uses the RC9 builder and exact site validator. The old RC6 site recipes remain historical source. The new site is a **static reading and navigation preview**, separate from the three release assets. It does not run Node applications, start loopback servers or accept Moodle submissions. All thirty unit payloads and their entry pages retain the core classroom bytes; the site adds a visible homepage scope banner, `.nojekyll`, `SITE_SCOPE.json` and a resealed outer manifest/identity.
+The current manual Pages workflow uses the RC9 builder and exact site validator. The old RC6 site recipes remain historical source. The new site is a **static reading and navigation preview**, separate from the three release assets. It does not run Node applications, start loopback servers or accept Moodle submissions. All thirty unit payloads, twenty-nine entry pages and fourteen tutorials retain the core classroom bytes. The sole entry derivative adds the title-wrapping CSS described above. The site also adds global scope notices, a download guide, `.nojekyll`, `SITE_SCOPE.json` and a resealed outer manifest/identity. The exact validator independently authenticates the full derived entry, rejecting changed text, links or CSS even if an outer manifest has been recomputed.
 
 From the reviewed repository root, construct and check a local site outside the checkout:
 
@@ -187,7 +187,7 @@ The build and validator reproduce the exact selected static bytes, inventory, fi
 
 Only the owner may deploy this optional preview, after final review. In **Actions**, select **Deploy the RC9 static reading preview to GitHub Pages** (`pages.yml`), choose the reviewed branch, explicitly enable **preview** and paste the full reviewed commit SHA into **expected_source_sha**. The workflow refuses any mismatch between that input, `GITHUB_SHA` and checked-out `HEAD`. Do not start it merely to prepare the classroom release.
 
-The source changes do not enable Pages or establish that repository hosting settings are correct. Pages configuration remains unobserved and the repository's declared Pages feature stays disabled until the owner makes a separate hosting decision. A successful actual deployment would publish a reading preview, not an RC9 ZIP release or final qualification. Inspect the run and the actual site before making a hosting claim.
+A source change does not deploy Pages or establish hosting settings. Each newly reviewed source needs a separate owner-started run and an actual site check. A successful deployment publishes a reading preview and does not change the RC9 ZIP release or final qualification. The dated observation below records the previous deployment; it does not certify a later source revision.
 
 ## Scope of evidence
 
@@ -202,3 +202,9 @@ Read the audit and the final RC9 verification report for observed results. This 
 - [GitHub: managing releases](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)
 
 </details>
+
+## Observed Pages publication and subsequent source revisions
+
+On 6 October 2026, the owner-started [Pages run 37488400277](https://github.com/antonioclim/WebTech_ASE/actions/runs/37488400277) completed successfully from commit `d297a16b95fa36c27fcafee0a04b1818ed3648e4`. Build and deploy succeeded and the [public reading site](https://antonioclim.github.io/WebTech_ASE/) was observed. That earlier source retained all thirty entry pages unchanged. Its finite Firefox reading probe found a 38 px title overflow on the macOS/Linux entry at a 390 px viewport.
+
+The current source introduces the separately declared CSS-only entry derivative. It must be checked locally and published through a new owner-started Pages run with its exact reviewed source SHA. Until that run and a public-site check, the local correction is not claimed to be live. Do not rerun release preparation or replace the published RC9 tag or any of its three assets. General qualification remains `NOT_FINAL`.

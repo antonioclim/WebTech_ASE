@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Build the current RC9 static reading site outside the source checkout.
 
-All thirty delivered unit payloads, entry pages and fourteen tutorials retain
-their exact reconstructed classroom bytes. Site-only global guidance records
+All thirty delivered unit payloads, twenty-nine entry pages and fourteen tutorials
+retain their exact reconstructed classroom bytes. One declared entry derivative
+adds only title wrapping CSS. Site-only global guidance records
 the published download separately from this reading derivative and its identity.
 No installation, network operation, Pages deployment or Actions dispatch occurs.
 """
@@ -32,10 +33,20 @@ GLOBAL_HTML_PAGES = (
     'COURSE_PLAN.html', 'ASSESSMENT.html',
 )
 ADDED_FILES = ('.nojekyll', SCOPE_FILE, DOWNLOAD_FILE)
+ENTRY_DERIVATIVE = 'ENTRY/SETUP_MACOS_LINUX.html'
+ENTRY_WRAP_CSS = b'h1{overflow-wrap:anywhere}'
+ENTRY_SOURCE_SHA256 = 'ad65f1ba73cc9e0251ed101344a0c3e3b9145696cb13bd235551eabd390f678a'
 MODIFIED_CORE_FILES = (
     'index.html', 'README.md', 'START_HERE.html', 'QUALIFICATION.html',
-    'COURSE_PLAN.html', 'ASSESSMENT.html', 'SHA256SUMS.txt', 'PACKAGE_ID.txt',
+    'COURSE_PLAN.html', 'ASSESSMENT.html', ENTRY_DERIVATIVE, 'SHA256SUMS.txt', 'PACKAGE_ID.txt',
 )
+
+
+def wrap_setup_entry(data):
+    """Admit the pinned entry and append exactly one reversible CSS rule."""
+    if rc.sha(data) != ENTRY_SOURCE_SHA256 or data.count(b'</style>') != 1:
+        raise ValueError('Setup entry source differs from the declared derivative')
+    return data.replace(b'</style>', ENTRY_WRAP_CSS + b'</style>', 1)
 
 
 def read_publication(root=None):
@@ -96,8 +107,10 @@ def site_notice(receipt, core_id, homepage=False):
             + html.escape(core_id) + '</code>. It records the current repository seal and can '
             'differ from the published classroom package. The preview’s own outer identity is '
             + classroom.link('PACKAGE_ID.txt', 'this site PACKAGE_ID.txt')
-            + '. All thirty unit payloads, thirty entry pages and fourteen tutorials preserve '
-            'the corresponding reconstructed core bytes.</p></details>'
+            + '. All thirty unit payloads, twenty-nine entry pages and fourteen tutorials preserve '
+            'the corresponding reconstructed core bytes. The macOS/Linux setup entry adds only '
+            'title wrapping CSS for narrow screens; its text and links remain unchanged. '
+            'The exact derivative is recorded in SITE_SCOPE.json.</p></details>'
         )
     content += (
         '<p>' + classroom.link('START_HERE.html', 'Local setup instructions') + ' · '
@@ -173,8 +186,12 @@ def site_readme(receipt, core_id):
         + core_id + '`. Reconstruction records the current repository seal and may therefore '
         'differ from the published ZIP. This preview has a third, separately sealed outer identity '
         'in [PACKAGE_ID.txt](PACKAGE_ID.txt); it is not one of the three release attachments. '
-        'All thirty unit payloads, thirty entry pages and fourteen tutorials retain their corresponding '
-        'reconstructed core bytes. The five global HTML notices, this README, download guide and '
+        'All thirty unit payloads, twenty-nine entry pages and fourteen tutorials retain their corresponding '
+        'reconstructed core bytes. Only `ENTRY/SETUP_MACOS_LINUX.html` adds the 26-byte CSS rule '
+        '`h1{overflow-wrap:anywhere}` before its sole closing style tag. Removing that rule restores '
+        'the exact core entry; text, links and teaching payloads are unchanged. The source and site '
+        'hashes and operation are declared in `SITE_SCOPE.json`. '
+        'The five global HTML notices, this README, download guide and '
         'outer site controls are explicit site derivatives. Frozen recipes and templates remain unchanged.\n\n'
         'The receipt records ' + str(counts['passed']) + ' PASS + ' + str(counts['skipped'])
         + ' SKIP in the existing owner-started preparation run. The skipped case is not a PASS. '
@@ -206,8 +223,9 @@ def build_payload(check_source=True):
     payload['README.md'] = site_readme(receipt, core_id)
     payload[DOWNLOAD_FILE] = download_guide(receipt, core_id)
     payload['.nojekyll'] = b''
+    payload[ENTRY_DERIVATIVE] = wrap_setup_entry(core[ENTRY_DERIVATIVE])
     payload[SCOPE_FILE] = classroom.encoded({
-        'schema': 'webtech-classroom-rc9-static-site/v2',
+        'schema': 'webtech-classroom-rc9-static-site/v3',
         'distribution_version': VERSION,
         'profile': PROFILE,
         'source_publication_status': receipt['status'],
@@ -224,7 +242,17 @@ def build_payload(check_source=True):
         'core_file_count': len(core),
         'objects': sorted(item['object_id'] for item in meta['objects']),
         'unit_payload_policy': 'ALL_THIRTY_UNIT_BYTES_EXACT_CORE_CLASSROOM_COPY',
-        'entry_policy': 'ALL_THIRTY_ENTRY_BYTES_EXACT_CORE_CLASSROOM_COPY',
+        'entry_policy': 'TWENTY_NINE_EXACT_CORE_ENTRY_COPIES_AND_ONE_DECLARED_CSS_ONLY_DERIVATIVE',
+        'entry_derivatives': [{
+            'path': ENTRY_DERIVATIVE,
+            'operation': 'INSERT_EXACT_CSS_BEFORE_SOLE_STYLE_CLOSE',
+            'css': ENTRY_WRAP_CSS.decode('ascii'),
+            'bytes_added': len(ENTRY_WRAP_CSS),
+            'source_sha256': rc.sha(core[ENTRY_DERIVATIVE]),
+            'site_sha256': rc.sha(payload[ENTRY_DERIVATIVE]),
+            'reason': 'Wrap the macOS/Linux setup title on narrow screens',
+            'text_and_links_unchanged': True,
+        }],
         'tutorial_policy': 'ALL_FOURTEEN_TUTORIAL_BYTES_EXACT_CORE_CLASSROOM_COPY',
         'site_only_added_files': list(ADDED_FILES),
         'modified_core_files': list(MODIFIED_CORE_FILES),
