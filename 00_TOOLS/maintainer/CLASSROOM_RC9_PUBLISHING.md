@@ -47,7 +47,19 @@ These validate the fixed publication receipt, the current local navigation, meta
 
 ## Optional advanced source and Pages
 
-The retained advanced-source and Pages commands below describe the original preparation snapshot. For an exact historical derivation, run them from the pinned worktree above. The advanced output is separate from the three core release assets. The retained Pages builder still uses the preparation-era banner and RC8 link; do not deploy it unchanged as a current published-RC9 site. A separate reviewed site correction and owner decision are required before deployment. This source update neither configures nor starts Pages.
+The retained advanced-source and Pages commands below describe the original preparation snapshot. For an exact historical derivation, run them from the pinned worktree above. The advanced output is separate from the three core release assets. Historical templates retain their original preparation-stage wording.
+
+The current static-site builder applies a separate published-RC9 reading profile. Its homepage, global guidance and download page use the validated publication receipt. All thirty unit payloads, thirty entry pages and fourteen tutorials retain the reconstructed core bytes. The site has its own manifest and package identity. `SITE_SCOPE.json` separately records the published classroom package ID, the current reconstructed core ID and the current repository source seal. Rebuilding from later source does not make that reconstructed core or the site byte-identical to the established published ZIP.
+
+Prepare and validate the optional preview locally, using new destinations outside the source checkout:
+
+```sh
+python 00_TOOLS/qa/test_classroom_rc9_site.py --report ../rc9-static-tests.json
+python 00_TOOLS/publishing/build_classroom_rc9_site.py --output ../rc9-static-reading-preview --report ../rc9-static-build.json
+python 00_TOOLS/qa/validate_classroom_rc9_site.py --site ../rc9-static-reading-preview --report ../rc9-static-validation.json
+```
+
+These commands do not deploy Pages, start Actions or alter the RC9 release. Open the generated `index.html` for reading and use `DOWNLOAD_RC9.html` to obtain the actual classroom ZIP and its checksums. Perform learner edits, runtime commands and private evidence work in the complete extracted published classroom collection. The optional static preview does not execute Node applications or accept Moodle submissions. Its local checks do not raise any general qualification gate. A separately reviewed integration and owner hosting decision are required before deployment.
 
 ## Historical preparation procedure
 

@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """Finite RC9 static-site composition, integrity and output-refusal tests.
 
-Unit fixtures explicitly bypass only the unfinished whole-repository seal.
+Unit fixtures explicitly bypass only the separately checked whole-source seal.
 Production builder and validator continue to require that seal by default.
 """
 from __future__ import annotations
 
 import argparse
+import copy
 import json
 import os
 from pathlib import Path
@@ -27,6 +28,26 @@ import validate_classroom_rc9_site as validator
 
 NODE = os.environ.get('WEBTECH_QA_NODE', 'node')
 OBSERVATIONS = {}
+EXPECTED_RELEASE = 'https://github.com/antonioclim/WebTech_ASE/releases/tag/classroom-en-gb-v3.0.0-rc.9'
+EXPECTED_DOWNLOAD_BASE = 'https://github.com/antonioclim/WebTech_ASE/releases/download/classroom-en-gb-v3.0.0-rc.9/'
+EXPECTED_SOURCE_COMMIT = '60d8f8b86eec812a79db92860dd6d13f16d91f5f'
+EXPECTED_PUBLISHED_PACKAGE = 'c8be1c0dfaa3dfb56ca8c7868d961654859f1e87ebb35b8511e0ea4773e77dd7'
+# Independent public identities: do not read these expected values from builder.
+EXPECTED_ASSETS = {
+    'WEBTECH_ASE_EN_GB_CLASSROOM_v3.0.0-rc.9.zip': {
+        'id': 614813352, 'bytes': 3933082,
+        'sha256': 'fe2f187ae106b81319e3a000f592f464ddec159145ef50ea322c1c714b32d0ee'},
+    'WEBTECH_ASE_EN_GB_CLASSROOM_v3.0.0-rc.9.zip.sha256': {
+        'id': 614813358, 'bytes': 110,
+        'sha256': '96a8d22b0b7ce897ff1fa319aa356a06200b8f89e56fc1bec684ad1c240194cb'},
+    'SHA256SUMS.txt': {
+        'id': 614813355, 'bytes': 227,
+        'sha256': '738c1dd6f45657182e3ffe2c6da461b6838c463e2d0ae93413df2e441cf4c040'},
+}
+EXPECTED_OBJECTS = {f'{kind}{number:02}' for kind in 'CS' for number in range(1, 15)} | {'SETUP_WINDOWS', 'SETUP_MACOS_LINUX'}
+EXPECTED_CHANGED = {'index.html', 'START_HERE.html', 'QUALIFICATION.html',
+                    'COURSE_PLAN.html', 'ASSESSMENT.html', 'README.md',
+                    'SHA256SUMS.txt', 'PACKAGE_ID.txt'}
 
 
 class ClassroomRC9Site(unittest.TestCase):
@@ -49,14 +70,15 @@ class ClassroomRC9Site(unittest.TestCase):
         return tempfile.TemporaryDirectory(prefix='rc9 static reading with spaces ')
 
     def test_01_composition_preserves_thirty_unit_and_entry_bytes(self):
-        self.assertEqual(set(self.site) - set(self.core), {'.nojekyll', 'SITE_SCOPE.json'})
+        self.assertEqual(set(self.site) - set(self.core), {'.nojekyll', 'SITE_SCOPE.json', 'DOWNLOAD_RC9.html'})
         self.assertEqual(set(self.core) - set(self.site), set())
         changed = {name for name in self.core if self.core[name] != self.site[name]}
-        self.assertEqual(changed, {'index.html', 'SHA256SUMS.txt', 'PACKAGE_ID.txt'})
+        self.assertEqual(changed, EXPECTED_CHANGED)
         self.assertEqual(len(self.meta['objects']), 30)
+        self.assertEqual({item['object_id'] for item in self.meta['objects']}, EXPECTED_OBJECTS)
         count = 0
         for item in self.meta['objects']:
-            prefix = item['payload_root']
+            prefix = item['payload_root'].rstrip('/') + '/'
             names = {name for name in self.core if name.startswith(prefix)}
             self.assertTrue(names)
             for name in names:
@@ -66,8 +88,9 @@ class ClassroomRC9Site(unittest.TestCase):
         self.assertEqual(builder.build_payload(check_source=False), self.site)
         OBSERVATIONS['composition'] = {'unit_count': 30,
             'unit_file_comparisons': count, 'entry_pages_unchanged': 30,
-            'added_files': ['.nojekyll', 'SITE_SCOPE.json'],
-            'changed_outer_controls_and_homepage_only': True}
+            'added_files': ['.nojekyll', 'SITE_SCOPE.json', 'DOWNLOAD_RC9.html'],
+            'changed_core_files': sorted(changed),
+            'teaching_unit_and_entry_bytes_unchanged': True}
 
     def test_02_nojekyll_and_static_profile_are_sealed_and_honest(self):
         self.assertEqual(self.site['.nojekyll'], b'')
@@ -79,7 +102,14 @@ class ClassroomRC9Site(unittest.TestCase):
         self.assertEqual(self.site['PACKAGE_ID.txt'], (rc.sha(manifest) + '\n').encode())
         scope = rc.strict_json(self.site['SITE_SCOPE.json'])
         self.assertEqual(scope['profile'], builder.PROFILE)
-        self.assertEqual(scope['core_collection_package_id'], self.core['PACKAGE_ID.txt'].decode().strip())
+        self.assertEqual(scope['current_core_collection_package_id'], self.core['PACKAGE_ID.txt'].decode().strip())
+        self.assertEqual(scope['published_classroom_package_id'], EXPECTED_PUBLISHED_PACKAGE)
+        self.assertEqual(scope['published_source_commit'], EXPECTED_SOURCE_COMMIT)
+        self.assertEqual(scope['source_publication_status'], 'PUBLISHED_PRERELEASE')
+        self.assertEqual(set(scope['objects']), EXPECTED_OBJECTS)
+        self.assertEqual(len(scope['objects']), 30)
+        self.assertNotEqual(scope['current_core_collection_package_id'], scope['published_classroom_package_id'])
+        self.assertNotEqual(self.site['PACKAGE_ID.txt'].decode().strip(), scope['published_classroom_package_id'])
         self.assertIs(scope['site_is_a_release_asset'], False)
         self.assertIs(scope['node_execution_provided'], False)
         self.assertIs(scope['native_acceptance'], False)
@@ -88,8 +118,33 @@ class ClassroomRC9Site(unittest.TestCase):
         homepage = self.site['index.html'].decode()
         self.assertEqual(homepage.count('data-site-profile="rc9-static-reading"'), 1)
         self.assertIn('not a Node execution environment', homepage)
-        self.assertNotIn('/releases/download/classroom-en-gb-v3.0.0-rc.9', homepage)
-        self.assertNotIn('/releases/tag/classroom-en-gb-v3.0.0-rc.9', homepage)
+        self.assertIn(EXPECTED_RELEASE, homepage)
+        self.assertNotIn('the RC8 prerelease', homepage)
+        self.assertNotIn('PREPARED_NOT_PUBLISHED', homepage)
+        self.assertNotIn('RC9 release preparation and publication remain separate owner operations', homepage)
+        assets = scope['published_assets']
+        self.assertEqual(len(assets), 3)
+        self.assertEqual({row['name'] for row in assets}, set(EXPECTED_ASSETS))
+        guide = self.site['DOWNLOAD_RC9.html'].decode()
+        for row in assets:
+            expected = EXPECTED_ASSETS[row['name']]
+            self.assertEqual(row, {'name': row['name'], **expected,
+                                  'download_url': EXPECTED_DOWNLOAD_BASE + row['name']})
+            self.assertIn(EXPECTED_DOWNLOAD_BASE + row['name'], guide)
+            self.assertIn(expected['sha256'], guide)
+        self.assertIn(EXPECTED_SOURCE_COMMIT, guide)
+        self.assertEqual(scope['recorded_workflow_tests'],
+                         {'defined': 40, 'passed': 39, 'skipped': 1, 'failures': 0, 'errors': 0})
+        self.assertEqual(set(scope['qualification_gates']), set(rc.GATES))
+        self.assertTrue(all(value == 'pending' for value in scope['qualification_gates'].values()))
+        OBSERVATIONS['publication'] = {
+            'release_url': EXPECTED_RELEASE, 'published_source_commit': EXPECTED_SOURCE_COMMIT,
+            'published_classroom_package_id': EXPECTED_PUBLISHED_PACKAGE,
+            'published_assets_independently_pinned': 3,
+            'recorded_hosted_tests': scope['recorded_workflow_tests'],
+            'all_ten_qualification_gates_pending': True,
+            'site_is_not_the_published_archive': True,
+            'live_downloads_or_hosted_runs_performed': False}
 
     def test_03_real_outer_verifier_accepts_physical_site_without_execution(self):
         with self.fresh() as temporary:
@@ -180,8 +235,179 @@ class ClassroomRC9Site(unittest.TestCase):
                     builder.build_site(site, report)
             self.assertFalse(site.exists())
             self.assertFalse(report.exists())
+            rc.write_tree(site, self.site)
+            before = {name: path.read_bytes() for name, path in rc.tree_files(site).items()}
+            with patch.object(rc, 'source_identity', side_effect=ValueError('source seal refused')):
+                with self.assertRaisesRegex(ValueError, 'source seal refused'):
+                    validator.validate_site(site, report)
+            self.assertFalse(report.exists())
+            self.assertEqual({name: path.read_bytes() for name, path in rc.tree_files(site).items()}, before)
         with self.assertRaisesRegex(ValueError, 'outside source tree'):
             builder.build_site(ROOT / 'forbidden-site', check_source=False)
+
+    def test_09_publication_mismatches_refused_before_core_or_output_creation(self):
+        receipt = rc.strict_json((ROOT / '90_RELEASES/CLASSROOM_RC9_PUBLICATION.json').read_bytes())
+        plan = (ROOT / '90_RELEASES/CLASSROOM_RC9_RELEASE_PLAN.json').read_bytes()
+        changes = [
+            (('status',), 'PREPARED_NOT_PUBLISHED'),
+            (('release_url',), EXPECTED_RELEASE.replace('rc.9', 'rc.8')),
+            (('source_commit',), '0' * 40),
+            (('package_id',), '0' * 64),
+            (('draft',), True),
+            (('prerelease',), False),
+            (('release_id',), True),
+            (('assets', 0, 'download_url'), 'https://example.invalid/archive.zip'),
+            (('assets', 0, 'sha256'), '0' * 64),
+            (('assets', 0, 'id'), '614813352'),
+            (('assets', 0, 'bytes'), 3933082.0),
+            (('qualification_gates', 'human_pilot'), 'passed'),
+            (('workflow', 'tests', 'passed'), 40),
+            (('workflow', 'tests', 'skipped'), 0),
+            (('assets',), receipt['assets'][:2]),
+            (('assets',), receipt['assets'] + [copy.deepcopy(receipt['assets'][0])]),
+        ]
+        refused = 0
+        with self.fresh() as temporary:
+            root = Path(temporary) / 'publication input'
+            release_directory = root / '90_RELEASES'
+            release_directory.mkdir(parents=True)
+            (release_directory / 'CLASSROOM_RC9_RELEASE_PLAN.json').write_bytes(plan)
+            receipt_path = release_directory / 'CLASSROOM_RC9_PUBLICATION.json'
+            for route, value in changes:
+                forged = copy.deepcopy(receipt)
+                target = forged
+                for component in route[:-1]:
+                    target = target[component]
+                target[route[-1]] = value
+                receipt_path.write_bytes(classroom.encoded(forged))
+                site, report = Path(temporary) / 'site', Path(temporary) / 'report.json'
+                with self.subTest(route=route), patch.object(builder, 'ROOT', root), \
+                        patch.object(classroom, 'build_payload') as core_build:
+                    with self.assertRaises(ValueError):
+                        builder.build_site(site, report, check_source=False)
+                    core_build.assert_not_called()
+                    self.assertFalse(site.exists())
+                    self.assertFalse(report.exists())
+                refused += 1
+            # These exercise the real strict parser rather than a pre-parsed mock.
+            missing = copy.deepcopy(receipt)
+            del missing['status']
+            raw_cases = [classroom.encoded(missing),
+                         classroom.encoded(receipt).replace(b'{', b'{"status":"PUBLISHED_PRERELEASE",', 1)]
+            for data in raw_cases:
+                receipt_path.write_bytes(data)
+                with self.subTest(raw_receipt=data[:80]), patch.object(builder, 'ROOT', root), \
+                        patch.object(classroom, 'build_payload') as core_build:
+                    with self.assertRaises(ValueError):
+                        builder.build_site(site, report, check_source=False)
+                    core_build.assert_not_called()
+                    self.assertFalse(site.exists())
+                    self.assertFalse(report.exists())
+                refused += 1
+        OBSERVATIONS['publication_refusals'] = {'mutations_refused': refused,
+            'real_receipt_validation_used': True, 'core_builds_or_outputs_on_refusal': 0,
+            'fixture_source_seal_bypass_does_not_bypass_publication_checks': True}
+
+    def test_10_self_resealed_tampering_is_not_exact_site_admission(self):
+        item = next(row for row in self.meta['objects'] if row['object_id'] == 'S01')
+        prefix = item['payload_root'].rstrip('/') + '/'
+        unit_path = next(name for name in sorted(self.site)
+                         if name.startswith(prefix) and name.endswith('.md'))
+        refused = 0
+        for name in ('index.html', 'SITE_SCOPE.json', unit_path):
+            forged = dict(self.site)
+            if name == 'SITE_SCOPE.json':
+                scope = rc.strict_json(forged[name])
+                scope['published_classroom_package_id'] = '0' * 64
+                forged[name] = classroom.encoded(scope)
+            else:
+                forged[name] += b'\n<!-- externally changed, self-resealed content -->\n'
+            forged['SHA256SUMS.txt'] = rc.manifest(forged, ('SHA256SUMS.txt', 'PACKAGE_ID.txt'))
+            forged['PACKAGE_ID.txt'] = (rc.sha(forged['SHA256SUMS.txt']) + '\n').encode()
+            with self.subTest(path=name), self.fresh() as temporary:
+                site, report_path = Path(temporary) / 'site', Path(temporary) / 'validation.json'
+                rc.write_tree(site, forged)
+                local = subprocess.run([self.node, 'VERIFY_COLLECTION.mjs'], cwd=site,
+                                       capture_output=True, text=True, timeout=30)
+                self.assertEqual(local.returncode, 0, local.stdout + local.stderr)
+                self.assertEqual(rc.strict_json(local.stdout.encode())['status'], 'PASS_INITIAL_BYTES_ONLY')
+                with self.assertRaisesRegex(ValueError, 'bytes mismatch'):
+                    validator.validate_site(site, report_path, check_source=False)
+                self.assertFalse(report_path.exists())
+                self.assertEqual((site / name).read_bytes(), forged[name])
+            refused += 1
+        OBSERVATIONS['self_resealed_tampering'] = {'exact_refusals': refused,
+            'local_self_consistency_does_not_authenticate_site': True,
+            'validation_reports_created_for_forgery': 0}
+
+    def test_11_symlink_outputs_and_site_files_refused_without_mutation(self):
+        with self.fresh() as temporary:
+            root = Path(temporary)
+            actual_site = root / 'actual-site'
+            rc.write_tree(actual_site, self.site)
+            linked_site = root / 'linked-site'
+            linked_site.symlink_to(actual_site, target_is_directory=True)
+            report = root / 'report.json'
+            for operation in (builder.build_site, validator.validate_site):
+                with self.subTest(operation=operation.__name__), self.assertRaisesRegex(ValueError, 'symlink'):
+                    operation(linked_site, report, check_source=False)
+                self.assertFalse(report.exists())
+            external = root / 'external-index.html'
+            external.write_bytes(self.site['index.html'])
+            index = actual_site / 'index.html'
+            index.unlink()
+            index.symlink_to(external)
+            for operation in (builder.build_site, validator.validate_site):
+                with self.subTest(file_operation=operation.__name__), self.assertRaisesRegex(ValueError, 'Non-regular'):
+                    operation(actual_site, report, check_source=False)
+                self.assertFalse(report.exists())
+                self.assertTrue(index.is_symlink())
+                self.assertEqual(external.read_bytes(), self.site['index.html'])
+            index.unlink()
+            index.write_bytes(self.site['index.html'])
+            report_target = root / 'protected-report.txt'
+            report_target.write_text('preserve report target')
+            report.symlink_to(report_target)
+            for operation in (builder.build_site, validator.validate_site):
+                with self.subTest(report_operation=operation.__name__), self.assertRaisesRegex(ValueError, 'symlink'):
+                    operation(actual_site, report, check_source=False)
+                self.assertEqual(report_target.read_text(), 'preserve report target')
+            report.unlink()
+            actual_reports = root / 'actual-reports'
+            actual_reports.mkdir()
+            linked_reports = root / 'linked-reports'
+            linked_reports.symlink_to(actual_reports, target_is_directory=True)
+            for operation in (builder.build_site, validator.validate_site):
+                with self.subTest(parent_operation=operation.__name__), self.assertRaisesRegex(ValueError, 'symlink'):
+                    operation(actual_site, linked_reports / 'report.json', check_source=False)
+                self.assertFalse((actual_reports / 'report.json').exists())
+            self.assertEqual({name: path.read_bytes() for name, path in rc.tree_files(actual_site).items()}, self.site)
+        OBSERVATIONS['symlink_refusals'] = {'root_file_report_and_report_parent_refused': True,
+                                         'protected_target_bytes_preserved': True}
+
+    def test_12_independent_semantics_refuse_false_publication_and_broken_anchors(self):
+        cases = []
+        for key, value in (('source_publication_status', 'PREPARED_NOT_PUBLISHED'),
+                           ('published_classroom_package_id', '0' * 64),
+                           ('published_source_commit', '0' * 40)):
+            forged = dict(self.site)
+            scope = rc.strict_json(forged['SITE_SCOPE.json'])
+            scope[key] = value
+            forged['SITE_SCOPE.json'] = classroom.encoded(scope)
+            cases.append((key, forged))
+        forged = dict(self.site)
+        forged['index.html'] = forged['index.html'].replace(
+            b'</main>', b'<p>The last published classroom download is the RC8 prerelease.</p></main>', 1)
+        self.assertNotEqual(forged['index.html'], self.site['index.html'])
+        cases.append(('stale_publication_banner', forged))
+        forged = dict(self.site)
+        forged['DOWNLOAD_RC9.html'] += b'<a href="START_HERE.html#missing-independent-test-anchor">Setup</a>'
+        cases.append(('missing_local_anchor', forged))
+        for name, forged in cases:
+            with self.subTest(name=name), self.assertRaises(ValueError):
+                validator.validate_profile(forged)
+        OBSERVATIONS['independent_semantic_refusals'] = {
+            'mutations_refused': len(cases), 'builder_reproduction_not_used_as_semantic_authority': True}
 
 
 def main():
