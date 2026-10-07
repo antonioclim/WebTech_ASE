@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>S02 — individual classroom evidence — RC6</title>
+<style>
+:root{color-scheme:light}body{font:17px/1.5 system-ui,sans-serif;color:#182635;background:#f3f6f9;margin:0}
+main{max-width:960px;margin:0 auto;padding:24px}h1,h2{line-height:1.25}fieldset{background:white;border:1px solid #9daebf;border-radius:6px;padding:20px;margin:20px 0}
+legend{font-weight:700;padding:0 8px}label{display:block;font-weight:600;margin-top:14px}.hint{font-size:.9em;margin:3px 0 8px;color:#35495d}
+input:not([type=checkbox]):not([type=file]),textarea,select{box-sizing:border-box;width:100%;font:inherit;padding:8px;border:1px solid #64778a;border-radius:3px;background:white;color:#182635}
+textarea{resize:vertical;min-height:95px}input:focus-visible,textarea:focus-visible,select:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid #075cbd;outline-offset:3px}
+.check{font-weight:400;display:flex;gap:12px;align-items:flex-start}.check input{width:20px;height:20px;flex:none;margin-top:3px}.notice{border-left:5px solid #8b5900;background:#fff4dc;padding:14px}
+.toolbar{display:flex;gap:12px;flex-wrap:wrap}button{font:inherit;background:#163f68;color:white;border:1px solid #163f68;border-radius:4px;padding:10px 14px;cursor:pointer}
+#record-status,#feedback{white-space:pre-wrap;padding:12px;border:1px solid #93a6b8;background:white;overflow-wrap:anywhere}a{color:#064a90}#print-output{display:none}
+.print-value{white-space:pre-wrap;overflow-wrap:anywhere;word-break:normal;height:auto;max-height:none;overflow:visible;break-inside:auto}
+.field-count{font-size:.85em;margin:4px 0;color:#35495d}.field-error{color:#8d1909;font-weight:600;margin:4px 0}.field-error:empty{display:none}[aria-invalid=true]{border:2px solid #8d1909!important}#record-size-warning{color:#8d1909;font-weight:600}#pdf-filename{font-family:ui-monospace,monospace}
+@media print{
+ @page{margin:15mm}body{background:white;font:11pt/1.4 serif;color:black}main.screen{display:none!important}#print-output{display:block!important;margin:0;padding:0}
+ #print-output h1{font-size:17pt}#print-output h2{font-size:14pt;break-after:avoid}#print-output h3{font-size:12pt;break-after:avoid}
+ #print-output p,#print-output section{height:auto;max-height:none;overflow:visible;break-inside:auto}#print-output .print-value{white-space:pre-wrap;overflow-wrap:anywhere;height:auto;max-height:none;overflow:visible}
+ .print-banner{font-weight:bold;border:2px solid black;padding:8px;white-space:pre-wrap}a{color:black}
+}
+</style></head><body>
+<main class="screen"><h1>S02: individual classroom evidence</h1>
+<p>RC6 classroom scope 1.0: all 3 microprojects are required, individual and completed in class within their explicitly bounded contracts. Record your own predictions, changes and actual observations. This is a student evidence record, not an automatic grade or a certificate.</p>
+<p class="notice">This form records the successor classroom lane only. The <a id="legacy-form" href="../05_MOODLE_SUBMISSION/FORM_S02_EN_GB.html">original full-project evidence form</a> is retained as a separate route with its original fields and completion conditions. It has not been ignored or completed by this form. Do not transfer a classroom PASS into a full-application completion or canonical-test field.</p>
+<p>Save a JSON draft while working. Import restores text and statuses but resets every confirmation. Any material edit clears confirmations. Keep the JSON private: it contains your identity and evidence. No data is sent by this page. Browser reload can lose unsaved work.</p>
+<form id="evidence-form" novalidate>
+<fieldset><legend>Student identity and actual context</legend>
+<label for="givenName">Given name</label><input id="givenName" data-material autocomplete="given-name" aria-describedby="givenName-count givenName-error" aria-invalid="false"><p class="field-count" id="givenName-count">UTF-8: 0 / 256 bytes maximum.</p><span class="field-error" id="givenName-error"></span>
+<label for="surname">Surname</label><input id="surname" data-material autocomplete="family-name" aria-describedby="surname-count surname-error" aria-invalid="false"><p class="field-count" id="surname-count">UTF-8: 0 / 256 bytes maximum.</p><span class="field-error" id="surname-error"></span>
+<label for="group">Group</label><input id="group" data-material autocomplete="off" aria-describedby="group-count group-error" aria-invalid="false"><p class="field-count" id="group-count">UTF-8: 0 / 128 bytes maximum.</p><span class="field-error" id="group-error"></span>
+<label for="studentDate">Date of your classroom work</label><input id="studentDate" type="date" data-material aria-describedby="studentDate-count studentDate-error" aria-invalid="false"><p class="field-count" id="studentDate-count">UTF-8: 0 / 10 bytes maximum.</p><span class="field-error" id="studentDate-error"></span>
+<label for="packageId">Released PACKAGE_ID copied from this actual package</label><p class="hint">Copy the 64 lowercase hexadecimal characters from the released PACKAGE_ID.txt. This page cannot authenticate your copy or turn it into a mark.</p><input id="packageId" data-material autocomplete="off" spellcheck="false" aria-describedby="packageId-count packageId-error" aria-invalid="false"><p class="field-count" id="packageId-count">UTF-8: 0 / 64 bytes maximum.</p><span class="field-error" id="packageId-error"></span>
+<label for="environment">Actual environment and version evidence</label><p class="hint">Record your actual OS, Node/tool versions and relevant browser. Copy observed version output; do not assert a provided reference version without checking it.</p><textarea id="environment" data-material rows="4" aria-describedby="environment-count environment-error" aria-invalid="false"></textarea><p class="field-count" id="environment-count">UTF-8: 0 / 1536 bytes maximum.</p><span class="field-error" id="environment-error"></span>
+</fieldset>
+<fieldset class="project" id="card-P01"><legend>P01: Responsive relationship reconstruction</legend>
+<p>Required individual microproject. Complete the whole bounded classroom contract in class. This record does not claim completion of the retained full application.</p>
+<label for="P01-status">Your project record status</label><select id="P01-status" data-material aria-describedby="P01-status-error" aria-invalid="false"><option value="draft">DRAFT — unfinished</option><option value="blocked">BLOCKED — explain below</option><option value="completed">COMPLETED — the bounded contract only</option></select><span class="field-error" id="P01-status-error"></span>
+<label for="P01-prediction">Prediction made before running</label><p class="hint" id="P01-prediction-help">State the predicted result and why you expect it. Preserve your original prediction. Maximum 1024 UTF-8 bytes.</p><textarea id="P01-prediction" data-material rows="4" aria-describedby="P01-prediction-help P01-prediction-count P01-prediction-error" aria-invalid="false"></textarea><p class="field-count" id="P01-prediction-count">UTF-8: 0 / 1024 bytes maximum.</p><span class="field-error" id="P01-prediction-error"></span>
+<label for="P01-change">Your own implementation or change</label><p class="hint" id="P01-change-help">Name the edited target and explain your own change within this classroom contract. Maximum 1536 UTF-8 bytes.</p><textarea id="P01-change" data-material rows="4" aria-describedby="P01-change-help P01-change-count P01-change-error" aria-invalid="false"></textarea><p class="field-count" id="P01-change-count">UTF-8: 0 / 1536 bytes maximum.</p><span class="field-error" id="P01-change-error"></span>
+<label for="P01-command">Exact command or action you actually executed</label><p class="hint" id="P01-command-help">Include the working directory, relevant input and the exact command or browser action. Maximum 1536 UTF-8 bytes.</p><textarea id="P01-command" data-material rows="4" aria-describedby="P01-command-help P01-command-count P01-command-error" aria-invalid="false"></textarea><p class="field-count" id="P01-command-count">UTF-8: 0 / 1536 bytes maximum.</p><span class="field-error" id="P01-command-error"></span>
+<label for="P01-actualResult">Actual result and copied output</label><p class="hint" id="P01-actualResult-help">Record the observed output or behaviour, including failures. A prepared example is not an observation. Maximum 3072 UTF-8 bytes.</p><textarea id="P01-actualResult" data-material rows="4" aria-describedby="P01-actualResult-help P01-actualResult-count P01-actualResult-error" aria-invalid="false"></textarea><p class="field-count" id="P01-actualResult-count">UTF-8: 0 / 3072 bytes maximum.</p><span class="field-error" id="P01-actualResult-error"></span>
+<label for="P01-negativeCase">Your own falsifying or boundary case</label><p class="hint" id="P01-negativeCase-help">Record the input, prediction, actual command or action and actual outcome of your additional case. Maximum 1536 UTF-8 bytes.</p><textarea id="P01-negativeCase" data-material rows="4" aria-describedby="P01-negativeCase-help P01-negativeCase-count P01-negativeCase-error" aria-invalid="false"></textarea><p class="field-count" id="P01-negativeCase-count">UTF-8: 0 / 1536 bytes maximum.</p><span class="field-error" id="P01-negativeCase-error"></span>
+<label for="P01-evidence">Evidence locator and relevant copied evidence</label><p class="hint" id="P01-evidence-help">Give an exact locator in this PDF or include concise real output. A filename does not embed an image. Maximum 1536 UTF-8 bytes.</p><textarea id="P01-evidence" data-material rows="4" aria-describedby="P01-evidence-help P01-evidence-count P01-evidence-error" aria-invalid="false"></textarea><p class="field-count" id="P01-evidence-count">UTF-8: 0 / 1536 bytes maximum.</p><span class="field-error" id="P01-evidence-error"></span>
+<label for="P01-reflection">Explanation, limitation and reflection</label><p class="hint" id="P01-reflection-help">Explain the causal mechanism, one limit and what the result changed in your understanding. Maximum 1536 UTF-8 bytes.</p><textarea id="P01-reflection" data-material rows="4" aria-describedby="P01-reflection-help P01-reflection-count P01-reflection-error" aria-invalid="false"></textarea><p class="field-count" id="P01-reflection-count">UTF-8: 0 / 1536 bytes maximum.</p><span class="field-error" id="P01-reflection-error"></span>
+<label class="check"><input id="P01-confirmed" type="checkbox" data-confirm aria-describedby="P01-confirmed-error" aria-invalid="false"><span class="field-error" id="P01-confirmed-error"></span>I personally completed and ran every required part of the P01 classroom contract. I have checked the actual results and my additional boundary case.</label></fieldset>
+<fieldset class="project" id="card-P02"><legend>P02: Intrinsic sizing and readable content</legend>
+<p>Required individual microproject. Complete the whole bounded classroom contract in class. This record does not claim completion of the retained full application.</p>
+<label for="P02-status">Your project record status</label><select id="P02-status" data-material aria-describedby="P02-status-error" aria-invalid="false"><option value="draft">DRAFT — unfinished</option><option value="blocked">BLOCKED — explain below</option><option value="completed">COMPLETED — the bounded contract only</option></select><span class="field-error" id="P02-status-error"></span>
+<label for="P02-prediction">Prediction made before running</label><p class="hint" id="P02-prediction-help">State the predicted result and why you expect it. Preserve your original prediction. Maximum 1024 UTF-8 bytes.</p><textarea id="P02-prediction" data-material rows="4" aria-describedby="P02-prediction-help P02-prediction-count P02-prediction-error" aria-invalid="false"></textarea><p class="field-count" id="P02-prediction-count">UTF-8: 0 / 1024 bytes maximum.</p><span class="field-error" id="P02-prediction-error"></span>
+<label for="P02-change">Your own implementation or change</label><p class="hint" id="P02-change-help">Name the edited target and explain your own change within this classroom contract. Maximum 1536 UTF-8 bytes.</p><textarea id="P02-change" data-material rows="4" aria-describedby="P02-change-help P02-change-count P02-change-error" aria-invalid="false"></textarea><p class="field-count" id="P02-change-count">UTF-8: 0 / 1536 bytes maximum.</p><span class="field-error" id="P02-change-error"></span>
+<label for="P02-command">Exact command or action you actually executed</label><p class="hint" id="P02-command-help">Include the working directory, relevant input and the exact command or browser action. Maximum 1536 UTF-8 bytes.</p><textarea id="P02-command" data-material rows="4" aria-describedby="P02-command-help P02-command-count P02-command-error" aria-invalid="false"></textarea><p class="field-count" id="P02-command-count">UTF-8: 0 / 1536 bytes maximum.</p><span class="field-error" id="P02-command-error"></span>
+<label for="P02-actualResult">Actual result and copied output</label><p class="hint" id="P02-actualResult-help">Record the observed output or behaviour, including failures. A prepared example is not an observation. Maximum 3072 UTF-8 bytes.</p><textarea id="P02-actualResult" data-material rows="4" aria-describedby="P02-actualResult-help P02-actualResult-count P02-actualResult-error" aria-invalid="false"></textarea><p class="field-count" id="P02-actualResult-count">UTF-8: 0 / 3072 bytes maximum.</p><span class="field-error" id="P02-actualResult-error"></span>
+<label for="P02-negativeCase">Your own falsifying or boundary case</label><p class="hint" id="P02-negativeCase-help">Record the input, prediction, actual command or action and actual outcome of your additional case. Maximum 1536 UTF-8 bytes.</p><textarea id="P02-negativeCase" data-material rows="4" aria-describedby="P02-negativeCase-help P02-negativeCase-count P02-negativeCase-error" aria-invalid="false"></textarea><p class="field-count" id="P02-negativeCase-count">UTF-8: 0 / 1536 bytes maximum.</p><span class="field-error" id="P02-negativeCase-error"></span>
+<label for="P02-evidence">Evidence locator and relevant copied evidence</label><p class="hint" id="P02-evidence-help">Give an exact locator in this PDF or include concise real output. A filename does not embed an image. Maximum 1536 UTF-8 bytes.</p><textarea id="P02-evidence" data-material rows="4" aria-describedby="P02-evidence-help P02-evidence-count P02-evidence-error" aria-invalid="false"></textarea><p class="field-count" id="P02-evidence-count">UTF-8: 0 / 1536 bytes maximum.</p><span class="field-error" id="P02-evidence-error"></span>
+<label for="P02-reflection">Explanation, limitation and reflection</label><p class="hint" id="P02-reflection-help">Explain the causal mechanism, one limit and what the result changed in your understanding. Maximum 1536 UTF-8 bytes.</p><textarea id="P02-reflection" data-material rows="4" aria-describedby="P02-reflection-help P02-reflection-count P02-reflection-error" aria-invalid="false"></textarea><p class="field-count" id="P02-reflection-count">UTF-8: 0 / 1536 bytes maximum.</p><span class="field-error" id="P02-reflection-error"></span>
+<label class="check"><input id="P02-confirmed" type="checkbox" data-confirm aria-describedby="P02-confirmed-error" aria-invalid="false"><span class="field-error" id="P02-confirmed-error"></span>I personally completed and ran every required part of the P02 classroom contract. I have checked the actual results and my additional boundary case.</label></fieldset>
+<fieldset class="project" id="card-P03"><legend>P03: Keyboard focus and motion preference</legend>
+<p>Required individual microproject. Complete the whole bounded classroom contract in class. This record does not claim completion of the retained full application.</p>
+<label for="P03-status">Your project record status</label><select id="P03-status" data-material aria-describedby="P03-status-error" aria-invalid="false"><option value="draft">DRAFT — unfinished</option><option value="blocked">BLOCKED — explain below</option><option value="completed">COMPLETED — the bounded contract only</option></select><span class="field-error" id="P03-status-error"></span>
+<label for="P03-prediction">Prediction made before running</label><p class="hint" id="P03-prediction-help">State the predicted result and why you expect it. Preserve your original prediction. Maximum 1024 UTF-8 bytes.</p><textarea id="P03-prediction" data-material rows="4" aria-describedby="P03-prediction-help P03-prediction-count P03-prediction-error" aria-invalid="false"></textarea><p class="field-count" id="P03-prediction-count">UTF-8: 0 / 1024 bytes maximum.</p><span class="field-error" id="P03-prediction-error"></span>
+<label for="P03-change">Your own implementation or change</label><p class="hint" id="P03-change-help">Name the edited target and explain your own change within this classroom contract. Maximum 1536 UTF-8 bytes.</p><textarea id="P03-change" data-material rows="4" aria-describedby="P03-change-help P03-change-count P03-change-error" aria-invalid="false"></textarea><p class="field-count" id="P03-change-count">UTF-8: 0 / 1536 bytes maximum.</p><span class="field-error" id="P03-change-error"></span>
+<label for="P03-command">Exact command or action you actually executed</label><p class="hint" id="P03-command-help">Include the working directory, relevant input and the exact command or browser action. Maximum 1536 UTF-8 bytes.</p><textarea id="P03-command" data-material rows="4" aria-describedby="P03-command-help P03-command-count P03-command-error" aria-invalid="false"></textarea><p class="field-count" id="P03-command-count">UTF-8: 0 / 1536 bytes maximum.</p><span class="field-error" id="P03-command-error"></span>
+<label for="P03-actualResult">Actual result and copied output</label><p class="hint" id="P03-actualResult-help">Record the observed output or behaviour, including failures. A prepared example is not an observation. Maximum 3072 UTF-8 bytes.</p><textarea id="P03-actualResult" data-material rows="4" aria-describedby="P03-actualResult-help P03-actualResult-count P03-actualResult-error" aria-invalid="false"></textarea><p class="field-count" id="P03-actualResult-count">UTF-8: 0 / 3072 bytes maximum.</p><span class="field-error" id="P03-actualResult-error"></span>
+<label for="P03-negativeCase">Your own falsifying or boundary case</label><p class="hint" id="P03-negativeCase-help">Record the input, prediction, actual command or action and actual outcome of your additional case. Maximum 1536 UTF-8 bytes.</p><textarea id="P03-negativeCase" data-material rows="4" aria-describedby="P03-negativeCase-help P03-negativeCase-count P03-negativeCase-error" aria-invalid="false"></textarea><p class="field-count" id="P03-negativeCase-count">UTF-8: 0 / 1536 bytes maximum.</p><span class="field-error" id="P03-negativeCase-error"></span>
+<label for="P03-evidence">Evidence locator and relevant copied evidence</label><p class="hint" id="P03-evidence-help">Give an exact locator in this PDF or include concise real output. A filename does not embed an image. Maximum 1536 UTF-8 bytes.</p><textarea id="P03-evidence" data-material rows="4" aria-describedby="P03-evidence-help P03-evidence-count P03-evidence-error" aria-invalid="false"></textarea><p class="field-count" id="P03-evidence-count">UTF-8: 0 / 1536 bytes maximum.</p><span class="field-error" id="P03-evidence-error"></span>
+<label for="P03-reflection">Explanation, limitation and reflection</label><p class="hint" id="P03-reflection-help">Explain the causal mechanism, one limit and what the result changed in your understanding. Maximum 1536 UTF-8 bytes.</p><textarea id="P03-reflection" data-material rows="4" aria-describedby="P03-reflection-help P03-reflection-count P03-reflection-error" aria-invalid="false"></textarea><p class="field-count" id="P03-reflection-count">UTF-8: 0 / 1536 bytes maximum.</p><span class="field-error" id="P03-reflection-error"></span>
+<label class="check"><input id="P03-confirmed" type="checkbox" data-confirm aria-describedby="P03-confirmed-error" aria-invalid="false"><span class="field-error" id="P03-confirmed-error"></span>I personally completed and ran every required part of the P03 classroom contract. I have checked the actual results and my additional boundary case.</label></fieldset>
+<fieldset><legend>One genuine, bounded AI exchange and your independent check</legend>
+<p>Use Gemini or the approved LLM for one narrow critique, not for your completed implementation. Send synthetic inputs and a short non-private excerpt. Record an exchange that actually occurred. Prepared prompts and model examples are not observations. If access is blocked, preserve a BLOCKED draft; the requirement remains unfinished.</p>
+<label for="ai-access">Actual access state</label><select id="ai-access" data-material aria-describedby="ai-access-error" aria-invalid="false"><option value="not-started">NOT STARTED</option><option value="available">A genuine exchange occurred</option><option value="blocked">BLOCKED — no genuine exchange</option></select><span class="field-error" id="ai-access-error"></span>
+<label for="ai-tool">Actual tool and relevant model/version information</label><input id="ai-tool" data-material autocomplete="off" aria-describedby="ai-tool-count ai-tool-error" aria-invalid="false"><p class="field-count" id="ai-tool-count">UTF-8: 0 / 128 bytes maximum.</p><span class="field-error" id="ai-tool-error"></span>
+<label for="ai-date">Date of the actual exchange</label><input id="ai-date" type="date" data-material aria-describedby="ai-date-count ai-date-error" aria-invalid="false"><p class="field-count" id="ai-date-count">UTF-8: 0 / 10 bytes maximum.</p><span class="field-error" id="ai-date-error"></span>
+<label for="ai-prompt">Sanitised prompt you actually sent</label><textarea id="ai-prompt" data-material rows="4" aria-describedby="ai-prompt-count ai-prompt-error" aria-invalid="false"></textarea><p class="field-count" id="ai-prompt-count">UTF-8: 0 / 2048 bytes maximum.</p><span class="field-error" id="ai-prompt-error"></span>
+<label for="ai-claim">Relevant claim you actually received</label><textarea id="ai-claim" data-material rows="4" aria-describedby="ai-claim-count ai-claim-error" aria-invalid="false"></textarea><p class="field-count" id="ai-claim-count">UTF-8: 0 / 2048 bytes maximum.</p><span class="field-error" id="ai-claim-error"></span>
+<label for="ai-independentCheck">Your independent check: command/action, evidence and observed outcome</label><textarea id="ai-independentCheck" data-material rows="4" aria-describedby="ai-independentCheck-count ai-independentCheck-error" aria-invalid="false"></textarea><p class="field-count" id="ai-independentCheck-count">UTF-8: 0 / 2048 bytes maximum.</p><span class="field-error" id="ai-independentCheck-error"></span>
+<label for="ai-outcome">Your justified outcome for that claim</label><select id="ai-outcome" data-material aria-describedby="ai-outcome-error" aria-invalid="false"><option value="unknown">UNKNOWN — do not invent certainty</option><option value="accepted">ACCEPTED within the checked scope</option><option value="rejected">REJECTED by the checked evidence</option><option value="partly-accepted">PARTLY ACCEPTED — state the limit</option></select><span class="field-error" id="ai-outcome-error"></span>
+<label for="ai-evidence">Evidence of the actual exchange and independent check</label><p class="hint">Use exact locators and relevant sanitised quotations or actual copied output in this record. An image filename alone does not embed the image.</p><textarea id="ai-evidence" data-material rows="4" aria-describedby="ai-evidence-count ai-evidence-error" aria-invalid="false"></textarea><p class="field-count" id="ai-evidence-count">UTF-8: 0 / 1536 bytes maximum.</p><span class="field-error" id="ai-evidence-error"></span>
+<label for="ai-reflection">Reason for your verdict, correction and scope limit</label><textarea id="ai-reflection" data-material rows="4" aria-describedby="ai-reflection-count ai-reflection-error" aria-invalid="false"></textarea><p class="field-count" id="ai-reflection-count">UTF-8: 0 / 1536 bytes maximum.</p><span class="field-error" id="ai-reflection-error"></span>
+<label class="check"><input id="ai-confirmed" type="checkbox" data-confirm aria-describedby="ai-confirmed-error" aria-invalid="false"><span class="field-error" id="ai-confirmed-error"></span>I actually held the recorded bounded exchange and personally performed the independent check. The evidence and uncertainty are reported truthfully.</label>
+</fieldset>
+<fieldset><legend>Blockers and manual declarations</legend>
+<label for="blockers">Actual blockers or unfinished work</label><p class="hint">State what failed or was unavailable, what you observed and what remains unfinished. Never invent a result to obtain COMPLETED.</p><textarea id="blockers" data-material rows="4" aria-describedby="blockers-count blockers-error" aria-invalid="false"></textarea><p class="field-count" id="blockers-count">UTF-8: 0 / 3072 bytes maximum.</p><span class="field-error" id="blockers-error"></span>
+<label class="check"><input id="individualWork" type="checkbox" data-confirm aria-describedby="individualWork-error" aria-invalid="false"><span class="field-error" id="individualWork-error"></span>I completed all required classroom microprojects individually and the implementation is my own within the declared assistance.</label>
+<label class="check"><input id="truthfulEvidence" type="checkbox" data-confirm aria-describedby="truthfulEvidence-error" aria-invalid="false"><span class="field-error" id="truthfulEvidence-error"></span>The commands, results, evidence and AI record describe my actual work. I have reviewed this record and have not replaced missing observations with supplied examples.</label>
+<label class="check"><input id="scopeUnderstood" type="checkbox" data-confirm aria-describedby="scopeUnderstood-error" aria-invalid="false"><span class="field-error" id="scopeUnderstood-error"></span>I understand that this record covers the bounded classroom contracts only. It does not certify the retained full applications, native platforms, institutional acceptance or an automatic grade.</label>
+</fieldset>
+<h2>Save your evidence safely</h2>
+<p id="record-size" role="status" aria-live="polite" tabindex="-1">Formatted JSON: 0 / 65536 UTF-8 bytes maximum.</p><p id="record-size-warning"></p>
+<label for="pdf-filename">Filename for your single seminar PDF</label><p id="pdf-name-help" class="hint">This filename follows the seminar assignment convention. Copy it into the Save as PDF dialogue. Check the final filename yourself; this page cannot confirm that a PDF was saved.</p><input id="pdf-filename" readonly aria-describedby="pdf-name-help"><button id="copy-pdf-name" type="button">Copy PDF filename</button>
+<h2>Current record status</h2><p id="record-status" role="status" aria-live="polite">DRAFT — not complete.</p>
+<p>COMPLETED requires all project records, actual AI evidence, identity/context and renewed manual declarations. This is a checked record structure and your assertion; the page cannot prove authorship, that an exchange occurred or that an evidence locator is authentic.</p>
+<div class="toolbar"><button id="export-json" type="button">Save JSON draft</button><button id="print-draft" type="button">Print draft or blocked PDF</button><button id="print-complete" type="button">Print completed scoped record</button><button id="reset-form" type="button">Reset after confirmation</button></div>
+<label for="import-json">Import a private JSON draft (maximum 64 KiB)</label><input id="import-json" type="file" accept=".json,application/json">
+<p id="feedback" role="status" aria-live="polite">No file has been imported. All answers are blank and confirmations are unchecked.</p>
+<h2>From actual observations to one PDF</h2>
+<ol><li>Run each required project yourself. Preserve your original prediction, then copy the relevant output you actually observed into ‘Actual result and copied output’. Record failures truthfully.</li><li>In ‘Evidence locator and relevant copied evidence’, identify the matching project heading and output in this record. Add concise actual output where needed. For a browser task, describe the exact action and observed response. A prepared expected output is not evidence of your run.</li><li>Record the genuine sanitised AI exchange and your own independent check. Keep private credentials, personal records and whole conversations out of this form.</li><li>Save a JSON draft. Check that the downloaded file exists; this page has no automatic browser storage. If a field or the whole JSON is too large, shorten irrelevant quotations without deleting the material evidence, then save again.</li><li>Review every result and renew the confirmations. Choose ‘Print completed scoped record’ only when all requirements are complete. Otherwise choose the clearly labelled draft or blocked PDF.</li><li>In the print dialogue, choose Save as PDF. Use the displayed seminar PDF filename. Reopen the saved PDF and inspect every page, all output lines, the scope banner and your identity before uploading that one file to the seminar assignment.</li></ol>
+<p class="notice">This form prints text evidence and does not embed screenshot files. Copied actual logs and precise observed browser actions are supported. If your lecturer additionally requires screenshots, capture your actual result, add a labelled screenshot page with your approved local document/PDF tool and merge it into the same final PDF using the institution’s local procedure. Reopen the merged PDF and check that each image is visible and legible. A filename or path alone does not include an image.</p>
+</form></main>
+<article id="print-output" aria-label="Printable evidence record"><h1>S02 — DRAFT, not complete</h1><p>Open the form and prepare a reviewed record before printing.</p></article>
+<script>
+(() => {
+'use strict';
+const META={"seminar":"S02","edition":"1.0.0-rc.6","branchCID":"WEBTECH_ASE_S02_CLASSROOM_RC6_1.0","scope":"BOUNDED_CLASSROOM_MICROPROJECTS_NOT_FULL_CANONICAL_APPLICATIONS","projects":[{"id":"P01","title":"Responsive relationship reconstruction"},{"id":"P02","title":"Intrinsic sizing and readable content"},{"id":"P03","title":"Keyboard focus and motion preference"}]};
+for(const project of META.projects)Object.freeze(project);Object.freeze(META.projects);Object.freeze(META);
+const SCHEMA='webtech-classroom-evidence/v1';
+const MAX_BYTES=65536;
+const $=id=>document.getElementById(id);
+const projectKeys=['prediction','change','command','actualResult','negativeCase','evidence','reflection'];
+const projectLimits={prediction:1024,change:1536,command:1536,actualResult:3072,negativeCase:1536,evidence:1536,reflection:1536};
+const aiKeys=['tool','date','prompt','claim','independentCheck','outcome','evidence','reflection'];
+const aiLimits={tool:128,date:10,prompt:2048,claim:2048,independentCheck:2048,evidence:1536,reflection:1536};
+const declarations=['individualWork','truthfulEvidence','scopeUnderstood'];
+let revision=0,importTicket=0,printMode='draft',unsaved=false;
+const GENERIC_TITLE=document.title;
+const STUDENT_LABELS={givenName:'Given name',surname:'Surname',group:'Group',date:'Date of your classroom work',packageId:'Released PACKAGE_ID'};
+const PROJECT_LABELS={prediction:'Prediction made before running',change:'Your own implementation or change',command:'Exact command or action you actually executed',actualResult:'Actual result and copied output',negativeCase:'Your own falsifying or boundary case',evidence:'Evidence locator and relevant copied evidence',reflection:'Explanation, limitation and reflection'};
+const AI_LABELS={tool:'Actual AI tool and model/version information',date:'Date of the actual AI exchange',prompt:'Sanitised prompt you actually sent',claim:'Relevant claim you actually received',independentCheck:'Your independent check: action, evidence and observed outcome',outcome:'Your justified outcome for the AI claim',evidence:'Evidence of the actual AI exchange and independent check',reflection:'Reason for your AI verdict, correction and scope limit'};
+const DECLARATION_LABELS={individualWork:'Individual work and declared assistance',truthfulEvidence:'Truthful commands, observations and AI evidence',scopeUnderstood:'Understanding of the bounded classroom scope'};
+const FIELD_LIMITS={givenName:256,surname:256,group:128,studentDate:10,packageId:64,environment:1536,'ai-tool':128,'ai-date':10,'ai-prompt':2048,'ai-claim':2048,'ai-independentCheck':2048,'ai-evidence':1536,'ai-reflection':1536,blockers:3072};
+for(const p of META.projects)for(const k of projectKeys)FIELD_LIMITS[p.id+'-'+k]=projectLimits[k];
+Object.freeze(FIELD_LIMITS);
+
+const bytes=text=>new TextEncoder().encode(text).byteLength;
+function ownObject(value,keys,label){
+ if(!value||typeof value!=='object'||Array.isArray(value)||![Object.prototype,null].includes(Object.getPrototypeOf(value)))throw Error(label+' must be a plain object');
+ const actual=Reflect.ownKeys(value);
+ if(actual.length!==keys.length||actual.some(k=>typeof k!=='string'||!keys.includes(k)))throw Error(label+' has missing or unknown fields');
+ for(const k of keys){const p=Object.getOwnPropertyDescriptor(value,k);if(!p||!('value'in p))throw Error(label+' has an invalid field descriptor');}
+}
+function validUnicode(value){
+ for(let i=0;i<value.length;i++){const n=value.charCodeAt(i);if(n>=0xD800&&n<=0xDBFF){const next=value.charCodeAt(++i);if(!(next>=0xDC00&&next<=0xDFFF))return false;}else if(n>=0xDC00&&n<=0xDFFF)return false;}return true;
+}
+function text(value,limit,label){if(typeof value!=='string'||!validUnicode(value)||/[\u0000-\u0008\u000B\u000C\u000E-\u001F]/.test(value)||bytes(value)>limit)throw Error(label+' must be bounded UTF-8 text ('+limit+' bytes maximum)');}
+function boolean(value,label){if(typeof value!=='boolean')throw Error(label+' must be true or false, not a string or number');}
+function oneOf(value,values,label){if(typeof value!=='string'||!values.includes(value))throw Error(label+' has an invalid option');}
+function today(){const d=new Date();return [d.getFullYear(),String(d.getMonth()+1).padStart(2,'0'),String(d.getDate()).padStart(2,'0')].join('-');}
+function date(value,label){text(value,10,label);if(value&&(!/^\d{4}-\d{2}-\d{2}$/.test(value)||!Number.isFinite(Date.parse(value+'T00:00:00Z'))||new Date(value+'T00:00:00Z').toISOString().slice(0,10)!==value||value>today()))throw Error(label+' must be a real, nonfuture date');}
+function missing(record){
+ const list=[];
+ for(const k of ['givenName','surname','group','date','packageId'])if(!record.student[k].trim())list.push(STUDENT_LABELS[k]);
+ if(!record.environment.trim())list.push('Actual environment/version evidence');
+ for(const p of record.projects){if(p.status!=='completed')list.push(p.id+' is '+p.status);for(const k of projectKeys)if(!p[k].trim())list.push(p.id+' — '+PROJECT_LABELS[k]);if(!p.confirmed)list.push(p.id+' personal confirmation');}
+ if(record.ai.access!=='available')list.push('Actual AI exchange: '+record.ai.access);
+ for(const k of ['tool','date','prompt','claim','independentCheck','evidence','reflection'])if(!record.ai[k].trim())list.push(AI_LABELS[k]);
+ if(!record.ai.confirmed)list.push('AI personal confirmation');
+ for(const k of declarations)if(!record.declarations[k])list.push(DECLARATION_LABELS[k]);
+ return list;
+}
+function state(record){if(record.projects.some(p=>p.status==='blocked')||record.ai.access==='blocked')return 'blocked';return missing(record).length?'draft':'completed';}
+function validate(record){
+ ownObject(record,['schema','seminar','edition','branchCID','scope','status','student','environment','projects','ai','declarations','blockers'],'Record');
+ for(const [key,expected]of Object.entries({schema:SCHEMA,seminar:META.seminar,edition:META.edition,branchCID:META.branchCID,scope:META.scope}))if(record[key]!==expected)throw Error('Wrong fixed metadata: '+key);
+ ownObject(record.student,['givenName','surname','group','date','packageId'],'Student');
+ text(record.student.givenName,256,'Given name');text(record.student.surname,256,'Surname');text(record.student.group,128,'Group');date(record.student.date,'Student date');text(record.student.packageId,64,'PACKAGE_ID');
+ if(record.student.packageId&&!/^[a-f0-9]{64}$/.test(record.student.packageId))throw Error('PACKAGE_ID must be exactly 64 lowercase hexadecimal characters');
+ text(record.environment,1536,'Environment');text(record.blockers,3072,'Blockers');
+ if(!Array.isArray(record.projects)||record.projects.length!==META.projects.length)throw Error('Record must contain every required project');
+ for(let i=0;i<record.projects.length;i++){
+  const p=record.projects[i];ownObject(p,['id','status',...projectKeys,'confirmed'],'Project');
+  if(p.id!==META.projects[i].id)throw Error('Project IDs/order differ from the released classroom scope');
+  oneOf(p.status,['draft','blocked','completed'],p.id+' status');boolean(p.confirmed,p.id+' confirmed');
+  for(const key of projectKeys)text(p[key],projectLimits[key],p.id+' — '+PROJECT_LABELS[key]);
+  if(p.status==='completed'&&projectKeys.some(k=>!p[k].trim()))throw Error(p.id+' is marked completed but its evidence record is incomplete');
+ }
+ ownObject(record.ai,['access',...aiKeys,'confirmed'],'AI');oneOf(record.ai.access,['not-started','available','blocked'],'AI access');oneOf(record.ai.outcome,['unknown','accepted','rejected','partly-accepted'],'AI outcome');
+ for(const k of Object.keys(aiLimits))text(record.ai[k],aiLimits[k],AI_LABELS[k]);date(record.ai.date,'Date of the actual AI exchange');boolean(record.ai.confirmed,'AI personal confirmation');
+ ownObject(record.declarations,declarations,'Declarations');for(const k of declarations)boolean(record.declarations[k],k);
+ oneOf(record.status,['draft','blocked','completed'],'Record status');if(record.status!==state(record))throw Error('Record status contradicts its evidence and declarations');
+ const encoded=JSON.stringify(record);if(bytes(encoded)>MAX_BYTES)throw Error('Record exceeds 64 KiB UTF-8');
+ return record;
+}
+function snapshot(){
+ const record={schema:SCHEMA,seminar:META.seminar,edition:META.edition,branchCID:META.branchCID,scope:META.scope,status:'draft',student:{givenName:$('givenName').value,surname:$('surname').value,group:$('group').value,date:$('studentDate').value,packageId:$('packageId').value},environment:$('environment').value,projects:META.projects.map(p=>{const result={id:p.id,status:$(p.id+'-status').value};for(const k of projectKeys)result[k]=$(p.id+'-'+k).value;result.confirmed=$(p.id+'-confirmed').checked;return result;}),ai:{access:$('ai-access').value},declarations:{},blockers:$('blockers').value};
+ for(const k of aiKeys)record.ai[k]=$('ai-'+k).value;record.ai.confirmed=$('ai-confirmed').checked;
+ for(const k of declarations)record.declarations[k]=$(k).checked;
+ record.status=state(record);return record;
+}
+function clearConfirmations(){for(const el of document.querySelectorAll('[data-confirm]'))el.checked=false;printMode='draft';}
+function feedback(message){$('feedback').textContent=message;}
+function refresh(){
+ updateCounters();showValidation(false,false);
+ try{const r=validate(snapshot());const todo=missing(r);$('record-status').textContent=r.status.toUpperCase()+(r.status==='completed'?' — scoped classroom record only; not a grade.':' — not complete.\n'+todo.join('\n'));}
+ catch(e){$('record-status').textContent='DRAFT — invalid or unfinished record.\n'+e.message;}
+}
+function fieldLabel(id){
+ if(id==='studentDate')return STUDENT_LABELS.date;if(STUDENT_LABELS[id])return STUDENT_LABELS[id];
+ if(id==='environment')return 'Actual environment and version evidence';if(id==='blockers')return 'Actual blockers or unfinished work';
+ if(id.startsWith('ai-'))return AI_LABELS[id.slice(3)]||'Actual AI access or confirmation';
+ const project=META.projects.find(p=>id.startsWith(p.id+'-'));if(project)return project.id+' — '+(PROJECT_LABELS[id.slice(4)]||'project status or confirmation');
+ return DECLARATION_LABELS[id]||'Record field';
+}
+function formattedBytes(record){return bytes(JSON.stringify(record,null,2)+'\n');}
+function updateCounters(){
+ for(const [id,limit]of Object.entries(FIELD_LIMITS))$(id+'-count').textContent='UTF-8: '+bytes($(id).value)+' / '+limit+' bytes maximum.';
+ const count=formattedBytes(snapshot());$('record-size').textContent='Formatted JSON: '+count+' / '+MAX_BYTES+' UTF-8 bytes maximum.';
+ $('record-size-warning').textContent=count>MAX_BYTES?'The formatted JSON is too large to save. Shorten irrelevant quotations without deleting material evidence. Your current answers are preserved.':'';
+ $('pdf-filename').value=pdfFilename();
+}
+function fieldIssues(requireCompleted){
+ const issues=new Map(),record=snapshot(),add=(id,message)=>{if(!issues.has(id))issues.set(id,message);};
+ for(const [id,limit]of Object.entries(FIELD_LIMITS))try{text($(id).value,limit,fieldLabel(id));}catch(e){add(id,e.message);}
+ for(const id of ['studentDate','ai-date'])try{date($(id).value,fieldLabel(id));}catch(e){add(id,e.message);}
+ if($('packageId').value&&!/^[a-f0-9]{64}$/.test($('packageId').value))add('packageId','Copy exactly 64 lowercase hexadecimal characters from this released package’s PACKAGE_ID.txt.');
+ if(requireCompleted)for(const id of ['givenName','surname','group','studentDate','packageId','environment'])if(!$(id).value.trim())add(id,'Provide '+fieldLabel(id).toLowerCase()+'.');
+ for(const p of record.projects){
+  if(requireCompleted&&p.status!=='completed')add(p.id+'-status','This project is unfinished. Select COMPLETED only after you have completed its actual contract.');
+  if(requireCompleted||p.status==='completed')for(const k of projectKeys)if(!p[k].trim())add(p.id+'-'+k,'Enter your actual '+PROJECT_LABELS[k].toLowerCase()+'. If unfinished, return the project status to DRAFT or BLOCKED.');
+  if(requireCompleted&&!p.confirmed)add(p.id+'-confirmed','Review your actual project work, then renew this personal confirmation.');
+ }
+ if(requireCompleted){
+  if(record.ai.access!=='available')add('ai-access','A genuine bounded AI exchange remains unfinished or blocked. Preserve a draft rather than inventing an exchange.');
+  for(const k of ['tool','date','prompt','claim','independentCheck','evidence','reflection'])if(!record.ai[k].trim())add('ai-'+k,'Provide your actual '+AI_LABELS[k].toLowerCase()+'.');
+  if(!record.ai.confirmed)add('ai-confirmed','Review the actual exchange and independent check, then renew your personal confirmation.');
+  for(const id of declarations)if(!record.declarations[id])add(id,'Review the record before renewing this manual declaration.');
+ }
+ return issues;
+}
+function showValidation(requireCompleted,focusFirst){
+ for(const el of document.querySelectorAll('[data-material],[data-confirm]')){el.setAttribute('aria-invalid','false');$(el.id+'-error').textContent='';}
+ const issues=fieldIssues(requireCompleted);for(const [id,message]of issues){$(id).setAttribute('aria-invalid','true');$(id+'-error').textContent=message;}
+ if(focusFirst){if(issues.size)$(issues.keys().next().value).focus();else if(formattedBytes(snapshot())>MAX_BYTES)$('record-size').focus();}
+ return issues;
+}
+async function copyPDFName(){
+ const field=$('pdf-filename');field.value=pdfFilename();
+ try{if(!navigator.clipboard||typeof navigator.clipboard.writeText!=='function')throw Error('Clipboard API unavailable');await navigator.clipboard.writeText(field.value);feedback('PDF filename copied. Use it in the Save as PDF dialogue and check the saved file.');}
+ catch(e){field.focus();field.select();feedback('PDF filename selected. Press Ctrl+C on Windows/Linux or Command+C on macOS, then use that name in the Save as PDF dialogue.');}
+}
+function strictParse(source){
+ if(typeof source!=='string'||bytes(source)>MAX_BYTES)throw Error('JSON input exceeds 64 KiB UTF-8');
+ let at=0,nodes=0;
+ function ws(){while(/[\x20\t\r\n]/.test(source[at]||'!'))at++;}
+ function string(){const start=at++;while(at<source.length){const c=source[at++];if(c==='"'){const v=JSON.parse(source.slice(start,at));if(!validUnicode(v))throw Error('Invalid Unicode string');return v;}if(c==='\\')at++;}throw Error('Unterminated JSON string');}
+ function value(depth){if(++nodes>1000||depth>8)throw Error('JSON nesting or value count exceeds the bound');ws();const c=source[at];
+  if(c==='"')return string();
+  if(c==='{'||c==='['){const object=c==='{',result=object?Object.create(null):[],keys=new Set();at++;ws();const end=object?'}':']';if(source[at]===end){at++;return result;}
+   while(true){ws();let key;if(object){if(source[at]!=='"')throw Error('Expected JSON object key');key=string();if(keys.has(key)||['__proto__','constructor','prototype'].includes(key))throw Error('Duplicate or forbidden JSON key');keys.add(key);ws();if(source[at++]!==':')throw Error('Expected JSON colon');}const child=value(depth+1);if(object)result[key]=child;else result.push(child);ws();const next=source[at++];if(next===end)return result;if(next!==',')throw Error('Invalid JSON separator');}
+  }
+  for(const [token,result]of [['true',true],['false',false],['null',null]])if(source.startsWith(token,at)){at+=token.length;return result;}
+  const number=/-?(?:0|[1-9]\d*)(?:\.\d+)?(?:[eE][+-]?\d+)?/y;number.lastIndex=at;const match=number.exec(source);if(match){at=number.lastIndex;const result=Number(match[0]);if(!Number.isFinite(result))throw Error('Nonfinite JSON number');return result;}
+  throw Error('Invalid JSON value');
+ }
+ const parsed=value(0);ws();if(at!==source.length)throw Error('Trailing JSON input');return parsed;
+}
+function applyImported(record){
+ // No mutation occurs until the entire candidate has passed parsing and validation.
+ for(const [key,id]of Object.entries({givenName:'givenName',surname:'surname',group:'group',date:'studentDate',packageId:'packageId'}))$(id).value=record.student[key];
+ $('environment').value=record.environment;$('blockers').value=record.blockers;
+ for(const p of record.projects){$(p.id+'-status').value=p.status;for(const k of projectKeys)$(p.id+'-'+k).value=p[k];}
+ $('ai-access').value=record.ai.access;for(const k of aiKeys)$('ai-'+k).value=record.ai[k];
+ clearConfirmations();revision++;unsaved=false;document.title=GENERIC_TITLE;refresh();feedback('Imported valid text and statuses. Every project, AI and manual confirmation has been reset. Recheck the actual evidence before renewing them.');
+}
+function importText(source){const candidate=validate(strictParse(source));importTicket++;applyImported(candidate);return snapshot();}
+async function readFile(file){if(typeof file.text==='function')return file.text();return new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=()=>reject(Error('File could not be read'));reader.readAsText(file,'UTF-8');});}
+async function importFile(file){
+ const ticket=++importTicket,startedRevision=revision;
+ try{if(!file||typeof file.size!=='number'||!Number.isFinite(file.size)||file.size<0||file.size>MAX_BYTES)throw Error('Select a JSON file no larger than 64 KiB');const source=await readFile(file);const candidate=validate(strictParse(source));
+  if(ticket!==importTicket||startedRevision!==revision){feedback('Import refused: newer input or another import superseded this file. Your current answers were preserved.');return false;}
+  applyImported(candidate);return true;
+ }catch(e){if(ticket===importTicket)feedback('Import refused; current answers preserved. '+e.message);return false;}
+}
+function filename(){const r=snapshot();const part=value=>value.normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/[^A-Za-z0-9_-]+/g,'_').slice(0,60)||'UNFILLED';return 'TW2026_'+META.seminar+'_'+part(r.student.group)+'_'+part(r.student.surname)+'_'+part(r.student.givenName);}
+function pdfFilename(){return filename()+'.pdf';}
+function saveJSON(){
+ try{showValidation(false,true);const r=validate(snapshot());const encoded=JSON.stringify(r,null,2)+'\n';if(bytes(encoded)>MAX_BYTES)throw Error('Formatted JSON exceeds 64 KiB; shorten irrelevant quotations without removing material evidence');
+  const url=URL.createObjectURL(new Blob([encoded],{type:'application/json;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download=filename()+'_Classroom_Draft.json';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),0);unsaved=false;
+  feedback('JSON draft download requested locally. Check that the file was saved. This is not evidence submission or an automatic grade.');
+ }catch(e){showValidation(false,true);feedback('Save refused; your current answers were preserved. '+e.message);}
+}
+function printText(parent,label,value){const h=document.createElement('h3');h.textContent=label;const p=document.createElement('p');p.className='print-value';p.textContent=typeof value==='boolean'?(value?'Student manually confirmed':'NOT CONFIRMED'):(value||'[NOT PROVIDED]');parent.append(h,p);}
+function buildPrintable(record,completed){
+ validate(record);if(completed&&record.status!=='completed')throw Error('Complete printing requires every project, actual AI evidence and renewed manual declarations');
+ const out=$('print-output');out.replaceChildren();const title=document.createElement('h1');title.textContent=META.seminar+' — individual classroom evidence';out.append(title);
+ const banner=document.createElement('p');banner.className='print-banner';banner.textContent=completed?'COMPLETED SCOPED CLASSROOM RECORD — STUDENT DECLARATION; NOT A GRADE':(record.status==='blocked'?'BLOCKED DRAFT — NOT COMPLETE':'DRAFT FOR REVIEW — NOT COMPLETE');out.append(banner);
+ printText(out,'Fixed classroom scope',META.branchCID+'\n'+META.edition+'\n'+META.scope+'\nEvery listed bounded microproject is required, individual and completed in class. This record does not certify the retained full applications, native platforms or institutional acceptance.');
+ const legacy=document.createElement('p');legacy.textContent='The retained original full-project evidence form remains a separate contract: '+$('legacy-form').getAttribute('href');out.append(legacy);
+ for(const [k,label]of Object.entries({givenName:'Given name',surname:'Surname',group:'Group',date:'Classroom date',packageId:'Released PACKAGE_ID copied by the student'}))printText(out,label,record.student[k]);
+ printText(out,'Actual environment and versions',record.environment);
+ for(let i=0;i<record.projects.length;i++){const p=record.projects[i],section=document.createElement('section'),heading=document.createElement('h2');heading.textContent=p.id+': '+META.projects[i].title;section.append(heading);printText(section,'Student project status',p.status.toUpperCase());for(const key of projectKeys)printText(section,PROJECT_LABELS[key],p[key]);printText(section,'Project confirmation',p.confirmed);out.append(section);}
+ const section=document.createElement('section'),heading=document.createElement('h2');heading.textContent='Genuine bounded AI exchange and independent check';section.append(heading);printText(section,'Actual access state',record.ai.access);for(const key of aiKeys)printText(section,AI_LABELS[key],record.ai[key]);printText(section,'AI confirmation',record.ai.confirmed);out.append(section);
+ printText(out,'Actual blockers or unfinished work',record.blockers);for(const key of declarations)printText(out,DECLARATION_LABELS[key],record.declarations[key]);
+ const note=document.createElement('p');note.textContent='All text answers are reproduced in full. Text-only evidence locators do not embed screenshots or other files. Reopen the actual saved PDF and inspect every page. These declarations are student assertions and this page provides no automatic grade or independent authentication.';out.append(note);
+ document.title=filename();return out;
+}
+function printRecord(completed){
+ try{showValidation(completed,true);const record=validate(snapshot());buildPrintable(record,completed);printMode=completed?'completed':'draft';window.print();
+  feedback(completed?'Print dialogue requested for the scoped record. Use the displayed PDF filename and inspect the actual saved PDF before submission.':'Print dialogue requested for an explicitly unfinished draft. It does not fulfil the incomplete requirements.');return true;
+ }catch(e){showValidation(completed,true);feedback('Print refused; your current answers were preserved. '+e.message);return false;}
+}
+function reset(){if(!window.confirm('Reset every answer and confirmation? Unsaved work will be lost. Cancel keeps your current record.'))return false;importTicket++;revision++;$('evidence-form').reset();clearConfirmations();unsaved=false;document.title=GENERIC_TITLE;$('print-output').replaceChildren();refresh();feedback('Reset completed. All answers are blank and all confirmations are unchecked.');return true;}
+for(const el of document.querySelectorAll('[data-material],[data-confirm]')){const edited=()=>{revision++;if(el.hasAttribute('data-material')){clearConfirmations();}unsaved=true;refresh();};el.addEventListener('input',edited);el.addEventListener('change',edited);}
+$('evidence-form').addEventListener('submit',event=>event.preventDefault());
+$('import-json').addEventListener('change',()=>{void importFile($('import-json').files[0]);});
+$('export-json').addEventListener('click',saveJSON);$('print-draft').addEventListener('click',()=>printRecord(false));$('print-complete').addEventListener('click',()=>printRecord(true));$('reset-form').addEventListener('click',reset);
+window.addEventListener('beforeprint',()=>{try{buildPrintable(validate(snapshot()),printMode==='completed');}catch(e){const out=$('print-output');out.replaceChildren();const warning=document.createElement('h1');warning.textContent='DRAFT — PRINT RECORD REFUSED';const reason=document.createElement('p');reason.textContent=e.message+' No completed evidence is asserted.';out.append(warning,reason);}});
+window.addEventListener('afterprint',()=>{printMode='draft';document.title=GENERIC_TITLE;});
+window.addEventListener('beforeunload',event=>{if(unsaved){event.preventDefault();event.returnValue='';}});
+$('copy-pdf-name').addEventListener('click',()=>{void copyPDFName();});
+window.WEBTECH_CLASSROOM_FORM=Object.freeze({schema:SCHEMA,metadata:Object.freeze(META),snapshot,validate,strictParse,importText,importFile,buildPrintable,printRecord,reset,refresh,saveJSON,pdfFilename,hasUnsavedChanges:()=>unsaved});
+refresh();
+})();
+</script></body></html>

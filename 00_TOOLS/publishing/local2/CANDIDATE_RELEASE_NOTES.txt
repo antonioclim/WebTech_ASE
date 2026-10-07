@@ -1,0 +1,12 @@
+WebTech ASE LOCAL2 provisional classroom and static reading candidate
+Version: 3.0.0-rc.10-local.2
+General qualification: NOT_FINAL
+
+This candidate derives from the exact frozen RC10 classroom archive. It contains reviewed public source corrections for C02 and seminar delivery, current unit identity notices and independent collection guards. All 38 learner-editable starter files, 40 required microprojects, 14 tutorials and 30 collection objects retain their prescribed teaching boundary. No learner answers are supplied.
+
+WEBTECH_ASE_LOCAL2_CLASSROOM.zip is the execution profile. Extract this archive separately for local runtime commands.
+WEBTECH_ASE_LOCAL2_STATIC.zip is the static reading profile. It preserves the classroom routes and identities but does not run the seminar servers or substitute for the execution archive.
+
+All ten broad qualification gates remain pending. The bounded build and protected-starter controls do not establish native platform, visual browser, accessibility, Word, live Moodle or human teaching acceptance. Build metadata asserts no publication. Use the actual owner-selected Actions run and resulting deployment or release receipt to identify published bytes.
+
+The frozen RC10 release and its tag are not replaced or amended. Publish this candidate only as a separate prerelease if a release is desired. Upload only the candidate ZIPs, their checksum sidecars and selected public build receipts. Never upload a private delivery bundle or owner evidence.
