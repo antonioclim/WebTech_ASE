@@ -3,12 +3,18 @@
 <!-- RC10_ACTIVE_NAVIGATION_BEGIN -->
 **Published classroom version `3.0.0-rc.10` — `PUBLISHED_PRERELEASE`.** Start with the [current English student portal](00_START_HERE/STUDENT_CLASSROOM_PUBLISHED_RC10/README.md). Download the three verified RC10 release assets through that portal. The owner published this prerelease on 7 October 2026 (00:27:43 Europe/Bucharest).
 
-The last published classroom prerelease is RC10. Its source commit, public download identities and finite verification scope are recorded in the publication receipt. Qualification and classroom acceptance remain pending. General qualification remains NOT_FINAL.
+The last published classroom prerelease is RC10 for the frozen default route. The separate LOCAL2 provisional candidate is linked below. Its source commit, public download identities and finite verification scope are recorded in the publication receipt. Qualification and classroom acceptance remain pending. General qualification remains NOT_FINAL.
 
 [RC10 publication and limitations](90_RELEASES/RC10_PUBLICATION.md) · [RC10 reproduction and owner procedure](00_TOOLS/maintainer/CLASSROOM_RC10_PUBLISHED.md)
 
 The material below is **historical RC6 source**, retained only as an optional advanced reference. Its whole-source ZIPs and full applications are not the remediated RC10 classroom download. Older instructions inside the collapsed section describe their own edition. In particular, the old C07 carrier has stale canonical registry hashes; use the corrected classroom route. The full S13 server and old optional S03/S06 commands have separately recorded defects. A classroom check does not certify a historical full application.
 <!-- RC10_ACTIVE_NAVIGATION_END -->
+
+<!-- LOCAL2_SEPARATE_PUBLICATION_BEGIN -->
+## Separate published LOCAL2 provisional candidate
+
+Version **3.0.0-rc.10-local.2 — PUBLISHED_PRERELEASE**, published on 7 October 2026, is available through [the separate LOCAL2 download portal](00_START_HERE/STUDENT_LOCAL2_PUBLISHED/README.md). Read [the LOCAL2 publication record and limits](90_RELEASES/LOCAL2_PUBLICATION.md). The frozen RC10 default route is retained. LOCAL2 remains **NOT_FINAL** with all ten broad qualification gates pending.
+<!-- LOCAL2_SEPARATE_PUBLICATION_END -->
 
 Students complete all two or three seminar microprojects individually, record their own observations and submit one reviewed evidence PDF through the private seminar assignment. Prepare the runtime before class. The published classroom material remains a prerelease; classroom timings are unpiloted.
 
