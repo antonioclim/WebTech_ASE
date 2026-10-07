@@ -1,0 +1,263 @@
+{
+  "schema": "webtech-classroom-scope/v1",
+  "seminar": "S07",
+  "classroom_version": "1.0.0-rc.6",
+  "individual": true,
+  "all_projects_required": true,
+  "projects": [
+    {
+      "id": "P01",
+      "title": "Junction relationship query",
+      "editable_path": "CLASSROOM_RC6/targets/p01.mjs",
+      "completeScope": "Write one eager SQL JOIN over supplied sessions/registrations/attendees, bind session ID and order attendees by ID; return detached mapped rows."
+    },
+    {
+      "id": "P02",
+      "title": "One owned atomic booking",
+      "editable_path": "CLASSROOM_RC6/targets/p02.mjs",
+      "completeScope": "Use supplied managed SQLite transaction adapter, five shared-transaction operations, awaited callback/audit and rollback on callback/audit failures."
+    },
+    {
+      "id": "P03",
+      "title": "Idempotent resource response",
+      "editable_path": "CLASSROOM_RC6/targets/p03.mjs",
+      "completeScope": "Map supplied PUTcreated/repeat to201+Location/200 and DELETEremoved/absent to204no body using path pair identity."
+    }
+  ],
+  "scope": "GENUINE_NODE_BUILTIN_SQLITE_JOIN_TRANSACTION_AND_LOOPBACK_HTTP",
+  "source_commit": "4eea8de416cb03cf4f718fb802f868a391abb192",
+  "retained_original_full_project_completed_by_classroom_checks": false,
+  "legacy_form": "evidence.html",
+  "legacy_guide": "guide.html",
+  "timeline": [
+    {
+      "start": 0,
+      "end": 5,
+      "activity": "Confirm the prescribed runtime, package-root working directory and evidence location; record the environment. Software preparation is completed before class.",
+      "planned_range_minutes": [
+        5,
+        5
+      ],
+      "planned_start_range_minutes": [
+        0,
+        0
+      ],
+      "planned_end_range_minutes": [
+        5,
+        5
+      ]
+    },
+    {
+      "start": 5,
+      "end": 35,
+      "activity": "P01 — Junction relationship query: contract and prediction, bounded implementation/investigation, then review and actual evidence.",
+      "planned_range_minutes": [
+        30,
+        45
+      ],
+      "planned_start_range_minutes": [
+        5,
+        5
+      ],
+      "planned_end_range_minutes": [
+        35,
+        50
+      ]
+    },
+    {
+      "start": 35,
+      "end": 65,
+      "activity": "P02 — One owned atomic booking: contract and prediction, bounded implementation/investigation, then review and actual evidence.",
+      "planned_range_minutes": [
+        30,
+        45
+      ],
+      "planned_start_range_minutes": [
+        35,
+        50
+      ],
+      "planned_end_range_minutes": [
+        65,
+        95
+      ]
+    },
+    {
+      "start": 65,
+      "end": 95,
+      "activity": "P03 — Idempotent resource response: contract and prediction, bounded implementation/investigation, then review and actual evidence.",
+      "planned_range_minutes": [
+        30,
+        45
+      ],
+      "planned_start_range_minutes": [
+        65,
+        95
+      ],
+      "planned_end_range_minutes": [
+        95,
+        140
+      ]
+    },
+    {
+      "start": 95,
+      "end": 110,
+      "activity": "One shared genuine bounded Gemini/approved-LLM claim, sanitised input and an independently executed witness; unavailable access remains BLOCKED or NOT_EXECUTED.",
+      "planned_range_minutes": [
+        15,
+        15
+      ],
+      "planned_start_range_minutes": [
+        95,
+        140
+      ],
+      "planned_end_range_minutes": [
+        110,
+        155
+      ]
+    },
+    {
+      "start": 110,
+      "end": 115,
+      "activity": "Review the current form, export one private PDF and reopen every saved page. A filename or export action does not prove the PDF was saved or accepted.",
+      "planned_range_minutes": [
+        5,
+        5
+      ],
+      "planned_start_range_minutes": [
+        110,
+        155
+      ],
+      "planned_end_range_minutes": [
+        115,
+        160
+      ]
+    },
+    {
+      "start": 115,
+      "end": 120,
+      "activity": "Student recap: what was achieved, what was learned, why the evidence supports it and the next unresolved check. Renew declarations and export/review an updated PDF if the record changes. Stop any owned listener and retain actual submission status; agree a continuation if review remains unfinished.",
+      "planned_range_minutes": [
+        5,
+        5
+      ],
+      "planned_start_range_minutes": [
+        115,
+        160
+      ],
+      "planned_end_range_minutes": [
+        120,
+        165
+      ]
+    }
+  ],
+  "timing_empirically_validated": false,
+  "native_acceptance": false,
+  "genuine_llm_exchange_performed_by_maintainer": false,
+  "planned_project_range_minutes": [
+    30,
+    45
+  ],
+  "planned_session_range_minutes": [
+    120,
+    165
+  ],
+  "schedule_estimate_only": true,
+  "continuation_policy": "Every project remains required and individual in class. If the institutional slot is shorter than the planned range, agree a taught continuation with the lecturer before the session; retain every project and record unfinished work honestly. A shorter slot does not make a task optional or establish completion.",
+  "private_evidence_location": "Outside the entire extracted collection: student-owned home-folder WebTech_Evidence/S07",
+  "historical_reference_scope": "The linked historical full-project guides and forms are read-only context with separate contracts. The filtered classroom unit does not include the omitted full-application runtime or its starter/test trees. A bounded classroom PASS does not establish completion of those historical applications.",
+  "recap_prompt": "Explain how your joined rows, shared managed transaction and resource-response mapping support the observed result. State why an awaited failure witness matters, distinguish rollback evidence from concurrent safety and name the next relationship or transaction boundary to investigate.",
+  "recap_pdf_consistency_policy": "If the recap changes your form record, renew the manual declarations, export the updated PDF and reopen every page before submission. If review remains unfinished, agree a continuation and keep the record incomplete.",
+  "project_schedule": [
+    {
+      "id": "P01",
+      "planned_range_minutes": [
+        30,
+        45
+      ],
+      "checkpoints": [
+        {
+          "activity": "Contract and prediction",
+          "planned_range_minutes": [
+            5,
+            5
+          ]
+        },
+        {
+          "activity": "Implementation and investigation",
+          "planned_range_minutes": [
+            20,
+            30
+          ]
+        },
+        {
+          "activity": "Review and evidence",
+          "planned_range_minutes": [
+            5,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "id": "P02",
+      "planned_range_minutes": [
+        30,
+        45
+      ],
+      "checkpoints": [
+        {
+          "activity": "Contract and prediction",
+          "planned_range_minutes": [
+            5,
+            5
+          ]
+        },
+        {
+          "activity": "Implementation and investigation",
+          "planned_range_minutes": [
+            20,
+            30
+          ]
+        },
+        {
+          "activity": "Review and evidence",
+          "planned_range_minutes": [
+            5,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "id": "P03",
+      "planned_range_minutes": [
+        30,
+        45
+      ],
+      "checkpoints": [
+        {
+          "activity": "Contract and prediction",
+          "planned_range_minutes": [
+            5,
+            5
+          ]
+        },
+        {
+          "activity": "Implementation and investigation",
+          "planned_range_minutes": [
+            20,
+            30
+          ]
+        },
+        {
+          "activity": "Review and evidence",
+          "planned_range_minutes": [
+            5,
+            10
+          ]
+        }
+      ]
+    }
+  ],
+  "timeline_numeric_values": "Lower end of the unpiloted planning range, not an empirical minimum or a completion threshold."
+}
