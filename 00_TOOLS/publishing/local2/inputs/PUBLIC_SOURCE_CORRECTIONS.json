@@ -1,0 +1,262 @@
+{
+  "schema": "webtech-public-source-corrections/v1",
+  "candidate_version": "3.0.0-rc.10-local.2",
+  "predecessor_archive_sha256": "a86508783f916e805eb19707cb4ebb92fa8486fde0f2a7414ac32a65395965f9",
+  "scope": "Explicit executable/interface source corrections derived from the frozen published RC10 archive. No student answers, private evidence or owner acceptance is supplied.",
+  "patch_records": [
+    {
+      "scope": "PUBLIC_CLASSROOM_SOURCE",
+      "target_path": "PACKAGES/C02/WEBTECH_ASE_C02_EN_GB_v1.2.3_RC4/01_PRESENTATION/COURSE_02_SEMANTIC_HTML_CSS_RESPONSIVE_UI_AND_ACCESSIBILITY_60_MIN_INTERACTIVE_v1.1_EN_GB.html",
+      "payload_path": "patches/C02_PRESENTATION.html",
+      "old_sha256": "9f2c30e1a5c2195be9e1d0d284d2631ac127c818149b64f36a4e6e4963df0cd8",
+      "new_sha256": "68c099049b5a978a246473dfce38ccd352c20a16d7fa2d8842d65e41b70db304",
+      "old_bytes": 50045,
+      "new_bytes": 52623
+    },
+    {
+      "scope": "PUBLIC_CLASSROOM_SOURCE",
+      "target_path": "PACKAGES/S01/WEBTECH_ASE_S01_EN_GB_v6.1.3_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html",
+      "payload_path": "patches/S01_EVIDENCE_FORM.html",
+      "old_sha256": "2eacf0c8e09fbeb126bdedb878d9a3b81369855fba365bcceaf8672c1a2a54da",
+      "new_sha256": "3cdec94531042a43b657b2e107ee6927cfa427ee3778ec3bdc8cd42fba08fb4b",
+      "old_bytes": 49886,
+      "new_bytes": 49886
+    },
+    {
+      "scope": "PUBLIC_CLASSROOM_SOURCE",
+      "target_path": "PACKAGES/S01/WEBTECH_ASE_S01_EN_GB_v6.1.3_RC6/CLASSROOM_RC6/http.mjs",
+      "payload_path": "patches/S01_http.mjs",
+      "old_sha256": "e0c129b2daf3f1884ae8cfdbcc8623f1abfa11a552a1cf05dda59d38cdebd7e6",
+      "new_sha256": "26afe7a39120303c47fe62a0308c9ca230f1a219da35cb8fc4b87f8cb387d563",
+      "old_bytes": 1841,
+      "new_bytes": 2051
+    },
+    {
+      "scope": "PUBLIC_CLASSROOM_SOURCE",
+      "target_path": "PACKAGES/S02/WEBTECH_ASE_S02_EN_GB_v2.3.4_RC6/CLASSROOM_RC6/BROWSER_CHECKS.html",
+      "payload_path": "patches/S02_BROWSER_CHECKS.html",
+      "old_sha256": "64871d51aa261a62e02ace880ccc11cff1f2d32e0885da5d1489500c5abc875f",
+      "new_sha256": "3015f7ed3e704805094fb4eaa2b563945f6f6580a638b84e43aa01e9df9f4d14",
+      "old_bytes": 15409,
+      "new_bytes": 15706
+    },
+    {
+      "scope": "PUBLIC_CLASSROOM_SOURCE",
+      "target_path": "PACKAGES/S02/WEBTECH_ASE_S02_EN_GB_v2.3.4_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html",
+      "payload_path": "patches/S02_EVIDENCE_FORM.html",
+      "old_sha256": "856a800085f732097652e2d14c56cf8ab6f438ca3733c5c120ee28170b6822af",
+      "new_sha256": "b7b238302887a8c1a34174e0239795b38c4ffb8f73573fe71fd6ba7028c764db",
+      "old_bytes": 54802,
+      "new_bytes": 54802
+    },
+    {
+      "scope": "PUBLIC_CLASSROOM_SOURCE",
+      "target_path": "PACKAGES/S02/WEBTECH_ASE_S02_EN_GB_v2.3.4_RC6/CLASSROOM_RC6/GUIDE.html",
+      "payload_path": "patches/S02_GUIDE.html",
+      "old_sha256": "722144fcf95043305f5641aa538e4cbf2f42c5492ed865b1c6b483b40d7644c5",
+      "new_sha256": "6cb81848f8ffc721a8631d1b1c6e606544a55b5d082ee868926295a2be7926e7",
+      "old_bytes": 8323,
+      "new_bytes": 8319
+    },
+    {
+      "scope": "PUBLIC_CLASSROOM_SOURCE",
+      "target_path": "PACKAGES/S02/WEBTECH_ASE_S02_EN_GB_v2.3.4_RC6/CLASSROOM_RC6/START.html",
+      "payload_path": "patches/S02_START.html",
+      "old_sha256": "42a52f651c723ddfa52321489a85debedff815ea432bf705991a8933bcc312cb",
+      "new_sha256": "5844d9bbc82d975f95318d7ebe41bbaba84c94a62970e39b704a52d5b058d771",
+      "old_bytes": 2883,
+      "new_bytes": 2879
+    },
+    {
+      "scope": "PUBLIC_CLASSROOM_SOURCE",
+      "target_path": "PACKAGES/S02/WEBTECH_ASE_S02_EN_GB_v2.3.4_RC6/CLASSROOM_RC6/http.mjs",
+      "payload_path": "patches/S02_http.mjs",
+      "old_sha256": "e0c129b2daf3f1884ae8cfdbcc8623f1abfa11a552a1cf05dda59d38cdebd7e6",
+      "new_sha256": "26afe7a39120303c47fe62a0308c9ca230f1a219da35cb8fc4b87f8cb387d563",
+      "old_bytes": 1841,
+      "new_bytes": 2051
+    },
+    {
+      "scope": "PUBLIC_CLASSROOM_SOURCE",
+      "target_path": "PACKAGES/S02/WEBTECH_ASE_S02_EN_GB_v2.3.4_RC6/CLASSROOM_RC6/kit.mjs",
+      "payload_path": "patches/S02_kit.mjs",
+      "old_sha256": "5a2a9b6e08b5de0b1fbeb5e9ba735331939ea78183599925f48137e1a9ad20d9",
+      "new_sha256": "3108efdad4e23f773cfa24a241bde21162d8a7014ade7d80fc5416bbb0c03b82",
+      "old_bytes": 3441,
+      "new_bytes": 7207
+    },
+    {
+      "scope": "PUBLIC_CLASSROOM_SOURCE",
+      "target_path": "PACKAGES/S02/WEBTECH_ASE_S02_EN_GB_v2.3.4_RC6/CLASSROOM_RC6/server.mjs",
+      "payload_path": "patches/S02_server.mjs",
+      "old_sha256": "29a1fa979c7cc59a4c1cab4352ace248b5e9eb51a090c5899c34c21fb623b11c",
+      "new_sha256": "a09bafc566be1755a86ac4bc9b65276747435e87193999f2267e4f6de672e217",
+      "old_bytes": 620,
+      "new_bytes": 636
+    },
+    {
+      "scope": "PUBLIC_CLASSROOM_SOURCE",
+      "target_path": "PACKAGES/S03/WEBTECH_ASE_S03_EN_GB_v1.2.2_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html",
+      "payload_path": "patches/S03_EVIDENCE_FORM.html",
+      "old_sha256": "2d9e10f975166a7fd8d4fc4513ae302c484355f2b078ca237ceacfce77d11c5c",
+      "new_sha256": "8ed6e6c241e7014af6d2a6cc9f1ee7ffce64b2da1753a44a86bbb60afb701030",
+      "old_bytes": 54710,
+      "new_bytes": 54710
+    },
+    {
+      "scope": "PUBLIC_CLASSROOM_SOURCE",
+      "target_path": "PACKAGES/S04/WEBTECH_ASE_S04_EN_GB_v1.2.2_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html",
+      "payload_path": "patches/S04_EVIDENCE_FORM.html",
+      "old_sha256": "cc93df550257b70876c4b776859cce761e85212bb4c3a02e8237cb9f4e0b8d18",
+      "new_sha256": "ca8fa02e2c497bdd4c01aabd48bf45e167325f6bd482fb555e4041e841445cca",
+      "old_bytes": 54738,
+      "new_bytes": 54738
+    },
+    {
+      "scope": "PUBLIC_CLASSROOM_SOURCE",
+      "target_path": "PACKAGES/S04/WEBTECH_ASE_S04_EN_GB_v1.2.2_RC6/CLASSROOM_RC6/browser.mjs",
+      "payload_path": "patches/S04_browser.mjs",
+      "old_sha256": "77d9ef98cb9f53261baaa28a5641315f9f2e8b921d88b1250005b5bbe9ef3166",
+      "new_sha256": "f041ccfc6f3b3a2df05913dda7735999550df3e0aec6e682f9f91a0590dee8e2",
+      "old_bytes": 503,
+      "new_bytes": 997
+    },
+    {
+      "scope": "PUBLIC_CLASSROOM_SOURCE",
+      "target_path": "PACKAGES/S04/WEBTECH_ASE_S04_EN_GB_v1.2.2_RC6/CLASSROOM_RC6/http.mjs",
+      "payload_path": "patches/S04_http.mjs",
+      "old_sha256": "e0c129b2daf3f1884ae8cfdbcc8623f1abfa11a552a1cf05dda59d38cdebd7e6",
+      "new_sha256": "26afe7a39120303c47fe62a0308c9ca230f1a219da35cb8fc4b87f8cb387d563",
+      "old_bytes": 1841,
+      "new_bytes": 2051
+    },
+    {
+      "scope": "PUBLIC_CLASSROOM_SOURCE",
+      "target_path": "PACKAGES/S04/WEBTECH_ASE_S04_EN_GB_v1.2.2_RC6/CLASSROOM_RC6/index.html",
+      "payload_path": "patches/S04_index.html",
+      "old_sha256": "2a3b68efe0b525779f6d42a0c56fbb86c72d18e73a91ef88831a99142802c5f9",
+      "new_sha256": "7325cfc34642edd2503d587d20b6027406587afae7f98aef49c54642ee3f3998",
+      "old_bytes": 580,
+      "new_bytes": 704
+    },
+    {
+      "scope": "PUBLIC_CLASSROOM_SOURCE",
+      "target_path": "PACKAGES/S05/WEBTECH_ASE_S05_EN_GB_v1.2.3_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html",
+      "payload_path": "patches/S05_EVIDENCE_FORM.html",
+      "old_sha256": "02f57251370f9a6032c65ef3ff08b55998540affab1681ca8bbfacf76eb3ac8f",
+      "new_sha256": "e08d528cd7f2d9e0dc15009f5e27186ecb21dcb2704d93f06c23878976575f68",
+      "old_bytes": 54730,
+      "new_bytes": 54730
+    },
+    {
+      "scope": "PUBLIC_CLASSROOM_SOURCE",
+      "target_path": "PACKAGES/S05/WEBTECH_ASE_S05_EN_GB_v1.2.3_RC6/CLASSROOM_RC6/http.mjs",
+      "payload_path": "patches/S05_http.mjs",
+      "old_sha256": "e0c129b2daf3f1884ae8cfdbcc8623f1abfa11a552a1cf05dda59d38cdebd7e6",
+      "new_sha256": "26afe7a39120303c47fe62a0308c9ca230f1a219da35cb8fc4b87f8cb387d563",
+      "old_bytes": 1841,
+      "new_bytes": 2051
+    },
+    {
+      "scope": "PUBLIC_CLASSROOM_SOURCE",
+      "target_path": "PACKAGES/S06/WEBTECH_ASE_S06_EN_GB_v1.2.3_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html",
+      "payload_path": "patches/S06_EVIDENCE_FORM.html",
+      "old_sha256": "c8ac2aba091ea8ebdfc183303211704a54e0efba8c8ca2c32aaaaaeb564cf4c4",
+      "new_sha256": "4905454fff76158efc6b6a1441e345989d1a6a47b86183a5011c87c155126a07",
+      "old_bytes": 54777,
+      "new_bytes": 54777
+    },
+    {
+      "scope": "PUBLIC_CLASSROOM_SOURCE",
+      "target_path": "PACKAGES/S07/WEBTECH_ASE_S07_EN_GB_v1.1.3_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html",
+      "payload_path": "patches/S07_EVIDENCE_FORM.html",
+      "old_sha256": "90eb74a5350ba6448b74cebf7980c8fa2471ebe1f343735427de1bc7f62aa90e",
+      "new_sha256": "e578d790588afa8d7f8f1d5ca5103b1cb4a75c98e8fa8332e3f52d938932aba0",
+      "old_bytes": 54711,
+      "new_bytes": 54711
+    },
+    {
+      "scope": "PUBLIC_CLASSROOM_SOURCE",
+      "target_path": "PACKAGES/S07/WEBTECH_ASE_S07_EN_GB_v1.1.3_RC6/CLASSROOM_RC6/http.mjs",
+      "payload_path": "patches/S07_http.mjs",
+      "old_sha256": "e0c129b2daf3f1884ae8cfdbcc8623f1abfa11a552a1cf05dda59d38cdebd7e6",
+      "new_sha256": "26afe7a39120303c47fe62a0308c9ca230f1a219da35cb8fc4b87f8cb387d563",
+      "old_bytes": 1841,
+      "new_bytes": 2051
+    },
+    {
+      "scope": "PUBLIC_CLASSROOM_SOURCE",
+      "target_path": "PACKAGES/S08/WEBTECH_ASE_S08_EN_GB_v1.2.3_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html",
+      "payload_path": "patches/S08_EVIDENCE_FORM.html",
+      "old_sha256": "88018d2fe1d6cb231db9d28fdffe1f98e7c6b66bb546db3a8079b2b58b29be16",
+      "new_sha256": "ac82f49ebc26d040d7827040f4692fff67c07aab50188b9e2a3a175d91ad8edd",
+      "old_bytes": 54773,
+      "new_bytes": 54773
+    },
+    {
+      "scope": "PUBLIC_CLASSROOM_SOURCE",
+      "target_path": "PACKAGES/S09/WEBTECH_ASE_S09_EN_GB_v1.2.4_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html",
+      "payload_path": "patches/S09_EVIDENCE_FORM.html",
+      "old_sha256": "791d3783d133fd5fb720918d9d5b518e9884a3306135dc78e57b14221565102b",
+      "new_sha256": "0a14c85477a1f968d4bbe38713d24d44a44036caca192ff55132f2a56fefcde8",
+      "old_bytes": 54766,
+      "new_bytes": 54766
+    },
+    {
+      "scope": "PUBLIC_CLASSROOM_SOURCE",
+      "target_path": "PACKAGES/S10/WEBTECH_ASE_S10_EN_GB_v1.2.4_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html",
+      "payload_path": "patches/S10_EVIDENCE_FORM.html",
+      "old_sha256": "21a224701f6609aa6fff29ab8a8019aa4ba14d936adb539e1aad8e67ddbbfdbe",
+      "new_sha256": "014f4fea3d534e8a3cecd86e0a665bd8e8dacb8f609ab5f51db27cb845a797c1",
+      "old_bytes": 54772,
+      "new_bytes": 54772
+    },
+    {
+      "scope": "PUBLIC_CLASSROOM_SOURCE",
+      "target_path": "PACKAGES/S11/WEBTECH_ASE_S11_EN_GB_v1.2.4_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html",
+      "payload_path": "patches/S11_EVIDENCE_FORM.html",
+      "old_sha256": "bdf79cb5b4f5270c1d170d9c4498ea2d4bb6fa4557d63c1583f5aa000815e727",
+      "new_sha256": "97d997baee7f198a2f2fc1f0fd8e0e8d5787d65b7b07645229faf6da69fa1c75",
+      "old_bytes": 54790,
+      "new_bytes": 54790
+    },
+    {
+      "scope": "PUBLIC_CLASSROOM_SOURCE",
+      "target_path": "PACKAGES/S12/WEBTECH_ASE_S12_EN_GB_v1.2.4_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html",
+      "payload_path": "patches/S12_EVIDENCE_FORM.html",
+      "old_sha256": "7b2a2b4405b32d1d9c7ab23d4028ee8523eb1826708aaa63fd76b375554a6fda",
+      "new_sha256": "8834980147de3a7ade99f7c54f09ea7c113d5434dca8f1778275585c16ec615f",
+      "old_bytes": 54798,
+      "new_bytes": 54798
+    },
+    {
+      "scope": "PUBLIC_CLASSROOM_SOURCE",
+      "target_path": "PACKAGES/S13/WEBTECH_ASE_S13_EN_GB_v1.2.2_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html",
+      "payload_path": "patches/S13_EVIDENCE_FORM.html",
+      "old_sha256": "be8a3e0dbe336c3e497969b517263ddba884108b8d0f2bfc7295be99e6312fe3",
+      "new_sha256": "7f587354a450c35ce75e9ad505c9effb58fc8756e987add78bccc74abce7396c",
+      "old_bytes": 54847,
+      "new_bytes": 54847
+    },
+    {
+      "scope": "PUBLIC_CLASSROOM_SOURCE",
+      "target_path": "PACKAGES/S14/WEBTECH_ASE_S14_EN_GB_v1.2.3_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html",
+      "payload_path": "patches/S14_EVIDENCE_FORM.html",
+      "old_sha256": "780e822242b05160ce042b5e32fd6f413f2c530ca4cd7a57e20698d3f0ceae85",
+      "new_sha256": "f59635345e35071f567a2d0629869a6216c9e2a37ec3a4e57382f9e85f4c4029",
+      "old_bytes": 49945,
+      "new_bytes": 49945
+    },
+    {
+      "scope": "PUBLIC_CLASSROOM_SOURCE",
+      "target_path": "TUTORIALS/S02.html",
+      "payload_path": "patches/TUTORIAL_S02.html",
+      "old_sha256": "07c2eb468cd3385f687f6424f4e81cd90ebe7ffe2ca5309c65b15f2f3d887f09",
+      "new_sha256": "625ef48e94a9654e734dbdc9e01e93b3dd1f580883c06e1cc74947163a01173d",
+      "old_bytes": 24243,
+      "new_bytes": 24300
+    }
+  ],
+  "student_answers_supplied": false,
+  "qualificationVerdict": "NOT_FINAL"
+}

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>S02 — finite browser observations</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f8fafc;color:#15243b;font:16px/1.5 system-ui,sans-serif}
+main{max-width:70rem;margin:auto;padding:1rem}h1{font-size:1.7rem}h2{font-size:1.25rem}
+p,li,pre,td,th{overflow-wrap:anywhere}a{color:#174b9b}button,select,textarea{font:inherit}
+button,select{max-width:100%;min-width:0;padding:.55rem;border:1px solid #64748b;border-radius:.3rem;background:white;color:#15243b}
+button:focus-visible,select:focus-visible,textarea:focus-visible,a:focus-visible{outline:3px solid #174b9b;outline-offset:3px}
+.notice{background:#e7effc;border-left:4px solid #174b9b;padding:.8rem}.controls{display:flex;flex-wrap:wrap;align-items:center;gap:.7rem}
+.viewport{max-width:100%;overflow:auto;border:1px solid #64748b;background:white}
+iframe{display:block;box-sizing:content-box;border:0;width:320px;height:680px;background:white}
+table{border-collapse:collapse;width:100%;table-layout:fixed}th,td{text-align:left;padding:.5rem;border:1px solid #cbd5e1;vertical-align:top}
+th:first-child{width:29%}th:nth-child(2){width:18%}.pass{color:#14532d}.fail{color:#991b1b}
+fieldset{min-width:0;margin:1rem 0;padding:.8rem;border:1px solid #64748b}label{display:block;margin:.4rem 0}
+textarea{width:100%;min-height:5rem;padding:.5rem}pre{white-space:pre-wrap;background:#e2e8f0;padding:.8rem;max-width:100%}
+code{overflow-wrap:anywhere}#summary{font-weight:700}details{margin-top:1rem}
+@media(max-width:430px){main{padding:.7rem}h1{font-size:1.4rem}th,td{font-size:.85rem;padding:.3rem}}
+</style>
+</head>
+<body><main>
+<h1>S02: observe the actual card fixture in your browser</h1>
+<p class="notice">These finite checks read rendered boxes and computed styles from your own served fixture. A PASS applies only to the listed observations at the selected width. It is not a grade, full project acceptance, visual inspection, proof of keyboard access or proof of reduced-motion behaviour. No student answers or observations are prefilled.</p>
+<h2>Run the owned classroom server</h2>
+<ol><li>From the extracted S02 package root, run <code>node CLASSROOM_RC6/kit.mjs serve</code> with the declared reference Node version.</li>
+<li>Keep that terminal open. Append <code>/browser-checks.html</code> to its actual <code>READY http://127.0.0.1:PORT</code> address and open it in your browser.</li>
+<li>After editing <code>CLASSROOM_RC6/targets/styles.css</code>, select each required width and rerun. Copy your actual results into the current evidence form, alongside your own observations. Stop only this owned listener with Ctrl+C and wait for <code>STOPPED_OWNED_LISTENER</code>.</li></ol>
+<p>The unchanged assignment requires 320, 768 and 1280 CSS-pixel measurements. The optional 390 and 900 widths add observations. Parent-page width does not set subject width: the iframe has the selected CSS-pixel viewport. Its preview scrolls inside the bordered container on small screens.</p>
+<div class="controls"><label for="width">Subject viewport width</label>
+<select id="width"><option value="320">320 — required</option><option value="768">768 — required</option><option value="1280">1280 — required</option><option value="390">390 — additional</option><option value="900">900 — additional</option></select>
+<button id="run" type="button">Reload fixture and observe</button><button id="copy" type="button" disabled>Copy observation JSON</button></div>
+<p id="summary" role="status" aria-live="polite">NOT_EXECUTED — waiting for a served same-origin fixture.</p>
+<p id="copy-status" role="status" aria-live="polite"></p>
+<div class="viewport" aria-label="Scrollable subject preview"><iframe id="subject" title="Your S02 card fixture at the selected width" loading="eager"></iframe></div>
+<h2>Finite automatic observations</h2>
+<p>Visibility here means a nonzero rendered box with visible ancestor styles; occlusion and visual legibility are not certified. The check uses the protected fixture's four cards. It rejects hidden/clip overflow and ellipsis on the fixture's content nodes, and checks that its expected text and links retain visible rendered boxes. Other visual concealment and occlusion still require inspection.</p>
+<table><thead><tr><th scope="col">Observation</th><th scope="col">Result</th><th scope="col">Actual browser data</th></tr></thead><tbody id="results"></tbody></table>
+<h2>Manual P03 observations — not automated</h2>
+<p>Use Tab and Shift+Tab on the actual fixture, inspect the visible indicator, then emulate reduced motion in your browser and inspect the computed transition. Enter only your own observation. These records default to NOT_EXECUTED and never change the automatic finite verdict. They remain when you change widths or reload the fixture: record the actual viewport in your notes and revise them after CSS edits. Browser/version, viewport, relevant values and an actual evidence excerpt are needed for your evidence form.</p>
+<fieldset><legend>Actual keyboard focus observation</legend>
+<label for="keyboard-state">Execution result</label><select id="keyboard-state" data-manual><option value="NOT_EXECUTED">NOT_EXECUTED</option><option value="OBSERVED_PASS">OBSERVED_PASS — my manual observation</option><option value="OBSERVED_FAIL">OBSERVED_FAIL — my manual observation</option><option value="BLOCKED">BLOCKED</option></select>
+<label for="keyboard-notes">Your actual movement, indicator and evidence excerpt</label><textarea id="keyboard-notes" data-manual maxlength="4000"></textarea></fieldset>
+<fieldset><legend>Actual reduced-motion observation</legend>
+<label for="motion-state">Execution result</label><select id="motion-state" data-manual><option value="NOT_EXECUTED">NOT_EXECUTED</option><option value="OBSERVED_PASS">OBSERVED_PASS — my manual observation</option><option value="OBSERVED_FAIL">OBSERVED_FAIL — my manual observation</option><option value="BLOCKED">BLOCKED</option></select>
+<label for="motion-notes">Your actual emulation setting, computed transition and evidence excerpt</label><textarea id="motion-notes" data-manual maxlength="4000"></textarea></fieldset>
+<p>This page does not store drafts. Copy observations you need before closing or reloading it. Copying a report does not submit anything.</p>
+<details><summary>Current observation JSON</summary><pre id="report" tabindex="0">No browser observations yet.</pre></details>
+<script>
+'use strict';
+const $=id=>document.getElementById(id), frame=$('subject'), widths=new Set([320,390,768,900,1280]);
+let report=null, generation=0, timeout=null;
+const rect=el=>{const r=el.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,height:r.height};};
+function manual(prefix){return {status:$(prefix+'-state').value,evidence:$(prefix+'-notes').value,evidenceClass:'SELF_REPORTED_MANUAL_OBSERVATION',notesMissing:$(prefix+'-state').value!=='NOT_EXECUTED'&&!$(prefix+'-notes').value.trim()};}
+function refreshReport(){if(!report)return;report.manual={keyboardFocus:manual('keyboard'),reducedMotion:manual('motion')};$('report').textContent=JSON.stringify(report,null,2);}
+function baseReport(status,width){return {schema:'webtech-s02-browser-observations/v1',seminar:'S02',status,observedAt:new Date().toISOString(),requestedWidth:width,browserUserAgent:navigator.userAgent,evidenceClass:'FINITE_SAME_ORIGIN_BROWSER_OBSERVATIONS',qualification:false,grade:null,scope:'Only listed computed styles and rendered boxes at this viewport; keyboard and reduced motion are self-reported manual work.',automatic:[]};}
+function blocked(reason,width){report=baseReport('BLOCKED_BROWSER_OBSERVATIONS',width);report.reason=reason;$('results').replaceChildren();$('summary').textContent='BLOCKED_BROWSER_OBSERVATIONS — '+reason;$('copy').disabled=false;refreshReport();}
+function visible(el,win){
+ if(!el||!el.isConnected)return false;
+ const r=el.getBoundingClientRect();if(r.width<=0||r.height<=0)return false;
+ for(let at=el;at;at=at.parentElement){const s=win.getComputedStyle(at);if(s.display==='none'||s.visibility==='hidden'||s.visibility==='collapse'||Number(s.opacity)===0||s.contentVisibility==='hidden')return false;}
+ return true;
+}
+function observe(width){
+ const doc=frame.contentDocument,win=frame.contentWindow;
+ if(!doc||!win||doc.readyState!=='complete'||doc.location.origin!==location.origin)throw Error('The fixture did not finish loading at the same origin.');
+ if(doc.title!=='S02 classroom card constraints')throw Error('The served page is not the protected S02 card fixture.');
+ const body=doc.body,grid=doc.querySelector('.card-grid'),header=doc.querySelector('.site-header'),token=doc.querySelector('.long-token'),cards=[...doc.querySelectorAll('.card-grid > .card')];
+ if(!body||!grid||!header||!token||cards.length!==4)throw Error('The expected protected S02 fixture structure is missing.');
+ report=baseReport('FAIL_FINITE_BROWSER_OBSERVATIONS',width);
+ report.subject={url:doc.location.href,innerWidth:win.innerWidth,clientWidth:doc.documentElement.clientWidth,scrollWidth:doc.documentElement.scrollWidth,bodyScrollWidth:body.scrollWidth};
+ const rows=[];function add(id,label,pass,actual){rows.push({id,observation:label,status:pass?'PASS':'FAIL',actual});}
+ const bs=win.getComputedStyle(body),gs=win.getComputedStyle(grid),hs=win.getComputedStyle(header);
+ add('viewport','Selected CSS-pixel viewport',win.innerWidth===width,{expected:width,observed:win.innerWidth});
+ add('body-visible','Body has a visible rendered box',visible(body,win),{rect:rect(body),display:bs.display,visibility:bs.visibility,opacity:bs.opacity});
+ if(typeof win.matchMedia!=='function')throw Error('Media-query matching is unavailable in the served fixture.');
+ const breakpointMatches={at40rem:win.matchMedia('(min-width: 40rem)').matches,at64rem:win.matchMedia('(min-width: 64rem)').matches};
+ const tracks=gs.gridTemplateColumns==='none'?[]:gs.gridTemplateColumns.trim().split(/\s+/),expectedTracks=breakpointMatches.at64rem?4:breakpointMatches.at40rem?2:1;
+ add('grid','Visible grid and track count',visible(grid,win)&&gs.display==='grid'&&tracks.length===expectedTracks,{display:gs.display,gridTemplateColumns:gs.gridTemplateColumns,breakpointMatches,expectedTracks,observedTracks:tracks.length,rect:rect(grid)});
+ add('header-flex','Visible flexible header',visible(header,win)&&hs.display==='flex',{display:hs.display,flexWrap:hs.flexWrap,rect:rect(header)});
+ const cardData=cards.map((card,index)=>{const s=win.getComputedStyle(card);return {card:index+1,visible:visible(card,win),display:s.display,flexDirection:s.flexDirection,minWidth:s.minWidth,rect:rect(card)};});
+ add('cards-flex','Four visible flex-column card boxes',cardData.every(c=>c.visible&&c.display==='flex'&&c.flexDirection==='column'&&c.rect.width>0&&c.rect.height>0),cardData);
+ add('cards-shrink','Card minimum width permits shrinking',cardData.every(c=>c.minWidth==='0px'),cardData.map(c=>({card:c.card,minWidth:c.minWidth})));
+ const media=cards.map((card,index)=>{const el=card.querySelector('.card-media');if(!el)return {card:index+1,visible:false};const r=rect(el);return {card:index+1,visible:visible(el,win),rect:r,ratio:r.height>0?r.width/r.height:null,aspectRatio:win.getComputedStyle(el).aspectRatio};});
+ add('media-ratio','Visible media boxes have 16:9 ratio',media.every(m=>m.visible&&Math.abs(m.ratio-16/9)<.02),media);
+ const ts=win.getComputedStyle(token);add('identifier-wrap','Visible unbroken identifier wraps',visible(token,win)&&ts.overflowWrap==='anywhere',{overflowWrap:ts.overflowWrap,whiteSpace:ts.whiteSpace,rect:rect(token),scrollWidth:token.scrollWidth,clientWidth:token.clientWidth});
+ const textNodes=[...body.querySelectorAll('h1,h2,p,a,strong')],textData=textNodes.map(el=>({element:el.tagName.toLowerCase(),text:el.textContent,visible:visible(el,win),rect:rect(el)}));
+ add('text-and-links','Expected fixture text and links have visible boxes',textData.length===17&&textData.every(x=>x.visible),textData);
+ const overflowNodes=[doc.documentElement,body,...body.querySelectorAll('*')],overflowData=overflowNodes.map(el=>{const s=win.getComputedStyle(el);return {element:el.tagName.toLowerCase()+(el.className?'.'+String(el.className).trim().replace(/\s+/g,'.'):''),overflowX:s.overflowX,overflowY:s.overflowY,textOverflow:s.textOverflow,scrollWidth:el.scrollWidth,clientWidth:el.clientWidth};});
+ add('unconcealed-content','Fixture nodes reject hidden/clip overflow and ellipsis',overflowData.every(x=>!['hidden','clip'].includes(x.overflowX)&&!['hidden','clip'].includes(x.overflowY)&&x.textOverflow!=='ellipsis'),overflowData);
+ add('horizontal-overflow','No horizontal overflow in observed subject',overflowData.every(x=>x.scrollWidth<=x.clientWidth+1)&&doc.documentElement.scrollWidth<=win.innerWidth+1,overflowData);
+ report.automatic=rows;report.status=rows.every(r=>r.status==='PASS')?'PASS_FINITE_BROWSER_OBSERVATIONS':'FAIL_FINITE_BROWSER_OBSERVATIONS';
+ $('results').replaceChildren();for(const row of rows){const tr=document.createElement('tr');for(const value of [row.observation,row.status,JSON.stringify(row.actual)]){const cell=document.createElement('td');cell.textContent=value;tr.append(cell);}tr.children[1].className=row.status==='PASS'?'pass':'fail';$('results').append(tr);}
+ $('summary').textContent=report.status+' at '+win.innerWidth+' CSS pixels — '+rows.filter(r=>r.status==='PASS').length+'/'+rows.length+' listed observations passed. Manual P03 evidence remains separate.';$('copy').disabled=false;refreshReport();
+}
+function run(){
+ const width=Number($('width').value),current=++generation;clearTimeout(timeout);report=null;$('copy').disabled=true;$('results').replaceChildren();$('report').textContent='No browser observations yet.';$('copy-status').textContent='';
+ if(!widths.has(width)){blocked('Choose one of the reviewed viewport widths.',width);return;}
+ if(!['http:','https:'].includes(location.protocol)||location.origin==='null'){
+  frame.removeAttribute('src');blocked('Direct file:// access is not supported. Run the owned kit.mjs serve command and open its actual loopback /browser-checks.html URL.',width);return;
+ }
+ frame.style.width=width+'px';$('summary').textContent='RUNNING — loading the same-origin fixture at '+width+' CSS pixels.';
+ frame.onload=()=>{if(current!==generation)return;clearTimeout(timeout);requestAnimationFrame(()=>requestAnimationFrame(()=>{if(current!==generation)return;try{observe(width);}catch(error){blocked(error.message,width);}}));};
+ timeout=setTimeout(()=>{if(current!==generation)return;generation++;blocked('The fixture did not load within 10 seconds. Check the owned server terminal and rerun.',width);},10000);
+ frame.src='/?rc9-browser-observation='+Date.now()+'-'+current;
+}
+$('run').addEventListener('click',run);$('width').addEventListener('change',run);
+for(const input of document.querySelectorAll('[data-manual]'))input.addEventListener('input',refreshReport);
+$('copy').addEventListener('click',async()=>{refreshReport();if(!report)return;const source=$('report').textContent;try{if(!navigator.clipboard?.writeText)throw Error('Clipboard unavailable');await navigator.clipboard.writeText(source);$('copy-status').textContent='Observation JSON copied. Review it before using it as evidence.';}catch{const selection=window.getSelection(),range=document.createRange();range.selectNodeContents($('report'));selection.removeAllRanges();selection.addRange(range);$('report').closest('details').open=true;$('report').focus();$('copy-status').textContent='Observation JSON selected. Use Ctrl+C or Command+C to copy it.';}});
+run();
+</script>
+</main></body></html>
