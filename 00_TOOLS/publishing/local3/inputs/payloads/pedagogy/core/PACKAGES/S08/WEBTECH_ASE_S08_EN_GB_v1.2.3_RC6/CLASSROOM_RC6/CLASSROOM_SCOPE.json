@@ -1,0 +1,328 @@
+{
+  "schema": "webtech-classroom-scope/v1",
+  "seminar": "S08",
+  "classroom_version": "1.0.0-rc.6",
+  "individual": true,
+  "all_projects_required": true,
+  "projects": [
+    {
+      "id": "P01",
+      "title": "Reading queue: immutable trimmed addition",
+      "editable_path": "CLASSROOM_RC6/student/p01.mjs",
+      "completeScope": "Implement an immutable addition to a reading queue: trim a title, ignore blank input and retain existing items. Return a new array for a valid addition; preserve the input array. The supplied opaque ID is the sole new ID. This is the state transition of the retained React project, not its complete component or browser persistence contract."
+    },
+    {
+      "id": "P02",
+      "title": "Component decomposition: derived capacity",
+      "editable_path": "CLASSROOM_RC6/student/p02.mjs",
+      "completeScope": "Compute used and remaining seats from the supplied capacity and attendee array. Refuse negative/noninteger capacity and over-capacity fixtures. Do not add mirrored state or effects. This pure projection does not implement five React child components."
+    },
+    {
+      "id": "P03",
+      "title": "Effects: permission to publish",
+      "editable_path": "CLASSROOM_RC6/student/p03.mjs",
+      "completeScope": "Implement the bounded publication predicate: publication needs an active lifecycle and the same request ID as the current owner. Abort alone is not the criterion. Test B before A and inactive/unmounted ownership. This is an explicit logical model, not a React effect, abortable request or browser observation."
+    }
+  ],
+  "scope": "BOUNDED_JS_MODELS_AND_SEPARATELY_TESTED_REACT_COMPANION",
+  "source_commit": "4eea8de416cb03cf4f718fb802f868a391abb192",
+  "retained_original_full_project_completed_by_classroom_checks": false,
+  "legacy_form": "form.html",
+  "legacy_guide": "guide.html",
+  "timeline": [
+    {
+      "activity": "Prepared environment and privacy check",
+      "from_minute": 0,
+      "to_minute": 5,
+      "planned_range_minutes": [
+        5,
+        5
+      ],
+      "planned_start_range_minutes": [
+        0,
+        0
+      ],
+      "planned_end_range_minutes": [
+        5,
+        5
+      ]
+    },
+    {
+      "activity": "P01",
+      "from_minute": 5,
+      "to_minute": 35,
+      "planned_range_minutes": [
+        30,
+        45
+      ],
+      "planned_start_range_minutes": [
+        5,
+        5
+      ],
+      "planned_end_range_minutes": [
+        35,
+        50
+      ],
+      "checkpoints": [
+        {
+          "activity": "Read the contract and record a prediction",
+          "planned_range_minutes": [
+            5,
+            5
+          ]
+        },
+        {
+          "activity": "Implement, run checks and investigate results",
+          "planned_range_minutes": [
+            20,
+            30
+          ]
+        },
+        {
+          "activity": "Review the counterexample and record evidence",
+          "planned_range_minutes": [
+            5,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "activity": "P02",
+      "from_minute": 35,
+      "to_minute": 65,
+      "planned_range_minutes": [
+        30,
+        45
+      ],
+      "planned_start_range_minutes": [
+        35,
+        50
+      ],
+      "planned_end_range_minutes": [
+        65,
+        95
+      ],
+      "checkpoints": [
+        {
+          "activity": "Read the contract and record a prediction",
+          "planned_range_minutes": [
+            5,
+            5
+          ]
+        },
+        {
+          "activity": "Implement, run checks and investigate results",
+          "planned_range_minutes": [
+            20,
+            30
+          ]
+        },
+        {
+          "activity": "Review the counterexample and record evidence",
+          "planned_range_minutes": [
+            5,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "activity": "P03",
+      "from_minute": 65,
+      "to_minute": 95,
+      "planned_range_minutes": [
+        30,
+        45
+      ],
+      "planned_start_range_minutes": [
+        65,
+        95
+      ],
+      "planned_end_range_minutes": [
+        95,
+        140
+      ],
+      "checkpoints": [
+        {
+          "activity": "Read the contract and record a prediction",
+          "planned_range_minutes": [
+            5,
+            5
+          ]
+        },
+        {
+          "activity": "Implement, run checks and investigate results",
+          "planned_range_minutes": [
+            20,
+            30
+          ]
+        },
+        {
+          "activity": "Review the counterexample and record evidence",
+          "planned_range_minutes": [
+            5,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "activity": "Genuine bounded AI critique and independent check",
+      "from_minute": 95,
+      "to_minute": 110,
+      "planned_range_minutes": [
+        15,
+        15
+      ],
+      "planned_start_range_minutes": [
+        95,
+        140
+      ],
+      "planned_end_range_minutes": [
+        110,
+        155
+      ]
+    },
+    {
+      "activity": "Review the evidence and save one individual PDF",
+      "from_minute": 110,
+      "to_minute": 115,
+      "planned_range_minutes": [
+        5,
+        5
+      ],
+      "planned_start_range_minutes": [
+        110,
+        155
+      ],
+      "planned_end_range_minutes": [
+        115,
+        160
+      ]
+    },
+    {
+      "activity": "Final recap: achievement, learning, reason and next transfer",
+      "from_minute": 115,
+      "to_minute": 120,
+      "planned_range_minutes": [
+        5,
+        5
+      ],
+      "planned_start_range_minutes": [
+        115,
+        160
+      ],
+      "planned_end_range_minutes": [
+        120,
+        165
+      ]
+    }
+  ],
+  "timing_empirically_validated": false,
+  "native_acceptance": false,
+  "genuine_llm_exchange_performed_by_maintainer": false,
+  "project_schedule": [
+    {
+      "id": "P01",
+      "planned_range_minutes": [
+        30,
+        45
+      ],
+      "checkpoints": [
+        {
+          "activity": "Read the contract and record a prediction",
+          "planned_range_minutes": [
+            5,
+            5
+          ]
+        },
+        {
+          "activity": "Implement, run checks and investigate results",
+          "planned_range_minutes": [
+            20,
+            30
+          ]
+        },
+        {
+          "activity": "Review the counterexample and record evidence",
+          "planned_range_minutes": [
+            5,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "id": "P02",
+      "planned_range_minutes": [
+        30,
+        45
+      ],
+      "checkpoints": [
+        {
+          "activity": "Read the contract and record a prediction",
+          "planned_range_minutes": [
+            5,
+            5
+          ]
+        },
+        {
+          "activity": "Implement, run checks and investigate results",
+          "planned_range_minutes": [
+            20,
+            30
+          ]
+        },
+        {
+          "activity": "Review the counterexample and record evidence",
+          "planned_range_minutes": [
+            5,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "id": "P03",
+      "planned_range_minutes": [
+        30,
+        45
+      ],
+      "checkpoints": [
+        {
+          "activity": "Read the contract and record a prediction",
+          "planned_range_minutes": [
+            5,
+            5
+          ]
+        },
+        {
+          "activity": "Implement, run checks and investigate results",
+          "planned_range_minutes": [
+            20,
+            30
+          ]
+        },
+        {
+          "activity": "Review the counterexample and record evidence",
+          "planned_range_minutes": [
+            5,
+            10
+          ]
+        }
+      ]
+    }
+  ],
+  "planned_project_range_minutes": [
+    30,
+    45
+  ],
+  "planned_session_range_minutes": [
+    120,
+    165
+  ],
+  "timeline_numeric_values": "Lower end of the unpiloted planning range, not an empirical minimum or a completion threshold.",
+  "planning_continuation": "If the actual institutional slot is shorter, confirm a continuation arrangement with the lecturer. All projects remain required individual classroom work; incomplete work remains incomplete.",
+  "private_evidence_location": "A private home-folder WebTech_Evidence/Sxx directory outside the entire extracted collection; use the detailed tutorial for operating-system-specific quoted absolute paths."
+}

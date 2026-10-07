@@ -1,0 +1,328 @@
+{
+  "schema": "webtech-classroom-scope/v1",
+  "seminar": "S13",
+  "classroom_version": "1.0.0-rc.6",
+  "individual": true,
+  "all_projects_required": true,
+  "projects": [
+    {
+      "id": "P01",
+      "title": "Worker reply: own result and current ID",
+      "editable_path": "CLASSROOM_RC6/student/p01.mjs",
+      "completeScope": "Accept only analysis.completed for a current ID with an own result property. Opaque results such as strings are valid. Wrong IDs, absent result or wrong message type refuse. JSON fixtures cannot model inherited properties; that case remains in the retained full contract. No native Worker or responsiveness is observed."
+    },
+    {
+      "id": "P02",
+      "title": "Service Worker: controlled routing predicate",
+      "editable_path": "CLASSROOM_RC6/student/p02.mjs",
+      "completeScope": "Choose controlled protocol only for a currently controlled same-origin GET /api/tasks/<id>; otherwise choose direct fetch. A ready registration is not controller ownership. Synthetic flags are explicit model inputs; no Service Worker, cache hit or offline PWA is observed."
+    },
+    {
+      "id": "P03",
+      "title": "Composable shell: source/origin/generation gate",
+      "editable_path": "CLASSROOM_RC6/student/p03.mjs",
+      "completeScope": "Admit fragment.ready only when synthetic source token, exact origin, version1 and current generation all match the registered fixture. Wrong origin/source/old generation refuse. Synthetic tokens do not authenticate actual Window objects or cross-origin browser delivery."
+    }
+  ],
+  "scope": "BOUNDED_JAVASCRIPT_MODEL",
+  "source_commit": "4eea8de416cb03cf4f718fb802f868a391abb192",
+  "retained_original_full_project_completed_by_classroom_checks": false,
+  "legacy_form": "FORM/S13_MOODLE_EVIDENCE_FORM_EN_GB_v1.2.0.html",
+  "legacy_guide": "S13_INTERACTIVE_ULTRA_BEGINNER_GUIDE_EN_GB_v1.2.0.html",
+  "timeline": [
+    {
+      "activity": "Prepared environment and privacy check",
+      "from_minute": 0,
+      "to_minute": 5,
+      "planned_range_minutes": [
+        5,
+        5
+      ],
+      "planned_start_range_minutes": [
+        0,
+        0
+      ],
+      "planned_end_range_minutes": [
+        5,
+        5
+      ]
+    },
+    {
+      "activity": "P01",
+      "from_minute": 5,
+      "to_minute": 35,
+      "planned_range_minutes": [
+        30,
+        45
+      ],
+      "planned_start_range_minutes": [
+        5,
+        5
+      ],
+      "planned_end_range_minutes": [
+        35,
+        50
+      ],
+      "checkpoints": [
+        {
+          "activity": "Read the contract and record a prediction",
+          "planned_range_minutes": [
+            5,
+            5
+          ]
+        },
+        {
+          "activity": "Implement, run checks and investigate results",
+          "planned_range_minutes": [
+            20,
+            30
+          ]
+        },
+        {
+          "activity": "Review the counterexample and record evidence",
+          "planned_range_minutes": [
+            5,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "activity": "P02",
+      "from_minute": 35,
+      "to_minute": 65,
+      "planned_range_minutes": [
+        30,
+        45
+      ],
+      "planned_start_range_minutes": [
+        35,
+        50
+      ],
+      "planned_end_range_minutes": [
+        65,
+        95
+      ],
+      "checkpoints": [
+        {
+          "activity": "Read the contract and record a prediction",
+          "planned_range_minutes": [
+            5,
+            5
+          ]
+        },
+        {
+          "activity": "Implement, run checks and investigate results",
+          "planned_range_minutes": [
+            20,
+            30
+          ]
+        },
+        {
+          "activity": "Review the counterexample and record evidence",
+          "planned_range_minutes": [
+            5,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "activity": "P03",
+      "from_minute": 65,
+      "to_minute": 95,
+      "planned_range_minutes": [
+        30,
+        45
+      ],
+      "planned_start_range_minutes": [
+        65,
+        95
+      ],
+      "planned_end_range_minutes": [
+        95,
+        140
+      ],
+      "checkpoints": [
+        {
+          "activity": "Read the contract and record a prediction",
+          "planned_range_minutes": [
+            5,
+            5
+          ]
+        },
+        {
+          "activity": "Implement, run checks and investigate results",
+          "planned_range_minutes": [
+            20,
+            30
+          ]
+        },
+        {
+          "activity": "Review the counterexample and record evidence",
+          "planned_range_minutes": [
+            5,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "activity": "Genuine bounded AI critique and independent check",
+      "from_minute": 95,
+      "to_minute": 110,
+      "planned_range_minutes": [
+        15,
+        15
+      ],
+      "planned_start_range_minutes": [
+        95,
+        140
+      ],
+      "planned_end_range_minutes": [
+        110,
+        155
+      ]
+    },
+    {
+      "activity": "Review the evidence and save one individual PDF",
+      "from_minute": 110,
+      "to_minute": 115,
+      "planned_range_minutes": [
+        5,
+        5
+      ],
+      "planned_start_range_minutes": [
+        110,
+        155
+      ],
+      "planned_end_range_minutes": [
+        115,
+        160
+      ]
+    },
+    {
+      "activity": "Final recap: achievement, learning, reason and next transfer",
+      "from_minute": 115,
+      "to_minute": 120,
+      "planned_range_minutes": [
+        5,
+        5
+      ],
+      "planned_start_range_minutes": [
+        115,
+        160
+      ],
+      "planned_end_range_minutes": [
+        120,
+        165
+      ]
+    }
+  ],
+  "timing_empirically_validated": false,
+  "native_acceptance": false,
+  "genuine_llm_exchange_performed_by_maintainer": false,
+  "project_schedule": [
+    {
+      "id": "P01",
+      "planned_range_minutes": [
+        30,
+        45
+      ],
+      "checkpoints": [
+        {
+          "activity": "Read the contract and record a prediction",
+          "planned_range_minutes": [
+            5,
+            5
+          ]
+        },
+        {
+          "activity": "Implement, run checks and investigate results",
+          "planned_range_minutes": [
+            20,
+            30
+          ]
+        },
+        {
+          "activity": "Review the counterexample and record evidence",
+          "planned_range_minutes": [
+            5,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "id": "P02",
+      "planned_range_minutes": [
+        30,
+        45
+      ],
+      "checkpoints": [
+        {
+          "activity": "Read the contract and record a prediction",
+          "planned_range_minutes": [
+            5,
+            5
+          ]
+        },
+        {
+          "activity": "Implement, run checks and investigate results",
+          "planned_range_minutes": [
+            20,
+            30
+          ]
+        },
+        {
+          "activity": "Review the counterexample and record evidence",
+          "planned_range_minutes": [
+            5,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "id": "P03",
+      "planned_range_minutes": [
+        30,
+        45
+      ],
+      "checkpoints": [
+        {
+          "activity": "Read the contract and record a prediction",
+          "planned_range_minutes": [
+            5,
+            5
+          ]
+        },
+        {
+          "activity": "Implement, run checks and investigate results",
+          "planned_range_minutes": [
+            20,
+            30
+          ]
+        },
+        {
+          "activity": "Review the counterexample and record evidence",
+          "planned_range_minutes": [
+            5,
+            10
+          ]
+        }
+      ]
+    }
+  ],
+  "planned_project_range_minutes": [
+    30,
+    45
+  ],
+  "planned_session_range_minutes": [
+    120,
+    165
+  ],
+  "timeline_numeric_values": "Lower end of the unpiloted planning range, not an empirical minimum or a completion threshold.",
+  "planning_continuation": "If the actual institutional slot is shorter, confirm a continuation arrangement with the lecturer. All projects remain required individual classroom work; incomplete work remains incomplete.",
+  "private_evidence_location": "A private home-folder WebTech_Evidence/Sxx directory outside the entire extracted collection; use the detailed tutorial for operating-system-specific quoted absolute paths."
+}
