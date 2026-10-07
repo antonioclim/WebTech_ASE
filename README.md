@@ -16,6 +16,12 @@ The material below is **historical RC6 source**, retained only as an optional ad
 Version **3.0.0-rc.10-local.2 — PUBLISHED_PRERELEASE**, published on 7 October 2026, is available through [the separate LOCAL2 download portal](00_START_HERE/STUDENT_LOCAL2_PUBLISHED/README.md). Read [the LOCAL2 publication record and limits](90_RELEASES/LOCAL2_PUBLICATION.md). The frozen RC10 default route is retained. LOCAL2 remains **NOT_FINAL** with all ten broad qualification gates pending.
 <!-- LOCAL2_SEPARATE_PUBLICATION_END -->
 
+<!-- LOCAL3_SEPARATE_PUBLICATION_BEGIN -->
+## Separate published LOCAL3 corrective candidate
+
+Version **3.0.0-rc.10-local.3 — PUBLISHED_PRERELEASE**, published on 7 October 2026, is available through [the separate LOCAL3 download portal](00_START_HERE/STUDENT_LOCAL3_PUBLISHED/README.md). Read [the LOCAL3 publication record and limits](90_RELEASES/LOCAL3_PUBLICATION.md). All eight public files were downloaded and matched the actual Actions outputs byte for byte. The frozen RC10 default route is retained. LOCAL3 remains **NOT_FINAL** with all ten general qualification gates pending.
+<!-- LOCAL3_SEPARATE_PUBLICATION_END -->
+
 Students complete all two or three seminar microprojects individually, record their own observations and submit one reviewed evidence PDF through the private seminar assignment. Prepare the runtime before class. The published classroom material remains a prerelease; classroom timings are unpiloted.
 
 [Fourteen-week course plan](ENTRY/COURSE_PLAN.html) · [Support](SUPPORT.md) · [Security and privacy](SECURITY.md) · [Current repository status](REPOSITORY_STATUS.md)
