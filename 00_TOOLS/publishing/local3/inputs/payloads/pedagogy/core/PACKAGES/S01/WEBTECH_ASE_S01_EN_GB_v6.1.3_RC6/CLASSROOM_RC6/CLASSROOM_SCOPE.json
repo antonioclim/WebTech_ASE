@@ -1,0 +1,210 @@
+{
+  "schema": "webtech-classroom-scope/v1",
+  "seminar": "S01",
+  "classroom_version": "1.0.0-rc.6",
+  "individual": true,
+  "all_projects_required": true,
+  "projects": [
+    {
+      "id": "P01",
+      "title": "HTTP exchange classifier",
+      "editable_path": "CLASSROOM_RC6/targets/p01.mjs",
+      "completeScope": "Classify the three real loopback exchanges as CSS GET, query GET and JSON POST, preserving method/path/status/media boundaries."
+    },
+    {
+      "id": "P02",
+      "title": "Precise greeting resource",
+      "editable_path": "CLASSROOM_RC6/targets/p02.mjs",
+      "completeScope": "Implement exact GET greeting path recognition, percent decoding, trimming, blank/extra-segment rejection and a stable JSON envelope."
+    }
+  ],
+  "scope": "GENUINE_NODE_MODULE_AND_LOOPBACK_HTTP",
+  "source_commit": "4eea8de416cb03cf4f718fb802f868a391abb192",
+  "retained_original_full_project_completed_by_classroom_checks": false,
+  "legacy_form": "05_MOODLE_SUBMISSION/FORM_S01_EN_GB.html",
+  "legacy_guide": "00_START_HERE/S01_INTERACTIVE_ULTRA_BEGINNER_GUIDE_EN_GB_v6.1.html",
+  "timeline": [
+    {
+      "start": 0,
+      "end": 5,
+      "activity": "Confirm the prescribed runtime, package-root working directory and evidence location; record the environment. Software preparation is completed before class.",
+      "planned_range_minutes": [
+        5,
+        5
+      ],
+      "planned_start_range_minutes": [
+        0,
+        0
+      ],
+      "planned_end_range_minutes": [
+        5,
+        5
+      ]
+    },
+    {
+      "start": 5,
+      "end": 35,
+      "activity": "P01 — HTTP exchange classifier: contract and prediction, bounded implementation/investigation, then review and actual evidence.",
+      "planned_range_minutes": [
+        30,
+        45
+      ],
+      "planned_start_range_minutes": [
+        5,
+        5
+      ],
+      "planned_end_range_minutes": [
+        35,
+        50
+      ]
+    },
+    {
+      "start": 35,
+      "end": 65,
+      "activity": "P02 — Precise greeting resource: contract and prediction, bounded implementation/investigation, then review and actual evidence.",
+      "planned_range_minutes": [
+        30,
+        45
+      ],
+      "planned_start_range_minutes": [
+        35,
+        50
+      ],
+      "planned_end_range_minutes": [
+        65,
+        95
+      ]
+    },
+    {
+      "start": 65,
+      "end": 80,
+      "activity": "One shared genuine bounded Gemini/approved-LLM claim, sanitised input and an independently executed witness; unavailable access remains BLOCKED or NOT_EXECUTED.",
+      "planned_range_minutes": [
+        15,
+        15
+      ],
+      "planned_start_range_minutes": [
+        65,
+        95
+      ],
+      "planned_end_range_minutes": [
+        80,
+        110
+      ]
+    },
+    {
+      "start": 80,
+      "end": 85,
+      "activity": "Review the current form, export one private PDF and reopen every saved page. A filename or export action does not prove the PDF was saved or accepted.",
+      "planned_range_minutes": [
+        5,
+        5
+      ],
+      "planned_start_range_minutes": [
+        80,
+        110
+      ],
+      "planned_end_range_minutes": [
+        85,
+        115
+      ]
+    },
+    {
+      "start": 85,
+      "end": 90,
+      "activity": "Student recap: what was achieved, what was learned, why the evidence supports it and the next unresolved check. Renew declarations and export/review an updated PDF if the record changes. Stop any owned listener and retain actual submission status; agree a continuation if review remains unfinished.",
+      "planned_range_minutes": [
+        5,
+        5
+      ],
+      "planned_start_range_minutes": [
+        85,
+        115
+      ],
+      "planned_end_range_minutes": [
+        90,
+        120
+      ]
+    }
+  ],
+  "timing_empirically_validated": false,
+  "native_acceptance": false,
+  "genuine_llm_exchange_performed_by_maintainer": false,
+  "planned_project_range_minutes": [
+    30,
+    45
+  ],
+  "planned_session_range_minutes": [
+    90,
+    120
+  ],
+  "schedule_estimate_only": true,
+  "continuation_policy": "Every project remains required and individual in class. If the institutional slot is shorter than the planned range, agree a taught continuation with the lecturer before the session; retain every project and record unfinished work honestly. A shorter slot does not make a task optional or establish completion.",
+  "private_evidence_location": "Outside the entire extracted collection: student-owned home-folder WebTech_Evidence/S01",
+  "historical_reference_scope": "The linked historical full-project guides and forms are read-only context with separate contracts. The filtered classroom unit does not include the omitted full-application runtime or its starter/test trees. A bounded classroom PASS does not establish completion of those historical applications.",
+  "recap_prompt": "Explain which HTTP request and response boundaries you can now distinguish, why pathname and query are different and what your greeting resource actually accepted or rejected. Name the observation that supports each statement, one untested input and your next check.",
+  "recap_pdf_consistency_policy": "If the recap changes your form record, renew the manual declarations, export the updated PDF and reopen every page before submission. If review remains unfinished, agree a continuation and keep the record incomplete.",
+  "project_schedule": [
+    {
+      "id": "P01",
+      "planned_range_minutes": [
+        30,
+        45
+      ],
+      "checkpoints": [
+        {
+          "activity": "Contract and prediction",
+          "planned_range_minutes": [
+            5,
+            5
+          ]
+        },
+        {
+          "activity": "Implementation and investigation",
+          "planned_range_minutes": [
+            20,
+            30
+          ]
+        },
+        {
+          "activity": "Review and evidence",
+          "planned_range_minutes": [
+            5,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "id": "P02",
+      "planned_range_minutes": [
+        30,
+        45
+      ],
+      "checkpoints": [
+        {
+          "activity": "Contract and prediction",
+          "planned_range_minutes": [
+            5,
+            5
+          ]
+        },
+        {
+          "activity": "Implementation and investigation",
+          "planned_range_minutes": [
+            20,
+            30
+          ]
+        },
+        {
+          "activity": "Review and evidence",
+          "planned_range_minutes": [
+            5,
+            10
+          ]
+        }
+      ]
+    }
+  ],
+  "timeline_numeric_values": "Lower end of the unpiloted planning range, not an empirical minimum or a completion threshold."
+}

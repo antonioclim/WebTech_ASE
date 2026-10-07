@@ -1,0 +1,24 @@
+{
+  "schema": "webtech-local3-expected-payloads/v1",
+  "archives": [
+    {
+      "profile": "core",
+      "filename": "WEBTECH_ASE_LOCAL3_CLASSROOM.zip",
+      "bytes": 5656311,
+      "sha256": "fda464a4a1197fe1bc8567358882907e0215777f7211b593a19cb9bfab1d2d69",
+      "package_id": "e2930952fc186687390062c2c24edf4ad6648e448f3c8abcf47606f43057604d",
+      "files": 1749,
+      "zip_root": "WEBTECH_LOCAL3"
+    },
+    {
+      "profile": "static",
+      "filename": "WEBTECH_ASE_LOCAL3_STATIC.zip",
+      "bytes": 5687538,
+      "sha256": "df4df42828902e147d094ad1ae0b371badabdbac9255562892d78c9cdc1f8b1e",
+      "package_id": "922b9b469728c0a8b6a30f97df73de86e7edd6aa31bd6ecb8e2146f81f65ab79",
+      "files": 1752,
+      "zip_root": "WEBTECH_LOCAL3_STATIC"
+    }
+  ],
+  "qualificationVerdict": "NOT_FINAL"
+}
