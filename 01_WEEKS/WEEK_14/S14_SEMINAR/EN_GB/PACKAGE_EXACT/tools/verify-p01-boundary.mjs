@@ -1,6 +1,0 @@
-import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';
-const root=path.resolve(process.argv[2]||'.');const base=JSON.parse(fs.readFileSync(new URL('./p01-baseline.json',import.meta.url),'utf8'));const allowed=base.allowed;
-const hash=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
-function walk(d,prefix=''){let out=[];for(const e of fs.readdirSync(d,{withFileTypes:true})){const r=prefix?prefix+'/'+e.name:e.name;if(e.isDirectory())out=out.concat(walk(path.join(d,e.name),r));else if(e.isFile())out.push(r);else throw Error('Unsupported filesystem entry: '+r);}return out;}
-const actual=walk(root).sort(), expected=Object.keys(base.files).sort();const missing=expected.filter(x=>!actual.includes(x)),extra=actual.filter(x=>!expected.includes(x));const changed=expected.filter(x=>actual.includes(x)&&x!==allowed&&hash(path.join(root,...x.split('/')))!==base.files[x]);
-const ok=missing.length===0&&extra.length===0&&changed.length===0&&actual.includes(allowed);console.log(JSON.stringify({ok,allowed,missing,extra,changed},null,2));process.exit(ok?0:1);

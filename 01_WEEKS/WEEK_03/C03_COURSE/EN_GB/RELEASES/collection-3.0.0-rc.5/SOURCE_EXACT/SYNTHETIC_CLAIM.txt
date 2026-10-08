@@ -1,5 +1,0 @@
-SYNTHETIC PRACTICE CLAIM — AUTHOR-CREATED, NOT A GEMINI TRANSCRIPT
-
-"Because spread returns a different array, all of its records and their nested objects are independent. Sorting a separate array and changing a contained record therefore cannot affect the caller in any way. A reducer seeded with zero also guarantees a numeric result."
-
-Task: split this into separate claims. Use a defined nested fixture and a mixed-type reduction. Record a prediction, actual observation, verdict, correction and limitation. No live Gemini access is implied by this exercise.

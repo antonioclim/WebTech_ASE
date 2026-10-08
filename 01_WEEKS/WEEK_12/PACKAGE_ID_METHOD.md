@@ -1,3 +1,0 @@
-# Exact wrapper identity
-
-`SHA256SUMS.txt` covers every regular file except itself and `PACKAGE_ID.txt`. Lines use lowercase SHA-256, two spaces, the relative POSIX path and LF, sorted by path. `PACKAGE_ID.txt` is the SHA-256 of the exact manifest bytes followed by LF. ZIP entries are sorted, timestamped 2026-09-30 00:00:00, stored as regular mode-0644 files and compressed with deflate level 9. External ZIP hashes belong only in sidecars or external receipts. Nested packages retain their original identity methods and bytes. Integrity is not runtime, browser, platform or publication acceptance and is not a repository FINAL identity.

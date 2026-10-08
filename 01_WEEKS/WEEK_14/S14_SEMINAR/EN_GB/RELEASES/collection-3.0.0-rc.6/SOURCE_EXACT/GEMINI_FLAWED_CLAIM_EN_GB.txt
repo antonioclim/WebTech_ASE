@@ -1,3 +1,0 @@
-SYNTHETIC CLAIM FOR CRITIQUE, NOT A GEMINI RESPONSE
-All tests and the production build are green, so the application is secure, deployed correctly and ready for every user.
-Witness supplied: a local test summary and a build log only. No runtime, audit or deployment witness is supplied.

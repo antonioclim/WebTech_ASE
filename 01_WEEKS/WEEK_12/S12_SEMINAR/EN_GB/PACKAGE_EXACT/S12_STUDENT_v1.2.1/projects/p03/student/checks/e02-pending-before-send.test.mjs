@@ -1,4 +1,0 @@
-import assert from "node:assert/strict";
-import test from "node:test";
-import { fixture, observed, counters, trace } from "./fixture.mjs";
-test("E02 pending ownership precedes synchronous send reply", async t => { let pendingAtSend; let f; f=fixture({transportOptions:{onSend(command,channel){pendingAtSend=f.dispatcher.pendingCount; channel.emitMessage({type:command.type+".completed",requestId:command.requestId,result:42});}}}); t.after(()=>f.dispatcher.dispose()); const outcome=observed(f.dispatcher.dispatch("compute",{value:21})); f.timers.fireAll(); assert.deepEqual(await outcome,{resolved:true,value:42}); assert.equal(pendingAtSend,1); assert.deepEqual(f.transport.sent(),[{type:"compute",requestId:"r1",payload:{value:21}}]); trace(t,"E02",{pendingAtSend,immediateResult:42,settled:counters(f)}); });

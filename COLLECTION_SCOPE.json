@@ -1,0 +1,19 @@
+{
+  "schema": "webtech-current-repository-scope/v1",
+  "version": "3.0.0",
+  "layout": "One complete current classroom collection in the repository root.",
+  "published_source": {
+    "tag": "classroom-en-gb-v3.0.0",
+    "archive": "WEBTECH_ASE_EN_GB_CLASSROOM_v3.0.0.zip",
+    "archive_sha256": "cc7da3cd203bcc1c18298f4c856d48891f60057ab0e1908996f654949629215d",
+    "url": "https://github.com/antonioclim/WebTech_ASE/releases/tag/classroom-en-gb-v3.0.0"
+  },
+  "reviewed_repository_parent": "4901aa0d543e61157ba8f54b0166c42ef9f6ebf7",
+  "teaching_preservation": "Every retained teaching file is byte-exact to the published classroom ZIP. Only outer package hash controls change; current seminar notices are added. All 274 CLASSROOM_RC6 files, 38 learner targets, dependency locks and 30 Word references are exact.",
+  "layout_changes": "Root and entry navigation, collection metadata and root integrity controls describe the current checkout. Ancestor-only receipts, predecessor copies and historical root folders are excluded.",
+  "internal_unit_names": "Unit versions and CLASSROOM_RC6 names identify current constituent contracts. There is one unit per course, seminar or setup object; the names do not retain alternative repository editions.",
+  "history": "PREVIOUS_RELEASES.md",
+  "qualificationVerdict": "NOT_FINAL",
+  "native_manual_human_acceptance": "DEFERRED_BY_OWNER_NOT_PASSED",
+  "qualification_scope": "A published stable version and byte integrity do not assert complete runtime, native, manual or human acceptance."
+}

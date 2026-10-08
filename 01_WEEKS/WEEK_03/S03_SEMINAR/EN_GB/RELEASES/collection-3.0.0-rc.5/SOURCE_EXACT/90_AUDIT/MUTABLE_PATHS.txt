@@ -1,3 +1,0 @@
-02_PROJECTS/P01/student/src/transform-tasks.js
-02_PROJECTS/P02/student/src/rule-engine.js
-02_PROJECTS/P03/student/src/safe-normalizer.js

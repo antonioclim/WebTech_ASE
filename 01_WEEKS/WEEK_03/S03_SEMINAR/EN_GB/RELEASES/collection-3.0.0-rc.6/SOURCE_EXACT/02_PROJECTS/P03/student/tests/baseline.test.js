@@ -1,3 +1,0 @@
-import assert from 'node:assert/strict'; import test from 'node:test'; import { unsafeNormalizeEvents } from '../src/unsafe-generated.js';
-test('unsafe artifact reproducibly coerces and mutates',()=>{ const input=[{id:'2',occurredAt:'2026-02-01T00:00:00Z',active:'false',durationMs:'2'},{id:'1',occurredAt:'2026-01-01T00:00:00Z',active:true,durationMs:1}]; const output=unsafeNormalizeEvents(input); assert.equal(input[0].id,'1'); assert.equal(output[1].active,true); assert.equal(output[1].durationMs,2); });
-test('unsafe artifact accepts an inherited required field',()=>{ const input=Object.assign(Object.create({active:true}),{id:'I',occurredAt:'2026-01-01T00:00:00Z',durationMs:1}); assert.equal(unsafeNormalizeEvents([input])[0].active,true); });

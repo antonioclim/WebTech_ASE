@@ -1,1 +1,0 @@
-{"name":"lecture-polling-push","private":true,"type":"module","scripts":{"start":"node server.mjs","test":"node --test server.test.mjs"},"dependencies":{"express":"5.1.0","ws":"8.21.3"}}

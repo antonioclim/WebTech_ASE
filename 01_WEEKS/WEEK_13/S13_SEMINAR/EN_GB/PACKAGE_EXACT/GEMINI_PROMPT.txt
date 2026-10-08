@@ -1,1 +1,0 @@
-Assess one sanitised claim about pending-before-send, worker retirement or terminal cleanup against the supplied minimal excerpt. Do not generate the complete Worker client. State what evidence would falsify the claim and what remains untested.

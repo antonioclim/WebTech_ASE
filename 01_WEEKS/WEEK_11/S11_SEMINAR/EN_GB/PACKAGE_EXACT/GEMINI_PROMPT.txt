@@ -1,1 +1,0 @@
-Assess one sanitised, falsifiable claim about the supplied authorisation policy or reduced CORS/CSRF decision. Use only the minimal excerpt and stated evidence class. Identify what the claim supports, what it does not support and one independent check. Do not generate the complete implementation, request credentials or propose exploit payloads.

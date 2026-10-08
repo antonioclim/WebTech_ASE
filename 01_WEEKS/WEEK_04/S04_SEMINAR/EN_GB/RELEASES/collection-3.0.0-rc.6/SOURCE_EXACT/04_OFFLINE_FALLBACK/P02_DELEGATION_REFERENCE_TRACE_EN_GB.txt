@@ -1,7 +1,0 @@
-target: nested span
-closest [data-action]: delete button
-closest [data-task-id]: task row
-listener owner: list element
-before cleanup callback: d:task-7
-after cleanup callback: no additional call
-limit: injected fake DOM, not real-browser evidence.

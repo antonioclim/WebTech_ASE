@@ -1,5 +1,0 @@
-SOURCE-LINKED EXPECTED TRACES — NOT ACTUAL EXECUTION
-
-The supplied expected traces are derived from the protected four-record seed and the closed P02 contract. They are static teaching examples. They do not come from a running Express application, Sequelize query, native sqlite3 driver, browser or the student's computer.
-
-Preserve your own prediction before reading them. Use them to reason about a witness when runtime/dependencies are blocked. Record SOURCE_REASONING or SOURCE_LINKED_MODEL, preserve the real BLOCKED message and save CORE_DRAFT. Never paste these expectations into a field labelled actual measurement. They do not silently satisfy the standard requirement for genuine supplied-stack execution, the separate lifecycle observation or an actual Gemini review. Any alternative requires a separate explicit teacher decision with its scope/reference.

@@ -1,7 +1,0 @@
-I am auditing one claim about my local S05 Task API. Do not implement the router, produce a full solution, change tests or add dependencies. I will provide a sanitised short excerpt, the relevant public contract and one actual observation. Identify the boundary that owns the result. State one falsifiable claim and one minimal independent check. Distinguish JSON parsing, router validation, repository state and response completion. Do not infer that tests ran. I will record your claim, run or reason through an independent check, assign ACCEPTED / REJECTED / PARTIALLY ACCEPTED / UNKNOWN and state a correction and limitation.
-
-Context I will add:
-Public contract excerpt: [...]
-My short code excerpt or response: [...]
-What I predicted: [...]
-What I actually observed, with evidence class: [...]

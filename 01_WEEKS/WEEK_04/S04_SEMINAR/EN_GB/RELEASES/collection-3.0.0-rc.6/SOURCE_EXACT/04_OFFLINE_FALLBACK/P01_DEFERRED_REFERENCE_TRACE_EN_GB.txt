@@ -1,5 +1,0 @@
-Evidence class: MODEL_OR_INJECTED
-called before release: /data/profile.json, /data/tasks.json, /data/notices.json
-controlled release order: notices, profile, tasks
-aggregate positions: profile, tasks, notices
-limit: this is an injected witness, not a real Network trace and not proof of CPU parallelism.

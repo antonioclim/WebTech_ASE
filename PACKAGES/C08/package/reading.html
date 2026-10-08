@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Handout: ownership and evidence</title><style>:root{--ink:#172a3a;--navy:#122d42;--accent:#076773;--paper:#f4f7f8;--line:#c6d1d7;--scale:1}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.5}
+a{color:#075766}button,select,input,textarea{font:inherit}button,select{padding:.5rem .7rem;border:1px solid #627785;border-radius:5px;background:white;color:var(--ink)}button{cursor:pointer}button:disabled{opacity:.5;cursor:default}input,textarea{max-width:100%;border:1px solid #627785;border-radius:4px;padding:8px}textarea{width:100%;min-height:88px;resize:vertical}
+:focus-visible{outline:3px solid #a34600;outline-offset:3px}.skip{position:absolute;left:12px;top:-90px;z-index:20;background:white;padding:10px}.skip:focus{top:4px}
+header{background:var(--navy);color:white;padding:12px 28px}header a{color:white}header .brand{font-size:14px;letter-spacing:1px;text-transform:uppercase}header p{margin:4px 0 0;font-size:14px}
+nav.toolbar{font-size:14px;padding:9px 24px;display:flex;flex-wrap:wrap;gap:9px;align-items:center;background:white;border-bottom:1px solid var(--line)}label{font-weight:bold}#status{margin-left:auto;font-size:14px;min-width:215px}
+main{max-width:1240px;margin:0 auto;padding:18px 30px 28px}.slide{background:white;border:1px solid var(--line);border-top:5px solid var(--accent);padding:18px 26px;margin-bottom:12px;font-size:calc(20px * var(--scale))}
+.enhanced:not(.reading) .slide:not(.current){display:none}.slide h2{font-size:calc(32px * var(--scale));line-height:1.13;margin:8px 0 13px}.eyebrow{font-size:14px;letter-spacing:1px;font-weight:bold;color:var(--accent);text-transform:uppercase}.slide p{margin:10px 0 14px}
+pre{font-family:Consolas,'Liberation Mono',monospace;white-space:pre-wrap;overflow-wrap:anywhere;font-size:.76em;line-height:1.35;padding:12px 16px;background:#eef3f6;border-left:3px solid #547280}code{font-family:Consolas,'Liberation Mono',monospace;overflow-wrap:anywhere}p code,li code{font-size:.9em}
+.prompt{font-weight:bold}.source{font-size:12px;color:#425967;margin-top:10px}.answer{background:#eaf4f1;padding:12px 16px;margin-top:10px;border-left:4px solid #076773}.answer[hidden]{display:none}.answer p{margin:0}
+.panel,article.reading{background:white;border:1px solid var(--line);padding:22px 26px;margin-bottom:20px}.panel h2{margin-top:0}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:12px 0}.tag{display:inline-block;font-size:12px;border:1px solid #076773;padding:3px 7px;border-radius:4px;color:#075766;background:#eaf4f1}.notice{border-left:4px solid #a34600;background:#fff3e6;padding:12px 16px}table{border-collapse:collapse;width:100%;font-size:.95em;margin:14px 0}th,td{border:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}th{background:#e9f0f4}h1{line-height:1.15}#log{max-height:480px;overflow:auto;font-size:14px}#event-list button{padding:14px}#event-list span{display:inline-block;padding:8px;border:1px dashed #627785}footer{max-width:1240px;margin:auto;padding:12px 30px;font-size:13px;color:#425967}.clock{font-size:64px;font-weight:bold;font-variant-numeric:tabular-nums}.lead{font-size:20px;max-width:75ch}.muted{font-size:14px;color:#425967}
+@media(max-width:780px){main{padding:12px}.slide{padding:16px}.slide h2{font-size:calc(27px * var(--scale))}.grid{display:block}nav.toolbar{padding:8px}#status{margin-left:0}.panel{padding:16px}header{padding:12px}}
+@media print{@page{size:A4;margin:13mm}body{background:white;color:#172a3a}header{background:white;color:#172a3a;border-bottom:1px solid #627785}header a{color:#172a3a}.toolbar,.skip,button,input,select,textarea,.no-print{display:none!important}main{max-width:none;padding:0}.slide,.enhanced:not(.reading) .slide:not(.current){display:block!important;break-after:page;border:0;padding:0;font-size:12pt}.slide h2{font-size:22pt}.answer[hidden]{display:block!important}.slide:last-child{break-after:auto}pre{font-size:10pt;white-space:pre-wrap;overflow-wrap:anywhere}#log{max-height:none;overflow:visible}.panel{border:0;padding:0;break-inside:auto}.grid{display:block}footer{padding:6px 0}.reading{border:0!important;padding:0!important}h2,h3{break-after:avoid}tr{break-inside:avoid}}
+
+.slide{font-size:calc(19px * var(--scale))}.slide h2{font-size:calc(30px * var(--scale))}.slide .source{overflow-wrap:anywhere}.result{white-space:pre-wrap;overflow-wrap:anywhere}.grid>section{min-width:0}.check-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.small{font-size:14px} .route{font-variant-numeric:tabular-nums} a,code{overflow-wrap:anywhere}
+@media(max-width:780px){.check-grid{display:block}}
+/* C08 refinements: natural vertical flow; never shrink text to hide overflow. */
+.slide{font-size:calc(20px * var(--scale));padding:22px 28px}.slide h2{font-size:calc(33px * var(--scale))}.slide pre{font-size:.81em}.source{overflow-wrap:anywhere}.slide .prompt{border-left:4px solid #a34600;padding-left:14px}.toolbar input[type=range]{width:110px}.toolbar label{font-size:13px}nav.links{padding:8px 28px;background:#e6eef2}nav.links a{margin-right:18px}.document{max-width:940px;font-size:18px}.document h2,.document h3{scroll-margin-top:20px}.document p{line-height:1.65}.document .source{font-size:13px}#result{max-height:none;white-space:pre-wrap;overflow-wrap:anywhere}button,input,select,textarea{min-height:38px}.lead{max-width:76ch}.pagebreak{break-after:page}.grid a{display:inline-block;margin-bottom:8px} .large-number{font-size:40px;font-weight:bold;color:#076773}.clock{font-variant-numeric:tabular-nums}
+@media print{.slide .prompt{border:0;padding:0}nav.links{display:none}.document{font-size:11pt}.document h2{font-size:17pt}.document h3{font-size:13pt}.pagebreak{break-after:page}.slide{font-size:13pt!important}.slide h2{font-size:24pt!important}a{color:#172a3a;text-decoration:none}#prediction{display:block!important;min-height:100px}.source{font-size:9pt}.slide .source{font-size:9pt}}
+</style></head><body><a class="skip" href="#content">Skip to content</a><header><div class="brand">WEB TECHNOLOGIES 2026 · C08</div><h1>Handout: ownership and evidence</h1><p>WIP/PREVIEW · 60-minute teaching route · no automatic installation</p></header><main id="content" tabindex="-1"><section class="rc10-current-transfer" id="rc10-current-transfer" aria-labelledby="rc10-transfer-title"><h2 id="rc10-transfer-title">Current S08 classroom transfer</h2><p>Each student completes all 3 listed microprojects individually in class. Each project is a bounded task with its own editable target, rather than completion of the retained full application.</p><table><thead><tr><th scope="col">ID</th><th scope="col">Current project</th><th scope="col">Editable path from the seminar package root</th></tr></thead><tbody><tr><td>P01</td><td>Reading queue: immutable trimmed addition</td><td><code>CLASSROOM_RC6/student/p01.mjs</code></td></tr><tr><td>P02</td><td>Component decomposition: derived capacity</td><td><code>CLASSROOM_RC6/student/p02.mjs</code></td></tr><tr><td>P03</td><td>Effects: permission to publish</td><td><code>CLASSROOM_RC6/student/p03.mjs</code></td></tr></tbody></table><p><a href="../../../ENTRY/S08.html">Current S08 entry</a> · <a href="../../../TUTORIALS/S08.html">Step-by-step tutorial</a> · <a href="../../S08/WEBTECH_ASE_S08_EN_GB_v1.2.3_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html">Current evidence form</a></p><p>Open the current entry, follow the tutorial, preserve the protected support files and run the stated target checks. Record actual starting and repaired outcomes, including any blocked or unexecuted check. Use the current evidence form for all listed projects, export one PDF, review the saved pages and filename and upload that reviewed PDF to the corresponding private Moodle Assignment. A failed or blocked check is not a PASS.</p><p>Historical full applications below remain optional advanced references. Reused IDs do not make their old contracts, paths, portfolios, timing estimates or mark statements current assessment rules. The actual Assignment supplies dates and assessment policy; this course makes no completion-time or mark guarantee.</p></section><nav class="links" aria-label="Course pages"><a href="index.html">Start</a><a href="course.html">Lesson</a><a href="reading.html">Handout</a><a href="lab.html">Models</a><a href="guide.html">Guide</a><a href="sources.html">Sources</a></nav><article class="document"><h1>C08 — React with Vite</h1>
+<p><strong>Ownership, transitions and publication rights</strong></p>
+<p>Public handout · Year 3, semester 1 · British English · WIP/PREVIEW</p>
+<p>React asks what interface should be described for the current props and state. The central questions in this lecture are who owns a value, which event changes it and which asynchronous result still has permission to publish. The emphasis is a causal explanation supported by an appropriate witness, not the number of components or a green build alone.</p>
+<p>By the end of the course route, explain components and props, local state, immutable transitions, controlled forms, stable keys, external synchronisation and cleanup. Map a familiar vanilla interface to responsibilities in React without asserting universal behavioural parity. The public HTML lesson and models work without installing React. Real React/Vite examples are supplied as exact source projects and require a separately provisioned environment.</p>
+<h2>The complete 60-minute route</h2>
+<table>
+<thead>
+<tr>
+  <th>Interval</th>
+  <th>Focus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>00–05</td>
+  <td>Ownership before syntax</td>
+</tr>
+<tr>
+  <td>05–13</td>
+  <td>Components, JSX and props</td>
+</tr>
+<tr>
+  <td>13–24</td>
+  <td>State and immutable transitions</td>
+</tr>
+<tr>
+  <td>24–32</td>
+  <td>Controlled forms</td>
+</tr>
+<tr>
+  <td>32–39</td>
+  <td>Lists and durable identity</td>
+</tr>
+<tr>
+  <td>39–52</td>
+  <td>Effects, cleanup and publication ownership</td>
+</tr>
+<tr>
+  <td>52–57</td>
+  <td>Migration and Vite evidence boundaries</td>
+</tr>
+<tr>
+  <td>57–60</td>
+  <td>Retrieval and STOP</td>
+</tr>
+</tbody>
+</table>
+<div class="rc10-historical-reference"><p class="rc10-historical-scope"><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S08 task list and evidence route</a>.</p><p>The original course plans 95 minutes. This is an explicitly derived 60-minute route with deeper material in this handout and transfer reading. The other 30 minutes of the reserved meeting are not a buffer. P01 remains the complete central implementation; P03 is required portfolio work; P02 is optional. This course creates no separate Moodle Assignment.</p></div>
+<h2>Components and descriptions</h2>
+<h3>1. Components name UI responsibilities</h3>
+<p>A component names a piece of the interface whose input and output can be explained. In example 01, TopicList owns iteration and TopicCard owns the markup of one topic. Neither needs to own application-wide state. A useful component boundary makes a responsibility inspectable; it is not a rule that every HTML wrapper needs its own file.</p>
+<h3>2. Elements are descriptions, not DOM nodes</h3>
+<p>The value returned by a component describes the interface that should exist for the current inputs. React then reconciles that description with its host environment and commits changes. Returning a JSX expression is therefore not an instruction to append a DOM node immediately. This distinction explains why a render can be evaluated again without being a second user action.</p>
+<h3>3. JSX is JavaScript syntax</h3>
+<p>JSX places element descriptions inside JavaScript. Use braces for expressions and names such as className for the corresponding element property. Capitalised names identify components. JSX needs transformation in the supplied Vite projects: opening their source index.html as a local file is not an alternative React execution route. The offline lesson itself uses ordinary HTML and JavaScript, not a hidden React installation.</p>
+<h3>4. Rendering must remain pure</h3>
+<p>Describe the interface from the current props and state. Do not start a request, subscribe to an external service or write storage while calculating that description. Purity makes repeated evaluation intelligible. An event handler and an effect have different responsibilities from render. The supplied examples are source anchors, not evidence that every expression in them already follows every recommended practice.</p>
+<p>Source scope: CAN-L01–CAN-L04; canonical course. For discrepancies and exact source identifiers, consult SOURCE_NOTES.md and SOURCES.md.</p>
+<h2>Props, callbacks and composition</h2>
+<h3>5. Props flow from parent to child</h3>
+<p>Props express the inputs a parent supplies to a child. A TopicCard receives its title and level; it does not import an unrelated parent fixture or mutate the supplied record. Read-only inputs let the reader distinguish data ownership from presentation ownership. A child that needs to change parent-owned data reports an intention through a callback rather than silently acquiring a second copy of the data.</p>
+<h3>6. Callback props report intent upward</h3>
+<p>A callback such as onToggle(id) says what the user requested. The parent decides the transition because it owns the collection. The child can still own a local draft that no sibling needs. Follow both paths when reading a component tree: values travel down as props and intentions return through callbacks. Calling a callback while rendering is different from passing it to an event.</p>
+<h3>7. children is a prop</h3>
+<p>A component can own a surrounding structure while its parent supplies the nested content. In example 01, the topic summary appears through children inside TopicCard. This avoids inventing a separate named prop for every piece of generic composition. It does not give the child permission to mutate the parent or make the parent responsible for every internal layout detail.</p>
+<h3>8. Worked example: component and props render</h3>
+<p>Inspect canonical/01-component-props-render/src/main.jsx. App passes topics to TopicList; TopicList creates keyed TopicCard descriptions; each card renders title, children and level. Predict which component would change if only card markup changed. When a provisioned Vite environment is available, compare the rendered output with this prediction. Reading the source or the offline lesson is not that browser observation.</p>
+<p>Source scope: CAN-L05–CAN-L08; canonical course. For discrepancies and exact source identifiers, consult SOURCE_NOTES.md and SOURCES.md.</p>
+<h2>Ownership and decomposition</h2>
+<h3>9. Decompose by responsibility</h3>
+<div class="rc10-historical-reference"><p class="rc10-historical-scope"><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S08 task list and evidence route</a>.</p><p>Look for a state owner, repeated behaviour, a semantic region or an independently useful contract. A registration form and a capacity summary can be separate responsibilities without requiring a full refactor during this lecture. Use the optional P02 project later for deeper practice. The conceptual responsibility map is required preparation for P03; completing all of P02 is not a prerequisite imposed by this course.</p></div>
+<h3>10. Avoid both extremes</h3>
+<p>One large component can conceal unrelated transitions. At the other extreme, a chain of wrappers that only forwards the same props can make inspection harder. Ask what becomes easier to explain after extraction. Keep the component when its name, contract or isolated behaviour supplies a real benefit. There is no component-count target and no claim that the shortest source is the clearest design.</p>
+<h3>11. State belongs in the nearest common owner</h3>
+<p>Place a value in the lowest component that must coordinate its consumers and transitions. If a list and a summary both depend on tasks, their nearest common owner can hold tasks and pass the derived view down. A row-only draft may remain local. Lifting every value to the root or introducing global state by default obscures the same ownership question rather than answering it.</p>
+<h3>12. Characterise before refactoring</h3>
+<p>List observable labels, ordering, counts, validation rules and interaction expectations before changing component boundaries. Use an explicit fixture rather than two independently chosen demonstrations. Characterisation is a bounded contract: passing a few examples does not establish equivalence for all inputs. In the later projects, preserve the assessed edit path and the supplied evidence instead of rewriting tests to accommodate a preferred refactor.</p>
+<p>Source scope: CAN-L09–CAN-L12; canonical course. For discrepancies and exact source identifiers, consult SOURCE_NOTES.md and SOURCES.md.</p>
+<h2>State and derived views</h2>
+<h3>13. State persists across renders</h3>
+<p>useState provides the current render with a value and a setter. A local variable is recreated when the function is evaluated; it is not persistent UI state. Calling a setter requests an update, but it does not rewrite the variable in an already running handler. Read a handler as operating on a snapshot, then distinguish that snapshot from the state React supplies to a queued updater.</p>
+<h3>14. Replace state immutably</h3>
+<p>An immutable transition returns a new collection and a new changed record while retaining unchanged records where appropriate. This preserves the original fixture for comparison and avoids modifying inputs held by other code. In example 02, toggling one task creates a new array; only the matching task is replaced. New identity is evidence about a value transition, not by itself proof of a particular number of DOM updates.</p>
+<h3>15. Use functional updates for prior-state transitions</h3>
+<p>When the next collection depends on the previous collection, calculate it from the value supplied to the updater. Reserve event-owned inputs before the updater and avoid side effects inside it. React documents development-only repeated calls to updaters under StrictMode, so one updater expression is not a guarantee of one observable call. A pure transition must remain intelligible when evaluated again with the same arguments.</p>
+<h3>16. Derived values are calculations</h3>
+<p>A visible subset and a remaining count can be calculated from tasks and filter. Giving visibleTasks its own state and synchronising it in an effect creates another value that can disagree with its inputs. Start with direct calculation. Do not add memoisation, context or another state variable merely because a calculation has a name. A change to the filter need not change the stored task collection.</p>
+<h3>17. Worked example: immutable state and derived view</h3>
+<p>Inspect example 02. It owns tasks and filter, calculates visible and remaining and uses a functional update for toggle. Predict the original fixture, next collection and remaining count before a toggle. Then change only the filter. In the offline laboratory the result is a JavaScript model; in the Vite app a real interaction can supply separate React evidence once its environment is provisioned.</p>
+<pre><code class="language-js">setTasks(current =&gt; current.map(task =&gt;
+  task.id === id ? { ...task, done: !task.done } : task
+));
+</code></pre>
+<p>Source scope: CAN-L13–CAN-L17; R1. For discrepancies and exact source identifiers, consult SOURCE_NOTES.md and SOURCES.md.</p>
+<h2>Events and controlled forms</h2>
+<h3>18. Event props receive functions</h3>
+<p>onClick={remove} passes a function. onClick={remove()} invokes the function during render and passes its result. For a record-specific action, a callback can defer the call until the event and supply the record identifier. The important distinction is when the transition is requested. Rendering an element and clicking its control are different events and should not accidentally share an effectful call.</p>
+<h3>19. Preserve browser semantics</h3>
+<p>Use an appropriate button type and an associated label for each input. A locally handled form submission can prevent navigation, but React does not invent an accessible name, sensible focus or an error explanation. Behavioural tests, keyboard inspection and an accessibility review answer different questions. A source check for a label or role is useful but is not a complete accessibility acceptance.</p>
+<h3>20. Controlled inputs render from state</h3>
+<p>With a controlled text input, value comes from state and onChange requests the updated text. Keep the input consistently controlled and initialise its text value appropriately. The displayed value and the source value should be explainable together. The HTML course model reproduces the normalisation rule with ordinary JavaScript; it does not execute React controlled-input reconciliation.</p>
+<h3>21. Normalise at a deliberate boundary</h3>
+<p>Preserve the draft while the user types, then trim and validate at submission unless the product contract explicitly calls for live normalisation. A blank draft should not create a record. Distinguish the raw draft from the accepted title so that a student can predict both. A validation error is a visible state with a meaning, not a silently ignored click or an invented successful record.</p>
+<h3>22. Worked example: controlled form transition</h3>
+<p>Example 03 preserves typed text and trims on submit. Its original code calls crypto.randomUUID inside the state updater. The separate derived fragment reserves the identifier in the event handler before applying the pure updater; the original stays unchanged. The correction concerns repeatability, not a claim that two notes necessarily appear. Blank submission creates no note and the error remains an observable outcome.</p>
+<pre><code class="language-js">const id = crypto.randomUUID(); // during the event
+setNotes(current =&gt; [...current, { id, title: acceptedTitle }]);
+</code></pre>
+<p>This is an explanatory fragment, not a silently changed canonical app.</p>
+<p>Source scope: CAN-L18–CAN-L22; R4. For discrepancies and exact source identifiers, consult SOURCE_NOTES.md and SOURCES.md.</p>
+<h2>Collections and durable identity</h2>
+<h3>23. Collections use map</h3>
+<p>Map turns each domain record into an element description. The contract must also describe an empty collection and, where relevant, loading and failure states. Do not use absence of rows as the only explanation for all three cases. A derived filtered collection can be empty even when the source collection is not, so name the state whose emptiness the message is describing.</p>
+<h3>24. Keys identify siblings across renders</h3>
+<p>Keys allow React to match siblings across renders. They are not automatically received as a child prop: pass a domain identifier separately when a child needs it. Use stable identifiers from the domain data when records can move. A key solves sibling matching; it does not repair duplicate domain identifiers, persist a generator or validate the contents of browser storage.</p>
+<h3>25. Index is position, not identity</h3>
+<p>After a prepend, the old first record has a different index. A component-local draft matched by index can remain attached to a position and therefore appear next to the wrong record. The course laboratory models this correspondence explicitly for same-type siblings with unique IDs. It is not React reconciliation. State the assumptions before transferring the illustration to a real component tree.</p>
+<h3>26. Worked example: stable key identity</h3>
+<div class="rc10-historical-reference"><p class="rc10-historical-scope"><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S08 task list and evidence route</a>.</p><p>Example 04 owns each draft in EditableRow and keys rows by item.id. Edit a draft before prepending a new record in a provisioned app. Its original prepend updater also creates a UUID internally; a separate derived fragment moves generation to event time. Independently, the P01 entry counter restarts at 3, so an already persisted ID 3 can collide after reinitialisation. These are distinct identity questions.</p></div>
+<p>Source scope: CAN-L23–CAN-L26; R3. For discrepancies and exact source identifiers, consult SOURCE_NOTES.md and SOURCES.md.</p>
+<h2>Effects and dependencies</h2>
+<h3>27. Effects synchronise external systems</h3>
+<p>Use an effect to coordinate with something outside rendering, such as a timer, request, subscription or storage. State what is being synchronised and which component owns that relationship. An event-specific operation need not become an effect, and a render-derived count should not become an effect at all. This distinction prevents a general after-render bucket from hiding several unrelated responsibilities.</p>
+<h3>28. Dependencies describe reactive reads</h3>
+<p>Reason from the reactive values used by setup and cleanup. Dependencies are not an arbitrary schedule chosen to suppress a warning. React compares dependency values with Object.is. An effect that uses a query must be explainable when the query changes; an omitted dependency can preserve an obsolete closure. Stable setters and values outside the render have different identity properties from freshly allocated render values.</p>
+<h3>29. Unstable dependencies retrigger synchronisation</h3>
+<p>Creating an object or function during every render gives it a new identity. When that value is an effect dependency, setup and cleanup may repeatedly restart. First inspect ownership and whether the value needs to be reactive rather than removing it without explanation. An omitted optional callback needs a stable default when its identity participates in synchronisation. Repeated rendering in an actual app remains a separate observation.</p>
+<h3>30. Missing dependencies create stale closures</h3>
+<p>A closure retains the values from the render in which it was created. A later callback may therefore refer to an older query or policy if the relationship was not resynchronised. Distinguish this from a slow earlier request settling late: both can show obsolete information, but their mechanisms differ. Identify the captured value, the missing dependency or the still-authorised callback before proposing a correction.</p>
+<p>Source scope: CAN-L27–CAN-L30; R2. For discrepancies and exact source identifiers, consult SOURCE_NOTES.md and SOURCES.md.</p>
+<h2>Cleanup and publication control</h2>
+<h3>31. Cleanup reverses setup</h3>
+<p>When a dependency changes, cleanup for the preceding setup runs before the replacement setup; cleanup also runs on unmount. Reverse the owned relationship: clear its timer, remove its listener, abort its request and invalidate its permission to publish where needed. Development StrictMode can exercise an extra setup/cleanup cycle. One effect declaration is not an empirical claim of exactly one setup or storage write.</p>
+<h3>32. Abort and latest-work identity are separate protections</h3>
+<p>Cancellation requests that work should stop. Publication control determines whether a result may still change visible state. A non-cooperative promise can settle after abort. The teaching comparator has three explicit policies: active plus generation guard, active alone and abort-only without either publication guard. Removing the numeric guard alone need not cause a stale result because active may still reject the old settlement.</p>
+<h3>33. Worked example: effect cleanup timeline</h3>
+<p>The exact example 05 creates an AbortController and passes its signal to a cooperative timer-based loader. Cleanup clears that loader timer through abort. Contrary to its previous README, it has no monotone request identity and does not deliberately resolve an old non-cooperative operation. Use the separate timeline model for that counterexample. Name the loader, settlement order and policy for every result rather than treating all effect demonstrations as interchangeable.</p>
+<h3>34. Do not mirror render-derived state in effects</h3>
+<p>If visibleItems is completely determined by items and filter, calculate it from those inputs while rendering. Synchronising another stored list in an effect creates an intermediate render with a potentially old copy and another dependency to maintain. External storage is different: it is an external system even when its contents mirror local state. Separate the derived view from that persistence boundary.</p>
+<table>
+<thead>
+<tr>
+  <th>Non-cooperative settlement policy</th>
+  <th>Publication history in the model</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Active and generation</td>
+  <td>New only</td>
+</tr>
+<tr>
+  <td>Active only</td>
+  <td>New only</td>
+</tr>
+<tr>
+  <td>Abort-only with no publication guard</td>
+  <td>New, then Old</td>
+</tr>
+</tbody>
+</table>
+<p>The result concerns the declared model and cleanup order, not a real React lifecycle.</p>
+<p>Source scope: CAN-L31–CAN-L34; R2. For discrepancies and exact source identifiers, consult SOURCE_NOTES.md and SOURCES.md.</p>
+<h2>Migration and evidence</h2>
+<h3>35. Map vanilla ownership before migration</h3>
+<div class="rc10-historical-reference"><p class="rc10-historical-scope"><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S08 task list and evidence route</a>.</p><p>Inventory persistent variables, derived values, event transitions, DOM construction and actual external synchronisation. Compare the same explicit starting data. P01 uses a supplied storage boundary; its vanilla and React paths do not accept every malformed stored value identically. Define parity for valid fixtures and record fallback differences. Reproducing unsafe markup interpretation is not a migration goal and no exploit exercise is required.</p></div>
+<h3>36. Translate responsibilities, not syntax line by line</h3>
+<div class="rc10-historical-reference"><p class="rc10-historical-scope"><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S08 task list and evidence route</a>.</p><p>Persistent values become owned state; DOM-building logic becomes rendering; listeners become event props; classes and text become expressions. Storage may require an owned effect. Preserve the observable contract rather than forcing a one-to-one correspondence between implementation lines. P01 remains the complete central implementation, P03 is required diagnostic portfolio work and P02 remains optional consolidation. C08 creates no additional Moodle Assignment.</p></div>
+<h3>37. Vite is tooling, not architecture</h3>
+<p>The supplied examples use project-local React and Vite packages with lockfiles. Vite supplies a development server, transformation and a production-build route; it does not decide state ownership or component responsibilities. Keep the source pins and lockfiles rather than silently upgrading. The offline explanation needs no package installation. Actual example execution requires a separately provisioned environment and must not be simulated by opening the JSX entry file.</p>
+<h3>38. Build success is limited evidence</h3>
+<p>A successful build supports the narrower claim that the configured transformation and bundling steps completed for those inputs. It does not establish correct filtering, reload behaviour, cleanup, keyboard interaction or accessibility. Read what a test actually asserts rather than relying on its title. A missing dependency, parse error, crash or timeout is not an expected pedagogical assertion failure. Record those failures under their own class.</p>
+<p>Source scope: CAN-L35–CAN-L38; R5. For discrepancies and exact source identifiers, consult SOURCE_NOTES.md and SOURCES.md.</p>
+<h2>Working with the evidence</h2>
+<p>The laboratory requires a prediction before a model result is shown. This is a presence check, not a correctness grade. Each export retains MODEL_OUTPUT_NOT_ACTUAL_REACT_EVIDENCE. Do not remove that label or copy the result into S08 as an actual React observation. The model uses logical event order rather than measured latency and needs no external dataset, API key or network connection.</p>
+<p>Source statements, analysis, executed JavaScript models and genuine application observations have different evidential scope. A preserved README assertion that a build or audit passed is historical; it is not a fresh result here. Neither a hash nor a rendered handout closes the missing execution gates.</p>
+<h2>Retrieval and transfer</h2>
+<p>At the stop, name one owner, one falsifying witness and one untested assumption. Preserve unfinished work instead of extending into the reserved 30 minutes. The later seminar will supply the complete project, evidence form and one-PDF submission route. Use C08_PREPARATION_TRANSFER.docx for preparation questions, a bounded Gemini critique and after-class obligations. A synthetic practice claim never substitutes for an actual tool exchange.</p>
+<h2>Documentary references</h2>
+<p>The primary teaching source is the canonical U08 lecture and its five examples, identified by CANONICAL_SOURCES.json. This handout is a derived explanation; the protected code is unchanged. The current 60-minute architecture reconciles timing and project roles. Official documentation below supports technical mechanisms only. It neither verifies the source-pinned release availability nor provides evidence of local execution. Consulted 30 September 2026; no DOI is assigned to these documentation pages.</p>
+<p>R1. React. (n.d.). useState. https://react.dev/reference/react/useState</p>
+<p>R2. React. (n.d.). useEffect. https://react.dev/reference/react/useEffect</p>
+<p>R3. React. (n.d.). Rendering lists. https://react.dev/learn/rendering-lists</p>
+<p>R4. React. (n.d.). <code>&lt;input&gt;</code>. https://react.dev/reference/react-dom/components/input</p>
+<p>R5. Vite. (n.d.). Getting started. https://vite.dev/guide/</p>
+</article></main><footer>Source/model/actual execution are distinct. This local candidate is not a publication authorisation.</footer></body></html>

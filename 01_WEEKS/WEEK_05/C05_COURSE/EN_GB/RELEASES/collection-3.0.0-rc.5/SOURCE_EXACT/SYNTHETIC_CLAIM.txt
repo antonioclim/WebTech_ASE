@@ -1,3 +1,0 @@
-SYNTHETIC PRACTICE — not a genuine Gemini interaction.
-Claim: Every error arising inside an Express 5 handler automatically becomes a safe JSON response.
-Check ownership of the returned promise and the installed response/error boundary. Do not replace a required real Gemini interaction with this practice text.

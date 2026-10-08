@@ -1,1 +1,0 @@
-Assess one sanitised readiness claim against the minimum relevant evidence excerpt. State what the evidence supports, what remains unknown and one independent check. Do not generate a release decision or request credentials.

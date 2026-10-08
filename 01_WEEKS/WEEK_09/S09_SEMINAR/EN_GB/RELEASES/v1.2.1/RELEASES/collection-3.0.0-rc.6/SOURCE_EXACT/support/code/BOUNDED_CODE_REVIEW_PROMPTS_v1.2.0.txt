@@ -1,7 +1,0 @@
-SOURCE-ONLY prepared prompts. They are not an actual Gemini exchange.
-
-P01: Review one minimal sanitised route/diff and this single claim: the current URL after save proves the intended history policy. Explain what the supplied route contract predicts, identify one falsifiable history-sensitive witness and separate source inference from an actual test/browser observation. Do not provide a complete NotesApp implementation or modify protected files. I will retain my actual prompt, relevant response excerpt, independent check and justified verdict.
-
-P03: Review one minimal sanitised method/path/Accept/status/type/body/log record and this single claim: a successful document response proves the intended resource and client route are working. Identify the relevant control and one counterexample, then separate HTTP delivery from actual browser boot. Do not provide a complete create-production-app implementation, reorder the preserved broken evidence or rebuild client-dist. Do not infer an unknown API HTML failure if the completing supplied API router already handled it.
-
-Privacy gate: remove tokens, cookies, passwords, Moodle data, private paths and personal records. Use one new bounded exchange. If no real exchange occurs, record PENDING/NOT_EXECUTED; never invent a response or approval.

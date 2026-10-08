@@ -1,9 +1,0 @@
-SYNTHETIC PRACTICE CLAIM — NOT AN ACTUAL GEMINI RESPONSE
-
-Claim A: “The four-method transaction spy passes, so every ORM operation received one real transaction and SQLite rollback, concurrency safety and crash durability are proved.”
-
-Claim B: “Any UniqueConstraintError from the managed call proves that the Booking pair already existed.”
-
-Claim C: “The Location header makes P02 POST idempotent and gives the client a GET booking endpoint, so any uncertain response can be retried automatically.”
-
-Choose ONE for practice. Identify the exact unsupported step and the smallest independent source check. Record SYNTHETIC_PRACTICE. Do not paste this into an ACTUAL_GEMINI field or call it a transcript. This is a claim exercise, not a patch to apply. It does not complete the actual standard Gemini activity.

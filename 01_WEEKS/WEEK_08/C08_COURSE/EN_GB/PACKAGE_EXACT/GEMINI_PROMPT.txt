@@ -1,9 +1,0 @@
-Act as a reviewer of one claim, not as the author of my assessed project.
-My own prediction: [write a short prediction].
-Exact source or model identifier: [state it].
-Sanitised claim or short non-assessed fragment: [insert it].
-Identify the owner, the relevant transition or cleanup and the assumptions needed.
-Propose one observation that could contradict the claim. Do not supply a complete
-P01 or P03 implementation and do not change evidence or tests. Distinguish source
-analysis, a discrete model and an actual React/browser result. I will independently
-check your claim and record a verdict, correction and limitation.

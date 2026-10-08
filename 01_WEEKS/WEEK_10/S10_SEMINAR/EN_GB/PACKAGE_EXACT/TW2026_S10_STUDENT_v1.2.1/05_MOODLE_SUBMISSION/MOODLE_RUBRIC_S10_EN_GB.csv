@@ -1,5 +1,0 @@
-criterion,maximum_points,full_evidence,partial_evidence,insufficient_evidence
-P01 implementation and observations,4.0,"Narrow diff, required transitions, initialisation, hook/provider witnesses and correct evidence classes.",Mostly correct implementation with bounded evidence gaps.,"P01 incomplete, forbidden edits or unsupported claims."
-Required State ADR,3.0,"Concrete context, constraints, alternatives, capability gates, assumptions, decision, sensitivity and limits.",ADR present but one evidence/gate/sensitivity element is weak.,ADR missing or only a library preference.
-Critical Gemini audit,1.5,"One bounded genuine claim, independent check, justified verdict, correction and limitation.",Claim and verdict present but independent evidence is weak.,Model answer copied or treated as sole authority.
-Traceability and reflection,1.5,"Stable locators, explicit pending work, privacy review and one readable PDF.",Minor traceability or reflection gap.,"Untraceable, private data exposed or incomplete submission."

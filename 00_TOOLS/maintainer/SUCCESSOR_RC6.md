@@ -1,7 +1,0 @@
-# RC6 successor controls
-
-The public RC5 main commit 4eea8de416cb03cf4f718fb802f868a391abb192 is the provenance anchor. New carriers are created separately: C07 and all fourteen seminars. Their preceding sealed projections and archives remain byte-exact. All other current carriers remain selected unchanged. metadata/student-selection.json is the current thirty-object authority; FULL_COLLECTION_PLAN.json defines fourteen weeks and COLLECTION_RELEASE_PLAN.json defines the complete candidate publisher.
-
-The fixed original identity algorithms are preserved. Explicit classroom target paths extend the reviewed edit boundaries. Initial distribution validation includes complete authentic identities and exact CSV/descriptor bytes. CLASSROOM_RC6/verify.mjs handles the stated classroom work boundary after legitimate target edits; it is unsigned local consistency evidence and depends on a trusted original release. Historical full-package verifiers retain their original scope and are not current classroom admission. Never transfer a classroom result to an old full-application canonical gate.
-
-All workflows remain manual only. Only the owner dispatches Actions. Local test replay, generated assets, compiler output and headless DOM results do not provide native operating-system, live Moodle, Word, novice timing, language fluency or owner acceptance. The candidate plans keep all ten gates pending.

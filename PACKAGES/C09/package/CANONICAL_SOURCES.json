@@ -1,0 +1,218 @@
+{
+  "source_tree": "5bfb519fbb6aeb1855d372a747724b742c528c1fee06c1102b06402f8cf40587",
+  "p1_sha256": "13c54cc643610c59804d1195a575eba3e7db655c549d2a283a52dae433df5a80",
+  "files": [
+    {
+      "path": "canonical/01-url-state-decoder/README.md",
+      "source": "lectures/09-routing-full-stack/en/examples/01-url-state-decoder/README.md",
+      "bytes": 1661,
+      "sha256": "b77243ddc0516a24e45be41669ff8c19794f2f4fc21043e1937656d188fb0a5b",
+      "predecessor_sha256": "b9802d3b8eb6e8f18a11971aed5cbfa6ef8bb5fa33833d07a9b0becd1afb643b",
+      "predecessor_bytes": 1178,
+      "mode": "EXPLICIT_RC9_DERIVATIVE"
+    },
+    {
+      "path": "canonical/01-url-state-decoder/index.html",
+      "source": "lectures/09-routing-full-stack/en/examples/01-url-state-decoder/index.html",
+      "bytes": 263,
+      "sha256": "31ac378ed73323dd642ae7b4b46717674a7588b69bbdcdddf1d2a0d3bb37c354"
+    },
+    {
+      "path": "canonical/01-url-state-decoder/package-lock.json",
+      "source": "lectures/09-routing-full-stack/en/examples/01-url-state-decoder/package-lock.json",
+      "bytes": 28906,
+      "sha256": "551ed51b62bf3d40ae9e065c2633cb6f31cdd375aa6a6944bf3ae1cdb5615ffa"
+    },
+    {
+      "path": "canonical/01-url-state-decoder/package.json",
+      "source": "lectures/09-routing-full-stack/en/examples/01-url-state-decoder/package.json",
+      "bytes": 286,
+      "sha256": "8d236faedfe9e07f3d6fcb76e473f60b650a7bcb64cccb2e6fbe015a3afad7a4"
+    },
+    {
+      "path": "canonical/01-url-state-decoder/src/main.jsx",
+      "source": "lectures/09-routing-full-stack/en/examples/01-url-state-decoder/src/main.jsx",
+      "bytes": 1011,
+      "sha256": "a05bee8da687d41de296657293c31fe9e104a7c25ed54db3c421f27dd1b20d7e"
+    },
+    {
+      "path": "canonical/01-url-state-decoder/vite.config.js",
+      "source": "lectures/09-routing-full-stack/en/examples/01-url-state-decoder/vite.config.js",
+      "bytes": 132,
+      "sha256": "7c7518fd5fdea4308bc8a4e38e2a6113931b2910726a7d0eccd88ce8fcef8689"
+    },
+    {
+      "path": "canonical/02-form-navigation-policy/README.md",
+      "source": "lectures/09-routing-full-stack/en/examples/02-form-navigation-policy/README.md",
+      "bytes": 1319,
+      "sha256": "d892851e15010a3cbf303ef9eb3c07b6a8060cf357cde48e3416dacbecf1db0b",
+      "predecessor_sha256": "6581f439f05788bbc11b2a0d00fac588c38cff66dc663de27aa8c6f022ffdac6",
+      "predecessor_bytes": 773,
+      "mode": "EXPLICIT_RC9_DERIVATIVE"
+    },
+    {
+      "path": "canonical/02-form-navigation-policy/index.html",
+      "source": "lectures/09-routing-full-stack/en/examples/02-form-navigation-policy/index.html",
+      "bytes": 256,
+      "sha256": "347f3fbcb41572301ab5e89b67b87086b8c70d2b150304fb1d9dfa3af06445fc"
+    },
+    {
+      "path": "canonical/02-form-navigation-policy/package-lock.json",
+      "source": "lectures/09-routing-full-stack/en/examples/02-form-navigation-policy/package-lock.json",
+      "bytes": 28896,
+      "sha256": "db4b399930590e1c2518d1de5801657be958529e8e226994a65ffb1a6a9bb8f1"
+    },
+    {
+      "path": "canonical/02-form-navigation-policy/package.json",
+      "source": "lectures/09-routing-full-stack/en/examples/02-form-navigation-policy/package.json",
+      "bytes": 281,
+      "sha256": "5749ab7d0273419e32212a2c4069b18c7be312d2355588643d070e91ecab93eb"
+    },
+    {
+      "path": "canonical/02-form-navigation-policy/src/main.jsx",
+      "source": "lectures/09-routing-full-stack/en/examples/02-form-navigation-policy/src/main.jsx",
+      "bytes": 1144,
+      "sha256": "b549c922c3ce39dcb86685b4597f8f0134449964598eac6f45015af735728991"
+    },
+    {
+      "path": "canonical/02-form-navigation-policy/vite.config.js",
+      "source": "lectures/09-routing-full-stack/en/examples/02-form-navigation-policy/vite.config.js",
+      "bytes": 132,
+      "sha256": "7c7518fd5fdea4308bc8a4e38e2a6113931b2910726a7d0eccd88ce8fcef8689"
+    },
+    {
+      "path": "canonical/03-authoritative-server-state/README.md",
+      "source": "lectures/09-routing-full-stack/en/examples/03-authoritative-server-state/README.md",
+      "bytes": 2348,
+      "sha256": "f6c07871b0faf1bdcfbaac5082c5205fde186a39964040e459d91f718c12f65f",
+      "predecessor_sha256": "2cd1226b7af5ad4028ee62aa401152cc61c63a7af42571d03fc09c8824e4a383",
+      "predecessor_bytes": 1183,
+      "mode": "EXPLICIT_RC9_DERIVATIVE"
+    },
+    {
+      "path": "canonical/03-authoritative-server-state/index.html",
+      "source": "lectures/09-routing-full-stack/en/examples/03-authoritative-server-state/index.html",
+      "bytes": 267,
+      "sha256": "13ba8f1dd0234d091fd520203bc1a4e5e382053655562d4201c74cae7c7c1c7b"
+    },
+    {
+      "path": "canonical/03-authoritative-server-state/package-lock.json",
+      "source": "lectures/09-routing-full-stack/en/examples/03-authoritative-server-state/package-lock.json",
+      "bytes": 57636,
+      "sha256": "e10665f51eaa6ccc3e5e27fd98494bd3bc0b6e1b8ccafd351c1a47228c5a5b84"
+    },
+    {
+      "path": "canonical/03-authoritative-server-state/package.json",
+      "source": "lectures/09-routing-full-stack/en/examples/03-authoritative-server-state/package.json",
+      "bytes": 306,
+      "sha256": "e3153a994d3f135a464db0843f95b569535af78cb91b8033498365047c438eca"
+    },
+    {
+      "path": "canonical/03-authoritative-server-state/server.js",
+      "source": "lectures/09-routing-full-stack/en/examples/03-authoritative-server-state/server.js",
+      "bytes": 437,
+      "sha256": "70ef1f95c344b1af6e81536a4e76f13c2715bdf4af47b041ac846da66aa84b5d"
+    },
+    {
+      "path": "canonical/03-authoritative-server-state/src/main.jsx",
+      "source": "lectures/09-routing-full-stack/en/examples/03-authoritative-server-state/src/main.jsx",
+      "bytes": 1125,
+      "sha256": "5b00b8caab414b94af14be4f90d31a5e2caee4a6ce1c6caea2e156aa5d4b9759"
+    },
+    {
+      "path": "canonical/03-authoritative-server-state/vite.config.js",
+      "source": "lectures/09-routing-full-stack/en/examples/03-authoritative-server-state/vite.config.js",
+      "bytes": 173,
+      "sha256": "d2ad956b87820376623965784cd8b32aebc51c46f8a8064f9939bac358c88d47"
+    },
+    {
+      "path": "canonical/04-http-adapter-contract/README.md",
+      "source": "lectures/09-routing-full-stack/en/examples/04-http-adapter-contract/README.md",
+      "bytes": 737,
+      "sha256": "a3ace5d719417dcb0b588ec66f631fbbffa8934a3c3938dbc5e791e320b07927"
+    },
+    {
+      "path": "canonical/04-http-adapter-contract/adapter.js",
+      "source": "lectures/09-routing-full-stack/en/examples/04-http-adapter-contract/adapter.js",
+      "bytes": 471,
+      "sha256": "8eded0302b14eea27ba79549307054b8a87b4ff17a014b8b60df843ddb566ed5"
+    },
+    {
+      "path": "canonical/04-http-adapter-contract/check.test.js",
+      "source": "lectures/09-routing-full-stack/en/examples/04-http-adapter-contract/check.test.js",
+      "bytes": 645,
+      "sha256": "4f7cc5f5dc6b09379120b8031a2952c770d352297a243feb8bfc86d812e83f7c"
+    },
+    {
+      "path": "canonical/04-http-adapter-contract/package-lock.json",
+      "source": "lectures/09-routing-full-stack/en/examples/04-http-adapter-contract/package-lock.json",
+      "bytes": 30909,
+      "sha256": "b71be17715edbddcc903c99de1129e7c02e23afb3e924a3bdcfb0bf192d3101f"
+    },
+    {
+      "path": "canonical/04-http-adapter-contract/package.json",
+      "source": "lectures/09-routing-full-stack/en/examples/04-http-adapter-contract/package.json",
+      "bytes": 188,
+      "sha256": "2ed6dc4e1a1575020a1cf669ddd617d4269503e551451931a785778935067653"
+    },
+    {
+      "path": "canonical/04-http-adapter-contract/server.js",
+      "source": "lectures/09-routing-full-stack/en/examples/04-http-adapter-contract/server.js",
+      "bytes": 635,
+      "sha256": "fb9165a06b74334c702cda42bfb40f11dbd1920797063da29a8a6a7910922cab",
+      "predecessor_sha256": "7494c4fefd8fc3fe4669cec4b3888734cc0ab946c24036a999f53209e5096f4b",
+      "predecessor_bytes": 487,
+      "mode": "EXPLICIT_RC9_DERIVATIVE"
+    },
+    {
+      "path": "canonical/05-spa-fallback-matrix/README.md",
+      "source": "lectures/09-routing-full-stack/en/examples/05-spa-fallback-matrix/README.md",
+      "bytes": 1135,
+      "sha256": "762af70e85b67e0023742ffbdef1abf560dcf954168616979793cf34fbe0a526"
+    },
+    {
+      "path": "canonical/05-spa-fallback-matrix/check.test.js",
+      "source": "lectures/09-routing-full-stack/en/examples/05-spa-fallback-matrix/check.test.js",
+      "bytes": 727,
+      "sha256": "ed52e29d40ebd0eaff25a1d12896251e35314c374023ccf00b7732e823613469"
+    },
+    {
+      "path": "canonical/05-spa-fallback-matrix/package-lock.json",
+      "source": "lectures/09-routing-full-stack/en/examples/05-spa-fallback-matrix/package-lock.json",
+      "bytes": 30909,
+      "sha256": "da7ef7c2aaef34b8efe5adad847aa77c1c033892169dbe5542bce6682ff21baa"
+    },
+    {
+      "path": "canonical/05-spa-fallback-matrix/package.json",
+      "source": "lectures/09-routing-full-stack/en/examples/05-spa-fallback-matrix/package.json",
+      "bytes": 188,
+      "sha256": "0a41788133ac58a84f8fb9fd777a37b448959c66531501cbc9ab1dc22f605e39"
+    },
+    {
+      "path": "canonical/05-spa-fallback-matrix/public/app.js",
+      "source": "lectures/09-routing-full-stack/en/examples/05-spa-fallback-matrix/public/app.js",
+      "bytes": 54,
+      "sha256": "a46d705121dc2d549692b62a03bb97f854c5b33001b4ca1c8c551499d7ac23ef"
+    },
+    {
+      "path": "canonical/05-spa-fallback-matrix/public/index.html",
+      "source": "lectures/09-routing-full-stack/en/examples/05-spa-fallback-matrix/public/index.html",
+      "bytes": 95,
+      "sha256": "92bf5227a6b916dfa7c4f2b04c8bead5c7ffbc2ae0e908c253719c7186870e73"
+    },
+    {
+      "path": "canonical/05-spa-fallback-matrix/server.js",
+      "source": "lectures/09-routing-full-stack/en/examples/05-spa-fallback-matrix/server.js",
+      "bytes": 687,
+      "sha256": "c9a55b18b5cf2e5937d9511709cfdc65f58c437d6dd5cd54c5338fb3c8215746"
+    },
+    {
+      "path": "canonical/reading-list-next.md",
+      "source": "lectures/09-routing-full-stack/en/reading-list-next.md",
+      "bytes": 844,
+      "sha256": "e869bf8bf56e6d12e36c8d2c3ef27907fff6d572548b2d5e798a31e1b6bf4699"
+    }
+  ],
+  "distribution_version": "3.0.0-rc.9",
+  "source_reference_scope": "Source-tree and source-path fields identify predecessor history. Changed rows explicitly bind current RC9 bytes and retain predecessor digests."
+}

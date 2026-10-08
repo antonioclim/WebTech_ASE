@@ -1,7 +1,0 @@
-criterion,maximum,full_performance,partial_performance,insufficient
-Experiment and technical result,3.0,P01 and required P02 results are correct and bounded,Some correct results but missing a required route,"Missing, contradictory or unsupported result"
-Reproducible evidence,2.0,"Exact fixture, commands, outputs and evidence classes",Evidence exists but cannot be fully reproduced,Screenshots or claims without reproducible context
-Explanation of mechanism,2.0,"Initiation, HTTP boundaries, aggregation and delegation are explained",Mechanism is partly correct or conflated,Only the visible output is described
-Critical Gemini audit,1.5,One claim is independently checked with a justified verdict,Verdict or independent check is weak,AI response is treated as authority
-Limitations and reflection,1.0,Specific limit and next minimum check,Generic or incomplete limit,No limit
-Completeness and format,0.5,One correctly named readable PDF and declaration,Minor formatting issue,Wrong object or incomplete upload

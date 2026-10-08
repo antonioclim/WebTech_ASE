@@ -1,0 +1,3 @@
+import { fileURLToPath as rc9FileURLToPath } from "node:url";
+import { resolve as rc9Resolve } from "node:path";
+import express from "express";export function createApp(){const app=express();const notes=[{id:"a/b",title:"Encoded identity"}];app.get("/api/notes",(_q,r)=>r.json({data:notes}));app.get("/api/notes/:id",(q,r)=>{const note=notes.find(n=>n.id===q.params.id);note?r.json({data:note}):r.status(404).json({error:{code:"note_not_found"}})});return app;}if((process.argv[1] && rc9Resolve(process.argv[1]) === rc9FileURLToPath(import.meta.url)))createApp().listen(3001,()=>console.log("API listening on http://localhost:3001"));

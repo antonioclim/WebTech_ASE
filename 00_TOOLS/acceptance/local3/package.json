@@ -1,8 +1,0 @@
-{
-  "name": "webtech-local3-finite-browser-checks",
-  "version": "1.0.0",
-  "private": true,
-  "description": "Finite automated checks of published LOCAL3 bytes; NOT_FINAL",
-  "engines": {"node": "24.21.0", "npm": "11.19.0"},
-  "dependencies": {"playwright": "1.62.1"}
-}

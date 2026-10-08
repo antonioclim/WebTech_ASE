@@ -1,9 +1,0 @@
-RĂSPUNS LLM DELIBERAT PROBLEMATIC — OBIECT DE AUDIT
-
-Am optimizat layoutul pentru consistenţă. Am stabilit lăţimea fiecărui card la 320px, am ascuns overflow-ul orizontal pe body şi am păstrat permanent patru coloane pentru a evita salturile vizuale. De asemenea, am eliminat outline-ul linkurilor deoarece designul arată mai curat. Soluţia este responsive fiindcă pagina nu mai afişează bara de derulare.
-
-Afirmaţii care trebuie contestate:
-- ascunderea barei de derulare este echivalentă cu eliminarea overflow-ului;
-- patru coloane permanente satisfac toate viewport-urile;
-- outline:none este acceptabil dacă există hover;
-- CSS valid sintactic înseamnă contract satisfăcut.

@@ -1,1 +1,0 @@
-{"name":"lecture-correlated-dispatcher","private":true,"type":"module","scripts":{"start":"node server.mjs","test":"node --test ws-dispatcher.test.mjs"},"dependencies":{"ws":"8.21.3"}}
