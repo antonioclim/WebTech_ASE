@@ -1,4 +1,0 @@
-C14 — Sources and evidence rights
-Primary basisThe basis is exact Unit 14, the 38 numbered lecture topics, five canonical examples and the approved Week 14 architecture. Public hashes are in CANONICAL_SOURCES.json.
-Corrections retainedThe API example verifies the create response, not a later persistence read.The seeded-defect example does not await cleanup through a guaranteed finally boundary.The latency example stops at response availability rather than consuming the body.The log example retains raw path and a caller-provided request ID.The tri-state example accepts truthy TLS evidence and runs commands without a bounded timeout.P02 is optional advanced and P04 is a separate assessment-bank task.
-Qualification boundaryTool, runtime or deployment evidence that is absent remains unknown. This package does not execute canonical suites, npm ci, npm audit, builds, loopback applications, the command runner, deployment, browser, Word native, Moodle or R3B-6.

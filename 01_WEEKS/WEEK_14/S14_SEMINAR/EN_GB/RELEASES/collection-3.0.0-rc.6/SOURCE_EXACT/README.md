@@ -1,5 +1,0 @@
-# S14 Student v1.2.1 FINAL LOCAL
-
-Open S14_INTERACTIVE_ULTRA_BEGINNER_GUIDE_EN_GB_v1.2.1.html. Work individually. P01 closes the prepared Regression Harness portfolio; P03 requires your own-project evidence review. P02 is optional and P04 is separate. One reviewed PDF follows the proposed 3/3/2/1/1 rubric; teacher adoption remains pending. Stop technical content at 60, then use 30 minutes for administration. No install, live scan, deployment or publication is authorised by this kit.
-
-P01's protected runtime oracle checks actual injected adapter, loopback HTTP, persisted follow-up, mutation sensitivity and cleanup observations independently of the editable harness's report. Read [the P01 contract](projects/p01/student/README.md) before implementing its sole editable file. The untouched starter still has four expected objective assertion failures and one cleanup pass; all ten named tests pass only after the required behaviour is implemented. A technical pass is finite local evidence and cannot authenticate individual ownership or an AI exchange.

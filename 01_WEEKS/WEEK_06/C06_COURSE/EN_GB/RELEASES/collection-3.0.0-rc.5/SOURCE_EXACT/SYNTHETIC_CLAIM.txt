@@ -1,3 +1,0 @@
-SYNTHETIC OFFLINE PRACTICE — not a genuine Gemini response.
-Claim: "The options object looks correct, so disk persistence and Unicode-insensitive search are already proven."
-Record a prior prediction, identify a missing boundary and propose a discriminating check. This text cannot stand in for an actual required Gemini interaction.

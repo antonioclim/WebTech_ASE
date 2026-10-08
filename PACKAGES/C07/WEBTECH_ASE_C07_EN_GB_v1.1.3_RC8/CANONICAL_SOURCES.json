@@ -1,0 +1,153 @@
+[
+  {
+    "path": "canonical/01-relationship-shapes/README.md",
+    "source": "lectures/07-relationships-transactions/en/examples/01-relationship-shapes/README.md",
+    "sha256": "7b058f8533c11b88749f0d41b8ce3eda0706db00dc22338203362272773863b9"
+  },
+  {
+    "path": "canonical/01-relationship-shapes/example.js",
+    "source": "lectures/07-relationships-transactions/en/examples/01-relationship-shapes/example.js",
+    "sha256": "2e0dd0bf3b78b5bc3c32207a6077442026697bee73ad04f677d04022e5c29e65"
+  },
+  {
+    "path": "canonical/01-relationship-shapes/package-lock.json",
+    "source": "lectures/07-relationships-transactions/en/examples/01-relationship-shapes/package-lock.json",
+    "sha256": "cd16ca9f491ddfc5d26ee3fd385d4cc629a9f26a06e14800c5a0ecd151a261e5",
+    "baseline_sha256": "8158aab0c3e9185434305f3176dfd1613082424520013910b0567e369d478722",
+    "byte_identity": false,
+    "classification": "RC2_DOCUMENTED_SOURCE_OR_DEPENDENCY_DERIVATIVE",
+    "previous_carrier_sha256": "7ff7c1b84f0f3e862c38f638de22b96967ceadc83c755fbfd64c9b5d1a1dc50f"
+  },
+  {
+    "path": "canonical/01-relationship-shapes/package.json",
+    "source": "lectures/07-relationships-transactions/en/examples/01-relationship-shapes/package.json",
+    "sha256": "e32e3d9b4a9214bb312bb6105c4163ebd0c7ffebc7c1ce03fbc6a69fd35a393c",
+    "baseline_sha256": "28f3df3121b0c97e56eb367f3cbcdcbb6ef62d8a1e7eec265a86e08f04320e26",
+    "byte_identity": false,
+    "classification": "RC2_DOCUMENTED_SOURCE_OR_DEPENDENCY_DERIVATIVE",
+    "previous_carrier_sha256": "355399ad388eaeee5a609c24cb28d05881e7b1a8e6523d837138093d3f4d8d21"
+  },
+  {
+    "path": "canonical/02-eager-loading-query-count/README.md",
+    "source": "lectures/07-relationships-transactions/en/examples/02-eager-loading-query-count/README.md",
+    "sha256": "a731fcec7184bb3834ab326c51f7f0de461cd1ca9f8fe5e7ebf3609bf406a88e"
+  },
+  {
+    "path": "canonical/02-eager-loading-query-count/example.js",
+    "source": "lectures/07-relationships-transactions/en/examples/02-eager-loading-query-count/example.js",
+    "sha256": "5f599ce62f171bbb8272c0f663ab24d645bfe735edc79cc61aa57fcb344b2267"
+  },
+  {
+    "path": "canonical/02-eager-loading-query-count/package-lock.json",
+    "source": "lectures/07-relationships-transactions/en/examples/02-eager-loading-query-count/package-lock.json",
+    "sha256": "47d267506ba177f98efd7680fd841241f3ddbe829e2790f3c17845140361057a",
+    "baseline_sha256": "926c21091a860352991d4698e5eda553a9715be12f2a4ec07e98b9490185ece6",
+    "byte_identity": false,
+    "classification": "RC2_DOCUMENTED_SOURCE_OR_DEPENDENCY_DERIVATIVE",
+    "previous_carrier_sha256": "92e95b50a1e56339b4ebc21bc4a3c03469e12ab1262b1e6594701837ba83b891"
+  },
+  {
+    "path": "canonical/02-eager-loading-query-count/package.json",
+    "source": "lectures/07-relationships-transactions/en/examples/02-eager-loading-query-count/package.json",
+    "sha256": "875987a53af1641a3cba4ba31a683427dd06cc24d97b02ad36a94d7b3da052cb",
+    "baseline_sha256": "d80a3dc4d4dcd3ef13a2e638df583d2d830eb655af992a21c730eb63e47e1945",
+    "byte_identity": false,
+    "classification": "RC2_DOCUMENTED_SOURCE_OR_DEPENDENCY_DERIVATIVE",
+    "previous_carrier_sha256": "342a5a4004ec4729a4fcf3bc459b308996ded34f36513e926ed43df9e9d542ee"
+  },
+  {
+    "path": "canonical/03-resource-contract/README.md",
+    "source": "lectures/07-relationships-transactions/en/examples/03-resource-contract/README.md",
+    "sha256": "8f31f474fc84fe0fde1fc909bf8fc304e44226c30920b56db898ff2a9270c56c"
+  },
+  {
+    "path": "canonical/03-resource-contract/example.js",
+    "source": "lectures/07-relationships-transactions/en/examples/03-resource-contract/example.js",
+    "sha256": "e9ac9d1fff6c668e33b7b6eaa5e2466a2afaecd8f3deb168840c222cd0073964"
+  },
+  {
+    "path": "canonical/03-resource-contract/package-lock.json",
+    "source": "lectures/07-relationships-transactions/en/examples/03-resource-contract/package-lock.json",
+    "sha256": "cbcc96a468fffbdce5569aaf12955af8556ce606e577ce99718693ab9bff0002",
+    "baseline_sha256": "1c441fda27168ea719b887a3d6e0b3df2a622556d620095ef2a85b9ec88da362",
+    "byte_identity": false,
+    "classification": "RC2_DOCUMENTED_SOURCE_OR_DEPENDENCY_DERIVATIVE",
+    "previous_carrier_sha256": "d407329a113a26aca649cba1ce110c0d7d3460dc3b10b83127022bbe91c60a27"
+  },
+  {
+    "path": "canonical/03-resource-contract/package.json",
+    "source": "lectures/07-relationships-transactions/en/examples/03-resource-contract/package.json",
+    "sha256": "454e6f0c94432d874aa9108c2c8703929bf119808f2c21d281641d3f0a7e1f68",
+    "baseline_sha256": "297cd8d694a9ac0ae8bed9f8c3b2d0b88c01bb46ed81f374f8ff6d7783302acb",
+    "byte_identity": false,
+    "classification": "RC2_DOCUMENTED_SOURCE_OR_DEPENDENCY_DERIVATIVE",
+    "previous_carrier_sha256": "523e7ba2722d3944718047ccbe560d42d4b6bbffc13ff77da386604838099184"
+  },
+  {
+    "path": "canonical/04-pagination-stability/README.md",
+    "source": "lectures/07-relationships-transactions/en/examples/04-pagination-stability/README.md",
+    "sha256": "eb725287ce01955580c1f9e45252d030bb3132fbc01eacb562b70666fe9264db",
+    "baseline_sha256": "b75d6b47c7a3e3213f05db176ebcde53c67b1149d0b96eb51b83539a4bab7890",
+    "byte_identity": false,
+    "classification": "RC2_DOCUMENTED_SOURCE_OR_DEPENDENCY_DERIVATIVE"
+  },
+  {
+    "path": "canonical/04-pagination-stability/example.js",
+    "source": "lectures/07-relationships-transactions/en/examples/04-pagination-stability/example.js",
+    "sha256": "44ec3960d724eb50004137adce8fa6c9ded736d1d36184429407fd5c3cd3012d",
+    "baseline_sha256": "906e77c5c51c2785ba48f1c813b9d50cc5e52aa7e49252045a39ffa8b1356375",
+    "byte_identity": false,
+    "classification": "RC2_DOCUMENTED_SOURCE_OR_DEPENDENCY_DERIVATIVE"
+  },
+  {
+    "path": "canonical/04-pagination-stability/package-lock.json",
+    "source": "lectures/07-relationships-transactions/en/examples/04-pagination-stability/package-lock.json",
+    "sha256": "097b2966d50d9c1e16af2c724bee8d319624b6083bcb5074c6852f4a4af9eed6",
+    "baseline_sha256": "c335ad1f0032f5b92b7baf406474d311ca6ec291dbc811edb6a146bbe0ce64a2",
+    "byte_identity": false,
+    "classification": "RC2_DOCUMENTED_SOURCE_OR_DEPENDENCY_DERIVATIVE",
+    "previous_carrier_sha256": "f7a4ef5a3f6412ec1457bf732336664639afb65d9844ca36ebd17b0fa947ff3f"
+  },
+  {
+    "path": "canonical/04-pagination-stability/package.json",
+    "source": "lectures/07-relationships-transactions/en/examples/04-pagination-stability/package.json",
+    "sha256": "d93db4e3929f201c18c2904d8b46618f016f317fb669bc7319096a0ed411cd8b",
+    "baseline_sha256": "cf4a2122a220b315f27ee6a2dca5fa19a855f0f670359f2d845fdd8494935eed",
+    "byte_identity": false,
+    "classification": "RC2_DOCUMENTED_SOURCE_OR_DEPENDENCY_DERIVATIVE",
+    "previous_carrier_sha256": "58de03a4a8daeb40eae582cd64ade019e5d0ed2794c4a9515c2fdc1fb58c482d"
+  },
+  {
+    "path": "canonical/05-transaction-timeline/README.md",
+    "source": "lectures/07-relationships-transactions/en/examples/05-transaction-timeline/README.md",
+    "sha256": "6aaa397c3fb8994128df47f15519afa638ea332731fcea43de700ee2792e9b40"
+  },
+  {
+    "path": "canonical/05-transaction-timeline/example.js",
+    "source": "lectures/07-relationships-transactions/en/examples/05-transaction-timeline/example.js",
+    "sha256": "e04e8cab2a14d172abe3c43fb2f97ccee4149e7543b9df47617cde88b4d84d81"
+  },
+  {
+    "path": "canonical/05-transaction-timeline/package-lock.json",
+    "source": "lectures/07-relationships-transactions/en/examples/05-transaction-timeline/package-lock.json",
+    "sha256": "be7b182b84d792482289d7ac99fb9053fcbcc5e54e9f3f278e9e4e47f1756fa1",
+    "baseline_sha256": "83378d5d5b0e5cbed30cfa759c4502d3887bce5a2bb347e85b7aecf16b4a4d2b",
+    "byte_identity": false,
+    "classification": "RC2_DOCUMENTED_SOURCE_OR_DEPENDENCY_DERIVATIVE",
+    "previous_carrier_sha256": "cd6df7a231d698f5bd864e8ffdd3e922a0d40bbc6b6c273723137372ade27913"
+  },
+  {
+    "path": "canonical/05-transaction-timeline/package.json",
+    "source": "lectures/07-relationships-transactions/en/examples/05-transaction-timeline/package.json",
+    "sha256": "af1207628586e3de9be5ea3bbcc347b4d803b724cbbf3bd93317ada3cdca624e",
+    "baseline_sha256": "37e5b06f441aa6812d3396c131f9457537ee69f8d8b61da2555c0659d07a2722",
+    "byte_identity": false,
+    "classification": "RC2_DOCUMENTED_SOURCE_OR_DEPENDENCY_DERIVATIVE",
+    "previous_carrier_sha256": "efdd8f18e6b9628cfbb9d2955b379da28ecd1870ccc3f4b70a522246fb391679"
+  },
+  {
+    "path": "canonical/reading-list-next.md",
+    "source": "lectures/07-relationships-transactions/en/reading-list-next.md",
+    "sha256": "5aac55a0ee42cf66ce34ca2f22fd200d6a1fef5f303f6cb38718ef312082815d"
+  }
+]

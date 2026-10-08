@@ -1,3 +1,0 @@
-SYNTHETIC OFFLINE PRACTICE — not an actual Gemini response.
-"If each write is awaited, any later failure restores earlier writes. Also, one eager SQL statement is necessarily cheaper than four lazy statements."
-Select one clause and test it independently. This practice does not establish a live Gemini interaction.

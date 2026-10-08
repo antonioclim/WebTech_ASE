@@ -1,2 +1,0 @@
-# Package identity method
-`SHA256SUMS.txt` contains one sorted LF-terminated line per payload: lower-case SHA-256, two spaces and the relative POSIX path. Only that file and `PACKAGE_ID.txt` are excluded. The package identifier is SHA-256 of the exact manifest bytes. The external sidecar hashes the entire ZIP and names that ZIP exactly. This identifies content; it is not authenticity, native acceptance or publication permission.

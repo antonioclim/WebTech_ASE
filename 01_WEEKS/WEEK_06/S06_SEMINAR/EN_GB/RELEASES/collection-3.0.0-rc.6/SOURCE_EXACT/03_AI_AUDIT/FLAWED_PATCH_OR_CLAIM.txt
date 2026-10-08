@@ -1,7 +1,0 @@
-SYNTHETIC PRACTICE ONLY — deliberately flawed claim
-
-This text was written as a teaching exercise. It is not an actual Gemini response, a student observation, a teacher decision or a quotation from another person.
-
-Claim: "The API returned HTTP400, so this proves that no database method was called. The successful :memory: listing also proves that the notes will survive a machine power failure."
-
-Separate the claim into its two inferences. Identify which evidence each would require, the smallest available independent check and what remains unknown. Record the correction in the AI claim worksheet. Do not use this exercise as evidence of an actual Gemini interaction or genuine ORM execution.

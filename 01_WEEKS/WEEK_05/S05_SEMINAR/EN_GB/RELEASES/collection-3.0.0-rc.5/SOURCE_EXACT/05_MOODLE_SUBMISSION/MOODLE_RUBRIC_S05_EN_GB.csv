@@ -1,7 +1,0 @@
-criterion,max_points,description
-Experiment and technical result,3.0,Correct bounded experiment and truthful result
-Reproducible evidence,2.0,Exact route command output or labelled trace with evidence class
-Mechanism,2.0,Correct parser router repository or middleware ownership
-Critical Gemini audit,1.5,Independent verification four-state verdict correction and limit
-Limitations and reflection,1.0,Real limitation and next smallest check
-Completeness and format,0.5,One readable PDF with correct filename and declaration

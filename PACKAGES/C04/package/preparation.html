@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Preparation and transfer</title><style>:root{--ink:#172a3a;--navy:#122d42;--accent:#076773;--paper:#f4f7f8;--line:#c6d1d7;--scale:1}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.5}
+a{color:#075766}button,select,input,textarea{font:inherit}button,select{padding:.5rem .7rem;border:1px solid #627785;border-radius:5px;background:white;color:var(--ink)}button{cursor:pointer}button:disabled{opacity:.5;cursor:default}input,textarea{max-width:100%;border:1px solid #627785;border-radius:4px;padding:8px}textarea{width:100%;min-height:88px;resize:vertical}
+:focus-visible{outline:3px solid #a34600;outline-offset:3px}.skip{position:absolute;left:12px;top:-90px;z-index:20;background:white;padding:10px}.skip:focus{top:4px}
+header{background:var(--navy);color:white;padding:12px 28px}header a{color:white}header .brand{font-size:14px;letter-spacing:1px;text-transform:uppercase}header p{margin:4px 0 0;font-size:14px}
+nav.toolbar{font-size:14px;padding:9px 24px;display:flex;flex-wrap:wrap;gap:9px;align-items:center;background:white;border-bottom:1px solid var(--line)}label{font-weight:bold}#status{margin-left:auto;font-size:14px;min-width:215px}
+main{max-width:1240px;margin:0 auto;padding:18px 30px 28px}.slide{background:white;border:1px solid var(--line);border-top:5px solid var(--accent);padding:18px 26px;margin-bottom:12px;font-size:calc(20px * var(--scale))}
+.enhanced:not(.reading) .slide:not(.current){display:none}.slide h2{font-size:calc(32px * var(--scale));line-height:1.13;margin:8px 0 13px}.eyebrow{font-size:14px;letter-spacing:1px;font-weight:bold;color:var(--accent);text-transform:uppercase}.slide p{margin:10px 0 14px}
+pre{font-family:Consolas,'Liberation Mono',monospace;white-space:pre-wrap;overflow-wrap:anywhere;font-size:.76em;line-height:1.35;padding:12px 16px;background:#eef3f6;border-left:3px solid #547280}code{font-family:Consolas,'Liberation Mono',monospace;overflow-wrap:anywhere}p code,li code{font-size:.9em}
+.prompt{font-weight:bold}.source{font-size:12px;color:#425967;margin-top:10px}.answer{background:#eaf4f1;padding:12px 16px;margin-top:10px;border-left:4px solid #076773}.answer[hidden]{display:none}.answer p{margin:0}
+.panel,article.reading{background:white;border:1px solid var(--line);padding:22px 26px;margin-bottom:20px}.panel h2{margin-top:0}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:12px 0}.tag{display:inline-block;font-size:12px;border:1px solid #076773;padding:3px 7px;border-radius:4px;color:#075766;background:#eaf4f1}.notice{border-left:4px solid #a34600;background:#fff3e6;padding:12px 16px}table{border-collapse:collapse;width:100%;font-size:.95em;margin:14px 0}th,td{border:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}th{background:#e9f0f4}h1{line-height:1.15}#log{max-height:480px;overflow:auto;font-size:14px}#event-list button{padding:14px}#event-list span{display:inline-block;padding:8px;border:1px dashed #627785}footer{max-width:1240px;margin:auto;padding:12px 30px;font-size:13px;color:#425967}.clock{font-size:64px;font-weight:bold;font-variant-numeric:tabular-nums}.lead{font-size:20px;max-width:75ch}.muted{font-size:14px;color:#425967}
+@media(max-width:780px){main{padding:12px}.slide{padding:16px}.slide h2{font-size:calc(27px * var(--scale))}.grid{display:block}nav.toolbar{padding:8px}#status{margin-left:0}.panel{padding:16px}header{padding:12px}}
+@media print{@page{size:A4;margin:13mm}body{background:white;color:#172a3a}header{background:white;color:#172a3a;border-bottom:1px solid #627785}header a{color:#172a3a}.toolbar,.skip,button,input,select,textarea,.no-print{display:none!important}main{max-width:none;padding:0}.slide,.enhanced:not(.reading) .slide:not(.current){display:block!important;break-after:page;border:0;padding:0;font-size:12pt}.slide h2{font-size:22pt}.answer[hidden]{display:block!important}.slide:last-child{break-after:auto}pre{font-size:10pt;white-space:pre-wrap;overflow-wrap:anywhere}#log{max-height:none;overflow:visible}.panel{border:0;padding:0;break-inside:auto}.grid{display:block}footer{padding:6px 0}.reading{border:0!important;padding:0!important}h2,h3{break-after:avoid}tr{break-inside:avoid}}
+</style></head><body><a class="skip" href="#main">Skip to content</a><header><div class="brand">Web Technologies · Week 04 · C04 · v1.1.0</div><p>Preparation and transfer</p><p><a href="index.html">Course home</a></p></header><main id="main"><section class="rc10-current-transfer" id="rc10-current-transfer" aria-labelledby="rc10-transfer-title"><h2 id="rc10-transfer-title">Current S04 classroom transfer</h2><p>Each student completes all 3 listed microprojects individually in class. Each project is a bounded task with its own editable target, rather than completion of the retained full application.</p><table><thead><tr><th scope="col">ID</th><th scope="col">Current project</th><th scope="col">Editable path from the seminar package root</th></tr></thead><tbody><tr><td>P01</td><td>Concurrent request initiation</td><td><code>CLASSROOM_RC6/targets/p01.mjs</code></td></tr><tr><td>P02</td><td>Delegated nested click</td><td><code>CLASSROOM_RC6/targets/p02.mjs</code></td></tr><tr><td>P03</td><td>Bounded retry classification</td><td><code>CLASSROOM_RC6/targets/p03.mjs</code></td></tr></tbody></table><p><a href="../../../ENTRY/S04.html">Current S04 entry</a> · <a href="../../../TUTORIALS/S04.html">Step-by-step tutorial</a> · <a href="../../S04/WEBTECH_ASE_S04_EN_GB_v1.2.2_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html">Current evidence form</a></p><p>Open the current entry, follow the tutorial, preserve the protected support files and run the stated target checks. Record actual starting and repaired outcomes, including any blocked or unexecuted check. Use the current evidence form for all listed projects, export one PDF, review the saved pages and filename and upload that reviewed PDF to the corresponding private Moodle Assignment. A failed or blocked check is not a PASS.</p><p>Historical full applications below remain optional advanced references. Reused IDs do not make their old contracts, paths, portfolios, timing estimates or mark statements current assessment rules. The actual Assignment supplies dates and assessment policy; this course makes no completion-time or mark guarantee.</p></section><article class="reading"><h1>C04 — Preparation and transfer</h1>
+<h2>Before the meeting: identify the two routes</h2>
+<p>The presentation and laboratory are self-contained course materials. Extract the whole public ZIP and open index.html. No server, installation, sign-in or internet connection is required for those pages. The canonical browser module example is a different route, served by the included loopback helper when Node is already available. Follow guide.html rather than the historical headless command in the canonical README.</p>
+<p>Read handout sections 1–2 and recall Week 03’s distinction between identity and copies. Inspect canonical/01-module-live-binding/state.js and summary.js. Identify the private binding, exported functions and the returned projection. Do not describe this function-based example as a direct imported mutable binding.</p>
+<p>Before observing a result, predict the five labels in canonical example 02. In a second prediction, distinguish initiation, completion and result order for three independent operations. Write a reason, not just a permutation. These predictions can be kept locally; they are not a separate Moodle assignment.</p>
+<p>Check the package version and preserve the original ZIP before editing anything in a later seminar. For optional Node examples, record node --version and npm --version rather than copying the reference versions as though measured. The project reference is Node v24.21.0 with npm 11.19.0. Do not install a global tool or replace an environment as part of this course reading route.</p>
+<h3>The shared course clock</h3>
+<table>
+<thead>
+<tr>
+  <th>Minutes</th>
+  <th>Mechanism</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>00–05</td>
+  <td>From values to two timelines and evidence classes</td>
+</tr>
+<tr>
+  <td>05–12</td>
+  <td>Module graph and shared-instance ownership</td>
+</tr>
+<tr>
+  <td>12–21</td>
+  <td>Stack, suspension and promise ownership</td>
+</tr>
+<tr>
+  <td>21–30</td>
+  <td>Initiation, settlement, result order and fail-fast</td>
+</tr>
+<tr>
+  <td>30–40</td>
+  <td>Transport, status, parsing and visible states</td>
+</tr>
+<tr>
+  <td>40–50</td>
+  <td>Text projection and delegated events</td>
+</tr>
+<tr>
+  <td>50–55</td>
+  <td>Cleanup, stale results and retry boundary</td>
+</tr>
+<tr>
+  <td>55–58</td>
+  <td>One generated-code claim under test</td>
+</tr>
+<tr>
+  <td>58–60</td>
+  <td>Synthesis and STOP AT 60</td>
+</tr>
+</tbody>
+</table>
+<p>This is a teaching plan, not a claim about observed classroom timing. The reserved 30 minutes of the booking are not a hidden extension of the core.</p>
+<h2>During the meeting: make the witness discriminate</h2>
+<p>Use course.html for the 24-screen route. Previous/Next, the selector and arrow/Page keys navigate; Home/End select the first/last screen. Editing a field or using a focused control retains its own keys. Text size ranges from 40% to 160%, separately from browser zoom. Reading mode shows the full route. Print includes explanations; preview before saving.</p>
+<p>In lab.html, choose a controlled experiment and enter a prediction. Run one scenario at a time. The session labels promise and fake-response records MODEL_OR_INJECTED, not real traffic. Use the event area to compare the actual target with the listener owner. Unbind, activate while unbound, then rebind once; note the difference between no callback and an empty-looking output.</p>
+<p>For a non-success response, inspect whether parsing was called. For an aggregate rejection, inspect whether other operations still completed. For a stale completion, distinguish an ignored commit from cancellation. These witnesses are more informative than a single final success message.</p>
+<p>Explicit JSON export is the portable course-lab save route. The course lab does not use localStorage. Imported records are labelled unverified and do not become new executions. Data entry is local and contains no student identity requirement. Clear removes this page’s session records, not exported files or browser backups.</p>
+<h3>Closing at minute 60</h3>
+<div class="rc10-historical-reference"><p class="rc10-historical-scope"><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S04 task list and evidence route</a>.</p><p>Write one mechanism, one observed input/action/result and one limitation. Keep an unresolved question visible rather than converting it into PASS. Identify P01 as the next seminar’s central project and P02 as the later required portfolio. End the course; do not start an optional retry implementation inside the reserved time.</p></div>
+<p>The laboratory is a teaching tool. It does not run a student Dashboard implementation, generate official test acceptance or upload anything to Moodle. An attractive trace is not a substitute for the subsequent seminar’s evidence contract.</p>
+<h2>After the meeting: connect concepts without enlarging the assessment</h2>
+<p>Revisit the four Node-compatible canonical examples in fresh processes. Compare the outputs with your earlier predictions. The event example requires a browser, so Node assertions cannot certify it. The supplied guide gives a local HTTP route with an explicit address and stop command. A reported server address is not proof that a browser opened or that its events were correct.</p>
+<div class="rc10-historical-reference"><p class="rc10-historical-scope"><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S04 task list and evidence route</a>.</p><p>Read the S04 package when it is delivered. P01 is Multi-source Data Dashboard. P02 Interactive Task List is the required later portfolio; its source estimate is 45–60 minutes outside the meeting, not a completion guarantee. P03 Resilient Fetch is optional; its 50–65-minute source estimate must not be hidden inside the core or the standard mark.</p></div>
+<h3>Concept allocation beyond the core</h3>
+<div class="rc10-historical-reference"><p class="rc10-historical-scope"><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S04 task list and evidence route</a>.</p><table>
+<thead>
+<tr>
+  <th>Canonical sections</th>
+  <th>Where to complete the detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>§§1–6</td>
+  <td>Preparation: import syntax, URL resolution and module responsibility</td>
+</tr>
+<tr>
+  <td>§§7–21</td>
+  <td>Core and handout: continuation, coordination, fetch and visible state</td>
+</tr>
+<tr>
+  <td>§§22–25</td>
+  <td>Core boundary; cleanup/stale examples in transfer, retry details in optional P03</td>
+</tr>
+<tr>
+  <td>§§26–36</td>
+  <td>Core explanation; full DOM/delegation/teardown implementation in required P02</td>
+</tr>
+</tbody>
+</table></div>
+<p>This allocation preserves all 36 canonical headings at a declared depth. It does not assert that the 95-minute source lecture was delivered unchanged.</p>
+<p>Use GEMINI_PROMPT.txt only for a bounded, sanitised claim. The supplied SYNTHETIC_CLAIM.txt is practice authored for this course, not a live Gemini transcript. A later actual interaction must retain its own evidence. No API key, CLI or SDK is needed for the baseline Gemini Web route.</p>
+<p>Next taught unit: Week 05/U05 Node/Express/REST. HTML/CSS in source-order U04 was already delivered in Week 02. No new framework or database installation is requested here.</p>
+<p>Sources: supplied W04 architecture, U03 lecture and project allocation. The documentation reference key and links are in SOURCES.md and sources.html. Course qualification remains pending the separately recorded reference-runtime, real-browser and native-platform gates; this is not a publication approval.</p>
+</article></main><footer>Local teaching candidate. Reference-runtime, real-browser and native-platform qualification remain separate. No publication or assessment is implied.</footer></body></html>

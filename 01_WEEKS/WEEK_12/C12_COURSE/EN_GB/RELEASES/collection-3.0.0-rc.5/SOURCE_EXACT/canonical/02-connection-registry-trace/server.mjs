@@ -1,6 +1,0 @@
-import http from "node:http";import{WebSocketServer}from"ws";
-export function createService(){const server=http.createServer();const wss=new WebSocketServer({noServer:true});const registry=new Map();const key=(userId,connectionId)=>`${userId}:${connectionId}`;
-server.on("upgrade",(request,socket,head)=>{const userId=request.headers["x-user-id"];const connectionId=new URL(request.url,"http://localhost").searchParams.get("connectionId");if(!userId||!connectionId){socket.destroy();return;}wss.handleUpgrade(request,socket,head,ws=>wss.emit("connection",ws,{userId,connectionId}));});
-wss.on("connection",(socket,{userId,connectionId})=>{const registryKey=key(userId,connectionId);const previous=registry.get(registryKey);registry.set(registryKey,socket);previous?.close(4001,"replaced");socket.on("close",()=>{if(registry.get(registryKey)===socket)registry.delete(registryKey);});});
-return{server,registry,send(userId,connectionId,message){registry.get(key(userId,connectionId))?.send(JSON.stringify(message));},close:()=>new Promise(resolve=>{for(const socket of registry.values())socket.terminate();wss.close(()=>server.close(resolve));})};}
-if(import.meta.url===`file://${process.argv[1]}`){const service=createService();service.server.listen(3000,()=>console.log("WebSocket registry: ws://localhost:3000?connectionId=browser"));}

@@ -1,37 +1,13 @@
-# Web Technologies — English classroom RC10
+# Start here — Web Technologies 3.0.0
 
-<!-- RC10_ACTIVE_NAVIGATION_BEGIN -->
-**Published classroom version `3.0.0-rc.10` — `PUBLISHED_PRERELEASE`.** Start with the [current English student portal](STUDENT_CLASSROOM_PUBLISHED_RC10/README.md). Download the three verified RC10 release assets through that portal. The owner published this prerelease on 7 October 2026 (00:27:43 Europe/Bucharest).
+This repository contains one current classroom collection. Previous editions are linked from [PREVIOUS_RELEASES.md](../PREVIOUS_RELEASES.md).
 
-The last published classroom prerelease is RC10. Its source commit, public download identities and finite verification scope are recorded in the publication receipt. Qualification and classroom acceptance remain pending. General qualification remains NOT_FINAL.
+1. On the repository home page, choose **Code → Download ZIP** and extract the complete archive into a new folder. Keep its structure intact.
+2. Open [START_HERE.html](../START_HERE.html) locally. Choose [Windows setup](../ENTRY/SETUP_WINDOWS.html) or [macOS and Linux setup](../ENTRY/SETUP_MACOS_LINUX.html).
+3. In a terminal at the collection root, run `node VERIFY_COLLECTION.mjs`.
+4. Open [the collection home](../index.html), choose your course and seminar, then follow the detailed tutorial and guide.
+5. Complete every required individual project. Keep all private evidence outside the collection and upload the reviewed PDF only to the lecturer’s actual authorised Assignment.
 
-[RC10 publication and limitations](../90_RELEASES/RC10_PUBLICATION.md) · [RC10 reproduction and owner procedure](../00_TOOLS/maintainer/CLASSROOM_RC10_PUBLISHED.md)
+After editing only the declared learner targets or creating declared dependency/output folders, run `node VERIFY_COLLECTION.mjs --allow-student-edits`. The task checks in each guide are separate from file integrity.
 
-The material below is **historical RC6 source**, retained only as an optional advanced reference. Its whole-source ZIPs and full applications are not the remediated RC10 classroom download. Older instructions inside the collapsed section describe their own edition. In particular, the old C07 carrier has stale canonical registry hashes; use the corrected classroom route. The full S13 server and old optional S03/S06 commands have separately recorded defects. A classroom check does not certify a historical full application.
-<!-- RC10_ACTIVE_NAVIGATION_END -->
-
-<details data-historical-source="rc6">
-<summary>Historical RC6 source references (advanced, optional)</summary>
-
-# Start here: current English class
-
-Current English collection candidate **3.0.0-rc.6**. Qualification and classroom acceptance remain pending.
-
-[Authoritative current selection](../metadata/student-selection.json) · [Current whole-week plan](../90_RELEASES/FULL_COLLECTION_PLAN.json) · [Complete collection release plan](../90_RELEASES/COLLECTION_RELEASE_PLAN.json) · [All current weeks](../01_WEEKS/README.md)
-
-1. [Prepare Windows](../ENTRY/SETUP_WINDOWS.html) or [prepare macOS/Linux](../ENTRY/SETUP_MACOS_LINUX.html).
-2. Read [the current quick start](STUDENT_QUICK_START.md).
-3. Choose [the current week](../01_WEEKS/README.md) then its course and seminar.
-4. Download the selected ZIP, extract it fully and use its linked start file, guide and form.
-
-[How the three download formats differ](WEEKS_01_14_DOWNLOADS.md) · [Download one week or object](DOWNLOAD_A_WEEK.md) · [Course plan](../ENTRY/COURSE_PLAN.html) · [Help, privacy and submission](../ENTRY/HELP_AND_PRIVACY.html)
-
-Seminar work is individual. Complete every assigned classroom microproject, record observed results and complete the current form. Review the exported PDF before uploading it privately to the assignment specified by your lecturer. Follow the current classroom guide when it distinguishes the bounded class tasks from further reading.
-
-## Historical material
-
-Older `DOWNLOAD`, `PACKAGE_EXACT`, `PACKAGES` and versioned release folders remain for comparison. They are outside the current English selection. Use the current ZIP and guide linked above for class work. Romanian materials, where present, are retained legacy alternatives and have a separate status.
-
-[Preserved predecessor navigation](../90_ARCHIVE/MAIN_4eea8de_NAVIGATION/README.md). Historical filenames containing `FINAL` do not qualify the current collection.
-
-</details>
+The [download guide](../DOWNLOAD.html) explains the current repository copy and the frozen published ZIP. General qualification remains **NOT_FINAL**; read [the scope](../QUALIFICATION.html).

@@ -1,8 +1,0 @@
-{
-  "schema": "webtech-preview-downloads/3",
-  "distribution_mode": "RECONSTRUCTED_FULL_ENGLISH_CANDIDATE",
-  "qualified_release": false,
-  "active_registry": "metadata/student-selection.json",
-  "historical_preview_registry": "90_ARCHIVE/MAIN_6c55843_FRONTDOORS/metadata/preview-downloads.json",
-  "policy": "New explicit selection supersedes lexical latest-version assumptions; no historical carrier is overwritten"
-}

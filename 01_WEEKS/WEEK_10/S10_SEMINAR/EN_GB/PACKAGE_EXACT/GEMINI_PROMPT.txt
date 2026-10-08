@@ -1,7 +1,0 @@
-I am evaluating one state-placement or transition claim for S10.
-My claim: [one falsifiable statement].
-Relevant excerpt and source identity: [minimum sanitised content].
-Observed evidence and its class: [actual trace, source or model].
-Identify one counterexample or missing assumption. Do not generate
-my complete provider, slice or architecture comparator. Distinguish
-what the evidence supports from what needs an independent test.

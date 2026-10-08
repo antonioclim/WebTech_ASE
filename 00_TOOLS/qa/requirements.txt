@@ -1,2 +1,0 @@
-# Required by parsed, duplicate-aware YAML and workflow policy checks.
-PyYAML==6.0.3

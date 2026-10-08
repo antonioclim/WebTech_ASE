@@ -1,1 +1,0 @@
-import assert from"node:assert/strict";import test from"node:test";import{createRepository}from"./system.mjs";test("integration: repository stores and detaches a task",()=>{const repo=createRepository();const saved=repo.insert({title:"Read"});assert.deepEqual(repo.all(),[saved]);repo.all()[0].title="changed";assert.equal(repo.all()[0].title,"Read");});

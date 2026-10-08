@@ -1,1 +1,0 @@
-import assert from"node:assert/strict";import test from"node:test";import{normalizeTitle}from"./system.mjs";test("unit: pure title policy trims input",()=>assert.equal(normalizeTitle("  Read  "),"Read"));

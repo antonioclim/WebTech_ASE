@@ -1,3 +1,0 @@
-SYNTHETIC PRACTICE TEXT — not an actual Gemini response.
-Claim for independent critique: A Promise.all rejection proves that every other request has already been cancelled.
-Use source reasoning or the controlled C04 scenario to seek a counterexample. Record what was actually run. This practice does not fulfil an actual Gemini interaction requirement.

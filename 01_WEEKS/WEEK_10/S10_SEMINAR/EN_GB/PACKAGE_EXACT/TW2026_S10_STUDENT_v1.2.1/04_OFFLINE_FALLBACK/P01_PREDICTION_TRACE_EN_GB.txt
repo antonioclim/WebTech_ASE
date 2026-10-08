@@ -1,8 +1,0 @@
-SUPPLIED SYNTHETIC TRACE — NOT STUDENT EXECUTION
-
-Previous state: { track: "all", savedIds: ["s1"] }
-Action: { type: "session/toggled", id: "s2" }
-Predicted next state: { track: "all", savedIds: ["s1", "s2"] }
-Invariant: previous state and savedIds array remain unchanged.
-
-This trace does not prove provider wiring, mounted isolation or browser behaviour.

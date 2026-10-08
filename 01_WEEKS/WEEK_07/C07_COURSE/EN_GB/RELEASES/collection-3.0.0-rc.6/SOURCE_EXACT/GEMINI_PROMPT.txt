@@ -1,4 +1,0 @@
-C07 bounded review. Use only a sanitised small fragment or a short trace supplied by me.
-State one falsifiable claim about a relationship, request effect, query order or transaction boundary. Propose one discriminating check and say what its result would not establish.
-Do not write the completed P02 bookSeats implementation, a complete alternative assessed solution or the finished ADR. Do not claim to have executed my database or tests. Distinguish source expectations, teaching models and actual ORM/HTTP results.
-I will independently check the selected claim and retain the prompt, claim, check, ACCEPTED / REJECTED / PARTIALLY ACCEPTED / UNKNOWN verdict, correction and limitation. No credentials, private records or full conversation dump.

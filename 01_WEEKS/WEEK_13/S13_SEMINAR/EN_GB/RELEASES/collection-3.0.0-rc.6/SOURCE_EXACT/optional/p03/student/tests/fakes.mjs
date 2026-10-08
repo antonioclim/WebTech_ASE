@@ -1,2 +1,0 @@
-export function createHost() { const listeners = new Set(); return { addEventListener(type, listener) { if (type === "message") listeners.add(listener); }, removeEventListener(type, listener) { if (type === "message") listeners.delete(listener); }, emit(event) { for (const listener of [...listeners]) listener(event); }, count: () => listeners.size }; }
-export function createFrame() { const sent = []; return { postMessage(message, origin) { sent.push({ message: structuredClone(message), origin }); }, sent: () => structuredClone(sent) }; }

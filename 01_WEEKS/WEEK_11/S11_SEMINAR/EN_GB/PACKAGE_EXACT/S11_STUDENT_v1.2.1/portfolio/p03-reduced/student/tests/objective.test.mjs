@@ -1,6 +1,0 @@
-import assert from "node:assert/strict";import test from "node:test";import {createReducedSecurityBoundary} from "../src/security-boundary.js";
-const make=()=>createReducedSecurityBoundary({trustedOrigins:["https://course.example"],expectedCsrfToken:"synthetic-token-0001",compareTokens:(a,b)=>a===b});
-test("exact allowed origin is shared and credentials are explicit",()=>{const r=make().corsDecision({origin:"https://course.example",method:"GET"});assert.equal(r.allowed,true);assert.equal(r.headers["Access-Control-Allow-Origin"],"https://course.example");assert.equal(r.headers["Access-Control-Allow-Credentials"],"true");assert.equal(r.headers.Vary,"Origin");});
-test("a non-member origin is refused",()=>assert.equal(make().corsDecision({origin:"https://other.example",method:"GET"}).status,403));
-test("preflight returns the declared contract",()=>{const r=make().corsDecision({origin:"https://course.example",method:"OPTIONS"});assert.equal(r.status,204);assert.match(r.headers["Access-Control-Allow-Methods"],/PATCH/);});
-test("cookie unsafe method requires a matching token",()=>{assert.equal(make().csrfDecision({method:"PATCH",authMethod:"cookie",suppliedToken:""}).allowed,false);assert.equal(make().csrfDecision({method:"PATCH",authMethod:"cookie",suppliedToken:"synthetic-token-0001"}).allowed,true);});

@@ -1,2 +1,0 @@
-export const SAFE_METHODS = Object.freeze(new Set(["GET", "HEAD", "OPTIONS"]));
-export function normaliseOriginSet(values){ if(!Array.isArray(values)||!values.length) throw new TypeError("trustedOrigins must be a non-empty array"); const out=new Set(); for(const value of values){ const url=new URL(value); if(!["http:","https:"].includes(url.protocol)||url.origin!==value||url.username||url.password) throw new TypeError("Invalid trusted origin"); out.add(url.origin); } return out; }

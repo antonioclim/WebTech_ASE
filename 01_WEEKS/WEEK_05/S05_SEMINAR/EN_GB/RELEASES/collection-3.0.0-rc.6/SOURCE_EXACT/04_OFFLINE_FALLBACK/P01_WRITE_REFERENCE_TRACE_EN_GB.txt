@@ -1,6 +1,0 @@
-SOURCE_REASONING / REFERENCE TRACE
-POST valid -> 201 plus opaque Location
-POST malformed JSON -> 400 invalid_json (parser)
-POST without JSON media -> 415 json_required
-POST array/null/unknown field -> 400 validation_failed
-DELETE success -> 204, zero body bytes, no Content-Type

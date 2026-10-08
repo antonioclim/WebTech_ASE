@@ -1,3 +1,0 @@
-# P02 implementation contract — v1.2.1
-
-Edit only `student/src/authorization-policy.js`. Supplied authentication, deterministic CSRF fixture, permission map, repository, routes, canonical tests and dependencies remain unchanged by the student. Teacher infrastructure hardening is recorded before successor baselines are sealed. The fixture is not production authentication or browser same-origin verification. Keep permission denial distinct from route state preconditions, use server-owned resource identity and never grant privileges from request bodies. Unknown roles/actions are denied; one flat cloned frozen snapshot is not deep immutability.

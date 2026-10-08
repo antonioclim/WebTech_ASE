@@ -1,0 +1,123 @@
+# RC10 CURRENT CLASSROOM TRANSFER
+
+Current S05 classroom transfer
+
+Complete every listed microproject individually in class. These are bounded tasks, not completion of the historical full applications.
+
+P01 — Closed task-body boundary — editable path from the seminar package root: CLASSROOM_RC6/targets/p01.mjs
+
+P02 — Exactly-once terminal logger — editable path from the seminar package root: CLASSROOM_RC6/targets/p02.mjs
+
+P03 — Public outcome mapping — editable path from the seminar package root: CLASSROOM_RC6/targets/p03.mjs
+
+Current entry: ../../../../ENTRY/S05.html
+
+Step-by-step tutorial: ../../../../TUTORIALS/S05.html
+
+Current evidence form: ../../../S05/WEBTECH_ASE_S05_EN_GB_v1.2.3_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html
+
+Preserve support files, run the stated target checks and record actual results, including blocked or unexecuted checks. Complete the current form for all projects and export one PDF. Review its saved pages and filename before uploading it to the corresponding private Moodle Assignment. A blocked check is not a PASS.
+
+The old full applications are optional advanced references. Their reused IDs, paths, allocations, portfolio requirements, timings and mark statements do not define these current microprojects. The actual Assignment supplies dates and assessment policy. No completion-time or mark guarantee is made here.
+
+> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
+
+# Node, Express and REST
+C05 · Student handout · Week 05 · Version 1.1.0
+## 1. Follow the decision beyond the browser
+C04 made time visible in the browser: work starts, an asynchronous operation settles and a continuation may change a page. C05 follows the request into the server. The question is no longer only when a result arrives. It is which boundary is allowed to accept input, change resource state, choose a response and observe completion. Express shortens the mechanics of dispatch, but it cannot choose those policies for the application.
+A response is not merely a JSON value. Read the request method and target together with the status, relevant headers and optional response content. A creation that returns plausible data with the wrong status or an unrelated Location still violates the exercise contract. Equally, a failure response needs a stable public category and a defensible relationship to the stage that rejected the request. An attractive browser display is not a substitute for this evidence.
+Node supplies JavaScript execution, process facilities and the HTTP server interface. The server owns the socket/message boundary. An Express application is a request-handling function with an ordered collection of middleware and routes. The repository owns the task collection. Its methods should not need Express request and response objects: they operate on application values and outcomes. These distinctions make a small system easier to explain and test without introducing a database or another framework.
+Constructing an app is different from starting a listener. The supplied examples export createApp so that construction and server lifetime can have separate owners. A new application instance can isolate its own in-memory state. It does not automatically reset all module-level variables or prove that dependencies are installed. The local launcher must report its actual bound address and must have an explicit stop route. Merely printing a planned URL does not prove readiness.
+Before running anything, predict one response. Write the method, path, relevant request headers and input, then the expected status, response headers and body shape. Keep the prediction intact when it is wrong; add the observed result and explanation next to it. This provides evidence of a revised model rather than a retrospectively edited guess.
+### The boundary question
+For every step ask: may this layer respond, must it delegate or must it forward a failure? Then ask what observable result would distinguish those alternatives. This question connects all 37 numbered concepts in the canonical lecture. The teaching route is a 60-minute adaptation, not an unchanged performance of the source’s 95-minute plan. [C, E, N]
+<!-- PAGE -->
+## 2. Registration order, route selection and ownership
+Express examines matching middleware and routes in registration order. A parser belongs before a consumer of its parsed body. A fallback that ends every unmatched response belongs after resources that should remain reachable. Error-handling middleware belongs after the normal handlers whose failures it should receive. These are behavioural dependencies, not formatting preferences.
+A middleware function can observe the request, add bounded data, end the response or delegate. Sending a response and then calling next() without a reason can allow a second layer to write. Calling next() also does not make the rest of the current JavaScript function disappear. A return or an exclusive branch can make the intended control flow explicit. Response completion is a separate event: code after a call to next() does not by itself establish that a client received the response.
+Canonical example 01 has an observer before static serving and an API route. Its source-expected API trace is before:/api/ping, route:/api/ping and finish:/api/ping. The static request uses the same observer but not the API handler. The example’s README suggests moving static serving behind a not-found handler; that variation first requires adding such a handler because the supplied app uses the default fallback. The exact example is preserved, and this clarification is a derived teaching note.
+Route matching depends on method and pathname. GET /api/tasks addresses a collection operation; GET /api/tasks/t-1 addresses a member. A query such as ?completed=true is separate request data that refines the representation. In example 02, POST on the collection deliberately returns 501 not_implemented. DELETE on that collection reaches its 404 route_not_found fallback. These are the example’s selected outcomes, not a general rule that every API must respond in precisely that way.
+Example 02 is intentionally permissive about its completed query. It compares a supplied value with the literal string "true". Consequently "banana" selects false records in that small demonstration. Do not silently describe this as strict validation or copy filtering into P01, whose assessed scope does not request it. Query parsing and acceptable values belong to an explicit contract.
+### Read, then discriminate
+Predict which observer and route run for a static page, an API request and an unmatched method. Use the method/path pair as the discriminating input. A source trace is SOURCE_REASONING until the actual app is executed and its result observed. A locally evaluated model can help check the reasoning, but it is not Express dispatch. [C: examples 01–02; E]
+<!-- PAGE -->
+## 3. Resources and the complete response contract
+A resource-oriented route gives an operation a stable target. Collection and member routes keep retrieval, creation and change related to the same resource vocabulary. REST is not a synonym for JSON over HTTP: resource identification, standard method semantics, representations, stateless request handling and meaningful metadata matter. These teaching examples illustrate selected aspects; they do not establish complete REST architectural conformance merely by returning JSON.
+The P01 task contract fixes deliberate response choices. Read them as one agreement rather than a table of status numbers to memorise.
+| Operation | P01 response contract | State or identity witness |
+| --- | --- | --- |
+| List or fetch | 200 with a data envelope | Repository order or returned member |
+| Create | 201 with Location and returned task | Follow the returned identifier |
+| Partial update | 200 with the updated task | Unspecified fields are preserved |
+| Delete existing member | 204 without response content | Subsequent retrieval is missing |
+| Fetch missing member | 404 with task_not_found | No invented resource |
+HTTP 201 identifies successful creation; RFC 9110 describes Location or, when it is absent, the request target as identifying the primary created resource. P01 deliberately requires Location, so its absence is an exercise failure. HTTP 204 has no response content or trailers, but can carry relevant metadata. P01 further requires no Content-Type on its delete response. That extra assertion must not be generalised into a ban on all metadata in every 204 response. [H]
+Use the identity supplied by the actual create response. A default seed may make an example identifier predictable, but callers treat IDs as opaque. Do not write a live sequence that assumes the next identifier is always task-3. The in-memory repository is reset by a new instance; it is not persistent storage. Restarting the process and retrieving a previous creation therefore tests a different lifetime from an in-process update.
+Canonical example 03 demonstrates list, creation, retrieval and bodyless deletion with a Map. It does not implement the complete P01 validation contract. A response that happens to be correct for its small valid input says nothing about unknown fields, arbitrary types or all failed operations. Preserve the example’s purpose rather than expanding its apparent guarantees.
+### One useful paired check
+After a successful operation, deliberately choose a bounded failure such as a missing member. Record the actual status, relevant headers and body, then make a later healthy request. This checks both the public failure policy and continued service for that sequence, not universal reliability. [C: example 03; H]
+<!-- PAGE -->
+## 4. Parsing is earlier than application validation
+Parsing turns incoming bytes into a JavaScript value under a parser’s policy. Application validation decides whether that value has the permitted structure, types and meaning. The distinction is particularly important in P01 because express.json() is installed before the task router.
+The strict JSON option accepts objects and arrays by default. A syntactically valid primitive such as null can therefore be rejected before the router. An array may pass the parser’s object/array policy and then fail the application’s non-array object requirement. Malformed syntax, rejected primitive shape and an object with an invalid field are different witnesses even when two routes produce the same public status. [J]
+The original P01 specification groups non-plain bodies under validation_failed, but the earlier strict parser gives primitives a different route. Its supplied error boundary recognises SyntaxError with entity.parse.failed as invalid_json. Therefore 400 invalid_json for null is a source-supported prediction, not evidence that null is syntactically invalid JSON. The router-only edit cannot change a request that never reaches that router. Keep this derived clarification visible; actual Express/HTTP verification remains a separate gate.
+| Controlled input | Distinguishing question |
+| --- | --- |
+| Text that is not JSON | Was its media type accepted for parsing? |
+| Malformed JSON bytes | Did syntax parsing reject before routing? |
+| null | Did strict parser policy reject a valid primitive? |
+| [] | Did the application reject a parsed array? |
+| {"title":"   "} | Did field validation reject a blank string? |
+| An unknown field | Did the closed field set reject extra input? |
+Validate types before normalising. Trimming a string is not equivalent to converting arbitrary input with String(value). A numerical value can be converted into plausible-looking text without ever having met a string-only boundary. After validation, a small new object can carry the known application shape without passing the entire untrusted input onward.
+Canonical example 04 demonstrates a closed title object and uses unsupported_media_type for its media rejection. P01 uses json_required. Example 04 does not include P01’s custom parser-error boundary. These names and assembly differences are preserved, not reconciled by pretending every example shares the final assessed contract.
+The public laboratory evaluates a narrowly declared parsing/shape teaching model using fixed inputs. It neither imports Express nor receives a real request body stream. Its result can sharpen a prediction; it cannot qualify the assembled API. [C: example 04; J]
+<!-- PAGE -->
+## 5. Expected outcomes, unexpected errors and a response already started
+A missing resource can be an ordinary application outcome mapped to a 404 response. An unexpected repository failure belongs on a central error path rather than being converted into a reassuring but incorrect success. A stable error code helps clients classify the result; a safe message explains the category without exposing internal paths, credentials or diagnostic detail.
+Express error middleware uses four parameters: error, request, response and next. Its location after normal handlers makes it available to the forwarded failure path. Once headers are committed, a custom handler must not try to create a second ordinary response; it delegates instead. This is response ownership, not a cosmetic return-statement rule. [E]
+Express 5 forwards rejection of a promise returned by a route handler or middleware. An async function returns a promise, so awaiting the operation inside it keeps that operation’s rejection on the returned chain. Merely starting asynchronous work inside a handler does not make an unreturned promise part of that chain. Callback-based work also needs a deliberate error route. A broad statement that “Express catches everything inside a handler” is therefore not defensible. [E]
+Canonical example 05 is intentionally small. Its error mapper uses an integer error.status and does not include the P01 headers-sent guard. It also contains an explicitly synthetic internal-error string to show that such diagnostic detail should not reach the public response. Do not run the example as a production service or treat its simplified trust in an error object as a complete error policy.
+P01’s supplied app classifies its parser error and otherwise returns a generic 500 internal_error. The student’s router should forward unexpected repository failures rather than duplicate the app assembly or edit its error boundary. The one-file target keeps this responsibility visible. Successful classification of one modelled error is not proof of all Express error dispatch paths.
+### A bounded generated-code review
+Practice claim: “Every error arising inside an Express 5 handler automatically becomes safe JSON.” Select one clause and test its ownership. A source-supported counterexample concerning an unreturned promise is enough to reject the universal claim, while a claim about actual response bytes needs a real HTTP witness. State the correction and the remaining limit. The supplied claim is synthetic practice, not a transcript of a Gemini interaction.
+For S05, retain only a sanitised prompt, one relevant Gemini claim, an independent check and your verdict. Do not upload complete conversations or ask for an app-wide rewrite. Correct rejection can demonstrate the objective as well as agreement. [C: example 05; E]
+<!-- PAGE -->
+## 6. Guided P02: identity, timing and terminal ownership
+This is the required guided observation, not a second compulsory implementation. It occupies C05 minutes 32–47. The full Middleware Pipeline project remains optional outside the core. The teacher’s private driver imports the exact dependency-free P02 reference module and supplies controlled request, response, clock and logger doubles. The public kit includes the resulting labelled observations, not the complete target implementation.
+First predict request identity. A supplied value is trimmed; a blank value calls the generator. Compare the chosen identity across the request metadata, response header value and log record. This connects evidence. It does not authenticate the caller, prove the identifier is unique for all runs or supply an authorisation policy.
+Next predict duration. With start 100 ms, header commitment at 112 ms and finish at 135 ms, the reference captures 12 ms when writeHead first runs. The terminal log reuses that captured value. Calling it “35 ms until finish” would contradict the mechanism. Nor does the 12 ms measure network delay or client receipt. Node’s finish event concerns handing the final response data to the operating system; it does not certify receipt by a remote client. [N]
+Finally predict terminal logging. The completed model emits finish and then close. After the first terminal record, the reference removes both listeners and avoids a duplicate log. Its close handler checks writableFinished; not every close is an abort. A separate pre-commit close model records an aborted outcome and duration but has no committed timing header.
+| Guided record | What to compare | What it cannot establish |
+| --- | --- | --- |
+| G1 | Supplied ID; 12 ms at commitment | End-to-end latency |
+| G2 | Blank ID; one generator call | Authentication or global uniqueness |
+| G3 | Finish then close; one log | All possible socket event sequences |
+| G4 | Pre-commit close; no sent timing header | A real aborted network connection |
+The app installs its JSON parser before the P02 pipeline. A parser rejection before entry is outside that pipeline’s identity/log ownership. The driver cannot reproduce this assembled Express route because it deliberately does not import Express. Treat this as a separate source-order conclusion.
+Record the original prediction, the selected guided record, the observation and one limitation. The public timing experiment evaluates only an illustrative commitment/terminal model. Its output is not a newly executed reference pipeline. Either type of model observation remains distinct from live HTTP. [C: P02 guided scope; N]
+<!-- PAGE -->
+## 7. Evidence and the two execution routes
+The course shell opens directly from local files. This includes course.html, lab.html, the handout and the launch guide. It needs no server, network account or installed Express. Reading the source examples is also available offline. Running their applications is different: each example requires its own project-local locked dependencies and a Node listener.
+The supplied guide keeps this prerequisite explicit. Preflight reports Node, the exact example path and whether Express 5.1.0 resolves. A missing module is PREREQUISITE_BLOCKED, not a failed student objective and not permission for an automatic install. The helper defaults to the handover Node requirement; an explicit compatibility flag labels a different runtime without qualifying it. npm is checked separately. The full dependency graph and reference-runtime qualification are not certified by merely resolving Express.
+After separate authorisation and environment preparation, npm ci belongs in a disposable work copy containing its package.json and package-lock.json. It removes an existing node_modules and refuses a mismatched package/lock instead of updating the lock. It is not run during the 60-minute core and was not run to build this course kit. Do not globally install Express or replace the lock to make the environment appear compatible. [P]
+When an example is ready, keep its foreground terminal open. The launcher binds only 127.0.0.1, prints the actual port and later reports STOPPED after closure. The companion probe is limited to a loopback origin and predefined teaching requests; it prints actual status, selected headers and body text. It refuses redirects and bounds request/body handling. Its requests can include a small write sequence in the in-memory example; they are not made against a public service.
+Classify every observation. SOURCE_REASONING is a conclusion from code or a contract. TEACHING_MODEL is a new illustrative calculation. MODULE_MODEL executes a specific module with declared doubles. LOCAL_HTTP is an actual client/server exchange. REAL_BROWSER concerns the browser itself. None of these labels automatically upgrades another: a modelled close is not a disconnected client and a status table is not a received response.
+The lecture’s five canonical HTTP tests are supplied but not newly qualified here because their Express prerequisite is absent. Historic “validated” text in their original READMEs remains historical. The current package status and QA report state exactly what ran. A missing prerequisite is a real limit to report, not a reason to invent traffic. [C, P]
+<!-- PAGE -->
+## 8. Stop at 60 and transfer to S05
+By the end of C05, explain one ordered decision, identify its owner and retain one witness with a limit. The lecture ends at minute 60. Optional reading, P02 implementation and P03 Contract Repair do not silently extend it or use the reserved 30 minutes of the booking.
+S05’s central task is the complete In-memory Task API. Only projects/p01/src/task-router.js is the assessed implementation target. Preserve app assembly, repository, fixtures, metadata, lock and tests. Implementing every required route is still the assignment, but the core does not guarantee that every student finishes implementation, evidence and Gemini review inside one hour. Save the actual draft at minute 60 and complete remaining P01 work before the later final deadline.
+The required evidence combines a response prediction, a small created-resource lifecycle, a validation rejection without unintended mutation, a parser-category distinction, a bounded Gemini review and the guided P02 observation. Full P02/P03 code is not needed for the standard maximum mark. There is one final individual S05 PDF and no separate C05 Assignment. The S05 kit and its form are produced in the next phase; they are not hidden inside this course archive.
+The next unit is U06 persistence with Sequelize/SQLite. That progression motivates why this week keeps the repository’s lifetime explicit. It does not require installing a database, adding authentication, deploying an app or introducing a frontend framework now.
+### Retrieval before leaving
+Explain why createApp does not prove readiness. Distinguish a parser-policy rejection of null from field validation of an array. Explain why 204 must not be treated as JSON content. State why the P02 completion log can contain a duration shorter than time until finish. For each answer name the evidence class, not merely your confidence.
+### Sources and scope
+[C] Supplied canonical U05, lectures/05-server-rest-api/en and the three tutorial specifications. The five course examples are copied exactly under canonical/. Source reading and derived clarifications are identified in SOURCES.md; answer banks and complete assessed references are private.
+[E] Express.js contributors. (n.d.). Error handling. Official Express 5 documentation. https://expressjs.com/en/guide/error-handling/
+[J] Express.js contributors. (n.d.). Express object: express.json. Official Express 5 API. https://expressjs.com/en/5x/api/express/
+[N] Node.js contributors. (n.d.). HTTP: ServerResponse lifecycle. Official API documentation. https://nodejs.org/api/http.html
+[H] Fielding, R., Nottingham, M., & Reschke, J. (2022). HTTP semantics (RFC 9110). RFC Editor. https://doi.org/10.17487/RFC9110
+[P] npm contributors. (n.d.). npm ci. npm CLI 11 documentation. https://docs.npmjs.com/cli/v11/commands/npm-ci/
+The web documentation was inspected on 28 September 2026. It supplements the source audit; it does not replace the locked example code or prove execution on the prescribed runtime. Except for RFC 9110, these software documentation pages do not provide a DOI. None has been invented.

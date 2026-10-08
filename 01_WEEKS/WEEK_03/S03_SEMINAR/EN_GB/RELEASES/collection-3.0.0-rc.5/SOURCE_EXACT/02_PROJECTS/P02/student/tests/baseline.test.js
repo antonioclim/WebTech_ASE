@@ -1,2 +1,0 @@
-import assert from 'node:assert/strict'; import { readFileSync } from 'node:fs'; import test from 'node:test'; import { run } from '../src/cli.js';
-test('scenario shape and help work', () => { const value = JSON.parse(readFileSync(new URL('../data/scenario.json', import.meta.url))); assert.ok(Array.isArray(value.records)); const lines=[]; assert.equal(run(['--help'], {log:v=>lines.push(v),error:()=>{}}),0); assert.match(lines[0],/Usage/); });

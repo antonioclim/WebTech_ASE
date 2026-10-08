@@ -1,0 +1,13 @@
+# C02 — protected sources and disposable variations
+
+Current collection identity: use PACKAGE_ID.txt at the top of the entire RC10 collection and its declared verification route. The C02 package identity is 06_AUDIT/PACKAGE_ID.txt, with 06_AUDIT/SHA256SUMS.txt, relative to the C02 package root; its unchanged package verifier uses those resealed controls. Retained source-copy indices and predecessor identities describe their frozen source snapshots. The C02 READMEs are explicit documentation derivatives; canonical example HTML, CSS and JavaScript remain protected original source. Do not repair a verification failure by editing manifests yourself.
+
+Preserve the extracted classroom collection and its canonical examples. Open examples in an ordinary browser; the historical headless command is outside the supported student route. Do not change browser security settings.
+
+For layer-order or layer-removal experiments: (1) use your file manager to create a separate WebTech_Work/C02_Variants folder outside the extracted collection; (2) copy the complete 02-cascade-layer-order example folder into it; (3) open only that copied folder in VS Code and edit its index.html; (4) open the copied index.html in an ordinary browser, inspect matched rules and computed values and compare with the untouched original; (5) keep or delete the disposable working copy without altering collection manifests or original files. Record that this is a variant, with the original source path and your actual change.
+
+The supplied canonical layer example initially reports color=rgb(23, 32, 51) and background=rgb(220, 233, 255). Reversing the named layer order makes the legacy declarations win; removing layers makes the more specific legacy selector win. Predict first and record the actual computed result. The presentation and handout use a separate illustrative colour fixture; do not substitute their colours for the canonical page.
+
+For a temporary position experiment, open the unchanged 06-flex-positioned-container page, open browser DevTools and select the .card element. In Styles, untick position:relative and inspect the badge. This change lasts only in the inspected page; reload to restore the original. Do not enable Local Overrides, save DevTools changes to disk or edit the protected collection. Use the same temporary checkbox method for single declarations such as flex-wrap or a focus rule. A missing declaration may be experimented with only in the separate disposable copy.
+
+An unavailable browser or unperformed variation stays blocked or unexecuted in your observation record. These steps do not claim native browser acceptance.

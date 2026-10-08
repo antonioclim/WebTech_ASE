@@ -1,1 +1,0 @@
-{"name":"lecture-seeded-defects","private":true,"type":"module","scripts":{"test":"node --test service.test.mjs"},"dependencies":{"express":"5.1.0"}}

@@ -1,9 +1,0 @@
-Review one claim about my S06 Query API. Do not implement the complete translator, change tests or add dependencies.
-
-Contract excerpt: [paste the smallest relevant public rule]
-My claim: [one statement]
-My prior prediction: [preserve it]
-Sanitised code or options excerpt: [small relevant excerpt]
-Observed evidence and class: [actual command/input/result, or PENDING]
-
-Explain the relevant boundary, propose one minimal discriminating check and state what the current evidence does not prove. I will run or inspect that check independently and record ACCEPTED, REJECTED, PARTIALLY ACCEPTED or UNKNOWN with correction and limitation. Do not invent execution results.

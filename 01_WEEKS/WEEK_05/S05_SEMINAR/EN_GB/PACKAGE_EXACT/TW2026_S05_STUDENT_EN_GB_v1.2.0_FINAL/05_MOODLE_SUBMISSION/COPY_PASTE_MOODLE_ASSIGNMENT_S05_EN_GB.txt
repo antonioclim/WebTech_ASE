@@ -1,3 +1,0 @@
-S05 — In-memory Task API: individual evidence
-
-Submit one PDF only. Use the filename `TW2026_S05_GROUP_Surname_Firstname.pdf`. Include your prediction, exact action, observed result, reproducible evidence, owning mechanism, bounded Gemini audit, limitation, reflection and individual declaration. Do not upload the project folder, node_modules, passwords, tokens, cookies or private conversations. Verify that the Moodle status is Submitted rather than Draft.

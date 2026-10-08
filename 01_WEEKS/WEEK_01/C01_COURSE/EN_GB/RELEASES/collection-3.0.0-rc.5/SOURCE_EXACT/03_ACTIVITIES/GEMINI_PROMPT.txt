@@ -1,1 +1,0 @@
-Audit claims about one HTTP exchange. For every claim, name the observable field or artefact, the minimum evidence and the limitation. Do not infer business processes from an HTTP status and do not treat JSON as a synonym for REST.

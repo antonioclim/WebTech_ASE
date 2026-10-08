@@ -1,1 +1,0 @@
-{"name":"lecture-tail-latency","private":true,"type":"module","scripts":{"start":"node probe.mjs","test":"node --test probe.test.mjs"},"dependencies":{"express":"5.1.0"}}
