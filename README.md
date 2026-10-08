@@ -1,3 +1,18 @@
+# Web Technologies — English student distribution 3.0.0
+
+<!-- V3_0_0_PRIMARY_PUBLICATION_BEGIN -->
+**Version 3.0.0 is the primary frozen student distribution.** Start with the [v3.0.0 download portal](00_START_HERE/STUDENT_V3_0_0_PUBLISHED/README.md). The owner published the [stable release](https://github.com/antonioclim/WebTech_ASE/releases/tag/classroom-en-gb-v3.0.0) on 8 October 2026. Use the named classroom archive for local project work or the separately identified static archive for reading and navigation.
+
+The collection includes 14 course units, 14 seminar units and two setup units. All 40 seminar microprojects remain required individual work and the 38 intentionally unfinished learner target files remain unfinished. Read the [publication record and verification limits](90_RELEASES/V3_0_0_PUBLICATION.md). The stable label identifies the frozen distribution; general qualification remains **NOT_FINAL** with all ten broad gates pending. Native, manual and human acceptance remain deferred.
+
+The earlier RC10, LOCAL2 and LOCAL3 portals below are retained as legacy routes. Their original releases and qualification records remain available.
+<!-- V3_0_0_PRIMARY_PUBLICATION_END -->
+
+<details data-historical-source="pre-v3-publication-navigation" data-checkpoint="2026-10-08">
+<summary>Earlier publication routes and source notes — checkpoint before the v3.0.0 primary route</summary>
+
+The complete retained text below describes the repository checkpoint before the primary v3.0.0 route was recorded on 8 October 2026. Its current/default and prerelease wording applies to those earlier editions. Use the v3.0.0 portal above for the primary frozen student distribution. The RC10, LOCAL2 and LOCAL3 releases retain their original identities and limitations.
+
 # Web Technologies — English classroom RC10
 
 <!-- RC10_ACTIVE_NAVIGATION_BEGIN -->
@@ -113,5 +128,7 @@ python 00_TOOLS/publishing/build_student_collection.py --zip ../WEBTECH_ASE_EN_G
 For the new filtered classroom edition, use the [RC7 resolver instructions](00_TOOLS/maintainer/CLASSROOM_RC7_PUBLISHING.md).
 
 These build/check commands are maintainer operations and do not start a GitHub workflow. Reference maintenance requires Python 3.12, Node 24.21.0 and the pinned PyYAML parser in 00_TOOLS/qa/requirements.txt. The candidate retains all ten qualification gates.
+
+</details>
 
 </details>

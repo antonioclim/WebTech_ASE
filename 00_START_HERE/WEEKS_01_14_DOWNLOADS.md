@@ -1,3 +1,18 @@
+# Browse and download Weeks 01–14 — frozen English distribution 3.0.0
+
+<!-- V3_0_0_PRIMARY_PUBLICATION_BEGIN -->
+Start with the [v3.0.0 student download portal](STUDENT_V3_0_0_PUBLISHED/README.md). The [stable frozen publication record](../90_RELEASES/V3_0_0_PUBLICATION.md) identifies all 14 course units, all 14 seminar units and both setup units. All 40 seminar microprojects remain required individual work; the 38 intentionally unfinished learner target files remain unfinished.
+
+Choose the classroom archive for local project work or the static archive for reading and navigation. Extract the complete selected ZIP and open `START_HERE.html` inside its root: `WEBTECH_ASE_EN_GB_CLASSROOM_v3.0.0` or `WEBTECH_ASE_EN_GB_STATIC_v3.0.0`. The static profile does not supply a project runtime or a Moodle submission service. GitHub's automatic Source code archives contain the development repository and are separate from these named student distributions.
+
+Read the [publication record and verification limits](../90_RELEASES/V3_0_0_PUBLICATION.md). The stable label identifies the frozen distribution; general qualification remains **NOT_FINAL** with all ten broad gates pending. Native, manual and human acceptance remain deferred. Earlier LOCAL3 hosted checks retain their historical source and input scope and do not assert fresh runtime/browser execution on this derivation.
+<!-- V3_0_0_PRIMARY_PUBLICATION_END -->
+
+<details data-historical-source="pre-v3-publication-navigation" data-checkpoint="2026-10-08">
+<summary>Earlier publication routes and weekly source references — checkpoint before the v3.0.0 primary route</summary>
+
+The complete retained text below describes the repository checkpoint before the primary v3.0.0 route was recorded on 8 October 2026. Its current/default and prerelease wording applies to those earlier editions. Use the v3.0.0 portal above for the primary frozen student distribution. The RC10, LOCAL2 and LOCAL3 releases retain their original identities and limitations.
+
 # Web Technologies — English classroom RC10
 
 <!-- RC10_ACTIVE_NAVIGATION_BEGIN -->
@@ -36,5 +51,7 @@ After extracting, open the start file named by that object's current navigation 
 Older `DOWNLOAD`, `PACKAGE_EXACT`, `PACKAGES` and versioned release folders remain for comparison. They are outside the current English selection. Use the current ZIP and guide linked above for class work. Romanian materials, where present, are retained legacy alternatives and have a separate status.
 
 [Preserved predecessor navigation](../90_ARCHIVE/MAIN_4eea8de_NAVIGATION/README.md). Historical filenames containing `FINAL` do not qualify the current collection.
+
+</details>
 
 </details>
