@@ -172,6 +172,7 @@
     "metadata/course-map.json": "RC9 prepared-source metadata or hardened manual publisher. Exact prior guarded bytes/mode retained in 90_ARCHIVE/MAIN_97819d8_RC9_METADATA/metadata/course-map.json; RC6 carriers and original source identities remain untouched.",
     "metadata/current-integrity/REPOSITORY_PACKAGE_ID.txt": "SHA256 of exact repository manifest bytes, followed by one LF; original algorithm retained.",
     "metadata/current-integrity/REPOSITORY_SHA256SUMS.txt": "Bind all current admitted source bytes except the two original self-controls.",
+    "metadata/github-actions-lock.json": "Current Action lock adds the authenticated v4.6.2 upload-artifact pin required by the manual LOCAL3 evidence workflow. Exact previously guarded bytes and mode are retained in 90_ARCHIVE/MAIN_6e7c5b4_LOCAL3_AUDIT/metadata/github-actions-lock.json. Existing six Action pins are unchanged.",
     "metadata/language-review.json": "Rebind finite purpose dispositions to all current text hashes; do not claim human fluency review.",
     "metadata/preserved-main.json": "Replace the narrower historical guard with complete raw-4eea conservation accounting and explicit permitted changes.",
     "metadata/repository-metadata.yml": "RC9 prepared-source metadata or hardened manual publisher. Exact prior guarded bytes/mode retained in 90_ARCHIVE/MAIN_97819d8_RC9_METADATA/metadata/repository-metadata.yml; RC6 carriers and original source identities remain untouched.",
@@ -53889,13 +53890,6 @@
       "git_mode": "100644",
       "sha256": "6ef35d1d87bc31108524f0a99bac649d40b5a77e771b2df62769e4cdbec525ab"
     },
-    "metadata/github-actions-lock.json": {
-      "bytes": 805,
-      "executable": false,
-      "git_blob_id": "07ceabf26e6ae3bf2ef6c2c71a8e4e4ab27c988b",
-      "git_mode": "100644",
-      "sha256": "4235a11aa725f96e4728ca3361189b6662ec2170beed58a8f1db5b2e2f9e3df7"
-    },
     "metadata/preview-downloads.json": {
       "bytes": 420,
       "executable": false,
@@ -54072,6 +54066,15 @@
     "metadata/student-selection.json"
   ],
   "retired_originals": {
+    "90_ARCHIVE/MAIN_6e7c5b4_LOCAL3_AUDIT/metadata/github-actions-lock.json": {
+      "bytes": 805,
+      "executable": false,
+      "git_blob_id": "07ceabf26e6ae3bf2ef6c2c71a8e4e4ab27c988b",
+      "git_mode": "100644",
+      "original_path": "metadata/github-actions-lock.json",
+      "sha256": "4235a11aa725f96e4728ca3361189b6662ec2170beed58a8f1db5b2e2f9e3df7",
+      "source_commit": "6e7c5b4993b94343027ef0c7852af4e8606f9fc8"
+    },
     "90_ARCHIVE/MAIN_97819d8_RC9_METADATA/.github/workflows/pages.yml": {
       "bytes": 2055,
       "executable": false,
@@ -54314,6 +54317,12 @@
       "path": ".github/workflows/pages.yml",
       "sha256": "96642f7c2e3965ac5801dd3c41b53753c8fffa171bdd6b226ac14591e8ce71f0",
       "source_commit": "97819d8d5d1b283299d513e2da178d08cca4dd36"
+    },
+    {
+      "archive": "90_ARCHIVE/MAIN_6e7c5b4_LOCAL3_AUDIT/metadata/github-actions-lock.json",
+      "path": "metadata/github-actions-lock.json",
+      "sha256": "4235a11aa725f96e4728ca3361189b6662ec2170beed58a8f1db5b2e2f9e3df7",
+      "source_commit": "6e7c5b4993b94343027ef0c7852af4e8606f9fc8"
     }
   ],
   "schema": "webtech-preserved-main/v1",
