@@ -1,0 +1,144 @@
+name: LOCAL3 reference runtime and browser evidence
+
+on:
+  workflow_dispatch:
+    inputs:
+      expected_source_sha:
+        description: 'Exact reviewed full lowercase main commit SHA'
+        type: string
+        required: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: webtech-local3-reference-browser
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  finite-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 55
+    steps:
+      - name: Check out the selected source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - name: Require the exact reviewed main commit and owner
+        id: guard
+        env:
+          EXPECTED_SOURCE_SHA: ${{ inputs.expected_source_sha }}
+        run: |
+          set -euo pipefail
+          export LC_ALL=C
+          mkdir -p "$RUNNER_TEMP/webtech-local3-evidence/reports"
+          python3 - <<'PY'
+          import json, os, pathlib
+          names = ['EXPECTED_SOURCE_SHA', 'GITHUB_SHA', 'GITHUB_REPOSITORY', 'GITHUB_ACTOR', 'GITHUB_TRIGGERING_ACTOR', 'GITHUB_REF', 'GITHUB_RUN_ID', 'GITHUB_RUN_ATTEMPT', 'RUNNER_OS', 'RUNNER_ARCH']
+          path = pathlib.Path(os.environ['RUNNER_TEMP']) / 'webtech-local3-evidence/reports/WORKFLOW_CONTEXT.json'
+          path.write_text(json.dumps({n: os.environ.get(n) for n in names}, indent=2) + '\n')
+          PY
+          if [[ ! "$EXPECTED_SOURCE_SHA" =~ ^[0-9a-f]{40}$ || "$EXPECTED_SOURCE_SHA" != "$GITHUB_SHA" || "$(git rev-parse HEAD)" != "$GITHUB_SHA" ]]; then
+            echo 'The selected source differs from the reviewed full commit SHA.' | tee "$RUNNER_TEMP/webtech-local3-evidence/reports/GUARD_REFUSAL.txt" >&2
+            exit 2
+          fi
+          if [[ "$GITHUB_REPOSITORY" != 'antonioclim/WebTech_ASE' || "$GITHUB_ACTOR" != 'antonioclim' || "$GITHUB_TRIGGERING_ACTOR" != 'antonioclim' || "$GITHUB_REF" != 'refs/heads/main' ]]; then
+            echo 'Only the repository owner may request or rerun this workflow on main.' | tee "$RUNNER_TEMP/webtech-local3-evidence/reports/GUARD_REFUSAL.txt" >&2
+            exit 2
+          fi
+      - name: Set up Python
+        id: python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: '3.12'
+      - name: Set up the exact reference Node
+        id: node
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '24.21.0'
+      - name: Require the actual Node and exact npm versions
+        id: npm
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          test "$(node --version)" = 'v24.21.0'
+          npm install --global npm@11.19.0 --ignore-scripts --no-audit --no-fund 2>&1 | tee "$RUNNER_TEMP/webtech-local3-evidence/reports/NPM_INSTALL.log"
+          test "$(npm --version)" = '11.19.0'
+          node --version > "$RUNNER_TEMP/webtech-local3-evidence/reports/NODE_VERSION.txt"
+          npm --version > "$RUNNER_TEMP/webtech-local3-evidence/reports/NPM_VERSION.txt"
+      - name: Validate the complete source with existing strict QA
+        id: qa
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          python -m pip install --requirement 00_TOOLS/qa/requirements.txt 2>&1 | tee "$RUNNER_TEMP/webtech-local3-evidence/reports/QA_DEPENDENCIES.log"
+          python 00_TOOLS/qa/validate_public_repo.py --strict --report "$RUNNER_TEMP/webtech-local3-evidence/reports/SOURCE_QA.json" 2>&1 | tee "$RUNNER_TEMP/webtech-local3-evidence/reports/SOURCE_QA.log"
+      - name: Check failure classification and owned process controls
+        id: classifier
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s 00_TOOLS/acceptance/local3 -p test_runtime_classification.py -v 2>&1 | tee "$RUNNER_TEMP/webtech-local3-evidence/reports/CLASSIFIER_TESTS.log"
+      - name: Fetch and authenticate the existing published profiles once
+        id: fetch
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          python 00_TOOLS/acceptance/local3/fetch_published.py --work "$RUNNER_TEMP/webtech-local3-evidence/payload" --report "$RUNNER_TEMP/webtech-local3-evidence/reports/PUBLIC_INPUTS.json" 2>&1 | tee "$RUNNER_TEMP/webtech-local3-evidence/reports/PUBLIC_INPUTS.log"
+      - name: Test untouched starters on the actual reference runtime
+        id: runtime
+        if: ${{ !cancelled() && steps.guard.outcome == 'success' && steps.python.outcome == 'success' && steps.node.outcome == 'success' && steps.npm.outcome == 'success' && steps.fetch.outcome == 'success' }}
+        timeout-minutes: 18
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          python 00_TOOLS/acceptance/local3/runtime_checks.py --input-root "$RUNNER_TEMP/webtech-local3-evidence/payload/classroom/WEBTECH_LOCAL3" --output "$RUNNER_TEMP/webtech-local3-evidence/reports/runtime" 2>&1 | tee "$RUNNER_TEMP/webtech-local3-evidence/reports/RUNTIME.log"
+      - name: Resolve exact browser dependency outside the checkout
+        id: browser_deps
+        if: ${{ !cancelled() && steps.guard.outcome == 'success' && steps.node.outcome == 'success' && steps.npm.outcome == 'success' && steps.fetch.outcome == 'success' }}
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/webtech-local3-browser-deps"
+          cp 00_TOOLS/acceptance/local3/package.json "$RUNNER_TEMP/webtech-local3-browser-deps/package.json"
+          npm install --prefix "$RUNNER_TEMP/webtech-local3-browser-deps" --ignore-scripts --no-audit --no-fund 2>&1 | tee "$RUNNER_TEMP/webtech-local3-evidence/reports/BROWSER_DEPENDENCIES.log"
+          cp "$RUNNER_TEMP/webtech-local3-browser-deps/package.json" "$RUNNER_TEMP/webtech-local3-evidence/reports/RESOLVED_PACKAGE.json"
+          cp "$RUNNER_TEMP/webtech-local3-browser-deps/package-lock.json" "$RUNNER_TEMP/webtech-local3-evidence/reports/RESOLVED_PACKAGE_LOCK.json"
+          node -e 'if (require(process.argv[1]).version !== "1.62.1") process.exit(2)' "$RUNNER_TEMP/webtech-local3-browser-deps/node_modules/playwright/package.json"
+      - name: Install Chromium and Firefox
+        id: browser_install
+        if: ${{ !cancelled() && steps.browser_deps.outcome == 'success' }}
+        timeout-minutes: 10
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          node "$RUNNER_TEMP/webtech-local3-browser-deps/node_modules/playwright/cli.js" install --with-deps chromium firefox 2>&1 | tee "$RUNNER_TEMP/webtech-local3-evidence/reports/BROWSER_INSTALL.log"
+      - name: Collect independent Chromium and Firefox evidence
+        id: browser
+        if: ${{ !cancelled() && steps.guard.outcome == 'success' && steps.fetch.outcome == 'success' && steps.browser_install.outcome == 'success' }}
+        timeout-minutes: 24
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          node 00_TOOLS/acceptance/local3/browser_checks.cjs --input-root "$RUNNER_TEMP/webtech-local3-evidence/payload/classroom/WEBTECH_LOCAL3" --output "$RUNNER_TEMP/webtech-local3-evidence/reports/browser" --playwright-module "$RUNNER_TEMP/webtech-local3-browser-deps/node_modules/playwright" 2>&1 | tee "$RUNNER_TEMP/webtech-local3-evidence/reports/BROWSER.log"
+      - name: Require complete independent receipts
+        if: ${{ always() && steps.guard.outcome == 'success' && steps.python.outcome == 'success' }}
+        env:
+          WEBTECH_STAGE_OUTCOMES: '{"guard":"${{ steps.guard.outcome }}","python":"${{ steps.python.outcome }}","node":"${{ steps.node.outcome }}","npm":"${{ steps.npm.outcome }}","qa":"${{ steps.qa.outcome }}","classifier":"${{ steps.classifier.outcome }}","fetch":"${{ steps.fetch.outcome }}","runtime":"${{ steps.runtime.outcome }}","browser_deps":"${{ steps.browser_deps.outcome }}","browser_install":"${{ steps.browser_install.outcome }}","browser":"${{ steps.browser.outcome }}"}'
+        run: python 00_TOOLS/acceptance/local3/summarize.py --reports "$RUNNER_TEMP/webtech-local3-evidence/reports"
+      - name: Preserve logs and finite evidence on success or failure
+        if: ${{ always() }}
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: webtech-local3-evidence-${{ github.sha }}-run${{ github.run_id }}-attempt${{ github.run_attempt }}
+          path: |
+            ${{ runner.temp }}/webtech-local3-evidence/reports/
+            !${{ runner.temp }}/webtech-local3-evidence/reports/runtime/working_copy/**
+          retention-days: 14
+          include-hidden-files: false
+          if-no-files-found: error
