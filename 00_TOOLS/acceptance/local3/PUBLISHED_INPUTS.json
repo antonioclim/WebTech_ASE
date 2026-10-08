@@ -1,0 +1,92 @@
+{
+  "schema": "webtech-local3-pinned-published-evidence-inputs/v1",
+  "release_id": 406103375,
+  "tag": "classroom-en-gb-v3.0.0-rc.10-local.3",
+  "build_commit": "83005df3c8c2595cc5c851062afb2fda51542547",
+  "release_api_url": "https://api.github.com/repos/antonioclim/WebTech_ASE/releases/tags/classroom-en-gb-v3.0.0-rc.10-local.3",
+  "tag_api_url": "https://api.github.com/repos/antonioclim/WebTech_ASE/git/ref/tags/classroom-en-gb-v3.0.0-rc.10-local.3",
+  "assets": [
+    {
+      "id": 619630719,
+      "name": "ARCHIVE_SHA256SUMS.txt",
+      "size": 195,
+      "digest": "sha256:1d26eb3c2ca869687b815f7a60601e5888e234ae62ba326949c2d9fb18ed9e17",
+      "browser_download_url": "https://github.com/antonioclim/WebTech_ASE/releases/download/classroom-en-gb-v3.0.0-rc.10-local.3/ARCHIVE_SHA256SUMS.txt"
+    },
+    {
+      "id": 619630604,
+      "name": "BUILD_RECEIPT.json",
+      "size": 2550,
+      "digest": "sha256:19adc4fb1a56a3198d1d96f83f3a34ff66f677497b8759f917312dd0e729c94a",
+      "browser_download_url": "https://github.com/antonioclim/WebTech_ASE/releases/download/classroom-en-gb-v3.0.0-rc.10-local.3/BUILD_RECEIPT.json"
+    },
+    {
+      "id": 619630643,
+      "name": "CANDIDATE_RELEASE_NOTES.txt",
+      "size": 1951,
+      "digest": "sha256:e1e0aac64003265e4126d762a94b80cafe2c7e0c4211465232038a7f0d2b9ef4",
+      "browser_download_url": "https://github.com/antonioclim/WebTech_ASE/releases/download/classroom-en-gb-v3.0.0-rc.10-local.3/CANDIDATE_RELEASE_NOTES.txt"
+    },
+    {
+      "id": 619630681,
+      "name": "PAYLOAD_VALIDATION.json",
+      "size": 1042,
+      "digest": "sha256:8dee8b9c0fe5a06045a3ad308f7407ec64491f9a73f36c18bea6a4abf3ecc8ae",
+      "browser_download_url": "https://github.com/antonioclim/WebTech_ASE/releases/download/classroom-en-gb-v3.0.0-rc.10-local.3/PAYLOAD_VALIDATION.json"
+    },
+    {
+      "id": 619630214,
+      "name": "WEBTECH_ASE_LOCAL3_CLASSROOM.zip",
+      "size": 5656311,
+      "digest": "sha256:fda464a4a1197fe1bc8567358882907e0215777f7211b593a19cb9bfab1d2d69",
+      "browser_download_url": "https://github.com/antonioclim/WebTech_ASE/releases/download/classroom-en-gb-v3.0.0-rc.10-local.3/WEBTECH_ASE_LOCAL3_CLASSROOM.zip"
+    },
+    {
+      "id": 619630507,
+      "name": "WEBTECH_ASE_LOCAL3_CLASSROOM.zip.sha256",
+      "size": 99,
+      "digest": "sha256:da325efe5caa85d99a2ee97941d6a24eacf232d04e3b7604f9bdce50362f9e79",
+      "browser_download_url": "https://github.com/antonioclim/WebTech_ASE/releases/download/classroom-en-gb-v3.0.0-rc.10-local.3/WEBTECH_ASE_LOCAL3_CLASSROOM.zip.sha256"
+    },
+    {
+      "id": 619630043,
+      "name": "WEBTECH_ASE_LOCAL3_STATIC.zip",
+      "size": 5687538,
+      "digest": "sha256:df4df42828902e147d094ad1ae0b371badabdbac9255562892d78c9cdc1f8b1e",
+      "browser_download_url": "https://github.com/antonioclim/WebTech_ASE/releases/download/classroom-en-gb-v3.0.0-rc.10-local.3/WEBTECH_ASE_LOCAL3_STATIC.zip"
+    },
+    {
+      "id": 619630565,
+      "name": "WEBTECH_ASE_LOCAL3_STATIC.zip.sha256",
+      "size": 96,
+      "digest": "sha256:b5ca1182c44284a81021ec40cbff97dec1ead73857a737ea3a2c3fea38828104",
+      "browser_download_url": "https://github.com/antonioclim/WebTech_ASE/releases/download/classroom-en-gb-v3.0.0-rc.10-local.3/WEBTECH_ASE_LOCAL3_STATIC.zip.sha256"
+    }
+  ],
+  "profiles": [
+    {
+      "profile": "classroom",
+      "name": "WEBTECH_ASE_LOCAL3_CLASSROOM.zip",
+      "root": "WEBTECH_LOCAL3",
+      "files": 1749,
+      "bytes": 5656311,
+      "sha256": "fda464a4a1197fe1bc8567358882907e0215777f7211b593a19cb9bfab1d2d69",
+      "package_id": "e2930952fc186687390062c2c24edf4ad6648e448f3c8abcf47606f43057604d",
+      "uncompressed_bytes": 13959190,
+      "url": "https://github.com/antonioclim/WebTech_ASE/releases/download/classroom-en-gb-v3.0.0-rc.10-local.3/WEBTECH_ASE_LOCAL3_CLASSROOM.zip"
+    },
+    {
+      "profile": "static",
+      "name": "WEBTECH_ASE_LOCAL3_STATIC.zip",
+      "root": "WEBTECH_LOCAL3_STATIC",
+      "files": 1752,
+      "bytes": 5687538,
+      "sha256": "df4df42828902e147d094ad1ae0b371badabdbac9255562892d78c9cdc1f8b1e",
+      "package_id": "922b9b469728c0a8b6a30f97df73de86e7edd6aa31bd6ecb8e2146f81f65ab79",
+      "uncompressed_bytes": 13973677,
+      "url": "https://github.com/antonioclim/WebTech_ASE/releases/download/classroom-en-gb-v3.0.0-rc.10-local.3/WEBTECH_ASE_LOCAL3_STATIC.zip"
+    }
+  ],
+  "qualificationVerdict": "NOT_FINAL",
+  "all_ten_general_gates": "pending"
+}
