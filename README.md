@@ -22,6 +22,12 @@ Version **3.0.0-rc.10-local.2 — PUBLISHED_PRERELEASE**, published on 7 October
 Version **3.0.0-rc.10-local.3 — PUBLISHED_PRERELEASE**, published on 7 October 2026, is available through [the separate LOCAL3 download portal](00_START_HERE/STUDENT_LOCAL3_PUBLISHED/README.md). Read [the LOCAL3 publication record and limits](90_RELEASES/LOCAL3_PUBLICATION.md). All eight public files were downloaded and matched the actual Actions outputs byte for byte. The frozen RC10 default route is retained. LOCAL3 remains **NOT_FINAL** with all ten general qualification gates pending.
 <!-- LOCAL3_SEPARATE_PUBLICATION_END -->
 
+<!-- LOCAL3_HOSTED_EVIDENCE_20261008_BEGIN -->
+## Observed LOCAL3 finite hosted evidence
+
+Owner-requested [run 37771566636, attempt 1](https://github.com/antonioclim/WebTech_ASE/actions/runs/37771566636) passed on the reviewed source `a19a2758…`: strict source QA, runtime 170/0 and Chromium/Firefox probes 356/0. Read the [dated evidence record and limits](90_RELEASES/LOCAL3_HOSTED_EVIDENCE_20261008.md). This records the existing LOCAL3 candidate's finite checks; general qualification remains **NOT_FINAL** with all ten broad gates pending.
+<!-- LOCAL3_HOSTED_EVIDENCE_20261008_END -->
+
 Students complete all two or three seminar microprojects individually, record their own observations and submit one reviewed evidence PDF through the private seminar assignment. Prepare the runtime before class. The published classroom material remains a prerelease; classroom timings are unpiloted.
 
 [Fourteen-week course plan](ENTRY/COURSE_PLAN.html) · [Support](SUPPORT.md) · [Security and privacy](SECURITY.md) · [Current repository status](REPOSITORY_STATUS.md)
