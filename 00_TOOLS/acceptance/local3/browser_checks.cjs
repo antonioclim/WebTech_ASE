@@ -297,7 +297,7 @@ async function s02Case(browser, name, root, output, object, origin) {
     const browserPage = path.join(path.dirname(regularWithin(root, object.form)), 'BROWSER_CHECKS.html');
     await probe('direct_file_access_truthfully_blocked', async () => {
       await page.goto(pathToFileURL(browserPage).href, {waitUntil: 'load'});
-      const source = await page.locator('#report').innerText(), report = JSON.parse(source);
+      const source = await page.locator('#report').textContent(), report = JSON.parse(source);
       requireTrue(report.status === 'BLOCKED_BROWSER_OBSERVATIONS' && report.qualification === false && report.grade === null, 'Direct file guard did not preserve scope');
       requireTrue(report.manual.keyboardFocus.status === 'NOT_EXECUTED' && report.manual.reducedMotion.status === 'NOT_EXECUTED', 'Manual observations prefilled');
       return report;
@@ -310,7 +310,7 @@ async function s02Case(browser, name, root, output, object, origin) {
       await page.waitForFunction(expected => {
         try { const r = JSON.parse(document.getElementById('report').textContent); return r.requestedWidth === expected && !!r.subject; } catch { return false; }
       }, width);
-      const report = JSON.parse(await page.locator('#report').innerText());
+      const report = JSON.parse(await page.locator('#report').textContent());
       requireTrue(report.status === 'FAIL_FINITE_BROWSER_OBSERVATIONS', 'Unfinished starter unexpectedly claims complete finite observations');
       requireTrue(report.subject.innerWidth === width && report.qualification === false && report.grade === null, 'Width or observation scope differs');
       requireTrue(report.automatic.length === 11, 'Expected finite observation set differs');
