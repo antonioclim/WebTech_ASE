@@ -37,3 +37,7 @@ Finite hosted Linux checks do not establish native Windows or macOS acceptance, 
 | `package.json` | Pin the browser package and runtime versions |
 | `summarize.py` | Require complete consistent receipts without changing qualification |
 | `PUBLISHED_INPUTS.json` | Preserve the existing release and ZIP identities |
+
+## Observed hosted runs: 8 October 2026
+
+The preparation procedure above now has a separate [dated evidence record](../../../90_RELEASES/LOCAL3_HOSTED_EVIDENCE_20261008.md). Owner-dispatched run 37771566636, attempt 1, on reviewed source `a19a2758f2b1e2c9543465ee382c5ed828d38c3d` passed strict source QA, runtime 170/0 and all 356 finite browser probes. The preceding failed run remains recorded in that report. This later observation preserves the preparation-time and supplementary local evidence scopes above. General qualification remains **NOT_FINAL** with all ten broad gates pending. This documentary update requests no workflow rerun.
