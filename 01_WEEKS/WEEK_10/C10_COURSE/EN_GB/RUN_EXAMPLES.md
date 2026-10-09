@@ -1,37 +1,60 @@
-# C10 — Example inspection and future execution plan
+# C10 — exact runnable contexts and limits
 
-## No installation or live run in this phase
+Use the offline lesson first. All commands below identify their CWD. New neutral demonstrations are complete finite Node sources; canonical JSX is a separate conditional React/Vite lane with already prepared local dependencies. No installation is requested.
 
-Open index.html for offline reading and model activities. Inspect the exact files under canonical/. These are React/Vite source projects, not standalone generated pages. Do not double-click their index.html and call the result a qualified build.
+## Complete neutral Node sources
 
-The historical READMEs show npm install and claim earlier build/browser validation. This delivery performs none of those actions. Preserve each package-lock.json; do not update pins or install globally. A future dependency acquisition requires separate authorisation and verification of the prescribed runtime. The prescribed Node 24.21.0/npm 11.19.0 has not been acquired or qualified here; local helper checks used Node 22.16.0/npm 10.9.2.
+CWD: the C10 EN_GB directory, `01_WEEKS/WEEK_10/C10_COURSE/EN_GB` in the collection. It contains tools, demonstrations, assets and canonical.
 
-## Later, separately authorised application work
+```text
+node tools/tw-kit.mjs env
+node tools/tw-kit.mjs example 01
+node tools/tw-kit.mjs example 02
+node tools/tw-kit.mjs example 03
+node tools/tw-kit.mjs examples
+```
 
-Only in an already provisioned, independently qualified environment: open the exact example directory, record package identity and actual runtime, then run the declared local command npm run dev. Use the actual local URL printed by Vite, not an invented fixed port. Stop that process with Ctrl+C. npm run build is a distinct build check. None of the five directories supplies a canonical test file or a test script. Do not report a test pass where no test was run.
+On macOS/Linux, `sh CHECK_ENVIRONMENT.sh` and `sh RUN_ALL_EXAMPLES.sh` from the same directory wrap the guarded CLI. On Windows PowerShell use `.\CHECK_ENVIRONMENT.cmd` and `.\RUN_ALL_EXAMPLES.cmd`; .cmd does not bypass PowerShell policy. Both ALL wrappers run the three neutral Node observations, not the five canonical React apps.
 
-### 01-state-ownership-map
+| ID and complete source | Predict before running | Observation scope |
+| --- | --- | --- |
+| 01 · demonstrations/01-event-authority.mjs | Volume 2→5; channel and caption preserved; earlier frozen input unchanged. | Audio fader event transition in plain JavaScript, not workshopTransition or React dispatch. |
+| 02 · demonstrations/02-search-lifecycle.mjs | B succeeds, late A ignored; C fails; reset returns idle. | Preserved generic search helper, not actual Redux thunk, HTTP or notificationRefresh. It clears requestId unlike canonical 05. |
+| 03 · demonstrations/03-stipulated-costs.mjs | At 0 costs 1/2; at 3 costs 4/2.45; exact rational crossing 20/17. | Two fixed expressions and one missing-capability descriptor, not a generic chooser, benchmark or universal ranking. |
 
-Directory from public root: `canonical/01-state-ownership-map`. Declared scripts: `dev`: `vite`, `build`: `vite build`.
+Read each finite complete source before running. Assertions verify its declared operations, and a thrown assertion is an execution fault. ENV_OK/ENV_WARN permits a selected capability; ENV_BLOCKED identifies its absence. These sources need Node core only and do not query npm, request a server or import React. ALL runs all three neutral examples; it does not build the five canonical apps.
 
-### 02-reducer-event-trace
+## Canonical React/Vite sources, conditional prepared lane
 
-Directory from public root: `canonical/02-reducer-event-trace`. Declared scripts: `dev`: `vite`, `build`: `vite build`.
+All five original source directories, package.json and package-lock.json remain unchanged. Their historical validation sentences are not current execution receipts. Original manifests pin React/react-dom 19.2.8, Vite 8.2.1 and plugin-react 6.0.5. Current documentation consulted 9 October 2026 displayed React 19.3; it does not upgrade or qualify the source-pinned runtime.
 
-### 03-provider-isolation
+From the C10 EN_GB directory, use the prepared-dependency direct Node helpers:
 
-Directory from public root: `canonical/03-provider-isolation`. Declared scripts: `dev`: `vite`, `build`: `vite build`.
+```text
+node tools/react.mjs preflight 01
+node tools/react.mjs build 01
+```
 
-### 04-normalized-selectors
+Use the actual ID 02, 03, 04 or 05 to select the corresponding row below. These direct helpers execute the local Vite CLI through Node and do not need npm. Missing prepared dependencies return ENV_BLOCKED without installing anything. A successful build establishes transformation/bundling in that actual environment, not interaction or accessibility.
 
-Directory from public root: `canonical/04-normalized-selectors`. Declared scripts: `dev`: `vite`, `build`: `vite build`.
+| ID | Directory under canonical | Source and later native witness |
+| --- | --- | --- |
+| 01 | 01-state-ownership-map | App owns tasks/filter; visible items supply Count/list. No persistence. |
+| 02 | 02-reducer-event-trace | Local App useReducer owns enabled/seats; unknown event throws under its own contract. |
+| 03 | 03-provider-isolation | Two independently stateful CounterProviders, combined context value. Actual left/right isolation requires mounting. |
+| 04 | 04-normalized-selectors | Adapter maintains descending createdAt ids; selectAll follows order; Immer-managed read=true remains true on repeat. |
+| 05 | 05-latest-request-guard | Timer thunk with pending/fulfilled currentRequestId guard, no rejected case, ID retained on success, no HTTP. |
 
-### 05-latest-request-guard
+No canonical package defines a test script. Do not invent `npm test` as their contract.
 
-Directory from public root: `canonical/05-latest-request-guard`. Declared scripts: `dev`: `vite`, `build`: `vite build`.
+For a later teacher-prepared native demonstration, open a terminal in exactly the chosen canonical directory, for example `canonical/04-normalized-selectors`, and confirm its own package/lock. The retained local npm script is:
 
-## Property-specific observation plan
+```text
+npm run dev
+```
 
-EX-01: the actual shared filter affects list and derived count. EX-02: named events alter their fields without mutating the prior state. EX-03: two mounted providers remain independent. EX-04: ordered ids and derived unread reflect confirmed changes. EX-05: the success-only latest guard ignores old fulfillment; do not pretend its missing rejection handler exists.
+This npm route needs npm and prepared local dependencies. Use the actual loopback URL printed by Vite, including its chosen port; do not invent 5173 or open the source index.html as a file. Record actual browser/version, action order and result, then stop only your own process with Ctrl+C. A missing module, parse error, signal, crash or timeout is a blocked/faulted route, not a successful behaviour witness. No native execution, print, PDF or learner pilot is certified here.
 
-Record exact source/input, command, assertion, observation, output locator and what is untested. A build does not prove interaction; a helper is not React; a plain adapter substitute is not Redux Toolkit/Immer. An unavailable command, missing dependency or parser failure is a separate block, not expected learner failure. No new runtime installation is authorised by this guide.
+## JSX excerpts and explanatory notation
+
+Slides contain bounded state fragments or event orders, not standalone shell commands. Their bindings belong to the explained surrounding state owner; complete canonical sources supply imports and components. A model trace does not execute that framework context. Arrow chains and logical event orders are explanatory notation. Do not paste these into a shell as executable JavaScript.

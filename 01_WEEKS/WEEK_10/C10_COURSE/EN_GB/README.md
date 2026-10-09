@@ -1,27 +1,5 @@
-# RC10 CURRENT CLASSROOM TRANSFER
+# C10 · Current reading and observation route
 
-Current S10 classroom transfer
+ Read  all 24 screens  and  the connected 34 topic HTML handout .  The 20 scenario lab  executes declared plain JavaScript models, not React, Redux, HTTP or a native UI. Use  the exact finite Node demonstrations and conditional React contexts . All original canonical source/package/lock bytes stay intact.  Recover ownership and immutable arrays, then name owner, consumers, lifetime and publication authority before choosing a mechanism. In the lab predict a named scenario before selecting Run; inspect actual displayed trace and its scope. If external assets or controls do not load, retain the reading text and record BLOCKED rather than fabricating a lab output.  The selected 60 minute lecture sequence is an unpiloted plan, not proof that all readings/examples/framework observations fit. Continue independent reading through the preserved topics. Current S10 requires all three functions, with 120–165 minutes estimated and taught continuation for a shorter slot. The historical Workshop Context, Notifications Centre and state ADR allocation do not replace these targets.  The preserved DOCX files are historical source companions. This maintained HTML/Markdown route contains current adaptations; a Word paragraph is not an extra assessed instruction. Course navigation, theme, native keyboard, file-CSP delivery, print/PDF and native platform acceptance need actual observations. A Node model or build cannot supply them.   Nine semantic stages  ·  One private formative record  ·  Environment guide . 
 
-Complete every listed microproject individually in class. These are bounded tasks, not completion of the historical full applications.
-
-P01 — Shared state: pure reducer — editable path from the seminar package root: CLASSROOM_RC6/student/p01.mjs
-
-P02 — Notifications: latest refresh wins — editable path from the seminar package root: CLASSROOM_RC6/student/p02.mjs
-
-P03 — Architecture: capability before cost — editable path from the seminar package root: CLASSROOM_RC6/student/p03.mjs
-
-Current entry: ../../../ENTRY/S10.html
-
-Step-by-step tutorial: ../../../TUTORIALS/S10.html
-
-Current evidence form: ../../S10/WEBTECH_ASE_S10_EN_GB_v1.2.4_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html
-
-Preserve support files, run the stated target checks and record actual results, including blocked or unexecuted checks. Complete the current form for all projects and export one PDF. Review its saved pages and filename before uploading it to the corresponding private Moodle Assignment. A blocked check is not a PASS.
-
-The old full applications are optional advanced references. Their reused IDs, paths, allocations, portfolio requirements, timings and mark statements do not define these current microprojects. The actual Assignment supplies dates and assessment policy. No completion-time or mark guarantee is made here.
-
-# C10 — Client State and Frontend Architecture
-
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-Start with index.html. WIP/PREVIEW_NOT_FINAL. Read GUIDE.md and SOURCE_NOTES.md. Exact source examples, derived explanations, model calculations and actual library executions are different objects. P01 central in full; P02 optional advanced; P03 required state ADR, not compulsory full comparator. Course: 60 minutes. No C10 Assignment.
+[Lesson](course.html) · [maintained HTML handout](reading.html) · [model lab](lab.html) · [exact commands](RUN_EXAMPLES.md) · [S10 tutorial](../../S10_SEMINAR/TUTORIAL.html) · [one form](../../S10_SEMINAR/EN_GB/FORMATIVE_ASSESSMENT.html).

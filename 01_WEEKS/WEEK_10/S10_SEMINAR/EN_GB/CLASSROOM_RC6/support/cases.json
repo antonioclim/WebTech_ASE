@@ -44,6 +44,73 @@
         "action": {
           "type": "unknown"
         }
+      },
+      {
+        "state": {
+          "track": "web",
+          "savedIds": [
+            "kept",
+            "other"
+          ],
+          "sort": "title",
+          "display": {
+            "compact": true
+          }
+        },
+        "action": {
+          "type": "session/toggled",
+          "id": "new"
+        }
+      },
+      {
+        "state": {
+          "track": "web",
+          "savedIds": [
+            "kept",
+            "other"
+          ],
+          "sort": "title",
+          "display": {
+            "compact": true
+          }
+        },
+        "action": {
+          "type": "session/toggled",
+          "id": "kept"
+        }
+      },
+      {
+        "state": {
+          "track": "web",
+          "savedIds": [
+            "kept",
+            "other"
+          ],
+          "sort": "title",
+          "display": {
+            "compact": true
+          }
+        },
+        "action": {
+          "type": "saved/cleared"
+        }
+      },
+      {
+        "state": {
+          "track": "web",
+          "savedIds": [
+            "kept",
+            "other"
+          ],
+          "sort": "title",
+          "display": {
+            "compact": true
+          }
+        },
+        "action": {
+          "type": "track/selected",
+          "track": "data"
+        }
       }
     ],
     "expected": [
@@ -61,6 +128,47 @@
       },
       {
         "error": "unsupported_action"
+      },
+      {
+        "track": "web",
+        "savedIds": [
+          "kept",
+          "other",
+          "new"
+        ],
+        "sort": "title",
+        "display": {
+          "compact": true
+        }
+      },
+      {
+        "track": "web",
+        "savedIds": [
+          "other"
+        ],
+        "sort": "title",
+        "display": {
+          "compact": true
+        }
+      },
+      {
+        "track": "web",
+        "savedIds": [],
+        "sort": "title",
+        "display": {
+          "compact": true
+        }
+      },
+      {
+        "track": "data",
+        "savedIds": [
+          "kept",
+          "other"
+        ],
+        "sort": "title",
+        "display": {
+          "compact": true
+        }
       }
     ]
   },
@@ -103,6 +211,138 @@
           }
         ],
         "received": []
+      },
+      {
+        "owner": "live",
+        "reply": "live",
+        "success": true,
+        "items": [
+          {
+            "id": "old-1",
+            "read": false
+          },
+          {
+            "id": "old-2",
+            "read": false
+          }
+        ],
+        "received": [
+          {
+            "id": "new-1",
+            "read": true
+          },
+          {
+            "id": "new-2",
+            "read": false
+          }
+        ]
+      },
+      {
+        "owner": "live",
+        "reply": "live",
+        "success": false,
+        "items": [
+          {
+            "id": "old-1",
+            "read": false
+          },
+          {
+            "id": "old-2",
+            "read": false
+          }
+        ],
+        "received": [
+          {
+            "id": "new-1",
+            "read": true
+          },
+          {
+            "id": "new-2",
+            "read": false
+          }
+        ]
+      },
+      {
+        "owner": "live",
+        "reply": "old",
+        "success": true,
+        "items": [
+          {
+            "id": "old-1",
+            "read": false
+          },
+          {
+            "id": "old-2",
+            "read": false
+          }
+        ],
+        "received": [
+          {
+            "id": "new-1",
+            "read": true
+          },
+          {
+            "id": "new-2",
+            "read": false
+          }
+        ]
+      },
+      {
+        "owner": "live",
+        "reply": "old",
+        "success": false,
+        "items": [
+          {
+            "id": "old-1",
+            "read": false
+          },
+          {
+            "id": "old-2",
+            "read": false
+          }
+        ],
+        "received": [
+          {
+            "id": "new-1",
+            "read": true
+          },
+          {
+            "id": "new-2",
+            "read": false
+          }
+        ]
+      },
+      {
+        "owner": "live",
+        "reply": "live",
+        "success": true,
+        "items": [
+          {
+            "id": "old-1",
+            "read": false
+          },
+          {
+            "id": "old-2",
+            "read": false
+          }
+        ],
+        "received": []
+      },
+      {
+        "owner": "live",
+        "reply": "old",
+        "success": true,
+        "items": [
+          {
+            "id": "old-1",
+            "read": false
+          },
+          {
+            "id": "old-2",
+            "read": false
+          }
+        ],
+        "received": []
       }
     ],
     "expected": [
@@ -132,6 +372,75 @@
           }
         ],
         "unread": 1
+      },
+      {
+        "items": [
+          {
+            "id": "new-1",
+            "read": true
+          },
+          {
+            "id": "new-2",
+            "read": false
+          }
+        ],
+        "unread": 1
+      },
+      {
+        "items": [
+          {
+            "id": "old-1",
+            "read": false
+          },
+          {
+            "id": "old-2",
+            "read": false
+          }
+        ],
+        "unread": 2
+      },
+      {
+        "items": [
+          {
+            "id": "old-1",
+            "read": false
+          },
+          {
+            "id": "old-2",
+            "read": false
+          }
+        ],
+        "unread": 2
+      },
+      {
+        "items": [
+          {
+            "id": "old-1",
+            "read": false
+          },
+          {
+            "id": "old-2",
+            "read": false
+          }
+        ],
+        "unread": 2
+      },
+      {
+        "items": [],
+        "unread": 0
+      },
+      {
+        "items": [
+          {
+            "id": "old-1",
+            "read": false
+          },
+          {
+            "id": "old-2",
+            "read": false
+          }
+        ],
+        "unread": 2
       }
     ]
   },
@@ -184,11 +493,183 @@
             "cost": 1
           }
         ]
+      },
+      {
+        "required": [
+          "shared",
+          "async"
+        ],
+        "candidates": [
+          {
+            "id": "partial",
+            "capabilities": [
+              "shared"
+            ],
+            "cost": 0
+          },
+          {
+            "id": "complete",
+            "capabilities": [
+              "shared",
+              "async"
+            ],
+            "cost": 4
+          },
+          {
+            "id": "expensive",
+            "capabilities": [
+              "shared",
+              "async"
+            ],
+            "cost": 7
+          }
+        ]
+      },
+      {
+        "required": [
+          "shared",
+          "async"
+        ],
+        "candidates": [
+          {
+            "id": "expensive",
+            "capabilities": [
+              "shared",
+              "async"
+            ],
+            "cost": 7
+          },
+          {
+            "id": "complete",
+            "capabilities": [
+              "shared",
+              "async"
+            ],
+            "cost": 4
+          },
+          {
+            "id": "partial",
+            "capabilities": [
+              "shared"
+            ],
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "required": [
+          "shared"
+        ],
+        "candidates": [
+          {
+            "id": "higher-a",
+            "capabilities": [
+              "shared"
+            ],
+            "cost": 3
+          },
+          {
+            "id": "zero",
+            "capabilities": [
+              "shared"
+            ],
+            "cost": 0
+          },
+          {
+            "id": "higher-b",
+            "capabilities": [
+              "shared"
+            ],
+            "cost": 3
+          }
+        ]
+      },
+      {
+        "required": [
+          "shared"
+        ],
+        "candidates": [
+          {
+            "id": "higher-b",
+            "capabilities": [
+              "shared"
+            ],
+            "cost": 3
+          },
+          {
+            "id": "zero",
+            "capabilities": [
+              "shared"
+            ],
+            "cost": 0
+          },
+          {
+            "id": "higher-a",
+            "capabilities": [
+              "shared"
+            ],
+            "cost": 3
+          }
+        ]
+      },
+      {
+        "required": [
+          "shared"
+        ],
+        "candidates": [
+          {
+            "id": "z",
+            "capabilities": [
+              "shared"
+            ],
+            "cost": 1
+          },
+          {
+            "id": "a",
+            "capabilities": [
+              "shared"
+            ],
+            "cost": 1
+          },
+          {
+            "id": "high",
+            "capabilities": [
+              "shared"
+            ],
+            "cost": 8
+          }
+        ]
+      },
+      {
+        "required": [],
+        "candidates": [
+          {
+            "id": "empty",
+            "capabilities": [],
+            "cost": 0
+          },
+          {
+            "id": "other",
+            "capabilities": [],
+            "cost": 2
+          }
+        ]
+      },
+      {
+        "required": [],
+        "candidates": []
       }
     ],
     "expected": [
       "context",
       null,
+      null,
+      "complete",
+      "complete",
+      "zero",
+      "zero",
+      null,
+      "empty",
       null
     ]
   }

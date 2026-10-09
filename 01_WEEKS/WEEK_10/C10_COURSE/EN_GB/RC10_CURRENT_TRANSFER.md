@@ -1,21 +1,5 @@
-# RC10 current classroom transfer
+# Current S10 transfer
 
-Current S10 classroom transfer
+All three functions are required individually. P01 preserves state under authorised events; P02 selects one list from ownership+success then derives unread; P03 gates every capability before a unique minimum. The 9 semantic stages do not require a full application or additional ADR.
 
-Complete every listed microproject individually in class. These are bounded tasks, not completion of the historical full applications.
-
-P01 — Shared state: pure reducer — editable path from the seminar package root: CLASSROOM_RC6/student/p01.mjs
-
-P02 — Notifications: latest refresh wins — editable path from the seminar package root: CLASSROOM_RC6/student/p02.mjs
-
-P03 — Architecture: capability before cost — editable path from the seminar package root: CLASSROOM_RC6/student/p03.mjs
-
-Current entry: ../../../ENTRY/S10.html
-
-Step-by-step tutorial: ../../../TUTORIALS/S10.html
-
-Current evidence form: ../../S10/WEBTECH_ASE_S10_EN_GB_v1.2.4_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html
-
-Preserve support files, run the stated target checks and record actual results, including blocked or unexecuted checks. Complete the current form for all projects and export one PDF. Review its saved pages and filename before uploading it to the corresponding private Moodle Assignment. A blocked check is not a PASS.
-
-The old full applications are optional advanced references. Their reused IDs, paths, allocations, portfolio requirements, timings and mark statements do not define these current microprojects. The actual Assignment supplies dates and assessment policy. No completion-time or mark guarantee is made here.
+[Current entry](../../S10_SEMINAR/index.html), [tutorial](../../S10_SEMINAR/TUTORIAL.html) and [one formative record](../../S10_SEMINAR/EN_GB/FORMATIVE_ASSESSMENT.html). The 120–165 minute full estimate is unpiloted; save exact stage/case/prediction for taught continuation.

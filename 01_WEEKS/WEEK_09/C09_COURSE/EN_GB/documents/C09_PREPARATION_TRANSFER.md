@@ -1,24 +1,8 @@
-# RC10 CURRENT CLASSROOM TRANSFER
+# Current C09/S09 transfer
 
-Current S09 classroom transfer
+All three S09 projects are required individually: P01 noteRoute, P02 applyRefresh and P03 deliveryLane. Each has three semantic stages, an own executed case and a reflection. The [current seminar entry](../../../S09_SEMINAR/index.html), [tutorial](../../../S09_SEMINAR/TUTORIAL.html) and [formative assessment](../../../S09_SEMINAR/EN_GB/FORMATIVE_ASSESSMENT.html) control this route.
 
-Complete every listed microproject individually in class. These are bounded tasks, not completion of the historical full applications.
-
-P01 — Routed notes: URL identity — editable path from the seminar package root: CLASSROOM_RC6/student/p01.mjs
-
-P02 — CRUD workspace: authoritative publication — editable path from the seminar package root: CLASSROOM_RC6/student/p02.mjs
-
-P03 — Deep link: delivery classification — editable path from the seminar package root: CLASSROOM_RC6/student/p03.mjs
-
-Current entry: ../../../../ENTRY/S09.html
-
-Step-by-step tutorial: ../../../../TUTORIALS/S09.html
-
-Current evidence form: ../../../S09/WEBTECH_ASE_S09_EN_GB_v1.2.4_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html
-
-Preserve support files, run the stated target checks and record actual results, including blocked or unexecuted checks. Complete the current form for all projects and export one PDF. Review its saved pages and filename before uploading it to the corresponding private Moodle Assignment. A blocked check is not a PASS.
-
-The old full applications are optional advanced references. Their reused IDs, paths, allocations, portfolio requirements, timings and mark statements do not define these current microprojects. The actual Assignment supplies dates and assessment policy. No completion-time or mark guarantee is made here.
+Historical full applications reuse Pxx identifiers but do not assign current targets, portfolio roles, deadlines or optional tasks. No new course Assignment is created. Plan 30–45 minutes per project and 120–165 for the full unpiloted seminar sequence, including one genuine AI critique/check, one PDF and recap. A 100-minute slot needs a planned taught 20–65-minute continuation; a 90-minute slot needs 30–75. Keep unfinished work unfinished.
 
 # C09 — Preparation and Transfer
 
@@ -44,9 +28,7 @@ Keep the phrase “simulated local confirmation” in your note. The historical 
 
 Assume a draft title “  course note  ” and the example-03 server's stated normalisation. Predict the returned title and distinguish confirmed data, draft and status before and after success. Then consider HTTP rejection, rejected transport and malformed JSON separately.
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-Inspect the original save handler before comparing it with derived/request-note.mjs. That helper is a bounded teaching derivative. It validates one note-shaped response and returns a result category; it is neither the original handler nor the complete P02 workspace. State exactly which claim the comparison supports and which browser behaviour remains untested.
+Inspect the original save handler before comparing it with derived/request-note.mjs. That helper is a bounded teaching derivative. It validates one note-shaped response and returns a result category; it is neither the original handler nor the historical full P02 workspace. State exactly which claim the comparison supports and which browser behaviour remains untested.
 
 ## During C09: keep evidence modest and precise
 
@@ -56,52 +38,36 @@ The three retrieval moments ask for ownership, history evidence and document-del
 
 ## Bounded Gemini critique
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
+Use one sanitised claim tied to your own source reading, route sketch or trace. Use the actual current S09 tutorial’s narrow critique suggestion and your own falsifier; no packaged claim is an authentic exchange. It does not ask for a complete P01/P02/P03 implementation. Retain only the relevant prompt and answer excerpt; do not include full conversations, account details, API keys, cookies, tokens or institutional information.
 
-Use one sanitised claim tied to your own source reading, route sketch or trace. The packaged GEMINI_PROMPT.txt asks for an owner, an assumption and one falsifiable check. It does not ask for a complete P01/P02/P03 implementation. Retain only the relevant prompt and answer excerpt; do not include full conversations, account details, API keys, cookies, tokens or institutional information.
-
-Independently check the claim using the supplied source, an explicit contract or an actual test when available. Record ACCEPTED, REJECTED, PARTIALLY ACCEPTED or UNKNOWN, then a correction and a limitation. A well-founded UNKNOWN can be an honest judgement about a claim, but it is not a declaration that programming work has passed. A real AI exchange is required for the standard later seminar route; a practice sentence supplied offline cannot impersonate one.
+Independently check the claim using the supplied source, an explicit contract or an actual test when available. Record ACCEPTED, REJECTED, PARTLY ACCEPTED or UNKNOWN, then a correction and a limitation. A well-founded UNKNOWN can be an honest judgement about a claim, but it is not a declaration that programming work has passed. A real AI exchange is required for the standard later seminar route; a practice sentence supplied offline cannot impersonate one.
 
 The synthetic practice claim is: “If the form reaches /notes/42 and the build passes, server persistence and production deep links are proven.” It is deliberately synthetic, not an actual Gemini response. Separate its claims and identify one counterexample for each without fabricating evidence. A teacher-approved alternative, when genuinely authorised in advance, is a distinct route rather than something a form selector grants.
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
+## Historical transfer A — full P01 NotesApp
 
-## Transfer A — P01 central implementation
+Historical full P01 required list/detail/new/edit, a root redirect, explicit missing-resource and unknown-route states, a shared controlled form, trim/blank validation, cancel without writes, URL-derived identity and correct post-success history. That historical file was student/src/NotesApp.jsx, outside the current target list. The local synchronous store, fixtures, entry, dependencies and tests are preserved.
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
+The source estimates 55–65 minutes for the project alone. The historical full-application S09 map offered an 18-minute segment. Current S09 plans 30–45 for every required pure project and 120–165 overall, unpiloted, with a taught continuation for a shorter meeting. Preserve a truthful draft at the stop point, complete outstanding work later and use the deadline eventually set by the teacher. No date is invented in this material.
 
-P01 requires list/detail/new/edit, a root redirect, explicit missing-resource and unknown-route states, a shared controlled form, trim/blank validation, cancel without writes, URL-derived identity and correct post-success history. The only assessed file is student/src/NotesApp.jsx. The local synchronous store, fixtures, entry, dependencies and tests are preserved.
+## Historical transfer B — full P03 delivery repair
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-The source estimates 55–65 minutes for the project alone. The S09 class map offers an 18-minute implementation segment, not the entire project plus evidence and AI critique. Preserve a truthful draft at the stop point, complete outstanding work later and use the deadline eventually set by the teacher. No date is invented in this material.
-
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-## Transfer B — P03 required portfolio
-
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-P03 is required individual reproduce–repair–verify work in student/server/create-production-app.js. Keep the supplied static-only and universal variants intact, as well as the API router, built client and test harness. Classify requests before writing a repair. Include API misses as controls: the supplied API router can already complete a JSON 404 before universal fallback is reached.
+Historical full P03 assigned individual reproduce–repair–verify work in student/server/create-production-app.js. In that historical full P03 source, the supplied variants, API router, built client and harness were preserved before requests were classified. Those server repairs are outside current deliveryLane. Include API misses as controls: the supplied API router can already complete a JSON 404 before universal fallback is reached.
 
 Use a genuine affected case, such as a missing asset, for the universal variant's defect. Later evidence must distinguish status, representation, body identity and request-log order. Do not rebuild the fixed-name client fixture, move middleware to fabricate the advertised failure or call a predicate model an actual HTTP observation. The source estimate is 40–55 minutes outside the brief class hand-off.
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
+## Historical transfer C — full P02 integration
 
-## Transfer C — P02 semester integration
+Historical full P02 transferred the adapter and confirmed-state boundaries to the semester project. It is neither a second full implementation inside S09 nor a simple renaming of Week 08's optional P02. The source estimate is 70–90 minutes. Those historical full application roles and rubric do not govern current S09.
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-P02 transfers the adapter and confirmed-state boundaries to the semester project. It is neither a second full implementation inside S09 nor a simple renaming of Week 08's optional P02. The source estimate is 70–90 minutes. Its full implementation is not a hidden scoring item in the S09 P01/P03 rubric.
-
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-Prepare a short ownership map for confirmed notes, draft and request status. Identify refresh-versus-refresh, refresh-versus-confirmed-mutation and cleanup-versus-late-settlement as separate cases. Read the supplied API object rather than assuming every method in the broad specification exists. P02 has no new router or database requirement here.
+That historical full P02 transfer used an ownership map for confirmed notes, draft and request status. It separated refresh-versus-refresh, refresh-versus-confirmed-mutation and cleanup-versus-late-settlement, then read the supplied API object rather than assuming every method in the broad specification existed. That historical full P02 transfer had no new router/database requirement. Current S09 P02 performs only successful snapshot selection.
 
 ## Record template for personal preparation
 
 Use the following labels in your own notes: source and line; initial fixture; prediction; evidence class; actual action or NOT_EXECUTED; observation; claim evaluated; independent check; verdict; correction; limit; unfinished work. Leave a field blank or pending when no evidence exists. Do not prefill this template with model output and then label it actual.
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
+Preparation does not create a C09 Assignment. The current S09 formative assessment consolidates all three individual projects and nine stages and the bounded AI critique into one readable PDF for one private Moodle Assignment. Saving a note, requesting a download and submitting to Moodle are different actions. This C09 package performs none of them on your behalf.
 
-Preparation does not create a C09 Assignment. The later implemented S09 form will consolidate individual P01/P03 evidence and the bounded AI critique into one readable PDF for one private Moodle Assignment. Saving a note, requesting a download and submitting to Moodle are different actions. This C09 package performs none of them on your behalf.
+## Current individual preparation
+
+Read the actual three targets and preserve predictions for P01 complete path, P02 matching empty replacement and P03 missing asset versus navigation. Follow the [current tutorial](../../../S09_SEMINAR/TUTORIAL.html) for all nine stages. Plan 30–45 per project and 120–165 for the unpiloted full seminar, including the single genuine AI critique/check and one private reviewed PDF. Keep unfinished stages for the agreed taught continuation; no historical optional role changes the three current obligations.

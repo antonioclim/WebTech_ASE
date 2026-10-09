@@ -1,5 +1,9 @@
 # Changes
 
+## v4.0.0 candidate — T05 prepared, 9 October 2026
+
+C09/S09 and C10/S10 now connect URL identity, document delivery, authoritative refresh, state ownership and architecture requirements through expanded teaching, 18 causal seminar stages, neutral runnable observations, scoped activity guards and current formative evidence forms. Pure functions remain distinct from real router, HTTP, Context and Redux execution. The earlier C08 optional launcher now reads the actual canonical registry object before dependency checks, and S08 clone probes verify copied content before isolation. Original canonical sources are preserved and React execution remains separately conditional. All 40 projects remain required individual work and all 38 learner targets remain unfinished. T01–T05 are prepared with explicit limits; T06–T07, native/print/PDF and whole-edition acceptance remain pending. This checkpoint is not a published release.
+
 ## v4.0.0 candidate — T04 prepared, 9 October 2026
 
 C07/S07 and C08/S08 now include expanded course reasoning, 22 causal seminar stages, neutral runnable observations, scoped activity guards and current formative evidence forms. SQLite junction/transaction witnesses and local HTTP resource traces remain distinct from S08 pure-function models and conditional supplied React demonstrations. All 40 projects remain required individual work and all 38 learner targets remain unfinished. T01–T04 are prepared with explicit limits; T05–T07, native/print/PDF and whole-edition acceptance remain pending. This checkpoint is not a published release.

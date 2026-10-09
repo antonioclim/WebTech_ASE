@@ -10,11 +10,11 @@ P02 — CRUD workspace: authoritative publication — editable path from the sem
 
 P03 — Deep link: delivery classification — editable path from the seminar package root: CLASSROOM_RC6/student/p03.mjs
 
-Current entry: ../../../../ENTRY/S09.html
+Current entry: ../../../S09_SEMINAR/index.html
 
-Step-by-step tutorial: ../../../../TUTORIALS/S09.html
+Step-by-step tutorial: ../../../S09_SEMINAR/TUTORIAL.html
 
-Current evidence form: ../../../S09/WEBTECH_ASE_S09_EN_GB_v1.2.4_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html
+Current evidence form: ../../../S09_SEMINAR/EN_GB/FORMATIVE_ASSESSMENT.html
 
 Preserve support files, run the stated target checks and record actual results, including blocked or unexecuted checks. Complete the current form for all projects and export one PDF. Review its saved pages and filename before uploading it to the corresponding private Moodle Assignment. A blocked check is not a PASS.
 
@@ -30,9 +30,7 @@ The organising question is: **Which owner determines the URL, editable draft, co
 
 Use the five exact examples as source anchors. The offline laboratory is a set of small declared models, not those applications. Model notes are not observations of React, Express, a browser or a student's assessed project. Each example's previous README remains in the immutable predecessor; the three RC9 frontend READMEs are explicit documentation derivatives; the controlling explanation of its present scope is in SOURCE_NOTES.md. No dependency installation is required for this handout, the lesson or the model laboratory. Actual example execution requires a separately provisioned and qualified environment.
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-P01 Routed Notes is the complete central implementation. P03 Deep-Link Failure Repair is required individual portfolio work. P02 Full-Stack Notes CRUD transfers to the semester project; it is not a second complete in-class implementation. C09 creates no additional Moodle Assignment. This package does not include complete assessed project solutions.
+Historical full applications assigned P01 Routed Notes as central implementation, P03 Deep-Link Failure Repair as portfolio and P02 Full-Stack Notes CRUD as semester integration. Those roles do not govern current S09’s three required pure tasks. C09 creates no additional Moodle Assignment. This package does not include complete assessed project solutions.
 
 ## Learning outcomes
 
@@ -54,13 +52,9 @@ Separate an in-app transition from first document delivery. On a direct request,
 
 A meaningful URL lets another navigation attempt identify the same intended screen. Bookmarking, pasting a location and restoring history are therefore useful tests of hidden dependencies. They do not guarantee that the underlying resource still exists or that the current server can deliver the page. Reproducibility of identity and persistence of data are different properties.
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
+In historical full P01, the supplied store is synchronous and in memory. Direct initialisation at a seeded note is meaningful; creating a note and then constructing a fresh store does not preserve that new note. Do not import Week 08 persistence as an unannounced requirement. Record the fixture, starting location and lifetime of the store before comparing outcomes.
 
-In P01, the supplied store is synchronous and in memory. Direct initialisation at a seeded note is meaningful; creating a note and then constructing a fresh store does not preserve that new note. Do not import Week 08 persistence as an unannounced requirement. Record the fixture, starting location and lifetime of the store before comparing outcomes.
-
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-**Prediction / witness.** Starting fixture: the supplied P01 seed. Question: does /notes/1 identify the same resource after a fresh initialisation?
+**Prediction / witness.** Starting fixture: the historical full P01 seed. Question: does /notes/1 identify the same resource after a fresh initialisation?
 
 ### 3. Path selects a screen
 
@@ -80,9 +74,7 @@ Source scope: CAN-L01–CAN-L03. Read SOURCE_NOTES.md for preserved discrepancie
 
 Read the parameter of the matched route to determine which resource is addressed. A second local copy of the route ID can become stale when the location changes without the expected reset. Form state owns editable values, not a competing identity that can silently select another resource.
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-A path identity and a body identity must not contradict one another. In the supplied P01 normal form, the editable values are title and body. Do not add an ID field merely because the store accepts object properties. The broader store edge cases recorded in the audit are not permission to change a support file outside NotesApp.jsx. Keep the assessed edit boundary intact and make fixture assumptions visible.
+A path identity and a body identity must not contradict one another. The historical full NotesApp P01 form edited title/body while its URL owned identity. Its NotesApp.jsx edit and store assumptions belong to that old application. Current S09 P01 instead edits CLASSROOM_RC6/student/p01.mjs and recognises a raw path, with no form/store repair.
 
 **Prediction / witness.** Prediction: change the route parameter while keeping the component mounted. Which value must select the next resource?
 
@@ -110,9 +102,7 @@ Source scope: CAN-L04–CAN-L06. Read SOURCE_NOTES.md for preserved discrepancie
 
 ### 7. Worked example — URL state decoder
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-The exact example 01 contains a BrowserRouter, semantic links, a list with a URL filter, a parameterised detail view and an explicit not-found view. It does not contain an edit route or the complete P01 project. Use it to trace one location into one screen and one query value.
+The exact example 01 contains a BrowserRouter, semantic links, a list with a URL filter, a parameterised detail view and an explicit not-found view. It does not contain an edit route or the historical full P01 application. Use it to trace one location into one screen and one query value.
 
 Inspect canonical/01-url-state-decoder/src/main.jsx before running anything. In a qualified environment, the observation plan is to open the supplied routes directly, follow a link, change the URL filter and inspect an unknown path. Record actual addresses and views rather than writing that a build proves routing. The original README mentions a Node trace and 1/1 validation; a matching runner is not present in this example directory. That statement is historical, not a current result.
 
@@ -152,9 +142,7 @@ There are also two different direct-start tests. MemoryRouter initialisation can
 
 A controlled form makes its editable values explicit in component state. Typing should change that draft, not silently overwrite the last confirmed resource. The route supplies creation or editing context; the form supplies temporary input. Cancel must discard the attempt without manufacturing a successful write.
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-For P01, preserve the shared NoteForm requirement and the allowed file NotesApp.jsx. Initial values must belong to the addressed resource rather than to whichever detail was most recently visible. A missing edit target deserves an explicit state. A draft may be useful even after submission fails, so clearing it must follow a specified outcome rather than the mere start of a request.
+Historical full P01 required the shared NoteForm and the allowed file NotesApp.jsx. Initial values must belong to the addressed resource rather than to whichever detail was most recently visible. A missing edit target deserves an explicit state. A draft may be useful even after submission fails, so clearing it must follow a specified outcome rather than the mere start of a request.
 
 **Prediction / witness.** Predict the confirmed title, draft title and write count after typing a new title and then cancelling.
 
@@ -176,9 +164,7 @@ Source scope: CAN-L10–CAN-L12. Read SOURCE_NOTES.md for preserved discrepancie
 
 For a server-backed creation flow, the successful response supplies the identity and normalised data on which navigation should depend. Starting the request is not confirmation. Navigating early can create a screen that refers to a resource the server rejected or assigned a different identity.
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-The word success must be tied to the concrete example. P01's store is synchronous and local. Example 02 waits on a local timer and uses a fixed ID. Example 03 contains a real HTTP-oriented success path in its source, but no live request was executed while producing this package. These distinctions preserve the principle without awarding every asynchronous function the authority of a server.
+The word success must be tied to the concrete example. The historical full P01 application's store was synchronous and local; current S09 P01 has no store. Example 02 waits on a local timer and uses a fixed ID. Example 03 contains a real HTTP-oriented success path in its source, but no live request was executed while producing this package. These distinctions preserve the principle without awarding every asynchronous function the authority of a server.
 
 **Prediction / witness.** What exact value authorises navigation: a click, a fulfilled timer or a validated confirmed resource? State the source-specific answer.
 
@@ -208,9 +194,7 @@ Source scope: CAN-L13–CAN-L15. Read SOURCE_NOTES.md for preserved discrepancie
 
 Confirmed resource data, editable draft and request status have different meanings and lifetimes. A spinner is not an empty collection. A draft error is not proof that the last confirmed resource vanished. A newly confirmed title need not equal the text that was submitted.
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-Separate updates according to the owner and outcome. Starting a save changes submission state. A valid success can update the confirmed resource and deliberately reconcile the draft. Failure should retain enough intent for a retry. The course comparator implements a small result-classification boundary with injected fetch and validated note shape; it is not the full P02 NotesWorkspace solution or a guarantee about all real services.
+Separate updates according to the owner and outcome. Starting a save changes submission state. A valid success can update the confirmed resource and deliberately reconcile the draft. Failure should retain enough intent for a retry. The course comparator implements a small result-classification boundary with injected fetch and validated note shape; it is not the historical full P02 NotesWorkspace solution or a guarantee about all real services.
 
 **Prediction / witness.** Use the three columns confirmed / draft / status when tracing any save. Never use one ambiguous variable named data for all three.
 
@@ -226,9 +210,7 @@ The original handler does not catch fetch rejection or JSON parse failure; the i
 
 Initial loading means the requested data has not yet been confirmed. A successful empty collection means it has been confirmed as empty. Refreshing can retain previously confirmed data while seeking a newer snapshot. Failure should communicate what is unavailable without falsely declaring that existing data is gone.
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-The user interface should expose these distinctions rather than relying on a single truthiness test. In the later P02 transfer, an error during refresh and an error during mutation belong to different operations. A controlled fake can exercise these branches deterministically, but the test report must name the fake and the branch. A label such as empty-and-error does not prove both were actually asserted.
+The user interface should expose these distinctions rather than relying on a single truthiness test. In the historical full P02 transfer, an error during refresh and an error during mutation belong to different operations. A controlled fake can exercise these branches deterministically, but the test report must name the fake and the branch. A label such as empty-and-error does not prove both were actually asserted.
 
 **Prediction / witness.** Prediction: a refresh fails while a confirmed note is already visible. Which data and which error indication should remain?
 
@@ -242,29 +224,23 @@ Source scope: CAN-L16–CAN-L18. Read SOURCE_NOTES.md for preserved discrepancie
 
 A request that resolves later may have started earlier. Cancellation can stop cooperative work, but a promise that ignores cancellation may still settle. An implementation therefore needs an explicit policy for which result may update the current view. React's documentation illustrates ignoring obsolete results; this interpretation is separate from executing the canonical application. [R4]
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-Do not overgeneralise a refresh-versus-refresh guard. The phase-1 P02 model showed a positive newer-refresh control and a different interleaving in which an old list snapshot overwrote a later confirmed creation in local state. C09 teaches the distinction using a small timeline worksheet. The full private component remediation belongs to S09 production, not to a public model that exposes the assessed solution.
+Do not overgeneralise a refresh-versus-refresh guard. The historical phase-1 full P02 model showed a positive newer-refresh control and a different interleaving in which an old list snapshot overwrote a later confirmed creation in local state. C09 teaches the distinction using a small timeline worksheet. Current S09 P02 isolates successful refresh selection; full component remediation lies outside this pure task.
 
 **Prediction / witness.** Draw start-list → confirm-create → settle-old-list. Does the server delete anything, or can only the local view become stale?
 
 ### 20. An HTTP adapter isolates protocol detail
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-An adapter provides domain operations while containing URL encoding, fetch options, status interpretation, envelopes and signals. The actual method set must be read from the supplied object. Example 04 offers list and get. P02's adapter offers list, create, update and remove, despite its specification also mentioning get.
+An adapter provides domain operations while containing URL encoding, fetch options, status interpretation, envelopes and signals. The actual method set must be read from the supplied object. Example 04 offers list and get. The historical full P02 adapter offered list, create, update and remove, despite its specification also mentioning get.
 
 A Location header does not create an endpoint implementation. Do not add an unrequested GET route or change a protected support file to make a broad description appear true. Keep four validation questions separate: did transport succeed, what was the HTTP status, could the body be parsed and does the resulting value satisfy the operation's data contract? An envelope containing data is not automatically a valid array of notes.
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-**Prediction / witness.** Contract audit: list/get in E04 is not the same API as list/create/update/remove in P02.
+**Prediction / witness.** Contract audit: list/get in E04 is not the same API as list/create/update/remove in the historical full P02 application.
 
 ### 21. Worked example — HTTP adapter contract
 
 Example 04 contains a two-method adapter, an Express factory and one Node test declaration. That test is designed to bind an ephemeral loopback server, check list data, request encoded identity a/b and verify a mapped 404. It was not executed during this phase because actual Express qualification is separate.
 
-The server's direct-entry check compares a native path with URL.pathname. A separate launcher uses fileURLToPath and calls the unchanged factory only after an explicit local-start flag; it is not installed or started by this package. Parsing failure also remains distinct from mapped HTTP failure in the original adapter. The source-bound probes use controlled responses and do not send network traffic.
+The historical predecessor compared a native path with URL.pathname. The current canonical04 server already compares resolve(argv1) with fileURLToPath(import.meta.url); there is no current entry defect to repair. A separate launcher uses fileURLToPath and calls the unchanged factory only after an explicit local-start flag; it is not installed or started by this package. Parsing failure also remains distinct from mapped HTTP failure in the original adapter. The source-bound probes use controlled responses and do not send network traffic.
 
 **Prediction / witness.** E04: inspect encodeURIComponent(id). A source-level encoded URL is not evidence that the real server decoded and routed the request.
 
@@ -286,9 +262,7 @@ Treat these as complementary evidence rather than interchangeable scores. A sour
 
 A full-stack repository can organise client routes, components and adapters separately from the Express application and its process entry. Tests may target a client boundary or an actual loopback server without merging those responsibilities into one file. The factory/entry distinction also permits testing an application without necessarily starting its normal listener.
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-P02 keeps these boundaries while transferring work into the semester project. Its assessed path is the workspace component, not every server or adapter file. Instructor preview wrappers must be separately named. A local launcher is not a deployment system, an authorisation to publish or permission to install a different runtime.
+Historical full P02 kept these boundaries while transferring work into the semester project. Its assessed path is the workspace component, not every server or adapter file. Instructor preview wrappers must be separately named. A local launcher is not a deployment system, an authorisation to publish or permission to install a different runtime.
 
 **Prediction / witness.** client/ owns view and adapter; server/ owns API and process entry; tests/ must state which boundary they exercise.
 
@@ -318,9 +292,7 @@ Name the evidence class rather than saying tested. Source inspection can identif
 
 A direct GET for /notes/42 first reaches the server responsible for the HTML document. If it returns an appropriate document, the scripts can load and the client router can match the detail view. In-app navigation can skip that first document request and therefore conceal a deployment defect.
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-A successful document response alone is also insufficient. Example 05's minimal HTML contains a marker but no script element loading its app.js. It is a document-policy illustration, not a React boot demonstration. P03 supplies a different prebuilt client fixture; its complete delivery and execution require their own evidence.
+A successful document response alone is also insufficient. Example 05's minimal HTML contains a marker but no script element loading its app.js. It is a document-policy illustration, not a React boot demonstration. Historical full P03 supplied a different prebuilt client fixture; its complete delivery and execution require their own evidence.
 
 **Prediction / witness.** Request → document bytes → script bytes → client boot → route match. Identify the first unobserved arrow.
 
@@ -328,9 +300,7 @@ A successful document response alone is also insufficient. Example 05's minimal 
 
 A fallback should serve the SPA document only for the intended otherwise-unhandled navigation candidates, after the API and existing static-file boundaries. It must not turn every request into a nominal success. Method, namespace, representation and asset status all affect the policy.
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-The precise canonical policies differ. Example 05 checks the /api/ prefix, so exact /api is a distinct boundary case. The P03 reference uses a broader /api prefix, which also excludes /apiary. Those are source-specific decisions, not interchangeable universal predicates. The public worksheet supplies selected request classes and questions, not the complete assessed P03 repair. A predicate with a substituted accepts result is not real content negotiation.
+The precise canonical policies differ. Example 05 checks the /api/ prefix, so exact /api is a distinct boundary case. The historical full P03 reference uses a broader /api prefix, which also excludes /apiary. Those are source-specific decisions, not interchangeable universal predicates. The public worksheet supplies selected request classes and questions, not the complete assessed P03 repair. A predicate with a substituted accepts result is not real content negotiation.
 
 **Prediction / witness.** Explain the intended policy before changing code. Do not infer a complete server response from a standalone Boolean.
 
@@ -344,17 +314,13 @@ Source scope: CAN-L25–CAN-L27. Read SOURCE_NOTES.md for preserved discrepancie
 
 A request for a missing JavaScript asset should not be disguised as a successful HTML document. The browser asked for a different representation and needs a clear failure at the correct layer. An HTML body under an apparent script success can move the visible error away from its actual cause.
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-This is a useful counterexample for the supplied universal P03 variant. Its API router is already mounted first and handles its own miss, so an API failure must not be fabricated to support the lesson. Preserve the exact variant and use a genuinely affected asset request when the qualified HTTP stack is available. The offline matrix predicts outcomes without making those requests.
+This is a useful counterexample for the historical full universal P03 variant. Its API router is already mounted first and handles its own miss, so an API failure must not be fabricated to support the lesson. Preserve the exact variant and use a genuinely affected asset request when the qualified HTTP stack is available. The offline matrix predicts outcomes without making those requests.
 
 **Prediction / witness.** Record method, path, status, content type and body kind for an asset miss. The status alone is not the whole observation.
 
 ### 29. API misses must remain API responses
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-An API request should retain the API boundary's response semantics even when no resource or route is found. In the supplied P03 fixture, the API router includes its own JSON 404 handler. A universal document fallback mounted later does not automatically override a response already handled there.
+An API request should retain the API boundary's response semantics even when no resource or route is found. In the historical full P03 fixture, the API router includes its own JSON 404 handler. A universal document fallback mounted later does not automatically override a response already handled there.
 
 This positive control matters: a deliberately weak variant can still satisfy some requirements. Moving the API below fallback would create a different variant and a different claim. Keep the original order and report the result actually supported. The course model records selected API-control expectations but does not execute Express routing or prove arbitrary middleware behaviour.
 
@@ -386,9 +352,7 @@ An unknown client path may receive the SPA document and then render an in-app no
 
 The complete observation plan includes root and nested HTML navigation, HEAD behaviour, existing and missing assets, known and missing API paths, non-GET requests and non-HTML representations. Capture status, content type, body identity and meaningful handler order. A response marker checks less than a byte-for-byte comparison.
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-P03's client fixture includes a file named app-a1b2c3.js, but its build configuration fixes that name literally. Do not infer content addressing from the label or rebuild the protected fixture. The course distinguishes these source facts from future browser cache behaviour. Preserve exact inputs, state what was executed and retain unresolved qualification gates. Finish the meeting by naming one owner, one witness and one limitation; STOP at minute 60.
+Historical full P03's client fixture includes a file named app-a1b2c3.js, but its build configuration fixes that name literally. Do not infer content addressing from the label or rebuild the protected fixture. The course distinguishes these source facts from future browser cache behaviour. Preserve exact inputs, state what was executed and retain unresolved qualification gates. Finish the meeting by naming one owner, one witness and one limitation; STOP at minute 60.
 
 **Prediction / witness.** Retrieval 3: what would independently show document delivery, asset integrity and client route rendering? They require more than one assertion.
 
@@ -398,15 +362,13 @@ Source scope: CAN-L31–CAN-L32. Read SOURCE_NOTES.md for preserved discrepancie
 
 ## Source and evidence summary
 
-The canonical basis is `lectures/09-routing-full-stack/en/lecture.md` in tree `5bfb519fbb6aeb1855d372a747724b742c528c1fee06c1102b06402f8cf40587`. Public exact examples are indexed by CANONICAL_SOURCES.json. SOURCE_NOTES.md supplies source paths, lines and corrections; it does not edit the originals. The private phase-1 dossier controls the source findings and later project work. The current delivery does not repeat its entire semantic audit.
+The canonical basis is `lectures/09-routing-full-stack/en/lecture.md` in tree `5bfb519fbb6aeb1855d372a747724b742c528c1fee06c1102b06402f8cf40587`. Public exact examples are indexed by CANONICAL_SOURCES.json. SOURCE_NOTES.md supplies source paths, lines and corrections; it does not edit the originals. The current public source files control the stated mechanisms. Historical metadata establishes provenance, not current functional acceptance.
 
 The package contains a separate result-classification helper, a guarded example-04 launcher and a finite offline model laboratory. They have their own identities. They do not replace the five applications or reveal complete assessed NotesApp, NotesWorkspace or production-app repairs. Neither the lesson nor the model lab stores student data automatically or contacts a service.
 
 ## Transfer to S09 and the next lecture
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-Retain the full P01 contract, not just a successful demonstration link. Prepare to produce P03's reproduce–repair–verify portfolio in the single allowed server file. Keep P02 visible as semester integration without adding it to the S09 in-class implementation or creating a second Assignment. C09 preparation work feeds that later individual process; it is not a separately submitted assessed form.
+Historical full applications allocated P01 central work, P03 portfolio and P02 semester integration. Current S09 requires all three pure targets individually: noteRoute, applyRefresh and deliveryLane, with nine semantic stages. No additional application implementation is assigned here. C09 preparation work feeds that later individual process; it is not a separately submitted assessed form.
 
 The next-reading list is copied exactly under canonical/reading-list-next.md. It points forward to client-state architecture and is not a new Week 10 lesson or an instruction to install Redux now. Record one connection between route ownership and state ownership, then one boundary that remains different.
 
@@ -427,3 +389,8 @@ R5. Vite contributors. (n.d.). Building for production. https://vite.dev/guide/b
 
 R6. Express contributors. (n.d.). Error handling. https://expressjs.com/en/guide/error-handling/
 
+
+
+## Current worked route and stage handoff
+
+ Current worked route: follow one note across its owners Begin with the synthetic pasted address https://notes.example.invalid/notes/42?filter=archived , confirmed title Stored title and draft  mixed Case  . Before a client exists, the delivery server receives the document request. Suitable HTML can name scripts; loaded scripts can boot the client; the router can then read note42 and the query choice. Recognition still leaves resource existence unobserved until the API/store lookup succeeds.   Value/responsibility Authority and change Discriminating witness   Public identity and shareable choice URL path/query; navigation changes them Pasted address plus mounted router, not a retained click object  Editable title Component draft; typing changes it Changed draft while confirmed title remains stable  Confirmed note Accepted server representation; response may normalise it Actual success body and caller’s adoption, not outgoing payload  Initial document/files Delivery server; handler sends appropriate representation Method, path, status, Content-Type and bytes before client boot   The request ID belongs to the publication protocol, not to a fifth note identity. In the same story, typing changes the draft while the URL and Stored title remain stable. A successful canonical03 PATCH is predicted to return MIXED CASE; the component source adopts it. The later history decision still needs its own witness: reaching /notes/42 can be push or replace. A direct single-entry start must not inherit a fictional collection predecessor. Canonical02 supplies a useful counterexample to “an await proves confirmation”: it waits on a timer and uses literal42. Canonical04 supplies a counterexample to “status is always mapped first”: it reads JSON before response.ok, so malformed non-success data can fail parsing first. Canonical05 supplies a counterexample to “a marker proves boot”: its HTML has no script element. These causes connect the example limits instead of treating each as an isolated warning.   Initial history at cursor1 Operation to detail Retained entries and Back   [/notes,/notes/new] push [/notes,/notes/new,/notes/42], Back→/notes/new  [/notes,/notes/new] replace [/notes,/notes/42], Back→/notes   Those rows are model predictions until executed. Native Back/Forward needs actual browser evidence with the same starting history. For a failure symptom, locate the first missing frontier: request → document → script → boot → route → resource. Repair that smallest layer and repeat its discriminating input rather than changing an unrelated target. Four executable neutral demonstrations From C09 EN_GB run node tools/tw-kit.mjs example 01 for a different library URL/history model or example 02 for the exact adapter/derivative under injected fetch. Examples03/04 execute owned finite Node loopback HTTP for equipment confirmation and literal library delivery. They require HTTP capabilities, use bounded requests and close only their own listeners. No demonstration implements a S09 assessed function, mounts React Router or certifies native boot. Two retrieval questions, with causal explanations  Why can an internal link work while the same pasted address fails? The internal transition can reuse the loaded document and client. The pasted address asks the delivery server for the first document at that path; a failure there precedes client matching. Check that request and its representation before investigating the router.  Does the right detail URL prove history and server confirmation? The same destination can retain a different predecessor, and a timer/literal identity can reach it without a write. Check the accepted response and caller adoption separately from the initial history, navigation operation and Back result.  Named current seminar bridge  P01 recognises the complete raw path; P02 selects a supplied successful snapshot by request ownership; P03 classifies a stipulated delivery lane for declared tokens. All three are required individually, with three stages each. A mounted Router, actual request publication, HTTP representation and the supplied React player remain separate observations. C10/S10 then adds success-gated selection and unread derivation; do not invent its success field in S09. 

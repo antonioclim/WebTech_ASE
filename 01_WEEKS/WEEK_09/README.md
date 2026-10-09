@@ -1,4 +1,4 @@
-# Week 09 — Web Technologies 3.0.0
+# Week 09 — Web Technologies — v4.0.0 candidate
 
 - [C09 — Routing, forms and full-stack React](C09_COURSE/index.html)
 - [S09 — Routed Notes Application](S09_SEMINAR/index.html)
@@ -19,3 +19,5 @@
 Complete every listed project and follow the seminar guide for task checks, evidence and PDF submission.
 
 [All weeks](../README.md) · [Course plan](../../00_START_HERE/COURSE_PLAN.html)
+
+The candidate teaching revision preserves original carriers and canonical sources. Actual pure targets, supplied player, framework dependencies and native delivery have distinct verification scopes. All three S09 tasks remain required individual work.

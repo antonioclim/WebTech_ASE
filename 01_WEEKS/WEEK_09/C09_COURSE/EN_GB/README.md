@@ -1,29 +1,15 @@
-# RC10 CURRENT CLASSROOM TRANSFER
+# Current C09/S09 transfer
 
-Current S09 classroom transfer
+All three S09 projects are required individually: P01 noteRoute, P02 applyRefresh and P03 deliveryLane. Each has three semantic stages, an own executed case and a reflection. The [current seminar entry](../../S09_SEMINAR/index.html), [tutorial](../../S09_SEMINAR/TUTORIAL.html) and [formative assessment](../../S09_SEMINAR/EN_GB/FORMATIVE_ASSESSMENT.html) control this route.
 
-Complete every listed microproject individually in class. These are bounded tasks, not completion of the historical full applications.
-
-P01 — Routed notes: URL identity — editable path from the seminar package root: CLASSROOM_RC6/student/p01.mjs
-
-P02 — CRUD workspace: authoritative publication — editable path from the seminar package root: CLASSROOM_RC6/student/p02.mjs
-
-P03 — Deep link: delivery classification — editable path from the seminar package root: CLASSROOM_RC6/student/p03.mjs
-
-Current entry: ../../../ENTRY/S09.html
-
-Step-by-step tutorial: ../../../TUTORIALS/S09.html
-
-Current evidence form: ../../S09/WEBTECH_ASE_S09_EN_GB_v1.2.4_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html
-
-Preserve support files, run the stated target checks and record actual results, including blocked or unexecuted checks. Complete the current form for all projects and export one PDF. Review its saved pages and filename before uploading it to the corresponding private Moodle Assignment. A blocked check is not a PASS.
-
-The old full applications are optional advanced references. Their reused IDs, paths, allocations, portfolio requirements, timings and mark statements do not define these current microprojects. The actual Assignment supplies dates and assessment policy. No completion-time or mark guarantee is made here.
+Historical full applications reuse Pxx identifiers but do not assign current targets, portfolio roles, deadlines or optional tasks. No new course Assignment is created. Plan 30–45 minutes per project and 120–165 for the full unpiloted seminar sequence, including one genuine AI critique/check, one PDF and recap. A 100-minute slot needs a planned taught 20–65-minute continuation; a 90-minute slot needs 30–75. Keep unfinished work unfinished.
 
 # C09 — Routing, Forms and Full-Stack React
 
-Start with index.html. Read GUIDE.md and SOURCE_NOTES.md. This student-content candidate is WIP/PREVIEW, not FINAL. The exact source examples, offline teaching models and actual application executions are separate objects.
+Start with index.html. Read GUIDE.md and SOURCE_NOTES.md. This student-content candidate is v4.0.0 candidate, not FINAL. The exact source examples, offline teaching models and actual application executions are separate objects.
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
+Historical full application roles were P01 central, P03 portfolio and P02 integration. Current S09 requires all three pure targets individually. 60-minute course; no C09 Assignment. No additional C09 Assignment is created; dependency provisioning belongs to the separately prepared optional route.
 
-P01 central; P03 required portfolio; P02 capstone integration. 60-minute course; no C09 Assignment. No upload or installation authorised.
+## Current local route
+
+Start at [index.html](index.html), use all 24 retained course screens and the connected [handout](reading.html#current-story). From this C09 EN_GB directory run `node tools/tw-kit.mjs env`, then `node tools/tw-kit.mjs examples`, or the operating-system wrappers in RUN_EXAMPLES.md. Four finite neutral demonstrations are separate from canonical01–05, which retain exact bytes and require their own project-local dependencies. No npm is used by the neutral core. Actual Linux Node receipts do not certify native browser/PDF, Word, framework, other platforms or pilot feasibility.

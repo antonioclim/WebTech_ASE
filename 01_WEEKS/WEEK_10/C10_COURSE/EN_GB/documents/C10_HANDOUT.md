@@ -1,3 +1,47 @@
+# Current connected explanation
+
+Follow a workshop decision from owner to justified evidence
+
+A workshop page combines a search field, track choice, saved-session summary and notifications. Start with values rather than a preferred state tool. Search text is a local draft or view choice. Track and saved IDs may coordinate list and summary under one common owner. Unread is a read view of accepted notifications. A reply arriving from asynchronous work has its own publication identity. These values differ in consumers, lifetime and authority even when displayed together.
+
+Recover C08 by distinguishing accepted source from view. Recover C09 by distinguishing navigation identity, draft and confirmed resource. Recover C03 by checking which earlier array must remain unchanged. Make an inventory: value, owner, consumers, lifetime, permitted event and derivation. A component path makes ownership concrete; the name useState or Redux alone does not. Begin with the smallest owner that can satisfy all relevant consumers and explain what evidence would justify moving it.
+
+Canonical example01 owns tasks and filter in App. Filter reports a new value through its callback; App recalculates visible tasks and supplies the same projection to Count and rows. The task collection is retained. This is a working source design for coordinating siblings without Context. The supplied JSX contains no four-row inventory or persistence mechanism. Source reading can explain the data path, while actual rendering or storage would require the exact operation to run.
+
+Now imagine selecting a workshop track. The event authorises changing track, not discarding saved IDs, sort or another consumer’s preferences. A pure transition returns the next description while keeping the earlier input intact. S10 P01 isolates this policy in workshopTransition. Canonical example02 instead uses a local App useReducer for enabled/seats and throws on an unknown event. This API difference matters: the current seminar returns an explicit error envelope. Organising the change in a reducer does not make the state global.
+
+Saving a session requires both membership branches. If an ID is already saved, removing it must retain the rest; if absent, addition must retain earlier IDs. Copying only the outer object and then pushing into its input array changes the earlier snapshot. The contract does not demand deep cloning every unaffected object. Two genuine toggles undo each other. Deduplicating a supplied seed collection does not provide event deduplication or an event-ID ledger. The new fader demonstration teaches permitted-field preservation with a different numeric event and cannot replace this student work.
+
+Context changes access to the owner. Canonical example03 has two CounterProvider instances, each with its own useState. A left increment should leave the right unchanged because those state instances are distinct. Two plain counters explain the idea but do not execute providers. Its combined context value also differs from a proposed state/dispatch split. Stable dispatch and reduced subscription need carefully scoped analysis; neither proves zero renders or better total performance. Actual isolation needs a mounted test of both consumers.
+
+For a broader notifications domain, shared entity IDs, cross-route consumers and asynchronous coordination can justify a store. configureStore, createSlice, createAsyncThunk and createEntityAdapter each address a different responsibility. Canonical example04 keeps entities and an ordered ids sequence; descending createdAt puts n2 before n1. selectAll follows that order and unread derives from read flags. Its read action sets true and uses an Immer-managed draft. Plain seminar inputs have no Immer wrapper, so copying that assignment style would mutate old data.
+
+An accepted reply still needs a publication policy. Canonical example05 records a request ID on pending and accepts only matching fulfilled work. It runs a local timer, retains the ID after success and has no rejected handler. The preserved generic search helper intentionally adds rejected/reset and clears the ID. Its controlled trace is plain JavaScript, not a real thunk, network request or React effect. Refresh/refresh protection does not establish refresh/mark/reset behaviour or cancellation.
+
+S10 P02 supplies a narrower complete question: do owner and reply match, and did this reply succeed? Only their conjunction selects received; the other three rows retain items. A matching successful empty reply clears the list. A stale empty reply does not. Derive unread from whichever complete list was selected so both output fields describe the same snapshot. Returning the right list with the wrong count is still incoherent. This function marks no item read and executes no server operation.
+
+Finally choose an architecture descriptor only after stating every required capability. A low cost cannot compensate for a missing requirement. In S10 P03, candidates supply nonnegative costs; the bounded contract does not introduce an arbitrary-input validation policy. Among eligible candidates a unique minimum returns its ID. No eligible candidate and a tied minimum both return null, for different reasons. A higher-only tie does not invalidate a lower unique minimum. Reverse input order as a falsifier for first-item or lexical preference.
+
+The course’s fixed expressions 1+p and 2+0.15p illustrate sensitivity under declared coefficients. Their crossing 20/17 is algebra, not an empirical recommendation. The historical lexical-tie model has another explicit policy; current S10 preserves null for a minimum tie. Likewise a static capability label or PASS signature does not establish newly observed parity. A real decision needs actual candidate behaviour, representative measurements and stated evidence limits.
+
+Keep the chain visible in your records: owner → event or arriving reply → authorised decision → next data → derived view → distinguishing witness. Source explanation, pure model, build, React/JSDOM interaction and native browser action are different evidence classes. The supplied seminar React player owns selected fixture/result/error only. It does not implement workshop Context, a notifications slice, effects, HTTP, Worker or Service Worker. Missing dependencies block that optional lane without changing a pure result into a framework claim.
+
+Retrieval: reason before revealing
+
+Does useReducer alone make a value application-global?
+
+No. The component or provider calling it owns the state instance. Name consumers and lifetime to justify moving that owner.
+
+Why choose a notification list before counting unread?
+
+The list and count must describe the same accepted snapshot. Counting a refused reply gives a contradictory read view even if retained items are correct.
+
+Can a very cheap candidate compensate for one missing capability?
+
+No. Eligibility precedes cost comparison. A declared capability descriptor is supplied input rather than proof of a real library’s limits.
+
+Recap the prior prediction, changed mechanism, actual witness and remaining limit. In C11 the client’s role label and hidden button remain UI decisions; server trust and authorisation require the actual actor and operation. The same habit of naming authority applies, but a client function cannot certify server enforcement.
+
 # RC10 CURRENT CLASSROOM TRANSFER
 
 Current S10 classroom transfer
@@ -10,11 +54,11 @@ P02 — Notifications: latest refresh wins — editable path from the seminar pa
 
 P03 — Architecture: capability before cost — editable path from the seminar package root: CLASSROOM_RC6/student/p03.mjs
 
-Current entry: ../../../../ENTRY/S10.html
+Current entry: ../../../S10_SEMINAR/index.html
 
-Step-by-step tutorial: ../../../../TUTORIALS/S10.html
+Step-by-step tutorial: ../../../S10_SEMINAR/TUTORIAL.html
 
-Current evidence form: ../../../S10/WEBTECH_ASE_S10_EN_GB_v1.2.4_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html
+Current evidence form: ../../../S10_SEMINAR/EN_GB/FORMATIVE_ASSESSMENT.html
 
 Preserve support files, run the stated target checks and record actual results, including blocked or unexecuted checks. Complete the current form for all projects and export one PDF. Review its saved pages and filename before uploading it to the corresponding private Moodle Assignment. A blocked check is not a PASS.
 
@@ -28,9 +72,7 @@ Who owns each value, for which consumers and lifetime, and what evidence makes a
 
 The scheduled content ends at minute 60. The other 30 minutes reserved in the timetable are not overflow, hidden installation time or an extra implementation segment. Three retrieval intermezzos sit inside the eight content blocks. Reading depth beyond those blocks is preparation or transfer work, not a claim that everything can be performed during the meeting.
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-P01 Shared Workshop State is the full central implementation. P02 Redux Toolkit Notification Center is optional advanced work. P03 contributes a required state Architecture Decision Record (ADR) to the semester project; completing its entire comparator is separate follow-up, not a hidden S10 requirement. C10 creates no additional Moodle Assignment.
+The historical Shared Workshop State, Redux Toolkit Notification Centre and capstone state ADR had different full-application roles. Current S10 instead requires all three individual functions in CLASSROOM_RC6/student/p01.mjs, p02.mjs and p03.mjs. This retained explanation supports those decisions without adding full-app or ADR implementation obligations.
 
 The offline lesson and models need no package installation. The React examples are source projects, not applications that work by double-clicking their source HTML. Consult RUN_EXAMPLES.md before any later, separately authorised use of a qualified environment. Historical README validation statements are not fresh results. WIP/PREVIEW does not mean FINAL.
 
@@ -59,9 +101,7 @@ In the workshop target, each card owns its disclosure state. A promise that disc
 
 When sibling consumers must agree, place the authoritative value in their nearest common owner and pass a value down with a callback representing intent. This is a coordination decision, not a ban on props. The owner can derive several views from one value without creating several synchronised copies.
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-EX-01 keeps its filter in App and supplies Filter with a value and callback; Count receives the derived visible items. The filter is shared through that common owner. In P01, search is local relative to the shared Context boundary, but its actual owner is WorkshopWorkspace, not the toolbar that renders the input. Preserve that source distinction (N-02).
+EX-01 keeps its filter in App and supplies Filter with a value and callback; Count receives the derived visible items. The filter is shared through that common owner. In the historical Workshop Context, search was local relative to the shared Context boundary, but its actual owner is WorkshopWorkspace, not the toolbar that renders the input. Preserve that source distinction (N-02).
 
 **Check:** Name the common owner rather than only the input component.
 
@@ -71,9 +111,7 @@ EX-01 keeps its filter in App and supplies Filter with a value and callback; Cou
 
 Props show where a value enters a component and callbacks expose who may request a change. Passing through several layers can become burdensome when intermediates merely forward contracts. First identify those intermediates and the changes they must carry. Counting files or disliking callback syntax is not evidence of a coordination problem.
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-The preserved P01 save/count witness is deliberately small. It does not contain a measured deep chain or every behaviour of the workshop target. Compare only its actual shared action, then document the additional target behaviours separately. Context cannot be justified by attributing absent complexity to the comparator (N-02).
+The preserved historical Workshop Context save/count witness is deliberately small. It does not contain a measured deep chain or every behaviour of the workshop target. Compare only its actual shared action, then document the additional target behaviours separately. Context cannot be justified by attributing absent complexity to the comparator (N-02).
 
 **Check:** What does the comparator actually implement?
 
@@ -93,9 +131,7 @@ EX-01 computes visible from tasks and filter, then Count reads visible.length. T
 
 Moving a resource representation into Context or Redux changes how client consumers read it; it does not change who confirms the resource. Keep draft, confirmed representation and lifecycle status conceptually separate. A loading flag describes work in progress, not successful persistence.
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-For the supplied U10 P02 demonstration, the injected notifications API operates on an in-memory array. Its confirmation establishes the local adapter contract, not an HTTP response or durable server update. The supplied MemoryRouter also does not demonstrate native address-bar history. A later server integration needs its own evidence rather than a change of label (N-07).
+For the historical Notifications Centre demonstration, the injected notifications API operates on an in-memory array. Its confirmation establishes the local adapter contract, not an HTTP response or durable server update. The supplied MemoryRouter also does not demonstrate native address-bar history. A later server integration needs its own evidence rather than a change of label (N-07).
 
 **Check:** Is this authority a real server or the supplied local adapter?
 
@@ -125,9 +161,7 @@ Before executing a transition, record before/event/after and the fields that mus
 
 An event such as session/toggled names a user intention rather than exposing arbitrary assignments to callers. A focused vocabulary makes unsupported event types visible and prevents generated typos being silently accepted. Error wording should be stable enough to identify the specific contract failure.
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-Do not confuse seed normalisation with event deduplication. Removing repeated saved IDs from an initial array is different from rejecting duplicate event deliveries. Two deliberate toggles of the same ID reverse one another; the supplied P01 contract has no event-ID ledger. Values outside the canonical UI are labelled boundary cases, not automatically new student obligations (N-04).
+Do not confuse seed normalisation with event deduplication. Removing repeated saved IDs from an initial array is different from rejecting duplicate event deliveries. Two deliberate toggles of the same ID reverse one another; the historical Workshop Context contract has no event-ID ledger. Values outside the canonical UI are labelled boundary cases, not automatically new student obligations (N-04).
 
 **Check:** Are these duplicate values or two actual events?
 
@@ -165,9 +199,7 @@ Specify the provider’s scope before choosing Context. Consumers read the appro
 
 ### 12. Providers own state
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-A useful boundary may combine a provider, pure reducer, state context, dispatch context and guarded hooks. In P01 the shared domain is only track and savedIds. Search, derived counts and card disclosure remain outside it. That is a scope rule, not a request to replace all local controls.
+A useful boundary may combine a provider, pure reducer, state context, dispatch context and guarded hooks. In the historical Workshop Context the shared domain was only track and savedIds. Search, derived counts and card disclosure remain outside it. That is a scope rule, not a request to replace all local controls.
 
 The canonical comment about separate contexts reverses the beneficiary: dispatch-only consumers need not subscribe to the changing state context. It does not protect state readers from necessary state updates or eliminate parent-driven renders. The derived note corrects the explanation without changing the assessed provider source or supplying its implementation (N-03).
 
@@ -199,9 +231,7 @@ The offline companion uses two independent plain counter values to explain that 
 
 Consider a wider application-state boundary when real consumers and transitions require it: entities shared across routes, a longer lifetime, coordinated asynchronous work or inspectable events. Record which of these requirements is present rather than using a library name as the requirement itself.
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-P02 is optional advanced work because its notification domain illustrates these pressures. It is not the default solution for P01 and not a hidden marking condition. The required ADR may conclude that a smaller owner remains eligible. Explain the cost of broadening a boundary and what evidence would justify changing that decision later.
+The historical Notifications Centre illustrated cross-route entities and asynchronous coordination as advanced architecture work. Current S10 P02 is mandatory and isolates an authorised list replacement with its unread derivation. A smaller owner remains legitimate if it satisfies all actual consumers; the broader historical slice is not an additional task.
 
 **Check:** Which requirement cannot the smaller owner satisfy?
 
@@ -231,7 +261,7 @@ This flow does not make asynchronous work sequential by default. An older reques
 
 The canonical lecture selects configureStore, createSlice, createAsyncThunk and createEntityAdapter for its Redux examples. These APIs have different responsibilities: store construction, domain transitions, asynchronous lifecycle actions and entity operations. Dependency presence alone is not a reason to move a domain into Redux.
 
-The example package.json and lockfile are copied exactly. This phase neither installs them nor certifies the availability of their pinned versions. Review API semantics using the separately listed documentation, but do not silently update the source when a documentation page describes a newer release. The optional seminar slice remains outside the complete public course solution.
+The example package.json and lockfile are copied exactly. This phase neither installs them nor certifies the availability of their pinned versions. Review API semantics using the separately listed documentation, but do not silently update the source when a documentation page describes a newer release. The historical full seminar slice remains reference context; current S10 P02 is mandatory with a narrower pure function contract.
 
 **Check:** Which API belongs to which responsibility?
 
@@ -291,7 +321,7 @@ These are fixture-specific predictions. LAB-M07/M08 calculate the same small val
 
 Memoisation can be useful when a derivation is expensive or a consumer requires stable references. It is not automatically required for every primitive count. First specify the workload, computation and observation that make the extra mechanism worthwhile.
 
-A render count is not a performance measurement by itself, and comparing different behaviours invalidates the inference. For the ADR, state which performance claim is measured and which is merely a hypothesis. This C10 package provides no React profiling, no selector benchmark and no evidence that a larger state library is faster for the cohort’s applications.
+A render count is not a performance measurement by itself, and comparing different behaviours invalidates the inference. For an architecture rationale, state which performance claim is measured and which is merely a hypothesis. This C10 package provides no React profiling, no selector benchmark and no evidence that a larger state library is faster for the cohort’s applications.
 
 **Check:** What measurement would make this optimisation claim falsifiable?
 
@@ -319,13 +349,9 @@ A thunk lifecycle separates pending, fulfilled and rejected actions, but createA
 
 ### 27. Server confirmation remains authoritative
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
+For a confirmed-only workflow, publish the returned entity after the adapter resolves, not at the button click. Optimistic changes would require an additional explicit rollback and conflict policy. That is outside the historical Notifications Centre contract.
 
-For a confirmed-only workflow, publish the returned entity after the adapter resolves, not at the button click. Optimistic changes would require an additional explicit rollback and conflict policy. That is outside the supplied optional P02 contract.
-
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-Even confirmed-only publication needs ordering. An older list snapshot can overwrite a later confirmed item when both are accepted without coordination. The C10 trace records that possible local sequence and its limits; it is not a repaired notification slice. A changed local read flag does not prove that server state itself has reverted. The private S10 successor is a separate production task.
+Even confirmed-only publication needs ordering. An older list snapshot can overwrite a later confirmed item when both are accepted without coordination. The C10 trace records that possible local sequence and its limits; it is not a repaired notification slice. A changed local read flag does not prove that server state itself has reverted. Current S10 P02 has the narrower pure owner/success/list contract; it does not repair this full historical application.
 
 **Check:** Was this snapshot requested before or after the confirmed mutation?
 
@@ -335,7 +361,7 @@ Even confirmed-only publication needs ordering. An older list snapshot can overw
 
 Recording the current request on pending and checking it on settlement can reject older results within that request family. The rule must be applied to all relevant terminal branches. The chosen identity is not an entity ID and does not make requests synchronous.
 
-Refresh-versus-refresh, refresh-versus-mark and reset-versus-in-flight are different policies. Protecting the first does not automatically protect the others. LAB-M09 to M13 use named finite traces, not the optional assessed slice. The broader same-ID mark counterexample involves programmatic concurrency; the ordinary UI disables its loading button, so that trigger must be stated. [R4]
+Refresh-versus-refresh, refresh-versus-mark and reset-versus-in-flight are different policies. Protecting the first does not automatically protect the others. LAB-M09 to M13 use named finite traces, not the historical Notifications Centre slice. The broader same-ID mark counterexample involves programmatic concurrency; the ordinary UI disables its loading button, so that trigger must be stated. [R4]
 
 **Check:** Which action families share the ordering policy?
 
@@ -345,9 +371,7 @@ Refresh-versus-refresh, refresh-versus-mark and reset-versus-in-flight are diffe
 
 EX-05 supplies a local timer-based thunk. Pending records the latest request ID; fulfilled checks that identity before publishing the returned string array. Start a slow request, then a fast one: accepting the fast result and ignoring the late slow result illustrates its actual success-path contract.
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-There is no rejected handler in the exact configuration. A separately injected rejection leaves loading unchanged in the captured-case model. That is a bounded counterexample, not an error observed from the normally resolving timer or a server. A small derived search-lifecycle helper shows a failure branch, clearly separate from EX-05 and from the full P02 solution (N-06).
+There is no rejected handler in the exact configuration. A separately injected rejection leaves loading unchanged in the captured-case model. That is a bounded counterexample, not an error observed from the normally resolving timer or a server. A small derived search-lifecycle helper shows a failure branch, clearly separate from EX-05 and from the historical Notifications Centre and current notificationRefresh (N-06).
 
 **Check:** Which terminal action is absent from the original configuration?
 
@@ -365,11 +389,9 @@ An unavailable runtime, parser error, missing dependency or failed reporter is n
 
 ### 31. Compare only behaviourally equivalent candidates
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
+Before comparing costs, define the behaviour and capabilities that make a candidate eligible. The historical architecture comparator had two preference implementations and static descriptors. Its flags and signature are not fresh proof that the student characterised every required interaction.
 
-Before comparing costs, define the behaviour and capabilities that make a candidate eligible. The supplied P03 has two preference implementations and static descriptors. Its flags and signature are not fresh proof that the student characterised every required interaction.
-
-The mandatory ADR may use a manually reasoned evidence table. It must label actual observations, source-supported limits and supplied assumptions separately. A capability missing from these two candidates is not universally impossible with the same library family. Do not add a fictional Redux candidate or complete the assessed comparator merely to generate a confident-looking recommendation (N-08).
+A reasoned architecture note can separate observed behaviour, source limits and supplied cost assumptions. In the historical full-app context this supported an ADR; current S10 P03 requires the bounded function and its stage evidence. A missing capability in a descriptor is not a universal limit of a library family. Do not invent a tested candidate or extra full-app task.
 
 **Check:** Which observation supports this candidate’s eligibility?
 
@@ -399,9 +421,7 @@ Change one assumption and show what changes. Keep capability gates distinct from
 
 A useful ADR names the problem, owners, consumers, lifetime, authority, required capabilities and evidence limits. Explain why the selected candidate is eligible, which alternatives were rejected and what observation would trigger reconsideration. A generic lowest-cost sentence alone does not identify the satisfied requirement.
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-The exact P03 comparator can misdescribe a tied alternative as more costly after an explicit tie-break. The derived explanation corrects that wording without changing the canonical comparator. Malformed flags, absent signatures and non-finite costs also need an explicit data contract before any comparison. Neither a JSON flag nor a form selector authenticates a real test (N-09/N-10).
+The historical full comparator can misdescribe a tied alternative as more costly after an explicit tie-break. The derived explanation corrects that wording without changing the canonical comparator. Malformed flags, absent signatures and non-finite costs also need an explicit data contract before any comparison. Neither a JSON flag nor a form selector authenticates a real test (N-09/N-10).
 
 **Check:** Would your reason still be true if the alternative had equal cost?
 
@@ -427,17 +447,11 @@ The offline lab exposes fixed named traces and this arithmetic only. It does not
 
 ## Transfer and honest completion
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
+For current P01, inventory the fields and events of workshopTransition and preserve all unrelated state content. Edit only CLASSROOM_RC6/student/p01.mjs. The historical provider path is not a current edit route. A pure transition or seed example does not establish mounted provider isolation.
 
-For P01, first inventory track and savedIds against the local search and disclosure controls. The permitted future edit is student/src/state/workshop-state.jsx. Keep the full central contract; do not move controls into prohibited support files to repair a prose discrepancy. A normalisation check is not mounted provider isolation.
+For current P03, record a capability matrix, declared costs and a reason for a unique winner or legitimate null. The historical capstone ADR remains a design-reading example rather than an additional submission. Name supplied assumptions, source limits and actual observations separately; full notifications or comparator apps are not required.
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-For the required ADR, identify one actual capstone state-placement decision and its evidence. Distinguish capabilities of the candidates you inspected from universal claims about library families. Include a sensitivity check and a legitimate tie or no-eligible-candidate case when appropriate. Full P02 and full comparator implementation are not hidden S10 requirements.
-
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-The minute-60 stop ends the meeting’s content. It does not declare P01, the ADR or a real Gemini exchange complete. Retain unfinished work until the teacher-set deadline. C10 has no separate Assignment; S10 will bring its own evidence form and one-PDF submission route in the next production phase.
+The selected 60 minute lecture stop is an unpiloted content plan rather than a completion claim. Current S10 has its nine-stage tutorial and blank formative record now. All three projects, one genuine AI critique with an independent check and one PDF remain required through the taught continuation. C10 creates no separate Assignment or deadline.
 
 ## Evidence ladder
 

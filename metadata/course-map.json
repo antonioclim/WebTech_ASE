@@ -480,8 +480,8 @@
         "minimum": 30,
         "maximum": 45
       },
-      "shorter_slot_policy": "Arrange an explicit continuation; all two or three individual projects remain required.",
-      "candidate_revision_status": "PENDING_LATER_TRANCHE_REVIEW"
+      "shorter_slot_policy": "Reserve an explicit taught continuation estimated at 20–65 minutes beyond a 100-minute slot or 30–75 beyond 90; validate with a novice pilot. All three individual projects remain required. Allocate supplied React demonstrations separately when their environment is prepared.",
+      "candidate_revision_status": "T05_COMPLETE_WITH_EXPLICIT_LIMITS"
     },
     {
       "week": 10,
@@ -536,8 +536,8 @@
         "minimum": 30,
         "maximum": 45
       },
-      "shorter_slot_policy": "Arrange an explicit continuation; all two or three individual projects remain required.",
-      "candidate_revision_status": "PENDING_LATER_TRANCHE_REVIEW"
+      "shorter_slot_policy": "Reserve an explicit taught continuation estimated at 20–65 minutes beyond a 100-minute slot or 30–75 beyond 90; validate with a novice pilot. All three individual projects remain required. Allocate supplied React demonstrations separately when their environment is prepared.",
+      "candidate_revision_status": "T05_COMPLETE_WITH_EXPLICIT_LIMITS"
     },
     {
       "week": 11,

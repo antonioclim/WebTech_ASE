@@ -323,6 +323,62 @@
     165
   ],
   "timeline_numeric_values": "Lower end of the unpiloted planning range, not an empirical minimum or a completion threshold.",
-  "planning_continuation": "If the actual institutional slot is shorter, confirm a continuation arrangement with the lecturer. All projects remain required individual classroom work; incomplete work remains incomplete.",
-  "private_evidence_location": "A private home-folder WebTech_Evidence/Sxx directory outside the entire extracted collection; use the detailed tutorial for operating-system-specific quoted absolute paths."
+  "planning_continuation": "Unpiloted proposal: checkpoint around minute 60; preserve exact stage, unsatisfied assertion, fixture path and prediction around minute 80\u201390; taught continuation 20\u201365 beyond 100 or 30\u201375 beyond 90. All three projects, one genuine AI critique and one PDF remain required.",
+  "private_evidence_location": "A private home-folder WebTech_Evidence/Sxx directory outside the entire extracted collection; use the detailed tutorial for operating-system-specific quoted absolute paths.",
+  "semantic_stages": [
+    {
+      "project_id": "P01",
+      "stage": "P01-01",
+      "title": "Map the event and the authorised field",
+      "tutorial_anchor": "P01-01"
+    },
+    {
+      "project_id": "P01",
+      "stage": "P01-02",
+      "title": "Trace both toggle branches",
+      "tutorial_anchor": "P01-02"
+    },
+    {
+      "project_id": "P01",
+      "stage": "P01-03",
+      "title": "Preserve unrelated state and distinguish refusal",
+      "tutorial_anchor": "P01-03"
+    },
+    {
+      "project_id": "P02",
+      "stage": "P02-01",
+      "title": "Separate matching ownership from success",
+      "tutorial_anchor": "P02-01"
+    },
+    {
+      "project_id": "P02",
+      "stage": "P02-02",
+      "title": "Select the authoritative list",
+      "tutorial_anchor": "P02-02"
+    },
+    {
+      "project_id": "P02",
+      "stage": "P02-03",
+      "title": "Derive unread from the selected list",
+      "tutorial_anchor": "P02-03"
+    },
+    {
+      "project_id": "P03",
+      "stage": "P03-01",
+      "title": "Establish every required capability",
+      "tutorial_anchor": "P03-01"
+    },
+    {
+      "project_id": "P03",
+      "stage": "P03-02",
+      "title": "Compare costs only among eligible candidates",
+      "tutorial_anchor": "P03-02"
+    },
+    {
+      "project_id": "P03",
+      "stage": "P03-03",
+      "title": "Distinguish a tied minimum from no eligible candidate",
+      "tutorial_anchor": "P03-03"
+    }
+  ]
 }

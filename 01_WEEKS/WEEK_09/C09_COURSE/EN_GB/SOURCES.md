@@ -1,32 +1,14 @@
-# RC10 CURRENT CLASSROOM TRANSFER
+# Current C09/S09 transfer
 
-Current S09 classroom transfer
+All three S09 projects are required individually: P01 noteRoute, P02 applyRefresh and P03 deliveryLane. Each has three semantic stages, an own executed case and a reflection. The [current seminar entry](../../S09_SEMINAR/index.html), [tutorial](../../S09_SEMINAR/TUTORIAL.html) and [formative assessment](../../S09_SEMINAR/EN_GB/FORMATIVE_ASSESSMENT.html) control this route.
 
-Complete every listed microproject individually in class. These are bounded tasks, not completion of the historical full applications.
-
-P01 — Routed notes: URL identity — editable path from the seminar package root: CLASSROOM_RC6/student/p01.mjs
-
-P02 — CRUD workspace: authoritative publication — editable path from the seminar package root: CLASSROOM_RC6/student/p02.mjs
-
-P03 — Deep link: delivery classification — editable path from the seminar package root: CLASSROOM_RC6/student/p03.mjs
-
-Current entry: ../../../ENTRY/S09.html
-
-Step-by-step tutorial: ../../../TUTORIALS/S09.html
-
-Current evidence form: ../../S09/WEBTECH_ASE_S09_EN_GB_v1.2.4_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html
-
-Preserve support files, run the stated target checks and record actual results, including blocked or unexecuted checks. Complete the current form for all projects and export one PDF. Review its saved pages and filename before uploading it to the corresponding private Moodle Assignment. A blocked check is not a PASS.
-
-The old full applications are optional advanced references. Their reused IDs, paths, allocations, portfolio requirements, timings and mark statements do not define these current microprojects. The actual Assignment supplies dates and assessment policy. No completion-time or mark guarantee is made here.
+Historical full applications reuse Pxx identifiers but do not assign current targets, portfolio roles, deadlines or optional tasks. No new course Assignment is created. Plan 30–45 minutes per project and 120–165 for the full unpiloted seminar sequence, including one genuine AI critique/check, one PDF and recap. A 100-minute slot needs a planned taught 20–65-minute continuation; a 90-minute slot needs 30–75. Keep unfinished work unfinished.
 
 # C09 — Sources and evidence rights
 
 ## Primary basis
 
 The primary basis is the 32 numbered sections of `lectures/09-routing-full-stack/en/lecture.md`, its five examples and the active 14-week U09 curriculum. CANONICAL_SOURCES.json records every exact public copy. The protected tree is `5bfb519fbb6aeb1855d372a747724b742c528c1fee06c1102b06402f8cf40587`. CAN-L01 through CAN-L32 refer to lecture headings, SOURCE:01 through SOURCE:05 to the five example directories and LAB: codes to separate model scenarios.
-
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
 
 The W09 phase-1 architecture replaces the source's 95-minute allocation with exactly 60 minutes. It does not silently change the technical source. P01 is central, P03 required portfolio and P02 capstone integration. The public course does not contain a completed assessed project solution. The immutable predecessor retains the historical README statements; RC9 frontend READMEs correct the documented mismatches; SOURCE_NOTES.md identifies discrepancies and new interpretation. The original lecture and GIFT keys remain private.
 
@@ -48,3 +30,7 @@ Consulted 30 September 2026. These are real primary documentation pages, not res
 A source expression, an executed pure function, a callback recorder, a model DOM and an actual application trace are different classes of evidence. Static projections of HTML are not browser runs. DOCX layout rendering is not native Word acceptance. Repeating the same suite in a copied package verifies packaging, not new independent properties. No actual student or Gemini observation is generated in this course.
 
 The exact next-reading file points to Unit 10. Its existence does not add a state-management project to C09 or certify current availability of those libraries. No runtime, dependency installation or production publication is authorised by this package.
+
+## Current primary checks — 9 October 2026
+
+React Router [routing](https://reactrouter.com/start/declarative/routing) and [navigation](https://reactrouter.com/start/declarative/navigating) were read as current conceptual references. Their page version differed from the retained 7.18.2 pin; its specific 7.18.2 route page was unavailable. No framework runtime qualification follows. React [useEffect](https://react.dev/reference/react/useEffect), MDN [replaceState](https://developer.mozilla.org/en-US/docs/Web/API/History/replaceState), [URL.pathname](https://developer.mozilla.org/en-US/docs/Web/API/URL/pathname) and [Response.json](https://developer.mozilla.org/en-US/docs/Web/API/Response/json) corroborate the separate history/URL/parse frontiers. [RFC 9110 §9.3.2](https://www.rfc-editor.org/rfc/rfc9110.html#section-9.3.2) corroborates HEAD without response content. The author used original paraphrases, no copied complete third-party code.

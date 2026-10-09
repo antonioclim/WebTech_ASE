@@ -1,39 +1,64 @@
-# C09 — Planned run route for a pre-provisioned environment
+# C09 — executable routes and their scopes
 
-These commands are a documented future route, not executions performed by the assistant and not an installation request to the owner. Use only after the relevant environment, permission and dependencies have been established separately. No npm install, npm ci, npx acquisition or dependency upgrade is authorised here. The source README installation commands remain historical.
+Open the terminal in `01_WEEKS/WEEK_09/C09_COURSE/EN_GB`. Keep canonical sources, assets, derivatives and locks unchanged. No install is performed by these launchers. [Environment policy](../../../../00_START_HERE/ENVIRONMENT.html) explains capability diagnostics: ENV_OK/ENV_WARN permit the selected activity; ENV_BLOCKED stops only that activity. Record observed versions, executable and CWD, not a copied reference. The retained reference has not been executed here.
 
-Open one local terminal in the extracted public package. A terminal is used only to run a local teaching example later, never for GitHub upload. Inspect package.json and the exact lockfile first. If a command or dependency is absent, record BLOCKED_ENVIRONMENT and stop that run; continue only the clearly labelled reading/model route. The prescribed project runtime is 24.21.0/11.19.0, which was not obtained or qualified here.
+## Four finite neutral demonstrations
 
-## 01-url-state-decoder
+On macOS/Linux, from C09 EN_GB:
 
-Working directory: `canonical/01-url-state-decoder`. Declared scripts: `dev`, `build`.
+```sh
+bash CHECK_ENVIRONMENT.sh
+bash RUN_ALL_EXAMPLES.sh
+```
 
-In the source directory, `npm run dev` starts the planned Vite route. Use the local URL actually printed by Vite, not an assumed port. When finished, Ctrl+C stops the process. `npm run build` is a separate build-only check, not browser acceptance. Do not run both copies at once.
+On Windows PowerShell, from the same folder:
 
-## 02-form-navigation-policy
+```powershell
+.\CHECK_ENVIRONMENT.cmd
+.\RUN_ALL_EXAMPLES.cmd
+```
 
-Working directory: `canonical/02-form-navigation-policy`. Declared scripts: `dev`, `build`.
+Each successful wrapper exits 0; ENV_WARN is non-blocking. To select an activity directly:
 
-In the source directory, `npm run dev` starts the planned Vite route. Use the local URL actually printed by Vite, not an assumed port. When finished, Ctrl+C stops the process. `npm run build` is a separate build-only check, not browser acceptance. Do not run both copies at once.
+```text
+node tools/tw-kit.mjs env core
+node tools/tw-kit.mjs example 01
+node tools/tw-kit.mjs example 02
+node tools/tw-kit.mjs env http
+node tools/tw-kit.mjs example 03
+node tools/tw-kit.mjs example 04
+```
 
-## 03-authoritative-server-state
+| ID and file under DEMONSTRATIONS | Observable property after actual execution | Scope |
+| --- | --- | --- |
+|01-location-and-history.mjs|URL pathname/query/fragment, supplied push/replace predecessor and single-entry control|Library value/history-array model; no route matching, native history or write|
+|02-response-frontiers.mjs|Canonical503 malformed body: SyntaxError with one read; derivative HTTP503 with zero reads, plus seven derivative cases|Exact source functions under injected fetch; no HTTP/React/Express|
+|03-owned-confirmation.mjs|Six equipment-label exchanges: accepted normalisation, blank refusal, independent later GET, malformed successful JSON and missing resource|Actual finite owned Node HTTP, memory only; no canonical stack or durability|
+|04-delivery-frontier.mjs|Seven literal library document/script/API exchanges, including HEAD zero-body, missing script/API404 and POST405|Actual finite Node HTTP fixture; no general fallback algorithm, negotiation or client boot|
 
-Working directory: `canonical/03-authoritative-server-state`. Declared scripts: `dev`, `server`, `build`.
+The HTTP sources bind only their own ephemeral loopback listener, bound each request and close that listener in finally. A body read or cleanup fault is preserved as a fault; it is not an expected starter failure. The neutral launcher bounds its owned child to 10 seconds and 64KiB combined stdout/stderr. HTTP preflight separately uses a 4-second inner attempt and a 5-second/64KiB outer owned child, with owned process-group cleanup. Those limits diagnose the selected operation; they do not certify other platforms or browser behaviour. No S09 assessed function implementation is supplied by these different teaching objects.
 
-This example requires two terminals in this directory: `npm run server` for the API and `npm run dev` for Vite. The canonical API uses port 3001 and the Vite proxy targets it. Stop both with Ctrl+C. A listening log is not a complete health check; inspect actual requests and preserve the exact error class. `npm run build` is separate. Do not import server.js as a harmless helper: it starts listening.
+## Optional actual canonical framework routes
 
-## 04-http-adapter-contract
+These need already prepared project-local dependencies. Missing modules produce ENV_BLOCKED and exit 2; do not substitute packages or install during core work. No optional failure changes a pure S09 contract.
 
-Working directory: `canonical/04-http-adapter-contract`. Declared scripts: `start`, `test`.
+```text
+node tools/react.mjs preflight 01
+node tools/react.mjs build 01
+node tools/react.mjs preflight 02
+node tools/react.mjs build 02
+node tools/react.mjs preflight 03
+node tools/react.mjs build 03
+node tools/examples.mjs preflight 04
+node tools/examples.mjs run 04
+node tools/examples.mjs preflight 05
+node tools/examples.mjs run 05
+```
 
-The canonical `npm test` requires Express and executes the written loopback test; it has NOT been run in this phase. For a later explicit local demonstration, from the public-package root the separate command is `node derived/start-example04.mjs --start-local`. It uses the unchanged factory and binds 127.0.0.1:3001. Stop with Ctrl+C. The new entry logic was checked as pure JavaScript; this server was not started here.
+React build transforms modules; it does not observe Router, Back or browser. Examples04/05 run their preserved real Express Node tests only after their local dependency guard succeeds. Canonical04 has one test declaration for list/get/encoded identity/mapped404. Canonical05 has one declaration for a document marker and three status controls; this is not a full response matrix. The HTML marker has no script entry. Their original README validation statements remain historical, not current receipts.
 
-## 05-spa-fallback-matrix
+For a later lecturer-prepared native demonstration, open only one selected canonical project. From canonical01/02 use `npm run dev`; from canonical03 use two terminals in that exact folder, `npm run server` and `npm run dev`. Copy Vite’s printed URL and stop your own processes with Ctrl+C. Canonical03 starts its API immediately when imported and may share port 3001 with04, so do not import it as a harmless helper or run both simultaneously. These native operations are NOT_EXECUTED here. npm is relevant only to those explicitly selected npm scripts; the direct guards/build/tests above do not query npm. An explicit npm-preflight can diagnose that separate command route.
 
-Working directory: `canonical/05-spa-fallback-matrix`. Declared scripts: `start`, `test`.
+## Evidence
 
-In this source directory, `npm test` is the written loopback route and `npm start` is the planned server demonstration. Neither was run here. Stop the server with Ctrl+C. The HTML document marker does not load a React bundle. Classify method/path/Accept/status/content type/body before interpreting the result.
-
-## Evidence record
-
-For an actual authorised run, record exact package identity, runtime versions, command, directory, expected property, exit/status, output file or screenshot locator and what remains untested. Never relabel a source-bound probe, model output or static projection as that run. A failed source entry guard differs from a failed assertion. Do not force a result by changing the source, lockfile or test.
+For every actual run preserve CWD, command, input, prior prediction, relevant stdout/result, source hash and limit. A model, injected response, actual Node HTTP, actual framework test/build, native browser action, saved PDF and Moodle receipt are different observations. Do not promote one into another.

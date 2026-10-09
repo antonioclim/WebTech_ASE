@@ -1,3 +1,5 @@
-# Windows reading route
+# C10 — Windows
 
-Use File Explorer to extract the student ZIP into a new short directory such as D:\WTC10S. Open index.html and retain the folder structure. Reading and model use require no shell or installation. This route is not a Windows or application acceptance. Do not extract over a prior version.
+Extract the whole package, open its index.html and use [the HTML guide](guide.html). VS Code's C10 EN_GB folder contains tools/demonstrations/canonical. From that CWD use `.\CHECK_ENVIRONMENT.cmd`, `.\RUN_ALL_EXAMPLES.cmd` or the exact `node tools/tw-kit.mjs` commands in [RUN_EXAMPLES.md](RUN_EXAMPLES.md). No global npm install or PowerShell execution-policy change is required for the core route.
+
+Optional React sources need already prepared project-local dependencies. Missing prerequisites block their route. Use the actual printed dev URL and stop only your process. Windows/native browser/PDF acceptance must be observed on your machine; Linux model output does not certify it.

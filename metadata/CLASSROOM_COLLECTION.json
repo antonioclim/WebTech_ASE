@@ -1,6 +1,6 @@
 {
   "schema": "webtech-classroom-collection/v1",
-  "status": "CANDIDATE_V4_0_0_T04_PREPARED_NOT_FINAL_NOT_PUBLISHED",
+  "status": "CANDIDATE_V4_0_0_T05_PREPARED_NOT_FINAL_NOT_PUBLISHED",
   "distribution_version": "4.0.0",
   "language": "en-GB",
   "classroom_inner_version": "1.0.0-rc.6",
@@ -97,7 +97,7 @@
       "guide": "01_WEEKS/WEEK_08/C08_COURSE/EN_GB/course.html",
       "form": null,
       "package_id_path": "01_WEEKS/WEEK_08/C08_COURSE/EN_GB/PACKAGE_ID.txt",
-      "package_id": "6dcfb05f6b1dde09e01c30684713a7f2b30d1fa6353c876e21b8e50e1e2c41f3",
+      "package_id": "8e48122304b7ec01c107aeae8d811d16f6cd9e5a2136afdc8c446f0b4bfdfaea",
       "included_in_collection_version": "4.0.0",
       "candidate_revision_status": "T04_COMPLETE_WITH_EXPLICIT_LIMITS"
     },
@@ -109,9 +109,9 @@
       "guide": "01_WEEKS/WEEK_09/C09_COURSE/EN_GB/course.html",
       "form": null,
       "package_id_path": "01_WEEKS/WEEK_09/C09_COURSE/EN_GB/PACKAGE_ID.txt",
-      "package_id": "5b0b9daec14fad2fce99af22405db3b0cf23271c1b12520cfb6fbd94b8fdd605",
+      "package_id": "d9b61059cef316b17c043261dca78b911a5e94de5933fff00dd85662a6578d10",
       "included_in_collection_version": "4.0.0",
-      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
+      "candidate_revision_status": "T05_COMPLETE_WITH_EXPLICIT_LIMITS"
     },
     {
       "object_id": "C10",
@@ -121,9 +121,9 @@
       "guide": "01_WEEKS/WEEK_10/C10_COURSE/EN_GB/course.html",
       "form": null,
       "package_id_path": "01_WEEKS/WEEK_10/C10_COURSE/EN_GB/PACKAGE_ID.txt",
-      "package_id": "8cb6aa48e88ce5afb7bf632377d6b0d88059850cf50b631cf2f0df66fe625bba",
+      "package_id": "858f8cf474bbafd41e3f080092b43c9fa2708780c9211795363ecbdf21db438a",
       "included_in_collection_version": "4.0.0",
-      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
+      "candidate_revision_status": "T05_COMPLETE_WITH_EXPLICIT_LIMITS"
     },
     {
       "object_id": "C11",
@@ -427,7 +427,7 @@
         }
       ],
       "package_id_path": "01_WEEKS/WEEK_08/S08_SEMINAR/EN_GB/PACKAGE_ID.txt",
-      "package_id": "da4758f43ac935e60cd6643fbb82c632a4206a4fa0cce0a2207af49d41e2695e",
+      "package_id": "d5258853599783fc6e35274b5dc075eae52bf8928cc6bc2a0d8d77b0a468d663",
       "included_in_collection_version": "4.0.0",
       "candidate_revision_status": "T04_COMPLETE_WITH_EXPLICIT_LIMITS"
     },
@@ -437,7 +437,7 @@
       "entry": "01_WEEKS/WEEK_09/S09_SEMINAR/index.html",
       "start": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/CLASSROOM_RC6/START.html",
       "guide": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/CLASSROOM_RC6/GUIDE.html",
-      "form": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/CLASSROOM_RC6/EVIDENCE_FORM.html",
+      "form": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/FORMATIVE_ASSESSMENT.html",
       "tutorial": "01_WEEKS/WEEK_09/S09_SEMINAR/TUTORIAL.html",
       "projects": [
         {
@@ -456,13 +456,13 @@
           "id": "P03",
           "title": "Deep link: delivery classification",
           "editable_path": "CLASSROOM_RC6/student/p03.mjs",
-          "completeScope": "Give API paths priority, serve an existing static file, refuse a missing /assets path, and admit a SPA navigation only for GET/HEAD with text/html in the declared Accept token list. This pure decision is not an Express response or actual Content-Type result."
+          "completeScope": "Give API paths priority: exactly /api or a /api/ descendant returns api even when exists is true. Otherwise an existing static file returns file. Refuse a missing path exactly /assets or a /assets/ descendant. For remaining paths admit SPA navigation only for exact GET/HEAD with the literal text/html in the declared Accept token array; otherwise return the string 404. Prefix collisions /apiary and /assets-old do not belong to those reserved roots. This clarified stipulated pure policy is not canonical05 Express negotiation, a filesystem lookup or an actual Content-Type result."
         }
       ],
       "package_id_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_ID.txt",
-      "package_id": "d7bf3be9c49a95ede7a12012b46684f7d8077890d65b21792a8bbc9d0f1a229e",
+      "package_id": "367e9a4d627bfc5c520eab24aecbb5caae586abea4dcaecbe4c3abfbb8a1c88e",
       "included_in_collection_version": "4.0.0",
-      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
+      "candidate_revision_status": "T05_COMPLETE_WITH_EXPLICIT_LIMITS"
     },
     {
       "object_id": "S10",
@@ -470,7 +470,7 @@
       "entry": "01_WEEKS/WEEK_10/S10_SEMINAR/index.html",
       "start": "01_WEEKS/WEEK_10/S10_SEMINAR/EN_GB/CLASSROOM_RC6/START.html",
       "guide": "01_WEEKS/WEEK_10/S10_SEMINAR/EN_GB/CLASSROOM_RC6/GUIDE.html",
-      "form": "01_WEEKS/WEEK_10/S10_SEMINAR/EN_GB/CLASSROOM_RC6/EVIDENCE_FORM.html",
+      "form": "01_WEEKS/WEEK_10/S10_SEMINAR/EN_GB/FORMATIVE_ASSESSMENT.html",
       "tutorial": "01_WEEKS/WEEK_10/S10_SEMINAR/TUTORIAL.html",
       "projects": [
         {
@@ -493,9 +493,9 @@
         }
       ],
       "package_id_path": "01_WEEKS/WEEK_10/S10_SEMINAR/EN_GB/PACKAGE_ID.txt",
-      "package_id": "2a7cdcc1f4a2f2a7304164ac3777fb7c1497db72d1250caa8ea4139039ccba4c",
+      "package_id": "74f4345e8710590d0d24b6931591db114b54a07ab2a98b953ae464004778c428",
       "included_in_collection_version": "4.0.0",
-      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
+      "candidate_revision_status": "T05_COMPLETE_WITH_EXPLICIT_LIMITS"
     },
     {
       "object_id": "S11",

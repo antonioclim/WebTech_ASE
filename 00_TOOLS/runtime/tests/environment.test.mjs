@@ -13,4 +13,4 @@ test('numeric versions and unqualified drift cannot silently become reference qu
  assert.equal(decideEnvironment({nodeVersion:'v25.0.0'}).status,'ENV_WARN');
  assert.equal(decideEnvironment({nodeVersion:'v24.21.0',checks:[{status:'ENV_BLOCKED',feature:'sqlite'}]}).exitCode,2);
 });
-test('standalone policy carriers must remain byte-identical',()=>assert.equal(verifyCarriers(),17));
+test('standalone policy carriers must remain byte-identical',()=>assert.equal(verifyCarriers(),21));

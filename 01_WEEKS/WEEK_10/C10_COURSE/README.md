@@ -1,9 +1,3 @@
-# C10 — State ownership and frontend architecture
+# C10 · Client state and frontend architecture
 
-Current English teaching files for Web Technologies 3.0.0 are in `EN_GB/`.
-
-- [Open this unit](index.html)
-- [Start instructions](EN_GB/index.html)
-- [HTML presentation or guide](EN_GB/course.html)
-
-[Collection home](../../../index.html) · [Start guide](../../../00_START_HERE/START_HERE.html)
+[Current lesson](EN_GB/index.html) · [24 screens](EN_GB/course.html) · [connected 34 topic handout](EN_GB/reading.html) · [finite model lab](EN_GB/lab.html) · [exact runnable contexts](EN_GB/RUN_EXAMPLES.md) · [three required S10 functions](../S10_SEMINAR/TUTORIAL.html).

@@ -21,7 +21,7 @@
       "id": "P03",
       "title": "Deep link: delivery classification",
       "editable_path": "CLASSROOM_RC6/student/p03.mjs",
-      "completeScope": "Give API paths priority, serve an existing static file, refuse a missing /assets path, and admit a SPA navigation only for GET/HEAD with text/html in the declared Accept token list. This pure decision is not an Express response or actual Content-Type result."
+      "completeScope": "Give API paths priority: exactly /api or a /api/ descendant returns api even when exists is true. Otherwise an existing static file returns file. Refuse a missing path exactly /assets or a /assets/ descendant. For remaining paths admit SPA navigation only for exact GET/HEAD with the literal text/html in the declared Accept token array; otherwise return the string 404. Prefix collisions /apiary and /assets-old do not belong to those reserved roots. This clarified stipulated pure policy is not canonical05 Express negotiation, a filesystem lookup or an actual Content-Type result."
     }
   ],
   "scope": "BOUNDED_JS_MODELS_AND_SEPARATELY_TESTED_REACT_COMPANION",
@@ -323,6 +323,65 @@
     165
   ],
   "timeline_numeric_values": "Lower end of the unpiloted planning range, not an empirical minimum or a completion threshold.",
-  "planning_continuation": "If the actual institutional slot is shorter, confirm a continuation arrangement with the lecturer. All projects remain required individual classroom work; incomplete work remains incomplete.",
-  "private_evidence_location": "A private home-folder WebTech_Evidence/Sxx directory outside the entire extracted collection; use the detailed tutorial for operating-system-specific quoted absolute paths."
+  "planning_continuation": "Unpiloted full-work plan120\u2013165 minutes. For a100-minute institutional slot, agree20\u201365 further taught minutes; for a90-minute slot,30\u201375. Preserve the last executed case and current stage, then resume individually in the agreed taught continuation. All3 projects remain required; unfinished work remains unfinished.",
+  "private_evidence_location": "Private home-folder WebTech_Evidence/S09 outside the whole collection; detailed tutorial gives quoted absolute fixture paths.",
+  "semantic_stages": [
+    {
+      "id": "P01",
+      "stages": [
+        {
+          "id": "P01-stage1",
+          "title": "Separate literal segments from the note identifier"
+        },
+        {
+          "id": "P01-stage2",
+          "title": "Validate the whole path"
+        },
+        {
+          "id": "P01-stage3",
+          "title": "Separate route identity from resource existence"
+        }
+      ]
+    },
+    {
+      "id": "P02",
+      "stages": [
+        {
+          "id": "P02-stage1",
+          "title": "Identify the current request owner"
+        },
+        {
+          "id": "P02-stage2",
+          "title": "Replace the authoritative list"
+        },
+        {
+          "id": "P02-stage3",
+          "title": "Test stale publication and transfer the rule"
+        }
+      ]
+    },
+    {
+      "id": "P03",
+      "stages": [
+        {
+          "id": "P03-stage1",
+          "title": "Order the delivery decisions"
+        },
+        {
+          "id": "P03-stage2",
+          "title": "Require document navigation conditions"
+        },
+        {
+          "id": "P03-stage3",
+          "title": "Separate classification from HTTP representation"
+        }
+      ]
+    }
+  ],
+  "teaching_revision": "v4.0.0 candidate; original RC6 carrier and source_commit retained",
+  "contract_clarifications": {
+    "P03_namespace_boundaries": "Candidate clarification authorised by owner: API and assets use exact root or slash-descendant membership. Original broad wording did not explicitly guarantee these edge cases. No learner target bytes or original fixtures changed.",
+    "P01_raw_path": "No query stripping, trailing-slash normalisation or percent decoding. Only whole /notes/new is create; /notes/new/edit is edit with ID new.",
+    "P02_return_ownership": "Already successful input. Output array value and input content are required; selected-array identity versus equal-copy identity is not prescribed."
+  }
 }
