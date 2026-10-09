@@ -1,13 +1,9 @@
-# S05 — In-memory Task API
+# S05 — Request decisions and their witnesses
 
-Current English teaching files for Web Technologies 3.0.0 are in `EN_GB/`.
+Teaching revision for the v4.0.0 candidate; source labels remain provenance.
 
-- [Open this unit](index.html)
-- [Start instructions](EN_GB/CLASSROOM_RC6/START.html)
-- [HTML presentation or guide](EN_GB/CLASSROOM_RC6/GUIDE.html)
-- [Detailed seminar tutorial](TUTORIAL.html)
-- [Evidence form](EN_GB/CLASSROOM_RC6/EVIDENCE_FORM.html)
+[Unit entry](index.html) · [C05 course](../C05_COURSE/EN_GB/course.html) · [S05 twelve-stage tutorial](../S05_SEMINAR/TUTORIAL.html) · [Current formative assessment](../S05_SEMINAR/EN_GB/FORMATIVE_ASSESSMENT.html) · [S05 contract](../S05_SEMINAR/EN_GB/CLASSROOM_RC6/contract.json)
 
-Open the `EN_GB` folder in VS Code before running the seminar commands. It contains `CLASSROOM_RC6`, the supplied current implementation and evidence-form protocol. Complete all required projects individually and keep private evidence outside the entire repository.
+All three S05 projects remain required and individual: closed body boundary, exactly-once terminal logger and public outcome mapping. One real AI critique with independent check and one reviewed PDF cover the seminar. Distinguish retained source records, Node models, injected callbacks and actual HTTP.
 
-[Collection home](../../../index.html) · [Start guide](../../../00_START_HERE/START_HERE.html)
+[Environment policy](../../../00_START_HERE/ENVIRONMENT.html) · [Collection home](../../../index.html)

@@ -10,11 +10,11 @@ P02 — Closed query translator — editable path from the seminar package root:
 
 P03 — Awaited reservation persistence — editable path from the seminar package root: CLASSROOM_RC6/targets/p03.mjs
 
-Current entry: ../../../ENTRY/S06.html
+Current entry: ../../S06_SEMINAR/index.html
 
-Step-by-step tutorial: ../../../TUTORIALS/S06.html
+Step-by-step tutorial: ../../S06_SEMINAR/TUTORIAL.html
 
-Current evidence form: ../../S06/WEBTECH_ASE_S06_EN_GB_v1.2.3_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html
+Current evidence form: ../../S06_SEMINAR/EN_GB/FORMATIVE_ASSESSMENT.html
 
 Preserve support files, run the stated target checks and record actual results, including blocked or unexecuted checks. Complete the current form for all projects and export one PDF. Review its saved pages and filename before uploading it to the corresponding private Moodle Assignment. A blocked check is not a PASS.
 
@@ -46,3 +46,20 @@ These references were inspected on 28 September 2026 for the distinctions alread
 
 ## New teaching work
 Presentation timings, connected handout, laboratory models, guides and helper code are derived teaching materials. An exact source excerpt is identified by E01–E05 and a source section. D denotes a derivation. Model results are labelled; no current database observation is invented.
+
+## Current v4 teaching verification (9 October 2026)
+
+All three bounded S06 targets are required individually through [the current tutorial](../../S06_SEMINAR/TUTORIAL.html) and [one formative form](../../S06_SEMINAR/EN_GB/FORMATIVE_ASSESSMENT.html). Earlier P02-centred architecture and full-application allocations above are historical context. Built-in SQLite, injected promise models and the retained Sequelize/native-driver route have separate qualification scopes. Canonical code/package/lock bytes were compared with the authorised public baseline in this revision; original external archive bytes were not reacquired.
+
+| Primary reference | Verified support |
+| --- | --- |
+| [DatabaseSync, StatementSync, all/get/run](https://nodejs.org/download/release/v24.19.0/docs/api/sqlite.html) | DatabaseSync and StatementSync execute synchronously; file versus :memory:; prepare/run/get/all and anonymous parameter bindings. |
+| [In-Memory Databases / In-memory Databases And Shared Cache](https://www.sqlite.org/inmemorydb.html) | Unadorned :memory: databases are separate connection-scoped databases; close discards them. |
+| [4. The ORDER BY clause](https://www.sqlite.org/lang_select.html) | ORDER BY terms break ties in sequence; equal complete terms leave unspecified order. |
+| [4. Parameters / 5. The LIKE, GLOB, REGEXP, MATCH and extract operators](https://www.sqlite.org/lang_expr.html) | SQL value parameters; percent/underscore LIKE wildcards and default ASCII case handling. |
+| [lower(X)](https://www.sqlite.org/lang_corefunc.html) | Default lower converts ASCII; non-ASCII requires a different extension/rule. |
+| [Difference between Validations and Constraints / allowNull / Validators](https://sequelize.org/docs/v6/core-concepts/validations-and-constraints/) | JavaScript validation versus SQL constraints; allowNull has both roles; notEmpty is a validator. |
+| [Replacements / Bind Parameter](https://sequelize.org/docs/v6/core-concepts/raw-queries/) | Replacements escaped into SQL before sending versus bind values sent separately; binds cannot select keywords/table/column names. |
+| [Await abstract operation](https://tc39.es/ecma262/multipage/control-abstraction-objects.html#await) | Await adopts a promise and resumes with fulfilled or rejected completion. |
+
+These official pages were actually retrieved for the stated narrow claims. Exact Node24.19 documentation describes the observed runtime API; no execution of the recorded24.21 reference is claimed. Default SQL/JavaScript rules can differ. The [neutral observations](demonstrations/README.md) retain source, real output and limits separately from an ORM claim.

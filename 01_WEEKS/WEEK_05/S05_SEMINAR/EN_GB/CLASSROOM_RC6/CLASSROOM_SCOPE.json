@@ -15,7 +15,7 @@
       "id": "P02",
       "title": "Exactly-once terminal logger",
       "editable_path": "CLASSROOM_RC6/targets/p02.mjs",
-      "completeScope": "Build a terminal callback that records request identity/status/elapsed time once even when supplied finish and close events both fire."
+      "completeScope": "Build an independent terminal callback per creation; claim the first status before either injected dependency can synchronously re-enter, then record supplied-clock elapsed time once."
     },
     {
       "id": "P03",

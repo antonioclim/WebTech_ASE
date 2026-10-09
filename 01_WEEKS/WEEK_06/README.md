@@ -1,21 +1,5 @@
-# Week 06 — Web Technologies 3.0.0
+# Week 6: persistence and its witnesses
 
-- [C06 — Persistence with Sequelize and SQLite](C06_COURSE/index.html)
-- [S06 — Query API](S06_SEMINAR/index.html)
-- [Detailed seminar tutorial](S06_SEMINAR/TUTORIAL.html)
+Read the [C06_COURSE/EN_GB/24-screen presentation](C06_COURSE/EN_GB/course.html), [reading guide](C06_COURSE/EN_GB/reading.html) and [launch guide](C06_COURSE/EN_GB/guide.html). The course retains ORM metadata/constraints, lifecycle, async completion, public projection, closed query choices and historical fields/search/report context. Four neutral observations execute real built-in SQLite or a controlled promise without completing learner targets. Canonical code and package/lock files remain historical source; their dependency route is separate.
 
-## What you will learn
-
-- Distinguish normal SQLite initialisation from an explicit reset.
-- Translate accepted query tokens into parameterised filters and fixed ordering.
-- Await a persistence operation and preserve unexpected error identity.
-
-## Required individual projects
-
-- **P01 — Normal reopen and explicit reset**
-- **P02 — Closed query translator**
-- **P03 — Awaited reservation persistence**
-
-Complete every listed project and follow the seminar guide for task checks, evidence and PDF submission.
-
-[All weeks](../README.md) · [Course plan](../../00_START_HERE/COURSE_PLAN.html)
+All three S06 projects are individually required through the current tutorial, with twelve causal stages, one genuine AI critique plus independent check and one reviewed PDF. Full 120–165 minute timing is unpiloted. Follow the current route rather than earlier full-application allocations.

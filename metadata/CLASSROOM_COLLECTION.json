@@ -1,6 +1,6 @@
 {
   "schema": "webtech-classroom-collection/v1",
-  "status": "CANDIDATE_V4_0_0_T02_PREPARED_NOT_FINAL_NOT_PUBLISHED",
+  "status": "CANDIDATE_V4_0_0_T03_PREPARED_NOT_FINAL_NOT_PUBLISHED",
   "distribution_version": "4.0.0",
   "language": "en-GB",
   "classroom_inner_version": "1.0.0-rc.6",
@@ -61,9 +61,9 @@
       "guide": "01_WEEKS/WEEK_05/C05_COURSE/EN_GB/course.html",
       "form": null,
       "package_id_path": "01_WEEKS/WEEK_05/C05_COURSE/EN_GB/PACKAGE_ID.txt",
-      "package_id": "f9440a46cb7e364f7c81b4ccd1ca005e307bd38909a3b66f3102ee85eb907316",
+      "package_id": "72973f044d1b031761a96295f53f9dd328e557f6017169a8266f75727d553161",
       "included_in_collection_version": "4.0.0",
-      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
+      "candidate_revision_status": "T03_COMPLETE_WITH_EXPLICIT_LIMITS"
     },
     {
       "object_id": "C06",
@@ -73,9 +73,9 @@
       "guide": "01_WEEKS/WEEK_06/C06_COURSE/EN_GB/course.html",
       "form": null,
       "package_id_path": "01_WEEKS/WEEK_06/C06_COURSE/EN_GB/PACKAGE_ID.txt",
-      "package_id": "bc3d1dd2714294edc6ba8ae7fbc61185568baad2d9474b2734d6813eda73c7a2",
+      "package_id": "049e79a294d2150b760f18f28cd95e0565b37b2cec2e06e121719821edfa4e5b",
       "included_in_collection_version": "4.0.0",
-      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
+      "candidate_revision_status": "T03_COMPLETE_WITH_EXPLICIT_LIMITS"
     },
     {
       "object_id": "C07",
@@ -305,32 +305,32 @@
       "entry": "01_WEEKS/WEEK_05/S05_SEMINAR/index.html",
       "start": "01_WEEKS/WEEK_05/S05_SEMINAR/EN_GB/CLASSROOM_RC6/START.html",
       "guide": "01_WEEKS/WEEK_05/S05_SEMINAR/EN_GB/CLASSROOM_RC6/GUIDE.html",
-      "form": "01_WEEKS/WEEK_05/S05_SEMINAR/EN_GB/CLASSROOM_RC6/EVIDENCE_FORM.html",
+      "form": "01_WEEKS/WEEK_05/S05_SEMINAR/EN_GB/FORMATIVE_ASSESSMENT.html",
       "tutorial": "01_WEEKS/WEEK_05/S05_SEMINAR/TUTORIAL.html",
       "projects": [
         {
           "id": "P01",
           "title": "Closed task-body boundary",
           "editable_path": "CLASSROOM_RC6/targets/p01.mjs",
-          "completeScope": "Accept exactly own title(nonblank trimmed string) and completed(boolean); return fresh representation, reject other fields/types before service call."
+          "completeScope": "Accept exactly own title/completed on the allowed plain or null-prototype body; require nonblank trimmed string and boolean, return a fresh representation and preserve the input. No service is invoked by this target."
         },
         {
           "id": "P02",
           "title": "Exactly-once terminal logger",
           "editable_path": "CLASSROOM_RC6/targets/p02.mjs",
-          "completeScope": "Build a terminal callback that records request identity/status/elapsed time once even when supplied finish and close events both fire."
+          "completeScope": "Build one terminal callback per supplied request: first status and clock()-start are logged once, including synchronous re-entry through supplied dependencies; no distributed delivery guarantee."
         },
         {
           "id": "P03",
           "title": "Public outcome mapping",
           "editable_path": "CLASSROOM_RC6/targets/p03.mjs",
-          "completeScope": "Map created/notfound/conflict to201+Location/404/409 with safe envelopes, never expose an internal error message."
+          "completeScope": "Map created to 201 plus Location from data.id and {data}; not_found to 404/task_not_found, conflict to 409/task_exists and other kinds to 500/internal_error, with empty error headers and no internal message."
         }
       ],
       "package_id_path": "01_WEEKS/WEEK_05/S05_SEMINAR/EN_GB/PACKAGE_ID.txt",
-      "package_id": "932e399977e41488f87d66b321df9f524defe81dc5f269f3ea6cf6865c517911",
+      "package_id": "611cf188997b3cc8db4ac291516acea05a69644fd5ac7084226fc4259223f4af",
       "included_in_collection_version": "4.0.0",
-      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
+      "candidate_revision_status": "T03_COMPLETE_WITH_EXPLICIT_LIMITS"
     },
     {
       "object_id": "S06",
@@ -338,7 +338,7 @@
       "entry": "01_WEEKS/WEEK_06/S06_SEMINAR/index.html",
       "start": "01_WEEKS/WEEK_06/S06_SEMINAR/EN_GB/CLASSROOM_RC6/START.html",
       "guide": "01_WEEKS/WEEK_06/S06_SEMINAR/EN_GB/CLASSROOM_RC6/GUIDE.html",
-      "form": "01_WEEKS/WEEK_06/S06_SEMINAR/EN_GB/CLASSROOM_RC6/EVIDENCE_FORM.html",
+      "form": "01_WEEKS/WEEK_06/S06_SEMINAR/EN_GB/FORMATIVE_ASSESSMENT.html",
       "tutorial": "01_WEEKS/WEEK_06/S06_SEMINAR/TUTORIAL.html",
       "projects": [
         {
@@ -361,9 +361,9 @@
         }
       ],
       "package_id_path": "01_WEEKS/WEEK_06/S06_SEMINAR/EN_GB/PACKAGE_ID.txt",
-      "package_id": "e5e548e4ea81804445dd506eed5936ada94963cdc6f3942adf2b234c80777fbe",
+      "package_id": "a4cc2f1c483640a2246b9355b63476231753c2a3c55b6d477415333b4aaa3ea1",
       "included_in_collection_version": "4.0.0",
-      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
+      "candidate_revision_status": "T03_COMPLETE_WITH_EXPLICIT_LIMITS"
     },
     {
       "object_id": "S07",

@@ -11,10 +11,14 @@
       "completeScope": "Accept exactly own title(nonblank trimmed string) and completed(boolean); return fresh representation, reject other fields/types before service call.",
       "requiredEvidence": [
         "Valid returned body",
-        "Stringfalse andunknown-key rejection",
+        "Boolean versus string false and complete-own-key rejection",
         "Input preservation"
       ],
-      "minutes": 12
+      "minutes": 12,
+      "plannedMinutes": [
+        30,
+        45
+      ]
     },
     {
       "id": "P02",
@@ -22,13 +26,17 @@
       "mutableTarget": "targets/p02.mjs",
       "mutablePathBase": "CLASSROOM_RC6",
       "packageRootMutableTarget": "CLASSROOM_RC6/targets/p02.mjs",
-      "completeScope": "Build a terminal callback that records request identity/status/elapsed time once even when supplied finish and close events both fire.",
+      "completeScope": "Build an independent terminal callback per creation; claim the first status before either injected dependency can synchronously re-enter, then record supplied-clock elapsed time once.",
       "requiredEvidence": [
         "Callback event order",
-        "One log after two callbacks",
-        "Monotonic-clock duration and limitation"
+        "One log after sequential and controlled synchronous re-entry callbacks",
+        "Supplied-clock first-terminal duration and limitation; compare source commit12 with controlled terminal35"
       ],
-      "minutes": 10
+      "minutes": 10,
+      "plannedMinutes": [
+        30,
+        45
+      ]
     },
     {
       "id": "P03",
@@ -38,11 +46,15 @@
       "packageRootMutableTarget": "CLASSROOM_RC6/targets/p03.mjs",
       "completeScope": "Map created/notfound/conflict to201+Location/404/409 with safe envelopes, never expose an internal error message.",
       "requiredEvidence": [
-        "Real loopback create response/status/header",
-        "Conflict and internal safe responses",
+        "Actual synthetic GET /created through the supplied Node adapter: 201, Location and JSON body",
+        "Exact not_found, conflict and unknown-kind status/header/body tuples",
         "Claim-vs-observation explanation"
       ],
-      "minutes": 14
+      "minutes": 14,
+      "plannedMinutes": [
+        30,
+        45
+      ]
     }
   ],
   "initialAssertionFailures": [
@@ -60,5 +72,19 @@
     "pilot60min": false,
     "humanLanguage": false,
     "Moodle": false
+  },
+  "minute_fields_scope": "Historical source-carrier budgets retained verbatim; current teaching uses plannedMinutes and candidate_planning.",
+  "candidate_planning": {
+    "status": "UNPILOTED",
+    "fullRouteMinutes": [
+      120,
+      165
+    ],
+    "institutionalMeetingMinutes": [
+      90,
+      100
+    ],
+    "continuation": "Teach P01/P02 and begin P03 after readiness, then save the exact last stage/remaining assertions/private draft. Lecturer-confirmed taught continuation: 20–65 additional minutes after a 100-minute meeting or 30–75 after a 90-minute meeting, adjusted to observed progress. All three individual projects, one genuine AI critique/check and one PDF remain required.",
+    "day0": "Extract, open editor and complete capability preparation before class. No Express/npm installation is needed."
   }
 }

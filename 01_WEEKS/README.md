@@ -21,4 +21,4 @@ Each week contains a course and a seminar. The current English materials are sto
 
 [Start guide](../00_START_HERE/START_HERE.html) · [Evidence guidance](../00_START_HERE/ASSESSMENT.html)
 
-C01/S01 through C04/S04 have completed the T01 and T02 teaching revisions. The remaining pairs await T03–T07. The latest published edition remains 3.0.0. See [candidate progress](../metadata/CANDIDATE_PROGRESS.json).
+C01/S01 through C06/S06 have completed the T01–T03 teaching revisions. The remaining pairs await T04–T07. The latest published edition remains 3.0.0. See [candidate progress](../metadata/CANDIDATE_PROGRESS.json).

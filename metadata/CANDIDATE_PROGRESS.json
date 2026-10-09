@@ -4,9 +4,9 @@
   "final_target_version": "4.0.0",
   "latest_published_version": "3.0.0",
   "distribution_status": "LOCAL_CANDIDATE_NOT_PUBLISHED",
-  "phase": "T02_CANDIDATE_PREPARED",
-  "next_phase": "T03",
-  "implementation_scope": "T01 and T02: C01/S01, C02/S02, C03/S03, C04/S04 and affected common guidance, environment policy and evidence forms. C05/S05 through C14/S14 remain inherited source pending their authorised tranche review.",
+  "phase": "T03_CANDIDATE_PREPARED",
+  "next_phase": "T04",
+  "implementation_scope": "T01–T03: C01/S01 through C06/S06 and affected common guidance, environment policy and evidence forms. C07/S07 through C14/S14 remain inherited source pending their authorised tranche review.",
   "qualificationVerdict": "NOT_FINAL",
   "native_acceptance": false,
   "publication_qualified": false,
@@ -46,7 +46,7 @@
       ],
       "implementation_status": "COMPLETE_WITH_EXPLICIT_LIMITS",
       "acceptance_status": "PENDING",
-      "next_step": "Continue with T03 after the phase continuation; keep global acceptance pending"
+      "next_step": "Retain T02 scoped evidence and recheck affected controls when later common changes require it; whole-edition acceptance remains pending."
     },
     {
       "id": "T03",
@@ -56,9 +56,9 @@
         "C06",
         "S06"
       ],
-      "implementation_status": "PENDING",
+      "implementation_status": "COMPLETE_WITH_EXPLICIT_LIMITS",
       "acceptance_status": "PENDING",
-      "next_step": "Implement and verify this tranche before claiming completion"
+      "next_step": "Continue with T04 after an explicit next; keep global acceptance pending."
     },
     {
       "id": "T04",
@@ -184,10 +184,11 @@
     }
   ],
   "evidence_boundary": "Tranche-level observations are recorded separately from the ten global gates. No subset result makes the whole 14-pair distribution qualified, published or accepted. Source identity and final verification receipts are retained outside the sealed tree to avoid self-reference.",
-  "timing_limit": "S01 is estimated at 90–120 minutes and S02–S04 at 120–165 minutes, all unpiloted. A 90–100-minute institutional slot does not establish completion of all required individual work. For S03/S04 reserve an explicit taught continuation estimated at 20–65 minutes beyond a 100-minute slot or 30–75 beyond 90, then validate through an actual novice pilot. No project is omitted or silently assigned as homework.",
+  "timing_limit": "S01 is estimated at 90–120 minutes and S02–S06 at 120–165 minutes, all unpiloted. A 90–100-minute institutional slot does not establish completion of all required individual work. For S03–S06 reserve an explicit taught continuation estimated at 20–65 minutes beyond a 100-minute slot or 30–75 beyond 90, then validate through an actual novice pilot. No project is omitted or silently assigned as homework.",
   "prepared_tranches": [
     "T01",
-    "T02"
+    "T02",
+    "T03"
   ],
   "T02_evidence": [
     {
@@ -199,6 +200,23 @@
       "area": "S03/S04 stage forms",
       "state": "PASS",
       "scope": "30 grouped Node VM DOM-model checks, including 17 invalid envelope cases per unit, on the actual form scripts. Each draft keeps all three project IDs and all four stages. Static schema, label/ARIA, local link and asset checks pass for two HTML forms and four local assets. Synthetic QA data does not represent student observations or a genuine AI exchange."
+    }
+  ],
+  "T03_evidence": [
+    {
+      "area": "C05/S05 and C06/S06 teaching",
+      "state": "PASS",
+      "scope": "Independent source reading covers all 48 retained course screens and all 24 semantic seminar stages. All six current-tranche projects remain required and individual, within the 40-project collection. Neutral finite Node observations and actual C06 SQLite demonstrations were executed on Linux with Node v24.19.0. Course Express and Sequelize companions are separately blocked by missing dependencies; no installation was performed."
+    },
+    {
+      "area": "S05/S06 execution and controlled falsifiers",
+      "state": "PASS",
+      "scope": "Untouched starters retain their declared six assertion failures per seminar. Separate private references exercise the finite source cases, with purposeful defects and independent changed-data, callback, actual loopback HTTP and SQLite witnesses. Timeout classification, delayed write completion and owned-resource cleanup are verified separately. This does not implement the public learner targets, certify crash durability or qualify the historical full applications. Exact source hashes and final source identity are retained externally."
+    },
+    {
+      "area": "S05/S06 formative evidence forms",
+      "state": "PASS",
+      "scope": "36 grouped Node VM DOM-model checks on actual form scripts, including 31 rejected invalid envelopes per unit. Static schema and historical byte-preserving route checks pass. All 24 stage links resolve. The forms retain one genuine learner AI exchange, an independent check and one PDF per seminar; synthetic maintainer QA is not learner evidence. Native interaction and actual saved PDF remain NOT_EXECUTED."
     }
   ]
 }

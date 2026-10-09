@@ -1,95 +1,21 @@
-# S06: complete bounded classroom microprojects (RC6)
+# S06 current classroom core
 
-Each student completes all 3 projects individually in the classroom session. These are newly bounded projects, separate from the full historical application contracts. Setup is completed before the session; the allocation is a design estimate requiring a novice pilot, not measured completion evidence. Read the original guide only as historical context for its separate full-application contract.
-
-## P01 — Normal reopen and explicit reset
-
-Complete scope: Implement explicit reset vs normal initialisation for the supplied real SQLite notes table; normal close/reopen preserves marker and one seed, reset removes marker.
-
-Edit only `CLASSROOM_RC6/targets/p01.mjs` from the package root. Commands:
+Open the seminar package root `01_WEEKS/WEEK_06/S06_SEMINAR/EN_GB`, not this implementation folder, as your terminal CWD. Read [the tutorial](../../TUTORIAL.html), [START](START.html) and [the current one-PDF form](../FORMATIVE_ASSESSMENT.html).
 
 ```text
-node CLASSROOM_RC6/kit.mjs check P01
-node CLASSROOM_RC6/kit.mjs observe P01
-```
-
-Record: Actual SQLite-file stage rows; Connection close/reopen/reset marker comparison; Owned temporary-file cleanup and durability limit. Record actual results, including failures or blockers; no result is prefilled.
-
-## P02 — Closed query translator
-
-Complete scope: Parse owner, true/false archived and title/id sort tokens only, return parameterised WHERE bindings and fixed order SQL, reject unknown/invalid tokens.
-
-Edit only `CLASSROOM_RC6/targets/p02.mjs` from the package root. Commands:
-
-```text
-node CLASSROOM_RC6/kit.mjs check P02
-node CLASSROOM_RC6/kit.mjs observe P02
-```
-
-Record: SQLite row IDs for owner Ada/archived false; String false interpretation; Rejected query before the database call boundary. Record actual results, including failures or blockers; no result is prefilled.
-
-## P03 — Awaited reservation persistence
-
-Complete scope: Validate/trim code, await the supplied delayed real SQLite write, return detached saved data and map only the declared conflict error while preserving unexpected errors.
-
-Edit only `CLASSROOM_RC6/targets/p03.mjs` from the package root. Commands:
-
-```text
-node CLASSROOM_RC6/kit.mjs check P03
-node CLASSROOM_RC6/kit.mjs observe P03
-```
-
-Record: Actual unique conflict; Deferred returned-promise settlement; Unexpected error identity. Record actual results, including failures or blockers; no result is prefilled.
-
-## Initial and complete checks
-
-```text
+node CLASSROOM_RC6/preflight.mjs
+node CLASSROOM_RC6/verify.mjs initial
 node CLASSROOM_RC6/kit.mjs initial
-node CLASSROOM_RC6/kit.mjs check all
 ```
 
-Initial checks require the untouched targets and exact declared assertion-failure names. A process timeout, exception, damaged source boundary or missing native module is a genuine fault. Keep every private fixture, JSON draft, log and PDF outside the entire extracted collection. Use your home-folder `WebTech_Evidence/S06`: `%USERPROFILE%\WebTech_Evidence\S06` on Windows or `$HOME/WebTech_Evidence/S06` on macOS/Linux. Keep the extracted collection in a different folder. The [detailed tutorial](../../TUTORIAL.html) provides the quoted absolute paths and operating-system commands. Checkers create only owned ephemeral resources. Reference Node is v24.21.0; npm installs are unnecessary for this route. Built-in SQLite experiments emit a Node experimental-feature warning where applicable; that is neither a measurement result nor proof of another platform.
+The original starter produces six declared assertion failures. Edit only the three targets. After editing:
 
-## Current unpiloted plan: 120–165 minutes
+```text
+node CLASSROOM_RC6/verify.mjs work
+node CLASSROOM_RC6/kit.mjs check all
+node CLASSROOM_RC6/kit.mjs observe all
+```
 
-Complete all 3 microprojects individually. Plan 30–45 minutes for each required project. Prepare the prescribed runtime and expressly required dependencies before class. The following durations are planning estimates, not measured completion times, empirical minimums or completion guarantees.
+All three projects are individual and mandatory. Each has four semantic stages. P01 performs real owned-file orderly close/reopen/reset; P02 executes parameterised memory SQLite selection; P03 uses a supplied async adapter around synchronous SQLite and controlled held promises. No check qualifies Sequelize/sqlite3, a new process, crash durability, native browser or print. Timeout and setup faults remain distinct from expected TODO assertions. Preserve protected files and retain personal cases outside the whole collection.
 
-| Planned duration | Individual activity |
-| --- | --- |
-| 5 minutes | Prepared environment and privacy check |
-| 30–45 minutes | P01 — required bounded project with progress and evidence checkpoints |
-| 30–45 minutes | P02 — required bounded project with progress and evidence checkpoints |
-| 30–45 minutes | P03 — required bounded project with progress and evidence checkpoints |
-| 15 minutes | One shared genuine bounded AI critique and independent check |
-| 5 minutes | Review the evidence and save one individual PDF |
-| 5 minutes | Final recap: achievement, learning, reason and next transfer |
-
-For each project, use about 5 planned minutes to read the contract and record a prediction, 20–30 to implement, run checks and investigate results, then 5–10 to review a counterexample and record evidence. These checkpoints total 30–45 planned minutes.
-
-If the actual institutional slot is shorter, agree a taught continuation with the lecturer before the session. All projects remain required individual classroom work; keep unfinished work marked unfinished. The end of a meeting does not establish completion.
-
-The current `GUIDE.html` and the separate top-level `project_schedule` in `CLASSROOM_SCOPE.json` govern these planned blocks. The `projects` array retains the unchanged assessment contract.
-
-## One actual AI claim
-
-S06 classroom claim audit. Review only one claim about the bounded project; do not provide a completed assessed implementation or modify tests.
-My preserved prediction: [one specific claim]
-Synthetic fixture and relevant contract: [small input plus rule]
-My actual observation: [output/error or NOT EXECUTED]
-State whether the claim is observed, inferred or unknown. Propose one minimum independent counterexample. Explain one limitation. I will run the witness myself and record ACCEPTED, REJECTED, PARTLY ACCEPTED or UNKNOWN. Model text is not test evidence. Do not invent execution.
-
-Keep a compact experiment record for each project: prediction (before running), action/input/target, actual result with evidence excerpt, comparison/mechanism and limitation. Add one specific final reflection and one independently verified AI claim. No credentials, real personal data, private Moodle records or whole AI conversations. Use the current classroom evidence form and save one `TW2026_S06_GROUP_Surname_Firstname.pdf`. Missing personal execution or AI access remains explicitly unresolved. The form checks completeness, not truth, grades or Moodle receipt.
-
-## Scope limit
-
-These complete bounded SQLite tasks use Node built-in DatabaseSync and a supplied asynchronous adapter. They do not complete or qualify the original Sequelize/sqlite3 implementation. Same-process reopen is not crash durability.
-
-## Final recap before submission
-
-Explain what survived normal SQLite reopen, what explicit reset changed and how query bindings and an awaited write protected their boundaries. State why your evidence supports that claim, distinguish same-process reopen from crash durability and name the next persistence limit to investigate.
-
-Finish the recap before actual submission. If it changes your form record, update the form, renew the affected declarations and export and review the latest single PDF before uploading it. Use the agreed continuation if review remains unfinished; do not submit an earlier PDF as the updated record.
-
-## Current carrier and historical references
-
-The `CLASSROOM_RC6` folder, retained edition labels and v1 record values identify the existing teaching carrier and record contract. Use the current candidate unit identity shown by the collection entry for a new record. Linked original guides and forms are read-only historical references; their omitted full-application starters and tests are not the current assignment.
+One genuine AI critique followed by an independent test and one reviewed PDF cover all three. Full 120–165 minute timing and the taught continuation proposal remain unpiloted.

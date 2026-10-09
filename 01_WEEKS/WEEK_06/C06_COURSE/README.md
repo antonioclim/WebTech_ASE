@@ -1,9 +1,5 @@
-# C06 — Persistence with Sequelize and SQLite
+# Week 6: persistence and its witnesses
 
-Current English teaching files for Web Technologies 3.0.0 are in `EN_GB/`.
+Read the [EN_GB/24-screen presentation](EN_GB/course.html), [reading guide](EN_GB/reading.html) and [launch guide](EN_GB/guide.html). The course retains ORM metadata/constraints, lifecycle, async completion, public projection, closed query choices and historical fields/search/report context. Four neutral observations execute real built-in SQLite or a controlled promise without completing learner targets. Canonical code and package/lock files remain historical source; their dependency route is separate.
 
-- [Open this unit](index.html)
-- [Start instructions](EN_GB/index.html)
-- [HTML presentation or guide](EN_GB/course.html)
-
-[Collection home](../../../index.html) · [Start guide](../../../00_START_HERE/START_HERE.html)
+All three S06 projects are individually required through the current tutorial, with twelve causal stages, one genuine AI critique plus independent check and one reviewed PDF. Full 120–165 minute timing is unpiloted. Follow the current route rather than earlier full-application allocations.

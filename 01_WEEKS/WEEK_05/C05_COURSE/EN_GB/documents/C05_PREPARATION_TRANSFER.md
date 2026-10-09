@@ -10,11 +10,11 @@ P02 — Exactly-once terminal logger — editable path from the seminar package 
 
 P03 — Public outcome mapping — editable path from the seminar package root: CLASSROOM_RC6/targets/p03.mjs
 
-Current entry: ../../../../ENTRY/S05.html
+Current entry: ../../../S05_SEMINAR/index.html
 
-Step-by-step tutorial: ../../../../TUTORIALS/S05.html
+Step-by-step tutorial: ../../../S05_SEMINAR/TUTORIAL.html
 
-Current evidence form: ../../../S05/WEBTECH_ASE_S05_EN_GB_v1.2.3_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html
+Current evidence form: ../../../S05_SEMINAR/EN_GB/FORMATIVE_ASSESSMENT.html
 
 Preserve support files, run the stated target checks and record actual results, including blocked or unexecuted checks. Complete the current form for all projects and export one PDF. Review its saved pages and filename before uploading it to the corresponding private Moodle Assignment. A blocked check is not a PASS.
 
@@ -29,7 +29,7 @@ Open index.html from the extracted course package. Check that the title identifi
 Read handout sections 1–3. Prepare one prediction for a creation request: method, path, request media type, response status, Location and body envelope. Separately predict which handler owns a static page and which owns an API path in canonical example 01. You are preparing a model, not collecting a retrospective answer.
 Application execution has a different prerequisite. The five exact examples keep their package files and lockfiles. The optional guide explains how an already authorised, project-local environment is prepared in a work copy. Do not install dependencies during the live teaching hour, use a global Express installation or edit the lock. If a prerequisite is absent, record the block and continue with labelled source/model reasoning until execution is available.
 ### What to have ready
-Keep the extracted folder, a plain-text note document and the course laboratory available. No account or secret is needed for the offline shell. Gemini access belongs to a later bounded review; the synthetic practice claim is available without pretending a real conversation occurred. Postman is an optional client, not a required account or a condition for full credit.
+Keep the extracted folder, a plain-text note document and the course laboratory available. No account or secret is needed for the offline shell. Gemini access belongs to a later bounded review; the synthetic practice claim is available without pretending a real conversation occurred. Postman is an optional client, not a required account; assessment follows the lecturer’s actual policy.
 ### Your first note
 Write an input, a prediction and the observation that could disprove it. For example: would null reach field validation in the supplied P01 assembly? Name the distinction between valid JSON syntax and strict parser policy before examining the source. Preserve the first prediction when you revise your explanation.
 The preparation is outside the core. Its purpose is to avoid turning a technical installation or a first encounter with the files into hidden content time.
@@ -50,12 +50,12 @@ Use lab.html for the declared local mechanism model and guided.html for the reco
 The presentation’s arrows work outside editable controls. Use Tab to reach controls, Enter or Space to activate buttons and the screen selector for direct access. In reading mode all screens remain visible. Print includes explanatory reveals for revision, not a new assessment key. Browser-specific interaction and printing still require their later native acceptance.
 Stop at minute 60. Record any uncertainty and the next smallest check. A dependency block, unavailable live HTTP or pending Gemini interaction remains visible; none becomes a fabricated PASS to make the session look complete.
 <!-- PAGE -->
-## After the course: one required project, not three
-Complete the required guided observation note: your prediction, the selected G-record, the observed identity/timing/log count and a limitation. Retrieve it during S05. The full P02 Middleware Pipeline implementation is optional; its guided observation is not optional. P03 API Contract Repair is optional reinforcement.
-S05 supplies the In-memory Task API. Its one-file target remains projects/p01/src/task-router.js. Preserve the rest of the project. Follow the created resource’s returned ID or Location instead of assuming an identifier from a previous run. Pair a valid operation with a rejection and inspect the later service state.
-The canonical P01 estimate is 55–65 minutes, so the seminar does not promise that every student completes the whole implementation and evidence within its live hour. Finish outstanding work on the same P01 contract before the later final deadline. There is no added second-project portfolio and no separate C05 Moodle Assignment.
+## After the course: transfer to all three current boundaries
+Retain the guided observation note: your prediction, the selected historical G-record, its identity/timing/log count and a limitation. Reading a record is not your own execution. Retrieve this distinction during S05, where all three current targets are required: P01 closed task-body boundary, P02 exactly-once terminal logger and P03 public outcome mapping. Preserve protected support files and use the twelve-stage tutorial. Follow a supplied created ID or Location instead of assuming an identifier from another run. Pair a valid decision with a rejection and ask which state actually changed. The retained full-application implementation and its older path are source references; they do not add an assessed fourth task.
+
+Current planning is unpiloted: 30–45 minutes per project and 120–165 minutes overall. Agree taught continuation before class when the institutional slot is shorter, preserving all three projects.
+
 ### Independent review
 Ask Gemini to review one sanitised statement or bounded change. Do not request a complete solution, upload private datasets or include credentials. Keep only the relevant prompt, one claim, independent verification, ACCEPTED / REJECTED / PARTIALLY ACCEPTED / UNKNOWN, correction and limit. When connectivity is absent, retain PENDING for the genuine interaction. Supplied practice is not a substitute transcript.
 ### Optional depth
-Revisit the examples in order, keeping their distinct limits visible: observation, method/path selection, a minimal resource contract, a body boundary and an error boundary. Full P02 implementation and optional P03 transport repair remain outside the standard required mark. U06 introduces persistence later; database installation is not part of this course.
-The final individual S05 document will be TW2026_S05_GROUP_Surname_GivenName.pdf and will include P01 and the guided observation. Use the actual S05 form when delivered; this preparation sheet is not its replacement. Dates and live Moodle settings are configured separately by the teacher.
+Revisit the five canonical examples with their distinct limits: ordered observation, method/path selection, a minimal resource contract, a body boundary and an error boundary. The current S05 tutorial requires all three microprojects and twelve stages, one actual AI critique with independent checking and one private PDF. Use the current formative assessment linked above. Its reviewed state is a student declaration with human review pending. C06/S06 introduces persistence later; no database preparation belongs to this lecture. The actual Moodle Assignment supplies dates and policy.

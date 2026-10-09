@@ -19,7 +19,7 @@ export async function ownedWorkspace(operation){
 }
 export async function lifecycle({compatibility=false,allowTemporaryDatabase=false}={}){
  if(!allowTemporaryDatabase)throw new Error('Explicit temporary-database authorisation required');
- const check=requireReady('02',compatibility);const req=createRequire(path.join(rootFor('02'),'package.json'));
+ const check=await requireReady('02',compatibility);const req=createRequire(path.join(rootFor('02'),'package.json'));
  // Native loading is deliberately after the prerequisite/authorisation guards.
  const sqlite=req('sqlite3');const {Sequelize,DataTypes}=req('sequelize');const marker='C06-'+randomUUID();
  const work=await ownedWorkspace(async(storage,control)=>{
@@ -41,8 +41,8 @@ export async function lifecycle({compatibility=false,allowTemporaryDatabase=fals
  return {evidenceClass:'ORM_SQLITE_EXECUTION_ATTEMPT',boundary:'SAME_PROCESS_CONNECTION_REOPEN',secondProcess:false,powerLossTest:false,nonreference:!check.referenceNodeMatch,...work,success:!work.error&&work.cleanup==='OWNED_DIRECTORY_REMOVED'&&work.result?.checksPassed===true};
 }
 export async function main(argv=process.argv.slice(2)){
- if(argv.length===0||argv[0]==='preflight'){if(argv.length>1)throw new TypeError('No path or flags accepted by preflight');console.log(JSON.stringify(preflight('02'),null,2));return 0;}
+ if(argv.length===0||argv[0]==='preflight'){if(argv.length>1)throw new TypeError('No path or flags accepted by preflight');const result=await preflight('02');console.log(JSON.stringify(result,null,2));return result.exitCode;}
  if(argv[0]!=='run'||argv.slice(1).some(x=>!['--allow-temporary-database','--compatibility'].includes(x))||new Set(argv).size!==argv.length)throw new TypeError('Use run --allow-temporary-database [--compatibility]; no database path accepted');
  const watchdog=setTimeout(()=>{console.error('LIFECYCLE_TIMEOUT: no successful observation or cleanup is claimed; the owned temporary path, if created, was printed above.');process.exit(124);},20000);watchdog.unref();try{const r=await lifecycle({allowTemporaryDatabase:argv.includes('--allow-temporary-database'),compatibility:argv.includes('--compatibility')});console.log(JSON.stringify(r,null,2));return r.success?0:1;}finally{clearTimeout(watchdog);}
 }
-if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){main().then(code=>process.exitCode=code).catch(e=>{console.error('LIFECYCLE_BLOCK_OR_FAILURE: '+e.message);process.exitCode=2;});}
+if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){main().then(code=>process.exitCode=code).catch(e=>{console.error(JSON.stringify(e.environment||{status:'LIFECYCLE_BLOCK_OR_FAILURE',reason:e.message,observedNode:process.version,nodeExecutable:process.execPath,observedCwd:process.cwd(),observedArgv:[process.execPath,...process.argv.slice(1)]}));process.exitCode=2;});}

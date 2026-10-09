@@ -14,7 +14,18 @@
         "Connection close/reopen/reset marker comparison",
         "Owned temporary-file cleanup and durability limit"
       ],
-      "minutes": 12
+      "minutes": 12,
+      "minute_scope": "Historical bounded-target allocation; not a measured full learning route.",
+      "plannedFullLearningMinutes": [
+        30,
+        45
+      ],
+      "semanticStages": [
+        "Identify schema, seed and data ownership",
+        "Preserve rows on the normal path",
+        "Reserve data removal for explicit reset",
+        "Cross the file reopen boundary and explain cleanup"
+      ]
     },
     {
       "id": "P02",
@@ -28,7 +39,18 @@
         "Stringfalse interpretation",
         "Rejectedquery pre-DBcall boundary"
       ],
-      "minutes": 12
+      "minutes": 12,
+      "minute_scope": "Historical bounded-target allocation; not a measured full learning route.",
+      "plannedFullLearningMinutes": [
+        30,
+        45
+      ],
+      "semanticStages": [
+        "Validate the closed public query language",
+        "Keep values in ordered bindings",
+        "Choose fixed order clauses and resolve ties",
+        "Connect query choices to real rows and refusals"
+      ]
     },
     {
       "id": "P03",
@@ -42,7 +64,18 @@
         "Deferred returned-promise settlement",
         "Unexpected error identity"
       ],
-      "minutes": 12
+      "minutes": 12,
+      "minute_scope": "Historical bounded-target allocation; not a measured full learning route.",
+      "plannedFullLearningMinutes": [
+        30,
+        45
+      ],
+      "semanticStages": [
+        "Validate owned input before requesting a write",
+        "Keep completion pending until the adapter settles",
+        "Project a fresh result from the saved row",
+        "Map only the declared conflict and retain other errors"
+      ]
     }
   ],
   "initialAssertionFailures": [
@@ -60,5 +93,10 @@
     "pilot60min": false,
     "humanLanguage": false,
     "Moodle": false
-  }
+  },
+  "plannedFullSeminarMinutes": [
+    120,
+    165
+  ],
+  "timingStatus": "UNPILOTED_TEACHING_PLAN_WITH_NAMED_STAGE_CONTINUATION"
 }
