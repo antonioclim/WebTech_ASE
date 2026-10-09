@@ -1,24 +1,6 @@
-# RC10 CURRENT CLASSROOM TRANSFER
+# Current C08/S08 route
 
-Current S08 classroom transfer
-
-Complete every listed microproject individually in class. These are bounded tasks, not completion of the historical full applications.
-
-P01 — Reading queue: immutable trimmed addition — editable path from the seminar package root: CLASSROOM_RC6/student/p01.mjs
-
-P02 — Component decomposition: derived capacity — editable path from the seminar package root: CLASSROOM_RC6/student/p02.mjs
-
-P03 — Effects: permission to publish — editable path from the seminar package root: CLASSROOM_RC6/student/p03.mjs
-
-Current entry: ../../../../ENTRY/S08.html
-
-Step-by-step tutorial: ../../../../TUTORIALS/S08.html
-
-Current evidence form: ../../../S08/WEBTECH_ASE_S08_EN_GB_v1.2.3_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html
-
-Preserve support files, run the stated target checks and record actual results, including blocked or unexecuted checks. Complete the current form for all projects and export one PDF. Review its saved pages and filename before uploading it to the corresponding private Moodle Assignment. A blocked check is not a PASS.
-
-The old full applications are optional advanced references. Their reused IDs, paths, allocations, portfolio requirements, timings and mark statements do not define these current microprojects. The actual Assignment supplies dates and assessment policy. No completion-time or mark guarantee is made here.
+This Markdown handout uses the current HTML route. The DOCX retained beside it keeps historical source bytes and is labelled historical at the course entry. Read [the connected HTML handout](../reading.html#reading-list), [S08 tutorial](../../../S08_SEMINAR/TUTORIAL.html) and [the one formative record](../../../S08_SEMINAR/EN_GB/FORMATIVE_ASSESSMENT.html). All three bounded functions are required individually, with nine semantic stages, one genuine AI critique followed by an independent check and one private reviewed PDF. The full 120–165-minute estimate is unpiloted and the tutorial provides concrete taught continuation.
 
 # C08 — Preparation and transfer
 
@@ -68,19 +50,19 @@ Check the claim independently using the exact source, a bounded model or an actu
 
 <!--pagebreak-->
 
-## After C08: complete the intended work, not a substitute
+## Historical full-application context and current transfer
 
 > Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
 
-P01 Vanilla-to-React Reading Queue is the sole central implementation and remains complete: storage initialisation, add/toggle/remove, filters and counts, empty states, semantic controls and an owned persistence effect. Its assessed file is student/src/App.jsx in the later S08 package. Do not infer a new permission to modify the launcher, evidence or tests from this course handout.
+The historical full Vanilla-to-React Reading Queue specification covered storage initialisation, add/toggle/remove, filters and counts, empty states, semantic controls and an owned persistence effect. Its App.jsx path belongs to that older contract, not the current editable route. Current S08 P01 instead isolates accepted immutable addition in CLASSROOM_RC6/student/p01.mjs; support, launchers and the supplied React shell stay protected.
 
 > Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
 
-P03 State and Effect Debugging is required individual portfolio work. It includes diagnosis, the bounded student/src/SearchPanel.jsx patch and a causal explanation using timing evidence. P02 Component Decomposition remains optional. The concepts it illustrates are taught in C08; the complete P02 implementation is not silently required before P03.
+The historical full State and Effect Debugging specification included a SearchPanel.jsx patch and timing diagnosis, while the historical WorkshopDashboard decomposition had a different role. Those allocations are not current portfolio or optionality rules. Current S08 P02 requires capacityView in student/p02.mjs and P03 requires mayPublish in student/p03.mjs. Neither function implements the historical complete component or search effect.
 
 > Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
 
-The source estimates P01 alone at 55–65 minutes and P03 at 45–60 minutes. These estimates are not observations from this class. The planned 18-minute P01 implementation segment in S08 cannot guarantee complete projects, AI review and submission within the meeting. At minute 60 preserve a truthful draft. Finish P01 and the P03 portfolio before the deadline later set by the teacher. No deadline is invented here.
+The historical full-app estimates were 55–65 minutes for Reading Queue and 45–60 for State/Effect Debugging; they are not measured completion times for this class or the current functions. Current S08 uses an unpiloted 120–165-minute three-project plan and a concrete lecturer-arranged taught continuation. Preserve the exact next stage and truthful draft when a shorter slot ends, complete all three projects and the one genuine AI check and review the single PDF before the actual teacher-set deadline.
 
 ## Evidence matrix for transfer
 
@@ -102,7 +84,7 @@ All eventual assessed evidence belongs with S08 in one final PDF. C08 creates no
 
 Write a short analysis of the claim: “A successful build and an aborted signal prove that the newest query is the only result that can appear.” Separate the two clauses. For each, identify the missing assumption and a witness that could contradict it. This is a synthetic exercise, not a quotation from an actual Gemini interaction.
 
-For the optional decomposition route, propose five responsibilities and one behaviour that must remain unchanged. Do not require five components merely to satisfy a name count. The assessed contracts and test preservation are defined by the later S08 project kit.
+For a separate advanced design exercise, propose responsibilities and one behaviour that should remain unchanged. A component-count target is not useful decomposition. Current S08 P02 remains required and bounded to capacity derivation; its actual target and protected tests are defined in the current tutorial.
 
 The next canonical lecture introduces routing, forms and full-stack React. The preserved reading-list-next.md points to React Router routing/navigation, shared state and the Fetch API. These are forward readings only. They do not make Router, Redux, an API key or a full-stack application part of C08. The external resources require a network connection; the current lesson and laboratory do not.
 

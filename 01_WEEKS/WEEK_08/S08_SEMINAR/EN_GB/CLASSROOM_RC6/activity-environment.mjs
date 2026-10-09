@@ -1,0 +1,8 @@
+import {assessEnvironment,runBounded} from './environment.mjs';
+function block(report,feature,error){report.status='ENV_BLOCKED';report.exitCode=2;report.checks.push({feature,status:'ENV_BLOCKED',reason:error.code||error.message,remedy:'Repair only the named capability and rerun the selected operation; no package installation is performed.'});report.remedy='Read the failed requirement and rerun this command after repair; independent profiles remain available.';}
+export async function assessActivityEnvironment({usesStructuredClone=false,usesTestRunner=false,...options}={}){
+ const report=await assessEnvironment({...options,features:['node-core'],usesNpm:false});
+ if(!report.exitCode&&usesStructuredClone){try{if(typeof structuredClone!=='function')throw Error('STRUCTURED_CLONE_API_MISSING');const source={nested:{value:1}},copy=structuredClone(source);copy.nested.value=2;if(copy===source||copy.nested===source.nested||source.nested.value!==1)throw Error('STRUCTURED_CLONE_ISOLATION_FAILED');report.checks.push({feature:'structured-clone',status:'ENV_OK',operation:'Actual nested clone and source isolation'});}catch(error){block(report,'structured-clone',error);}}
+ if(!report.exitCode&&usesTestRunner){const result=await runBounded(process.execPath,['--test-isolation=none','--version'],{cwd:options.cwd,timeoutMs:5000,maxBytes:65536});if(!result.ok||result.stdout.trim()!==process.version)block(report,'node-test-isolation',Error(result.reason||result.signal||'NODE_TEST_ISOLATION_FLAG_UNAVAILABLE'));else report.checks.push({feature:'node-test-isolation',status:'ENV_OK',operation:'Actual --test-isolation=none parser; owned test process has no Node test child'});}
+ return report;
+}

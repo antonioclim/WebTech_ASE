@@ -1,24 +1,6 @@
-# RC10 CURRENT CLASSROOM TRANSFER
+# Current C08/S08 route
 
-Current S08 classroom transfer
-
-Complete every listed microproject individually in class. These are bounded tasks, not completion of the historical full applications.
-
-P01 — Reading queue: immutable trimmed addition — editable path from the seminar package root: CLASSROOM_RC6/student/p01.mjs
-
-P02 — Component decomposition: derived capacity — editable path from the seminar package root: CLASSROOM_RC6/student/p02.mjs
-
-P03 — Effects: permission to publish — editable path from the seminar package root: CLASSROOM_RC6/student/p03.mjs
-
-Current entry: ../../../../ENTRY/S08.html
-
-Step-by-step tutorial: ../../../../TUTORIALS/S08.html
-
-Current evidence form: ../../../S08/WEBTECH_ASE_S08_EN_GB_v1.2.3_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html
-
-Preserve support files, run the stated target checks and record actual results, including blocked or unexecuted checks. Complete the current form for all projects and export one PDF. Review its saved pages and filename before uploading it to the corresponding private Moodle Assignment. A blocked check is not a PASS.
-
-The old full applications are optional advanced references. Their reused IDs, paths, allocations, portfolio requirements, timings and mark statements do not define these current microprojects. The actual Assignment supplies dates and assessment policy. No completion-time or mark guarantee is made here.
+This Markdown handout uses the current HTML route. The DOCX retained beside it keeps historical source bytes and is labelled historical at the course entry. Read [the connected HTML handout](../reading.html#reading-list), [S08 tutorial](../../../S08_SEMINAR/TUTORIAL.html) and [the one formative record](../../../S08_SEMINAR/EN_GB/FORMATIVE_ASSESSMENT.html). All three bounded functions are required individually, with nine semantic stages, one genuine AI critique followed by an independent check and one private reviewed PDF. The full 120–165-minute estimate is unpiloted and the tutorial provides concrete taught continuation.
 
 # C08 — React with Vite
 
@@ -45,7 +27,7 @@ By the end of the course route, explain components and props, local state, immut
 
 > Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
 
-The original course plans 95 minutes. This is an explicitly derived 60-minute route with deeper material in this handout and transfer reading. The other 30 minutes of the reserved meeting are not a buffer. P01 remains the complete central implementation; P03 is required portfolio work; P02 is optional. This course creates no separate Moodle Assignment.
+The historical course planned 95 minutes and assigned different roles to the full Reading Queue, State/Effect Debugging and WorkshopDashboard applications. Those roles do not define this seminar. The selected 60-minute lecture plan is unpiloted, with deeper reading and continuation. Current S08 requires all three bounded functions individually: queueAdd, capacityView and mayPublish. C08 creates no separate Moodle Assignment.
 
 <!--pagebreak-->
 
@@ -99,7 +81,7 @@ Source scope: CAN-L05–CAN-L08; canonical course. For discrepancies and exact s
 
 > Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
 
-Look for a state owner, repeated behaviour, a semantic region or an independently useful contract. A registration form and a capacity summary can be separate responsibilities without requiring a full refactor during this lecture. Use the optional P02 project later for deeper practice. The conceptual responsibility map is required preparation for P03; completing all of P02 is not a prerequisite imposed by this course.
+Look for a state owner, repeated behaviour, a semantic region or an independently useful contract. A registration form and a capacity summary can be separate responsibilities without requiring a full refactor during this lecture. The historical full WorkshopDashboard can supply deeper design context. Current S08 P02 is the required bounded capacity projection; its source-versus-view reasoning also supports the permission discussion in P03 without requiring a full dashboard refactor.
 
 ### 10. Avoid both extremes
 
@@ -199,7 +181,7 @@ After a prepend, the old first record has a different index. A component-local d
 
 > Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
 
-Example 04 owns each draft in EditableRow and keys rows by item.id. Edit a draft before prepending a new record in a provisioned app. Its original prepend updater also creates a UUID internally; a separate derived fragment moves generation to event time. Independently, the P01 entry counter restarts at 3, so an already persisted ID 3 can collide after reinitialisation. These are distinct identity questions.
+Example 04 owns each draft in EditableRow and keys rows by item.id. Edit a draft before prepending a new record in a provisioned app. Its original prepend updater also creates a UUID internally; a separate derived fragment moves generation to event time. Independently, a historical full reading-queue design with a counter restarting at 3 could collide with a persisted ID 3. The lab models this declared reinitialisation; current queueAdd has no generator or storage and canonical example 04 has no persistence. These are distinct identity questions.
 
 Source scope: CAN-L23–CAN-L26; R3. For discrepancies and exact source identifiers, consult SOURCE_NOTES.md and SOURCES.md.
 
@@ -269,7 +251,7 @@ Inventory persistent variables, derived values, event transitions, DOM construct
 
 > Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
 
-Persistent values become owned state; DOM-building logic becomes rendering; listeners become event props; classes and text become expressions. Storage may require an owned effect. Preserve the observable contract rather than forcing a one-to-one correspondence between implementation lines. P01 remains the complete central implementation, P03 is required diagnostic portfolio work and P02 remains optional consolidation. C08 creates no additional Moodle Assignment.
+Persistent values become owned state; DOM-building logic becomes rendering; listeners become event props; classes and text become expressions. Storage may require an owned effect. Preserve the observable contract rather than forcing a one-to-one correspondence between implementation lines. The historical full Reading Queue, State/Effect Debugging and WorkshopDashboard allocations remain source context. Current S08 requires all three bounded functions individually and creates one seminar evidence record. C08 creates no additional Moodle Assignment.
 
 ### 37. Vite is tooling, not architecture
 

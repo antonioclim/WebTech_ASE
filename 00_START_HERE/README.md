@@ -1,6 +1,6 @@
 # Start here — Web Technologies v4.0.0 candidate
 
-This candidate has revised C01/S01 through C06/S06. The remaining pairs await T04–T07. The latest published edition remains 3.0.0; this checkout is not the final release.
+This candidate has revised C01/S01 through C08/S08. The remaining pairs await T05–T07. The latest published edition remains 3.0.0; this checkout is not the final release.
 
 Download or clone the complete repository, then open [START_HERE.html](START_HERE.html) locally. Follow your operating-system setup and open the current course and seminar from [the collection home](../index.html).
 

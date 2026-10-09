@@ -1,24 +1,13 @@
-# RC10 CURRENT CLASSROOM TRANSFER
+# Current C07 → S07 teaching bridge
 
-Current S07 classroom transfer
+This teaching revision belongs to the v4.0.0 candidate; published main remains v3.0.0. Retained source carrier labels identify provenance.
 
-Complete every listed microproject individually in class. These are bounded tasks, not completion of the historical full applications.
+Complete all three current bounded projects individually. [S07 tutorial](../../../S07_SEMINAR/TUTORIAL.html) has four P01 stages, five P02 stages and four P03 stages. [Current form](../../../S07_SEMINAR/EN_GB/FORMATIVE_ASSESSMENT.html) records the thirteen stages, project reflections, one genuine AI critique/check and one reviewed private PDF. Verify its fields/controls load; local-page native delivery remains unexecuted here.
 
-P01 — Junction relationship query — editable path from the seminar package root: CLASSROOM_RC6/targets/p01.mjs
+P01 connects C07 keys, junction facts and query-count/projection reasoning. P02 connects all five transaction participants, awaited checkpoint/audit, independent state, rollback and recovery. P03 connects pair identity, full response dimensions and repeated intended effect. The actual HTTP Map is independent of the SQLite fixture.
 
-P02 — One owned atomic booking — editable path from the seminar package root: CLASSROOM_RC6/targets/p02.mjs
+The historical full-application P02/ADR discussions below retain their own identity. They do not add an assessed ADR, course submission or optionality to current S07. The full 120–165-minute seminar estimate is unpiloted and requires a lecturer-agreed taught continuation if the meeting is 90/100 minutes.
 
-P03 — Idempotent resource response — editable path from the seminar package root: CLASSROOM_RC6/targets/p03.mjs
-
-Current entry: ../../../../ENTRY/S07.html
-
-Step-by-step tutorial: ../../../../TUTORIALS/S07.html
-
-Current evidence form: ../../../S07/WEBTECH_ASE_S07_EN_GB_v1.1.3_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html
-
-Preserve support files, run the stated target checks and record actual results, including blocked or unexecuted checks. Complete the current form for all projects and export one PDF. Review its saved pages and filename before uploading it to the corresponding private Moodle Assignment. A blocked check is not a PASS.
-
-The old full applications are optional advanced references. Their reused IDs, paths, allocations, portfolio requirements, timings and mark statements do not define these current microprojects. The actual Assignment supplies dates and assessment policy. No completion-time or mark guarantee is made here.
 
 # C07 · Relationships, Transactions and API Design
 
@@ -72,7 +61,7 @@ const eager = await Conference.findAll({
 
 > Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
 
-A statement count is not a cost model. Multiple collections can multiply joined rows: a parent with three entries and four labels can produce twelve combinations. The ORM may assemble a smaller object graph from those rows, but transfer volume and processing still need measurement. A parent limit is not an automatic child limit. The optional P01 eager query has no fixed row cap; the phrase “bounded eager loading” must not be treated as a fact about every returned collection. [C1 §§13–17; P1]
+A statement count is not a cost model. Multiple collections can multiply joined rows: a parent with three entries and four labels can produce twelve combinations. The ORM may assemble a smaller object graph from those rows, but transfer volume and processing still need measurement. A parent limit is not an automatic child limit. The historical full ORM P01 eager query has no fixed row cap; the phrase “bounded eager loading” must not be treated as a fact about every returned collection. [C1 §§13–17; P1]
 
 Parent ordering and nested ordering also need separate choices. Retain a deterministic tie-breaker where the contract requires one. Selecting child fields can reduce exposure, but it does not automatically establish a domain-level API representation. Example 01 intentionally shows the Registration through attribute. A production response should choose its public fields deliberately rather than inheriting an ORM-specific property name by accident.
 
@@ -80,7 +69,7 @@ The laboratory’s query-count scenario calculates 1 + N and a declared eager pl
 
 Prediction checkpoint: one implementation logs one statement and another logs four. List the missing measurements that prevent a conclusion about total cost. Keep statement count, returned cardinality, selected attributes and response representation as distinct entries in your explanation.
 
-## 4. Resource identity and the required ADR
+## 4. Resource identity and the provisional decision explanation
 
 A membership can be addressed by both participants: /api/sessions/7/registrations/42. The URL expresses a chosen scope and identity, not a requirement to expose a junction table name. A top-level resource can be better when registration needs independent identity or cross-session access. The API should reflect the client’s domain operation rather than copy the database graph mechanically. [C1 §§18–22; P3]
 
@@ -92,17 +81,17 @@ Example 03 uses PUT at the known membership URL. It expects 201 when the members
 |---|---|---|
 | PUT known membership | That membership has the supplied ticket type | 201, then 200 |
 | DELETE known membership | That membership is absent | 204, then 204 |
-| P02 booking POST | Apply P02’s separate booking rules | Do not inherit PUT semantics |
+| Historical full-application P02 booking POST | Apply the historical booking POST’s separate rules | Do not inherit PUT semantics |
 
 > Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
 
 P02 has a duplicate-booking conflict rule and checks insufficient capacity before the duplicate lookup. It is not an idempotent no-op simply because the registration example is. Its creation response has a Location value, but the supplied application has no GET booking-member route. Do not report a successful follow-up GET that the application does not implement. [P2]
 
-The required architecture decision record compares an action-shaped alternative with a resource-based alternative and explains the chosen identity, state transition, transaction participants and repeated-client effect. Include context, alternatives, decision, consequences, evidence and a revisit condition. Use a sanitised semester-project scenario. When none is fixed, say that your course-domain decision is provisional rather than inventing an external stakeholder decision.
+For optional course reflection, compare an action-shaped alternative with a resource-based alternative and explain the chosen identity, state transition, transaction participants and repeated-client effect. Context, alternatives, consequences, evidence and a revisit condition make that comparison specific. Use a sanitised scenario and label an unfixed course-domain choice provisional. The historical full-application ADR requirement is separate; no current assessed ADR or course submission is introduced.
 
 > Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
 
-The proposed scope of 300–500 words plus a compact effect table is a teaching guideline. It is not an original source word limit or a second implementation assignment. The full P03 router is optional; its analysis contributes to the one S07 PDF. No completed assessed ADR is supplied here. [A1]
+The proposed scope of 300–500 words plus a compact effect table is a teaching guideline. It is not an original source word limit or a second implementation assignment. The historical full P03 router/ADR allocation is retained as source context. Current S07 requires all three bounded targets; a brief causal decision explanation belongs in the existing reflection rather than a new assessed ADR. No completed assessed ADR is supplied here. [A1]
 
 Example 03’s README additionally claims query-page validation that the script does not implement. This mismatch does not authorise silently adding pagination to the assessed booking function.
 
@@ -136,7 +125,7 @@ Awaiting independent operations establishes sequence. It does not make earlier w
 
 > Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
 
-For P02 the database participant inventory has five entries, not only the three writes. Event lookup and duplicate lookup help make the decision and must receive the same transaction as event.save, Booking.create and BookingAudit.create. An injected callback runs after booking creation and is awaited before requesting the audit. The public course explains this inventory without supplying the complete assessed bookSeats function. [P2]
+For the historical full ORM P02 the database participant inventory has five entries, not only the three writes. Event lookup and duplicate lookup help make the decision and must receive the same transaction as event.save, Booking.create and BookingAudit.create. An injected callback runs after booking creation and is awaited before requesting the audit. The public course explains this inventory without supplying the complete assessed bookSeats function. [P2]
 
 ```text
 validate cheap input before opening
@@ -161,11 +150,11 @@ Example 05 injects a rejection after booking creation but before audit creation.
 
 > Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
 
-P02’s own source tests do not explicitly sequence a successful booking after rollback. A second successful booking after a first success establishes serial use of committed state, not recovery after a failing attempt. The later seminar witness must inspect all relevant pre/post state, then perform a new successful attempt in the same test context. Do not count the intended experiment as executed merely because it is listed in a plan. [P2; A1]
+The historical full ORM P02 source tests do not explicitly sequence a successful booking after rollback. A second successful booking after a first success establishes serial use of committed state, not recovery after a failing attempt. The later seminar witness must inspect all relevant pre/post state, then perform a new successful attempt in the same test context. Do not count the intended experiment as executed merely because it is listed in a plan. [P2; A1]
 
 > Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
 
-The P02 catch maps any UniqueConstraintError arising through the managed call to BookingExistsError. A callback or audit can also throw that class. A class match alone therefore does not identify the originating constraint or prove that a duplicate-booking race occurred. The source-linked model verifies this breadth. The course discloses it while preserving the supplied contract. Unexpected errors retain their identity; an indiscriminate “everything is a conflict” response would lose diagnostic meaning.
+The historical full ORM P02 catch maps any UniqueConstraintError arising through the managed call to BookingExistsError. A callback or audit can also throw that class. A class match alone therefore does not identify the originating constraint or prove that a duplicate-booking race occurred. The source-linked model verifies this breadth. The course discloses it while preserving the supplied contract. Unexpected errors retain their identity; an indiscriminate “everything is a conflict” response would lose diagnostic meaning.
 
 > Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
 
@@ -179,7 +168,7 @@ Prediction checkpoint: explain what a failed attempt followed by a successful at
 
 > Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
 
-Prepare for S07 by reading the central P02 contract and identifying its single edit target. Recall the seed, the expected effect of a small allocation and every participant in the consistency boundary. The course handout is not an additional Moodle assignment. One final S07 PDF will combine implementation evidence, the required ADR and the bounded Gemini review. [A1]
+Prepare for current S07 by reading all three bounded contracts and their separate target paths in the tutorial. The historical full-application P02 contract has its own edit target and is not the current assignment. Recall the seed, the expected effect of a small allocation and every participant in the consistency boundary. The course handout is not an additional Moodle assignment. One current S07 PDF combines all thirteen stage records, three project reflections and the genuine bounded AI critique with an independent executed check. No course ADR submission is added. [A1]
 
 For Gemini, select one sanitised mechanism claim. Provide only the relevant fragment or trace and ask for a discriminating check. Independently verify the claim using the contract, source inspection or an actual experiment whose evidence class you can name. Retain the prompt, selected claim, check, verdict, correction and limitation. Do not upload credentials, personal records or a complete private conversation.
 
@@ -187,7 +176,7 @@ The supplied offline practice statement is synthetic. It is not attributed to a 
 
 > Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
 
-At minute 60, state one invariant, one suitable witness and one assumption still untested. Outstanding P02 work and the short ADR continue before the later deadline. The meeting’s unused booking time is not a hidden extension. Missing local dependencies remain an environment block. Neither model tests nor a static presentation establishes native database or browser acceptance.
+At minute 60, state one invariant, one suitable witness and one assumption still untested. At the course stop preserve unresolved questions. The current all-three-project seminar plan is 120–165 minutes, unpiloted; a 90/100-minute meeting requires a lecturer-confirmed taught continuation. Historical full-project deadlines do not establish current dates. The meeting’s unused booking time is not a hidden extension. Missing local dependencies remain an environment block. Neither model tests nor a static presentation establishes native database or browser acceptance.
 
 Sources and exact paths are listed in sources.html and SOURCES.md. The following abbreviated references explain the source labels used above; software documentation has no invented DOI.
 

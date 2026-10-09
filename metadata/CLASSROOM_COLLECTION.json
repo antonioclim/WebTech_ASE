@@ -1,6 +1,6 @@
 {
   "schema": "webtech-classroom-collection/v1",
-  "status": "CANDIDATE_V4_0_0_T03_PREPARED_NOT_FINAL_NOT_PUBLISHED",
+  "status": "CANDIDATE_V4_0_0_T04_PREPARED_NOT_FINAL_NOT_PUBLISHED",
   "distribution_version": "4.0.0",
   "language": "en-GB",
   "classroom_inner_version": "1.0.0-rc.6",
@@ -85,9 +85,9 @@
       "guide": "01_WEEKS/WEEK_07/C07_COURSE/EN_GB/course.html",
       "form": null,
       "package_id_path": "01_WEEKS/WEEK_07/C07_COURSE/EN_GB/PACKAGE_ID.txt",
-      "package_id": "2c41f704539471a9c0c6633c73b10e53626ef0d58fb3f26dd5d85bd284097474",
+      "package_id": "d37a3f3c0546827aa14975020d2444ab5411b81f95d86115372686dc3852a664",
       "included_in_collection_version": "4.0.0",
-      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
+      "candidate_revision_status": "T04_COMPLETE_WITH_EXPLICIT_LIMITS"
     },
     {
       "object_id": "C08",
@@ -97,9 +97,9 @@
       "guide": "01_WEEKS/WEEK_08/C08_COURSE/EN_GB/course.html",
       "form": null,
       "package_id_path": "01_WEEKS/WEEK_08/C08_COURSE/EN_GB/PACKAGE_ID.txt",
-      "package_id": "0ea5ad4d0ca211e75733a49f359b58760e7fa751a22478f3fe1f278c6587b372",
+      "package_id": "6dcfb05f6b1dde09e01c30684713a7f2b30d1fa6353c876e21b8e50e1e2c41f3",
       "included_in_collection_version": "4.0.0",
-      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
+      "candidate_revision_status": "T04_COMPLETE_WITH_EXPLICIT_LIMITS"
     },
     {
       "object_id": "C09",
@@ -371,32 +371,32 @@
       "entry": "01_WEEKS/WEEK_07/S07_SEMINAR/index.html",
       "start": "01_WEEKS/WEEK_07/S07_SEMINAR/EN_GB/CLASSROOM_RC6/START.html",
       "guide": "01_WEEKS/WEEK_07/S07_SEMINAR/EN_GB/CLASSROOM_RC6/GUIDE.html",
-      "form": "01_WEEKS/WEEK_07/S07_SEMINAR/EN_GB/CLASSROOM_RC6/EVIDENCE_FORM.html",
+      "form": "01_WEEKS/WEEK_07/S07_SEMINAR/EN_GB/FORMATIVE_ASSESSMENT.html",
       "tutorial": "01_WEEKS/WEEK_07/S07_SEMINAR/TUTORIAL.html",
       "projects": [
         {
           "id": "P01",
           "title": "Junction relationship query",
           "editable_path": "CLASSROOM_RC6/targets/p01.mjs",
-          "completeScope": "Write one eager SQL JOIN over supplied sessions/registrations/attendees, bind session ID and order attendees by ID; return detached mapped rows."
+          "completeScope": "Use one parameterised eager JOIN over sessions/registrations/attendees, one all(sessionId), four declared aliases and attendee ID ascending order; project fresh ordinary rows detached from selected SQL rows."
         },
         {
           "id": "P02",
           "title": "One owned atomic booking",
           "editable_path": "CLASSROOM_RC6/targets/p02.mjs",
-          "completeScope": "Use supplied managed SQLite transaction adapter, five shared-transaction operations, awaited callback/audit and rollback on callback/audit failures."
+          "completeScope": "Preserve positive-integer prevalidation and event/sold-out precedence; use one owned managed SQLite transaction for event, duplicate, seats, create and audit, await afterCreated and audit, preserve rejection and return detached booking/available through managed settlement. Inspect rollback at both sites and serial recovery."
         },
         {
           "id": "P03",
           "title": "Idempotent resource response",
           "editable_path": "CLASSROOM_RC6/targets/p03.mjs",
-          "completeScope": "Map supplied PUTcreated/repeat to201+Location/200 and DELETEremoved/absent to204no body using path pair identity."
+          "completeScope": "Map PUT created/existing to 201 with pair-derived Location/200, DELETE removed/absent to 204 with null mapper body and unsupported method/outcome to 405. Preserve full headers/body dimensions; compare independent resource pairs and empty 204 bodies over actual HTTP."
         }
       ],
       "package_id_path": "01_WEEKS/WEEK_07/S07_SEMINAR/EN_GB/PACKAGE_ID.txt",
-      "package_id": "a5bfdc5e798f196801e71cc71d5fcbc70b62122c0e349f6378f6983dc5ae1dbd",
+      "package_id": "dcd073f569562c9a388e216563a6a0216222c9c9b7d42443b7ea3a11573dbb66",
       "included_in_collection_version": "4.0.0",
-      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
+      "candidate_revision_status": "T04_COMPLETE_WITH_EXPLICIT_LIMITS"
     },
     {
       "object_id": "S08",
@@ -404,7 +404,7 @@
       "entry": "01_WEEKS/WEEK_08/S08_SEMINAR/index.html",
       "start": "01_WEEKS/WEEK_08/S08_SEMINAR/EN_GB/CLASSROOM_RC6/START.html",
       "guide": "01_WEEKS/WEEK_08/S08_SEMINAR/EN_GB/CLASSROOM_RC6/GUIDE.html",
-      "form": "01_WEEKS/WEEK_08/S08_SEMINAR/EN_GB/CLASSROOM_RC6/EVIDENCE_FORM.html",
+      "form": "01_WEEKS/WEEK_08/S08_SEMINAR/EN_GB/FORMATIVE_ASSESSMENT.html",
       "tutorial": "01_WEEKS/WEEK_08/S08_SEMINAR/TUTORIAL.html",
       "projects": [
         {
@@ -427,9 +427,9 @@
         }
       ],
       "package_id_path": "01_WEEKS/WEEK_08/S08_SEMINAR/EN_GB/PACKAGE_ID.txt",
-      "package_id": "d385d905d93841b8be7eee6593c48a93a32366ea9dd3aaea357f654a0bb91331",
+      "package_id": "da4758f43ac935e60cd6643fbb82c632a4206a4fa0cce0a2207af49d41e2695e",
       "included_in_collection_version": "4.0.0",
-      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
+      "candidate_revision_status": "T04_COMPLETE_WITH_EXPLICIT_LIMITS"
     },
     {
       "object_id": "S09",

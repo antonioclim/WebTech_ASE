@@ -1,6 +1,6 @@
 # Web Technologies — English student materials, v4.0.0 candidate
 
-This branch prepares the next complete edition. C01/S01 through C06/S06 have been revised in T01–T03; C07/S07–C14/S14 retain their supplied material and await their scheduled revision. The latest published classroom edition remains 3.0.0. Read the [candidate progress](metadata/CANDIDATE_PROGRESS.json) before interpreting this checkout as a complete release.
+This branch prepares the next complete edition. C01/S01 through C08/S08 have been revised in T01–T04; C09/S09–C14/S14 retain their supplied material and await their scheduled revision. The latest published classroom edition remains 3.0.0. Read the [candidate progress](metadata/CANDIDATE_PROGRESS.json) before interpreting this checkout as a complete release.
 
 This repository contains the current materials for 14 course and seminar pairs, with two operating-system setup guides, 14 detailed seminar tutorials and 40 required individual microprojects. The 38 learner target files are intentionally unfinished. HTML presentations and guides are the main teaching route; Word references are optional.
 
@@ -34,4 +34,4 @@ The [download guide](00_START_HERE/DOWNLOAD.html) distinguishes this current rep
 
 ## Qualification
 
-General qualification remains **NOT_FINAL**. The ten broad qualification gates remain pending for the complete edition. T01–T03 have scoped Node, source and form-model checks; native browser rendering, print, Windows, macOS and human acceptance have not passed. Read [the qualification scope](00_START_HERE/QUALIFICATION.html). Integrity and task results support the checks they actually perform.
+General qualification remains **NOT_FINAL**. The ten broad qualification gates remain pending for the complete edition. T01–T04 have scoped Node, SQLite, local HTTP, source and form-model checks; native browser rendering, print, Windows, macOS and human acceptance have not passed. Read [the qualification scope](00_START_HERE/QUALIFICATION.html). Integrity and task results support the checks they actually perform.

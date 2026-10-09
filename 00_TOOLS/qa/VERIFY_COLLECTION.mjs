@@ -9,7 +9,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..')
 const VERSION = '4.0.0';
 const LATEST_PUBLISHED_VERSION = '3.0.0';
 const PROGRESS = 'metadata/CANDIDATE_PROGRESS.json';
-const PREPARED_TRANCHE = 3;
+const PREPARED_TRANCHE = 4;
 const GATES = ['local_integrity','reference_runtime','headless_browser','native_windows','native_macos','manual_browser','word','moodle_live','human_pilot','owner_acceptance'];
 const requiredIDs = week => week === 1 ? ['P01','P02'] : week === 14 ? ['P01','P03'] : ['P01','P02','P03'];
 const MANIFEST = 'metadata/current-integrity/REPOSITORY_SHA256SUMS.txt';

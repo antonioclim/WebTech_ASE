@@ -1,3 +1,5 @@
-# Windows — local C08 route
+# C08 — Windows
 
-Extract the student ZIP completely into a new short folder, for example `D:\WTW08C`. Open `index.html`. Keep `assets`, `canonical`, `derived` and `documents` together. See GUIDE.md for text controls, reading and printing. Do not open a canonical JSX/Vite index as if it were the offline lesson. No installation, terminal command or GitHub upload is required now.
+Extract the whole package, open its index.html and use [the HTML guide](guide.html). VS Code's C08 EN_GB folder contains tools/demonstrations/canonical. From that CWD use `.\CHECK_ENVIRONMENT.cmd`, `.\RUN_ALL_EXAMPLES.cmd` or the exact `node tools/tw-kit.mjs` commands in [RUN_EXAMPLES.md](RUN_EXAMPLES.md). No global npm install or PowerShell execution-policy change is required for the core route.
+
+Optional React sources need already prepared project-local dependencies. Missing prerequisites block their route. Use the actual printed dev URL and stop only your process. Windows/native browser/PDF acceptance must be observed on your machine; Linux model output does not certify it.

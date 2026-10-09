@@ -323,6 +323,62 @@
     165
   ],
   "timeline_numeric_values": "Lower end of the unpiloted planning range, not an empirical minimum or a completion threshold.",
-  "planning_continuation": "If the actual institutional slot is shorter, confirm a continuation arrangement with the lecturer. All projects remain required individual classroom work; incomplete work remains incomplete.",
-  "private_evidence_location": "A private home-folder WebTech_Evidence/Sxx directory outside the entire extracted collection; use the detailed tutorial for operating-system-specific quoted absolute paths."
+  "planning_continuation": "Unpiloted proposal: save exact stage, failing assertion, fixture path and next prediction around minute 80\u201390; lecturer-arranged taught continuation of 20\u201365 minutes beyond 100 or 30\u201375 beyond 90. All three projects, one genuine AI critique and one PDF remain required.",
+  "private_evidence_location": "A private home-folder WebTech_Evidence/Sxx directory outside the entire extracted collection; use the detailed tutorial for operating-system-specific quoted absolute paths.",
+  "semantic_stages": [
+    {
+      "project_id": "P01",
+      "stage": "P01-01",
+      "title": "Separate text, collection and supplied identity",
+      "tutorial_anchor": "P01-01"
+    },
+    {
+      "project_id": "P01",
+      "stage": "P01-02",
+      "title": "Normalise before deciding blank or valid",
+      "tutorial_anchor": "P01-02"
+    },
+    {
+      "project_id": "P01",
+      "stage": "P01-03",
+      "title": "Return a new container and preserve the earlier snapshot",
+      "tutorial_anchor": "P01-03"
+    },
+    {
+      "project_id": "P02",
+      "stage": "P02-01",
+      "title": "Choose the source for used seats",
+      "tutorial_anchor": "P02-01"
+    },
+    {
+      "project_id": "P02",
+      "stage": "P02-02",
+      "title": "Refuse invalid capacity before deriving",
+      "tutorial_anchor": "P02-02"
+    },
+    {
+      "project_id": "P02",
+      "stage": "P02-03",
+      "title": "Derive the view and test full versus over-capacity",
+      "tutorial_anchor": "P02-03"
+    },
+    {
+      "project_id": "P03",
+      "stage": "P03-01",
+      "title": "Name the current publication owner",
+      "tutorial_anchor": "P03-01"
+    },
+    {
+      "project_id": "P03",
+      "stage": "P03-02",
+      "title": "Require activity and matching identity",
+      "tutorial_anchor": "P03-02"
+    },
+    {
+      "project_id": "P03",
+      "stage": "P03-03",
+      "title": "Challenge inactive and stale publication",
+      "tutorial_anchor": "P03-03"
+    }
+  ]
 }

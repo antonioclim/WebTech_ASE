@@ -1,24 +1,6 @@
-# RC10 CURRENT CLASSROOM TRANSFER
+# Current C08/S08 route
 
-Current S08 classroom transfer
-
-Complete every listed microproject individually in class. These are bounded tasks, not completion of the historical full applications.
-
-P01 — Reading queue: immutable trimmed addition — editable path from the seminar package root: CLASSROOM_RC6/student/p01.mjs
-
-P02 — Component decomposition: derived capacity — editable path from the seminar package root: CLASSROOM_RC6/student/p02.mjs
-
-P03 — Effects: permission to publish — editable path from the seminar package root: CLASSROOM_RC6/student/p03.mjs
-
-Current entry: ../../../ENTRY/S08.html
-
-Step-by-step tutorial: ../../../TUTORIALS/S08.html
-
-Current evidence form: ../../S08/WEBTECH_ASE_S08_EN_GB_v1.2.3_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html
-
-Preserve support files, run the stated target checks and record actual results, including blocked or unexecuted checks. Complete the current form for all projects and export one PDF. Review its saved pages and filename before uploading it to the corresponding private Moodle Assignment. A blocked check is not a PASS.
-
-The old full applications are optional advanced references. Their reused IDs, paths, allocations, portfolio requirements, timings and mark statements do not define these current microprojects. The actual Assignment supplies dates and assessment policy. No completion-time or mark guarantee is made here.
+C08 teaches the mechanisms; S08 requires all three individual bounded functions. Open [S08 start](../../S08_SEMINAR/EN_GB/CLASSROOM_RC6/START.html), [the tutorial](../../S08_SEMINAR/TUTORIAL.html) and [one formative record](../../S08_SEMINAR/EN_GB/FORMATIVE_ASSESSMENT.html). Historical full-app roles, omitted paths, timings and grading statements are provenance, not current obligations. The full S08 estimate is 120–165 minutes, unpiloted, with concrete taught continuation. One genuine AI critique/independent check and one private PDF cover all projects.
 
 # C08 — Source notes: read before the original READMEs
 
@@ -30,7 +12,7 @@ The actual main.jsx creates an AbortController and passes its signal to a timer-
 
 ## SOURCE:03 and SOURCE:04 — event-owned ID fragments
 
-Both original examples call crypto.randomUUID inside a functional updater. A pure updater should not create a fresh event-owned ID on every evaluation. The separate derived/event-owned-ids.js reserves the ID before returning the updater. It is an explanatory fragment, not an automatically applied patch, a complete S08 answer or a claim that duplicated rows were observed. The current source-bound probe checks repeated updater evaluation with a controlled ID provider, not React StrictMode.
+Both original examples call crypto.randomUUID inside a functional updater. A pure updater should not create a fresh event-owned ID on every evaluation. The separate derived/event-owned-ids.js reserves the ID before returning the updater. It is an explanatory fragment, not an automatically applied patch, a complete S08 answer or a claim that duplicated rows were observed. The separate fragment takes a controlled ID provider and exposes repeatable updaters. Compare this source with neutral demo 02; neither observation executes React StrictMode.
 
 > Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
 
@@ -38,7 +20,7 @@ Both original examples call crypto.randomUUID inside a functional updater. A pur
 
 > Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
 
-The source launcher counter restarts at 3. A persisted ID 3 can therefore collide with a newly generated ID after reinitialisation. Key usage does not repair the collision. This course models the generator discrepancy and explains the later launcher obligation. It does not produce the S08 launcher or claim a real browser reload test. The permitted assessed edit remains App.jsx in the later package.
+The historical full reading-queue context discusses a counter restarting at 3 and a possible collision with a persisted ID 3. The lab models that stated reinitialisation, not an actual reload. Current S08 P01 receives its ID and implements no generator or storage. Canonical example 04 also has no persistence; its key-matching question is separate.
 
 ## Effect comparator conditions
 
@@ -46,10 +28,10 @@ LAB:E02 removes both publication guards and supplies a non-cooperative settlemen
 
 ## Source pins, parity and scope
 
-The five package/lockfile pairs preserve React 19.2.8, react-dom 19.2.8, Vite 8.2.1 and @vitejs/plugin-react 6.0.5 as source facts. They are not newly verified runtime installations. The project reference remains Node 24.21.0/npm 11.19.0. The local probe environment is recorded only in private QA and is not substituted for the reference.
+The five package/lockfile pairs preserve React 19.2.8, react-dom 19.2.8, Vite 8.2.1 and @vitejs/plugin-react 6.0.5 as source facts. They are not newly verified runtime installations. The project reference remains Node 24.21.0/npm 11.19.0. Use the shared ENVIRONMENT.html guide and actual operation preflight to separate observed from reference runtime. A version warning does not block a capability-qualified pure operation. Historical reference claims are not current execution receipts.
 
 Use the same explicit valid fixture for vanilla/React comparisons and state intentional malformed-storage, mount-write and markup-handling differences. Do not reproduce unsafe markup interpretation as a parity goal. Do not derive exact invocation counts from one updater/effect declaration. A build result, model result or test title cannot establish all behavioural properties.
 
 > Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
 
-P01 is central, P03 is required portfolio and P02 is optional. C08 creates no additional Moodle Assignment. The source's 95-minute plan is replaced explicitly by a derived 60-minute route, not silently edited. There is no prefilled student observation or actual Gemini transcript in this package.
+Historical full Reading Queue, State/Effect Debugging and WorkshopDashboard roles do not define current obligations. S08 requires queueAdd, capacityView and mayPublish individually, with nine stages and one seminar PDF. The historical 95-minute course allocation and selected unpiloted 60-minute lecture plan are distinct. C08 creates no additional Moodle Assignment and supplies no prefilled observations or genuine AI transcript.

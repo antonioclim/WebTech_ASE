@@ -4,9 +4,9 @@
   "final_target_version": "4.0.0",
   "latest_published_version": "3.0.0",
   "distribution_status": "LOCAL_CANDIDATE_NOT_PUBLISHED",
-  "phase": "T03_CANDIDATE_PREPARED",
-  "next_phase": "T04",
-  "implementation_scope": "T01–T03: C01/S01 through C06/S06 and affected common guidance, environment policy and evidence forms. C07/S07 through C14/S14 remain inherited source pending their authorised tranche review.",
+  "phase": "T04_CANDIDATE_PREPARED",
+  "next_phase": "T05",
+  "implementation_scope": "T01–T04: C01/S01 through C08/S08 and affected common guidance, activity guards and evidence forms. C09/S09 through C14/S14 retain inherited source pending their authorised tranche review.",
   "qualificationVerdict": "NOT_FINAL",
   "native_acceptance": false,
   "publication_qualified": false,
@@ -58,7 +58,7 @@
       ],
       "implementation_status": "COMPLETE_WITH_EXPLICIT_LIMITS",
       "acceptance_status": "PENDING",
-      "next_step": "Continue with T04 after an explicit next; keep global acceptance pending."
+      "next_step": "Retain T03 scoped evidence and recheck affected controls when later common changes require it; whole-edition acceptance remains pending."
     },
     {
       "id": "T04",
@@ -68,9 +68,9 @@
         "C08",
         "S08"
       ],
-      "implementation_status": "PENDING",
+      "implementation_status": "COMPLETE_WITH_EXPLICIT_LIMITS",
       "acceptance_status": "PENDING",
-      "next_step": "Implement and verify this tranche before claiming completion"
+      "next_step": "Continue with T05 after an explicit next; keep global acceptance pending."
     },
     {
       "id": "T05",
@@ -184,11 +184,12 @@
     }
   ],
   "evidence_boundary": "Tranche-level observations are recorded separately from the ten global gates. No subset result makes the whole 14-pair distribution qualified, published or accepted. Source identity and final verification receipts are retained outside the sealed tree to avoid self-reference.",
-  "timing_limit": "S01 is estimated at 90–120 minutes and S02–S06 at 120–165 minutes, all unpiloted. A 90–100-minute institutional slot does not establish completion of all required individual work. For S03–S06 reserve an explicit taught continuation estimated at 20–65 minutes beyond a 100-minute slot or 30–75 beyond 90, then validate through an actual novice pilot. No project is omitted or silently assigned as homework.",
+  "timing_limit": "S01 is estimated at 90–120 minutes and S02–S08 at 120–165 minutes, all unpiloted. A 90–100-minute slot does not establish completion of all required individual work. For S03–S08 reserve an explicit taught continuation estimated at 20–65 minutes beyond a 100-minute slot or 30–75 beyond 90, then validate through an actual novice pilot. Supplied React demonstrations have a separate conditional allocation. No project is omitted or silently assigned as homework.",
   "prepared_tranches": [
     "T01",
     "T02",
-    "T03"
+    "T03",
+    "T04"
   ],
   "T02_evidence": [
     {
@@ -217,6 +218,33 @@
       "area": "S05/S06 formative evidence forms",
       "state": "PASS",
       "scope": "36 grouped Node VM DOM-model checks on actual form scripts, including 31 rejected invalid envelopes per unit. Static schema and historical byte-preserving route checks pass. All 24 stage links resolve. The forms retain one genuine learner AI exchange, an independent check and one PDF per seminar; synthetic maintainer QA is not learner evidence. Native interaction and actual saved PDF remain NOT_EXECUTED."
+    }
+  ],
+  "T04_evidence": [
+    {
+      "area": "C07/S07 and C08/S08 teaching",
+      "state": "PASS",
+      "scope": "Independent source reading covers all 48 retained course screens and 22 semantic seminar stages (S07 4+5+4; S08 3+3+3). Seven new neutral Node demonstrations explain different pedagogical objects. All six tranche projects remain required individual work, within 40 collection obligations. Corresponding primary references and instructor ideas are traced separately. This is source/editorial review and bounded runtime evidence, not a novice pilot or native browser qualification."
+    },
+    {
+      "area": "S07 SQLite, local HTTP and controlled falsifiers",
+      "state": "PASS",
+      "scope": "Separate private reference and two legitimate variants each pass six finite protected cases; 17 deliberate defects are rejected, plus three independent witness groups. Actual bound junction lookup, same-connection transaction settlement/rollback/recovery and repeated addressed Node HTTP requests are exercised. Detached return is compared to the store-created object; creation Location names are case-insensitive. These results do not implement public TODOs, prove external isolation/exactly-once or qualify full ORM applications."
+    },
+    {
+      "area": "S08 pure functions and controlled falsifiers",
+      "state": "PASS",
+      "scope": "Private independently authored reference and legitimate copied-container/earlier-record variant each pass two baseline and three objective cases; 12 deliberate defects are rejected. Immutable input/output content, capacity derived from both sources and the full Boolean publication predicate are exercised. Aborted is outside that predicate contract. This does not render React or observe a real request effect."
+    },
+    {
+      "area": "S07/S08 formative evidence forms",
+      "state": "PASS",
+      "scope": "42 grouped checks execute actual controllers in an owned Node VM DOM model;66 invalid envelopes (33 each), four parser-boundary cases and six controller mutants are checked.22 exact tutorial stage anchors and historical routes are bound separately. These are synthetic maintainer checks; genuine learner AI, independent learner evidence and one saved PDF per seminar remain required and unexecuted. Local-file CSP delivery and native controls remain NOT_EXECUTED."
+    },
+    {
+      "area": "Selected activity guards, transaction adapter and process ownership",
+      "state": "PASS",
+      "scope": "Actual Node v24.19.0/Linux only. 25 injected scoped API/feature cases distinguish core, SQLite, HTTP and pure-function needs; 17 byte-identical local carriers retain the unchanged canonical assessor. Nine owned SQLite adapter fault/settlement groups and bounded own-process-group fixtures include descendant/temporary cleanup while preserving neighbours. Optional React/ORM dependencies remain BLOCKED without installation. Final external receipts retain tested hashes and source identity; injected versions do not qualify another runtime."
     }
   ]
 }

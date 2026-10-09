@@ -1,24 +1,13 @@
-# RC10 CURRENT CLASSROOM TRANSFER
+# Current C07 → S07 teaching bridge
 
-Current S07 classroom transfer
+This teaching revision belongs to the v4.0.0 candidate; published main remains v3.0.0. Retained source carrier labels identify provenance.
 
-Complete every listed microproject individually in class. These are bounded tasks, not completion of the historical full applications.
+Complete all three current bounded projects individually. [S07 tutorial](../../S07_SEMINAR/TUTORIAL.html) has four P01 stages, five P02 stages and four P03 stages. [Current form](../../S07_SEMINAR/EN_GB/FORMATIVE_ASSESSMENT.html) records the thirteen stages, project reflections, one genuine AI critique/check and one reviewed private PDF. Verify its fields/controls load; local-page native delivery remains unexecuted here.
 
-P01 — Junction relationship query — editable path from the seminar package root: CLASSROOM_RC6/targets/p01.mjs
+P01 connects C07 keys, junction facts and query-count/projection reasoning. P02 connects all five transaction participants, awaited checkpoint/audit, independent state, rollback and recovery. P03 connects pair identity, full response dimensions and repeated intended effect. The actual HTTP Map is independent of the SQLite fixture.
 
-P02 — One owned atomic booking — editable path from the seminar package root: CLASSROOM_RC6/targets/p02.mjs
+The historical full-application P02/ADR discussions below retain their own identity. They do not add an assessed ADR, course submission or optionality to current S07. The full 120–165-minute seminar estimate is unpiloted and requires a lecturer-agreed taught continuation if the meeting is 90/100 minutes.
 
-P03 — Idempotent resource response — editable path from the seminar package root: CLASSROOM_RC6/targets/p03.mjs
-
-Current entry: ../../../ENTRY/S07.html
-
-Step-by-step tutorial: ../../../TUTORIALS/S07.html
-
-Current evidence form: ../../S07/WEBTECH_ASE_S07_EN_GB_v1.1.3_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html
-
-Preserve support files, run the stated target checks and record actual results, including blocked or unexecuted checks. Complete the current form for all projects and export one PDF. Review its saved pages and filename before uploading it to the corresponding private Moodle Assignment. A blocked check is not a PASS.
-
-The old full applications are optional advanced references. Their reused IDs, paths, allocations, portfolio requirements, timings and mark statements do not define these current microprojects. The actual Assignment supplies dates and assessment policy. No completion-time or mark guarantee is made here.
 
 # C07 source notes and discrepancies
 
@@ -36,7 +25,7 @@ The logger is cleared before each route. Four lazy statements and one eager stat
 
 > Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
 
-The script performs sequential PUT and DELETE membership assertions. Query-page validations described in its README do not appear in the script. Sequential create-or-update does not itself qualify arbitrary concurrent upsert. The registration contract must not be silently assigned to P02 booking POST.
+The script performs sequential PUT and DELETE membership assertions. Query-page validations described in its README do not appear in the script. Sequential create-or-update does not itself qualify arbitrary concurrent upsert. The registration contract must not be silently assigned to Historical full-application P02 booking POST.
 
 ## Example 04 — Pagination Stability
 
@@ -54,4 +43,4 @@ P02 Transactional Booking is the sole full required implementation. The referenc
 
 > Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
 
-The required P03 ADR is analysis, not the complete router implementation. Full P01 and P03 code are optional. No completed assessed reference target or ADR is supplied publicly. There is one final S07 PDF, not a C07 Assignment.
+The historical full-application P03 ADR is analysis, not the complete router implementation. Full P01 and P03 code are optional. No completed assessed reference target or ADR is supplied publicly. There is one final S07 PDF, not a C07 Assignment.

@@ -1,33 +1,6 @@
-// LOCAL3 protected teaching probes. These bodies observe learner code; they do not implement it.
-// The retained CLASSROOM_RC6 source-carrier name is intentional.
-const probes = {
-  "P01-boundary": async () => {
-    const {database}=await import("./store.mjs"); const {sessionRegistrations}=await import("./targets/p01.mjs"); const db=database(); try { console.log(sessionRegistrations(db,88)); } finally { db.close(); }
-  },
-  "P02-boundary": async () => {
-    const {database,bookingStore,snapshot}=await import("./store.mjs"); const {bookSeats}=await import("./targets/p02.mjs"); const db=database(); try { const store=bookingStore(db); const before=snapshot(db); try { await bookSeats(store,{eventId:1,attendeeId:7,seats:0.5}); } catch(error) { console.log({name:error.name,calls:store.calls,before,after:snapshot(db)}); } } finally { db.close(); }
-  },
-  "P03-boundary": async () => {
-    const {resourceResponse}=await import("./targets/p03.mjs"); console.log(JSON.stringify(resourceResponse("PATCH",{kind:"created",data:{sessionId:2,attendeeId:9}},{sessionId:2,attendeeId:9}),null,2));
-  }
-};
-const [selector, ...extra] = process.argv.slice(2);
-if (selector === undefined && extra.length === 0) {
-  console.log('Use: node CLASSROOM_RC6/PROBE.mjs <selector>');
-  console.log('Available selectors: ' + Object.keys(probes).join(', '));
-  process.exit(0);
-}
-if (extra.length !== 0 || !Object.hasOwn(probes, selector)) {
-  console.error(JSON.stringify({status:'STOP_UNKNOWN_TEACHING_PROBE',selector:selector ?? null,available:Object.keys(probes)}));
-  process.exit(2);
-}
-if (process.version !== 'v24.21.0') {
-  console.error(JSON.stringify({status:'STOP_REFERENCE_NODE',expected:'v24.21.0',observed:process.version,probe:selector}));
-  process.exit(2);
-}
-try {
-  await probes[selector]();
-} catch (error) {
-  console.error(JSON.stringify({status:'STOP_TEACHING_PROBE_EXECUTION',probe:selector,name:error.name,message:error.message}));
-  process.exitCode = 2;
-}
+import {assessActivityEnvironment} from './activity-environment.mjs';
+import {REFERENCE} from './environment.mjs';import {runOwnedWorker,assertWorkerCompleted} from './owned-worker.mjs';import {fileURLToPath} from 'node:url';
+const selectors=["P01-boundary", "P02-boundary", "P03-boundary"],[selector,...extra]=process.argv.slice(2);
+if(selector===undefined&&!extra.length){console.log('Use: node CLASSROOM_RC6/PROBE.mjs <selector>');console.log('Available selectors: '+selectors.join(', '));process.exit(0);}if(extra.length||!selectors.includes(selector)){console.error(JSON.stringify({status:'STOP_UNKNOWN_TEACHING_PROBE',selector:selector??null,available:selectors}));process.exit(2);}
+const environment=await assessActivityEnvironment({unit:'S07/'+selector,operation:'teaching-probe',cwd:fileURLToPath(new URL('../',import.meta.url)),command:'node CLASSROOM_RC6/PROBE.mjs '+selector,usesSqlite:selector!=='P03-boundary'});console.error(JSON.stringify(environment));if(environment.exitCode)process.exit(environment.exitCode);
+let temporaryWorkspace=null;try{const result=await runOwnedWorker([fileURLToPath(new URL('./probe-worker.mjs',import.meta.url)),selector],{cwd:fileURLToPath(new URL('./',import.meta.url))});temporaryWorkspace=result.temporaryWorkspace;if(result.stdout)process.stdout.write(result.stdout);if(result.stderr)process.stderr.write(result.stderr);assertWorkerCompleted(result);if(result.status!==0)throw Error('PROBE_CHILD_EXIT_ERROR '+result.status);console.error(JSON.stringify({status:'PASS_BOUNDED_TEACHING_PROBE_EXECUTION',probe:selector,referenceNode:REFERENCE.node,observedNode:process.version,limits:result.limits,temporaryWorkspace,implementationQualification:false}));}catch(error){console.error(JSON.stringify({status:'STOP_TEACHING_PROBE_EXECUTION',classification:'EXECUTION_FAULT',probe:selector,reason:error.message,temporaryWorkspace:error.temporaryWorkspace||temporaryWorkspace}));process.exitCode=2;}

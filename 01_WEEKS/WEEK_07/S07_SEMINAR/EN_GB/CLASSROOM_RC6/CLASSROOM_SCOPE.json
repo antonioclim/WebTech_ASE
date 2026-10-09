@@ -9,19 +9,19 @@
       "id": "P01",
       "title": "Junction relationship query",
       "editable_path": "CLASSROOM_RC6/targets/p01.mjs",
-      "completeScope": "Write one eager SQL JOIN over supplied sessions/registrations/attendees, bind session ID and order attendees by ID; return detached mapped rows."
+      "completeScope": "Use one parameterised eager JOIN over sessions/registrations/attendees, one all(sessionId), four declared aliases and attendee ID ascending order; project fresh ordinary rows detached from selected SQL rows."
     },
     {
       "id": "P02",
       "title": "One owned atomic booking",
       "editable_path": "CLASSROOM_RC6/targets/p02.mjs",
-      "completeScope": "Use supplied managed SQLite transaction adapter, five shared-transaction operations, awaited callback/audit and rollback on callback/audit failures."
+      "completeScope": "Preserve positive-integer prevalidation and event/sold-out precedence; use one owned managed SQLite transaction for event, duplicate, seats, create and audit, await afterCreated and audit, preserve rejection and return detached booking/available through managed settlement. Inspect rollback at both sites and serial recovery."
     },
     {
       "id": "P03",
       "title": "Idempotent resource response",
       "editable_path": "CLASSROOM_RC6/targets/p03.mjs",
-      "completeScope": "Map supplied PUTcreated/repeat to201+Location/200 and DELETEremoved/absent to204no body using path pair identity."
+      "completeScope": "Map PUT created/existing to 201 with pair-derived Location/200, DELETE removed/absent to 204 with null mapper body and unsupported method/outcome to 405. Preserve full headers/body dimensions; compare independent resource pairs and empty 204 bodies over actual HTTP."
     }
   ],
   "scope": "GENUINE_NODE_BUILTIN_SQLITE_JOIN_TRANSACTION_AND_LOOPBACK_HTTP",
@@ -50,7 +50,7 @@
     {
       "start": 5,
       "end": 35,
-      "activity": "P01 — Junction relationship query: contract and prediction, bounded implementation/investigation, then review and actual evidence.",
+      "activity": "P01 \u2014 Junction relationship query: contract and prediction, bounded implementation/investigation, then review and actual evidence.",
       "planned_range_minutes": [
         30,
         45
@@ -67,7 +67,7 @@
     {
       "start": 35,
       "end": 65,
-      "activity": "P02 — One owned atomic booking: contract and prediction, bounded implementation/investigation, then review and actual evidence.",
+      "activity": "P02 \u2014 One owned atomic booking: contract and prediction, bounded implementation/investigation, then review and actual evidence.",
       "planned_range_minutes": [
         30,
         45
@@ -84,7 +84,7 @@
     {
       "start": 65,
       "end": 95,
-      "activity": "P03 — Idempotent resource response: contract and prediction, bounded implementation/investigation, then review and actual evidence.",
+      "activity": "P03 \u2014 Idempotent resource response: contract and prediction, bounded implementation/investigation, then review and actual evidence.",
       "planned_range_minutes": [
         30,
         45
@@ -162,7 +162,7 @@
     165
   ],
   "schedule_estimate_only": true,
-  "continuation_policy": "Every project remains required and individual in class. If the institutional slot is shorter than the planned range, agree a taught continuation with the lecturer before the session; retain every project and record unfinished work honestly. A shorter slot does not make a task optional or establish completion.",
+  "continuation_policy": "Teach P01/P02 and begin P03 after readiness; save last stage, remaining assertions and private draft. Lecturer-confirmed taught continuation: 20\u201365 additional minutes after a 100-minute meeting or 30\u201375 after a 90-minute meeting, adjusted to observed progress. All three individual projects, thirteen stages, one genuine AI critique/check and one PDF remain required.",
   "private_evidence_location": "Outside the entire extracted collection: student-owned home-folder WebTech_Evidence/S07",
   "historical_reference_scope": "The linked historical full-project guides and forms are read-only context with separate contracts. The filtered classroom unit does not include the omitted full-application runtime or its starter/test trees. A bounded classroom PASS does not establish completion of those historical applications.",
   "recap_prompt": "Explain how your joined rows, shared managed transaction and resource-response mapping support the observed result. State why an awaited failure witness matters, distinguish rollback evidence from concurrent safety and name the next relationship or transaction boundary to investigate.",
@@ -259,5 +259,10 @@
       ]
     }
   ],
-  "timeline_numeric_values": "Lower end of the unpiloted planning range, not an empirical minimum or a completion threshold."
+  "timeline_numeric_values": "Lower end of the unpiloted planning range, not an empirical minimum or a completion threshold.",
+  "semantic_stage_counts": {
+    "P01": 4,
+    "P02": 5,
+    "P03": 4
+  }
 }

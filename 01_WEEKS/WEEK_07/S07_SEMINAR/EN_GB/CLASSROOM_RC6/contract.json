@@ -8,13 +8,17 @@
       "mutableTarget": "targets/p01.mjs",
       "mutablePathBase": "CLASSROOM_RC6",
       "packageRootMutableTarget": "CLASSROOM_RC6/targets/p01.mjs",
-      "completeScope": "Write one eager SQL JOIN over supplied sessions/registrations/attendees, bind session ID and order attendees by ID; return detached mapped rows.",
+      "completeScope": "Use one parameterised eager JOIN over sessions/registrations/attendees, one all(sessionId), four declared aliases and attendee ID ascending order; project fresh ordinary rows detached from selected SQL rows.",
       "requiredEvidence": [
-        "Actual joined rows Ada/Grace",
-        "Query and bound parameter",
-        "No extra per-attendee queries limitation"
+        "Actual joined rows plus changed/absent relationship",
+        "One prepare/all, bound parameter, aliases and ordering",
+        "Fresh ordinary row identities and independent SQLite state; query-count limit"
       ],
-      "minutes": 10
+      "minutes": 10,
+      "plannedMinutes": [
+        30,
+        45
+      ]
     },
     {
       "id": "P02",
@@ -22,13 +26,17 @@
       "mutableTarget": "targets/p02.mjs",
       "mutablePathBase": "CLASSROOM_RC6",
       "packageRootMutableTarget": "CLASSROOM_RC6/targets/p02.mjs",
-      "completeScope": "Use supplied managed SQLite transaction adapter, five shared-transaction operations, awaited callback/audit and rollback on callback/audit failures.",
+      "completeScope": "Preserve positive-integer prevalidation and event/sold-out precedence; use one owned managed SQLite transaction for event, duplicate, seats, create and audit, await afterCreated and audit, preserve rejection and return detached booking/available through managed settlement. Inspect rollback at both sites and serial recovery.",
       "requiredEvidence": [
-        "Five operation IDs",
-        "Success seat/booking/audit state",
-        "Two injectedfailure before/after snapshots and recovery"
+        "Five shared actual transaction participants and awaited checkpoint",
+        "Detached result, available quantity and independent success state",
+        "Callback/audit failure sites, held settlement traces, before/after rollback and serial recovery"
       ],
-      "minutes": 18
+      "minutes": 18,
+      "plannedMinutes": [
+        30,
+        45
+      ]
     },
     {
       "id": "P03",
@@ -36,13 +44,17 @@
       "mutableTarget": "targets/p03.mjs",
       "mutablePathBase": "CLASSROOM_RC6",
       "packageRootMutableTarget": "CLASSROOM_RC6/targets/p03.mjs",
-      "completeScope": "Map supplied PUTcreated/repeat to201+Location/200 and DELETEremoved/absent to204no body using path pair identity.",
+      "completeScope": "Map PUT created/existing to 201 with pair-derived Location/200, DELETE removed/absent to 204 with null mapper body and unsupported method/outcome to 405. Preserve full headers/body dimensions; compare independent resource pairs and empty 204 bodies over actual HTTP.",
       "requiredEvidence": [
-        "Real HTTP create/repeat/delete/delete trace",
-        "Resource identity comparison",
-        "What idempotency does not guarantee"
+        "Full direct mapper matrix with 201/200/204/405 dimensions",
+        "Actual nine-request HTTP trace, independent pair identity and empty 204 bodies",
+        "Creation-only Location, cleanup and idempotency scope limit"
       ],
-      "minutes": 8
+      "minutes": 8,
+      "plannedMinutes": [
+        30,
+        45
+      ]
     }
   ],
   "initialAssertionFailures": [
@@ -60,5 +72,19 @@
     "pilot60min": false,
     "humanLanguage": false,
     "Moodle": false
+  },
+  "minute_fields_scope": "Historical source-carrier budgets retained verbatim; current teaching uses plannedMinutes and candidate_planning.",
+  "candidate_planning": {
+    "status": "UNPILOTED",
+    "fullRouteMinutes": [
+      120,
+      165
+    ],
+    "institutionalMeetingMinutes": [
+      90,
+      100
+    ],
+    "continuation": "Teach P01/P02 and begin P03 after readiness; save last stage, remaining assertions and private draft. Lecturer-confirmed taught continuation: 20\u201365 additional minutes after a 100-minute meeting or 30\u201375 after a 90-minute meeting, adjusted to observed progress. All three individual projects, thirteen stages, one genuine AI critique/check and one PDF remain required.",
+    "day0": "Extract, open editor and complete capability preparation before class. No npm or Sequelize installation for this bounded route."
   }
 }

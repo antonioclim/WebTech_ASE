@@ -1,24 +1,13 @@
-# RC10 CURRENT CLASSROOM TRANSFER
+# Current C07 → S07 teaching bridge
 
-Current S07 classroom transfer
+This teaching revision belongs to the v4.0.0 candidate; published main remains v3.0.0. Retained source carrier labels identify provenance.
 
-Complete every listed microproject individually in class. These are bounded tasks, not completion of the historical full applications.
+Complete all three current bounded projects individually. [S07 tutorial](../../../S07_SEMINAR/TUTORIAL.html) has four P01 stages, five P02 stages and four P03 stages. [Current form](../../../S07_SEMINAR/EN_GB/FORMATIVE_ASSESSMENT.html) records the thirteen stages, project reflections, one genuine AI critique/check and one reviewed private PDF. Verify its fields/controls load; local-page native delivery remains unexecuted here.
 
-P01 — Junction relationship query — editable path from the seminar package root: CLASSROOM_RC6/targets/p01.mjs
+P01 connects C07 keys, junction facts and query-count/projection reasoning. P02 connects all five transaction participants, awaited checkpoint/audit, independent state, rollback and recovery. P03 connects pair identity, full response dimensions and repeated intended effect. The actual HTTP Map is independent of the SQLite fixture.
 
-P02 — One owned atomic booking — editable path from the seminar package root: CLASSROOM_RC6/targets/p02.mjs
+The historical full-application P02/ADR discussions below retain their own identity. They do not add an assessed ADR, course submission or optionality to current S07. The full 120–165-minute seminar estimate is unpiloted and requires a lecturer-agreed taught continuation if the meeting is 90/100 minutes.
 
-P03 — Idempotent resource response — editable path from the seminar package root: CLASSROOM_RC6/targets/p03.mjs
-
-Current entry: ../../../../ENTRY/S07.html
-
-Step-by-step tutorial: ../../../../TUTORIALS/S07.html
-
-Current evidence form: ../../../S07/WEBTECH_ASE_S07_EN_GB_v1.1.3_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html
-
-Preserve support files, run the stated target checks and record actual results, including blocked or unexecuted checks. Complete the current form for all projects and export one PDF. Review its saved pages and filename before uploading it to the corresponding private Moodle Assignment. A blocked check is not a PASS.
-
-The old full applications are optional advanced references. Their reused IDs, paths, allocations, portfolio requirements, timings and mark statements do not define these current microprojects. The actual Assignment supplies dates and assessment policy. No completion-time or mark guarantee is made here.
 
 # C07 · Preparation and transfer
 
@@ -57,22 +46,22 @@ The laboratory reports model outputs only. The exact examples’ database assert
 
 > Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
 
-At the stop, identify projects/p02/src/book-seats.js as the seminar edit target. No C07 handout upload is required. The S07 form and complete seminar package follow in the next production phase.
+At the stop, open the current S07 tutorial and locate CLASSROOM_RC6/targets/p01.mjs, p02.mjs and p03.mjs from the seminar EN_GB working directory. The old projects/p02/src/book-seats.js path belongs to the historical full application. No C07 handout upload is required. The current S07 form and all three bounded targets are already linked from the tutorial. Verify the form fields/controls load before relying on local-page delivery; preserve private notes/BLOCKED if they do not.
 
-## After the meeting: transfer and ADR preparation
+## After the meeting: transfer and provisional decision reasoning
 
 Finish any handout sections not discussed in depth. Run the fixed-snapshot catalogue model again with its duplicate-rank case and explain why the tuple rule differs from id > lastId. Do not infer a guarantee under concurrent key updates. Examine the exact source discrepancy notes rather than claiming all historical assertions have been executed.
 
-Prepare the required ADR questions: what client operation is addressed, what identifies its resource, which related state belongs in one transaction, what is the intended effect of repetition and what alternative did you reject? Use the semester project when defined. Otherwise make the provisional course-domain choice explicit and state when to revisit it. Do not copy a generic “REST is better” conclusion.
+For optional historical comparison, consider these ADR questions: what client operation is addressed, what identifies its resource, which related state belongs in one transaction, what is the intended effect of repetition and what alternative did you reject? Use the semester project when defined. Otherwise make the provisional course-domain choice explicit and state when to revisit it. Do not copy a generic “REST is better” conclusion.
 
 > Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
 
-The proposed ADR length is 300–500 words plus a compact client-effect table. This is a teaching scope rather than an original canonical word limit. The full P03 Registration API Redesign implementation is not separately compulsory. P01 is optional advanced work. P02 Transactional Booking remains the only required complete implementation in S07.
+The historical source proposed a 300–500-word ADR and had its own full-application allocation. Current S07 has three mandatory individual bounded targets and no extra ADR assignment. Carry one identity, state-boundary and repeated-effect comparison into your existing project reflection.
 
 > Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
 
-The P02 source estimates 55–65 minutes for the implementation alone. The seminar allocates 28 minutes inside its core and makes remaining work explicit. Finish outstanding work on the same project and the brief ADR before the later teacher-configured deadline. Do not fabricate a completed test or a live Gemini exchange to close the form at minute 60.
+The historical full-application P02 source’s 55–65-minute estimate and 28-minute segment do not govern current S07. Current planning is 30–45 per project/full 120–165, unpiloted. Propose 20–65 further taught minutes for a 100-minute meeting or 30–75 for 90 minutes, save last stage/remaining assertions/private draft and use the lecturer’s confirmed continuation. Do not fabricate a completed test or a live Gemini exchange to close the form at minute 60.
 
 For a bounded Gemini review, use GEMINI_PROMPT.txt. The offline SYNTHETIC_CLAIM.txt is clearly labelled practice, not an actual conversation. Keep one claim, one check, a justified verdict, correction and limitation. No whole-conversation upload is requested.
 
-The final assessment is one TW2026_S07_GROUP_Surname_GivenName.pdf. This course package does not generate or submit that form. Follow the later S07 guide. canonical/reading-list-next.md gives the original next-reading route towards React with Vite. Do not install the next week’s stack during this meeting.
+The historical source’s final assessment is one TW2026_S07_GROUP_Surname_GivenName.pdf. This course package does not generate or submit that form. Follow the later S07 guide. canonical/reading-list-next.md gives the original next-reading route towards React with Vite. Do not install the next week’s stack during this meeting.
