@@ -14,7 +14,11 @@
         "Result and immutable-input witness",
         "Invalid string estimate observation"
       ],
-      "minutes": 12
+      "minutes": 12,
+      "plannedMinutes": [
+        30,
+        45
+      ]
     },
     {
       "id": "P02",
@@ -28,7 +32,11 @@
         "Inherited field counterexample",
         "Reusable predicate result"
       ],
-      "minutes": 10
+      "minutes": 10,
+      "plannedMinutes": [
+        30,
+        45
+      ]
     },
     {
       "id": "P03",
@@ -42,12 +50,17 @@
         "Stringfalse rejection",
         "Record identity and equal-time tie result"
       ],
-      "minutes": 14
+      "minutes": 14,
+      "plannedMinutes": [
+        30,
+        45
+      ]
     }
   ],
   "initialAssertionFailures": [
     "P01.selected-summary",
     "P01.validate-filtered-record",
+    "P01.fresh-and-unchanged",
     "P02.strict-leaf",
     "P02.invalid-definition",
     "P03.fresh-tie-order",
@@ -60,5 +73,27 @@
     "pilot60min": false,
     "humanLanguage": false,
     "Moodle": false
+  },
+  "minute_fields_scope": "Historical source-carrier budgets retained verbatim; current teaching uses plannedMinutes and candidate_planning, not these legacy minutes.",
+  "candidate_planning": {
+    "status": "UNPILOTED",
+    "fullRouteMinutes": [
+      120,
+      165
+    ],
+    "institutionalMeetingMinutes": [
+      90,
+      100
+    ],
+    "additionalTaughtMinutesFor100MinuteSlot": [
+      20,
+      65
+    ],
+    "additionalTaughtMinutesFor90MinuteSlot": [
+      30,
+      75
+    ],
+    "continuation": "After pre-class readiness, teach P01/P02 and begin P03 within the actual meeting. Save the exact last stage and remaining assertions. Reserve an explicit lecturer-confirmed taught continuation for remaining P03 work and the shared AI/PDF review: estimated 20\u201365 minutes beyond a 100-minute slot or 30\u201375 beyond 90. Validate the route through an actual novice pilot. All three projects remain required and individual; no automatic transfer to homework.",
+    "day0": "Extract, open the editor and complete capability preflight before class; no npm installation is needed."
   }
 }

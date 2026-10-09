@@ -4,9 +4,9 @@
   "final_target_version": "4.0.0",
   "latest_published_version": "3.0.0",
   "distribution_status": "LOCAL_CANDIDATE_NOT_PUBLISHED",
-  "phase": "T01_CANDIDATE_PREPARED",
-  "next_phase": "T02",
-  "implementation_scope": "T01: C01/S01, C02/S02 and affected common guidance, environment policy and evidence forms. Later units are included as inherited source and have not completed the new tranche review.",
+  "phase": "T02_CANDIDATE_PREPARED",
+  "next_phase": "T03",
+  "implementation_scope": "T01 and T02: C01/S01, C02/S02, C03/S03, C04/S04 and affected common guidance, environment policy and evidence forms. C05/S05 through C14/S14 remain inherited source pending their authorised tranche review.",
   "qualificationVerdict": "NOT_FINAL",
   "native_acceptance": false,
   "publication_qualified": false,
@@ -34,7 +34,7 @@
       ],
       "implementation_status": "COMPLETE_WITH_EXPLICIT_LIMITS",
       "acceptance_status": "PENDING",
-      "next_step": "T02 implementation after the phase continuation"
+      "next_step": "Retain T01 scoped evidence and recheck affected controls when later common changes require it; whole-edition acceptance remains pending."
     },
     {
       "id": "T02",
@@ -44,9 +44,9 @@
         "C04",
         "S04"
       ],
-      "implementation_status": "PENDING",
+      "implementation_status": "COMPLETE_WITH_EXPLICIT_LIMITS",
       "acceptance_status": "PENDING",
-      "next_step": "Implement and verify this tranche before claiming completion"
+      "next_step": "Continue with T03 after the phase continuation; keep global acceptance pending"
     },
     {
       "id": "T03",
@@ -184,5 +184,21 @@
     }
   ],
   "evidence_boundary": "Tranche-level observations are recorded separately from the ten global gates. No subset result makes the whole 14-pair distribution qualified, published or accepted. Source identity and final verification receipts are retained outside the sealed tree to avoid self-reference.",
-  "timing_limit": "S01 is estimated at 90\u2013120 minutes and S02 at 120\u2013165 minutes, unpiloted. A 90\u2013100-minute institutional slot does not establish completion of all required work. Arrange an explicit taught continuation rather than omitting projects or silently assigning them as homework."
+  "timing_limit": "S01 is estimated at 90–120 minutes and S02–S04 at 120–165 minutes, all unpiloted. A 90–100-minute institutional slot does not establish completion of all required individual work. For S03/S04 reserve an explicit taught continuation estimated at 20–65 minutes beyond a 100-minute slot or 30–75 beyond 90, then validate through an actual novice pilot. No project is omitted or silently assigned as homework.",
+  "prepared_tranches": [
+    "T01",
+    "T02"
+  ],
+  "T02_evidence": [
+    {
+      "area": "C03/S03 and C04/S04",
+      "state": "PASS",
+      "scope": "Actual selected Node v24.19.0 executions: seven C03 and six C04 course observations; sealed S03/S04 starter boundaries and expected TODO assertion failures; private references pass the seven S03 and six S04 finite source cases. Five S03 defects are detected by their intended source cases. Eight S04 defects are detected by source cases; a hardcoded fixed summary needs and fails a changed-data independent witness. Owned HTTP responses and cleanup, scoped capability refusal, bounded deferred/worker faults and exact tutorial probes are recorded separately. These are finite JavaScript, injected-interface, local HTTP and source observations. Browser rendering/clicks/Network, native print/PDF, Windows/macOS, the named reference runtime and novice pilot remain unexecuted. External owner receipts preserve tested source hashes; no complete assessed reference is public."
+    },
+    {
+      "area": "S03/S04 stage forms",
+      "state": "PASS",
+      "scope": "30 grouped Node VM DOM-model checks, including 17 invalid envelope cases per unit, on the actual form scripts. Each draft keeps all three project IDs and all four stages. Static schema, label/ARIA, local link and asset checks pass for two HTML forms and four local assets. Synthetic QA data does not represent student observations or a genuine AI exchange."
+    }
+  ]
 }

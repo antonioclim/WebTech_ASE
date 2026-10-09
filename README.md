@@ -1,6 +1,6 @@
 # Web Technologies — English student materials, v4.0.0 candidate
 
-This branch prepares the next complete edition. C01/S01 and C02/S02 have been revised in T01; C03/S03–C14/S14 retain their supplied material and await their scheduled revision. The latest published classroom edition remains 3.0.0. Read the [candidate progress](metadata/CANDIDATE_PROGRESS.json) before interpreting this checkout as a complete release.
+This branch prepares the next complete edition. C01/S01 through C04/S04 have been revised in T01 and T02; C05/S05–C14/S14 retain their supplied material and await their scheduled revision. The latest published classroom edition remains 3.0.0. Read the [candidate progress](metadata/CANDIDATE_PROGRESS.json) before interpreting this checkout as a complete release.
 
 This repository contains the current materials for 14 course and seminar pairs, with two operating-system setup guides, 14 detailed seminar tutorials and 40 required individual microprojects. The 38 learner target files are intentionally unfinished. HTML presentations and guides are the main teaching route; Word references are optional.
 
@@ -34,4 +34,4 @@ The [download guide](00_START_HERE/DOWNLOAD.html) distinguishes this current rep
 
 ## Qualification
 
-General qualification remains **NOT_FINAL**. The ten broad qualification gates remain pending for the complete edition. T01 has scoped Node, source and form-model checks; native browser rendering, print, Windows, macOS and human acceptance have not passed. Read [the qualification scope](00_START_HERE/QUALIFICATION.html). Integrity and task results support the checks they actually perform.
+General qualification remains **NOT_FINAL**. The ten broad qualification gates remain pending for the complete edition. T01 and T02 have scoped Node, source and form-model checks; native browser rendering, print, Windows, macOS and human acceptance have not passed. Read [the qualification scope](00_START_HERE/QUALIFICATION.html). Integrity and task results support the checks they actually perform.

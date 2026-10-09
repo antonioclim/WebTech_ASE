@@ -9,6 +9,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..')
 const VERSION = '4.0.0';
 const LATEST_PUBLISHED_VERSION = '3.0.0';
 const PROGRESS = 'metadata/CANDIDATE_PROGRESS.json';
+const PREPARED_TRANCHE = 2;
 const GATES = ['local_integrity','reference_runtime','headless_browser','native_windows','native_macos','manual_browser','word','moodle_live','human_pilot','owner_acceptance'];
 const requiredIDs = week => week === 1 ? ['P01','P02'] : week === 14 ? ['P01','P03'] : ['P01','P02','P03'];
 const MANIFEST = 'metadata/current-integrity/REPOSITORY_SHA256SUMS.txt';
@@ -49,15 +50,19 @@ try {
   if (hash(metadataBytes) !== rows.get('metadata/CLASSROOM_COLLECTION.json')) throw Error('metadata-mismatch');
   const meta = JSON.parse(metadataBytes);
   if (meta.schema !== 'webtech-classroom-collection/v1' || meta.distribution_version !== VERSION || meta.final_target_version !== VERSION || meta.latest_published_version !== LATEST_PUBLISHED_VERSION || meta.distribution_status !== 'LOCAL_CANDIDATE_NOT_PUBLISHED' || meta.candidate_progress !== PROGRESS || meta.qualificationVerdict !== 'NOT_FINAL' || meta.native_acceptance !== false || meta.publication_qualified !== false || meta.published !== false) throw Error('metadata-scope');
+  if(meta.status!==`CANDIDATE_V4_0_0_T${String(PREPARED_TRANCHE).padStart(2,'0')}_PREPARED_NOT_FINAL_NOT_PUBLISHED`)throw Error('metadata-prepared-tranche');
+  const objectIDs=['SETUP_WINDOWS','SETUP_MACOS_LINUX',...Array.from({length:14},(_,n)=>['C'+String(n+1).padStart(2,'0'),'S'+String(n+1).padStart(2,'0')]).flat()];
+  if(!Array.isArray(meta.objects)||meta.objects.length!==30||new Set(meta.objects.map(obj=>obj.object_id)).size!==30||meta.objects.some(obj=>!objectIDs.includes(obj.object_id)))throw Error('metadata-current-objects');
+  for(const obj of meta.objects){const tranche=obj.object_id.startsWith('SETUP_')?1:Math.ceil(Number(obj.object_id.slice(1))/2),expected=tranche<=PREPARED_TRANCHE?`T${String(tranche).padStart(2,'0')}_COMPLETE_WITH_EXPLICIT_LIMITS`:'INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW';if(obj.candidate_revision_status!==expected)throw Error('metadata-object-prepared-tranche:'+obj.object_id);}
   if (!meta.qualificationGates || Object.keys(meta.qualificationGates).length !== GATES.length || GATES.some(gate=>meta.qualificationGates[gate]!=='pending')) throw Error('metadata-global-gates');
   const progressBytes=read(PROGRESS);
   if(hash(progressBytes)!==rows.get(PROGRESS))throw Error('candidate-progress-mismatch');
   const progress=JSON.parse(progressBytes);
-  if(progress.schema!=='webtech-candidate-progress/v1'||progress.candidate_version!==VERSION||progress.final_target_version!==VERSION||progress.latest_published_version!==LATEST_PUBLISHED_VERSION||progress.distribution_status!=='LOCAL_CANDIDATE_NOT_PUBLISHED'||progress.qualificationVerdict!=='NOT_FINAL'||progress.native_acceptance!==false||progress.publication_qualified!==false||progress.published!==false||progress.phase!=='T01_CANDIDATE_PREPARED'||progress.next_phase!=='T02'||!progress.qualificationGates||Object.keys(progress.qualificationGates).length!==GATES.length||GATES.some(gate=>progress.qualificationGates[gate]!=='pending'))throw Error('candidate-progress-scope');
+  if(progress.schema!=='webtech-candidate-progress/v1'||progress.candidate_version!==VERSION||progress.final_target_version!==VERSION||progress.latest_published_version!==LATEST_PUBLISHED_VERSION||progress.distribution_status!=='LOCAL_CANDIDATE_NOT_PUBLISHED'||progress.qualificationVerdict!=='NOT_FINAL'||progress.native_acceptance!==false||progress.publication_qualified!==false||progress.published!==false||progress.phase!==`T${String(PREPARED_TRANCHE).padStart(2,'0')}_CANDIDATE_PREPARED`||progress.next_phase!==`T${String(PREPARED_TRANCHE+1).padStart(2,'0')}`||JSON.stringify(progress.prepared_tranches)!==JSON.stringify(Array.from({length:PREPARED_TRANCHE},(_,n)=>`T${String(n+1).padStart(2,'0')}`))||!progress.qualificationGates||Object.keys(progress.qualificationGates).length!==GATES.length||GATES.some(gate=>progress.qualificationGates[gate]!=='pending'))throw Error('candidate-progress-scope');
   if(!Array.isArray(progress.tranches)||progress.tranches.length!==7)throw Error('candidate-tranches');
   for(let i=1;i<=7;i++){
     const tranche=progress.tranches[i-1],units=[`C${String(i*2-1).padStart(2,'0')}`,`S${String(i*2-1).padStart(2,'0')}`,`C${String(i*2).padStart(2,'0')}`,`S${String(i*2).padStart(2,'0')}`];
-    if(tranche.id!==`T${String(i).padStart(2,'0')}`||JSON.stringify(tranche.units)!==JSON.stringify(units)||tranche.acceptance_status!=='PENDING'||tranche.implementation_status!==(i===1?'COMPLETE_WITH_EXPLICIT_LIMITS':'PENDING'))throw Error('candidate-tranche-scope');
+    if(tranche.id!==`T${String(i).padStart(2,'0')}`||JSON.stringify(tranche.units)!==JSON.stringify(units)||tranche.acceptance_status!=='PENDING'||tranche.implementation_status!==(i<=PREPARED_TRANCHE?'COMPLETE_WITH_EXPLICIT_LIMITS':'PENDING'))throw Error('candidate-tranche-scope');
   }
   const courseBytes=read('metadata/course-map.json');
   if(hash(courseBytes)!==rows.get('metadata/course-map.json'))throw Error('course-map-mismatch');
@@ -66,6 +71,8 @@ try {
   for(const week of course.weeks){
     if(!Number.isInteger(week.week)||week.week<1||week.week>14)throw Error('course-week');
     const number=String(week.week).padStart(2,'0'),sid='S'+number,ids=requiredIDs(week.week);
+    const tranche=Math.ceil(week.week/2),expectedRevision=tranche<=PREPARED_TRANCHE?`T${String(tranche).padStart(2,'0')}_COMPLETE_WITH_EXPLICIT_LIMITS`:'PENDING_LATER_TRANCHE_REVIEW';
+    if(week.candidate_revision_status!==expectedRevision)throw Error('course-map-prepared-tranche:'+sid);
     if(week.course_id!=='C'+number||week.seminar_id!==sid||week.individual_in_class!==true||!Array.isArray(week.required_projects)||JSON.stringify(week.required_projects.map(project=>project.id))!==JSON.stringify(ids))throw Error('exact-required-project-ids:'+sid);
     const selected=meta.objects?.find(obj=>obj.object_id===sid);
     if(!selected||selected.included_in_collection_version!==VERSION||!Array.isArray(selected.projects)||JSON.stringify(selected.projects.map(project=>project.id))!==JSON.stringify(ids))throw Error('exact-collection-project-ids:'+sid);

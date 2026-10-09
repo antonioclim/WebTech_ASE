@@ -1,11 +1,38 @@
-# Optional canonical examples — evidence and launch scope
+# C04 executable examples and evidence limits
 
-Twelve files under `canonical/` are byte-identical source copies. The surrounding package.json is derived and sets type=module so the first four examples can run with an existing Node installation. They use built-in modules only; no npm install is needed.
+Open `01_WEEKS/WEEK_04/C04_COURSE/EN_GB` through VS Code File → Open Folder, then Terminal → New Terminal. Run each command separately from that folder:
 
-Run each in a fresh process from the public package root, using the exact commands in WINDOWS.md or MACOS_LINUX.md. The example 03 timer delays are a small fixture, not a guarantee about real network timing. If an assertion fails, retain the real failure instead of substituting a printed reference trace.
+```text
+node --version
+node -p "process.cwd()"
+node tools/tw-kit.mjs env
+node tools/tw-kit.mjs example 01
+node tools/tw-kit.mjs example 02
+node tools/tw-kit.mjs example 03
+node tools/tw-kit.mjs example 04
+```
 
-Canonical example 05 is a browser page with an inline module and an initial scripted click. The included `tools/serve_event.mjs` supplies a read-only loopback route for this exact page. It serves only its landing page and that example, not an arbitrary directory or private files. It makes no outbound requests and installs no background service. Real-browser observation remains separate from local HTTP readiness.
+`node tools/tw-kit.mjs examples` runs all six Node observations in fresh processes, including the two neutral demonstrations. ENV_WARN permits the selected operation if its actual capability probes pass. ENV_BLOCKED identifies an operation that cannot proceed. The teaching reference is Node v24.21.0/npm 11.19.0; pure Node examples need no npm packages. See [the common environment guide](../../../../00_START_HERE/ENVIRONMENT.html).
 
-The historical README contains a headless command. Do not use that route for this package or treat its old validation statement as today’s evidence. The current guides use a normal browser and the optional local helper only.
+Direct source commands from the same folder are:
 
-Node v24.21.0 / npm 11.19.0 is the project reference. A successful execution on another measured runtime is compatibility evidence, not reference qualification. See the delivered private QA report for the actual production environment; no student result is pre-filled from it.
+```text
+node canonical/01-module-live-binding/example.js
+node canonical/02-async-continuation-order/example.js
+node canonical/03-parallel-request-shape/example.js
+node canonical/04-fetch-http-boundary/example.js
+node demonstrations/observe-timelines.mjs
+node demonstrations/listener-lifecycle.mjs
+```
+
+01 accesses one private state module through exported functions. Its historical directory name does not turn it into a direct mutable imported-binding demonstration. 02 asserts exactly `script start → function start → script end → after await → promise fulfilled`. 03 asserts a small 30/10/20 timer fixture; it does not measure real network overlap or universal timer precision. 04 injects a fulfilled 404 and checks status policy before parsing. Neutral observations add controlled late completions, stale commit refusal and Node EventTarget listener counts without implementing S04 targets.
+
+For the canonical browser page choose one owned server command from the same folder:
+
+```text
+node tools/tw-kit.mjs serve
+```
+
+The direct equivalent is `node tools/serve_event.mjs`. Copy the dynamic origin after READY, open it and follow `/event/`. Initial output is from a scripted click. Compare an actual nested-label click and button activation, recording browser/version and actual output separately. This page logs an action; it does not perform deletion. Stop with Ctrl+C in its own terminal and wait for `STOPPED: loopback listener closed.` HTTP routes do not certify native events, rendering or keyboard interaction. Record unavailable actions as unexecuted.
+
+The course shell can be read as local files without Node. Use [guide.html](guide.html) for controls and launch recovery, [reading.html](reading.html) for the connected explanation and the [current S04 tutorial](../../S04_SEMINAR/TUTORIAL.html) for assessed work.

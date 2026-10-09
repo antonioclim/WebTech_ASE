@@ -9,7 +9,7 @@
     "url": "https://github.com/antonioclim/WebTech_ASE/releases/tag/classroom-en-gb-v3.0.0"
   },
   "reviewed_repository_parent": "4c7f187996d7a3ed821fbbe8f5a4db4b6b6ea9de",
-  "teaching_preservation": "T01 extends C01/S01 and C02/S02 teaching and affected setup, environment and evidence controls. All 38 learner targets remain intentionally unfinished and unchanged. Later pairs, 48 dependency lockfiles and 30 Word references retain supplied bytes. New runtime guards and local policy carriers are declared candidate changes; historic qualification does not transfer.",
+  "teaching_preservation": "T01–T02 extend C01/S01 through C04/S04 teaching and affected setup, environment and evidence controls. All 38 learner targets remain intentionally unfinished and unchanged. Later pairs, 48 dependency lockfiles and 30 Word references retain supplied bytes. New runtime guards and local policy carriers are declared candidate changes; historic qualification does not transfer.",
   "layout_changes": "One current EN_GB unit per course, seminar or setup object. Current navigation, metadata and useful validation/build tools are retained. Historical editions and publishing recipes belong to exact archival references rather than duplicate teaching directories.",
   "internal_unit_names": "Unit versions and CLASSROOM_RC6 names identify current constituent contracts. There is one unit per course, seminar or setup object; the names do not retain alternative repository editions.",
   "history": "PREVIOUS_RELEASES.md",

@@ -48,11 +48,11 @@ node CLASSROOM_RC6/kit.mjs initial
 node CLASSROOM_RC6/kit.mjs check all
 ```
 
-Initial checks require the untouched targets and exact declared assertion-failure names. A process timeout, exception, damaged source boundary or missing native module is a genuine fault. Keep every private fixture, JSON draft, log and PDF outside the entire extracted collection. Use your home-folder `WebTech_Evidence/S03`: `%USERPROFILE%\WebTech_Evidence\S03` on Windows or `$HOME/WebTech_Evidence/S03` on macOS/Linux. Keep the extracted collection in a different folder. The [detailed tutorial](../../TUTORIAL.html) provides the quoted absolute paths and operating-system commands. Checkers create only owned ephemeral resources. Reference Node is v24.21.0; npm installs are unnecessary for this route.
+Initial checks require the untouched targets and exact declared assertion-failure names. A process timeout, exception, damaged source boundary or missing native module is a genuine fault. Keep every private fixture, JSON draft, log and PDF outside the entire extracted collection. Use your home-folder `WebTech_Evidence/S03`: `%USERPROFILE%\WebTech_Evidence\S03` on Windows or `$HOME/WebTech_Evidence/S03` on macOS/Linux. Keep the extracted collection in a different folder. The [detailed tutorial](../../TUTORIAL.html) provides the quoted absolute paths and operating-system commands. Checkers create only owned ephemeral resources. Use the capability preflight; ENV_OK/ENV_WARN allow this Node route and ENV_BLOCKED identifies a genuine blocker; npm installs are unnecessary for this route.
 
 ## Current unpiloted plan: 120–165 minutes
 
-Complete all 3 microprojects individually. Plan 30–45 minutes for each required project. Prepare the prescribed runtime and expressly required dependencies before class. The following durations are planning estimates, not measured completion times, empirical minimums or completion guarantees.
+Complete all 3 microprojects individually. Plan 30–45 minutes for each required project. Complete Day0 preparation and expressly required dependencies before class. The following durations are planning estimates, not measured completion times, empirical minimums or completion guarantees.
 
 | Planned duration | Individual activity |
 | --- | --- |
@@ -78,7 +78,7 @@ Synthetic fixture and relevant contract: [small input plus rule]
 My actual observation: [output/error or NOT EXECUTED]
 State whether the claim is observed, inferred or unknown. Propose one minimum independent counterexample. Explain one limitation. I will run the witness myself and record ACCEPTED, REJECTED, PARTLY ACCEPTED or UNKNOWN. Model text is not test evidence. Do not invent execution.
 
-Keep a compact experiment record for each project: prediction (before running), action/input/target, actual result with evidence excerpt, comparison/mechanism and limitation. Add one specific final reflection and one independently verified AI claim. No credentials, real personal data, private Moodle records or whole AI conversations. Use the current classroom evidence form and save one `TW2026_S03_GROUP_Surname_Firstname.pdf`. Missing personal execution or AI access remains explicitly unresolved. The form checks completeness, not truth, grades or Moodle receipt.
+Keep a compact experiment record for each project: prediction (before running), action/input/target, actual result with evidence excerpt, comparison/mechanism and limitation. Add one specific final reflection and one independently verified AI claim. No credentials, real personal data, private Moodle records or whole AI conversations. Use the current formative assessment and save one `TW2026_S03_GROUP_Surname_Firstname.pdf`. Missing personal execution or AI access remains explicitly unresolved. The form checks completeness, not truth, grades or Moodle receipt.
 
 ## Scope limit
 
@@ -93,3 +93,5 @@ Finish the recap before actual submission. If it changes your form record, updat
 ## Current carrier and historical references
 
 The `CLASSROOM_RC6` folder, retained edition labels and v1 record values identify the existing teaching carrier and record contract. Use the current candidate unit identity shown by the collection entry for a new record. Linked original guides and forms are read-only historical references; their omitted full-application starters and tests are not the current assignment.
+
+[Current stage-based formative assessment](../FORMATIVE_ASSESSMENT.html) · [Full twelve-stage tutorial](../../TUTORIAL.html)

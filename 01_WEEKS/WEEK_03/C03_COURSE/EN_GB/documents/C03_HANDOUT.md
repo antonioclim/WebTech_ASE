@@ -10,11 +10,11 @@ P02 — Declarative leaf rule — editable path from the seminar package root: C
 
 P03 — Defensive event normaliser — editable path from the seminar package root: CLASSROOM_RC6/targets/p03.mjs
 
-Current entry: ../../../../ENTRY/S03.html
+Current entry: ../../../S03_SEMINAR/index.html
 
-Step-by-step tutorial: ../../../../TUTORIALS/S03.html
+Step-by-step tutorial: ../../../S03_SEMINAR/TUTORIAL.html
 
-Current evidence form: ../../../S03/WEBTECH_ASE_S03_EN_GB_v1.2.2_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html
+Current evidence form: ../../../S03_SEMINAR/EN_GB/FORMATIVE_ASSESSMENT.html
 
 Preserve support files, run the stated target checks and record actual results, including blocked or unexecuted checks. Complete the current form for all projects and export one PDF. Review its saved pages and filename before uploading it to the corresponding private Moodle Assignment. A blocked check is not a PASS.
 
@@ -41,7 +41,7 @@ The synthetic course examples are deliberately small enough to predict by hand. 
 
 > Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
 
-The class has 60 minutes of content within a 90-minute booking. Preparation and optional transfer are separate. The final course screen closes the lesson at minute 60. It does not imply that the later S03 implementation or P03 portfolio is already complete.
+The class has 60 minutes of content within a 90-minute booking. Preparation and optional transfer are separate. The final course screen closes the lesson at minute 60. It does not imply that the later S03 implementations or their evidence are already complete.
 
 > Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
 
@@ -214,7 +214,7 @@ At the end of C03, state one prediction, one observed result, the specific mecha
 
 > Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
 
-For S03, P01 Dataset Transformer CLI is the central task and src/transform-tasks.js is the allowed edit target. P03 Generated-Code Audit is a required after-class portfolio. P02 Rule Engine is optional advanced work. Their full briefs and evidence forms belong to the separate S03 delivery. C03 does not create an additional Moodle assignment.
+For current S03, all three individual projects are required: P01 Fresh task summary, P02 Declarative leaf rule and P03 Defensive event normaliser. Edit only the corresponding CLASSROOM_RC6/targets/p01.mjs, p02.mjs and p03.mjs. The separate S03 tutorial supplies their current contracts, stages and formative assessment route. C03 does not create an additional Moodle assignment.
 
 Source key. C1 is the supplied canonical lecture and its five worked-example folders, not an externally verified publication. R1–R7 were consulted to check language semantics on 28 September 2026. These are technical documentation, not DOI-bearing research articles; no DOI is assigned here. Full addresses are in SOURCES.md.
 

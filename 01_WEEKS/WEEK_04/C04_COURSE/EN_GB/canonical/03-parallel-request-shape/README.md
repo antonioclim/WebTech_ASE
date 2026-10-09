@@ -1,34 +1,5 @@
-# Lecture Example — Parallel request shape
+# Independent calls and input-order results
 
-## Concept demonstrated
+All profile/tasks/notices calls occur before waiting. The 30/10/20 millisecond fixture asserts tasks/notices/profile completion and input-order results. Its timer order is a bounded fixture, not exact timing or real HTTP. Use the controlled laboratory for explicit releases and fail-fast without cancellation.
 
-Independent asynchronous operations should be started before any one result is awaited.
-
-## Why this example is in the lecture
-
-The logged start/finish order demonstrates concurrency without depending on variable internet timing.
-
-## What to observe
-
-- All three operations start before the first one finishes.
-- `Promise.all` preserves input order even though completion order differs.
-- Parallel coordination is a code-shape decision, not merely a stopwatch result.
-
-## Run / inspect
-
-```bash
-node example.js
-```
-
-## Explanation
-
-Mapping creates all three promises immediately. `Promise.all` waits for their combined settlement and returns results in the same order as the promise array.
-
-## Variations
-
-- Replace the map with three sequential `await` expressions and compare the event order.
-- Reject one operation and handle the combined failure explicitly.
-
-## Validation
-
-Validated with `node example.js`; assertions prove all starts precede all finishes and result order remains `profile, tasks, notices`.
+From `01_WEEKS/WEEK_04/C04_COURSE/EN_GB` run `node canonical/03-parallel-request-shape/example.js` in a fresh process. Or use `node tools/tw-kit.mjs example 03` after the capability preflight. Preserve your prediction, exact command and actual output. A reference result is not a new observation. These neutral course files do not implement the assessed S04 targets.

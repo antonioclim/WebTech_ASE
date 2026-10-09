@@ -1,21 +1,5 @@
-# Week 04 — Web Technologies 3.0.0
+# Week 04 — time and authority
 
-- [C04 — Modules, DOM, events, Promises, async/await and fetch](C04_COURSE/index.html)
-- [S04 — Multi-source Data Dashboard](S04_SEMINAR/index.html)
-- [Detailed seminar tutorial](S04_SEMINAR/TUTORIAL.html)
+[C04](C04_COURSE/index.html) retains modules, DOM, events, Promises, async/await and fetch, distinguishing source order, initiation, settlement and authority to update. Use its [launch guide](C04_COURSE/EN_GB/guide.html) for exact execution routes.
 
-## What you will learn
-
-- Explain promise initiation, awaiting and ownership of results.
-- Resolve delegated actions inside an owned list.
-- Distinguish transport rejection, HTTP failure and JSON parsing failure.
-
-## Required individual projects
-
-- **P01 — Concurrent request initiation**
-- **P02 — Delegated nested click**
-- **P03 — Bounded retry classification**
-
-Complete every listed project and follow the seminar guide for task checks, evidence and PDF submission.
-
-[All weeks](../README.md) · [Course plan](../../00_START_HERE/COURSE_PLAN.html)
+[S04](S04_SEMINAR/index.html) requires three individual projects through [twelve causal stages](S04_SEMINAR/TUTORIAL.html) and the [single current formative form](S04_SEMINAR/EN_GB/FORMATIVE_ASSESSMENT.html). The full 120–165 minute plan is unpiloted; shorter bookings need agreed taught continuation. Preserve actual evidence scope, one personal case/recap per project and one genuine AI critique with an independent test.

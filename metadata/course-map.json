@@ -4,7 +4,7 @@
   "academic_year": "2026-2027",
   "language": "en-GB",
   "qualification": "NOT_FINAL",
-  "purpose": "Navigation and learning outcomes for the planned v4.0.0 candidate. T01 is prepared with explicit verification limits; later tranches remain pending. Grading weights and submission deadlines are defined by the lecturer in the actual seminar Assignment.",
+  "purpose": "Project identities, navigation and learning outcomes for the planned v4.0.0 candidate. T01 and T02 are prepared with explicit limits; C05/S05 through C14/S14 remain pending their scheduled revision. Whole-edition qualification and publication remain pending. Grading weights and submission deadlines are defined by the lecturer in the actual seminar Assignment.",
   "required_project_count": 40,
   "weeks": [
     {
@@ -156,7 +156,7 @@
         "maximum": 45
       },
       "shorter_slot_policy": "Arrange an explicit continuation; all two or three individual projects remain required.",
-      "candidate_revision_status": "PENDING_LATER_TRANCHE_REVIEW"
+      "candidate_revision_status": "T02_COMPLETE_WITH_EXPLICIT_LIMITS"
     },
     {
       "week": 4,
@@ -208,7 +208,7 @@
         "maximum": 45
       },
       "shorter_slot_policy": "Arrange an explicit continuation; all two or three individual projects remain required.",
-      "candidate_revision_status": "PENDING_LATER_TRANCHE_REVIEW"
+      "candidate_revision_status": "T02_COMPLETE_WITH_EXPLICIT_LIMITS"
     },
     {
       "week": 5,
@@ -659,7 +659,7 @@
       ],
       "prerequisites": [
         "C04/S04: event and request ownership.",
-        "C08/S08–C10/S10: state publication and lifecycle.",
+        "C08/S08\u2013C10/S10: state publication and lifecycle.",
         "C11/S11: origin and trust boundaries."
       ],
       "required_projects": [
@@ -712,7 +712,7 @@
         "Assess a production-readiness claim against observed evidence and stated limitations."
       ],
       "prerequisites": [
-        "C01–C13/S01–S13: distinguish bounded checks from actual system observations.",
+        "C01\u2013C13/S01\u2013S13: distinguish bounded checks from actual system observations.",
         "C06/S06 and C07/S07: persistence and atomicity evidence."
       ],
       "required_projects": [

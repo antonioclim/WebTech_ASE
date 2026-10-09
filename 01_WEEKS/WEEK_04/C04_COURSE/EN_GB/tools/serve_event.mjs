@@ -1,3 +1,4 @@
+import {requireEnvironment} from './environment.mjs';
 /* C04 derived, read-only loopback helper for the exact canonical event page.
    No directory serving, uploads, dependencies or automatic browser launch. */
 import { createServer } from 'node:http';
@@ -22,7 +23,9 @@ export async function createEventServer() {
   });
 }
 export async function start() {
+  await requireEnvironment({unit:'C04',operation:'serve-event',cwd:fileURLToPath(new URL('../',import.meta.url)),command:'node tools/serve_event.mjs',features:['http'],usesNpm:false});
   const server = await createEventServer();
+  if(typeof server.closeAllConnections!=='function'){const error=Error('ENV_BLOCKED C04/serve-event: required http.Server.closeAllConnections API is missing');error.environment={status:'ENV_BLOCKED',exitCode:2,unit:'C04',operation:'serve-event',observedNode:process.version,nodeExecutable:process.execPath,observedCwd:process.cwd(),observedArgv:[process.execPath,...process.argv.slice(1)],requirement:'http.Server.closeAllConnections',recheck:{cwd:fileURLToPath(new URL('../',import.meta.url)),command:'node tools/serve_event.mjs'}};console.error(JSON.stringify(error.environment));throw error;}
   await new Promise((yes,no) => { server.once('error',no); server.listen(0,'127.0.0.1',yes); });
   const { port } = server.address();
   console.log(`READY http://127.0.0.1:${port}/`);
@@ -34,4 +37,4 @@ export async function start() {
   return server;
 }
 const invoked = process.argv[1] && pathToFileURL(resolve(process.argv[1])).href === import.meta.url;
-if (invoked) start().catch(error => { console.error('C04 server did not become ready:',error.message);process.exitCode=1; });
+if (invoked) start().catch(error => { console.error('C04 server did not become ready:',error.message);process.exitCode=error.environment?.exitCode??1; });

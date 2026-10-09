@@ -1,34 +1,5 @@
-# Lecture Example — Fetch HTTP boundary
+# HTTP acceptance after response acquisition
 
-## Concept demonstrated
+The injected fetch fulfils with a 404 response. The helper rejects at status policy before json(). Its successful case parses a supplied representation. No real HTTP or arbitrary domain-schema validation is established.
 
-`fetch` fulfills when an HTTP response arrives, including for `404`; application code must classify the response status explicitly.
-
-## Why this example is in the lecture
-
-An injected deterministic fetch separates network settlement from HTTP outcome without depending on a server or internet timing.
-
-## What to observe
-
-- The fake `404` response is delivered by a fulfilled promise.
-- `loadJson` converts a non-success HTTP response into an application error.
-- JSON parsing occurs only after the status policy accepts the response.
-
-## Run / inspect
-
-```bash
-node example.js
-```
-
-## Explanation
-
-Promise fulfillment means a response was obtained, not that its status represents success. Checking `response.ok` creates the boundary required by the application's contract.
-
-## Variations
-
-- Make `fakeFetch` reject to model a network failure and compare the path.
-- Return malformed JSON from a successful response and identify the parsing failure boundary.
-
-## Validation
-
-Validated with `node example.js`; successful parsing, rejected `404` policy, and underlying promise fulfillment are asserted.
+From `01_WEEKS/WEEK_04/C04_COURSE/EN_GB` run `node canonical/04-fetch-http-boundary/example.js` in a fresh process. Or use `node tools/tw-kit.mjs example 04` after the capability preflight. Preserve your prediction, exact command and actual output. A reference result is not a new observation. These neutral course files do not implement the assessed S04 targets.

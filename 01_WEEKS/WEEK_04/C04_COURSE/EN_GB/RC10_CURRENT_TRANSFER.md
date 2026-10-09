@@ -1,21 +1,17 @@
-# RC10 current classroom transfer
+# Current C04 → S04 transfer
 
-Current S04 classroom transfer
+The retained filename `RC10_CURRENT_TRANSFER.md` records its historical source role. The current route is the v4.0.0 candidate collection.
 
-Complete every listed microproject individually in class. These are bounded tasks, not completion of the historical full applications.
+All three S04 projects are individually required:
 
-P01 — Concurrent request initiation — editable path from the seminar package root: CLASSROOM_RC6/targets/p01.mjs
+| Project | Boundary | Editable path from `01_WEEKS/WEEK_04/S04_SEMINAR/EN_GB` |
+|---|---|---|
+| P01 Concurrent request initiation | Call every independent source before waiting, separate response policy from parsing and derive the summary | `CLASSROOM_RC6/targets/p01.mjs` |
+| P02 Delegated nested click | Resolve an owned button and row, accept toggle/delete and refuse outside or missing targets | `CLASSROOM_RC6/targets/p02.mjs` |
+| P03 Bounded retry classification | Validate the finite failure language, then return the local retry permission | `CLASSROOM_RC6/targets/p03.mjs` |
 
-P02 — Delegated nested click — editable path from the seminar package root: CLASSROOM_RC6/targets/p02.mjs
+[Current S04 entry](../../S04_SEMINAR/index.html) · [Twelve-stage tutorial](../../S04_SEMINAR/TUTORIAL.html) · [Single formative assessment form](../../S04_SEMINAR/EN_GB/FORMATIVE_ASSESSMENT.html)
 
-P03 — Bounded retry classification — editable path from the seminar package root: CLASSROOM_RC6/targets/p03.mjs
+The full 120–165 minute route remains unpiloted. A shorter booking needs the lecturer’s agreed taught continuation through the named remaining stages. Preserve an unfinished or blocked record honestly. Every project needs a personal additional case and a causal recap. One genuine bounded AI critique followed by your own independent test serves the whole seminar. Export one reviewed private PDF after all three project records are ready.
 
-Current entry: ../../../ENTRY/S04.html
-
-Step-by-step tutorial: ../../../TUTORIALS/S04.html
-
-Current evidence form: ../../S04/WEBTECH_ASE_S04_EN_GB_v1.2.2_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html
-
-Preserve support files, run the stated target checks and record actual results, including blocked or unexecuted checks. Complete the current form for all projects and export one PDF. Review its saved pages and filename before uploading it to the corresponding private Moodle Assignment. A blocked check is not a PASS.
-
-The old full applications are optional advanced references. Their reused IDs, paths, allocations, portfolio requirements, timings and mark statements do not define these current microprojects. The actual Assignment supplies dates and assessment policy. No completion-time or mark guarantee is made here.
+Historical Dashboard, Task List and Resilient Fetch explanations remain advanced course context. Their reused IDs, paths, portfolio statements and timing allocations do not define the current bounded contract.

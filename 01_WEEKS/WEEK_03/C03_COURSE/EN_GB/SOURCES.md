@@ -10,11 +10,11 @@ P02 — Declarative leaf rule — editable path from the seminar package root: C
 
 P03 — Defensive event normaliser — editable path from the seminar package root: CLASSROOM_RC6/targets/p03.mjs
 
-Current entry: ../../../ENTRY/S03.html
+Current entry: ../../S03_SEMINAR/index.html
 
-Step-by-step tutorial: ../../../TUTORIALS/S03.html
+Step-by-step tutorial: ../../S03_SEMINAR/TUTORIAL.html
 
-Current evidence form: ../../S03/WEBTECH_ASE_S03_EN_GB_v1.2.2_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html
+Current evidence form: ../../S03_SEMINAR/EN_GB/FORMATIVE_ASSESSMENT.html
 
 Preserve support files, run the stated target checks and record actual results, including blocked or unexecuted checks. Complete the current form for all projects and export one PDF. Review its saved pages and filename before uploading it to the corresponding private Moodle Assignment. A blocked check is not a PASS.
 
@@ -45,3 +45,11 @@ The R7 page currently carries a 2027 draft title. This is not a claim that a fin
 C1: TEHNOLOGII WEB 2026. (n.d.). *Lecture 02 — JavaScript for reading and modifying programs* [Unpublished course materials]. Supplied canonical U02.
 
 Derived demonstration register: D01 value boundary; D02 ordinary property lookup; D03 defined supplier identity; D04 receiver/configured predicate; D05 accumulator trace; D06 multi-record mutation witness. These are new teaching fixtures, not verbatim external documentation examples. Public canonical examples remain separate and exact.
+
+## Current teaching adaptation and verified technical scope
+
+For this v4.0.0 candidate, the listed primary references were checked again on 9 October 2026. R1 separates own fields from successful inherited lookup, R2 refuses numeric coercion, R3 explains one-level copying, R4 separates call receiver from lexical configuration, R5 explains retained bindings, R6 identifies the array that sort mutates and R7 defines the empty reduction with an initial value. These facts support the teaching mechanisms; they do not prove every object, native browser, institutional timetable or learner implementation.
+
+D07, [six-lens-route.mjs](DEMONSTRATIONS/six-lens-route.mjs), is a new non-assessed claims fixture with a defined nested supplier. It traces input → selected views → owned ordering → selected summary and tests value, property provenance, container/record/supplier identity, receiver/closure and source preservation. Its selected total 11 is separate from canonical 04’s 6 and S03 P01’s 8. D08, [reading-bridge.mjs](DEMONSTRATIONS/reading-bridge.mjs), separately reactivates function value, parameter, call, return and array/record access with an unchanged note. All five original canonical examples and their ten code/README source files remain unchanged. No completed assessed S03 function is supplied publicly.
+
+The retained 1.1.0 labels and canonical identity describe source provenance. This teaching revision targets the v4.0.0 candidate; it does not relabel the published v3.0.0 main branch or claim equivalence with an unavailable historical release payload.

@@ -17,6 +17,7 @@ from urllib.parse import unquote, urlsplit
 VERSION = '4.0.0'
 LATEST_PUBLISHED_VERSION = '3.0.0'
 PROGRESS = 'metadata/CANDIDATE_PROGRESS.json'
+PREPARED_TRANCHE = 2
 METADATA = 'metadata/CLASSROOM_COLLECTION.json'
 COURSE_MAP = 'metadata/course-map.json'
 MANIFEST = 'metadata/current-integrity/REPOSITORY_SHA256SUMS.txt'
@@ -155,6 +156,17 @@ def read_metadata(root):
             or meta.get('publication_qualified') is not False
             or meta.get('published') is not False):
         raise ValueError('Current collection identity or qualification differs')
+    if meta.get('status') != f'CANDIDATE_V4_0_0_T{PREPARED_TRANCHE:02}_PREPARED_NOT_FINAL_NOT_PUBLISHED':
+        raise ValueError('Collection status differs from the prepared tranche')
+    objects = meta.get('objects')
+    if not isinstance(objects, list) or len(objects) != 30 or {obj.get('object_id') for obj in objects} != OBJECTS:
+        raise ValueError('Exactly thirty distinct current objects required')
+    for obj in objects:
+        ident = obj['object_id']
+        tranche = 1 if ident.startswith('SETUP_') else (int(ident[1:]) + 1) // 2
+        expected = f'T{tranche:02}_COMPLETE_WITH_EXPLICIT_LIMITS' if tranche <= PREPARED_TRANCHE else 'INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW'
+        if obj.get('candidate_revision_status') != expected:
+            raise ValueError('Object revision exceeds or contradicts prepared tranche: ' + ident)
     gates = meta.get('qualificationGates')
     if not isinstance(gates, dict) or set(gates) != GATES or any(value != 'pending' for value in gates.values()):
         raise ValueError('All ten general qualification gates must remain pending')
@@ -187,8 +199,9 @@ def verify_progress(root, meta):
             or progress.get('publication_qualified') is not False
             or progress.get('published') is not False
             or progress.get('qualificationGates') != meta['qualificationGates']
-            or progress.get('phase') != 'T01_CANDIDATE_PREPARED'
-            or progress.get('next_phase') != 'T02'):
+            or progress.get('phase') != f'T{PREPARED_TRANCHE:02}_CANDIDATE_PREPARED'
+            or progress.get('next_phase') != f'T{PREPARED_TRANCHE + 1:02}'
+            or progress.get('prepared_tranches') != [f'T{number:02}' for number in range(1, PREPARED_TRANCHE + 1)]):
         raise ValueError('Candidate progress identity, distribution or qualification differs')
     tranches = progress.get('tranches')
     if not isinstance(tranches, list) or len(tranches) != 7:
@@ -197,8 +210,8 @@ def verify_progress(root, meta):
         expected_units = [f'{kind}{week:02}' for week in range(number * 2 - 1, number * 2 + 1) for kind in ('C', 'S')]
         if (tranche.get('id') != f'T{number:02}' or tranche.get('units') != expected_units
                 or tranche.get('acceptance_status') != 'PENDING'
-                or tranche.get('implementation_status') != ('COMPLETE_WITH_EXPLICIT_LIMITS' if number == 1 else 'PENDING')):
-            raise ValueError('T01-only candidate progress boundary differs')
+                or tranche.get('implementation_status') != ('COMPLETE_WITH_EXPLICIT_LIMITS' if number <= PREPARED_TRANCHE else 'PENDING')):
+            raise ValueError('Prepared tranche boundary differs: ' + f'T{number:02}')
     return {'phase': progress.get('phase'), 'next_phase': progress.get('next_phase'),
             'implementation_scope': progress.get('implementation_scope'),
             'global_qualification': 'NOT_FINAL', 'published': False}
@@ -312,6 +325,10 @@ def verify_course_map(root, meta, paths):
         sid = 'S' + number
         if week.get('course_id') != 'C' + number or week.get('seminar_id') != sid or week.get('individual_in_class') is not True:
             raise ValueError('Individual current week requirements differ')
+        tranche = (week['week'] + 1) // 2
+        expected_revision = f'T{tranche:02}_COMPLETE_WITH_EXPLICIT_LIMITS' if tranche <= PREPARED_TRANCHE else 'PENDING_LATER_TRANCHE_REVIEW'
+        if week.get('candidate_revision_status') != expected_revision:
+            raise ValueError('Course-map revision exceeds or contradicts prepared tranche: ' + sid)
         if week.get('tutorial') not in paths:
             raise ValueError('Current tutorial missing: ' + sid)
         projects = week.get('required_projects')

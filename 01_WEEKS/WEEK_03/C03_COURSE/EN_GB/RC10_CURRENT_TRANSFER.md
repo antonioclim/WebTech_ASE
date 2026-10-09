@@ -10,11 +10,11 @@ P02 — Declarative leaf rule — editable path from the seminar package root: C
 
 P03 — Defensive event normaliser — editable path from the seminar package root: CLASSROOM_RC6/targets/p03.mjs
 
-Current entry: ../../../ENTRY/S03.html
+Current entry: ../../S03_SEMINAR/index.html
 
-Step-by-step tutorial: ../../../TUTORIALS/S03.html
+Step-by-step tutorial: ../../S03_SEMINAR/TUTORIAL.html
 
-Current evidence form: ../../S03/WEBTECH_ASE_S03_EN_GB_v1.2.2_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html
+Current evidence form: ../../S03_SEMINAR/EN_GB/FORMATIVE_ASSESSMENT.html
 
 Preserve support files, run the stated target checks and record actual results, including blocked or unexecuted checks. Complete the current form for all projects and export one PDF. Review its saved pages and filename before uploading it to the corresponding private Moodle Assignment. A blocked check is not a PASS.
 

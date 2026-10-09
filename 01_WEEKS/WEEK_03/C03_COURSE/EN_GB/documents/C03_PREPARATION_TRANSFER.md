@@ -10,11 +10,11 @@ P02 — Declarative leaf rule — editable path from the seminar package root: C
 
 P03 — Defensive event normaliser — editable path from the seminar package root: CLASSROOM_RC6/targets/p03.mjs
 
-Current entry: ../../../../ENTRY/S03.html
+Current entry: ../../../S03_SEMINAR/index.html
 
-Step-by-step tutorial: ../../../../TUTORIALS/S03.html
+Step-by-step tutorial: ../../../S03_SEMINAR/TUTORIAL.html
 
-Current evidence form: ../../../S03/WEBTECH_ASE_S03_EN_GB_v1.2.2_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html
+Current evidence form: ../../../S03_SEMINAR/EN_GB/FORMATIVE_ASSESSMENT.html
 
 Preserve support files, run the stated target checks and record actual results, including blocked or unexecuted checks. Complete the current form for all projects and export one PDF. Review its saved pages and filename before uploading it to the corresponding private Moodle Assignment. A blocked check is not a PASS.
 
@@ -80,6 +80,6 @@ Optional built-in methods: compare filter, map, some and every using a two-recor
 
 > Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
 
-Prepare for the separate S03 package: P01 is central, P03 is the required later portfolio and P02 is optional advanced work. The course source’s older timing and the tutorial’s optional wording do not override the current local weekly mapping. No course-specific Moodle submission is requested.
+Prepare for the separate S03 package: P01 Fresh task summary, P02 Declarative leaf rule and P03 Defensive event normaliser are all required and individual in the current S03 route. Historical full-application timing and optionality do not override these current contracts. No course-specific Moodle submission is requested.
 
 The following week introduces modules, promises, events and fetch. Its reading list is context for later work, not a licence to add those mechanisms to this synchronous lesson. Source basis and verified documentation are listed in SOURCES.md.

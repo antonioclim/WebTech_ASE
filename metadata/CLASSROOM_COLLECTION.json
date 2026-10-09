@@ -1,6 +1,6 @@
 {
   "schema": "webtech-classroom-collection/v1",
-  "status": "CANDIDATE_V4_0_0_T01_PREPARED_NOT_FINAL_NOT_PUBLISHED",
+  "status": "CANDIDATE_V4_0_0_T02_PREPARED_NOT_FINAL_NOT_PUBLISHED",
   "distribution_version": "4.0.0",
   "language": "en-GB",
   "classroom_inner_version": "1.0.0-rc.6",
@@ -37,9 +37,9 @@
       "guide": "01_WEEKS/WEEK_03/C03_COURSE/EN_GB/course.html",
       "form": null,
       "package_id_path": "01_WEEKS/WEEK_03/C03_COURSE/EN_GB/PACKAGE_ID.txt",
-      "package_id": "a30d43afc54279112d30bda576b70b94c79b0bad900c3dd54890902539b774c7",
+      "package_id": "5eafff82c8a67efa50a56edc6bfc239ac8fe699bb69129c5e19788386fc64f9f",
       "included_in_collection_version": "4.0.0",
-      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
+      "candidate_revision_status": "T02_COMPLETE_WITH_EXPLICIT_LIMITS"
     },
     {
       "object_id": "C04",
@@ -49,9 +49,9 @@
       "guide": "01_WEEKS/WEEK_04/C04_COURSE/EN_GB/course.html",
       "form": null,
       "package_id_path": "01_WEEKS/WEEK_04/C04_COURSE/EN_GB/PACKAGE_ID.txt",
-      "package_id": "1a10891b607dab50c9b010fc5c3aced608102a27919c2f5cdf36bf5226cd99e0",
+      "package_id": "24cd969c706fd29a910b4c68c18acc8c8ec1cad1dd1da230c6813560249d3dc3",
       "included_in_collection_version": "4.0.0",
-      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
+      "candidate_revision_status": "T02_COMPLETE_WITH_EXPLICIT_LIMITS"
     },
     {
       "object_id": "C05",
@@ -239,7 +239,7 @@
       "entry": "01_WEEKS/WEEK_03/S03_SEMINAR/index.html",
       "start": "01_WEEKS/WEEK_03/S03_SEMINAR/EN_GB/CLASSROOM_RC6/START.html",
       "guide": "01_WEEKS/WEEK_03/S03_SEMINAR/EN_GB/CLASSROOM_RC6/GUIDE.html",
-      "form": "01_WEEKS/WEEK_03/S03_SEMINAR/EN_GB/CLASSROOM_RC6/EVIDENCE_FORM.html",
+      "form": "01_WEEKS/WEEK_03/S03_SEMINAR/EN_GB/FORMATIVE_ASSESSMENT.html",
       "tutorial": "01_WEEKS/WEEK_03/S03_SEMINAR/TUTORIAL.html",
       "projects": [
         {
@@ -262,9 +262,9 @@
         }
       ],
       "package_id_path": "01_WEEKS/WEEK_03/S03_SEMINAR/EN_GB/PACKAGE_ID.txt",
-      "package_id": "6f14e737d7d005b66adfe47d6de209ff926f0e926ff8c8dcb042d836c2d6e14c",
+      "package_id": "abb8161db8e669e9a3d2df41507feb6684e145955e1601b1d42cb2a756a93d05",
       "included_in_collection_version": "4.0.0",
-      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
+      "candidate_revision_status": "T02_COMPLETE_WITH_EXPLICIT_LIMITS"
     },
     {
       "object_id": "S04",
@@ -272,7 +272,7 @@
       "entry": "01_WEEKS/WEEK_04/S04_SEMINAR/index.html",
       "start": "01_WEEKS/WEEK_04/S04_SEMINAR/EN_GB/CLASSROOM_RC6/START.html",
       "guide": "01_WEEKS/WEEK_04/S04_SEMINAR/EN_GB/CLASSROOM_RC6/GUIDE.html",
-      "form": "01_WEEKS/WEEK_04/S04_SEMINAR/EN_GB/CLASSROOM_RC6/EVIDENCE_FORM.html",
+      "form": "01_WEEKS/WEEK_04/S04_SEMINAR/EN_GB/FORMATIVE_ASSESSMENT.html",
       "tutorial": "01_WEEKS/WEEK_04/S04_SEMINAR/TUTORIAL.html",
       "projects": [
         {
@@ -295,9 +295,9 @@
         }
       ],
       "package_id_path": "01_WEEKS/WEEK_04/S04_SEMINAR/EN_GB/PACKAGE_ID.txt",
-      "package_id": "84f97deadedf8a61c940d73caab337d9658b23cdbbb4babe069398c5b117a944",
+      "package_id": "d5d0ce880739c619bf3a43322a91936082f7b296465c6a9c5e972ed2505203c0",
       "included_in_collection_version": "4.0.0",
-      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
+      "candidate_revision_status": "T02_COMPLETE_WITH_EXPLICIT_LIMITS"
     },
     {
       "object_id": "S05",
@@ -549,7 +549,7 @@
           "id": "P02",
           "title": "Queue: terminal state does not regress",
           "editable_path": "CLASSROOM_RC6/student/p02.mjs",
-          "completeScope": "Apply queued\u2192active\u2192completed/failed transitions; active progress may only increase from0to100; terminal or out-of-order events preserve state. Use synthetic lifecycle events. No Redis, BullMQ, actual job or exactly-once guarantee is observed."
+          "completeScope": "Apply queued→active→completed/failed transitions; active progress may only increase from0to100; terminal or out-of-order events preserve state. Use synthetic lifecycle events. No Redis, BullMQ, actual job or exactly-once guarantee is observed."
         },
         {
           "id": "P03",

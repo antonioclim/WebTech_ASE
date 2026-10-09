@@ -1,13 +1,13 @@
-# S03 — Dataset Transformer CLI
+# S03 — Three defensive JavaScript data contracts
 
-Current English teaching files for Web Technologies 3.0.0 are in `EN_GB/`.
+Teaching revision for the v4.0.0 candidate. Historical source labels remain provenance.
 
 - [Open this unit](index.html)
-- [Start instructions](EN_GB/CLASSROOM_RC6/START.html)
-- [HTML presentation or guide](EN_GB/CLASSROOM_RC6/GUIDE.html)
-- [Detailed seminar tutorial](TUTORIAL.html)
-- [Evidence form](EN_GB/CLASSROOM_RC6/EVIDENCE_FORM.html)
+- [Course six-lens explanation](../C03_COURSE/EN_GB/course.html)
+- [S03 twelve-stage tutorial](../S03_SEMINAR/TUTORIAL.html)
+- [Current formative assessment](../S03_SEMINAR/EN_GB/FORMATIVE_ASSESSMENT.html)
+- [Current S03 contract](../S03_SEMINAR/EN_GB/CLASSROOM_RC6/contract.json)
 
-Open the `EN_GB` folder in VS Code before running the seminar commands. It contains `CLASSROOM_RC6`, the supplied current implementation and evidence-form protocol. Complete all required projects individually and keep private evidence outside the entire repository.
+P01 Fresh task summary, P02 Declarative leaf rule and P03 Defensive event normaliser remain mandatory and individual. Keep predicted examples distinct from actual local observations. One real AI critique with an independent check and one PDF serve the complete seminar.
 
-[Collection home](../../../index.html) · [Start guide](../../../00_START_HERE/START_HERE.html)
+[Environment policy](../../../00_START_HERE/ENVIRONMENT.html) · [Collection home](../../../index.html)

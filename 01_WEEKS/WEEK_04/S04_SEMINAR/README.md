@@ -1,13 +1,7 @@
-# S04 — Multi-source Data Dashboard
+# S04 — three required individual boundaries
 
-Current English teaching files for Web Technologies 3.0.0 are in `EN_GB/`.
+Open [the current entry](index.html), follow the [twelve-stage tutorial](TUTORIAL.html) and use [the single current formative form](EN_GB/FORMATIVE_ASSESSMENT.html). P01 starts independent requests, P02 resolves an owned delegated action and P03 validates then classifies a finite failure description. All three are required individually.
 
-- [Open this unit](index.html)
-- [Start instructions](EN_GB/CLASSROOM_RC6/START.html)
-- [HTML presentation or guide](EN_GB/CLASSROOM_RC6/GUIDE.html)
-- [Detailed seminar tutorial](TUTORIAL.html)
-- [Evidence form](EN_GB/CLASSROOM_RC6/EVIDENCE_FORM.html)
+Select `01_WEEKS/WEEK_04/S04_SEMINAR/EN_GB` in VS Code. The [classroom start](EN_GB/CLASSROOM_RC6/START.html) gives exact commands, source boundaries and capability recovery. Only the three target files are editable. Store all personal evidence outside the collection.
 
-Open the `EN_GB` folder in VS Code before running the seminar commands. It contains `CLASSROOM_RC6`, the supplied current implementation and evidence-form protocol. Complete all required projects individually and keep private evidence outside the entire repository.
-
-[Collection home](../../../index.html) · [Start guide](../../../00_START_HERE/START_HERE.html)
+One genuine AI critique followed by your own independent test serves the whole seminar. Export and review one private PDF. The 120–165 minute plan is unpiloted and uses an agreed taught continuation when the booking is shorter. Historical full applications and forms do not set current optional tasks or portfolio rules.

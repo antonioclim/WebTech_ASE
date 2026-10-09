@@ -1,9 +1,5 @@
-# C04 — Modules, DOM, events, Promises, async/await and fetch
+# C04 course route
 
-Current English teaching files for Web Technologies 3.0.0 are in `EN_GB/`.
+Open [the current course entry](index.html), then its [presentation](EN_GB/course.html), [reading](EN_GB/reading.html) and [launch guide](EN_GB/guide.html). Modules, DOM, events, Promise coordination, async/await and fetch remain substantive. Initiation, settlement and authority to update are distinct.
 
-- [Open this unit](index.html)
-- [Start instructions](EN_GB/index.html)
-- [HTML presentation or guide](EN_GB/course.html)
-
-[Collection home](../../../index.html) · [Start guide](../../../00_START_HERE/START_HERE.html)
+The current [S04 tutorial](../S04_SEMINAR/TUTORIAL.html) requires three individual bounded projects and one reviewed PDF. Historical full applications remain contextual examples.

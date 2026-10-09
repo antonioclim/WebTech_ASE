@@ -1,34 +1,5 @@
-# Lecture Example — Async continuation order
+# Five-message async continuation
 
-## Concept demonstrated
+Predict script start → function start → script end → after await → promise fulfilled. Calling the async function starts its synchronous prefix immediately. Await suspends its continuation, even with a fulfilled operand. The result is a promise trace, not browser painting.
 
-`await` pauses one async function's continuation; it does not block the current script or the JavaScript runtime.
-
-## Why this example is in the lecture
-
-Five log entries make the scheduling model observable without network or UI concerns.
-
-## What to observe
-
-- The async function starts synchronously.
-- Code after `await` runs only after the current stack clears.
-- The returned promise settles after the continuation completes.
-
-## Run / inspect
-
-```bash
-node example.js
-```
-
-## Explanation
-
-Calling `run` executes through `before await`, schedules its continuation, and immediately returns a promise. The top-level code logs `script end`; only then can the continuation and `.then` callback run.
-
-## Variations
-
-- Add a second `await` and predict its place in the log.
-- Replace the resolved promise with a rejected one and add a targeted `try`/`catch`.
-
-## Validation
-
-Validated with `node example.js`; an assertion verifies the exact five-entry order.
+From `01_WEEKS/WEEK_04/C04_COURSE/EN_GB` run `node canonical/02-async-continuation-order/example.js` in a fresh process. Or use `node tools/tw-kit.mjs example 02` after the capability preflight. Preserve your prediction, exact command and actual output. A reference result is not a new observation. These neutral course files do not implement the assessed S04 targets.
