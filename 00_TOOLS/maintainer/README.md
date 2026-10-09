@@ -1,6 +1,6 @@
 # Maintain the v4.0.0 candidate source
 
-The repository keeps its familiar folder structure. `00_SETUP` contains the two Day 0 kits, `00_START_HERE` contains the current student routes and `01_WEEKS` contains all 14 course/seminar pairs. `00_TOOLS`, `assets` and `metadata` support this candidate. The latest published classroom edition remains 3.0.0; a prepared teaching corpus does not record a new publication.
+The repository keeps its familiar folder structure. `00_SETUP` contains the two Day 0 kits, `00_START_HERE` contains the current student routes and `01_WEEKS` contains all 14 course/seminar pairs. `00_TOOLS`, `assets` and `metadata` support this candidate. The Latest stable classroom edition remains 3.0.0; the [RC1 teaching review](https://github.com/antonioclim/WebTech_ASE/releases/tag/v4.0.0-rc.1) is published as a prerelease; a prepared teaching corpus does not record a new publication.
 
 The authoritative whole-repository controls are:
 

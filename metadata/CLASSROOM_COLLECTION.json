@@ -799,5 +799,7 @@
   "distribution_status": "LOCAL_CANDIDATE_NOT_PUBLISHED",
   "candidate_progress": "metadata/CANDIDATE_PROGRESS.json",
   "published": false,
-  "final_phase_scope": "T07_GLOBAL_INTEGRATION_AND_PUBLICATION"
+  "final_phase_scope": "T07_GLOBAL_INTEGRATION_AND_PUBLICATION",
+  "review_publication": "metadata/REVIEW_PRERELEASE.json",
+  "publication_status_scope": "published, publication_qualified and distribution_status in the candidate metadata describe the final stable v4.0.0 candidate, not RC1 availability. latest_published_version describes the previous stable edition. This record supplies the separate actual review publication state."
 }

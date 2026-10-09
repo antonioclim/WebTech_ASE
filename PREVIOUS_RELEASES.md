@@ -1,6 +1,6 @@
 # Previous editions
 
-The current source contains the complete revised v4.0.0 candidate in the original directory organisation. The latest published classroom edition remains the frozen 3.0.0 release below. Keep editions in separate extracted folders; source integration does not replace published payloads.
+The current source contains the complete revised v4.0.0 candidate in the original directory organisation. The [RC1 teaching review](https://github.com/antonioclim/WebTech_ASE/releases/tag/v4.0.0-rc.1) is now published as a prerelease. The frozen 3.0.0 release below remains GitHub Latest stable. Keep editions in separate extracted folders; source integration does not replace published payloads.
 
 | Edition | Exact preserved content |
 | --- | --- |

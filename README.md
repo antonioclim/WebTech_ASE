@@ -1,16 +1,16 @@
 # Web Technologies — English student materials, v4.0.0 candidate
 
-All 14 course and seminar pairs have completed the T01–T07 teaching revision with explicit limits. This complete source candidate prepares the final v4.0.0 edition. The latest published classroom edition remains 3.0.0. Read the [candidate progress](metadata/CANDIDATE_PROGRESS.json) before interpreting this checkout as a complete release.
+All 14 course and seminar pairs have completed the T01–T07 teaching revision with explicit limits. This complete source candidate prepares the final v4.0.0 edition. The [v4.0.0-rc.1 teaching review edition](https://github.com/antonioclim/WebTech_ASE/releases/tag/v4.0.0-rc.1) is published as a prerelease; the Latest stable classroom edition remains 3.0.0. Read the [candidate progress](metadata/CANDIDATE_PROGRESS.json) before interpreting this checkout as a complete release.
 
 This repository contains the current materials for 14 course and seminar pairs, with two operating-system setup guides, 14 detailed seminar tutorials and 40 required individual microprojects. The 38 learner target files are intentionally unfinished. HTML presentations and guides are the main teaching route; Word references are optional.
 
-For the current published classroom edition, open the [3.0.0 release](https://github.com/antonioclim/WebTech_ASE/releases/tag/classroom-en-gb-v3.0.0) and use its attached classroom ZIP. Keep that edition separate from this review candidate. The planned review identity is **v4.0.0-rc.1**; the final **v4.0.0** tag is reserved until the required qualification is complete.
+For the complete published teaching review, open [v4.0.0-rc.1](https://github.com/antonioclim/WebTech_ASE/releases/tag/v4.0.0-rc.1) and download its attached **WEBTECH_ASE_EN_GB_CLASSROOM_v4.0.0-rc.1.zip**. Extract it into a new folder and open `00_START_HERE/START_HERE.html`. The [previous stable 3.0.0 release](https://github.com/antonioclim/WebTech_ASE/releases/tag/classroom-en-gb-v3.0.0) remains GitHub Latest. The final **v4.0.0** tag is reserved until the required technical qualification is complete.
 
 Start this candidate review with [00_START_HERE](00_START_HERE/README.md) or open [index.html](index.html) locally. The original repository organisation is retained: setup in `00_SETUP`, current guidance in `00_START_HERE`, maintenance utilities in `00_TOOLS` and teaching materials in `01_WEEKS`. Shared files remain in `assets` and current records in `metadata`.
 
 ## Obtain and open the materials
 
-1. On GitHub choose **Code → Download ZIP**, then extract the complete archive into a new folder. A Git clone is also suitable.
+1. Prefer the attached [RC1 teaching ZIP](https://github.com/antonioclim/WebTech_ASE/releases/download/v4.0.0-rc.1/WEBTECH_ASE_EN_GB_CLASSROOM_v4.0.0-rc.1.zip) for the frozen review edition. For a separate current source copy, choose **Code → Download ZIP** or use a Git clone. Extract each complete archive into its own new folder.
 2. Open `00_START_HERE/START_HERE.html` locally and follow the setup guide for your operating system. GitHub’s file view displays HTML source; the local HTML pages provide the interactive teaching route.
 3. Open a terminal in the repository root and run `node 00_TOOLS/qa/VERIFY_COLLECTION.mjs` before editing.
 4. Find your week in [01_WEEKS](01_WEEKS/README.md). Read the course, seminar start page and tutorial. Open that seminar’s `EN_GB` folder in VS Code before running its commands.
@@ -32,7 +32,7 @@ Keep private drafts, JSON evidence, screenshots, logs, PDFs and your own synthet
 
 Each seminar’s `CLASSROOM_RC6` directory is its current implementation and evidence-form protocol. Its name is retained because the teaching commands and saved forms depend on it. The course and seminar wrappers lead directly to the material selected for this edition.
 
-The [download guide](00_START_HERE/DOWNLOAD.html) distinguishes this current repository layout from the frozen [published 3.0.0 classroom assets](https://github.com/antonioclim/WebTech_ASE/releases/tag/classroom-en-gb-v3.0.0). The [current repository identity](metadata/current-integrity/REPOSITORY_PACKAGE_ID.txt) describes this checkout. Earlier editions are listed in [PREVIOUS_RELEASES.md](PREVIOUS_RELEASES.md), with changes in [CHANGELOG.md](CHANGELOG.md).
+The [download guide](00_START_HERE/DOWNLOAD.html) distinguishes the [frozen RC1 teaching assets](https://github.com/antonioclim/WebTech_ASE/releases/tag/v4.0.0-rc.1), this current source copy and the [previous stable 3.0.0 classroom assets](https://github.com/antonioclim/WebTech_ASE/releases/tag/classroom-en-gb-v3.0.0). The [current repository identity](metadata/current-integrity/REPOSITORY_PACKAGE_ID.txt) describes this checkout. Earlier editions are listed in [PREVIOUS_RELEASES.md](PREVIOUS_RELEASES.md), with changes in [CHANGELOG.md](CHANGELOG.md).
 
 ## Qualification
 

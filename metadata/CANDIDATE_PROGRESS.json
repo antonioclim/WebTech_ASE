@@ -376,5 +376,7 @@
       "state": "PENDING_SEPARATE_EXTERNAL_RECEIPTS",
       "scope": "The series ends at T07; next_phase is null. Complete source sealing, filtered distribution, fresh extraction, conditional Git integration and publication require authentic external receipts. Faza 0 permits v4.0.0-rc.1 draft/prerelease while required browser/PDF and native/reference qualification is unresolved. Stable v4.0.0 remains the target and its tag must not be consumed prematurely."
     }
-  ]
+  ],
+  "review_publication": "metadata/REVIEW_PRERELEASE.json",
+  "publication_status_scope": "published, publication_qualified and distribution_status in the candidate metadata describe the final stable v4.0.0 candidate, not RC1 availability. latest_published_version describes the previous stable edition. This record supplies the separate actual review publication state."
 }

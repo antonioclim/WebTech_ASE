@@ -21,4 +21,4 @@ Each week contains a course and a seminar. The current English materials are sto
 
 [Start guide](../00_START_HERE/START_HERE.html) · [Evidence guidance](../00_START_HERE/ASSESSMENT.html)
 
-All 14 course and seminar pairs have completed the T01–T07 teaching revisions with explicit limits. The latest published edition remains 3.0.0. See [candidate progress](../metadata/CANDIDATE_PROGRESS.json).
+All 14 course and seminar pairs have completed the T01–T07 teaching revisions with explicit limits. The [RC1 teaching review](https://github.com/antonioclim/WebTech_ASE/releases/tag/v4.0.0-rc.1) is published as a prerelease; the Latest stable edition remains 3.0.0. See [candidate progress](../metadata/CANDIDATE_PROGRESS.json).

@@ -1,0 +1,75 @@
+{
+  "schema": "webtech-published-review-prerelease/v1",
+  "status": "PUBLISHED_PRERELEASE",
+  "release_id": 408264000,
+  "tag": "v4.0.0-rc.1",
+  "release_url": "https://github.com/antonioclim/WebTech_ASE/releases/tag/v4.0.0-rc.1",
+  "draft": false,
+  "prerelease": true,
+  "published_at_utc": "2026-10-09T19:25:59Z",
+  "source_commit": "23803fdaf5987384b86104bbaf0a8d293654aa0e",
+  "source_tree": "d0107462dc5ae4f32a3b0dbec8cfdeb26553bff5",
+  "source_repository_package_id": "a25f453614a7ae2daca4567083a1fdaba95985aee7086e1851c03b1cfa78b9b7",
+  "distribution_package_id": "7a3aa1ef6d8500145eaf3c354f1b329aac68f182e53297f7bd913f3303788e1e",
+  "assets": [
+    {
+      "id": 625943689,
+      "name": "BUILD_RECEIPT.json",
+      "state": "uploaded",
+      "size": 4458,
+      "digest": "sha256:9a1f66a0742d0a249a64b5ab7429b23d6ac0f66851b710c492e4d27aa8e18e89",
+      "content_type": "application/json",
+      "browser_download_url": "https://github.com/antonioclim/WebTech_ASE/releases/download/v4.0.0-rc.1/BUILD_RECEIPT.json",
+      "created_at": "2026-10-09T19:25:04Z",
+      "updated_at": "2026-10-09T19:25:05Z"
+    },
+    {
+      "id": 625943619,
+      "name": "FILES_MANIFEST.txt",
+      "state": "uploaded",
+      "size": 219731,
+      "digest": "sha256:7a3aa1ef6d8500145eaf3c354f1b329aac68f182e53297f7bd913f3303788e1e",
+      "content_type": "text/plain",
+      "browser_download_url": "https://github.com/antonioclim/WebTech_ASE/releases/download/v4.0.0-rc.1/FILES_MANIFEST.txt",
+      "created_at": "2026-10-09T19:25:02Z",
+      "updated_at": "2026-10-09T19:25:04Z"
+    },
+    {
+      "id": 625943064,
+      "name": "WEBTECH_ASE_EN_GB_CLASSROOM_v4.0.0-rc.1.zip",
+      "state": "uploaded",
+      "size": 5108813,
+      "digest": "sha256:b149a14a4c7eb1c3786cc4a39e28d0f29ddb62a97bbba05aa127f7ae31e238b9",
+      "content_type": "application/x-zip-compressed",
+      "browser_download_url": "https://github.com/antonioclim/WebTech_ASE/releases/download/v4.0.0-rc.1/WEBTECH_ASE_EN_GB_CLASSROOM_v4.0.0-rc.1.zip",
+      "created_at": "2026-10-09T19:24:45Z",
+      "updated_at": "2026-10-09T19:24:48Z"
+    },
+    {
+      "id": 625943325,
+      "name": "WEBTECH_ASE_EN_GB_CLASSROOM_v4.0.0-rc.1.zip.sha256",
+      "state": "uploaded",
+      "size": 110,
+      "digest": "sha256:aeed437b0bb199919af9ce9a8b3f6366c169b841e4eef54ebfde6e08142c0b5a",
+      "content_type": "application/octet-stream",
+      "browser_download_url": "https://github.com/antonioclim/WebTech_ASE/releases/download/v4.0.0-rc.1/WEBTECH_ASE_EN_GB_CLASSROOM_v4.0.0-rc.1.zip.sha256",
+      "created_at": "2026-10-09T19:24:52Z",
+      "updated_at": "2026-10-09T19:24:58Z"
+    }
+  ],
+  "verification": {
+    "scope": "Live GitHub release/tag/commit/individual asset GET metadata; server-reported SHA256 compared with freshly rehashed frozen local originals.",
+    "observed_at_utc": "2026-10-09T19:31:58.539Z",
+    "fresh_published_binary_download": false,
+    "notes_match_after_CRLF_to_LF_only": true,
+    "independent_metadata_recheck": "PASS"
+  },
+  "latest_stable_tag": "classroom-en-gb-v3.0.0",
+  "latest_stable_url": "https://github.com/antonioclim/WebTech_ASE/releases/tag/classroom-en-gb-v3.0.0",
+  "final_target_tag": "v4.0.0",
+  "final_target_qualification": "NOT_FINAL",
+  "stable_tag_observed": false,
+  "legacy_candidate_field_scope": "published, publication_qualified and distribution_status in the candidate metadata describe the final stable v4.0.0 candidate, not RC1 availability. latest_published_version describes the previous stable edition. This record supplies the separate actual review publication state.",
+  "portal_change_scope": "Later common portal changes use their own repository identity. They do not alter the frozen RC1 source commit, distribution bytes, tag or four assets.",
+  "build_receipt_scope": "The frozen BUILD_RECEIPT.json records its authentic earlier build-time prepublication state; this record supplies the later actual publication receipt."
+}

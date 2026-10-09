@@ -4,7 +4,7 @@
   "academic_year": "2026-2027",
   "language": "en-GB",
   "qualification": "NOT_FINAL",
-  "purpose": "Project identities, navigation and learning outcomes for the planned v4.0.0 candidate. T01 and T02 are prepared with explicit limits; C05/S05 through C14/S14 remain pending their scheduled revision. Whole-edition qualification and publication remain pending. Grading weights and submission deadlines are defined by the lecturer in the actual seminar Assignment.",
+  "purpose": "Project identities, navigation and learning outcomes for all 14 course and seminar pairs revised through T01–T07. RC1 is published as a teaching review prerelease; final stable v4.0.0 technical qualification remains NOT_FINAL. Grading weights and submission deadlines are defined by the lecturer in the actual seminar Assignment.",
   "required_project_count": 40,
   "weeks": [
     {
@@ -754,5 +754,7 @@
   "published": false,
   "native_acceptance": false,
   "publication_qualified": false,
-  "implementation_scope": "All 14 course and seminar pairs revised through T01–T07 with explicit limits. Exactly 40 required individual projects and 38 intentionally unfinished targets remain."
+  "implementation_scope": "All 14 course and seminar pairs revised through T01–T07 with explicit limits. Exactly 40 required individual projects and 38 intentionally unfinished targets remain.",
+  "review_publication": "metadata/REVIEW_PRERELEASE.json",
+  "publication_status_scope": "published, publication_qualified and distribution_status in the candidate metadata describe the final stable v4.0.0 candidate, not RC1 availability. latest_published_version describes the previous stable edition. This record supplies the separate actual review publication state."
 }

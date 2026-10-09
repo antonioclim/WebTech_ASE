@@ -8,4 +8,4 @@ Each of the 30 units also retains its own integrity scheme. C01 derives its ID f
 
 The [strict maintenance check](00_TOOLS/qa/validate_public_repo.py) validates the current inventory, unit controls, project declarations and local links. Build archives through [the current publishing utility](00_TOOLS/publishing/README.md), using an output directory outside this repository.
 
-The current repository identity differs from the frozen published 3.0.0 archive identities. General qualification remains **NOT_FINAL**; read [the qualification scope](00_START_HERE/QUALIFICATION.html).
+The current repository identity differs from the frozen RC1 filtered distribution and the previous stable 3.0.0 archive identities. [The RC1 publication record](metadata/REVIEW_PRERELEASE.json) identifies its exact source commit and four assets; later portal edits do not change that source binding. General qualification remains **NOT_FINAL**; read [the qualification scope](00_START_HERE/QUALIFICATION.html).

@@ -1,5 +1,9 @@
 # Changes
 
+## v4.0.0-rc.1 — published teaching review, 9 October 2026
+
+Publish the complete teaching review as a prerelease, with four verified assets and tag source commit `23803fdaf5987384b86104bbaf0a8d293654aa0e`. Promote the current portal to the actual RC1 download and retain 3.0.0 as GitHub Latest stable. The frozen RC1 assets keep their original bytes and distinct filtered distribution identity. Later portal changes are a separate source change, with current integrity controls refreshed. Stable v4.0.0 remains NOT_FINAL and its tag is reserved. Historical entries below describe their original preparation checkpoints.
+
 ## v4.0.0 candidate — T07 complete source preparation
 
 C13/S13 and C14/S14 complete the 28-unit teaching revision. S13 retains three required individual projects; S14 retains P01 and P03 only. The final integration reconciles current navigation and prepares a filtered teaching distribution with a distinct derived identity. Source and finite execution checks retain their actual boundaries. Browser rendering, saved PDF, native Windows/macOS, Word and human checks remain unexecuted or pending. The planned review identity is v4.0.0-rc.1; v4.0.0 remains the final target and is not published by a local build. Earlier releases retain their original assets and tags.
