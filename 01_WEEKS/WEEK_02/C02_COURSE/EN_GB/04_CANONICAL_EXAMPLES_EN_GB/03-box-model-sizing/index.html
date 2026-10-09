@@ -7,11 +7,11 @@
   Why this design: Two otherwise identical boxes turn the sizing equation into an observable browser measurement.
 
   Follow the evidence:
-  - The content-box element renders at 242 pixels: 200 content + 40 padding + 2 border.
-  - The border-box element renders at the declared 200 pixels.
+  - Predict a content-box border edge of 242 CSS pixels: 200 content + 40 padding + 2 border.
+  - Predict a border-box border edge of the declared 200 CSS pixels.
   - Margins remain outside either width calculation.
 -->
-<html lang="en">
+<html lang="en-GB">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -24,14 +24,27 @@
     </style>
   </head>
   <body>
+    <main>
+    <h1>Box model sizing</h1>
+    <p>Both boxes declare width 200px, padding 20px and border 1px on each side. Predict each border-edge width before measuring it.</p>
     <div class="box content-box">Content-box</div>
     <div class="box border-box">Border-box</div>
-    <output id="result"></output>
+    <button type="button" id="measure-boxes">Measure both boxes again</button>
+    <p><output id="result" aria-live="polite"></output></p>
+    <p>The rectangle width includes padding and border. clientWidth excludes border and scrollWidth helps inspect overflowing content. These are separate measurements; margins are outside the border edge.</p>
+    </main>
     <script type="module">
-      const contentWidth = document.querySelector(".content-box").getBoundingClientRect().width;
-      const borderWidth = document.querySelector(".border-box").getBoundingClientRect().width;
-      document.querySelector("#result").textContent =
-        `content-box=${contentWidth}; border-box=${borderWidth}`;
+      let probeNumber = 0;
+      function measureBoxes() {
+        const measurements = ["content-box", "border-box"].map(name => {
+          const box = document.querySelector(`.${name}`);
+          const style = getComputedStyle(box);
+          return `${name}: border-edge=${box.getBoundingClientRect().width}px; clientWidth=${box.clientWidth}px; scrollWidth=${box.scrollWidth}px; computed-width=${style.width}; box-sizing=${style.boxSizing}`;
+        });
+        document.querySelector("#result").textContent = `probe=${++probeNumber}; ${measurements.join(" | ")}`;
+      }
+      document.querySelector("#measure-boxes").addEventListener("click", measureBoxes);
+      measureBoxes();
     </script>
   </body>
 </html>

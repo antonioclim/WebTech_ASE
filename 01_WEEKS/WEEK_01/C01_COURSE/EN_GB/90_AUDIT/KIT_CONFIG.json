@@ -21,6 +21,14 @@
     "05": {
       "path": "04_CANONICAL_EXAMPLES/05-bounded-change-review",
       "entry": "verify-http.mjs"
+    },
+    "06": {
+      "path": "04_CANONICAL_EXAMPLES/06-javascript-bridge",
+      "entry": "example.mjs"
+    },
+    "07": {
+      "path": "04_CANONICAL_EXAMPLES/02-request-response-anatomy",
+      "entry": "evidence-boundary.mjs"
     }
   },
   "requiredNpm": "11.19.0",
@@ -29,5 +37,6 @@
   "previous_carrier_version": "2.0.2-rc.1",
   "previous_descriptor_sha256": "14dbda6aef88e78313fe13847374be16541c27270d6e8632a73f82c9f579625c",
   "current_derivation_record": "DERIVED_CARRIER.json",
-  "previous_observations_not_transferred_to_current_carrier": true
+  "previous_observations_not_transferred_to_current_carrier": true,
+  "candidateExtensionPurpose": "T01 adds a neutral JavaScript prerequisite bridge and a real HTTP creation/retrieval evidence boundary. Historical carrier fields identify the input lineage; they do not qualify these additions."
 }

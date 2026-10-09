@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Verify current v3 source integrity, unit identities and static document routes."""
+"""Verify v4 candidate source integrity, exact project inventory and static routes."""
 from __future__ import annotations
 
 import argparse
@@ -9,7 +9,7 @@ import sys
 from pathlib import Path
 
 sys.dont_write_bytecode = True
-from current_contract import verify_source, verify_units, verify_course_map, verify_links, strict_json
+from current_contract import verify_source, verify_units, verify_course_map, verify_links, verify_progress, strict_json, VERSION
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -19,6 +19,7 @@ def run(allow_edits=False):
     units = verify_units(ROOT, meta, paths, allow_edits)
     course, projects = verify_course_map(ROOT, meta, paths)
     links = verify_links(ROOT, meta, course, paths)
+    progress = verify_progress(ROOT, meta)
     args = ['node', str(ROOT / '00_TOOLS/qa/VERIFY_COLLECTION.mjs')]
     if allow_edits:
         args.append('--allow-student-edits')
@@ -29,12 +30,16 @@ def run(allow_edits=False):
     if (node.get('status') != source['status'] or node.get('repository_package_id') != source['repository_package_id']
             or node.get('files') != source['files'] or node.get('qualificationVerdict') != 'NOT_FINAL'
             or node.get('actionsStarted') is not False
+            or node.get('distribution_version') != VERSION
+            or node.get('requiredProjectIDsChecked') is not True
+            or node.get('published') is not False
             or sorted(node.get('allowedStudentChanges', [])) != sorted(source['allowedStudentChanges'])):
         raise ValueError('Independent byte-check reports disagree')
     return {'schema': 'webtech-current-repository-validation/v1',
-            'status': 'PASS_CURRENT_V3_PROTECTED_SOURCE_AND_STATIC_ROUTES_ONLY' if allow_edits else 'PASS_CURRENT_V3_INITIAL_SOURCE_AND_STATIC_ROUTES_ONLY',
-            'distribution_version': '3.0.0', 'source': source, 'units': units,
+            'status': 'PASS_V4_CANDIDATE_PROTECTED_SOURCE_AND_STATIC_ROUTES_ONLY' if allow_edits else 'PASS_V4_CANDIDATE_INITIAL_SOURCE_AND_STATIC_ROUTES_ONLY',
+            'distribution_version': VERSION, 'distribution_status': 'LOCAL_CANDIDATE_NOT_PUBLISHED', 'source': source, 'units': units,
             'projects': projects, 'document_links': links, 'independent_node_check': node,
+            'candidate_progress': progress, 'published': False,
             'qualificationVerdict': 'NOT_FINAL', 'native_acceptance': False,
             'applications_executed': False, 'rendered_browser_executed': False,
             'actions_dispatched': 0, 'software_installed': False}

@@ -2,6 +2,7 @@
 $ErrorActionPreference = 'Stop'
 
 $Stage = 'DAY0'
+$Profile = 'day0'
 $Format = 'human'
 $VerboseMode = $false
 $Redact = $false
@@ -19,6 +20,7 @@ Usage:
 
 Options:
   --stage <DAY0|S05|S06|S08>
+  --profile <day0|node|http|sqlite|npm>
   --format <human|json>
   --verbose
   --redact
@@ -35,6 +37,7 @@ for ($i = 0; $i -lt $args.Count; $i++) {
   $arg = [string]$args[$i]
   $low = $arg.ToLowerInvariant()
   switch ($low) {
+    '--profile' { if ($i + 1 -ge $args.Count) { Show-Usage; exit 64 }; $i++; $Profile = [string]$args[$i]; break }
     '--stage' { if ($i + 1 -ge $args.Count) { Show-Usage; exit 64 }; $i++; $Stage = ([string]$args[$i]).ToUpperInvariant(); break }
     '--format' { if ($i + 1 -ge $args.Count) { Show-Usage; exit 64 }; $i++; $Format = ([string]$args[$i]).ToLowerInvariant(); break }
     '--workspace' { if ($i + 1 -ge $args.Count) { Show-Usage; exit 64 }; $i++; $Workspace = [string]$args[$i]; break }
@@ -54,6 +57,7 @@ for ($i = 0; $i -lt $args.Count; $i++) {
   }
 }
 if ($Stage -notin @('DAY0','S05','S06','S08')) { Show-Usage; exit 64 }
+if ($Profile -notin @('day0','node','http','sqlite','npm')) { Show-Usage; exit 64 }
 if ($Format -notin @('human','json')) { Show-Usage; exit 64 }
 
 $RequiredNode = 'v24.21.0'
@@ -91,37 +95,52 @@ function Quote-CmdArg([string]$Value) {
   return '"' + ($Value -replace '([\\]*)"','$1$1\"' -replace '(\\+)$','$1$1') + '"'
 }
 
+# Async bounded readers prevent a full stdout/stderr pipe from deadlocking.
+# This helper kills only the process it started; no process-name/global cleanup.
+Add-Type -TypeDefinition @'
+using System;
+using System.Diagnostics;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+public class TwEnvironmentResult {
+ public bool ok; public int exitCode; public string stdout=""; public string stderr=""; public bool timedOut; public bool outputLimited;
+}
+public static class TwEnvironmentProcess {
+ public static TwEnvironmentResult Run(string file,string args,int milliseconds,int maxBytes) {
+  var r=new TwEnvironmentResult(); using(var p=new Process()) {
+   p.StartInfo=new ProcessStartInfo(file,args) { UseShellExecute=false,RedirectStandardOutput=true,RedirectStandardError=true,CreateNoWindow=true };
+   var output=new StringBuilder();var errors=new StringBuilder();int count=0;int limited=0;
+   try {
+    if(!p.Start()) {r.exitCode=70;r.stderr="start failed";return r;}
+    Func<System.IO.StreamReader,StringBuilder,Task> pump=(reader,target)=>Task.Run(()=> {
+     char[] b=new char[1024];int n;while((n=reader.Read(b,0,b.Length))>0) {
+      if(Interlocked.Add(ref count,Encoding.UTF8.GetByteCount(b,0,n))>maxBytes) {Interlocked.Exchange(ref limited,1);try {p.Kill();}catch{};break;}
+      target.Append(b,0,n);
+     }
+    });
+    var a=pump(p.StandardOutput,output);var e=pump(p.StandardError,errors);
+    if(!p.WaitForExit(milliseconds)) {r.timedOut=true;try {p.Kill();}catch{};p.WaitForExit(1000);}
+    Task.WaitAll(new[]{a,e},1000);r.stdout=output.ToString().Trim();r.stderr=errors.ToString().Trim();r.outputLimited=limited!=0;
+    r.exitCode=r.timedOut?124:r.outputLimited?125:p.HasExited?p.ExitCode:70;
+    r.ok=r.exitCode==0&&!r.timedOut&&!r.outputLimited;return r;
+   } catch(Exception ex) {r.exitCode=70;r.stderr=ex.Message;try {if(!p.HasExited)p.Kill();}catch{};return r;}
+  }
+ }
+}
+'@
 function Invoke-Tool {
   param([string]$File,[string[]]$Arguments=@(),[int]$TimeoutMs=10000)
-  try {
-    $psi = New-Object System.Diagnostics.ProcessStartInfo
-    $extension = [IO.Path]::GetExtension($File).ToLowerInvariant()
-    if ($extension -in @('.cmd','.bat')) {
-      $psi.FileName = $env:ComSpec
-      $inner = '"' + $File + '"'
-      foreach ($a in $Arguments) { $inner += ' ' + (Quote-CmdArg $a) }
-      $psi.Arguments = '/d /s /c "' + $inner + '"'
-    } else {
-      $psi.FileName = $File
-      $psi.Arguments = (($Arguments | ForEach-Object { Quote-CmdArg $_ }) -join ' ')
-    }
-    $psi.UseShellExecute = $false
-    $psi.RedirectStandardOutput = $true
-    $psi.RedirectStandardError = $true
-    $psi.CreateNoWindow = $true
-    $p = New-Object System.Diagnostics.Process
-    $p.StartInfo = $psi
-    if (-not $p.Start()) { return [PSCustomObject]@{ok=$false;exitCode=70;stdout='';stderr='start failed';timedOut=$false} }
-    if (-not $p.WaitForExit($TimeoutMs)) {
-      try { $p.Kill() } catch {}
-      return [PSCustomObject]@{ok=$false;exitCode=124;stdout='';stderr='timeout';timedOut=$true}
-    }
-    $stdout = $p.StandardOutput.ReadToEnd().Trim()
-    $stderr = $p.StandardError.ReadToEnd().Trim()
-    return [PSCustomObject]@{ok=($p.ExitCode -eq 0);exitCode=$p.ExitCode;stdout=$stdout;stderr=$stderr;timedOut=$false}
-  } catch {
-    return [PSCustomObject]@{ok=$false;exitCode=70;stdout='';stderr=$_.Exception.Message;timedOut=$false}
+  $extension = [IO.Path]::GetExtension($File).ToLowerInvariant()
+  if ($extension -in @('.cmd','.bat')) {
+    # Fixed diagnostic arguments, quoted cmd carrier. No npm.ps1 or policy change.
+    $inner = '"' + $File + '"'
+    foreach ($a in $Arguments) { $inner += ' ' + (Quote-CmdArg $a) }
+    $toolArgs = '/d /s /c "' + $inner + '"'; $toolFile=$env:ComSpec
+  } else {
+    $toolFile=$File; $toolArgs=(($Arguments | ForEach-Object { Quote-CmdArg $_ }) -join ' ')
   }
+  return [TwEnvironmentProcess]::Run($toolFile,$toolArgs,$TimeoutMs,65536)
 }
 
 function Unique-Paths([string[]]$Paths) {
@@ -174,10 +193,10 @@ if ($osArch -in @('x64','arm64')) { Add-Result 'OS_ARCH' 'PASS' $false $osArch '
 else { Add-Result 'OS_ARCH' 'UNSUPPORTED' $true $osArch 'x64 or arm64' 'ARCH-001' }
 
 # Extraction and path checks.
-if ($KitRoot -like "$env:TEMP*") { Add-Result 'KIT_EXTRACTED' 'FAIL' $true $KitRoot 'normal extracted directory outside TEMP' 'KIT-001' }
+if ($KitRoot -like "$env:TEMP*") { Add-Result 'KIT_EXTRACTED' 'ENV_WARN' $false $KitRoot 'normal extracted directory outside TEMP' 'KIT-001' }
 else { Add-Result 'KIT_EXTRACTED' 'PASS' $false $KitRoot 'normal extracted directory' 'Kit path looks persistent' }
 $pathLength = $KitRoot.Length
-if ($pathLength -gt 220) { Add-Result 'KIT_PATH_LENGTH' 'FAIL' $true "$pathLength characters" '<= 220 characters' 'PATH-001' }
+if ($pathLength -gt 220) { Add-Result 'KIT_PATH_LENGTH' 'ENV_WARN' $false "$pathLength characters" '<= 220 characters' 'PATH-001' }
 elseif ($pathLength -gt 180) { Add-Result 'KIT_PATH_LENGTH' 'WARN' $false "$pathLength characters" '<= 180 recommended' 'PATH-001' }
 else { Add-Result 'KIT_PATH_LENGTH' 'PASS' $false "$pathLength characters" '<= 180 recommended' 'Path length is conservative' }
 if ($KitRoot -match '(?i)\\OneDrive\\') { Add-Result 'SYNC_FOLDER' 'WARN' $false $KitRoot 'local non-synchronised folder recommended' 'PATH-001' }
@@ -188,51 +207,32 @@ if ($KitRoot -match '#') { $special += '#' }
 if ($KitRoot -match '[^\x00-\x7F]') { $special += 'non-ASCII' }
 Add-Result 'PATH_SPECIAL_CHARACTERS' 'PASS' $false (($special -join ', ') -replace '^$','none') 'quoted-path support' 'Scripts use literal/quoted paths'
 
-# Node and npm discovery.
+# Node is always assessed; npm is assessed only for the selected npm operation.
 $nodePaths = Command-Paths 'node.exe'
 if ($nodePaths.Count -eq 0) { $nodePaths = Command-Paths 'node' }
 $nodeActive = if ($nodePaths.Count -gt 0) { $nodePaths[0] } else { $null }
+$nodeVersion='';$nodeReady=$false
 if ($nodeActive) {
   $r = Invoke-Tool $nodeActive @('--version')
-  $nodeVersion = ($r.stdout -split "`r?`n")[0].Trim()
-  if ($r.ok -and $nodeVersion -eq $RequiredNode) { Add-Result 'NODE_VERSION' 'PASS' $false $nodeVersion $RequiredNode 'Exact course runtime' }
-  else { Add-Result 'NODE_VERSION' 'FAIL' $true $nodeVersion $RequiredNode 'NODE-001' }
-  $ar = Invoke-Tool $nodeActive @('-p','process.arch')
-  $nodeArch = ($ar.stdout -split "`r?`n")[0].Trim()
-  if ($ar.ok -and $nodeArch -eq $osArch) { Add-Result 'NODE_ARCH' 'PASS' $false $nodeArch $osArch 'Node matches OS architecture' }
-  elseif ($ar.ok) { Add-Result 'NODE_ARCH' 'FAIL' $true $nodeArch $osArch 'ARCH-001' }
-  else { Add-Result 'NODE_ARCH' 'NOT_CHECKABLE' $true '' $osArch 'ARCH-001' }
-} else {
-  $nodeVersion = ''
-  Add-Result 'NODE_VERSION' 'FAIL' $true '' $RequiredNode 'NODE-001'
-  Add-Result 'NODE_ARCH' 'NOT_CHECKABLE' $true '' $osArch 'ARCH-001'
-}
-if ($nodePaths.Count -gt 1) { Add-Result 'NODE_MULTIPLE_INSTALLATIONS' 'WARN' $false ($nodePaths -join '; ') 'one active installation recommended' 'PATH-002' }
-else { Add-Result 'NODE_MULTIPLE_INSTALLATIONS' 'PASS' $false ($nodePaths -join '; ') 'one active installation recommended' 'No competing node command found' }
-
-$npmPaths = Command-Paths 'npm.cmd'
-if ($npmPaths.Count -eq 0) { $npmPaths = Command-Paths 'npm' }
-$npmActive = if ($npmPaths.Count -gt 0) { $npmPaths[0] } else { $null }
-if ($npmActive) {
-  $r = Invoke-Tool $npmActive @('--version')
-  $npmVersion = ($r.stdout -split "`r?`n")[0].Trim()
-  if ($r.ok -and $npmVersion -eq $RequiredNpm) { Add-Result 'NPM_VERSION' 'PASS' $false $npmVersion $RequiredNpm 'Exact course package manager' }
-  else { Add-Result 'NPM_VERSION' 'FAIL' $true $npmVersion $RequiredNpm 'NPM-001' }
-  if ($nodeActive -and ((Split-Path $nodeActive -Parent).ToLowerInvariant() -eq (Split-Path $npmActive -Parent).ToLowerInvariant())) {
-    Add-Result 'NODE_NPM_SAME_ROOT' 'PASS' $false (Split-Path $nodeActive -Parent) 'same installation root' 'Node and npm resolve together'
-  } else {
-    Add-Result 'NODE_NPM_SAME_ROOT' 'FAIL' $true "$nodeActive | $npmActive" 'same installation root' 'PATH-002'
-  }
-  $cache = Invoke-Tool $npmActive @('config','get','cache')
-  $cachePath = ($cache.stdout -split "`r?`n")[0].Trim()
-  if ($cache.ok -and -not [string]::IsNullOrWhiteSpace($cachePath)) {
-    Add-Result 'NPM_CACHE_PATH' 'PASS' $false $cachePath 'resolvable cache path' 'No network operation performed'
-  } else { Add-Result 'NPM_CACHE_PATH' 'WARN' $false $cachePath 'resolvable cache path' 'CACHE-001' }
-} else {
-  Add-Result 'NPM_VERSION' 'FAIL' $true '' $RequiredNpm 'NPM-001'
-  Add-Result 'NODE_NPM_SAME_ROOT' 'NOT_CHECKABLE' $true '' 'same installation root' 'PATH-002'
-  Add-Result 'NPM_CACHE_PATH' 'NOT_CHECKABLE' $false '' 'resolvable cache path' 'CACHE-001'
-}
+  $nodeVersion=$r.stdout.Trim()
+  $nodeReady=$r.ok -and $nodeVersion -match '^v(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)(-[0-9A-Za-z.-]+)?$'
+  if ($nodeReady) { Add-Result 'NODE_VERSION' $(if($nodeVersion -eq $RequiredNode){'ENV_OK'}else{'ENV_WARN'}) $false "$nodeVersion / $nodeActive" "$RequiredNode (unexecuted reference)" 'Numeric observed version; selected API probes decide compatibility' }
+  else { Add-Result 'NODE_VERSION' 'ENV_BLOCKED' $true "$nodeVersion / $nodeActive; exit=$($r.exitCode)" 'successful valid Node version' 'Missing, failing or malformed version output' }
+} else { Add-Result 'NODE_VERSION' 'ENV_BLOCKED' $true '' 'Node executable' 'node not found in PATH' }
+if ($nodePaths.Count -gt 1) { Add-Result 'NODE_MULTIPLE_INSTALLATIONS' 'ENV_WARN' $false ($nodePaths -join '; ') 'record active executable' 'Multiple paths alone do not block' }
+$npmActive=$null
+if($Profile -eq 'npm') {
+  $npmPaths=Command-Paths 'npm.cmd'
+  if($npmPaths.Count -gt 0){$npmActive=$npmPaths[0]}
+  if($npmActive){$nr=Invoke-Tool $npmActive @('--version');if($nr.ok -and $nr.stdout -match '^\d+\.\d+\.\d+$'){Add-Result 'NPM_VERSION' $(if($nr.stdout -eq $RequiredNpm){'ENV_OK'}else{'ENV_WARN'}) $false "$($nr.stdout) / $npmActive" "$RequiredNpm (unexecuted reference)" 'npm.cmd avoids npm.ps1 without changing ExecutionPolicy'}else{Add-Result 'NPM_VERSION' 'ENV_BLOCKED' $true $nr.stderr 'successful valid npm.cmd --version' 'npm command failed'}}
+  else {Add-Result 'NPM_VERSION' 'ENV_BLOCKED' $true '' 'functional npm for npm operation' 'npm.cmd unavailable; Node-only activities remain independent'}
+} else {Add-Result 'NPM_VERSION' 'NOT_REQUIRED' $false '' "$RequiredNpm (unexecuted reference)" 'Selected Node/HTTP/SQLite activity does not use npm'}
+$EnvProfile=if($Profile -eq 'day0'){'http'}else{$Profile}
+if($nodeReady){
+  $er=Invoke-Tool $nodeActive @((Join-Path $ScriptRoot 'environment.mjs'),'--unit',$Stage,'--profile',$EnvProfile,'--json','--cwd',$KitRoot)
+  if($er.ok){try{$environment=$er.stdout|ConvertFrom-Json;Add-Result 'ACTIVITY_PROFILE' $environment.status $false $er.stdout "$EnvProfile capability probes" "Operation=$EnvProfile; CWD=$KitRoot; rerun RUN_PREFLIGHT.cmd --profile $Profile"}catch{Add-Result 'ACTIVITY_PROFILE' 'ENV_BLOCKED' $true $er.stdout 'valid environment report' 'Malformed capability report'}}
+  else{Add-Result 'ACTIVITY_PROFILE' 'ENV_BLOCKED' $true "$($er.stdout) $($er.stderr)" "$EnvProfile capability probes" 'Selected operation failed; other independent activities retain their own verdict'}
+}else{Add-Result 'ACTIVITY_PROFILE' 'ENV_BLOCKED' $true '' "$EnvProfile capability probes" 'Node unavailable or version probe failed'}
 
 # Ephemeral write and UTF-8/LF check.
 $workspaceCreated = $false
@@ -254,7 +254,7 @@ try {
   Add-Result 'UTF8_LF_ROUNDTRIP' 'NOT_CHECKABLE' $true $_.Exception.Message 'UTF-8 and LF' 'UTF8-001'
 } finally {
   if ($probeFile -and (Test-Path -LiteralPath $probeFile)) { Remove-Item -LiteralPath $probeFile -Force -ErrorAction SilentlyContinue }
-  if ($workspaceCreated -and (Test-Path -LiteralPath $Workspace)) { Remove-Item -LiteralPath $Workspace -Force -ErrorAction SilentlyContinue }
+  if ($workspaceCreated -and (Test-Path -LiteralPath $Workspace) -and @(Get-ChildItem -LiteralPath $Workspace -Force).Count -eq 0) { [IO.Directory]::Delete($Workspace,$false) }
 }
 
 # Git.
@@ -299,24 +299,25 @@ $vsActive = if ($vsPaths.Count -gt 0) { $vsPaths[0] } else { $null }
 if ($vsActive) {
   $vr = Invoke-Tool $vsActive @('--version') 15000
   $vline = ($vr.stdout -split "`r?`n")[0].Trim()
-  Add-Result 'VSCODE' 'PASS' $false "$vline / $vsActive" 'supported VS Code Stable' 'VS Code detected'
-  if ((Split-Path $vsActive -Leaf).ToLowerInvariant() -eq 'code.cmd' -or $vsActive -match '(?i)\\bin\\code(?:\.cmd)?$') { Add-Result 'VSCODE_CLI' 'PASS' $false $vsActive 'code CLI' 'CLI is available' }
-  else { Add-Result 'VSCODE_CLI' 'WARN' $false $vsActive 'code CLI recommended' 'VSC-001' }
+  $codeReady=$vr.ok -and $vline -match '^\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?$'
+  Add-Result 'VSCODE' $(if($codeReady){'ENV_OK'}else{'ENV_BLOCKED'}) (-not $codeReady) "$vline / $vsActive; exit=$($vr.exitCode); $($vr.stderr)" 'successful valid code --version' $(if($codeReady){'Functional CLI passed; GUI not exercised'}else{'Launcher exists but its functional version probe failed'})
+  if ($codeReady -and ((Split-Path $vsActive -Leaf).ToLowerInvariant() -eq 'code.cmd' -or $vsActive -match '(?i)\\bin\\code(?:\.cmd)?$')) { Add-Result 'VSCODE_CLI' 'ENV_OK' $false $vsActive 'code CLI' 'CLI is available' }
+  else { Add-Result 'VSCODE_CLI' $(if($codeReady){'ENV_WARN'}else{'ENV_BLOCKED'}) (-not $codeReady) $vsActive 'functional code CLI' 'No successful CLI probe; source Node activity remains independent' }
   $er = Invoke-Tool $vsActive @('--list-extensions') 20000
   $exts = @()
   if ($er.ok) { $exts = @($er.stdout -split "`r?`n" | ForEach-Object { $_.Trim().ToLowerInvariant() } | Where-Object { $_ }) }
   $extDir = Join-Path $env:USERPROFILE '.vscode\extensions'
   $prettierFs = Test-Path -Path (Join-Path $extDir 'esbenp.prettier-vscode-*')
   $eslintFs = Test-Path -Path (Join-Path $extDir 'dbaeumer.vscode-eslint-*')
-  if ($exts -contains 'esbenp.prettier-vscode' -or $prettierFs) { Add-Result 'PRETTIER_EXTENSION' 'PASS' $false 'esbenp.prettier-vscode' 'required extension' 'Extension detected' }
-  else { Add-Result 'PRETTIER_EXTENSION' $(if ($er.ok) {'FAIL'} else {'NOT_CHECKABLE'}) $true $er.stderr 'required extension' 'VSC-002' }
-  if ($exts -contains 'dbaeumer.vscode-eslint' -or $eslintFs) { Add-Result 'ESLINT_EXTENSION' 'PASS' $false 'dbaeumer.vscode-eslint' 'required extension' 'Extension detected' }
-  else { Add-Result 'ESLINT_EXTENSION' $(if ($er.ok) {'FAIL'} else {'NOT_CHECKABLE'}) $true $er.stderr 'required extension' 'VSC-002' }
+  if ($exts -contains 'esbenp.prettier-vscode' -or $prettierFs) { Add-Result 'PRETTIER_EXTENSION' 'PASS' $false 'esbenp.prettier-vscode' 'recommended editor extension' 'Extension detected' }
+  else { Add-Result 'PRETTIER_EXTENSION' 'ENV_WARN' $false $er.stderr 'recommended editor extension' 'VSC-002' }
+  if ($exts -contains 'dbaeumer.vscode-eslint' -or $eslintFs) { Add-Result 'ESLINT_EXTENSION' 'PASS' $false 'dbaeumer.vscode-eslint' 'recommended editor extension' 'Extension detected' }
+  else { Add-Result 'ESLINT_EXTENSION' 'ENV_WARN' $false $er.stderr 'recommended editor extension' 'VSC-002' }
 } else {
   Add-Result 'VSCODE' 'FAIL' $true '' 'supported VS Code Stable' 'VSC-001'
   Add-Result 'VSCODE_CLI' 'NOT_CHECKABLE' $false '' 'code CLI recommended' 'VSC-001'
-  Add-Result 'PRETTIER_EXTENSION' 'NOT_CHECKABLE' $true '' 'required extension' 'VSC-002'
-  Add-Result 'ESLINT_EXTENSION' 'NOT_CHECKABLE' $true '' 'required extension' 'VSC-002'
+  Add-Result 'PRETTIER_EXTENSION' 'NOT_CHECKABLE' $true '' 'recommended editor extension' 'VSC-002'
+  Add-Result 'ESLINT_EXTENSION' 'NOT_CHECKABLE' $true '' 'recommended editor extension' 'VSC-002'
 }
 if ($vsPaths.Count -gt 1) { Add-Result 'VSCODE_MULTIPLE_INSTALLATIONS' 'WARN' $false ($vsPaths -join '; ') 'one active installation recommended' 'VSC-001' }
 else { Add-Result 'VSCODE_MULTIPLE_INSTALLATIONS' 'PASS' $false ($vsPaths -join '; ') 'one active installation recommended' 'No competing VS Code path found' }
@@ -340,11 +341,11 @@ if ($browserPaths.Count -gt 0) {
 } else { Add-Result 'BROWSER_CHROMIUM' 'FAIL' $true '' 'Chrome or Edge Stable' 'BROWSER-001' }
 
 # Localhost loopback.
-if ($nodeActive -and $nodeVersion -eq $RequiredNode) {
+if ($nodeReady -and $Profile -in @('day0','http')) {
   $lr = Invoke-Tool $nodeActive @((Join-Path $ScriptRoot 'PROBE_LOCALHOST.mjs')) 10000
   if ($lr.ok) { Add-Result 'LOCALHOST_LOOPBACK' 'PASS' $false $lr.stdout 'ephemeral 127.0.0.1 HTTP probe' 'Server started, answered and closed' }
   else { Add-Result 'LOCALHOST_LOOPBACK' 'FAIL' $true $lr.stderr 'ephemeral 127.0.0.1 HTTP probe' 'LOCALHOST-001' }
-} else { Add-Result 'LOCALHOST_LOOPBACK' 'NOT_CHECKABLE' $true '' 'exact Node runtime first' 'NODE-001' }
+} elseif($Profile -in @('day0','http')) { Add-Result 'LOCALHOST_LOOPBACK' 'ENV_BLOCKED' $true '' 'functional Node HTTP APIs' 'Node unavailable' } else {Add-Result 'LOCALHOST_LOOPBACK' 'NOT_REQUIRED' $false '' 'HTTP profile only' 'Selected operation does not use HTTP'}
 
 # Accounts.
 if ($AckGitHub) { Add-Result 'GITHUB_ACCOUNT' 'PASS' $false 'acknowledged' 'account accessible; email verified' 'Manual confirmation recorded' }
@@ -362,7 +363,7 @@ if ($Stage -in @('S05','S06','S08')) {
   $pp = Unique-Paths @($postman)
   if ($pp.Count -gt 0) { Add-Result 'POSTMAN' 'PASS' $false $pp[0] 'Postman Desktop from S05' 'Application detected' }
   elseif ($AckAlternativeHttpClient) { Add-Result 'POSTMAN' 'WARN' $false 'approved alternative acknowledged' 'Postman or approved alternative' 'POSTMAN-001' }
-  else { Add-Result 'POSTMAN' 'FAIL' $true '' 'Postman Desktop from S05' 'POSTMAN-001' }
+  else { Add-Result 'POSTMAN' 'ENV_BLOCKED' $false '' 'Postman Desktop from S05' 'POSTMAN-001' }
 } else { Add-Result 'POSTMAN' 'NOT_REQUIRED' $false '' 'required from S05' 'Not evaluated at DAY0' }
 if ($Stage -in @('S06','S08')) {
   $sqlite = Command-Paths 'sqlite3.exe'
@@ -370,8 +371,8 @@ if ($Stage -in @('S06','S08')) {
   if ($sqlite.Count -gt 0) {
     $sr = Invoke-Tool $sqlite[0] @('--version')
     if ($sr.ok) { Add-Result 'SQLITE' 'PASS' $false $sr.stdout 'sqlite3 from S06' 'CLI works' }
-    else { Add-Result 'SQLITE' 'FAIL' $true $sr.stderr 'sqlite3 from S06' 'SQLITE-001' }
-  } else { Add-Result 'SQLITE' 'FAIL' $true '' 'sqlite3 from S06' 'SQLITE-001' }
+    else { Add-Result 'SQLITE' 'ENV_BLOCKED' $false $sr.stderr 'sqlite3 from S06' 'SQLITE-001' }
+  } else { Add-Result 'SQLITE' 'ENV_BLOCKED' $false '' 'sqlite3 from S06' 'SQLITE-001' }
 } else { Add-Result 'SQLITE' 'NOT_REQUIRED' $false '' 'required from S06' 'Not evaluated yet' }
 if ($Stage -eq 'S08') {
   if ($AckReactDevTools) { Add-Result 'REACT_DEVTOOLS' 'PASS' $false 'acknowledged' 'recommended from S08' 'Manual confirmation recorded' }
@@ -383,20 +384,17 @@ if ($npmActive) {
   else { Add-Result 'GLOBAL_VITE' 'PASS' $false 'not detected' 'Vite local to projects' 'No global Vite detected' }
 } else { Add-Result 'GLOBAL_VITE' 'NOT_CHECKABLE' $false '' 'Vite local to projects' 'NPM-001' }
 
-$unsupported = @($Results | Where-Object { $_.Status -eq 'UNSUPPORTED' }).Count
-$technicalBlocking = @($Results | Where-Object { $_.blocking -and $_.Status -in @('FAIL','NOT_CHECKABLE') }).Count
-$manualPending = @($Results | Where-Object { $_.blocking -and $_.Status -eq 'MANUAL_PENDING' }).Count
-$warnings = @($Results | Where-Object { $_.Status -eq 'WARN' }).Count
-if ($unsupported -gt 0) { $Verdict = 'UNSUPPORTED_SYSTEM'; $ExitCode = 4 }
-elseif ($technicalBlocking -gt 0) { $Verdict = 'NOT_READY'; $ExitCode = 2 }
-elseif ($manualPending -gt 0) { $Verdict = 'TECHNICALLY_READY_ACCOUNT_CHECKS_PENDING'; $ExitCode = 3 }
-elseif ($warnings -gt 0) { $Verdict = 'READY_WITH_WARNINGS'; $ExitCode = 1 }
-else { $Verdict = 'READY_FOR_TW2026'; $ExitCode = 0 }
+$unsupported=0
+$relevant=@($Results | Where-Object { $Profile -eq 'day0' -or $_.id -in @('NODE_VERSION','ACTIVITY_PROFILE') -or ($Profile -eq 'npm' -and $_.id -eq 'NPM_VERSION') -or ($Profile -eq 'http' -and $_.id -eq 'LOCALHOST_LOOPBACK') })
+$technicalBlocking=@($relevant | Where-Object { $_.blocking -and $_.status -in @('FAIL','NOT_CHECKABLE','ENV_BLOCKED') }).Count
+$manualPending=@($Results | Where-Object { $_.status -eq 'MANUAL_PENDING' }).Count
+$warnings=@($Results | Where-Object { $_.status -in @('WARN','ENV_WARN','UNSUPPORTED') }).Count
+if($technicalBlocking -gt 0){$Verdict='ENV_BLOCKED';$ExitCode=2}elseif($warnings -gt 0 -or $manualPending -gt 0){$Verdict='ENV_WARN';$ExitCode=0}else{$Verdict='ENV_OK';$ExitCode=0}
 
 $payload = [PSCustomObject][ordered]@{
   schema='tw2026.environment.preflight.v2'; generatedAt=(Get-Date).ToString('o'); platform='windows'; stage=$Stage;
   kitVersion='2.2.1'; requiredNode=$RequiredNode; requiredNpm=$RequiredNpm; workspace=(Protect-Text $Workspace);
-  verdict=$Verdict; exitCode=$ExitCode; counts=[PSCustomObject][ordered]@{unsupported=$unsupported;technicalBlocking=$technicalBlocking;manualPending=$manualPending;warnings=$warnings};
+  profile=$Profile; verdict=$Verdict; exitCode=$ExitCode; counts=[PSCustomObject][ordered]@{unsupported=$unsupported;technicalBlocking=$technicalBlocking;manualPending=$manualPending;warnings=$warnings};
   results=@($Results)
 }
 if ($Format -eq 'json') {

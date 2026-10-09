@@ -1,3 +1,4 @@
+import {assessEnvironment,REFERENCE} from './environment.mjs';
 import {readFileSync,lstatSync,readdirSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {spawnSync} from 'node:child_process';
@@ -5,12 +6,7 @@ import {fileURLToPath} from 'node:url';
 import {dirname,join} from 'node:path';
 
 const root=dirname(fileURLToPath(import.meta.url));
-const compat=process.env.WEBTECH_RC6_ALLOW_COMPATIBILITY==='1';
-const exact=process.version==='v24.21.0';
-if(!exact&&!compat){
- console.error(JSON.stringify({status:'STOP_REFERENCE_NODE',expected:'v24.21.0',observed:process.version,noInstall:true}));
- process.exit(2);
-}
+const exact=process.version===REFERENCE.node;
 
 function sha(path){
  const stat=lstatSync(path);
@@ -70,6 +66,7 @@ try{
  if(!plainObject(config)||typeof config.seminar!=='string'||typeof config.evidenceScope!=='string'||typeof config.limitation!=='string'||!Array.isArray(config.projects)||config.projects.some(p=>!plainObject(p)||typeof p.id!=='string')||!Array.isArray(config.initialAssertionFailures)||config.initialAssertionFailures.some(id=>typeof id!=='string'))throw Error('INVALID_CLASSROOM_CONTRACT');
  const [action='help',project='all',...tail]=process.argv.slice(2);
  if(tail.length||!['initial','check','observe','serve'].includes(action)||!['all',...config.projects.map(p=>p.id)].includes(project))throw Error('Use node CLASSROOM_RC6/kit.mjs initial | check P01/P02/P03/all | observe P01/P02/P03/all | serve');
+ const environment=await assessEnvironment({unit:'S02/'+project,operation:action,cwd:dirname(root),command:'node CLASSROOM_RC6/kit.mjs '+action+' '+project,features:action==='serve'?['http']:['node-core'],usesNpm:false});console.error(JSON.stringify(environment));if(environment.exitCode)process.exit(environment.exitCode);
  const manifestPath=join(root,'SOURCE_MANIFEST.json');
  const manifest=JSON.parse(readFileSync(manifestPath,'utf8'));
  if(!plainObject(manifest)||!plainObject(manifest.protected)||!plainObject(manifest.targets))throw Error('INVALID_CLASSROOM_MANIFEST');
@@ -93,10 +90,10 @@ try{
   const after=Object.fromEntries(Object.keys(manifest.targets).map(p=>[p,sha(join(root,p))]));
   if(JSON.stringify(before)!==JSON.stringify(after))throw Error('TARGET_CHANGED_DURING_CHECK');
   for(const[p,digest]of Object.entries(manifest.protected))if(sha(join(root,p))!==digest)throw Error('PROTECTED_SOURCE_CHANGED_DURING_CHECK '+p);
-  console.log(JSON.stringify({...report,referenceNode:exact,observedNode:process.version,sourceBoundary:'PROTECTED_FILES_AND_STABLE_TARGET_BYTES',nativeQualification:false,completionTimePilot:false,limitation:config.limitation},null,2));
+  console.log(JSON.stringify({...report,referenceNode:REFERENCE.node,referenceNodeMatch:exact,observedNode:process.version,environmentStatus:environment.status,sourceBoundary:'PROTECTED_FILES_AND_STABLE_TARGET_BYTES',nativeQualification:false,completionTimePilot:false,limitation:config.limitation},null,2));
   process.exitCode=result.status;
  }
 }catch(error){
- console.error(JSON.stringify({status:'STOP_CLASSROOM_BOUNDARY_OR_EXECUTION',reason:error.message,referenceNode:exact,observedNode:process.version}));
+ console.error(JSON.stringify({status:'STOP_CLASSROOM_BOUNDARY_OR_EXECUTION',reason:error.message,referenceNode:REFERENCE.node,referenceNodeMatch:exact,observedNode:process.version}));
  process.exitCode=2;
 }

@@ -1,21 +1,13 @@
-# Week 02 — Web Technologies 3.0.0
+# Week 02 — Web Technologies v4.0.0 candidate
 
-- [C02 — Semantic HTML, CSS, responsive UI and accessibility](C02_COURSE/index.html)
-- [S02 — Responsive Card Grid](S02_SEMINAR/index.html)
-- [Detailed seminar tutorial](S02_SEMINAR/TUTORIAL.html)
+[C02 course](C02_COURSE/index.html) · [S02 seminar](S02_SEMINAR/index.html) · [Twelve-stage tutorial](S02_SEMINAR/TUTORIAL.html) · [S02 contract](S02_SEMINAR/EN_GB/CLASSROOM_RC6/contract.json)
 
-## What you will learn
+C02 explains the expense-claim interface through purpose → meaning → cascade → geometry → interaction → evidence. S02 applies three distinct decisions to the same protected four-card fixture. Each student completes all three projects individually in `CLASSROOM_RC6/targets/styles.css`:
 
-- Use semantic HTML structure and distinguish grid relationships from flex relationships.
-- Measure responsive layout, readable long content, keyboard focus and reduced motion in a browser.
-- Separate a CSS source checklist from observed rendered behaviour.
+- P01 — Responsive relationship reconstruction
+- P02 — Intrinsic sizing and readable content
+- P03 — Keyboard focus and motion preference
 
-## Required individual projects
+The tutorial supplies four causal stages per project, real command scope, rendered witnesses, diagnosis and reflection. A source PASS cannot replace full visibility, real Tab/Shift+Tab or actual motion-preference observations. Prepare one PDF for the whole seminar, with one genuine AI critique and an independently executed test. Missing access or observations remain explicitly BLOCKED or NOT_EXECUTED.
 
-- **P01 — Responsive relationship reconstruction**
-- **P02 — Intrinsic sizing and readable content**
-- **P03 — Keyboard focus and motion preference**
-
-Complete every listed project and follow the seminar guide for task checks, evidence and PDF submission.
-
-[All weeks](../README.md) · [Course plan](../../00_START_HERE/COURSE_PLAN.html)
+[Day 0](../../00_START_HERE/START_HERE.html) · [Environment](../../00_START_HERE/ENVIRONMENT.html) · [Git and recovery](../../00_START_HERE/GIT_AND_RECOVERY.html) · [Evidence and PDF](../../00_START_HERE/EVIDENCE_HELP.html) · [All weeks](../README.md)

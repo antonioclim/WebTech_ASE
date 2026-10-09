@@ -1,4 +1,6 @@
-# Install the exact Node.js baseline on macOS
+# Optional reference Node.js installation on macOS
+
+First record `node --version` and `node -p "process.execPath"`, then run the selected preflight profile. If it returns ENV_OK or ENV_WARN, continue without replacing Node or changing npm. The reference values below were not executed in T01; this optional route concerns explicit reference reproduction, not a compatibility prerequisite. Read [version policy](../05_CONFIGURATION/VERSION_POLICY.md).
 
 1. Open **Applications → Utilities → Terminal**. Run the commands below before opening VS Code. `arm64` means Apple Silicon and `x86_64` means Intel. On an Apple Silicon Mac avoid a Terminal configured to run under Rosetta for this native route; check **Apple menu → About This Mac** as well. The [Node platform requirements](https://github.com/nodejs/node/blob/v24.x/BUILDING.md) require a supported macOS release, currently 13.5 or later for Node 24 binaries.
 

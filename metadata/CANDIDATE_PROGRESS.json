@@ -1,0 +1,188 @@
+{
+  "schema": "webtech-candidate-progress/v1",
+  "candidate_version": "4.0.0",
+  "final_target_version": "4.0.0",
+  "latest_published_version": "3.0.0",
+  "distribution_status": "LOCAL_CANDIDATE_NOT_PUBLISHED",
+  "phase": "T01_CANDIDATE_PREPARED",
+  "next_phase": "T02",
+  "implementation_scope": "T01: C01/S01, C02/S02 and affected common guidance, environment policy and evidence forms. Later units are included as inherited source and have not completed the new tranche review.",
+  "qualificationVerdict": "NOT_FINAL",
+  "native_acceptance": false,
+  "publication_qualified": false,
+  "published": false,
+  "qualificationGates": {
+    "local_integrity": "pending",
+    "reference_runtime": "pending",
+    "headless_browser": "pending",
+    "native_windows": "pending",
+    "native_macos": "pending",
+    "manual_browser": "pending",
+    "word": "pending",
+    "moodle_live": "pending",
+    "human_pilot": "pending",
+    "owner_acceptance": "pending"
+  },
+  "tranches": [
+    {
+      "id": "T01",
+      "units": [
+        "C01",
+        "S01",
+        "C02",
+        "S02"
+      ],
+      "implementation_status": "COMPLETE_WITH_EXPLICIT_LIMITS",
+      "acceptance_status": "PENDING",
+      "next_step": "T02 implementation after the phase continuation"
+    },
+    {
+      "id": "T02",
+      "units": [
+        "C03",
+        "S03",
+        "C04",
+        "S04"
+      ],
+      "implementation_status": "PENDING",
+      "acceptance_status": "PENDING",
+      "next_step": "Implement and verify this tranche before claiming completion"
+    },
+    {
+      "id": "T03",
+      "units": [
+        "C05",
+        "S05",
+        "C06",
+        "S06"
+      ],
+      "implementation_status": "PENDING",
+      "acceptance_status": "PENDING",
+      "next_step": "Implement and verify this tranche before claiming completion"
+    },
+    {
+      "id": "T04",
+      "units": [
+        "C07",
+        "S07",
+        "C08",
+        "S08"
+      ],
+      "implementation_status": "PENDING",
+      "acceptance_status": "PENDING",
+      "next_step": "Implement and verify this tranche before claiming completion"
+    },
+    {
+      "id": "T05",
+      "units": [
+        "C09",
+        "S09",
+        "C10",
+        "S10"
+      ],
+      "implementation_status": "PENDING",
+      "acceptance_status": "PENDING",
+      "next_step": "Implement and verify this tranche before claiming completion"
+    },
+    {
+      "id": "T06",
+      "units": [
+        "C11",
+        "S11",
+        "C12",
+        "S12"
+      ],
+      "implementation_status": "PENDING",
+      "acceptance_status": "PENDING",
+      "next_step": "Implement and verify this tranche before claiming completion"
+    },
+    {
+      "id": "T07",
+      "units": [
+        "C13",
+        "S13",
+        "C14",
+        "S14"
+      ],
+      "implementation_status": "PENDING",
+      "acceptance_status": "PENDING",
+      "next_step": "Implement and verify this tranche before claiming completion"
+    }
+  ],
+  "T01_evidence": [
+    {
+      "area": "C01",
+      "state": "PASS",
+      "scope": "Seven actual Node command executions on Linux with Node v24.19.0; finite canonical examples only. This does not qualify a different runtime or native browser."
+    },
+    {
+      "area": "S01",
+      "state": "PASS",
+      "scope": "Untouched starters produce the declared assertion failures. Separate private reference passes six finite cases including actual loopback HTTP; two purposeful mutants produce assertion failures. Source boundary, observation and owned listener cleanup are checked separately. This does not complete public learner TODOs or qualify a native browser."
+    },
+    {
+      "area": "S02",
+      "state": "PASS",
+      "scope": "Untouched starter assertions and source-only observations were executed. A separate private CSS reference passes four lexical cases; four purposeful CSS defects are rejected. Rendered layout, keyboard, motion and saved PDF observations remain unexecuted."
+    },
+    {
+      "area": "Evidence forms",
+      "state": "PASS",
+      "scope": "44 checks in a Node VM DOM model and static checks on six pages. Synthetic QA records are not actual student evidence or real AI exchanges."
+    },
+    {
+      "area": "Environment policy",
+      "state": "PASS",
+      "scope": "Eight actual/policy acceptance tests plus carrier drift and parser regression checks. Actual core, loopback HTTP, SQLite and bounded process probes used Node v24.19.0 on Linux. Injected versions do not establish runtime compatibility across those versions."
+    }
+  ],
+  "unexecuted_checks": [
+    {
+      "check": "manual_browser",
+      "state": "NOT_EXECUTED",
+      "reason": "The browser security policy refused the loopback preview and prohibited an alternate surface or workaround."
+    },
+    {
+      "check": "headless_browser",
+      "state": "NOT_EXECUTED",
+      "reason": "The installed Playwright package has no available local Chromium executable; no browser was installed."
+    },
+    {
+      "check": "print_and_saved_pdf",
+      "state": "NOT_EXECUTED",
+      "reason": "Native print dialogue and inspection of an actual saved form PDF could not be exercised after the browser access refusal."
+    },
+    {
+      "check": "native_windows",
+      "state": "NOT_EXECUTED",
+      "reason": "No native Windows acceptance session was executed."
+    },
+    {
+      "check": "native_macos",
+      "state": "NOT_EXECUTED",
+      "reason": "No native macOS acceptance session was executed."
+    },
+    {
+      "check": "word",
+      "state": "NOT_EXECUTED",
+      "reason": "No native Microsoft Word acceptance session was executed."
+    },
+    {
+      "check": "moodle_live",
+      "state": "NOT_EXECUTED",
+      "reason": "No live Moodle access or submission was performed."
+    },
+    {
+      "check": "human_pilot",
+      "state": "NOT_EXECUTED",
+      "reason": "No teaching pilot with beginners was performed."
+    },
+    {
+      "check": "owner_acceptance",
+      "state": "PENDING",
+      "reason": "Local preparation does not establish owner acceptance."
+    }
+  ],
+  "evidence_boundary": "Tranche-level observations are recorded separately from the ten global gates. No subset result makes the whole 14-pair distribution qualified, published or accepted. Source identity and final verification receipts are retained outside the sealed tree to avoid self-reference.",
+  "timing_limit": "S01 is estimated at 90\u2013120 minutes and S02 at 120\u2013165 minutes, unpiloted. A 90\u2013100-minute institutional slot does not establish completion of all required work. Arrange an explicit taught continuation rather than omitting projects or silently assigning them as homework."
+}

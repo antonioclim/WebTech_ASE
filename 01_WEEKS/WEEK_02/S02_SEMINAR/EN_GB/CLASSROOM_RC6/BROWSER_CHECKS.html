@@ -22,13 +22,13 @@ code{overflow-wrap:anywhere}#summary{font-weight:700}details{margin-top:1rem}
 </style>
 </head>
 <body><main>
-<h1>S02: observe the actual card fixture in your browser</h1>
+<nav aria-label="S02 observation route"><a href="GUIDE.html">S02 guide</a> · <a href="../../TUTORIAL.html#browser">Full browser procedure</a> · <a href="EVIDENCE_FORM.html">Evidence form</a> · <a href="../../../../../00_START_HERE/ENVIRONMENT.html">Environment</a></nav><h1>S02: observe the actual card fixture in your browser</h1>
 <p class="notice">These finite checks read rendered boxes and computed styles from your own served fixture. A PASS applies only to the listed observations at the selected width. It is not a grade, full project acceptance, visual inspection, proof of keyboard access or proof of reduced-motion behaviour. No student answers or observations are prefilled.</p>
 <h2>Run the owned classroom server</h2>
-<ol><li>From the extracted S02 package root, run <code>node CLASSROOM_RC6/kit.mjs serve</code> with the declared reference Node version.</li>
+<ol><li>From the extracted S02 package root, run <code>node CLASSROOM_RC6/kit.mjs serve</code> after the selected runtime capability check has permitted this operation; a version difference alone is not a blocker.</li>
 <li>Keep that terminal open. Append <code>/browser-checks.html</code> to its actual <code>READY http://127.0.0.1:PORT</code> address and open it in your browser.</li>
 <li>After editing <code>CLASSROOM_RC6/targets/styles.css</code>, select each required width and rerun. Copy your actual results into the current evidence form, alongside your own observations. Stop only this owned listener with Ctrl+C and wait for <code>STOPPED_OWNED_LISTENER</code>.</li></ol>
-<p>The unchanged assignment requires 320, 768 and 1280 CSS-pixel measurements. The optional 390 and 900 widths add observations. Parent-page width does not set subject width: the iframe has the selected CSS-pixel viewport. Its preview scrolls inside the bordered container on small screens.</p>
+<p>The unchanged assignment requires 320, 768 and 1280 CSS-pixel measurements. Record browser version, native zoom menu value and the initial browser font setting separately; this inspector cannot reliably infer those settings from device pixel ratio. The root computed font reported below is a page value, not proof of the browser’s initial font or zoom. Rem conditions are measured with matchMedia rather than inferred from body font-size. The optional 390 and 900 widths add observations. Parent-page width does not set subject width: the iframe has the selected CSS-pixel viewport. Its preview scrolls inside the bordered container on small screens.</p>
 <div class="controls"><label for="width">Subject viewport width</label>
 <select id="width"><option value="320">320 — required</option><option value="768">768 — required</option><option value="1280">1280 — required</option><option value="390">390 — additional</option><option value="900">900 — additional</option></select>
 <button id="run" type="button">Reload fixture and observe</button><button id="copy" type="button" disabled>Copy observation JSON</button></div>
@@ -36,7 +36,7 @@ code{overflow-wrap:anywhere}#summary{font-weight:700}details{margin-top:1rem}
 <p id="copy-status" role="status" aria-live="polite"></p>
 <div class="viewport" aria-label="Scrollable subject preview"><iframe id="subject" title="Your S02 card fixture at the selected width" loading="eager"></iframe></div>
 <h2>Finite automatic observations</h2>
-<p>Visibility here means a nonzero rendered box with visible ancestor styles; occlusion and visual legibility are not certified. The check uses the protected fixture's four cards. It rejects hidden/clip overflow and ellipsis on the fixture's content nodes, and checks that its expected text and links retain visible rendered boxes. Other visual concealment and occlusion still require inspection.</p>
+<p>Visibility here means a nonzero rendered box with visible ancestor styles; occlusion and visual legibility are not certified. The check uses the protected fixture's four cards. It rejects hidden/clip overflow and ellipsis on the fixture's content nodes and checks that its text and links retain visible rendered boxes. The long identifier is also compared with the protected fixture text; you still need to read its full rendered content and check the indicator yourself. Other visual concealment and occlusion still require inspection.</p>
 <table><thead><tr><th scope="col">Observation</th><th scope="col">Result</th><th scope="col">Actual browser data</th></tr></thead><tbody id="results"></tbody></table>
 <h2>Manual P03 observations — not automated</h2>
 <p>Use Tab and Shift+Tab on the actual fixture, inspect the visible indicator, then emulate reduced motion in your browser and inspect the computed transition. Enter only your own observation. These records default to NOT_EXECUTED and never change the automatic finite verdict. They remain when you change widths or reload the fixture: record the actual viewport in your notes and revise them after CSS edits. Browser/version, viewport, relevant values and an actual evidence excerpt are needed for your evidence form.</p>
@@ -70,7 +70,7 @@ function observe(width){
  const body=doc.body,grid=doc.querySelector('.card-grid'),header=doc.querySelector('.site-header'),token=doc.querySelector('.long-token'),cards=[...doc.querySelectorAll('.card-grid > .card')];
  if(!body||!grid||!header||!token||cards.length!==4)throw Error('The expected protected S02 fixture structure is missing.');
  report=baseReport('FAIL_FINITE_BROWSER_OBSERVATIONS',width);
- report.subject={url:doc.location.href,innerWidth:win.innerWidth,clientWidth:doc.documentElement.clientWidth,scrollWidth:doc.documentElement.scrollWidth,bodyScrollWidth:body.scrollWidth};
+ report.subject={url:doc.location.href,innerWidth:win.innerWidth,clientWidth:doc.documentElement.clientWidth,scrollWidth:doc.documentElement.scrollWidth,bodyScrollWidth:body.scrollWidth,rootComputedFont:win.getComputedStyle(doc.documentElement).fontSize,media40rem:win.matchMedia('(min-width:40rem)').matches,media64rem:win.matchMedia('(min-width:64rem)').matches};
  const rows=[];function add(id,label,pass,actual){rows.push({id,observation:label,status:pass?'PASS':'FAIL',actual});}
  const bs=win.getComputedStyle(body),gs=win.getComputedStyle(grid),hs=win.getComputedStyle(header);
  add('viewport','Selected CSS-pixel viewport',win.innerWidth===width,{expected:width,observed:win.innerWidth});
@@ -85,6 +85,8 @@ function observe(width){
  add('cards-shrink','Card minimum width permits shrinking',cardData.every(c=>c.minWidth==='0px'),cardData.map(c=>({card:c.card,minWidth:c.minWidth})));
  const media=cards.map((card,index)=>{const el=card.querySelector('.card-media');if(!el)return {card:index+1,visible:false};const r=rect(el);return {card:index+1,visible:visible(el,win),rect:r,ratio:r.height>0?r.width/r.height:null,aspectRatio:win.getComputedStyle(el).aspectRatio};});
  add('media-ratio','Visible media boxes have 16:9 ratio',media.every(m=>m.visible&&Math.abs(m.ratio-16/9)<.02),media);
+ const expectedToken='BUSINESS_IDENTIFIER_ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+ add('identifier-intact','Full protected identifier remains in the DOM',token.textContent===expectedToken,{expectedLength:expectedToken.length,observedLength:token.textContent.length,exactTextMatch:token.textContent===expectedToken});
  const ts=win.getComputedStyle(token);add('identifier-wrap','Visible unbroken identifier wraps',visible(token,win)&&ts.overflowWrap==='anywhere',{overflowWrap:ts.overflowWrap,whiteSpace:ts.whiteSpace,rect:rect(token),scrollWidth:token.scrollWidth,clientWidth:token.clientWidth});
  const textNodes=[...body.querySelectorAll('h1,h2,p,a,strong')],textData=textNodes.map(el=>({element:el.tagName.toLowerCase(),text:el.textContent,visible:visible(el,win),rect:rect(el)}));
  add('text-and-links','Expected fixture text and links have visible boxes',textData.length===17&&textData.every(x=>x.visible),textData);

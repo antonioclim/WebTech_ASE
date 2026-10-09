@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,8 +12,8 @@
     <div class="toolbar" aria-label="Course controls">
       <strong>Web Technologies</strong>
       <div class="actions">
-        <button type="button">Previous</button>
-        <button type="button">Next</button>
+        <button type="button" id="previous">Previous</button>
+        <button type="button" id="next">Next</button>
       </div>
     </div>
 
@@ -23,14 +23,29 @@
       <p>The card occupies normal flow. Only its badge intentionally overlaps.</p>
     </article>
 
+    <p>Previous and Next are native controls without navigation handlers. Use actual Tab and Shift+Tab to inspect their order. The README describes a temporary visual order variation and how to restore it.</p>
+    <output id="keyboard-result" aria-live="polite">No focus observation for Previous or Next yet.</output>
+    <p><button type="button" id="read-layout">Read layout again</button></p>
     <output id="result" aria-live="polite"></output>
   </main>
   <script>
     const toolbar = document.querySelector(".toolbar");
     const card = document.querySelector(".card");
     const badge = document.querySelector(".badge");
-    const toolbarStyle = getComputedStyle(toolbar);
-    document.querySelector("#result").textContent = `toolbar=${toolbarStyle.display}; justify=${toolbarStyle.justifyContent}; align=${toolbarStyle.alignItems}; badge=${getComputedStyle(badge).position}; containing-block=${badge.offsetParent === card ? "card" : "other"}`;
+    let probeNumber = 0;
+    let latestKey = "none";
+    function readLayout() {
+      const toolbarStyle = getComputedStyle(toolbar);
+      document.querySelector("#result").textContent = `probe=${++probeNumber}; toolbar=${toolbarStyle.display}; direction=${toolbarStyle.flexDirection}; justify=${toolbarStyle.justifyContent}; align=${toolbarStyle.alignItems}; wrap=${toolbarStyle.flexWrap}; gap=${toolbarStyle.gap}; badge=${getComputedStyle(badge).position}; badge-offsetParent=${badge.offsetParent === card ? "card" : "other"}`;
+    }
+    document.addEventListener("keydown", event => {
+      if (event.key === "Tab") latestKey = event.shiftKey ? "Shift+Tab" : "Tab";
+    });
+    document.querySelector(".actions").addEventListener("focusin", event => {
+      document.querySelector("#keyboard-result").textContent = `Focused control=${event.target.textContent}; latest recorded key=${latestKey}. A focus event alone does not identify its input source; record the actual route.`;
+    });
+    document.querySelector("#read-layout").addEventListener("click", readLayout);
+    readLayout();
   </script>
 </body>
 </html>

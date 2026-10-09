@@ -1,10 +1,10 @@
 {
   "schema": "webtech-classroom-course-map/v1",
-  "distribution_version": "3.0.0",
+  "distribution_version": "4.0.0",
   "academic_year": "2026-2027",
   "language": "en-GB",
   "qualification": "NOT_FINAL",
-  "purpose": "Navigation and learning outcomes derived from the current supplied teaching materials. Grading weights and submission deadlines are defined by the lecturer in the actual seminar Assignment.",
+  "purpose": "Navigation and learning outcomes for the planned v4.0.0 candidate. T01 is prepared with explicit verification limits; later tranches remain pending. Grading weights and submission deadlines are defined by the lecturer in the actual seminar Assignment.",
   "required_project_count": 40,
   "weeks": [
     {
@@ -12,7 +12,7 @@
       "course_id": "C01",
       "course_topic": "The Web as a system, HTTP and AI-assisted development",
       "seminar_id": "S01",
-      "seminar_topic": "HTTP Detective + Tiny HTTP Server",
+      "seminar_topic": "HTTP exchange classification and precise greeting resource",
       "tutorial": "01_WEEKS/WEEK_01/S01_SEMINAR/TUTORIAL.html",
       "learning_outcomes": [
         "Read an HTTP request and response as separate method, URL, status, header and body facts.",
@@ -50,7 +50,8 @@
         "minimum": 30,
         "maximum": 45
       },
-      "shorter_slot_policy": "Arrange an explicit continuation; all two or three individual projects remain required."
+      "shorter_slot_policy": "Arrange an explicit continuation; all two or three individual projects remain required.",
+      "candidate_revision_status": "T01_COMPLETE_WITH_EXPLICIT_LIMITS"
     },
     {
       "week": 2,
@@ -101,7 +102,8 @@
         "minimum": 30,
         "maximum": 45
       },
-      "shorter_slot_policy": "Arrange an explicit continuation; all two or three individual projects remain required."
+      "shorter_slot_policy": "Arrange an explicit continuation; all two or three individual projects remain required.",
+      "candidate_revision_status": "T01_COMPLETE_WITH_EXPLICIT_LIMITS"
     },
     {
       "week": 3,
@@ -153,7 +155,8 @@
         "minimum": 30,
         "maximum": 45
       },
-      "shorter_slot_policy": "Arrange an explicit continuation; all two or three individual projects remain required."
+      "shorter_slot_policy": "Arrange an explicit continuation; all two or three individual projects remain required.",
+      "candidate_revision_status": "PENDING_LATER_TRANCHE_REVIEW"
     },
     {
       "week": 4,
@@ -204,7 +207,8 @@
         "minimum": 30,
         "maximum": 45
       },
-      "shorter_slot_policy": "Arrange an explicit continuation; all two or three individual projects remain required."
+      "shorter_slot_policy": "Arrange an explicit continuation; all two or three individual projects remain required.",
+      "candidate_revision_status": "PENDING_LATER_TRANCHE_REVIEW"
     },
     {
       "week": 5,
@@ -256,7 +260,8 @@
         "minimum": 30,
         "maximum": 45
       },
-      "shorter_slot_policy": "Arrange an explicit continuation; all two or three individual projects remain required."
+      "shorter_slot_policy": "Arrange an explicit continuation; all two or three individual projects remain required.",
+      "candidate_revision_status": "PENDING_LATER_TRANCHE_REVIEW"
     },
     {
       "week": 6,
@@ -308,7 +313,8 @@
         "minimum": 30,
         "maximum": 45
       },
-      "shorter_slot_policy": "Arrange an explicit continuation; all two or three individual projects remain required."
+      "shorter_slot_policy": "Arrange an explicit continuation; all two or three individual projects remain required.",
+      "candidate_revision_status": "PENDING_LATER_TRANCHE_REVIEW"
     },
     {
       "week": 7,
@@ -360,7 +366,8 @@
         "minimum": 30,
         "maximum": 45
       },
-      "shorter_slot_policy": "Arrange an explicit continuation; all two or three individual projects remain required."
+      "shorter_slot_policy": "Arrange an explicit continuation; all two or three individual projects remain required.",
+      "candidate_revision_status": "PENDING_LATER_TRANCHE_REVIEW"
     },
     {
       "week": 8,
@@ -416,7 +423,8 @@
         "minimum": 30,
         "maximum": 45
       },
-      "shorter_slot_policy": "Arrange an explicit continuation; all two or three individual projects remain required."
+      "shorter_slot_policy": "Arrange an explicit continuation; all two or three individual projects remain required.",
+      "candidate_revision_status": "PENDING_LATER_TRANCHE_REVIEW"
     },
     {
       "week": 9,
@@ -472,7 +480,8 @@
         "minimum": 30,
         "maximum": 45
       },
-      "shorter_slot_policy": "Arrange an explicit continuation; all two or three individual projects remain required."
+      "shorter_slot_policy": "Arrange an explicit continuation; all two or three individual projects remain required.",
+      "candidate_revision_status": "PENDING_LATER_TRANCHE_REVIEW"
     },
     {
       "week": 10,
@@ -527,7 +536,8 @@
         "minimum": 30,
         "maximum": 45
       },
-      "shorter_slot_policy": "Arrange an explicit continuation; all two or three individual projects remain required."
+      "shorter_slot_policy": "Arrange an explicit continuation; all two or three individual projects remain required.",
+      "candidate_revision_status": "PENDING_LATER_TRANCHE_REVIEW"
     },
     {
       "week": 11,
@@ -579,7 +589,8 @@
         "minimum": 30,
         "maximum": 45
       },
-      "shorter_slot_policy": "Arrange an explicit continuation; all two or three individual projects remain required."
+      "shorter_slot_policy": "Arrange an explicit continuation; all two or three individual projects remain required.",
+      "candidate_revision_status": "PENDING_LATER_TRANCHE_REVIEW"
     },
     {
       "week": 12,
@@ -631,7 +642,8 @@
         "minimum": 30,
         "maximum": 45
       },
-      "shorter_slot_policy": "Arrange an explicit continuation; all two or three individual projects remain required."
+      "shorter_slot_policy": "Arrange an explicit continuation; all two or three individual projects remain required.",
+      "candidate_revision_status": "PENDING_LATER_TRANCHE_REVIEW"
     },
     {
       "week": 13,
@@ -684,7 +696,8 @@
         "minimum": 30,
         "maximum": 45
       },
-      "shorter_slot_policy": "Arrange an explicit continuation; all two or three individual projects remain required."
+      "shorter_slot_policy": "Arrange an explicit continuation; all two or three individual projects remain required.",
+      "candidate_revision_status": "PENDING_LATER_TRANCHE_REVIEW"
     },
     {
       "week": 14,
@@ -730,7 +743,15 @@
         "minimum": 30,
         "maximum": 45
       },
-      "shorter_slot_policy": "Arrange an explicit continuation; all two or three individual projects remain required."
+      "shorter_slot_policy": "Arrange an explicit continuation; all two or three individual projects remain required.",
+      "candidate_revision_status": "PENDING_LATER_TRANCHE_REVIEW"
     }
-  ]
+  ],
+  "final_target_version": "4.0.0",
+  "latest_published_version": "3.0.0",
+  "distribution_status": "LOCAL_CANDIDATE_NOT_PUBLISHED",
+  "candidate_progress": "metadata/CANDIDATE_PROGRESS.json",
+  "published": false,
+  "native_acceptance": false,
+  "publication_qualified": false
 }

@@ -1,7 +1,7 @@
 {
   "schema": "webtech-classroom-collection/v1",
-  "status": "CURRENT_V3_0_0_ORIGINAL_LAYOUT_NOT_FINAL",
-  "distribution_version": "3.0.0",
+  "status": "CANDIDATE_V4_0_0_T01_PREPARED_NOT_FINAL_NOT_PUBLISHED",
+  "distribution_version": "4.0.0",
   "language": "en-GB",
   "classroom_inner_version": "1.0.0-rc.6",
   "objects": [
@@ -13,8 +13,9 @@
       "guide": "01_WEEKS/WEEK_01/C01_COURSE/EN_GB/01_PRESENTATION/C01_PRESENTATION_EN_GB.html",
       "form": null,
       "package_id_path": "01_WEEKS/WEEK_01/C01_COURSE/EN_GB/90_AUDIT/PACKAGE_ID.txt",
-      "package_id": "f383e6bd1a486f5fe20fe28b6dddb82a16fb46df3fcc6bfcb92c7412711aa355",
-      "included_in_collection_version": "3.0.0"
+      "package_id": "a8f44b39dfac234c515e61d816288b09a1c7154368cf5ad2e5f62ce2e7abc3f1",
+      "included_in_collection_version": "4.0.0",
+      "candidate_revision_status": "T01_COMPLETE_WITH_EXPLICIT_LIMITS"
     },
     {
       "object_id": "C02",
@@ -24,8 +25,9 @@
       "guide": "01_WEEKS/WEEK_02/C02_COURSE/EN_GB/01_PRESENTATION/COURSE_02_SEMANTIC_HTML_CSS_RESPONSIVE_UI_AND_ACCESSIBILITY_60_MIN_INTERACTIVE_v1.1_EN_GB.html",
       "form": null,
       "package_id_path": "01_WEEKS/WEEK_02/C02_COURSE/EN_GB/06_AUDIT/PACKAGE_ID.txt",
-      "package_id": "d4d8dbe856d0e2ee739744b76cc5bcc6192cc437e240903f4eb352652b10d8b9",
-      "included_in_collection_version": "3.0.0"
+      "package_id": "7d690c0ee941eaed04de3504292f5992d7e5b65ba6ecfe87bee4650bbcf8eb20",
+      "included_in_collection_version": "4.0.0",
+      "candidate_revision_status": "T01_COMPLETE_WITH_EXPLICIT_LIMITS"
     },
     {
       "object_id": "C03",
@@ -36,7 +38,8 @@
       "form": null,
       "package_id_path": "01_WEEKS/WEEK_03/C03_COURSE/EN_GB/PACKAGE_ID.txt",
       "package_id": "a30d43afc54279112d30bda576b70b94c79b0bad900c3dd54890902539b774c7",
-      "included_in_collection_version": "3.0.0"
+      "included_in_collection_version": "4.0.0",
+      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
     },
     {
       "object_id": "C04",
@@ -47,7 +50,8 @@
       "form": null,
       "package_id_path": "01_WEEKS/WEEK_04/C04_COURSE/EN_GB/PACKAGE_ID.txt",
       "package_id": "1a10891b607dab50c9b010fc5c3aced608102a27919c2f5cdf36bf5226cd99e0",
-      "included_in_collection_version": "3.0.0"
+      "included_in_collection_version": "4.0.0",
+      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
     },
     {
       "object_id": "C05",
@@ -58,7 +62,8 @@
       "form": null,
       "package_id_path": "01_WEEKS/WEEK_05/C05_COURSE/EN_GB/PACKAGE_ID.txt",
       "package_id": "f9440a46cb7e364f7c81b4ccd1ca005e307bd38909a3b66f3102ee85eb907316",
-      "included_in_collection_version": "3.0.0"
+      "included_in_collection_version": "4.0.0",
+      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
     },
     {
       "object_id": "C06",
@@ -69,7 +74,8 @@
       "form": null,
       "package_id_path": "01_WEEKS/WEEK_06/C06_COURSE/EN_GB/PACKAGE_ID.txt",
       "package_id": "bc3d1dd2714294edc6ba8ae7fbc61185568baad2d9474b2734d6813eda73c7a2",
-      "included_in_collection_version": "3.0.0"
+      "included_in_collection_version": "4.0.0",
+      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
     },
     {
       "object_id": "C07",
@@ -80,7 +86,8 @@
       "form": null,
       "package_id_path": "01_WEEKS/WEEK_07/C07_COURSE/EN_GB/PACKAGE_ID.txt",
       "package_id": "2c41f704539471a9c0c6633c73b10e53626ef0d58fb3f26dd5d85bd284097474",
-      "included_in_collection_version": "3.0.0"
+      "included_in_collection_version": "4.0.0",
+      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
     },
     {
       "object_id": "C08",
@@ -91,7 +98,8 @@
       "form": null,
       "package_id_path": "01_WEEKS/WEEK_08/C08_COURSE/EN_GB/PACKAGE_ID.txt",
       "package_id": "0ea5ad4d0ca211e75733a49f359b58760e7fa751a22478f3fe1f278c6587b372",
-      "included_in_collection_version": "3.0.0"
+      "included_in_collection_version": "4.0.0",
+      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
     },
     {
       "object_id": "C09",
@@ -102,7 +110,8 @@
       "form": null,
       "package_id_path": "01_WEEKS/WEEK_09/C09_COURSE/EN_GB/PACKAGE_ID.txt",
       "package_id": "5b0b9daec14fad2fce99af22405db3b0cf23271c1b12520cfb6fbd94b8fdd605",
-      "included_in_collection_version": "3.0.0"
+      "included_in_collection_version": "4.0.0",
+      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
     },
     {
       "object_id": "C10",
@@ -113,7 +122,8 @@
       "form": null,
       "package_id_path": "01_WEEKS/WEEK_10/C10_COURSE/EN_GB/PACKAGE_ID.txt",
       "package_id": "8cb6aa48e88ce5afb7bf632377d6b0d88059850cf50b631cf2f0df66fe625bba",
-      "included_in_collection_version": "3.0.0"
+      "included_in_collection_version": "4.0.0",
+      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
     },
     {
       "object_id": "C11",
@@ -124,7 +134,8 @@
       "form": null,
       "package_id_path": "01_WEEKS/WEEK_11/C11_COURSE/EN_GB/PACKAGE_ID.txt",
       "package_id": "a84fa5953e66fd737038273ee92e6bcd0c6b1559fd5df2ab74c5adee77c32d7e",
-      "included_in_collection_version": "3.0.0"
+      "included_in_collection_version": "4.0.0",
+      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
     },
     {
       "object_id": "C12",
@@ -135,7 +146,8 @@
       "form": null,
       "package_id_path": "01_WEEKS/WEEK_12/C12_COURSE/EN_GB/PACKAGE_ID.txt",
       "package_id": "f514ce0acdd7957efa087ee08d80e086b4f26efa03adb3a30285c03a445cd8b4",
-      "included_in_collection_version": "3.0.0"
+      "included_in_collection_version": "4.0.0",
+      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
     },
     {
       "object_id": "C13",
@@ -146,7 +158,8 @@
       "form": null,
       "package_id_path": "01_WEEKS/WEEK_13/C13_COURSE/EN_GB/PACKAGE_ID.txt",
       "package_id": "606a78dbfa26be9b8405fa17e745876f361cb2517054537da637ae52c669f7b7",
-      "included_in_collection_version": "3.0.0"
+      "included_in_collection_version": "4.0.0",
+      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
     },
     {
       "object_id": "C14",
@@ -157,7 +170,8 @@
       "form": null,
       "package_id_path": "01_WEEKS/WEEK_14/C14_COURSE/EN_GB/PACKAGE_ID.txt",
       "package_id": "eb57d73c940e1aa8cd47c08eb04991654bd2f2fd1dcc28cf96883cc287514071",
-      "included_in_collection_version": "3.0.0"
+      "included_in_collection_version": "4.0.0",
+      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
     },
     {
       "object_id": "S01",
@@ -182,8 +196,9 @@
         }
       ],
       "package_id_path": "01_WEEKS/WEEK_01/S01_SEMINAR/EN_GB/PACKAGE_ID.txt",
-      "package_id": "e632b3308cf2e67c5fccf27093b969422e848e6a3a67b5b808a3ce2e1f311154",
-      "included_in_collection_version": "3.0.0"
+      "package_id": "5e1463c5ec5efadb86bd571f86291ed164fe85f9fb4807bf0326d10ee585f12c",
+      "included_in_collection_version": "4.0.0",
+      "candidate_revision_status": "T01_COMPLETE_WITH_EXPLICIT_LIMITS"
     },
     {
       "object_id": "S02",
@@ -214,8 +229,9 @@
         }
       ],
       "package_id_path": "01_WEEKS/WEEK_02/S02_SEMINAR/EN_GB/PACKAGE_ID.txt",
-      "package_id": "b84fa0664ab5b71862555fda792904248d6f917465672134bcf1423740928b92",
-      "included_in_collection_version": "3.0.0"
+      "package_id": "6355ca15db40a862dabc1b5dcc8ebad6da22a3df80840ce29f1838deb266aa3f",
+      "included_in_collection_version": "4.0.0",
+      "candidate_revision_status": "T01_COMPLETE_WITH_EXPLICIT_LIMITS"
     },
     {
       "object_id": "S03",
@@ -247,7 +263,8 @@
       ],
       "package_id_path": "01_WEEKS/WEEK_03/S03_SEMINAR/EN_GB/PACKAGE_ID.txt",
       "package_id": "6f14e737d7d005b66adfe47d6de209ff926f0e926ff8c8dcb042d836c2d6e14c",
-      "included_in_collection_version": "3.0.0"
+      "included_in_collection_version": "4.0.0",
+      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
     },
     {
       "object_id": "S04",
@@ -279,7 +296,8 @@
       ],
       "package_id_path": "01_WEEKS/WEEK_04/S04_SEMINAR/EN_GB/PACKAGE_ID.txt",
       "package_id": "84f97deadedf8a61c940d73caab337d9658b23cdbbb4babe069398c5b117a944",
-      "included_in_collection_version": "3.0.0"
+      "included_in_collection_version": "4.0.0",
+      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
     },
     {
       "object_id": "S05",
@@ -311,7 +329,8 @@
       ],
       "package_id_path": "01_WEEKS/WEEK_05/S05_SEMINAR/EN_GB/PACKAGE_ID.txt",
       "package_id": "932e399977e41488f87d66b321df9f524defe81dc5f269f3ea6cf6865c517911",
-      "included_in_collection_version": "3.0.0"
+      "included_in_collection_version": "4.0.0",
+      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
     },
     {
       "object_id": "S06",
@@ -343,7 +362,8 @@
       ],
       "package_id_path": "01_WEEKS/WEEK_06/S06_SEMINAR/EN_GB/PACKAGE_ID.txt",
       "package_id": "e5e548e4ea81804445dd506eed5936ada94963cdc6f3942adf2b234c80777fbe",
-      "included_in_collection_version": "3.0.0"
+      "included_in_collection_version": "4.0.0",
+      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
     },
     {
       "object_id": "S07",
@@ -375,7 +395,8 @@
       ],
       "package_id_path": "01_WEEKS/WEEK_07/S07_SEMINAR/EN_GB/PACKAGE_ID.txt",
       "package_id": "a5bfdc5e798f196801e71cc71d5fcbc70b62122c0e349f6378f6983dc5ae1dbd",
-      "included_in_collection_version": "3.0.0"
+      "included_in_collection_version": "4.0.0",
+      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
     },
     {
       "object_id": "S08",
@@ -407,7 +428,8 @@
       ],
       "package_id_path": "01_WEEKS/WEEK_08/S08_SEMINAR/EN_GB/PACKAGE_ID.txt",
       "package_id": "d385d905d93841b8be7eee6593c48a93a32366ea9dd3aaea357f654a0bb91331",
-      "included_in_collection_version": "3.0.0"
+      "included_in_collection_version": "4.0.0",
+      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
     },
     {
       "object_id": "S09",
@@ -439,7 +461,8 @@
       ],
       "package_id_path": "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/PACKAGE_ID.txt",
       "package_id": "d7bf3be9c49a95ede7a12012b46684f7d8077890d65b21792a8bbc9d0f1a229e",
-      "included_in_collection_version": "3.0.0"
+      "included_in_collection_version": "4.0.0",
+      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
     },
     {
       "object_id": "S10",
@@ -471,7 +494,8 @@
       ],
       "package_id_path": "01_WEEKS/WEEK_10/S10_SEMINAR/EN_GB/PACKAGE_ID.txt",
       "package_id": "2a7cdcc1f4a2f2a7304164ac3777fb7c1497db72d1250caa8ea4139039ccba4c",
-      "included_in_collection_version": "3.0.0"
+      "included_in_collection_version": "4.0.0",
+      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
     },
     {
       "object_id": "S11",
@@ -503,7 +527,8 @@
       ],
       "package_id_path": "01_WEEKS/WEEK_11/S11_SEMINAR/EN_GB/PACKAGE_ID.txt",
       "package_id": "c55c6c808346b51343f91537bcc56b8408b28517e7df9b3f6fd59f292ad7b927",
-      "included_in_collection_version": "3.0.0"
+      "included_in_collection_version": "4.0.0",
+      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
     },
     {
       "object_id": "S12",
@@ -524,7 +549,7 @@
           "id": "P02",
           "title": "Queue: terminal state does not regress",
           "editable_path": "CLASSROOM_RC6/student/p02.mjs",
-          "completeScope": "Apply queued→active→completed/failed transitions; active progress may only increase from0to100; terminal or out-of-order events preserve state. Use synthetic lifecycle events. No Redis, BullMQ, actual job or exactly-once guarantee is observed."
+          "completeScope": "Apply queued\u2192active\u2192completed/failed transitions; active progress may only increase from0to100; terminal or out-of-order events preserve state. Use synthetic lifecycle events. No Redis, BullMQ, actual job or exactly-once guarantee is observed."
         },
         {
           "id": "P03",
@@ -535,7 +560,8 @@
       ],
       "package_id_path": "01_WEEKS/WEEK_12/S12_SEMINAR/EN_GB/PACKAGE_ID.txt",
       "package_id": "d63ef6aafd437ff40a58ded9a284b2737d0c821ef942e093a86ea86778b60c7f",
-      "included_in_collection_version": "3.0.0"
+      "included_in_collection_version": "4.0.0",
+      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
     },
     {
       "object_id": "S13",
@@ -567,7 +593,8 @@
       ],
       "package_id_path": "01_WEEKS/WEEK_13/S13_SEMINAR/EN_GB/PACKAGE_ID.txt",
       "package_id": "e9727a784eac738a60f7127182d6fa845a0a48d7f114419cc38428ba12532ac3",
-      "included_in_collection_version": "3.0.0"
+      "included_in_collection_version": "4.0.0",
+      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
     },
     {
       "object_id": "S14",
@@ -593,7 +620,8 @@
       ],
       "package_id_path": "01_WEEKS/WEEK_14/S14_SEMINAR/EN_GB/PACKAGE_ID.txt",
       "package_id": "1d4f31117bd3a666595e7154dc803c1e734cce59be7cf2d5d747824cd9fd38f4",
-      "included_in_collection_version": "3.0.0"
+      "included_in_collection_version": "4.0.0",
+      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
     },
     {
       "object_id": "SETUP_MACOS_LINUX",
@@ -603,8 +631,9 @@
       "guide": "00_SETUP/MACOS_LINUX/EN_GB/index.html",
       "form": "00_SETUP/MACOS_LINUX/EN_GB/11_DAY0_MOODLE/FORMULAR_DAY0_EN_GB.html",
       "package_id_path": "00_SETUP/MACOS_LINUX/EN_GB/PACKAGE_ID.txt",
-      "package_id": "be38e0a2009fb46fcadacd992eca8e1a4e40833917ce6ec703a0382e6e3cf1c2",
-      "included_in_collection_version": "3.0.0"
+      "package_id": "a5327a1a753495494f83ef848453a8d62377b932ee133525d14323a1e6b003d1",
+      "included_in_collection_version": "4.0.0",
+      "candidate_revision_status": "T01_COMPLETE_WITH_EXPLICIT_LIMITS"
     },
     {
       "object_id": "SETUP_WINDOWS",
@@ -614,8 +643,9 @@
       "guide": "00_SETUP/WINDOWS/EN_GB/index.html",
       "form": "00_SETUP/WINDOWS/EN_GB/11_DAY0_MOODLE/FORMULAR_DAY0_EN_GB.html",
       "package_id_path": "00_SETUP/WINDOWS/EN_GB/PACKAGE_ID.txt",
-      "package_id": "025444ce40708e0f76faed531009583876797948d9146e3e9fcf6e0b32f6e17f",
-      "included_in_collection_version": "3.0.0"
+      "package_id": "13d7c4b0452c0ba51889e07c73e9fe3e14c1d1f76f7e1c57d415cae0894174da",
+      "included_in_collection_version": "4.0.0",
+      "candidate_revision_status": "T01_COMPLETE_WITH_EXPLICIT_LIMITS"
     }
   ],
   "editable_files": [
@@ -763,5 +793,10 @@
   "publication_qualified": false,
   "native_manual_human_acceptance": "DEFERRED_BY_OWNER_NOT_PASSED",
   "identity": "metadata/current-integrity/REPOSITORY_PACKAGE_ID.txt is SHA256 of the exact REPOSITORY_SHA256SUMS.txt bytes. Frozen release assets retain their own identities.",
-  "scope": "metadata/COLLECTION_SCOPE.json"
+  "scope": "metadata/COLLECTION_SCOPE.json",
+  "final_target_version": "4.0.0",
+  "latest_published_version": "3.0.0",
+  "distribution_status": "LOCAL_CANDIDATE_NOT_PUBLISHED",
+  "candidate_progress": "metadata/CANDIDATE_PROGRESS.json",
+  "published": false
 }

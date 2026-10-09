@@ -45,5 +45,19 @@
     "pilot60min": false,
     "humanLanguage": false,
     "Moodle": false
+  },
+  "minute_fields_scope": "projects[].minutes retains the historic supplied source budget; it is not the current candidate schedule or a measured completion time.",
+  "candidate_planning": {
+    "evidence": "UNPILOTED_PLANNING_ESTIMATE",
+    "per_required_project_minutes": {
+      "minimum": 30,
+      "maximum": 45
+    },
+    "full_seminar_minutes": {
+      "minimum": 90,
+      "maximum": 120
+    },
+    "all_projects_individual_in_class": true,
+    "shorter_slot_policy": "Arrange an explicit taught continuation; retain all required projects and evidence. A minute table does not prove novice feasibility."
   }
 }

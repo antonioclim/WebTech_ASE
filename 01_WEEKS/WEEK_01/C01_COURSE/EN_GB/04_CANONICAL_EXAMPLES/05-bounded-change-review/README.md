@@ -2,7 +2,7 @@
 
 ## Concept demonstrated
 
-An AI agent can clarify unfamiliar tooling, propose a focused HTTP verification script, and implement a bounded repair, while the student remains responsible for inspecting and challenging every artefact.
+An AI agent can clarify unfamiliar tooling, propose a focused HTTP verification script and implement a bounded repair, while the student remains responsible for inspecting and challenging every artefact.
 
 ## Why this example is in the lecture
 
@@ -17,16 +17,18 @@ It supplies a concrete sequence and a real public-boundary check instead of trea
 
 ## Run / inspect
 
+Run the relative commands in this README from this example’s own folder under `C01_COURSE/EN_GB/04_CANONICAL_EXAMPLES`. When using the package-root commands in the C01 start guide, keep the full `04_CANONICAL_EXAMPLES/...` path instead. All examples use Node built-ins; follow the capability policy and retain actual warnings.
+
 Use this sequence when working with an agent:
 
-1. **Inspect:** ask it to locate the documented start command, test command, entry point, and existing checks without editing files.
+1. **Inspect:** ask it to locate the documented start command, test command, entry point and existing checks without editing files.
 2. **Clarify tooling:** ask for the exact DevTools panels and `curl` flags that expose the required request and response facts.
-3. **State the contract:** name the method, target, expected status, required fields, representation, and at least one failure case.
-4. **Request one check:** permit only a small verification file, built-in Node APIs, and no application changes.
+3. **State the contract:** name the method, target, expected status, required fields, representation and at least one failure case.
+4. **Request one check:** permit only a small verification file, built-in Node APIs and no application changes.
 5. **Inspect the check:** confirm that it exercises the public HTTP boundary and does not reproduce implementation constants.
-6. **Prove sensitivity:** temporarily introduce the defect the check claims to detect and verify that it fails for that reason; then restore the canonical behaviour.
+6. **Prove sensitivity:** introduce the defect in an external disposable copy the check claims to detect and verify that it fails for that reason; then discard the copy and leave canonical sources unchanged.
 7. **Request the repair:** constrain the implementation files and state the focused and regression commands that define completion.
-8. **Inspect the implementation diff:** reject unrelated edits, weakened checks, or new dependencies.
+8. **Inspect the implementation diff:** reject unrelated edits, weakened checks or new dependencies.
 9. **Run the focused and regression checks yourself.**
 10. **Verify independently:** repeat one important exchange with DevTools or `curl -i`.
 11. **Explain acceptance:** identify the diff and runtime evidence that support the decision.
@@ -39,18 +41,18 @@ node verify-http.mjs
 
 ## Explanation
 
-`verify-http.mjs` starts the supplied server on an ephemeral loopback port, creates one note through HTTP, and independently checks `201`, `Location`, `Content-Type`, and the JSON representation. It imports only the server startup boundary; it does not read route constants or call the request handler directly.
+`verify-http.mjs` starts the supplied server on an ephemeral loopback port, creates one note through HTTP and independently checks `201`, `Location`, `Content-Type` and the JSON representation. It imports only the server startup boundary; it does not read route constants or call the request handler directly.
 
 The corresponding bounded request to an agent could be:
 
-> Inspect `server.mjs` and its documented behaviour without editing. Explain how a Node script can start it on an ephemeral port and observe creation through HTTP. Then add only `verify-http.mjs`, using built-in APIs and no dependencies. It must detect a wrong creation status, missing `Location`, incorrect media type, or incorrect JSON representation. Done when the new script passes against the canonical server. Show the diff and explain each assertion.
+> Inspect `server.mjs` and its documented behaviour without editing. Explain how a Node script can start it on an ephemeral port and observe creation through HTTP. Then add only `verify-http.mjs`, using built-in APIs and no dependencies. It must detect a wrong creation status, missing `Location`, incorrect media type or incorrect JSON representation. Done when the new script passes against the canonical server. Show the diff and explain each assertion.
 
 ## Variations
 
-- In `server.mjs`, temporarily change `201` to `200`; confirm that the focused check fails at the status assertion, then restore `201`.
+- In `server.mjs`, in an external disposable copy change `201` to `200`; confirm that the focused check fails at the status assertion, then discard the copy.
 - Ask an agent why importing and directly calling `createNote()` would provide weaker HTTP evidence.
 - Propose an unrelated refactor and explain why a correct test does not authorise that additional scope.
 
-## Validation
+## Expected result and verification scope
 
-Validated with `node verify-http.mjs`; the check crosses a live loopback HTTP boundary and verifies the complete creation response contract. Sensitivity was confirmed by running the check against a temporary `200` creation defect and observing the intended status assertion fail before restoring `201`.
+Run `node verify-http.mjs` to cross a live loopback HTTP boundary and check the stated creation response fields. In an external disposable copy, changing only 201 to 200 should fail the assertion `creation must report 201 Created`. Execute the experiment before calling that sensitivity observed, preserve its actual failure and discard the copy. A successful run covers the fields and finite exchange asserted, not the complete application.

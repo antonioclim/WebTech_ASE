@@ -1,99 +1,57 @@
-# S02: complete bounded classroom microprojects (RC6)
+# S02 — candidate classroom contract and route
 
-Each student completes all 3 projects individually in the classroom session. These are newly bounded projects, separate from the full historical application contracts. Setup is completed before the session; the allocation is a design estimate requiring a novice pilot, not measured completion evidence. Read the original guide only as historical context for its separate full-application contract.
+The v4.0.0 candidate retains `CLASSROOM_RC6` as its supplied source folder. All three projects are required and individual, sharing the single editable `CLASSROOM_RC6/targets/styles.css`. HTML, scripts, contract and manifests remain protected support.
 
-## P01 — Responsive relationship reconstruction
+[Start](START.html) · [Guide](GUIDE.html) · [Twelve-stage tutorial](../../TUTORIAL.html) · [Contract](contract.json) · [Evidence form](EVIDENCE_FORM.html) · [C02](../../../C02_COURSE/index.html)
 
-Complete scope: Complete one/two/four grid tracks at explicit breakpoints, flexible header/card relationships and 16:9 media in the supplied card fixture.
+Run every command separately from `01_WEEKS/WEEK_02/S02_SEMINAR/EN_GB`, where `CLASSROOM_RC6` is immediately visible:
 
-Edit only `CLASSROOM_RC6/targets/styles.css` from the package root. Commands:
+```text
+node --version
+node -p "process.execPath"
+node -p "process.cwd()"
+node CLASSROOM_RC6/verify.mjs initial
+node CLASSROOM_RC6/kit.mjs initial
+```
+
+Initial mode is for the untouched TODO starter. It recognises only the declared four initial source assertion failures; a crash or damaged protected file is a genuine fault. After editing use work mode.
+
+| Required project | Four tutorial stages | Sensitive observation |
+| --- | --- | --- |
+| P01 — Responsive relationship reconstruction | owner, base/conditions, internal axis, source/render correlation | actual CSS viewport, media matches, computed tracks and visible count; header/card Flex and 16/9 media |
+| P02 — Intrinsic sizing and readable content | baseline, item minimum, text breaks, restored variation | same-settings before/after widths together with the entire identifier and available links |
+| P03 — Keyboard focus and motion preference | indicator, real route, real preference, recovery | actual Tab/Shift+Tab and indicator, then both media states with fresh computed transition |
 
 ```text
 node CLASSROOM_RC6/kit.mjs check P01
 node CLASSROOM_RC6/kit.mjs observe P01
-```
-
-Record: 320/768/1280 CSS-pixel viewport measurements; Computed display/grid-template-columns; Screenshot or text excerpt identifying own observation. Record actual results, including failures or blockers; no result is prefilled.
-
-## P02 — Intrinsic sizing and readable content
-
-Complete scope: Repair shrinkability and wrap an unbroken identifier without concealing overflow or truncating the fixture.
-
-Edit only `CLASSROOM_RC6/targets/styles.css` from the package root. Commands:
-
-```text
 node CLASSROOM_RC6/kit.mjs check P02
 node CLASSROOM_RC6/kit.mjs observe P02
-```
-
-Record: Before/after long-token observation; document scrollWidth/clientWidth with viewport; Relevant min-width and overflow-wrap computed styles. Record actual results, including failures or blockers; no result is prefilled.
-
-## P03 — Keyboard focus and motion preference
-
-Complete scope: Add visible keyboard focus and disable transitions under reduced-motion preference.
-
-Edit only `CLASSROOM_RC6/targets/styles.css` from the package root. Commands:
-
-```text
 node CLASSROOM_RC6/kit.mjs check P03
 node CLASSROOM_RC6/kit.mjs observe P03
 ```
 
-Record: Actual Tab focus movement/indicator; Actual reduced-motion emulation and computed transition; Explicit browser/version and unexecuted states. Record actual results, including failures or blockers; no result is prefilled.
+Each `check` selects the whole named project. A later TODO can still fail during an intermediate stage. A complete source check reports `PASS_BOUNDED_CLASSROOM_CHECKS` with zero failed assertions. `observe` reports `SOURCE_ONLY_NOT_RENDERED_BROWSER` and prints CSS. It is not a CSS cascade engine or a rendered witness; equivalent unrecognised CSS needs teacher review.
 
-## Initial and complete checks
+Start the owned listener in a second package-root terminal:
 
 ```text
-node CLASSROOM_RC6/kit.mjs initial
-node CLASSROOM_RC6/kit.mjs check all
+node CLASSROOM_RC6/kit.mjs serve
 ```
 
-Initial checks require the untouched targets and exact declared assertion-failure names. A process timeout, exception, damaged source boundary or missing native module is a genuine fault. Keep every private fixture, JSON draft, log and PDF outside the entire extracted collection. Use your home-folder `WebTech_Evidence/S02`: `%USERPROFILE%\WebTech_Evidence\S02` on Windows or `$HOME/WebTech_Evidence/S02` on macOS/Linux. Keep the extracted collection in a different folder. The [detailed tutorial](../../TUTORIAL.html) provides the quoted absolute paths and operating-system commands. Checkers create only owned ephemeral resources. Reference Node is v24.21.0; npm installs are unnecessary for this route.
+Use only the actual READY origin. Append `/browser-checks.html` for finite same-origin box observations; actual keyboard and motion work remain separate. Direct file access cannot load that inspector. Stop only this listener using Ctrl+C in its terminal and inspect `STOPPED_OWNED_LISTENER`.
 
-For genuine browser/HTTP work, run `node CLASSROOM_RC6/kit.mjs serve` in a separate terminal, use only its printed READY origin and keep it running. Stop it with Ctrl+C once in that terminal and read STOPPED_OWNED_LISTENER. A stale origin or unknown cleanup remains a blocker.
+Node v24.21.0 is the author reference, with npm 11.19.0 only where npm is used. This route has no npm operation. ENV_OK and ENV_WARN permit the selected operation when necessary probes pass; ENV_BLOCKED names the affected operation and missing capability. A version difference alone cannot establish incompatibility, and an environment PASS cannot establish correct CSS. See [the shared environment guide](../../../../../00_START_HERE/ENVIRONMENT.html).
 
-The source checklist supports exactly the syntax named in target comments. It is not a CSS cascade/rendering engine. Record browser measurements: 320/768/1280 CSS-pixel widths, track count, `document.documentElement.scrollWidth` versus `clientWidth`, min-width/overflow-wrap computed values, real Tab focus and actual reduced-motion computed transition. Equivalent unrecognised CSS needs teacher review. Keep content readable; overflow concealment is not a repair.
+Complete with separate combined-work and boundary checks:
 
-## Current unpiloted plan: 120–165 minutes
+```text
+node CLASSROOM_RC6/kit.mjs check all
+node CLASSROOM_RC6/verify.mjs work
+```
 
-Complete all 3 microprojects individually. Plan 30–45 minutes for each required project. Prepare the prescribed runtime and expressly required dependencies before class. The following durations are planning estimates, not measured completion times, empirical minimums or completion guarantees.
+Keep prediction, change, exact action/input, actual result, falsifying case, evidence locator, causal explanation and limit for every project. Use one real sanitised AI critique across S02, followed by your independently executed test. Save one `TW2026_S02_GROUP_Surname_Firstname.pdf` outside the whole collection in your home-folder `WebTech_Evidence/S02`. Reopen every saved page before the lecturer’s actual authorised Moodle submission. A form or PDF does not authenticate observations, authorship or receipt.
 
-| Planned duration | Individual activity |
-| --- | --- |
-| 5 minutes | Prepared environment and privacy check |
-| 30–45 minutes | P01 — required bounded project with progress and evidence checkpoints |
-| 30–45 minutes | P02 — required bounded project with progress and evidence checkpoints |
-| 30–45 minutes | P03 — required bounded project with progress and evidence checkpoints |
-| 15 minutes | One shared genuine bounded AI critique and independent check |
-| 5 minutes | Review the evidence and save one individual PDF |
-| 5 minutes | Final recap: achievement, learning, reason and next transfer |
+The retained 120–165-minute plan is unpiloted: 30–45 minutes per project plus readiness, AI test, PDF review and recap. All three individual projects remain required if a continuation is needed. Historical guides/forms and source-era labels are read-only provenance with separate full-application scopes.
 
-For each project, use about 5 planned minutes to read the contract and record a prediction, 20–30 to implement, run checks and investigate results, then 5–10 to review a counterexample and record evidence. These checkpoints total 30–45 planned minutes.
-
-If the actual institutional slot is shorter, agree a taught continuation with the lecturer before the session. All projects remain required individual classroom work; keep unfinished work marked unfinished. The end of a meeting does not establish completion.
-
-The current `GUIDE.html` and the separate top-level `project_schedule` in `CLASSROOM_SCOPE.json` govern these planned blocks. The `projects` array retains the unchanged assessment contract.
-
-## One actual AI claim
-
-S02 classroom claim audit. Review only one claim about the bounded project; do not provide a completed assessed implementation or modify tests.
-My preserved prediction: [one specific claim]
-Synthetic fixture and relevant contract: [small input plus rule]
-My actual observation: [output/error or NOT EXECUTED]
-State whether the claim is observed, inferred or unknown. Propose one minimum independent counterexample. Explain one limitation. I will run the witness myself and record ACCEPTED, REJECTED, PARTLY ACCEPTED or UNKNOWN. Model text is not test evidence. Do not invent execution.
-
-Keep a compact experiment record for each project: prediction (before running), action/input/target, actual result with evidence excerpt, comparison/mechanism and limitation. Add one specific final reflection and one independently verified AI claim. No credentials, real personal data, private Moodle records or whole AI conversations. Use the current classroom evidence form and save one `TW2026_S02_GROUP_Surname_Firstname.pdf`. Missing personal execution or AI access remains explicitly unresolved. The form checks completeness, not truth, grades or Moodle receipt.
-
-## Scope limit
-
-All three projects require genuine learner browser measurements. The checker supports the stated teaching syntax only; equivalent CSS needs teacher review. A static PASS is not native-browser acceptance.
-
-## Final recap before submission
-
-Explain what your actual viewport measurements show about grid tracks, readable long content, keyboard focus and reduced motion. Distinguish the source checklist from rendered observations, explain why your CSS relationships work and name the next width or preference you still need to inspect.
-
-Finish the recap before actual submission. If it changes your form record, update the form, renew the affected declarations and export and review the latest single PDF before uploading it. Use the agreed continuation if review remains unfinished; do not submit an earlier PDF as the updated record.
-
-## Current carrier and historical references
-
-The `CLASSROOM_RC6` folder, retained edition labels and v1 record values identify the existing teaching carrier and record contract. Use the current candidate unit identity shown by the collection entry for a new record. Linked original guides and forms are read-only historical references; their omitted full-application starters and tests are not the current assignment.
+[Day 0](../../../../../00_START_HERE/START_HERE.html) · [Git and recovery](../../../../../00_START_HERE/GIT_AND_RECOVERY.html) · [Evidence and PDF](../../../../../00_START_HERE/EVIDENCE_HELP.html)

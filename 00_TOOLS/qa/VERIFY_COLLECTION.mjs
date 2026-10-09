@@ -6,6 +6,11 @@ import crypto from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
+const VERSION = '4.0.0';
+const LATEST_PUBLISHED_VERSION = '3.0.0';
+const PROGRESS = 'metadata/CANDIDATE_PROGRESS.json';
+const GATES = ['local_integrity','reference_runtime','headless_browser','native_windows','native_macos','manual_browser','word','moodle_live','human_pilot','owner_acceptance'];
+const requiredIDs = week => week === 1 ? ['P01','P02'] : week === 14 ? ['P01','P03'] : ['P01','P02','P03'];
 const MANIFEST = 'metadata/current-integrity/REPOSITORY_SHA256SUMS.txt';
 const PACKAGE_ID = 'metadata/current-integrity/REPOSITORY_PACKAGE_ID.txt';
 const hash = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
@@ -43,7 +48,29 @@ try {
   const metadataBytes = read('metadata/CLASSROOM_COLLECTION.json');
   if (hash(metadataBytes) !== rows.get('metadata/CLASSROOM_COLLECTION.json')) throw Error('metadata-mismatch');
   const meta = JSON.parse(metadataBytes);
-  if (meta.schema !== 'webtech-classroom-collection/v1' || meta.distribution_version !== '3.0.0' || meta.qualificationVerdict !== 'NOT_FINAL' || meta.native_acceptance !== false || meta.publication_qualified !== false) throw Error('metadata-scope');
+  if (meta.schema !== 'webtech-classroom-collection/v1' || meta.distribution_version !== VERSION || meta.final_target_version !== VERSION || meta.latest_published_version !== LATEST_PUBLISHED_VERSION || meta.distribution_status !== 'LOCAL_CANDIDATE_NOT_PUBLISHED' || meta.candidate_progress !== PROGRESS || meta.qualificationVerdict !== 'NOT_FINAL' || meta.native_acceptance !== false || meta.publication_qualified !== false || meta.published !== false) throw Error('metadata-scope');
+  if (!meta.qualificationGates || Object.keys(meta.qualificationGates).length !== GATES.length || GATES.some(gate=>meta.qualificationGates[gate]!=='pending')) throw Error('metadata-global-gates');
+  const progressBytes=read(PROGRESS);
+  if(hash(progressBytes)!==rows.get(PROGRESS))throw Error('candidate-progress-mismatch');
+  const progress=JSON.parse(progressBytes);
+  if(progress.schema!=='webtech-candidate-progress/v1'||progress.candidate_version!==VERSION||progress.final_target_version!==VERSION||progress.latest_published_version!==LATEST_PUBLISHED_VERSION||progress.distribution_status!=='LOCAL_CANDIDATE_NOT_PUBLISHED'||progress.qualificationVerdict!=='NOT_FINAL'||progress.native_acceptance!==false||progress.publication_qualified!==false||progress.published!==false||progress.phase!=='T01_CANDIDATE_PREPARED'||progress.next_phase!=='T02'||!progress.qualificationGates||Object.keys(progress.qualificationGates).length!==GATES.length||GATES.some(gate=>progress.qualificationGates[gate]!=='pending'))throw Error('candidate-progress-scope');
+  if(!Array.isArray(progress.tranches)||progress.tranches.length!==7)throw Error('candidate-tranches');
+  for(let i=1;i<=7;i++){
+    const tranche=progress.tranches[i-1],units=[`C${String(i*2-1).padStart(2,'0')}`,`S${String(i*2-1).padStart(2,'0')}`,`C${String(i*2).padStart(2,'0')}`,`S${String(i*2).padStart(2,'0')}`];
+    if(tranche.id!==`T${String(i).padStart(2,'0')}`||JSON.stringify(tranche.units)!==JSON.stringify(units)||tranche.acceptance_status!=='PENDING'||tranche.implementation_status!==(i===1?'COMPLETE_WITH_EXPLICIT_LIMITS':'PENDING'))throw Error('candidate-tranche-scope');
+  }
+  const courseBytes=read('metadata/course-map.json');
+  if(hash(courseBytes)!==rows.get('metadata/course-map.json'))throw Error('course-map-mismatch');
+  const course=JSON.parse(courseBytes);
+  if(course.schema!=='webtech-classroom-course-map/v1'||course.distribution_version!==VERSION||course.final_target_version!==VERSION||course.latest_published_version!==LATEST_PUBLISHED_VERSION||course.distribution_status!=='LOCAL_CANDIDATE_NOT_PUBLISHED'||course.candidate_progress!==PROGRESS||course.qualification!=='NOT_FINAL'||course.native_acceptance!==false||course.publication_qualified!==false||course.published!==false||course.required_project_count!==40||!Array.isArray(course.weeks)||course.weeks.length!==14||new Set(course.weeks.map(week=>week.week)).size!==14)throw Error('course-map-scope');
+  for(const week of course.weeks){
+    if(!Number.isInteger(week.week)||week.week<1||week.week>14)throw Error('course-week');
+    const number=String(week.week).padStart(2,'0'),sid='S'+number,ids=requiredIDs(week.week);
+    if(week.course_id!=='C'+number||week.seminar_id!==sid||week.individual_in_class!==true||!Array.isArray(week.required_projects)||JSON.stringify(week.required_projects.map(project=>project.id))!==JSON.stringify(ids))throw Error('exact-required-project-ids:'+sid);
+    const selected=meta.objects?.find(obj=>obj.object_id===sid);
+    if(!selected||selected.included_in_collection_version!==VERSION||!Array.isArray(selected.projects)||JSON.stringify(selected.projects.map(project=>project.id))!==JSON.stringify(ids))throw Error('exact-collection-project-ids:'+sid);
+    if(JSON.stringify(week.required_projects.map(project=>[project.id,project.title,project.editable_file]))!==JSON.stringify(selected.projects.map(project=>[project.id,project.title,project.editable_path])))throw Error('project-contract-difference:'+sid);
+  }
   if (!Array.isArray(meta.editable_files) || meta.editable_files.length !== 38 || new Set(meta.editable_files).size !== 38 || !Array.isArray(meta.generated_directories)) throw Error('metadata-edit-policy');
   const allowed = new Set(meta.editable_files.map(safe));
   if ([...allowed].some(name => !rows.has(name) || !/^01_WEEKS\/WEEK_([0-9]{2})\/S\1_SEMINAR\/EN_GB\/CLASSROOM_RC6\/(targets|student)\/.+\.(mjs|js|json|css)$/.test(name))) throw Error('metadata-edit-policy');
@@ -79,7 +106,7 @@ try {
       changed.push(name);
     }
   }
-  console.log(JSON.stringify({schema:'webtech-classroom-local-integrity/v1',status:edited?'PASS_PROTECTED_FILES_ONLY':'PASS_INITIAL_BYTES_ONLY',files:actual.size,repository_package_id:hash(bytes),observedNode:process.version,allowedStudentChanges:changed,generatedDirectoriesExcluded:edited?[...generated]:[],studentProjectsQualified:false,qualificationVerdict:'NOT_FINAL',actionsStarted:false},null,2));
+  console.log(JSON.stringify({schema:'webtech-classroom-local-integrity/v1',status:edited?'PASS_PROTECTED_FILES_ONLY':'PASS_INITIAL_BYTES_ONLY',distribution_version:VERSION,distribution_status:'LOCAL_CANDIDATE_NOT_PUBLISHED',files:actual.size,repository_package_id:hash(bytes),observedNode:process.version,allowedStudentChanges:changed,generatedDirectoriesExcluded:edited?[...generated]:[],requiredProjectIDsChecked:true,studentProjectsQualified:false,qualificationVerdict:'NOT_FINAL',native_acceptance:false,publication_qualified:false,published:false,actionsStarted:false},null,2));
 } catch (error) {
   console.error('STOP_COLLECTION_INTEGRITY: '+error.message);
   process.exitCode=2;

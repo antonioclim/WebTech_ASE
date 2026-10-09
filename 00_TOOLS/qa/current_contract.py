@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Standard-library contracts for the current v3 repository and distribution."""
+"""Standard-library contracts for the v4 candidate repository and distribution."""
 from __future__ import annotations
 
 import hashlib
@@ -14,7 +14,9 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
-VERSION = '3.0.0'
+VERSION = '4.0.0'
+LATEST_PUBLISHED_VERSION = '3.0.0'
+PROGRESS = 'metadata/CANDIDATE_PROGRESS.json'
 METADATA = 'metadata/CLASSROOM_COLLECTION.json'
 COURSE_MAP = 'metadata/course-map.json'
 MANIFEST = 'metadata/current-integrity/REPOSITORY_SHA256SUMS.txt'
@@ -22,6 +24,7 @@ PACKAGE_ID = 'metadata/current-integrity/REPOSITORY_PACKAGE_ID.txt'
 CONTROLS = {MANIFEST, PACKAGE_ID}
 OBJECTS = {f'{kind}{n:02}' for kind in 'CS' for n in range(1, 15)} | {'SETUP_WINDOWS', 'SETUP_MACOS_LINUX'}
 GATES = {'local_integrity', 'reference_runtime', 'headless_browser', 'native_windows', 'native_macos', 'manual_browser', 'word', 'moodle_live', 'human_pilot', 'owner_acceptance'}
+REQUIRED_PROJECT_IDS = {week: ['P01', 'P02'] if week == 1 else ['P01', 'P03'] if week == 14 else ['P01', 'P02', 'P03'] for week in range(1, 15)}
 MAX_NODES = 20000
 MAX_BYTES = 1024 * 1024 * 1024
 
@@ -143,9 +146,14 @@ def read_metadata(root):
     meta = strict_json(checked_path(root, METADATA).read_bytes())
     if (meta.get('schema') != 'webtech-classroom-collection/v1'
             or meta.get('distribution_version') != VERSION
+            or meta.get('final_target_version') != VERSION
+            or meta.get('latest_published_version') != LATEST_PUBLISHED_VERSION
+            or meta.get('distribution_status') != 'LOCAL_CANDIDATE_NOT_PUBLISHED'
+            or meta.get('candidate_progress') != PROGRESS
             or meta.get('qualificationVerdict') != 'NOT_FINAL'
             or meta.get('native_acceptance') is not False
-            or meta.get('publication_qualified') is not False):
+            or meta.get('publication_qualified') is not False
+            or meta.get('published') is not False):
         raise ValueError('Current collection identity or qualification differs')
     gates = meta.get('qualificationGates')
     if not isinstance(gates, dict) or set(gates) != GATES or any(value != 'pending' for value in gates.values()):
@@ -165,6 +173,35 @@ def read_metadata(root):
         if name != 'STUDENT_EVIDENCE' and not name.startswith(('01_WEEKS/', '00_SETUP/')):
             raise ValueError('Runtime directory escapes unit roots')
     return meta
+
+
+def verify_progress(root, meta):
+    progress = strict_json(checked_path(root, PROGRESS).read_bytes())
+    if (progress.get('schema') != 'webtech-candidate-progress/v1'
+            or progress.get('candidate_version') != VERSION
+            or progress.get('final_target_version') != VERSION
+            or progress.get('latest_published_version') != LATEST_PUBLISHED_VERSION
+            or progress.get('distribution_status') != 'LOCAL_CANDIDATE_NOT_PUBLISHED'
+            or progress.get('qualificationVerdict') != 'NOT_FINAL'
+            or progress.get('native_acceptance') is not False
+            or progress.get('publication_qualified') is not False
+            or progress.get('published') is not False
+            or progress.get('qualificationGates') != meta['qualificationGates']
+            or progress.get('phase') != 'T01_CANDIDATE_PREPARED'
+            or progress.get('next_phase') != 'T02'):
+        raise ValueError('Candidate progress identity, distribution or qualification differs')
+    tranches = progress.get('tranches')
+    if not isinstance(tranches, list) or len(tranches) != 7:
+        raise ValueError('Exactly seven candidate tranches required')
+    for number, tranche in enumerate(tranches, 1):
+        expected_units = [f'{kind}{week:02}' for week in range(number * 2 - 1, number * 2 + 1) for kind in ('C', 'S')]
+        if (tranche.get('id') != f'T{number:02}' or tranche.get('units') != expected_units
+                or tranche.get('acceptance_status') != 'PENDING'
+                or tranche.get('implementation_status') != ('COMPLETE_WITH_EXPLICIT_LIMITS' if number == 1 else 'PENDING')):
+            raise ValueError('T01-only candidate progress boundary differs')
+    return {'phase': progress.get('phase'), 'next_phase': progress.get('next_phase'),
+            'implementation_scope': progress.get('implementation_scope'),
+            'global_qualification': 'NOT_FINAL', 'published': False}
 
 
 def verify_source(root, allow_edits=False):
@@ -209,6 +246,8 @@ def verify_units(root, meta, paths, allow_edits=False):
         base = object_root(ident)
         if obj.get('payload_root') != base:
             raise ValueError('Current object root differs: ' + ident)
+        if obj.get('included_in_collection_version') != VERSION:
+            raise ValueError('Current object candidate version differs: ' + ident)
         for field in ('entry', 'start', 'guide', 'package_id_path'):
             name = obj.get(field)
             if not isinstance(name, str) or name not in paths:
@@ -254,6 +293,14 @@ def verify_course_map(root, meta, paths):
     weeks = course.get('weeks')
     if (course.get('schema') != 'webtech-classroom-course-map/v1'
             or course.get('distribution_version') != VERSION
+            or course.get('final_target_version') != VERSION
+            or course.get('latest_published_version') != LATEST_PUBLISHED_VERSION
+            or course.get('distribution_status') != 'LOCAL_CANDIDATE_NOT_PUBLISHED'
+            or course.get('candidate_progress') != PROGRESS
+            or course.get('qualification') != 'NOT_FINAL'
+            or course.get('native_acceptance') is not False
+            or course.get('publication_qualified') is not False
+            or course.get('published') is not False
             or course.get('required_project_count') != 40
             or not isinstance(weeks, list) or len(weeks) != 14
             or {week.get('week') for week in weeks} != set(range(1, 15))):
@@ -268,8 +315,15 @@ def verify_course_map(root, meta, paths):
         if week.get('tutorial') not in paths:
             raise ValueError('Current tutorial missing: ' + sid)
         projects = week.get('required_projects')
-        if not isinstance(projects, list) or len(projects) not in (2, 3):
-            raise ValueError('Two or three required seminar projects expected: ' + sid)
+        expected_ids = REQUIRED_PROJECT_IDS[week['week']]
+        if not isinstance(projects, list) or [project.get('id') for project in projects] != expected_ids:
+            raise ValueError('Exact required project IDs/order differ: ' + sid)
+        selected = next((obj for obj in meta['objects'] if obj.get('object_id') == sid), None)
+        selected_projects = selected.get('projects') if selected else None
+        if not isinstance(selected_projects, list) or [project.get('id') for project in selected_projects] != expected_ids:
+            raise ValueError('Exact collection project IDs/order differ: ' + sid)
+        if [(project.get('id'), project.get('title'), project.get('editable_file')) for project in projects] != [(project.get('id'), project.get('title'), project.get('editable_path')) for project in selected_projects]:
+            raise ValueError('Course map and collection project contracts differ: ' + sid)
         for project in projects:
             target = object_root(sid) + safe_name(project['editable_file'])
             if target not in paths:

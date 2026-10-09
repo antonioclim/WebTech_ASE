@@ -1,0 +1,84 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; object-src 'none'; base-uri 'none'; form-action 'none'"><title>Git, working copies and recovery without losing your work</title><style>
+:root{color-scheme:light;--ink:#172a3b;--blue:#075985;--line:#b6c7d4}*{box-sizing:border-box}body{margin:0;background:#f5f8fb;color:var(--ink);font:17px/1.6 system-ui,sans-serif}main{max-width:1080px;margin:24px auto;padding:28px;background:white;border:1px solid var(--line);border-radius:8px}h1,h2,h3{line-height:1.25;overflow-wrap:anywhere}h1{font-size:clamp(1.8rem,4vw,2.5rem)}h2{margin-top:2rem}p,li,a,code,td,th{overflow-wrap:anywhere}a{color:var(--blue);text-underline-offset:3px}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #9a3412;outline-offset:3px}nav{display:flex;flex-wrap:wrap;gap:.5rem 1rem;margin:1rem 0}.notice{padding:1rem;background:#fff4dc;border-left:4px solid #9a3412}.route{padding:1rem;background:#edf7fb;border-left:4px solid var(--blue)}li+li{margin-top:.6rem}code,pre{font:14px/1.6 ui-monospace,monospace}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#edf2f7;padding:1rem;border-radius:4px}table{border-collapse:collapse;width:100%;table-layout:fixed}caption{text-align:left;font-weight:700;padding:.5rem 0}th,td{padding:.65rem;border:1px solid var(--line);text-align:left;vertical-align:top}th{background:#edf2f7}button{font:inherit;background:var(--blue);color:white;border:0;padding:.65rem 1rem;border-radius:4px;cursor:pointer}.skip{display:block;padding:.4rem}footer{border-top:1px solid var(--line);margin-top:2rem;padding-top:1rem;font-size:.95rem}@media(max-width:650px){main{margin:0;padding:16px;border:0;border-radius:0}table{table-layout:auto}td,th{font-size:.92rem;padding:.4rem}}@media print{@page{margin:15mm}body{background:white;font:11pt/1.4 serif}main{margin:0;padding:0;max-width:none;border:0}nav,.skip,button{display:none}h2,h3{break-after:avoid}pre{white-space:pre-wrap}a{color:inherit}thead{display:table-header-group}tr{break-inside:avoid}}
+</style></head><body><a class="skip" href="#main">Skip to the guide</a><main id="main"><nav aria-label="Common student guidance"><a href="START_HERE.html">Start here</a><a href="DOWNLOAD.html">Download choices</a><a href="ENVIRONMENT.html">Environment checks</a><a href="EVIDENCE_HELP.html">Evidence and AI</a><a href="GIT_AND_RECOVERY.html">Git and recovery</a></nav><h1>Git, working copies and recovery without losing your work</h1><p class="notice">T01 local candidate guidance for the planned v4.0.0 edition. It is not a published release or an acceptance result. Use the source and package identity supplied with your actual copy.</p>
+<p>You can read and run the course from a fully extracted ZIP. Git is useful when you want a local history of your source edits. It is a separate workflow from saving the private evidence form or submitting a PDF.</p>
+<nav aria-label="On this page"><a href="#copy">ZIP or clone</a><a href="#inspect">Identify the folder</a><a href="#save">Save and commit</a><a href="#update">Fetch and integration</a><a href="#recovery">Recover a stable copy</a><a href="#references">Official references</a></nav>
+<h2 id="copy">Choose a copy before you edit</h2>
+<table><caption>Archive and Git checkout are different kinds of copy</caption><thead><tr><th>Choice</th><th>What you receive</th><th>How to work safely</th></tr></thead><tbody>
+<tr><td>Named classroom release ZIP</td><td>The attached teaching distribution with its own contents and identity. It differs from GitHub’s automatically generated Source code ZIP and a static reading profile.</td><td>Use <a href="DOWNLOAD.html">the published download choices</a>, extract the complete archive into a new folder and keep the original ZIP. The planned v4.0.0 candidate has not been published.</td></tr>
+<tr><td>Code → Download ZIP</td><td>A snapshot of the selected repository branch. It normally has no Git history or checkout metadata.</td><td>Record which branch or commit the snapshot represents where available. Extract fully, open the correct root and use the supplied source identity. Git commands are optional and may report “not a git repository”.</td></tr>
+<tr><td>Git clone</td><td>A checkout with files, local Git history and a configured remote. A branch can change after you clone it.</td><td>Clone the public course into a new directory. Record the actual commit and keep private evidence elsewhere. Cloning is not a project check or publication.</td></tr>
+</tbody></table>
+<p>To create a checkout, use an already available Git installation and Internet access. In a terminal, first open a parent folder where the new name below does not exist. Run each command separately and stop if it reports an error.</p>
+<h3>Bash on macOS/Linux</h3><pre>pwd
+git --version
+git clone https://github.com/antonioclim/WebTech_ASE.git WebTech_ASE_student
+cd -- WebTech_ASE_student
+git rev-parse HEAD</pre>
+<h3>Windows PowerShell</h3><pre>Get-Location
+git --version
+git clone https://github.com/antonioclim/WebTech_ASE.git WebTech_ASE_student
+if ($LASTEXITCODE -ne 0) { throw 'Clone failed. Preserve the existing folder and inspect the error.' }
+Set-Location -LiteralPath WebTech_ASE_student
+git rev-parse HEAD</pre>
+<p>If the destination already exists, choose a different new name or inspect the existing copy. Do not overwrite it. The public URL contains no credentials; do not add a password or token to it. An unavailable Git installation or connection does not prevent reading a previously extracted ZIP.</p>
+<h2 id="inspect">Identify the folder and inspect your changes</h2>
+<p>In VS Code choose <strong>File → Open Folder</strong> and select the actual extracted root or checkout. Open <strong>Terminal → New Terminal</strong>. A terminal that was already open can still point to another directory. Run the commands for your shell and compare the reported path with Explorer.</p>
+<h3>Bash</h3><pre>pwd
+node -p "process.cwd()"
+git rev-parse --show-toplevel
+git status --short
+git diff --stat
+git diff --cached --stat</pre>
+<h3>PowerShell</h3><pre>Get-Location
+node -p "process.cwd()"
+git rev-parse --show-toplevel
+git status --short
+git diff --stat
+git diff --cached --stat</pre>
+<p><code>git rev-parse --show-toplevel</code> reports the checkout root. If it says the directory is not a Git repository, check the path and whether this is an extracted ZIP. Do not initialise a repository merely to silence the message. Follow the seminar’s commands from its EN_GB root; a checkout’s overall root is not automatically the right working directory for every lesson command.</p>
+<table><caption>What the inspection commands mean</caption><thead><tr><th>Command</th><th>Question answered</th><th>Limit</th></tr></thead><tbody>
+<tr><td><code>git status --short</code></td><td>Which tracked files have staged or unstaged changes, and which non-ignored files are untracked?</td><td>The two status columns describe index and working-tree changes; <code>??</code> means untracked. Empty output means no reported changes, not correct course work.</td></tr>
+<tr><td><code>git diff</code></td><td>What tracked edits are still unstaged?</td><td>It does not show ordinary untracked file contents or changes already staged.</td></tr>
+<tr><td><code>git diff --cached</code></td><td>What is staged for the next commit compared with the current commit?</td><td>It can differ from the file you have since edited. Review both differences.</td></tr>
+<tr><td><code>git rev-parse HEAD</code></td><td>What commit is checked out?</td><td>That identifier does not include uncommitted edits or prove a test result.</td></tr>
+</tbody></table>
+<p>Inspect one exact target with <code>git diff -- 01_WEEKS/WEEK_01/S01_SEMINAR/EN_GB/CLASSROOM_RC6/targets/p01.mjs</code> from the checkout root. If you are working on another project, substitute its exact editable path after checking the contract. The <code>--</code> separates the path from command options. Private PDF and JSON backups belong outside this checkout.</p>
+<h2 id="save">Saving a file and committing it are separate actions</h2>
+<ol><li>If you want local history, begin from a known clean checkout and create a clearly named local branch before editing. For example, <code>git switch -c student/s01-local</code> creates and selects a new local branch if that name does not already exist. If you have already begun work, preserve a private backup first. Keep any unexplained changes and use a separate copy rather than discarding them.</li>
+<li>Edit your target and save it with Ctrl+S or Command+S. The runner reads the saved file on disk. An unsaved editor buffer is not tested by a terminal command.</li>
+<li>Run the seminar’s appropriate check from its stated working directory. Record the real result. Return to the checkout root and review <code>git status --short</code>, the target difference and any staged difference.</li>
+<li>Stage only the reviewed source target, for example <code>git add -- 01_WEEKS/WEEK_01/S01_SEMINAR/EN_GB/CLASSROOM_RC6/targets/p01.mjs</code>. This selects its current contents for the next commit. It does not run a check or upload anything.</li>
+<li>Read <code>git diff --cached --stat</code> and <code>git diff --cached</code>. Check that only your intended public source is present. Do not stage private evidence, credentials or protected support changes.</li>
+<li>Make a local commit whose message names the problem and behaviour, for example <code>git commit -m "Record S01 classifier changes"</code>. Inspect <code>git status --short</code> afterwards. If Git cannot identify the author or a local hook refuses the operation, preserve your files and follow your institution’s setup guidance. Do not invent a successful commit.</li></ol>
+<p>A commit records the staged snapshot locally. It does not save later editor changes, publish a website, submit an assignment or make your work accepted. The course exercises do not require pushing to the shared course repository. Keep the ZIP or an untouched source copy alongside your working copy so that your changes remain distinguishable from supplied material.</p>
+<h2 id="update">Fetch first; integration changes your working copy</h2>
+<p><code>git fetch origin</code> downloads remote objects and updates remote-tracking references. It does not automatically merge them into your working files. <code>git pull</code> fetches and then integrates according to its options and configuration, which can create a merge or rebase. A merge reconciles histories and may produce conflicts. These are different operations.</p>
+<p>For an optional update in a known checkout, save all editor buffers and keep a private backup first. From the root, inspect the actual remote and current branch before fetching:</p>
+<h3>Bash</h3><pre>git status --short
+git branch --show-current
+git remote -v
+git fetch origin
+git log --oneline --left-right HEAD...origin/main</pre>
+<h3>PowerShell</h3><pre>git status --short
+git branch --show-current
+git remote -v
+git fetch origin
+if ($LASTEXITCODE -ne 0) { throw 'Fetch failed. Preserve local work and inspect the error.' }
+git log --oneline --left-right HEAD...origin/main</pre>
+<p>Stop if the remote is unexpected, the branch is unnamed, fetch fails or <code>origin/main</code> is absent. In this log, left markers identify commits unique to HEAD and right markers commits unique to origin/main. Review the actual changed paths before integrating. Do not paste a remote URL containing credentials into your evidence.</p>
+<p>For a beginner with unfinished seminar edits, the simplest preserved-work update is a separate new download or clone. Keep the old folder and evidence, compare the source identities, then reapply only your own target changes to the new copy and repeat the relevant checks. Do not copy older contracts, runners or protected fixtures over the newer edition. An update may change the contract, so read it before transferring code.</p>
+<h2 id="recovery">Recover a stable copy from the observed symptom</h2>
+<table><caption>Check the cause before changing files</caption><thead><tr><th>Symptom</th><th>Possible cause and check</th><th>Minimum recovery and confirmation</th></tr></thead><tbody>
+<tr><td>A saved edit does not affect the result</td><td>The editor, terminal or browser may use a different copy. Check the editor’s full path, terminal CWD and browser address.</td><td>Open the intended file, save it and repeat the same action. Preserve the earlier output and identify the corrected path.</td></tr>
+<tr><td>A supplied file is missing</td><td>The archive may be incomplete or the wrong folder may be open. Compare the exact path and source identity with the untouched copy.</td><td>Extract the original complete archive into a new folder. Compare before transferring your own target edits. Repeat the affected check.</td></tr>
+<tr><td>A protected fixture or runner was accidentally changed</td><td>Inspect its difference against the untouched source or checked-out commit. A changed test can hide the original problem.</td><td>Keep a backup of the current copy, recover that supplied file from the matching untouched edition and repeat the original failing witness. Keep your own targets separate.</td></tr>
+<tr><td>An imported form replaces the wrong draft</td><td>Confirm the seminar/setup, JSON schema and saved package identity. Imports replace text, not merge it.</td><td>Keep both backup files. Open the matching form and import the correct private backup, then review every reset declaration. Do not change IDs to force acceptance.</td></tr>
+<tr><td>A merge reports conflicts</td><td>Two histories changed overlapping content. <code>git status</code> lists affected files; inspect each difference and conflict block.</td><td>Preserve the conflicted copy. Compare the two intended behaviours with the contract, edit an agreed combined result and remove conflict markers only after resolving their content. Save, run the affected checks and stage only the reviewed paths. Follow the actual merge instructions with your lecturer before finishing it.</td></tr>
+<tr><td>You cannot justify the merge result</td><td>The intended source or local changes are uncertain. Capture <code>git status</code> and preserve copies of relevant files.</td><td>Stop integration and ask for review. If a merge was begun from a known clean copy and its work is backed up, <code>git merge --abort</code> attempts to restore the pre-merge state; verify the files afterwards. It is not a general undo command and may be unable to reconstruct pre-existing uncommitted changes.</td></tr>
+</tbody></table>
+<p>Conflict markers such as <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code> and <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> show alternatives, not executable code. Choosing “ours” or “theirs” without understanding the contract can discard valid work. Preserve the original, explain the resolution and re-run the witness that distinguishes the intended behaviour. If a recovery step cannot be completed, record BLOCKED with the actual reason rather than making the check appear green.</p>
+<h2 id="references">Official references for the command’s purpose</h2>
+<ul><li><a href="https://git-scm.com/docs/git-status">git-status</a>: tracked, staged and untracked changes.</li><li><a href="https://git-scm.com/docs/git-diff">git-diff</a>: compare the working tree, index and commits.</li><li><a href="https://git-scm.com/docs/git-fetch">git-fetch</a>: update objects and remote-tracking references.</li><li><a href="https://git-scm.com/docs/git-pull">git-pull</a>: fetch followed by integration.</li><li><a href="https://git-scm.com/docs/git-merge">git-merge</a>: integration, conflict resolution and the limits of abort.</li></ul>
+<p>References explain Git behaviour. They do not identify which edition you actually downloaded or certify your project. Record those facts from your own copy and observations.</p>
+<footer><button id="print-guide" type="button">Print this guide</button><p>This page sends no data and stores no answers. Browser printing opens a dialogue; inspect any PDF you save.</p></footer></main><script>document.getElementById('print-guide').addEventListener('click',()=>window.print());</script></body></html>

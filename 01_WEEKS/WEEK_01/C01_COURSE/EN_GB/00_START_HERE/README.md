@@ -1,37 +1,53 @@
-# C01 start here
+# C01 — Start with a message, then test a claim
 
-Week 01 English course: **The Web as a system, HTTP and evidence**. Package **2.0.2-rc.1** is a release candidate. Its integrity check is separate from platform and classroom qualification.
+This English teaching revision belongs to the v4.0.0 candidate. The original course handouts, source-package IDs and RC labels are retained as provenance; they do not state the outer candidate version or publication status.
 
-## Browser route
+## Browser and reading route
 
-1. Extract the complete ZIP; keep its folder structure.
-2. Open `OPEN_PRESENTATION.cmd` on Windows or `OPEN_PRESENTATION.sh` on macOS/Linux. You can also open `01_PRESENTATION/C01_PRESENTATION_EN_GB.html` directly.
-3. Read `02_HANDOUT/STUDENT_HANDOUT_C01_v2.0.2_EN_GB.docx` for explanations, six self-checks and the example map.
-4. Use `02_HANDOUT/READINESS_AND_TRANSFER_C01_v2.0.2_EN_GB.docx` for the distinct before-class and after-class activities. If a DOCX reader is unavailable, read the canonical example READMEs and open `03_ACTIVITIES/OFFLINE_TRACE.html`.
+Extract the complete collection. Open `01_PRESENTATION/C01_PRESENTATION_EN_GB.html` from the C01 `EN_GB` folder, or use the presentation launcher. The presentation and supplied `03_ACTIVITIES/OFFLINE_TRACE.html` work without Node. Use the section selector to resume, **Read all** for expanded explanations and **Print** for the study guide. Arrow/Page keys change slides; Home/End jump. T starts or pauses the timer, R resets it and F requests full screen. Focused controls retain normal keyboard activation.
 
-The presentation and supplied trace work offline in a current browser. They do not require Node. Left/Right and Page Up/Page Down change slides; Home/End jump. T starts or pauses, R resets and F toggles full screen. Focused buttons retain normal Enter/Space activation.
+The historical `02_HANDOUT/STUDENT_HANDOUT_C01_v2.0.2_EN_GB.docx` and `READINESS_AND_TRANSFER_C01_v2.0.2_EN_GB.docx` remain useful source reading. Current commands, environment policy and S01 contracts are described here and in the detailed tutorial. The original 60-minute sequence is an unpiloted teaching plan; supplementary study screens and demonstrations may need additional reading or continuation time.
 
-## Verify and execute with Node
+## Working directory and environment
 
-`VERIFY_PACKAGE`, `CHECK_ENVIRONMENT` and `RUN_ALL_EXAMPLES` have `.cmd` (Windows) and `.sh` (macOS/Linux) versions. Verification needs Node; the executable examples require **Node v24.21.0**. The environment check also verifies **npm 11.19.0** through npm's CLI using the selected Node binary. No `npm install` is needed: all examples use built-in APIs.
+For every command below, open `01_WEEKS/WEEK_01/C01_COURSE/EN_GB` in VS Code, then choose **Terminal → New Terminal**. Verify the selected executable and directory:
 
-1. Run `VERIFY_PACKAGE` before executing examples. It checks the exact file set and identity.
-2. Run `CHECK_ENVIRONMENT` and resolve any version mismatch using the course setup guidance.
-3. Run `RUN_ALL_EXAMPLES` for all five checks. Each example process is limited to 20 seconds and 1 MiB of output. These bounded checks are separate from an interactive server you start yourself.
+```sh
+node --version
+node -p "process.execPath"
+node -p "process.cwd()"
+```
 
-A failed identity check means a missing, extra, altered or invalid package entry needs investigation. A runtime mismatch means the selected environment does not match the required versions. Neither result establishes the truth of a separate HTTP claim.
+Follow the [shared environment policy](../../../../../00_START_HERE/ENVIRONMENT.html). The launcher records capabilities and actual versions. `ENV_OK` and `ENV_WARN` permit the checked operation; `ENV_BLOCKED` identifies the affected capability and recovery. The examples use built-in Node APIs and require no npm installation. A different minor version is not, by itself, a reason to block them. A missing HTTP/fetch capability, module import error or failed listener remains an actual blocker.
 
-## Learning route
+`VERIFY_PACKAGE`, `CHECK_ENVIRONMENT` and `RUN_ALL_EXAMPLES` have Windows `.cmd` and macOS/Linux `.sh` launchers. Package integrity checks answer whether the selected package bytes match the declared inventory. Environment checks answer whether a selected operation can run. Example assertions answer the specific claim in the example. None establishes individual authorship, a native browser or Moodle acceptance.
 
-| Outcome | Start with | Question to answer |
-| --- | --- | --- |
-| Client/server roles and resource versus representation | Handout page 1 and slides 2–4 | Who requests, and what does the returned content represent? |
-| URL components and the request target | Example 01 | Which part is omitted from HTTP? |
-| Request and response anatomy | Example 02 | Which direction owns each field? |
-| Methods, statuses and business outcomes | Example 03 | What does 201 establish and what remains unproved? |
-| Representation and API contracts | Example 04 | Does the media type match this agreed interpretation? |
-| Evidence, independent checks and bounded AI changes | Example 05 | Which assertion is sensitive to which defect? |
+## Demonstrations from this package root
 
-Examples 01–04 are the core independent reading route; example 05 is an extension. The presentation ends at minute 60. That schedule is a teaching plan; it is not a measured novice completion time. Supplied traces permit honest interpretation practice without implying execution on the student's computer.
+Predict before each run, then record the actual output and any warning. These are course demonstrations, not additional assessed projects.
 
-Read [SOURCES.md](SOURCES.md) for targeted primary references. [MOODLE_POLICY.md](MOODLE_POLICY.md) explains that the compulsory Week 01 individual upload belongs to S01.
+```sh
+node 04_CANONICAL_EXAMPLES/01-url-boundaries/example.js
+node 04_CANONICAL_EXAMPLES/02-request-response-anatomy/verify.mjs
+node 04_CANONICAL_EXAMPLES/03-response-contract-check/check.js
+node 04_CANONICAL_EXAMPLES/04-representation-contract/example.js
+node 04_CANONICAL_EXAMPLES/05-bounded-change-review/verify-http.mjs
+node 04_CANONICAL_EXAMPLES/06-javascript-bridge/example.mjs
+node 04_CANONICAL_EXAMPLES/02-request-response-anatomy/evidence-boundary.mjs
+```
+
+The URL example only parses text; it does not contact `course.example`. The neutral bridge shows two fresh summaries and unchanged source cards before C03. The evidence-boundary demonstration sends fresh POST text, then retrieves the fixed note: it challenges a persistence claim with separate HTTP observations and source inspection.
+
+For a native browser demonstration, start only your own listener:
+
+```sh
+node 04_CANONICAL_EXAMPLES/02-request-response-anatomy/start-demo.mjs
+```
+
+Copy the actual `READY` origin into your browser. Open DevTools **Network**, remove restrictive filters, clear entries and activate **Run exchanges**. Inspect request and response of the same POST row. Stop the owned terminal with Ctrl+C and confirm `STOPPED_OWNED_LISTENER`. A startup message is not an observed exchange. If the browser or native print route cannot run, keep that step `BLOCKED` or `NOT_EXECUTED` while independent local reading continues.
+
+## Transfer to S01
+
+C01 prepares two different results: [P01](../../../S01_SEMINAR/TUTORIAL.html#P01) projects message facts without mutating evidence; [P02](../../../S01_SEMINAR/TUTORIAL.html#P02) recognises a raw path before method, decoding and value decisions. Both are mandatory and individual. Return to the **S01 EN_GB package root** before running its commands. One seminar PDF and one genuine AI critique belong to S01, not an additional C01 submission.
+
+Read [SOURCES.md](SOURCES.md) for targeted primary references and [MOODLE_POLICY.md](MOODLE_POLICY.md) for the course/seminar distinction.

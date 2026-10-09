@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import {assessEnvironment} from './environment.mjs';
 import { createHash } from 'node:crypto';
 import { readFile, readdir } from 'node:fs/promises';
 import { existsSync, realpathSync } from 'node:fs';
@@ -13,11 +14,8 @@ const digest = bytes => createHash('sha256').update(bytes).digest('hex');
 const out = (kind, message) => console.log(`${kind.padEnd(7)} ${message}`);
 const rel = absolute => path.relative(root, absolute).split(path.sep).join('/');
 const cfg = JSON.parse(await readFile(path.join(root, '90_AUDIT/KIT_CONFIG.json'), 'utf8'));
-const requiredNode = cfg.requiredNode || 'v24.21.0';
-const requiredNpm = cfg.requiredNpm || '11.19.0';
 const args = process.argv.slice(2);
 const command = args.shift() || 'help';
-const allow = args.includes('--allow-runtime-mismatch') || process.env.TW2026_ALLOW_RUNTIME_MISMATCH === '1';
 
 function safePath(name) {
   if (typeof name !== 'string' || !name || /[\\\x00-\x1f\x7f:]/.test(name) || path.posix.isAbsolute(name)) return false;
@@ -71,34 +69,10 @@ async function verify() {
   if (!failures) out('PASS', `${expected.size} payload files; PACKAGE_ID ${id.trim()}`);
   return failures ? 1 : 0;
 }
-function versionProbe(executable, argv) {
-  const result = spawnSync(executable, argv, { encoding: 'utf8', shell: false, timeout: 5000, maxBuffer: 65536 });
-  const value = (result.stdout || '').trim();
-  return result.status === 0 && !result.error && !result.signal && !(result.stderr || '').trim() && /^\d+\.\d+\.\d+$/.test(value) ? value : null;
-}
-function npmVersion() {
-  const dirs = [...new Set([path.dirname(process.execPath), ...String(process.env.PATH || '').split(path.delimiter).filter(Boolean)])];
-  const candidates = [];
-  for (const dir of dirs) {
-    candidates.push(path.join(dir, 'node_modules/npm/bin/npm-cli.js'), path.join(dir, '../lib/node_modules/npm/bin/npm-cli.js'));
-    try { const resolved = realpathSync(path.join(dir, process.platform === 'win32' ? 'npm.cmd' : 'npm')); if (resolved.endsWith('.js')) candidates.push(resolved); } catch {}
-  }
-  for (const cli of [...new Set(candidates)].filter(existsSync)) {
-    const version = versionProbe(process.execPath, [cli, '--version']);
-    if (version) return { version, source: cli };
-  }
-  // A Windows .cmd shim is not an executable. Invoke npm-cli.js through this Node binary.
-  if (process.platform !== 'win32') return { version: versionProbe('npm', ['--version']), source: 'npm from PATH' };
-  return { version: null, source: 'npm-cli.js unavailable' };
-}
-function env() {
-  const npm = npmVersion();
-  const exact = process.version === requiredNode && npm.version === requiredNpm;
-  out('INFO', `platform=${process.platform} arch=${process.arch}; Node binary=${process.execPath}`);
-  out(process.version === requiredNode ? 'PASS' : allow ? 'WARN' : 'FAIL', `Node ${process.version}; required ${requiredNode}`);
-  out(npm.version === requiredNpm ? 'PASS' : allow ? 'WARN' : 'FAIL', `npm ${npm.version || 'unavailable'}; required ${requiredNpm}; source=${npm.source}`);
-  out('VERDICT', exact ? 'READY_RUNTIME' : allow ? 'RUNTIME_MISMATCH_ALLOWED_FOR_QA' : 'NOT_READY_RUNTIME');
-  return exact || allow ? 0 : 2;
+async function env(features=['node-core']) {
+  const report=await assessEnvironment({unit:'C01',operation:command,cwd:root,command:'node tools/tw-kit.mjs '+command,features,usesNpm:false});
+  console.log(JSON.stringify(report,null,2));
+  return report.exitCode;
 }
 function runExampleProcess(entry, cwd) {
   return new Promise(resolve => {
@@ -130,14 +104,13 @@ async function main() {
   if (command === 'verify') return verify();
   if (command === 'env') return env();
   if (command === 'example' || command === 'examples') {
-    if (env() !== 0) return 2;
-    if (command === 'example') return example(args[0]);
+    if (command === 'example') { if (await env(['02','05','07'].includes(args[0])?['http']:['node-core'])) return 2; return example(args[0]); }
     let failed = false;
-    for (const id of Object.keys(cfg.examples || {})) { out('INFO', `example ${id}`); if (await example(id)) failed = true; }
+    for (const id of Object.keys(cfg.examples || {})) { out('INFO', `example ${id}`); if (await env(['02','05','07'].includes(id)?['http']:['node-core'])) { failed = true; continue; } if (await example(id)) failed = true; }
     out('VERDICT', failed ? 'FAIL_EXAMPLES' : 'PASS_EXAMPLES');
     return failed ? 1 : 0;
   }
-  console.log('Commands: verify | env | example <01–05> | examples');
+  console.log('Commands: verify | env | example <01–07> | examples');
   return command === 'help' ? 0 : 2;
 }
 try { process.exitCode = await main(); }

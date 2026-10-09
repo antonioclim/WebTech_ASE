@@ -1,20 +1,15 @@
-# Week 01 — Web Technologies 3.0.0
+# Week 01 — HTTP messages and evidence
 
-- [C01 — The Web as a system, HTTP and AI-assisted development](C01_COURSE/index.html)
-- [S01 — HTTP Detective + Tiny HTTP Server](S01_SEMINAR/index.html)
-- [Detailed seminar tutorial](S01_SEMINAR/TUTORIAL.html)
+Teaching revision for the v4.0.0 candidate. The published collection remains v3.0.0 until the complete new edition is released. Retained package and RC6 labels identify source contracts.
 
-## What you will learn
+- [C01 presentation and extended study route](C01_COURSE/EN_GB/01_PRESENTATION/C01_PRESENTATION_EN_GB.html)
+- [S01 classroom start](S01_SEMINAR/EN_GB/CLASSROOM_RC6/START.html)
+- [S01 detailed tutorial](S01_SEMINAR/TUTORIAL.html)
+- [S01 contract](S01_SEMINAR/EN_GB/CLASSROOM_RC6/contract.json)
+- [S01 evidence form](S01_SEMINAR/EN_GB/CLASSROOM_RC6/EVIDENCE_FORM.html)
 
-- Read an HTTP request and response as separate method, URL, status, header and body facts.
-- Explain the boundary between browser, network and server observations.
-- Implement and test a path-based JSON greeting resource.
+C01 follows address → request → server decision → response → bounded claim. It explains client/server roles, intermediaries, resource versus representation and the evidence missing from an HTTP success report. The short neutral JavaScript bridge prepares functions, fields, returned objects and input preservation before C03.
 
-## Required individual projects
+S01 has two mandatory individual projects: **P01 HTTP exchange classifier** reads message boundaries and **P02 Precise greeting resource** implements a resource’s decisions. Open the seminar `EN_GB` folder in VS Code. Complete both projects, keep one real AI critique with an independent check and review one PDF for the entire seminar. Predictions and supplied examples are distinct from your actual observations.
 
-- **P01 — HTTP exchange classifier**
-- **P02 — Precise greeting resource**
-
-Complete every listed project and follow the seminar guide for task checks, evidence and PDF submission.
-
-[All weeks](../README.md) · [Course plan](../../00_START_HERE/COURSE_PLAN.html)
+[All weeks](../README.md) · [Environment policy](../../00_START_HERE/ENVIRONMENT.html) · [Course plan](../../00_START_HERE/COURSE_PLAN.html)

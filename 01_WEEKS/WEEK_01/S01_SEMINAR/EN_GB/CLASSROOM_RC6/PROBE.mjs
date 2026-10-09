@@ -1,3 +1,5 @@
+import {fileURLToPath} from 'node:url';
+import {assessEnvironment} from './environment.mjs';
 // LOCAL3 protected teaching probes. These bodies observe learner code; they do not implement it.
 // The retained CLASSROOM_RC6 source-carrier name is intentional.
 const probes = {
@@ -21,10 +23,8 @@ if (extra.length !== 0 || !Object.hasOwn(probes, selector)) {
   console.error(JSON.stringify({status:'STOP_UNKNOWN_TEACHING_PROBE',selector:selector ?? null,available:Object.keys(probes)}));
   process.exit(2);
 }
-if (process.version !== 'v24.21.0') {
-  console.error(JSON.stringify({status:'STOP_REFERENCE_NODE',expected:'v24.21.0',observed:process.version,probe:selector}));
-  process.exit(2);
-}
+const environment=await assessEnvironment({unit:'S01/'+selector,operation:'teaching-probe',cwd:fileURLToPath(new URL('../',import.meta.url)),command:'node CLASSROOM_RC6/PROBE.mjs '+selector,features:selector==='P01-exchange'?['http']:['node-core'],usesNpm:false});
+console.error(JSON.stringify(environment));if(environment.exitCode)process.exit(environment.exitCode);
 try {
   await probes[selector]();
 } catch (error) {

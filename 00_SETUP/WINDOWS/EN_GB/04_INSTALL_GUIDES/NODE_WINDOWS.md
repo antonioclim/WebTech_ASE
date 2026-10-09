@@ -1,4 +1,6 @@
-# Install the exact Node.js baseline on Windows
+# Optional reference Node.js installation on Windows
+
+First record `node --version` and `node -p "process.execPath"`, then run the selected preflight profile. If it returns ENV_OK or ENV_WARN, continue without replacing Node or changing npm. The reference values below were not executed in T01; this optional route concerns explicit reference reproduction, not a compatibility prerequisite. Read [version policy](../05_CONFIGURATION/VERSION_POLICY.md).
 
 You will install the module runtime and confirm which executable the terminal actually uses. The reference remains Node.js `v24.21.0` with npm `11.19.0` bundled in the same distribution. Do not upgrade npm separately.
 

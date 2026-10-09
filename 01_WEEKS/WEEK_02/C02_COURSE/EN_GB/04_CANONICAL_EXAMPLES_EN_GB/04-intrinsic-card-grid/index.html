@@ -7,11 +7,11 @@
   Why this design: Three cards and one layout rule expose responsive wrapping without reproducing the tutorial reconstruction project.
 
   Follow the evidence:
-  - `auto-fit` creates only columns that fit.
+  - `auto-fit` repeats tracks that fit and collapses unused tracks.
   - `minmax(min(100%, 14rem), 1fr)` prevents a minimum track from overflowing a narrow viewport.
-  - The longer card grows instead of clipping content.
+  - Inspect the longer card's complete text rather than assuming that zero outer overflow proves visibility.
 -->
-<html lang="en">
+<html lang="en-GB">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -34,8 +34,53 @@
       <section class="cards" aria-label="Checks">
         <article><h2>Inspect</h2><p>Read the existing code.</p></article>
         <article><h2>Run</h2><p>Execute focused and aggregate checks.</p></article>
-        <article><h2>Explain</h2><p>Connect the observed behavior to the code path that produces it, including failure paths.</p></article>
+        <article><h2>Explain</h2><p>Connect the observed behaviour to the code path that produces it, including failure paths.</p><p id="pressure-text" hidden></p></article>
+      </section>
+      <section aria-labelledby="observe-heading">
+        <h2 id="observe-heading">Observe width and text pressure</h2>
+        <p>The original three cards remain above. These controls add a labelled fictional text sample to the last card, then read the same grid. They do not add a wrapping or clipping repair.</p>
+        <button type="button" id="multiword">Use supplied multiword text</button>
+        <button type="button" id="continuous">Use supplied continuous token</button>
+        <button type="button" id="restore-text">Restore original text</button>
+        <button type="button" id="measure-grid">Read grid measurements again</button>
+        <p id="text-state" role="status">Original text only.</p>
+        <p><output id="result" aria-live="polite"></output></p>
+        <p>Record the actual viewport width in CSS pixels, browser zoom and root font size. Read every word of the sample visually: document overflow alone cannot prove that all descendant text is visible.</p>
       </section>
     </main>
+    <script type="module">
+      const grid = document.querySelector(".cards");
+      const sample = document.querySelector("#pressure-text");
+      const words = "Alexandria Montgomery Wellington Northumberland Kensington";
+      let probeNumber = 0;
+      function measureGrid() {
+        const cards = [...grid.querySelectorAll("article")];
+        const inlinePositions = new Set(cards.map(card => Math.round(card.getBoundingClientRect().left * 100) / 100));
+        const style = getComputedStyle(grid);
+        const cardWidths = cards.map((card, index) => `card${index + 1}: clientWidth=${card.clientWidth}px, scrollWidth=${card.scrollWidth}px`);
+        document.querySelector("#result").textContent = [
+          `probe=${++probeNumber}`,
+          `viewport=${window.innerWidth}px`,
+          `root-font=${getComputedStyle(document.documentElement).fontSize}`,
+          `grid-width=${grid.getBoundingClientRect().width}px`,
+          `column-gap=${style.columnGap}`,
+          `populated-columns=${inlinePositions.size}`,
+          `tracks=${style.gridTemplateColumns}`,
+          `document: clientWidth=${document.documentElement.clientWidth}px, scrollWidth=${document.documentElement.scrollWidth}px`,
+          ...cardWidths
+        ].join("; ");
+      }
+      function supplyText(kind) {
+        sample.hidden = kind === "original";
+        sample.textContent = kind === "continuous" ? words.replaceAll(" ", "") : kind === "multiword" ? words : "";
+        document.querySelector("#text-state").textContent = kind === "original" ? "Original text only." : `Supplied ${kind} sample in the Explain card.`;
+        measureGrid();
+      }
+      document.querySelector("#multiword").addEventListener("click", () => supplyText("multiword"));
+      document.querySelector("#continuous").addEventListener("click", () => supplyText("continuous"));
+      document.querySelector("#restore-text").addEventListener("click", () => supplyText("original"));
+      document.querySelector("#measure-grid").addEventListener("click", measureGrid);
+      measureGrid();
+    </script>
   </body>
 </html>

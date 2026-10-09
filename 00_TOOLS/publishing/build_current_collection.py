@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build an offline deterministic current-layout ZIP without publishing anything."""
+"""Build an offline deterministic v4 candidate ZIP without publishing anything."""
 from __future__ import annotations
 
 import argparse
@@ -12,11 +12,11 @@ from pathlib import Path
 sys.dont_write_bytecode = True
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / '00_TOOLS/qa'))
-from current_contract import verify_source, verify_units, verify_course_map, verify_links, sha
+from current_contract import verify_source, verify_units, verify_course_map, verify_links, verify_progress, sha, VERSION
 
-PREFIX = 'WEBTECH_ASE_v3.0.0/'
-ZIP_NAME = 'WEBTECH_ASE_CURRENT_v3.0.0.zip'
-STAMP = (2026, 10, 8, 0, 0, 0)
+PREFIX = 'WEBTECH_ASE_CANDIDATE_v4.0.0/'
+ZIP_NAME = 'WEBTECH_ASE_CANDIDATE_v4.0.0.zip'
+STAMP = (2026, 10, 9, 0, 0, 0)
 
 
 def main():
@@ -35,6 +35,7 @@ def main():
     units = verify_units(ROOT, meta, files)
     course, projects = verify_course_map(ROOT, meta, files)
     links = verify_links(ROOT, meta, course, files)
+    progress = verify_progress(ROOT, meta)
     output.mkdir(parents=True, exist_ok=True)
     archive = output / ZIP_NAME
     with archive.open('xb') as handle:
@@ -64,12 +65,13 @@ def main():
     digest = sha(archive.read_bytes())
     with (output / (ZIP_NAME + '.sha256')).open('x', encoding='ascii', newline='\n') as sidecar:
         sidecar.write(digest + '  ' + ZIP_NAME + '\n')
-    receipt = {'schema': 'webtech-current-offline-build/v1', 'status': 'PASS_DETERMINISTIC_CURRENT_LAYOUT_BYTES_ONLY',
-               'distribution_version': '3.0.0', 'archive': ZIP_NAME, 'archive_sha256': digest,
+    receipt = {'schema': 'webtech-current-offline-build/v1', 'status': 'PASS_DETERMINISTIC_CANDIDATE_BYTES_ONLY',
+               'distribution_version': VERSION, 'distribution_status': 'LOCAL_CANDIDATE_NOT_PUBLISHED', 'archive': ZIP_NAME, 'archive_sha256': digest,
                'archive_bytes': archive.stat().st_size, 'archive_root': PREFIX, 'files': len(files),
                'repository_package_id': identity['repository_package_id'], 'units': len(units),
                'projects': projects, 'document_links': links,
-               'derivation_scope': 'Current repository checkout with the retained folder structure. This is a newly built artifact; it does not replace or claim the byte identity of an earlier published ZIP.',
+               'candidate_progress': progress,
+               'derivation_scope': 'Local candidate checkout with the retained folder structure. T01 is prepared with explicit limits; later tranche review remains pending. This artifact is not a published release or final acceptance and does not replace any earlier published ZIP.',
                'qualificationVerdict': 'NOT_FINAL', 'applications_executed': False,
                'native_acceptance': False, 'actions_dispatched': 0, 'published': False,
                'software_installed': False}

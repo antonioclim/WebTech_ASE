@@ -5,3 +5,5 @@
 The authoritative current repository controls are `current-integrity/REPOSITORY_SHA256SUMS.txt` and `current-integrity/REPOSITORY_PACKAGE_ID.txt`. Their paths are retained by the current tools. See [integrity instructions](../INTEGRITY.md). Unit integrity controls remain inside each `EN_GB` directory and use that unit's original scheme.
 
 These records describe the current files and the scope of checks. They do not assert that all qualification gates passed. General qualification remains **NOT_FINAL**.
+
+`CANDIDATE_PROGRESS.json` separates the four T01 units and their scoped checks from the remaining scheduled revisions and the ten pending whole-edition gates. The target is v4.0.0; the latest published classroom edition remains 3.0.0.

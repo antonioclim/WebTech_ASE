@@ -1,4 +1,4 @@
-# Weeks 01–14 — Web Technologies 3.0.0
+# Weeks 01–14 — Web Technologies v4.0.0 candidate
 
 Each week contains a course and a seminar. The current English materials are stored directly in the corresponding `EN_GB` folder. Read the course, then follow the seminar start instructions and detailed tutorial.
 
@@ -20,3 +20,5 @@ Each week contains a course and a seminar. The current English materials are sto
 | [14](WEEK_14/README.md) | [C14 — Testing, observability, performance and production evidence](WEEK_14/C14_COURSE/index.html) | [S14 — Evidence review and individual defence](WEEK_14/S14_SEMINAR/index.html) |
 
 [Start guide](../00_START_HERE/START_HERE.html) · [Evidence guidance](../00_START_HERE/ASSESSMENT.html)
+
+C01/S01 and C02/S02 have completed the T01 teaching revision. The remaining pairs await T02–T07. The latest published edition remains 3.0.0. See [candidate progress](../metadata/CANDIDATE_PROGRESS.json).

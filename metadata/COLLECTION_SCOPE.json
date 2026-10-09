@@ -1,6 +1,6 @@
 {
   "schema": "webtech-current-repository-scope/v1",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "layout": "Current teaching materials in the original 00_SETUP, 00_START_HERE, 00_TOOLS, 01_WEEKS, assets and metadata organisation.",
   "published_source": {
     "tag": "classroom-en-gb-v3.0.0",
@@ -9,11 +9,16 @@
     "url": "https://github.com/antonioclim/WebTech_ASE/releases/tag/classroom-en-gb-v3.0.0"
   },
   "reviewed_repository_parent": "4c7f187996d7a3ed821fbbe8f5a4db4b6b6ea9de",
-  "teaching_preservation": "Current published teaching units are relocated. Local links and setup copy-paste paths are rebound to the current organisation and affected integrity controls are regenerated. All 38 learner target files, runtime source, 48 dependency lockfiles and 30 Word references retain their supplied bytes. No learner solution is supplied.",
+  "teaching_preservation": "T01 extends C01/S01 and C02/S02 teaching and affected setup, environment and evidence controls. All 38 learner targets remain intentionally unfinished and unchanged. Later pairs, 48 dependency lockfiles and 30 Word references retain supplied bytes. New runtime guards and local policy carriers are declared candidate changes; historic qualification does not transfer.",
   "layout_changes": "One current EN_GB unit per course, seminar or setup object. Current navigation, metadata and useful validation/build tools are retained. Historical editions and publishing recipes belong to exact archival references rather than duplicate teaching directories.",
   "internal_unit_names": "Unit versions and CLASSROOM_RC6 names identify current constituent contracts. There is one unit per course, seminar or setup object; the names do not retain alternative repository editions.",
   "history": "PREVIOUS_RELEASES.md",
   "qualificationVerdict": "NOT_FINAL",
-  "native_manual_human_acceptance": "DEFERRED_BY_OWNER_NOT_PASSED",
-  "qualification_scope": "A published stable version and byte integrity do not assert complete runtime, native, manual or human acceptance."
+  "native_manual_human_acceptance": "PENDING_NOT_PASSED_FOR_CANDIDATE",
+  "qualification_scope": "A published stable version and byte integrity do not assert complete runtime, native, manual or human acceptance.",
+  "distribution_status": "LOCAL_CANDIDATE_NOT_PUBLISHED",
+  "candidate_base_public_commit": "b3f4a6b86dd465641015322c99f52908725dc198",
+  "previous_scope_sha256": "6346d7c9fef6476fb42d44130accf3cd5133260f6603bc151d1d91abbad1bfd7",
+  "reviewed_repository_parent_scope": "Historical predecessor of the supplied restored layout; candidate_base_public_commit is the current derivation base.",
+  "candidate_progress": "CANDIDATE_PROGRESS.json"
 }

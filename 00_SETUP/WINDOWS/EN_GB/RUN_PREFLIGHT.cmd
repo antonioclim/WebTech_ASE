@@ -1,1 +1,6 @@
-@echo offsetlocalpowershell.exe -NoProfile -ExecutionPolicy Bypass -File "%~dp002_PREFLIGHT\CHECK_TW2026_ENVIRONMENT.ps1" %*set "RC=%ERRORLEVEL%"echo.exit /b %RC%
+@echo off
+setlocal
+powershell.exe -NoProfile -File "%~dp002_PREFLIGHT\CHECK_TW2026_ENVIRONMENT.ps1" %*
+set "RC=%ERRORLEVEL%"
+echo.
+exit /b %RC%

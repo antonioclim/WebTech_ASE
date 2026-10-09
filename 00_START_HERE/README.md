@@ -1,4 +1,6 @@
-# Start here — Web Technologies 3.0.0
+# Start here — Web Technologies v4.0.0 candidate
+
+This candidate has revised C01/S01 and C02/S02. The remaining pairs await T02–T07. The latest published edition remains 3.0.0; this checkout is not the final release.
 
 Download or clone the complete repository, then open [START_HERE.html](START_HERE.html) locally. Follow your operating-system setup and open the current course and seminar from [the collection home](../index.html).
 
@@ -6,6 +8,9 @@ Download or clone the complete repository, then open [START_HERE.html](START_HER
 - [Evidence and assessment](ASSESSMENT.html)
 - [Download choices](DOWNLOAD.html)
 - [Qualification scope](QUALIFICATION.html)
+- [Environment and capability checks](ENVIRONMENT.html)
+- [Evidence, drafts and PDF recovery](EVIDENCE_HELP.html)
+- [Git, updates and preserving your work](GIT_AND_RECOVERY.html)
 - [Windows setup](../00_SETUP/WINDOWS/index.html)
 - [macOS/Linux setup](../00_SETUP/MACOS_LINUX/index.html)
 - [Weeks 01–14](../01_WEEKS/README.md)

@@ -1,4 +1,6 @@
-# Web Technologies — English student materials 3.0.0
+# Web Technologies — English student materials, v4.0.0 candidate
+
+This branch prepares the next complete edition. C01/S01 and C02/S02 have been revised in T01; C03/S03–C14/S14 retain their supplied material and await their scheduled revision. The latest published classroom edition remains 3.0.0. Read the [candidate progress](metadata/CANDIDATE_PROGRESS.json) before interpreting this checkout as a complete release.
 
 This repository contains the current materials for 14 course and seminar pairs, with two operating-system setup guides, 14 detailed seminar tutorials and 40 required individual microprojects. The 38 learner target files are intentionally unfinished. HTML presentations and guides are the main teaching route; Word references are optional.
 
@@ -13,7 +15,7 @@ Start with [00_START_HERE](00_START_HERE/README.md) or open [index.html](index.h
 5. Complete every required project individually, run the checks in its guide and retain their actual outputs. After changing only declared learner targets or creating declared dependency/output folders, run `node 00_TOOLS/qa/VERIFY_COLLECTION.mjs --allow-student-edits` from the repository root.
 6. Review your evidence PDF and submit it through the lecturer’s actual authorised Assignment.
 
-Keep private drafts, JSON evidence, screenshots, logs, PDFs and your own synthetic probes outside the entire repository folder. The reference runtime is Node.js 24.21.0; each unit explains its dependencies and local environment.
+Keep private drafts, JSON evidence, screenshots, logs, PDFs and your own synthetic probes outside the entire repository folder. Read the [environment policy](00_START_HERE/ENVIRONMENT.html): the named reference is distinct from the runtime actually checked. An ENV_WARN permits the supported operation to continue; an ENV_BLOCKED identifies the affected operation. Follow each unit's dependency and capability requirements.
 
 ## Find the current files
 
@@ -32,4 +34,4 @@ The [download guide](00_START_HERE/DOWNLOAD.html) distinguishes this current rep
 
 ## Qualification
 
-General qualification remains **NOT_FINAL**. The ten broad qualification gates remain pending; native, manual and human acceptance was deferred by the owner. Read [the qualification scope](00_START_HERE/QUALIFICATION.html). Integrity and task results support the checks they actually perform.
+General qualification remains **NOT_FINAL**. The ten broad qualification gates remain pending for the complete edition. T01 has scoped Node, source and form-model checks; native browser rendering, print, Windows, macOS and human acceptance have not passed. Read [the qualification scope](00_START_HERE/QUALIFICATION.html). Integrity and task results support the checks they actually perform.

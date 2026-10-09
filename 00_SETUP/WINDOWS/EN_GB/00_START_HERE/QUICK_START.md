@@ -2,7 +2,7 @@
 
 ## What you will learn and why
 
-You will locate an extracted package, separate its integrity from your computer's readiness, select the exact runtime, inspect tool paths and record only checks you actually performed. Reproducible versions make later task results comparable; safe recovery preserves evidence instead of hiding a failure. This is preparation for Week 1, not a completed seminar assessment.
+You will locate an extracted package, separate its integrity from your computer's readiness, record the actual runtime and check its required capabilities, inspect tool paths and record only checks you actually performed. Reproducible versions make later task results comparable; safe recovery preserves evidence instead of hiding a failure. This is preparation for Week 1, not a completed seminar assessment.
 
 ## 1. Extract and open a native terminal
 
@@ -22,7 +22,7 @@ Stop if integrity fails. Keep the exact output and obtain the lecturer's correct
 .\RUN_PREFLIGHT.cmd DAY0 --redact
 ```
 
-Read each row and the final verdict. Missing tools or unacknowledged accounts can give a nonzero exit code. Follow [Node on Windows](../04_INSTALL_GUIDES/NODE_WINDOWS.md), [VS Code](../04_INSTALL_GUIDES/VSCODE_WINDOWS.md) and [Git/GitHub](../04_INSTALL_GUIDES/GIT_GITHUB_WINDOWS.md) and [browser/Gemini preparation](../04_INSTALL_GUIDES/BROWSER_GEMINI.md). The prescribed baseline is Node.js `v24.21.0` with bundled npm `11.19.0`; use maintained Stable Git, VS Code and a supported browser. No arbitrary runtime replacement or global npm upgrade is authorised.
+Read each row and the final verdict. A necessary failed probe gives ENV_BLOCKED for the selected operation. Pending account acknowledgements give ENV_WARN, remain unfinished and do not falsely confirm access. Follow [Node on Windows](../04_INSTALL_GUIDES/NODE_WINDOWS.md), [VS Code](../04_INSTALL_GUIDES/VSCODE_WINDOWS.md) and [Git/GitHub](../04_INSTALL_GUIDES/GIT_GITHUB_WINDOWS.md) and [browser/Gemini preparation](../04_INSTALL_GUIDES/BROWSER_GEMINI.md). The retained reference is Node.js `v24.21.0` and npm `11.19.0`, unexecuted in T01. The actual Node `v24.19.0` probe can continue with ENV_WARN. Node-only activities do not require npm. Add `--profile node` or `--profile http` to check an independent activity. Read [version and capability policy](../05_CONFIGURATION/VERSION_POLICY.md). No arbitrary runtime replacement or global npm upgrade is authorised.
 
 Use [the support matrix](SUPPORT_MATRIX.md), [version policy](../05_CONFIGURATION/VERSION_POLICY.md) and [clickable official sources](../10_REFERENCE/OFFICIAL_SOURCES.md). Installation, accounts and later Moodle upload require permitted network access. If policy, hardware or account access prevents a required step, retain BLOCKED, the exact cause and affected activity and request the lecturer/IT continuation. Do not claim an installation or account exchange occurred.
 
@@ -38,11 +38,9 @@ Open [the remediation catalogue](../06_TROUBLESHOOTING/REMEDIATION_CATALOG.md) a
 
 | Final preflight verdict | Exit code | What to do |
 | --- | --- | --- |
-| READY_FOR_TW2026 | 0 | Retain the observed result; complete separate evidence activities truthfully |
-| READY_WITH_WARNINGS | 1 | Read and resolve or report the warnings; do not erase them |
-| NOT_READY | 2 | Follow each technical blocking row's remediation and repeat |
-| TECHNICALLY_READY_ACCOUNT_CHECKS_PENDING | 3 | Technical checks passed; real account checks remain unfinished |
-| UNSUPPORTED_SYSTEM | 4 | Request an approved platform route; do not force READY |
+| ENV_OK | 0 | Continue the selected operation; keep its observed report |
+| ENV_WARN | 0 | Continue the named operation; retain qualification limits and unfinished manual rows |
+| ENV_BLOCKED | 2 | Repair the named necessary requirement and rerun the same command; independent profiles keep their own verdict |
 
 This verdict describes this preflight contract and stage. It does not grade your coursework, certify all native platforms or confirm Moodle acceptance.
 
@@ -58,7 +56,7 @@ Each `--ack-...` is your statement, not automated proof. If one fact is unconfir
 
 ## 5. Map the Day 0 S01 launch row to a bounded action
 
-1. Open [the current S01 entry](../../../../01_WEEKS/WEEK_01/S01_SEMINAR/index.html) and [its detailed tutorial](../../../../01_WEEKS/WEEK_01/S01_SEMINAR/TUTORIAL.html). Locate the **S01 seminar package root**, containing `CLASSROOM_RC6`. Open a new terminal in that root, not this setup folder. Confirm the prescribed Node version there; on the Linux user-owned route reapply your saved session PATH if needed.
+1. Open [the current S01 entry](../../../../01_WEEKS/WEEK_01/S01_SEMINAR/index.html) and [its detailed tutorial](../../../../01_WEEKS/WEEK_01/S01_SEMINAR/TUTORIAL.html). Locate the **S01 seminar package root**, containing `CLASSROOM_RC6`. Open a new terminal in that root, not this setup folder. Record the actual Node version and executable there; on the Linux user-owned route reapply your saved session PATH if needed.
 2. Before editing any classroom target run these two commands **separately**:
 
 ```text

@@ -9,11 +9,12 @@
   Follow the evidence:
   - The legacy selector includes an ID and class.
   - The theme selector is only a class.
-  - The declared layer order still makes the theme colors win.
+  - The declared layer order still makes the theme colours win.
 -->
-<html lang="en">
+<html lang="en-GB">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Cascade layer order</title>
     <style>
       @layer legacy, theme;
@@ -23,13 +24,22 @@
   </head>
   <body>
     <main id="app">
+      <h1>Cascade layer order</h1>
+      <p>This comparison uses normal author declarations in two named layers. Predict the winning colours before reading the computed values.</p>
       <p class="notice">Layer order beats selector escalation.</p>
-      <output id="result"></output>
+      <button type="button" id="read-colours">Read computed colours again</button>
+      <p><output id="result" aria-live="polite"></output></p>
+      <p>The output reads this notice only. For a layer variation, use the separate disposable copy described in the README, then compare the same properties and restore the original.</p>
     </main>
     <script type="module">
-      const styles = getComputedStyle(document.querySelector(".notice"));
-      document.querySelector("#result").textContent =
-        `color=${styles.color}; background=${styles.backgroundColor}`;
+      let probeNumber = 0;
+      function readColours() {
+        const styles = getComputedStyle(document.querySelector("#app .notice"));
+        document.querySelector("#result").textContent =
+          `probe=${++probeNumber}; color=${styles.color}; background=${styles.backgroundColor}`;
+      }
+      document.querySelector("#read-colours").addEventListener("click", readColours);
+      readColours();
     </script>
   </body>
 </html>

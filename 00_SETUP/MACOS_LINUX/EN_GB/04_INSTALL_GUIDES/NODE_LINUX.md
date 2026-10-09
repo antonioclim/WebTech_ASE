@@ -1,4 +1,6 @@
-# Install the exact Node.js baseline on Linux
+# Optional reference Node.js installation on Linux
+
+First record `node --version` and `node -p "process.execPath"`, then run the selected preflight profile. If it returns ENV_OK or ENV_WARN, continue without replacing Node or changing npm. The reference values below were not executed in T01; this optional route concerns explicit reference reproduction, not a compatibility prerequisite. Read [version policy](../05_CONFIGURATION/VERSION_POLICY.md).
 
 This chosen route downloads the matching official binary into a fresh directory owned by your user. It changes PATH only in the current terminal. It does not use sudo, overwrite another installation or edit a shell startup file.
 
