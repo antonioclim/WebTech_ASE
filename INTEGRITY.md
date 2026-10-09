@@ -1,9 +1,11 @@
-# Current collection integrity
+# Current repository integrity
 
-Run `node VERIFY_COLLECTION.mjs` from the extracted collection or clone before editing. Run `node VERIFY_COLLECTION.mjs --allow-student-edits` after editing the 38 declared learner targets or creating the declared generated folders. The checker skips the Git control directory, refuses extra collection files, and preserves all protected teaching bytes. It does not grade projects or execute teaching code.
+From the repository root run `node 00_TOOLS/qa/VERIFY_COLLECTION.mjs` before editing. After changing only declared learner targets or creating declared generated directories, run `node 00_TOOLS/qa/VERIFY_COLLECTION.mjs --allow-student-edits`. These commands verify supplied files; they do not grade projects.
 
-`SHA256SUMS.txt` contains sorted SHA-256 rows for every current file except itself and `PACKAGE_ID.txt`. `PACKAGE_ID.txt` is the SHA-256 of the exact UTF-8 manifest bytes, followed by a newline. `.gitattributes` disables checkout text conversion so those hashes work consistently. These controls detect accidental changes; they are not a digital signature.
+`metadata/current-integrity/REPOSITORY_SHA256SUMS.txt` has sorted SHA-256 rows for every repository file except itself and `REPOSITORY_PACKAGE_ID.txt`. The package ID is SHA-256 of the exact UTF-8 manifest bytes, followed by a newline. `.gitattributes` preserves committed bytes during checkout. These controls detect changes and are not digital signatures.
 
-Each unit also retains its own integrity scheme. C02 includes its package ID row in its audit manifest and derives the ID from the canonical rows excluding that row. Other affected outer units derive their ID from the manifest. Inner classroom source and boundary controls remain exact. If a maintainer changes protected files, all affected unit and collection controls must be regenerated together and reviewed; student edits do not rewrite the supplied controls.
+Each of the 30 units also retains its own integrity scheme. C01 derives its ID from `90_AUDIT/PAYLOAD_SHA256SUMS.txt`. C02 derives its ID from canonical audit rows excluding its own package-ID row. The other units derive their IDs from their outer manifests. Seminar boundary controls bind protected teaching files and declared mutable targets; S01–S07 also retain a source manifest. Moving markup links requires regenerating the affected controls together. Students keep the supplied controls unchanged.
 
-The root collection identity describes this current checkout. The frozen v3.0.0 archives keep their separate published identities. General qualification remains NOT_FINAL; see [QUALIFICATION.html](QUALIFICATION.html).
+The [strict maintenance check](00_TOOLS/qa/validate_public_repo.py) validates the current inventory, unit controls, project declarations and local links. Build archives through [the current publishing utility](00_TOOLS/publishing/README.md), using an output directory outside this repository.
+
+The current repository identity differs from the frozen published 3.0.0 archive identities. General qualification remains **NOT_FINAL**; read [the qualification scope](00_START_HERE/QUALIFICATION.html).

@@ -1,0 +1,25 @@
+{
+  "schema": "webtech-archival-snapshots/v1",
+  "purpose": "Exact retrospective snapshots; their internal versions and status are unchanged.",
+  "archives": [
+    {
+      "version": "2.1.0",
+      "tag": "v2.1.0",
+      "branch": "archive/v2.1.0-original",
+      "commit": "1850118b3f619b233f89941802212fe59d8d5dfe",
+      "tree": "33b00a984ff001c881db5c60e8a0b05de6280a85",
+      "files": 4816,
+      "meaning": "Complete 14-week repository before collection remediation."
+    },
+    {
+      "version": "2.2.0",
+      "tag": "v2.2.0",
+      "branch": "archive/v2.2.0-before-pr40",
+      "commit": "4901aa0d543e61157ba8f54b0166c42ef9f6ebf7",
+      "tree": "266d763beb9810048dbeba4809901cffb253be69",
+      "files": 10586,
+      "meaning": "Complete repository immediately before PR #40."
+    }
+  ],
+  "publication_status": "Release publication is a separate owner action. Exact archive branches preserve the selected commits."
+}

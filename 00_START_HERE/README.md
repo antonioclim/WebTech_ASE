@@ -1,13 +1,13 @@
 # Start here — Web Technologies 3.0.0
 
-This repository contains one current classroom collection. Previous editions are linked from [PREVIOUS_RELEASES.md](../PREVIOUS_RELEASES.md).
+Download or clone the complete repository, then open [START_HERE.html](START_HERE.html) locally. Follow your operating-system setup and open the current course and seminar from [the collection home](../index.html).
 
-1. On the repository home page, choose **Code → Download ZIP** and extract the complete archive into a new folder. Keep its structure intact.
-2. Open [START_HERE.html](../START_HERE.html) locally. Choose [Windows setup](../ENTRY/SETUP_WINDOWS.html) or [macOS and Linux setup](../ENTRY/SETUP_MACOS_LINUX.html).
-3. In a terminal at the collection root, run `node VERIFY_COLLECTION.mjs`.
-4. Open [the collection home](../index.html), choose your course and seminar, then follow the detailed tutorial and guide.
-5. Complete every required individual project. Keep all private evidence outside the collection and upload the reviewed PDF only to the lecturer’s actual authorised Assignment.
+- [Course plan and required projects](COURSE_PLAN.html)
+- [Evidence and assessment](ASSESSMENT.html)
+- [Download choices](DOWNLOAD.html)
+- [Qualification scope](QUALIFICATION.html)
+- [Windows setup](../00_SETUP/WINDOWS/index.html)
+- [macOS/Linux setup](../00_SETUP/MACOS_LINUX/index.html)
+- [Weeks 01–14](../01_WEEKS/README.md)
 
-After editing only the declared learner targets or creating declared dependency/output folders, run `node VERIFY_COLLECTION.mjs --allow-student-edits`. The task checks in each guide are separate from file integrity.
-
-The [download guide](../DOWNLOAD.html) explains the current repository copy and the frozen published ZIP. General qualification remains **NOT_FINAL**; read [the scope](../QUALIFICATION.html).
+From the repository root, run `node 00_TOOLS/qa/VERIFY_COLLECTION.mjs` before editing. Follow each seminar’s task commands from its `EN_GB` folder. Store private evidence outside the entire repository.
