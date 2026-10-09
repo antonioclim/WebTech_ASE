@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en-GB"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><title>C11 — sources and scope</title><link href="assets/theme.css" rel="stylesheet"/><style>table th:first-child, table td:first-child {min-width:64px;white-space:nowrap;} @media print {table td,table th{padding:6px;} }</style><style>@media print { footer {display:none!important;} }</style></head><body><a class="skip" href="#main">Skip to content</a><header><div class="brand">WEB TECHNOLOGIES · ASE · C11</div><p>Authentication, Authorisation and Web Security · WIP/PREVIEW</p></header><main id="main"><section class="rc10-current-transfer" id="rc10-current-transfer" aria-labelledby="rc10-transfer-title"><h2 id="rc10-transfer-title">Current S11 classroom transfer</h2><p>Each student completes all 3 listed microprojects individually in class. Each project is a bounded task with its own editable target, rather than completion of the retained full application.</p><table><thead><tr><th scope="col">ID</th><th scope="col">Current project</th><th scope="col">Editable path from the seminar package root</th></tr></thead><tbody><tr><td>P01</td><td>Authentication transfer: trusted principal</td><td><code>CLASSROOM_RC6/student/p01.mjs</code></td></tr><tr><td>P02</td><td>Authorization: owner versus role</td><td><code>CLASSROOM_RC6/student/p02.mjs</code></td></tr><tr><td>P03</td><td>CORS and CSRF: two independent decisions</td><td><code>CLASSROOM_RC6/student/p03.mjs</code></td></tr></tbody></table><p><a href="../../S11_SEMINAR/index.html">Current S11 entry</a> · <a href="../../S11_SEMINAR/TUTORIAL.html">Step-by-step tutorial</a> · <a href="../../S11_SEMINAR/EN_GB/CLASSROOM_RC6/EVIDENCE_FORM.html">Current evidence form</a></p><p>Open the current entry, follow the tutorial, preserve the protected support files and run the stated target checks. Record actual starting and repaired outcomes, including any blocked or unexecuted check. Use the current evidence form for all listed projects, export one PDF, review the saved pages and filename and upload that reviewed PDF to the corresponding private Moodle Assignment. A failed or blocked check is not a PASS.</p><p>Historical full applications below remain optional advanced references. Reused IDs do not make their old contracts, paths, portfolios, timing estimates or mark statements current assessment rules. The actual Assignment supplies dates and assessment policy; this course makes no completion-time or mark guarantee.</p></section><h1>C11 — sources and scope</h1><nav aria-label="Material navigation" class="links"><a href="index.html">Start</a><a href="course.html">Course</a><a href="reading.html">Handout</a><a href="lab.html">Model lab</a><a href="preparation.html">Preparation</a><a href="sources.html">Sources</a></nav><article class="document"><h1>C11 — Sources and evidence rights</h1>
+<h2>Primary basis</h2>
+<p>The controlling material is canonical Unit 11, its 35 lecture topics, five exact examples and the approved Week 11 architecture. CAN-xx identifies a source topic; EX-xx an exact directory; Mxx a separate fixed model. Public source hashes are in CANONICAL_SOURCES.json. Original spellings and historical README/test/run statements remain exact. The authoring does not convert those statements into new execution evidence.</p>
+<div class="rc10-historical-reference"><p class="rc10-historical-scope"><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S11 task list and evidence route</a>.</p><p>The local design changes the 96-minute source lecture to 60 minutes and changes attack-trace execution to static defensive analysis and benign protective checks. SOURCE_NOTES.md identifies corrections. P02 is central, P01 is capstone integration and the mandatory reduced 11.3A pair is the locally selected CORS/CSRF pair. Source prescribes two classes but not their choice.</p></div>
+<h2>Primary documentation consulted</h2>
+<p>Consulted 30 September 2026 for the bounded interpretations below. These pages do not update or qualify source pins, and do not have journal DOIs. None is invented. Current Node documentation identifies itself as v26.10.0; this is not the runtime used for local checks.</p>
+<div class="rc10-historical-reference"><p class="rc10-historical-scope"><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S11 task list and evidence route</a>.</p><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>APA-style reference</th>
+<th>Role and limit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R1</td>
+<td><a href="https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html">OWASP Foundation. (n.d.). Session management cheat sheet.</a></td>
+<td>Server-owned session state and expiry; not a browser, transport or entropy test.</td>
+</tr>
+<tr>
+<td>R2</td>
+<td><a href="https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html">OWASP Foundation. (n.d.). Cross-site request forgery prevention cheat sheet.</a></td>
+<td>Request-intent controls and unpredictable session-bound tokens; not execution of the supplied middleware.</td>
+</tr>
+<tr>
+<td>R3</td>
+<td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">MDN contributors. (n.d.). Cross-Origin Resource Sharing (CORS).</a></td>
+<td>Sharing, credentialed origins and Vary; not actual browser or cache evidence.</td>
+</tr>
+<tr>
+<td>R4</td>
+<td><a href="https://nodejs.org/api/crypto.html">Node.js contributors. (n.d.). Crypto.</a></td>
+<td>timingSafeEqual boundary; not timing safety of surrounding login code or a prescribed runtime qualification.</td>
+</tr>
+<tr>
+<td>R5</td>
+<td><a href="https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html">OWASP Foundation. (n.d.). Password storage cheat sheet.</a></td>
+<td>Maintained slow salted constructions; no new work parameters or password attack.</td>
+</tr>
+<tr>
+<td>R6</td>
+<td><a href="https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html">OWASP Foundation. (n.d.). Authorization cheat sheet.</a></td>
+<td>Explicit least-privilege permission and deny-by-default; not the full assessed P02 answer.</td>
+</tr>
+<tr>
+<td>R7</td>
+<td><a href="https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html">OWASP Foundation. (n.d.). SQL injection prevention cheat sheet.</a></td>
+<td>Separate query structure and bound values; no SQL engine execution.</td>
+</tr>
+<tr>
+<td>R8</td>
+<td><a href="https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html">OWASP Foundation. (n.d.). Cross site scripting prevention cheat sheet.</a></td>
+<td>Destination-specific output handling; not universal sanitisation or browser acceptance.</td>
+</tr>
+</tbody>
+</table></div>
+<h2>Qualification boundary</h2>
+<p>Source identity, a pure JavaScript result, a callback substitute, an actual Express request, a SQL-engine run, browser enforcement and TLS are different evidence classes. No application server, SQL, browser or TLS run is performed here. Native Word/platform and Moodle qualification remain separate. No secret or real credential is requested. The next-reading list is preserved at canonical/reading-list-next.md, not implemented by this phase.</p>
+<h1>C11 — Source notes and explicit corrections</h1>
+<p>The canonical copies are exact, including historical run/test instructions. They are source-reading anchors, not authorisation to start servers. The original lecture/GIFT remain private. New prose and fixed models are derived; no complete assessed policy or two-helper repair is supplied publicly.</p>
+<h2>N01 — Reduced session examples (F03)</h2>
+<div class="rc10-historical-reference"><p class="rc10-historical-scope"><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S11 task list and evidence route</a>.</p><p>EX-01 maps a fixture name to an opaque lookup without password verification or server-time expiry. EX-03 emits a fixed cookie value and attributes. P01 is a different source with explicit expiry/invalidation. Do not equate Max-Age with a server expiry operation or a deterministic generator with entropy evidence.</p></div>
+<h2>N02 — Policy and state (F04, F07, F08, F17)</h2>
+<div class="rc10-historical-reference"><p class="rc10-historical-scope"><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S11 task list and evidence route</a>.</p><p>EX-02 uses inline policy and a module-owned report map with no administrator fixture. P02 has its own closed principal domain and exact policy contract. Its unsupported action raises a construction TypeError; request-time loader errors are separate. A policy snapshot is a frozen clone of a flat fixture, not a transaction or a lock. Do not broaden the learner’s edit boundary.</p></div>
+<h2>N03 — Launch boundaries (F05)</h2>
+<p>Historical entry checks are not a verified Windows launch contract. Some source factories are stateful; repeated imports or factories do not guarantee fresh data. This C11 package provides no new server launcher. Inspect sources only now; future launch support, loopback binding and native-path verification require their own qualified route. No app is started automatically from the index or model lab.</p>
+<h2>N04 — CSRF and same-origin support (F06)</h2>
+<div class="rc10-historical-reference"><p class="rc10-historical-scope"><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S11 task list and evidence route</a>.</p><p>P02’s fixture helper compares a deterministic token and does not inspect Origin/Referer. Describe that actual support, not a complete production same-origin boundary. Authentication and support repairs do not move silently into authorization-policy.js. The two-class reduced successor belongs to S11.</p></div>
+<h2>N05 — Input, transport and secret assumptions (F09, F10, F13, F15)</h2>
+<div class="rc10-historical-reference"><p class="rc10-historical-scope"><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S11 task list and evidence route</a>.</p><p>Cookie-decoding failures differ from ordinary missing/expired session outcomes. A forwarded string is not TLS or proof of proxy trust. P03’s validated sessionSecret is not consumed by its fixture authentication as a signing key. Its 500 mapping does not establish every 4xx public-message contract. These static boundaries are not reproduced attacks or observed disclosures.</p></div>
+<h2>N06 — P03 quarantine (F11)</h2>
+<div class="rc10-historical-reference"><p class="rc10-historical-scope"><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S11 task list and evidence route</a>.</p><p>The original P03 starter delegates transitively to deliberately insecure evidence. It is not included as a public C11 project and is not launched. The next phase will name a reduced successor separately; selected controls cannot be reported as all-five canonical-suite acceptance.</p></div>
+<h2>N07 — Database and output scope (F12, F16)</h2>
+<div class="rc10-historical-reference"><p class="rc10-historical-scope"><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S11 task list and evidence route</a>.</p><p>P03 models a parameter contract and filters an array, not SQL. EX-05 contains sql.js source but no SQL engine is executed here. Its fallback image and the P03 placeholder are absent from their supplied trees. Returning a path or accepting a protocol does not prove image availability or origin privacy. No asset download or image request is made.</p></div>
+<h2>N08 — Response sharing versus refusal (F14)</h2>
+<div class="rc10-historical-reference"><p class="rc10-historical-scope"><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S11 task list and evidence route</a>.</p><p>EX-04 can continue without granting sharing headers, unlike P03’s explicit 403 for an unlisted origin. It adds Vary only on the allowed branch. Record HTTP status, sharing headers and browser/cache evidence separately; no cache failure is reproduced here.</p></div>
+<h2>N09 — Timing and evidence (F02)</h2>
+<p>Header checks, helper outcomes and verification-call counts have bounded meanings. No whole-login timing claim follows from timingSafeEqual. Historical validations remain historical. The 38 canonical declarations are not executed in this phase.</p>
+<h2>N10 — Time, reduced scope and method (F01)</h2>
+<div class="rc10-historical-reference"><p class="rc10-historical-scope"><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S11 task list and evidence route</a>.</p><p>C11 ends at 60. P02 remains full central work; P01 is capstone integration. Two-class 11.3A selects CORS/CSRF as a local design choice. Topic 33’s exploit-trace wording is retained in coverage but the implemented activity is static data-flow analysis plus benign protective checks, not attack execution. S11 and its evidence form are not produced here.</p></div>
+</article></main><footer>60-minute content limit. Source, model, application, browser and TLS evidence remain distinct.</footer></body></html>

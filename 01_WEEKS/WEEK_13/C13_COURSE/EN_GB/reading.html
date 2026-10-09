@@ -1,0 +1,150 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>C13 — synthesis handout</title><link rel="stylesheet" href="assets/theme.css"></head><body><a class="skip" href="#main">Skip to content</a><header><div class="brand">WEB TECHNOLOGIES · ASE · C13</div><p>Browser and Application Composition Architectures · WIP/PREVIEW</p></header><nav class="links" aria-label="Material navigation"><a href="index.html">Start</a><a href="course.html">Course</a><a href="reading.html">Synthesis handout</a><a href="worked-mechanisms.html">Worked mechanisms</a><a href="lab.html">Model lab</a><a href="preparation.html">Preparation</a><a href="sources.html">Sources</a></nav><main id="main"><section class="rc10-current-transfer" id="rc10-current-transfer" aria-labelledby="rc10-transfer-title"><h2 id="rc10-transfer-title">Current S13 classroom transfer</h2><p>Each student completes all 3 listed microprojects individually in class. Each project is a bounded task with its own editable target, rather than completion of the retained full application.</p><table><thead><tr><th scope="col">ID</th><th scope="col">Current project</th><th scope="col">Editable path from the seminar package root</th></tr></thead><tbody><tr><td>P01</td><td>Worker reply: own result and current ID</td><td><code>CLASSROOM_RC6/student/p01.mjs</code></td></tr><tr><td>P02</td><td>Service Worker: controlled routing predicate</td><td><code>CLASSROOM_RC6/student/p02.mjs</code></td></tr><tr><td>P03</td><td>Composable shell: source/origin/generation gate</td><td><code>CLASSROOM_RC6/student/p03.mjs</code></td></tr></tbody></table><p><a href="../../S13_SEMINAR/index.html">Current S13 entry</a> · <a href="../../S13_SEMINAR/TUTORIAL.html">Step-by-step tutorial</a> · <a href="../../S13_SEMINAR/EN_GB/CLASSROOM_RC6/EVIDENCE_FORM.html">Current evidence form</a></p><p>Open the current entry, follow the tutorial, preserve the protected support files and run the stated target checks. Record actual starting and repaired outcomes, including any blocked or unexecuted check. Use the current evidence form for all listed projects, export one PDF, review the saved pages and filename and upload that reviewed PDF to the corresponding private Moodle Assignment. A failed or blocked check is not a PASS.</p><p>Historical full applications below remain optional advanced references. Reused IDs do not make their old contracts, paths, portfolios, timing estimates or mark statements current assessment rules. The actual Assignment supplies dates and assessment policy; this course makes no completion-time or mark guarantee.</p></section><article class="document"><div class="notice"><strong>Synthesis handout.</strong> This retained handout summarises the source topics. The Markdown and Word handouts remain synthesis summaries. Read the <a href="worked-mechanisms.html">worked mechanism companion</a> for inputs, state transitions, results and limits.</div><h1>C13 — Browser and Application Composition Architectures</h1>
+<h2>Purpose and evidence boundary</h2>
+<p>C13 asks when a browser boundary is justified, who owns its protocol and lifecycle and what evidence distinguishes a model from execution in the target context. Storage, Workers, Service Workers and iframe composition solve different ownership and isolation problems. None is justified by novelty alone.</p>
+<p>The source lecture plans 96 minutes. This delivery contains exactly 60 minutes and an explicit STOP. Source identity, pure JavaScript, fake browser objects, native Worker or Service Worker behaviour, real multi-origin composition and platform acceptance remain separate evidence classes.</p>
+<h2>Exact 60-minute route</h2>
+<div class="rc10-historical-reference"><p class="rc10-historical-scope"><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S13 task list and evidence route</a>.</p><table>
+<thead><tr><th>Minutes</th><th>Focus</th><th>Evidence boundary</th></tr></thead><tbody>
+<tr><td>00–05</td><td>Boundary cost before browser APIs</td><td>One requirement, one owner, one lifecycle and one simpler alternative.</td></tr>
+<tr><td>05–14</td><td>Storage, clone and transfer</td><td>Exact examples, no browser run claim.</td></tr>
+<tr><td>14–25</td><td>Worker protocol and P01 lifecycle</td><td>Correlation, cancellation, failures and cleanup; P01 source-bound models only.</td></tr>
+<tr><td>25–34</td><td>Service Worker registered, ready and controlled</td><td>Correct example discrepancy; P02 remains guided.</td></tr>
+<tr><td>34–43</td><td>Caching, replacement and offline claims</td><td>Policy and product claims are distinct from one cached shell.</td></tr>
+<tr><td>43–51</td><td>Message trust and exact target origin</td><td>Origin, source, version and payload are separate checks.</td></tr>
+<tr><td>51–57</td><td>Frame generation, composition cost and project roles</td><td>P03 optional; launch Regression Harness transfer.</td></tr>
+<tr><td>57–60</td><td>Retrieval and STOP</td><td>Owner, invariant, witness and limitation; no overflow.</td></tr>
+</tbody></table></div>
+<h2>Source topics</h2>
+<h2>1. Browser storage has scope and lifetime</h2>
+<p>Browser storage belongs to an origin and has a product lifetime. It is not shared authority and it can disappear or become unavailable.</p>
+<p><strong>Evidence boundary.</strong> Source identity and fixed model only; no storage API is invoked.</p>
+<h2>2. Stored data is untrusted input</h2>
+<p>Every stored string crosses a trust boundary when it is read. Parse, version-check and validate before admitting it into application state.</p>
+<p><strong>Evidence boundary.</strong> No claim that every browser storage failure is handled by the canonical example.</p>
+<h2>3. Records need contracts</h2>
+<p>A record contract names the namespace, version, schema, fallback and migration or removal rule. Sensitive credentials do not belong in it.</p>
+<p><strong>Evidence boundary.</strong> Contract review, not a security certificate.</p>
+<h2>4. Worked example — versioned storage record</h2>
+<p>The exact example round-trips a supported record and removes malformed or stale data. Storage access errors remain outside its protected region.</p>
+<p><strong>Evidence boundary.</strong> Exact source retained; historical browser validation is not rerun.</p>
+<h2>5. Workers move computation contexts</h2>
+<p>A Worker moves computation into a separate execution context. It does not move DOM ownership and it adds a protocol and lifecycle.</p>
+<p><strong>Evidence boundary.</strong> No Worker is created in this package.</p>
+<h2>6. <code>postMessage</code> normally clones</h2>
+<p>Ordinary postMessage uses structured clone. The receiver gets a distinct graph and unsupported values can fail cloning.</p>
+<p><strong>Evidence boundary.</strong> JavaScript explanation, not native postMessage evidence.</p>
+<h2>7. Transfer moves ownership</h2>
+<p>Transferables move ownership of selected resources such as ArrayBuffer backing stores. The sender may lose access after transfer.</p>
+<p><strong>Evidence boundary.</strong> No buffer is transferred by a browser here.</p>
+<h2>8. Main thread owns UI</h2>
+<p>The main thread retains DOM ownership. A Worker returns data or typed events and the page decides how the UI changes.</p>
+<p><strong>Evidence boundary.</strong> No responsiveness measurement or rendering benchmark.</p>
+<h2>9. Worked example — worker clone boundary</h2>
+<p>The exact clone-boundary example demonstrates one request, one cloned object and one result. It does not cover concurrent correlation, error or cleanup.</p>
+<p><strong>Evidence boundary.</strong> Exact source anchor only.</p>
+<h2>10. Real worker protocols need lifecycle</h2>
+<p>A real Worker client needs identifiers, pending state, progress, terminal paths, cancellation, worker-failure policy and disposal.</p>
+<div class="rc10-historical-reference"><p class="rc10-historical-scope"><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S13 task list and evidence route</a>.</p><p><strong>Evidence boundary.</strong> P01 is the later central implementation; C13 provides models, not the assessed answer.</p></div>
+<h2>11. Timers do not offload CPU</h2>
+<p>setTimeout defers work on the same event loop. It does not move CPU-heavy work to another execution context.</p>
+<p><strong>Evidence boundary.</strong> Conceptual comparison only.</p>
+<h2>12. Service Workers are browser-managed intermediaries</h2>
+<p>A Service Worker is a browser-managed intermediary with install, activate, control and replacement lifecycle. It is not merely another Worker.</p>
+<p><strong>Evidence boundary.</strong> No Service Worker registration is performed.</p>
+<h2>13. Registered, ready and controlled differ</h2>
+<p>Registered, active, ready and controlling are different states. Evidence must identify which state was actually observed.</p>
+<p><strong>Evidence boundary.</strong> The canonical example currently sends to active even without a controller.</p>
+<h2>14. First load may be uncontrolled</h2>
+<p>The first page load may be uncontrolled. A direct path is therefore a separate contract, not an assumption about active workers.</p>
+<p><strong>Evidence boundary.</strong> No first-load browser experiment.</p>
+<h2>15. Scope limits clients</h2>
+<p>Scope limits which clients can be controlled. Scope is not a general authorisation rule for application data.</p>
+<p><strong>Evidence boundary.</strong> No scope registration observed.</p>
+<h2>16. Interception should be narrow</h2>
+<p>Interception should be narrow: method, origin, path and message schema each need explicit policy.</p>
+<p><strong>Evidence boundary.</strong> No fetch interception or cache event executed.</p>
+<h2>17. Worked example — Service Worker scope decision</h2>
+<p>The exact example demonstrates registration and messaging, but its controller-or-active selection does not prove the stated direct first-load branch.</p>
+<p><strong>Evidence boundary.</strong> Source/code discrepancy retained and explained.</p>
+<h2>18. Caching is a separate design</h2>
+<p>Caching is a separate design involving freshness, versioning, failure, storage and eviction. Registration alone does not provide an offline product.</p>
+<p><strong>Evidence boundary.</strong> No Cache API execution.</p>
+<h2>19. Delete only owned caches</h2>
+<p>Delete only caches owned by the current application namespace and version. Broad deletion is destructive across unrelated features.</p>
+<p><strong>Evidence boundary.</strong> Fixed policy model only.</p>
+<h2>20. Controller replacement affects pending work</h2>
+<p>Controller replacement can strand pending work. Retry, rejection or replay must be an explicit protocol choice.</p>
+<p><strong>Evidence boundary.</strong> No controllerchange event observed.</p>
+<h2>21. Offline is a product claim</h2>
+<p>Offline is a product claim with defined routes, assets and fallbacks. One cached shell cannot establish it.</p>
+<p><strong>Evidence boundary.</strong> No offline acceptance.</p>
+<h2>22. <code>postMessage</code> is transport, not trust</h2>
+<p>postMessage transports data. Trust still requires origin, exact source, protocol version, message type and payload schema.</p>
+<p><strong>Evidence boundary.</strong> Derived gate model, not browser messaging.</p>
+<h2>23. Window messages need exact origin and source</h2>
+<p>For Window messages, origin checks the document location and source checks the exact Window. The canonical decoy is same-origin, so it mainly proves wrong-source rejection.</p>
+<p><strong>Evidence boundary.</strong> No distinct cross-origin sender was run.</p>
+<h2>24. Send with exact target origin</h2>
+<p>Send with an exact target origin. A wildcard destination should not be a convenience default for privileged messages.</p>
+<p><strong>Evidence boundary.</strong> No native postMessage call.</p>
+<h2>25. Worked example — message contract gate</h2>
+<p>The exact gate accepts a minimal trusted intent and discards sender claims. Its itemId validation is type-only and has no explicit length or format bound.</p>
+<p><strong>Evidence boundary.</strong> Exact source anchor plus bounded comparator.</p>
+<h2>26. Origin is not user authorisation</h2>
+<p>Origin is not user authorisation. It identifies a document origin, not an authenticated principal or permission decision.</p>
+<p><strong>Evidence boundary.</strong> No identity provider or session.</p>
+<h2>27. Iframes isolate document/global/navigation</h2>
+<p>An iframe isolates document, global object and navigation. Isolation also introduces coordination, readiness and recovery costs.</p>
+<p><strong>Evidence boundary.</strong> No iframe rendered.</p>
+<h2>28. The parent shell owns cross-fragment state</h2>
+<p>The parent shell owns state shared across fragments and should accept only typed intents rather than arbitrary child mutation.</p>
+<p><strong>Evidence boundary.</strong> Composition model only.</p>
+<h2>29. Readiness is protocol state</h2>
+<p>Readiness is protocol state. A frame document can exist before it is ready to receive a command.</p>
+<p><strong>Evidence boundary.</strong> No frame load or ready event observed.</p>
+<h2>30. Replacement creates a generation</h2>
+<p>Replacement creates a new generation. Late messages from an old document must not activate or consume current state.</p>
+<p><strong>Evidence boundary.</strong> Generation does not replace origin validation.</p>
+<h2>31. Worked example — frame generation gate</h2>
+<p>The exact example demonstrates current-generation readiness. It checks source and generation, but not event.origin.</p>
+<p><strong>Evidence boundary.</strong> Generation-only example, not a complete trust gate.</p>
+<h2>32. Composition has organisational cost</h2>
+<p>Composition increases operational, testing and ownership costs. It needs an organisational reason, not only a technical possibility.</p>
+<p><strong>Evidence boundary.</strong> No multi-origin system is deployed.</p>
+<h2>33. Use composition only for real ownership/isolation</h2>
+<p>Use composition when ownership or isolation requirements justify it. Prefer a simpler single application when they do not.</p>
+<p><strong>Evidence boundary.</strong> Decision framework, not a universal ban.</p>
+<h2>34. Lifecycle ownership is correctness</h2>
+<p>Lifecycle ownership is correctness: listeners, pending requests, frames, workers and generations need terminal cleanup.</p>
+<p><strong>Evidence boundary.</strong> No browser resource counts measured.</p>
+<h2>Project roles for Week 13</h2>
+<div class="rc10-historical-reference"><p class="rc10-historical-scope"><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S13 task list and evidence route</a>.</p><table>
+<thead><tr><th>Object</th><th>Active role</th><th>Required contribution</th><th>Not silently required</th></tr></thead><tbody>
+<tr><td>P01 Worker Offload</td><td>Central implementation</td><td>Complete <code>student/src/worker-client.js</code> and lifecycle evidence</td><td>Browser responsiveness inferred from a fake worker</td></tr>
+<tr><td>P02 Service Worker Request Dispatcher</td><td>Guided demonstration</td><td>Registered, ready, controlled and direct-path trace</td><td>Full Service Worker implementation in S13</td></tr>
+<tr><td>P03 Composable Shell</td><td>Optional advanced</td><td>Architecture discussion when relevant</td><td>Multi-origin deployment or hidden marking criterion</td></tr>
+<tr><td>U14-P01 Regression Harness</td><td>Required portfolio launch</td><td>Package identity, target behaviour, initial matrix, one mutation candidate and outstanding work</td><td>Completion in the five-minute hand-off</td></tr>
+</tbody></table></div>
+<h2>Source-specific limits to retain</h2>
+<ol>
+<li>Storage API access errors are distinct from JSON parsing and record validation.</li>
+<li>The clone example is a one-request clone boundary, not a complete Worker protocol.</li>
+<li>The Service Worker example can message <code>registration.active</code> even when the page has no controller.</li>
+<li>The message-gate decoy is same-origin and mainly demonstrates wrong-source rejection.</li>
+<li>The generation example checks source and generation, not origin.</li>
+<li><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S13 task list and evidence route</a>. P01 has documented factory/ID failure, worker recovery, ID reuse, terminal schema and cancellation limits.</li>
+<li><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S13 task list and evidence route</a>. P02 has sticky registration failure, ID reuse, post-dispose fallback and payload-schema limits.</li>
+<li><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S13 task list and evidence route</a>. P03 does not enforce the declared outbound allowlist and lacks duplicate-intent, per-type schema and async generation guards.</li>
+<li><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S13 task list and evidence route</a>. Regression Harness is launched in S13 and completed before S14; its tests are not executed in C13.</li>
+</ol>
+<h2>Evidence ladder</h2>
+<table>
+<thead><tr><th>Class</th><th>What it can support</th><th>What it cannot support</th></tr></thead><tbody>
+<tr><td>Source identity</td><td>Exact bytes and contract wording</td><td>Runtime behaviour</td></tr>
+<tr><td>Pure JavaScript/helper</td><td>Deterministic transformation and finite-state results</td><td>Worker, Service Worker or browser semantics</td></tr>
+<tr><td>Fake endpoint or event</td><td>Protocol behaviour under the declared fake</td><td>Native scheduling, navigation or origin topology</td></tr>
+<tr><td>Real browser run</td><td>Behaviour in one qualified environment</td><td>Universal compatibility or production reliability</td></tr>
+<tr><td>Platform acceptance</td><td>Native interaction and document behaviour</td><td>Security or correctness beyond the tested scope</td></tr>
+</tbody></table>
+<h2>Final retrieval</h2>
+<p>Before leaving C13, record one owner, one lifecycle invariant, one actual or pending witness and one untested boundary. Stop at minute 60. The reserved 30 minutes are not overflow.</p></article></main><footer>60-minute content limit. Source, model, browser and platform evidence remain distinct.</footer></body></html>

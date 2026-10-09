@@ -1,14 +1,13 @@
-# Previous releases
+# Previous editions
 
-The `main` branch contains the current classroom collection derived from version **3.0.0**. Previous collections are available through GitHub releases, tags and Git history rather than duplicated in the current tree.
+The current repository contains the updated 3.0.0 materials in the original directory organisation. Keep editions in separate extracted folders.
 
-- [Current stable classroom edition 3.0.0](https://github.com/antonioclim/WebTech_ASE/releases/tag/classroom-en-gb-v3.0.0)
-- [Previous LOCAL3 prerelease](https://github.com/antonioclim/WebTech_ASE/releases/tag/classroom-en-gb-v3.0.0-rc.10-local.3)
-- [Previous LOCAL2 prerelease](https://github.com/antonioclim/WebTech_ASE/releases/tag/classroom-en-gb-v3.0.0-rc.10-local.2)
-- [Previous RC10 prerelease](https://github.com/antonioclim/WebTech_ASE/releases/tag/classroom-en-gb-v3.0.0-rc.10)
-- [All releases](https://github.com/antonioclim/WebTech_ASE/releases)
-- [All tags](https://github.com/antonioclim/WebTech_ASE/tags)
+| Edition | Exact preserved content |
+| --- | --- |
+| [Published 3.0.0](https://github.com/antonioclim/WebTech_ASE/releases/tag/classroom-en-gb-v3.0.0) | Frozen named classroom and static assets; their layout and identities differ from the current repository |
+| [2.1.0 archive snapshot](https://github.com/antonioclim/WebTech_ASE/tree/archive/v2.1.0-original) | Complete original 14-week repository before collection remediation, commit `1850118b3f619b233f89941802212fe59d8d5dfe` |
+| [2.2.0 archive snapshot](https://github.com/antonioclim/WebTech_ASE/tree/archive/v2.2.0-before-pr40) | Exact repository immediately before PR #40, commit `4901aa0d543e61157ba8f54b0166c42ef9f6ebf7` |
 
-Choose the named attached classroom or static asset for that edition. GitHub’s automatic source-code archives represent the tagged repository and can differ from the named teaching distribution. Keep editions in separate folders.
+The two archival numbers are retrospective labels. The snapshots' internal files, earlier version labels and qualification status are preserved. Their exact commits remain usable independently of release publication. See [all published releases](https://github.com/antonioclim/WebTech_ASE/releases) for availability; publication of the new archival release entries is a separate owner step. A GitHub source ZIP at the archival tag preserves the whole historical repository.
 
-Published archive identities remain attached to their original editions. Current repository cleanup creates a distinct working-copy identity; it does not replace release assets or move existing tags. Earlier tests and acceptance evidence retain their original scope.
+Existing tags, releases and attached teaching assets are preserved. The current checkout does not replace or relabel those published payloads.

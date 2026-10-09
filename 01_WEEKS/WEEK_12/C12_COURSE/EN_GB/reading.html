@@ -1,0 +1,231 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>C12 — handout</title><link rel="stylesheet" href="assets/theme.css"></head><body><a class="skip" href="#main">Skip to content</a><header><div class="brand">WEB TECHNOLOGIES · ASE · C12</div><p>Realtime Communication and Asynchronous Work · WIP/PREVIEW</p></header><nav class="links" aria-label="Material navigation"><a href="index.html">Start</a><a href="course.html">Course</a><a href="reading.html">Handout</a><a href="lab.html">Model lab</a><a href="preparation.html">Preparation</a><a href="sources.html">Sources</a></nav><main id="main"><section class="rc10-current-transfer" id="rc10-current-transfer" aria-labelledby="rc10-transfer-title"><h2 id="rc10-transfer-title">Current S12 classroom transfer</h2><p>Each student completes all 3 listed microprojects individually in class. Each project is a bounded task with its own editable target, rather than completion of the retained full application.</p><table><thead><tr><th scope="col">ID</th><th scope="col">Current project</th><th scope="col">Editable path from the seminar package root</th></tr></thead><tbody><tr><td>P01</td><td>HTTP/WebSocket: recipient ownership</td><td><code>CLASSROOM_RC6/student/p01.mjs</code></td></tr><tr><td>P02</td><td>Queue: terminal state does not regress</td><td><code>CLASSROOM_RC6/student/p02.mjs</code></td></tr><tr><td>P03</td><td>Dispatcher: correlation and single settlement</td><td><code>CLASSROOM_RC6/student/p03.mjs</code></td></tr></tbody></table><p><a href="../../S12_SEMINAR/index.html">Current S12 entry</a> · <a href="../../S12_SEMINAR/TUTORIAL.html">Step-by-step tutorial</a> · <a href="../../S12_SEMINAR/EN_GB/CLASSROOM_RC6/EVIDENCE_FORM.html">Current evidence form</a></p><p>Open the current entry, follow the tutorial, preserve the protected support files and run the stated target checks. Record actual starting and repaired outcomes, including any blocked or unexecuted check. Use the current evidence form for all listed projects, export one PDF, review the saved pages and filename and upload that reviewed PDF to the corresponding private Moodle Assignment. A failed or blocked check is not a PASS.</p><p>Historical full applications below remain optional advanced references. Reused IDs do not make their old contracts, paths, portfolios, timing estimates or mark statements current assessment rules. The actual Assignment supplies dates and assessment policy; this course makes no completion-time or mark guarantee.</p></section><article class="document"><h1>C12 — Realtime Communication and Asynchronous Work</h1>
+<h2>Purpose and evidence boundary</h2>
+<p>Realtime features and asynchronous jobs are not defined by a library name. They are defined by ownership, lifetime, correlation and terminal evidence. This handout follows the exact Unit 12 source headings while applying the approved 60-minute route. It distinguishes source reading, deterministic JavaScript models, real protocol execution and platform acceptance.</p>
+<p>The organising question is: <strong>Who accepts work, who executes it, who owns the later result, which identifier binds the lifecycle and what terminal evidence proves cleanup?</strong></p>
+<h2>The five-owner map</h2>
+<table>
+<thead>
+<tr>
+  <th>Boundary</th>
+  <th>Primary owner</th>
+  <th>Minimum evidence</th>
+  <th>Typical overclaim</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Acceptance</td>
+  <td>HTTP/API layer</td>
+  <td>validation, authorisation and successful enqueue/schedule</td>
+  <td>treating 202 as completion</td>
+</tr>
+<tr>
+  <td>Execution</td>
+  <td>worker or calculation adapter</td>
+  <td>actual start, progress and terminal outcome</td>
+  <td>assuming queue acceptance means execution</td>
+</tr>
+<tr>
+  <td>Projection</td>
+  <td>application state layer</td>
+  <td>owner-scoped monotonic state</td>
+  <td>exposing queue internals as public truth</td>
+</tr>
+<tr>
+  <td>Delivery</td>
+  <td>event channel/dispatcher</td>
+  <td>trusted recipient and correlation ID</td>
+  <td>broadcasting private results</td>
+</tr>
+<tr>
+  <td>Cleanup</td>
+  <td>component that created the resource</td>
+  <td>pending/listener/timer/client counts return to zero/closed</td>
+  <td>settling the promise but leaking resources</td>
+</tr>
+</tbody>
+</table>
+<h2>1. HTTP request/response has one response</h2>
+<p>A request/response exchange has one response. Holding it open for unrelated long work ties resource lifetime to a transport that may disconnect, retry or time out.</p>
+<p><strong>Evidence boundary.</strong> This topic is taught from the exact source, a named fixed model or a bounded helper. It is not a claim of Express, Redis, BullMQ, WebSocket, browser or platform execution unless a later qualification record explicitly says so.</p>
+<h2>2. Polling asks repeatedly</h2>
+<p>Polling repeats an observation request. It is simple and reconnect-friendly, but its interval governs both delay and request volume.</p>
+<p><strong>Evidence boundary.</strong> This topic is taught from the exact source, a named fixed model or a bounded helper. It is not a claim of Express, Redis, BullMQ, WebSocket, browser or platform execution unless a later qualification record explicitly says so.</p>
+<h2>3. Worked example — polling versus push timeline</h2>
+<p>The canonical timeline illustrates the trade-off between frequent polling and a push channel. It omits real network, reconnect and backpressure costs.</p>
+<p><strong>Evidence boundary.</strong> This topic is taught from the exact source, a named fixed model or a bounded helper. It is not a claim of Express, Redis, BullMQ, WebSocket, browser or platform execution unless a later qualification record explicitly says so.</p>
+<h2>4. SSE is one-way server push</h2>
+<p>Server-sent events provide one-way server push over HTTP semantics. They fit progress and notifications when commands remain ordinary HTTP requests.</p>
+<p><strong>Evidence boundary.</strong> This topic is taught from the exact source, a named fixed model or a bounded helper. It is not a claim of Express, Redis, BullMQ, WebSocket, browser or platform execution unless a later qualification record explicitly says so.</p>
+<h2>5. WebSockets are bidirectional</h2>
+<p>WebSockets provide a bidirectional message channel. The capability is useful only when the application accepts the extra lifecycle, validation and routing duties.</p>
+<p><strong>Evidence boundary.</strong> This topic is taught from the exact source, a named fixed model or a bounded helper. It is not a claim of Express, Redis, BullMQ, WebSocket, browser or platform execution unless a later qualification record explicitly says so.</p>
+<h2>6. Choose from required behaviour</h2>
+<p>Choose a transport from direction, update frequency, latency, replay, reconnect, infrastructure and client support. Novelty is not a requirement.</p>
+<p><strong>Evidence boundary.</strong> This topic is taught from the exact source, a named fixed model or a bounded helper. It is not a claim of Express, Redis, BullMQ, WebSocket, browser or platform execution unless a later qualification record explicitly says so.</p>
+<h2>7. A socket is transient</h2>
+<p>A socket is transient. It can be replaced, closed or moved between processes, so it must not be treated as durable user identity.</p>
+<p><strong>Evidence boundary.</strong> This topic is taught from the exact source, a named fixed model or a bounded helper. It is not a claim of Express, Redis, BullMQ, WebSocket, browser or platform execution unless a later qualification record explicitly says so.</p>
+<h2>8. Registry keys need compound identity</h2>
+<p>A registry key must bind trusted principal identity and client connection identity without ambiguous concatenation.</p>
+<p><strong>Evidence boundary.</strong> This topic is taught from the exact source, a named fixed model or a bounded helper. It is not a claim of Express, Redis, BullMQ, WebSocket, browser or platform execution unless a later qualification record explicitly says so.</p>
+<h2>9. Reconnect replaces one exact connection</h2>
+<p>Reconnect replaces one exact connection. Late cleanup from the old instance must be conditional on registry identity.</p>
+<p><strong>Evidence boundary.</strong> This topic is taught from the exact source, a named fixed model or a bounded helper. It is not a claim of Express, Redis, BullMQ, WebSocket, browser or platform execution unless a later qualification record explicitly says so.</p>
+<h2>10. Worked example — connection registry trace</h2>
+<p>The exact example demonstrates registry replacement and cleanup, but its header-derived fixture identity and delimiter key are deliberately limited.</p>
+<p><strong>Evidence boundary.</strong> This topic is taught from the exact source, a named fixed model or a bounded helper. It is not a claim of Express, Redis, BullMQ, WebSocket, browser or platform execution unless a later qualification record explicitly says so.</p>
+<h2>11. Delivery must be targeted</h2>
+<p>Private results require targeted delivery. Broadcast plus client-side filtering is not a valid confidentiality or correlation strategy.</p>
+<p><strong>Evidence boundary.</strong> This topic is taught from the exact source, a named fixed model or a bounded helper. It is not a claim of Express, Redis, BullMQ, WebSocket, browser or platform execution unless a later qualification record explicitly says so.</p>
+<h2>12. Single-process registries have a scaling boundary</h2>
+<p>A process-local registry does not automatically work across multiple server instances. Shared routing or explicit sticky ownership is separate architecture.</p>
+<p><strong>Evidence boundary.</strong> This topic is taught from the exact source, a named fixed model or a bounded helper. It is not a claim of Express, Redis, BullMQ, WebSocket, browser or platform execution unless a later qualification record explicitly says so.</p>
+<h2>13. <code>202 Accepted</code> is not success completion</h2>
+<p>HTTP 202 is deliberately noncommittal. It acknowledges acceptance for processing and cannot report eventual success.</p>
+<p><strong>Evidence boundary.</strong> This topic is taught from the exact source, a named fixed model or a bounded helper. It is not a claim of Express, Redis, BullMQ, WebSocket, browser or platform execution unless a later qualification record explicitly says so.</p>
+<h2>14. Enqueue before accepting</h2>
+<p>Validation, authorisation and successful enqueue precede acceptance. A queue error must not produce false 202 metadata.</p>
+<p><strong>Evidence boundary.</strong> This topic is taught from the exact source, a named fixed model or a bounded helper. It is not a claim of Express, Redis, BullMQ, WebSocket, browser or platform execution unless a later qualification record explicitly says so.</p>
+<h2>15. Worked example — accepted job contract</h2>
+<p>The example emits an opaque job identifier and Location but omits the corresponding status GET route; teach the boundary honestly.</p>
+<p><strong>Evidence boundary.</strong> This topic is taught from the exact source, a named fixed model or a bounded helper. It is not a claim of Express, Redis, BullMQ, WebSocket, browser or platform execution unless a later qualification record explicitly says so.</p>
+<h2>16. Queue separates producer and worker</h2>
+<p>A queue separates the producer that accepts work from the worker that performs it. Each layer owns different failure and cleanup paths.</p>
+<p><strong>Evidence boundary.</strong> This topic is taught from the exact source, a named fixed model or a bounded helper. It is not a claim of Express, Redis, BullMQ, WebSocket, browser or platform execution unless a later qualification record explicitly says so.</p>
+<h2>17. Job payloads should be minimal</h2>
+<p>Minimal payloads reduce leakage and stale authority. Put identifiers and required inputs in a job, not session tokens or entire user profiles.</p>
+<p><strong>Evidence boundary.</strong> This topic is taught from the exact source, a named fixed model or a bounded helper. It is not a claim of Express, Redis, BullMQ, WebSocket, browser or platform execution unless a later qualification record explicitly says so.</p>
+<h2>18. Workers own processing, not HTTP</h2>
+<p>The worker owns processing and returns a result to the queue system. It does not own the original HTTP response object.</p>
+<p><strong>Evidence boundary.</strong> This topic is taught from the exact source, a named fixed model or a bounded helper. It is not a claim of Express, Redis, BullMQ, WebSocket, browser or platform execution unless a later qualification record explicitly says so.</p>
+<h2>19. Retries require idempotency reasoning</h2>
+<p>Retries can repeat execution. Idempotency or transaction design is required for business effects that must not be duplicated.</p>
+<p><strong>Evidence boundary.</strong> This topic is taught from the exact source, a named fixed model or a bounded helper. It is not a claim of Express, Redis, BullMQ, WebSocket, browser or platform execution unless a later qualification record explicitly says so.</p>
+<h2>20. Public state is a projection</h2>
+<p>Public job state is an application projection. It should hide queue internals and expose stable owner-scoped states and sanitised outcomes.</p>
+<p><strong>Evidence boundary.</strong> This topic is taught from the exact source, a named fixed model or a bounded helper. It is not a claim of Express, Redis, BullMQ, WebSocket, browser or platform execution unless a later qualification record explicitly says so.</p>
+<h2>21. Progress must be monotonic</h2>
+<p>Progress should be monotonic and terminal states stable. The audited reference also republishes equal progress, which is distinct from regression.</p>
+<p><strong>Evidence boundary.</strong> This topic is taught from the exact source, a named fixed model or a bounded helper. It is not a claim of Express, Redis, BullMQ, WebSocket, browser or platform execution unless a later qualification record explicitly says so.</p>
+<h2>22. Worked example — BullMQ job lifecycle</h2>
+<p>The BullMQ example is a source anchor with a real dependency graph, but Redis, BullMQ and its integration path are not executed in this package.</p>
+<p><strong>Evidence boundary.</strong> This topic is taught from the exact source, a named fixed model or a bounded helper. It is not a claim of Express, Redis, BullMQ, WebSocket, browser or platform execution unless a later qualification record explicitly says so.</p>
+<h2>23. Owner scope protects results</h2>
+<p>Job results must be owner-scoped. Unknown or other-owner identifiers should be concealed according to policy.</p>
+<p><strong>Evidence boundary.</strong> This topic is taught from the exact source, a named fixed model or a bounded helper. It is not a claim of Express, Redis, BullMQ, WebSocket, browser or platform execution unless a later qualification record explicitly says so.</p>
+<h2>24. Close queues, workers and Redis clients</h2>
+<p>Queues, workers, event listeners and Redis clients require explicit closure. Resource counts are part of correctness.</p>
+<p><strong>Evidence boundary.</strong> This topic is taught from the exact source, a named fixed model or a bounded helper. It is not a claim of Express, Redis, BullMQ, WebSocket, browser or platform execution unless a later qualification record explicitly says so.</p>
+<h2>25. One channel carries many replies</h2>
+<p>A shared channel carries many replies, so every request needs an opaque correlation identifier.</p>
+<p><strong>Evidence boundary.</strong> This topic is taught from the exact source, a named fixed model or a bounded helper. It is not a claim of Express, Redis, BullMQ, WebSocket, browser or platform execution unless a later qualification record explicitly says so.</p>
+<h2>26. Install pending state before sending</h2>
+<p>Install pending state before sending. Otherwise a synchronous or extremely fast response can arrive before the caller is registered.</p>
+<p><strong>Evidence boundary.</strong> This topic is taught from the exact source, a named fixed model or a bounded helper. It is not a claim of Express, Redis, BullMQ, WebSocket, browser or platform execution unless a later qualification record explicitly says so.</p>
+<h2>27. Pending entries own terminal resources</h2>
+<p>A pending entry owns resolve/reject callbacks, timeout state, abort cleanup and the expected result type.</p>
+<p><strong>Evidence boundary.</strong> This topic is taught from the exact source, a named fixed model or a bounded helper. It is not a claim of Express, Redis, BullMQ, WebSocket, browser or platform execution unless a later qualification record explicitly says so.</p>
+<h2>28. Correlation selects the promise</h2>
+<p>Correlation selects the promise. Arrival order is irrelevant once the message carries the correct request identifier.</p>
+<p><strong>Evidence boundary.</strong> This topic is taught from the exact source, a named fixed model or a bounded helper. It is not a claim of Express, Redis, BullMQ, WebSocket, browser or platform execution unless a later qualification record explicitly says so.</p>
+<h2>29. Worked example — correlated dispatcher</h2>
+<p>The canonical dispatcher demonstrates reversed replies and ignored late unknown messages, but it has documented close and ID-reuse limits.</p>
+<p><strong>Evidence boundary.</strong> This topic is taught from the exact source, a named fixed model or a bounded helper. It is not a claim of Express, Redis, BullMQ, WebSocket, browser or platform execution unless a later qualification record explicitly says so.</p>
+<h2>30. Failure has many terminal paths</h2>
+<p>Remote failure, local send failure, timeout, abort, transport close and disposal are different terminal paths with one cleanup invariant.</p>
+<p><strong>Evidence boundary.</strong> This topic is taught from the exact source, a named fixed model or a bounded helper. It is not a claim of Express, Redis, BullMQ, WebSocket, browser or platform execution unless a later qualification record explicitly says so.</p>
+<h2>31. Timeout is not remote cancellation</h2>
+<p>A timeout stops local waiting. It does not cancel remote work unless the protocol defines and confirms cancellation.</p>
+<p><strong>Evidence boundary.</strong> This topic is taught from the exact source, a named fixed model or a bounded helper. It is not a claim of Express, Redis, BullMQ, WebSocket, browser or platform execution unless a later qualification record explicitly says so.</p>
+<h2>32. Transport close rejects all pending work</h2>
+<p>Transport close must reject all current pending work. Whether future dispatch is allowed needs an explicit state policy.</p>
+<p><strong>Evidence boundary.</strong> This topic is taught from the exact source, a named fixed model or a bounded helper. It is not a claim of Express, Redis, BullMQ, WebSocket, browser or platform execution unless a later qualification record explicitly says so.</p>
+<h2>33. Disposal is idempotent</h2>
+<p>Dispose should be idempotent, unsubscribe global listeners, reject pending requests, clear resources and refuse new work.</p>
+<p><strong>Evidence boundary.</strong> This topic is taught from the exact source, a named fixed model or a bounded helper. It is not a claim of Express, Redis, BullMQ, WebSocket, browser or platform execution unless a later qualification record explicitly says so.</p>
+<h2>34. Instrument lifecycle counts</h2>
+<p>Instrument pending entries, listeners, timers, connections, queue clients and workers. Each success or failure path should return owned resources to zero or closed.</p>
+<p><strong>Evidence boundary.</strong> This topic is taught from the exact source, a named fixed model or a bounded helper. It is not a claim of Express, Redis, BullMQ, WebSocket, browser or platform execution unless a later qualification record explicitly says so.</p>
+<h2>Project roles for Week 12</h2>
+<div class="rc10-historical-reference"><p class="rc10-historical-scope"><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S12 task list and evidence route</a>.</p><table>
+<thead>
+<tr>
+  <th>Project</th>
+  <th>Active role</th>
+  <th>What is required</th>
+  <th>What is not silently required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>P01 HTTP to WebSocket Reply</td>
+  <td>Guided demonstration</td>
+  <td>Trace HTTP acceptance, registered recipient, targeted result and cleanup limit</td>
+  <td>Full implementation in the S12 hour</td>
+</tr>
+<tr>
+  <td>P02 Queued Job Runner</td>
+  <td>Optional advanced</td>
+  <td>Use only in a separately qualified Redis/BullMQ environment</td>
+  <td>Installation, container start or a hidden marking criterion</td>
+</tr>
+<tr>
+  <td>P03 Correlated Request Dispatcher</td>
+  <td>Central implementation</td>
+  <td>Complete <code>student/src/request-dispatcher.mjs</code> and terminal-path evidence</td>
+  <td>Editing support files or claiming real WebSocket execution from a fake transport</td>
+</tr>
+</tbody>
+</table></div>
+<h2>Source-specific limits to retain</h2>
+<ol>
+<li>The connection-registry example uses a colon-delimited key and a header-derived identity fixture.</li>
+<li>The accepted-job example has a Location value but no corresponding GET status route.</li>
+<li>The BullMQ example can write <code>queued</code> after awaited queue work has already emitted another event.</li>
+<li><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S12 task list and evidence route</a>. P01 permits duplicate request IDs to overwrite pending ownership and does not remove pending work on disconnect.</li>
+<li><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S12 task list and evidence route</a>. P02 republishes equal progress, accepts completion directly from queued and accepts an incomplete result shape.</li>
+<li><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S12 task list and evidence route</a>. P03 rejects simultaneous duplicate IDs but permits reuse after settlement, does not close itself on transport close and allows <code>nextId</code> to throw synchronously.</li>
+<li><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S12 task list and evidence route</a>. The P03 specification names <code>.js</code>; the actual assessed path is <code>.mjs</code>. Use the actual path.</li>
+</ol>
+<p>These findings are not permission to weaken tests or to present every deployment as broken. They define the claims that require evidence.</p>
+<h2>Evidence ladder</h2>
+<table>
+<thead>
+<tr>
+  <th>Class</th>
+  <th>What it can support</th>
+  <th>What it cannot support</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Source identity</td>
+  <td>exact bytes and contract wording</td>
+  <td>runtime behaviour</td>
+</tr>
+<tr>
+  <td>Pure JavaScript/helper</td>
+  <td>deterministic transformation or state result</td>
+  <td>library, network or browser semantics</td>
+</tr>
+<tr>
+  <td>Fake transport</td>
+  <td>correlation and cleanup under the fake contract</td>
+  <td>native WebSocket behaviour</td>
+</tr>
+<tr>
+  <td>Real protocol loopback</td>
+  <td>actual implementation behaviour on one qualified environment</td>
+  <td>distributed reliability or production topology</td>
+</tr>
+<tr>
+  <td>Browser/platform acceptance</td>
+  <td>focus, reconnect, address-bar or native document behaviour</td>
+  <td>universal compatibility</td>
+</tr>
+</tbody>
+</table>
+<h2>Final retrieval</h2>
+<p>Before leaving C12, write one sentence for each item: owner, correlation/lifecycle invariant, actual witness and untested boundary. Stop at minute 60. The reserved 30 minutes are not overflow.</p>
+</article></main><footer>60-minute content limit. Source, model, protocol and platform evidence remain distinct.</footer></body></html>

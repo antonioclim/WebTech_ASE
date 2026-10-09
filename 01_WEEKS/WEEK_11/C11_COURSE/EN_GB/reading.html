@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html lang="en-GB"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><title>C11 — complete handout</title><link href="assets/theme.css" rel="stylesheet"/><style>table th:first-child, table td:first-child {min-width:64px;white-space:nowrap;} @media print {table td,table th{padding:6px;} }</style></head><body><a class="skip" href="#main">Skip to content</a><header><div class="brand">WEB TECHNOLOGIES · ASE · C11</div><p>Authentication, Authorisation and Web Security · WIP/PREVIEW</p></header><main id="main"><section class="rc10-current-transfer" id="rc10-current-transfer" aria-labelledby="rc10-transfer-title"><h2 id="rc10-transfer-title">Current S11 classroom transfer</h2><p>Each student completes all 3 listed microprojects individually in class. Each project is a bounded task with its own editable target, rather than completion of the retained full application.</p><table><thead><tr><th scope="col">ID</th><th scope="col">Current project</th><th scope="col">Editable path from the seminar package root</th></tr></thead><tbody><tr><td>P01</td><td>Authentication transfer: trusted principal</td><td><code>CLASSROOM_RC6/student/p01.mjs</code></td></tr><tr><td>P02</td><td>Authorization: owner versus role</td><td><code>CLASSROOM_RC6/student/p02.mjs</code></td></tr><tr><td>P03</td><td>CORS and CSRF: two independent decisions</td><td><code>CLASSROOM_RC6/student/p03.mjs</code></td></tr></tbody></table><p><a href="../../S11_SEMINAR/index.html">Current S11 entry</a> · <a href="../../S11_SEMINAR/TUTORIAL.html">Step-by-step tutorial</a> · <a href="../../S11_SEMINAR/EN_GB/CLASSROOM_RC6/EVIDENCE_FORM.html">Current evidence form</a></p><p>Open the current entry, follow the tutorial, preserve the protected support files and run the stated target checks. Record actual starting and repaired outcomes, including any blocked or unexecuted check. Use the current evidence form for all listed projects, export one PDF, review the saved pages and filename and upload that reviewed PDF to the corresponding private Moodle Assignment. A failed or blocked check is not a PASS.</p><p>Historical full applications below remain optional advanced references. Reused IDs do not make their old contracts, paths, portfolios, timing estimates or mark statements current assessment rules. The actual Assignment supplies dates and assessment policy; this course makes no completion-time or mark guarantee.</p></section><h1>C11 — complete handout</h1><nav aria-label="Material navigation" class="links"><a href="index.html">Start</a><a href="course.html">Course</a><a href="reading.html">Handout</a><a href="lab.html">Model lab</a><a href="preparation.html">Preparation</a><a href="sources.html">Sources</a></nav><article class="document"><h1>C11 — Authentication, Authorisation and Web Security</h1>
+<h2>Reading this handout</h2>
+<p><strong>WIP/PREVIEW.</strong> This is the derived 60-minute C11 course for third-year Economic Informatics. Its primary basis is the 35 numbered topics of canonical Unit 11 and the approved Week 11 architecture. Canonical titles below retain their original wording. Explanatory corrections are identified as derived notes, not silently applied to the sources.</p>
+<p>The organising question is: <strong>Which boundary accepts an identity, operation or representation, who owns that decision and what evidence actually tests it?</strong> Keep transport, authentication, permission, request intent and output handling distinct. A successful result for one boundary does not certify the others.</p>
+<p>The five exact source examples are reading anchors under <code>canonical/</code>. They are not started in this delivery. The offline model lab contains fixed explanatory cases, not an Express application or a security scanner. Predictions and outputs are synthetic learning material; do not present them as your later seminar observations.</p>
+<h2>The 60-minute route</h2>
+<p>00–05: boundary map. 05–16: credentials and sessions. 16–28: moderation policy. 28–36: cookies and origins. 36–45: CORS and CSRF. 45–54: parameters, contexts and configuration. 54–57: defensive review and transfer. 57–60: retrieval and STOP. The three retrieval intermezzos are included in these blocks. The reserved 30 minutes are not overflow or installation time.</p>
+<h3>1. HTTPS protects transport</h3>
+<p>HTTPS is a transport boundary. With successful certificate validation, TLS protects traffic in transit and authenticates the server endpoint to the client. It does not establish an application user or decide whether that user may resolve a report. Describe the certificate/transport observation separately from a policy decision.</p>
+<p>A string in <code>x-forwarded-proto</code> is not a TLS handshake. The canonical support assumes deployment facts that require a separately reviewed proxy topology. Likewise, serialising a <code>Secure</code> cookie attribute does not prove that a browser received it over an authenticated transport. No TLS or proxy test is performed by the offline lab.</p>
+<p><strong>Check:</strong> Which observation would concern transport, rather than permission?</p>
+<p><em>Basis: CAN-01, source lecture line 37; derived scope is in SOURCE_NOTES.md.</em></p>
+<h3>2. Authentication establishes a principal</h3>
+<div class="rc10-historical-reference"><p class="rc10-historical-scope"><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S11 task list and evidence route</a>.</p><p>Authentication produces a principal from a trusted verification path. Treat the principal as the result of checking credentials or resolving server-owned session state, not as a claim copied from a form, hidden input or cookie profile. The identity decision precedes the central P02 policy.</p></div>
+<div class="rc10-historical-reference"><p class="rc10-historical-scope"><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S11 task list and evidence route</a>.</p><p>The canonical lecture example 01 deliberately selects a fixture user by name without password verification. That demonstrates opaque lookup, not a complete login. P01 is the separate capstone source for a password/session boundary. Keep the reduced example and the full project distinct; understanding that boundary does not require completing the entire P01 implementation in the S11 hour.</p></div>
+<p><strong>Check:</strong> Who created the principal, and which trusted data supported it?</p>
+<p><em>Basis: CAN-02, source lecture line 41; derived scope is in SOURCE_NOTES.md.</em></p>
+<h3>3. Passwords require slow salted hashing</h3>
+<p>A password verifier compares a submitted value with a stored record produced by a maintained, slow salted password-hashing construction. A salt distinguishes records; the work parameters make each guess costly. Neither reversible encryption nor a fast unsalted digest is an equivalent storage policy. This is the source lecture’s requirement, not a newly chosen deployment configuration. [R5]</p>
+<p>The phase-1 audit exercised a verifier on a known synthetic record. That historical check did not search for passwords or measure resistance to guessing; this course-production phase does not rerun the password verifier. Work parameters, library provenance and capacity require separate review before deployment. Keep submitted passwords and stored verifier records out of student evidence and logs.</p>
+<p><strong>Check:</strong> Why is a successful verification test not a password-strength measurement?</p>
+<p><em>Basis: CAN-03, source lecture line 45; derived scope is in SOURCE_NOTES.md.</em></p>
+<h3>4. Login failure should not enumerate accounts</h3>
+<p>Unknown account and incorrect password should have the same public failure meaning. A comparable expensive-work path can reduce obvious discrepancies, but equality of the number of verifier calls is not proof of constant-time login behaviour. Storage, parsing and control flow still matter.</p>
+<p>The Node documentation explicitly limits the guarantee of <code>timingSafeEqual</code>: surrounding code can still introduce timing differences. [R4] Record only the asserted result and the check’s actual scope. Do not describe one synthetic comparison or two identical status codes as a distributional timing study. This course includes no timing attack or account enumeration procedure.</p>
+<p><strong>Check:</strong> What could a verifier-call count establish, and what would remain unknown?</p>
+<p><em>Basis: CAN-04, source lecture line 49; derived scope is in SOURCE_NOTES.md.</em></p>
+<h3>5. Session IDs are opaque capabilities</h3>
+<p>An opaque session identifier is a reference to server-owned state, not a readable bundle of trusted role claims. The server maps the reference to a principal and can stop accepting it by removing or expiring that state. The identifier therefore needs careful handling even if it contains no meaningful text. [R1]</p>
+<p>A deterministic identifier generator is useful in a reproducible local test. It is not evidence that a production random generator has sufficient entropy. The lab shows the effect of lookup and invalidation using fixed synthetic events without displaying session identifiers. Do not export real cookies, raw session values or account data when recording evidence.</p>
+<p><strong>Check:</strong> Which side gives an opaque identifier its authority?</p>
+<p><em>Basis: CAN-05, source lecture line 53; derived scope is in SOURCE_NOTES.md.</em></p>
+<h3>6. Rotate and expire sessions</h3>
+<p>Rotation changes the accepted session identity after a relevant authentication or privilege transition. Expiration bounds acceptance on the server; logout invalidates the server record. Clearing a browser cookie is related housekeeping, not a substitute for revocation. [R1]</p>
+<div class="rc10-historical-reference"><p class="rc10-historical-scope"><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S11 task list and evidence route</a>.</p><p>The P01 store has an expiry boundary and explicit invalidation. Its cleanup of expired records is triggered by lookup; do not invent a periodic cleanup worker or a <code>rotate</code> method absent from that source. Login composes invalidation and creation. A pure store check can verify expiry at the boundary, but it cannot demonstrate the browser’s cookie lifecycle or the full login sequence.</p></div>
+<p><strong>Check:</strong> What should happen at exactly the recorded server expiry time?</p>
+<p><em>Basis: CAN-06, source lecture line 57; derived scope is in SOURCE_NOTES.md.</em></p>
+<h3>7. Worked example — session identity trace</h3>
+<p>EX-01 uses a map inside its application factory. After the fixture login, lookup supplies a principal; removing the map entry means the same former identifier no longer resolves. This is the precise mental model the example contributes.</p>
+<p>The example does not check a password or expire the map entry based on time. Its cookie <code>Max-Age</code> is not a server-side expiry implementation. Historical README claims and run commands remain in the exact source copy; they are not results of this delivery. Use the static source explanation and the labelled model now, not a launch of the demonstration as a purported production session service.</p>
+<p><strong>Check:</strong> Name one session property supplied by EX-01 and one it omits.</p>
+<p><em>Basis: CAN-07, source lecture line 61; derived scope is in SOURCE_NOTES.md.</em></p>
+<h3>8. Tokens shift rather than erase state</h3>
+<p>A signed self-contained token changes where some state is represented; it does not remove verification responsibilities. The lecture names expiry, issuer, audience, key management and a revocation strategy as obligations. Signature validity alone is not a permission decision for a specific resource.</p>
+<p>This week does not introduce an external identity provider or a new JWT implementation. The central project already receives a principal from supplied authentication. Keep token architecture as an explanatory contrast with opaque sessions, not an extra implementation hidden in the policy file. A diagram of a token does not count as an executed verifier or a deployment acceptance.</p>
+<p><strong>Check:</strong> Which policy question remains after a token has been verified?</p>
+<p><em>Basis: CAN-08, source lecture line 74; derived scope is in SOURCE_NOTES.md.</em></p>
+<h3>9. Authorization is a separate decision</h3>
+<p>Authorisation asks whether this principal may perform this action on this server-loaded resource. The action is fixed by the route; the resource and principal have separate trusted sources. An authenticated request can still be refused. [R6]</p>
+<div class="rc10-historical-reference"><p class="rc10-historical-scope"><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S11 task list and evidence route</a>.</p><p>For P02, retain the single assessed file <code>src/authorization-policy.js</code>. The supplied route owns its state precondition after allowance. The course explains this decision boundary without providing the complete assessed policy implementation. A check of a callback is evidence about that callback’s result, not proof that Express invoked middleware in the intended order. Record those two classes of evidence separately.</p></div>
+<p><strong>Check:</strong> Which inputs are required beyond a valid identity?</p>
+<p><em>Basis: CAN-09, source lecture line 78; derived scope is in SOURCE_NOTES.md.</em></p>
+<h3>10. Trust server-loaded facts</h3>
+<p>Ownership and resource state come from repository data. Principal identity and role come from authentication. A request body may contain proposed domain data, but it must not redefine these trusted facts. Hidden controls in a user interface are not enforcement.</p>
+<div class="rc10-historical-reference"><p class="rc10-historical-scope"><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S11 task list and evidence route</a>.</p><p>The P02 support uses fixed test sessions and a closed fixture domain. Do not generalise those lookups to arbitrary principal objects or unreviewed role names. The derived S11 support work will document that boundary separately; C11 does not repair authentication in a file the learner is forbidden to edit. Inspect provenance, not merely the attractive name of a property such as <code>ownerId</code>.</p></div>
+<p><strong>Check:</strong> At which boundary would a proposed field acquire trustworthy meaning?</p>
+<p><em>Basis: CAN-10, source lecture line 86; derived scope is in SOURCE_NOTES.md.</em></p>
+<h3>11. Roles should map to permissions</h3>
+<p>A role is meaningful because a central permission policy assigns actions to it. Keep the vocabulary explicit, reviewable and consistent across routes. Do not scatter role-name checks across unrelated handlers or treat an administrator label submitted by a client as authority.</p>
+<div class="rc10-historical-reference"><p class="rc10-historical-scope"><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S11 task list and evidence route</a>.</p><p>The lecture example has a reduced set of fixture principals; it does not instantiate every role named in the lecture prose. Its role checks are inline middleware, not the separate pure policy function announced in the README. The central P02 exercise has its own permission map and contract. Read the supplied map there rather than extrapolating a full matrix from EX-02.</p></div>
+<p><strong>Check:</strong> Why is a role label insufficient without an action and resource?</p>
+<p><em>Basis: CAN-11, source lecture line 90; derived scope is in SOURCE_NOTES.md.</em></p>
+<h3>12. Deny by default</h3>
+<p>Default refusal means that allowance must follow an explicit rule, not an absence of checks. Distinguish an unauthenticated request, a known principal lacking permission and a resource intentionally concealed. The project gives exact response vocabulary for these cases. [R6]</p>
+<p>An unsupported action in the canonical policy raises a configuration <code>TypeError</code> while constructing the middleware. That is distinct from an unexpected loader error forwarded at request time. Do not report an observed HTTP 500 when only the constructor was executed. Preserve the canonical test and explain the mismatch with prose; fail-closed configuration is not accidental permission.</p>
+<p><strong>Check:</strong> How does a construction error differ from an HTTP denial?</p>
+<p><em>Basis: CAN-12, source lecture line 94; derived scope is in SOURCE_NOTES.md.</em></p>
+<h3>13. Worked example — authorization middleware</h3>
+<p>EX-02 combines a trusted fixture principal, repository lookup and route-specific middleware. It illustrates the separation of identity and permission, but its report map belongs to the module rather than to each application factory. It is not evidence of per-factory isolation.</p>
+<div class="rc10-historical-reference"><p class="rc10-historical-scope"><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S11 task list and evidence route</a>.</p><p>For central P02 evidence, measure the policy loader call and the route-continuation call independently. A frozen clone of the flat loaded record is not a transaction or lock. A permitted operation may still fail the supplied state precondition with 409. Keep that result distinct from a permission refusal. No concurrent authorisation/mutation race is executed in this course.</p></div>
+<p><strong>Check:</strong> What does one loader call fail to prove about later mutation?</p>
+<p><em>Basis: CAN-13, source lecture line 98; derived scope is in SOURCE_NOTES.md.</em></p>
+<h3>14. Cookie attributes solve different concerns</h3>
+<p>Cookie attributes answer different questions. <code>HttpOnly</code> restricts ordinary script access to the cookie; <code>Secure</code> constrains transport; <code>SameSite</code> affects cross-site sending. Path, Domain and lifetime scope delivery. None of these attributes grants resource permission. [R1]</p>
+<p>Read the attributes as a contract emitted by the server, then identify what evidence would be needed to observe browser enforcement. A header assertion is not a browser run. The configured same-site policy must match the application’s intended flows; this course does not silently change it or turn one attribute into a universal CSRF control.</p>
+<p><strong>Check:</strong> Which attribute concerns script reading, and which concerns transport?</p>
+<p><em>Basis: CAN-14, source lecture line 117; derived scope is in SOURCE_NOTES.md.</em></p>
+<h3>15. Do not store authority claims in an unsigned cookie</h3>
+<p>A caller-controlled cookie string is not an authenticated role profile. With an opaque-session design, the server resolves identity and role from trusted state. Do not accept a role merely because it arrived inside cookie syntax rather than JSON.</p>
+<p>The example supports this conceptual separation, but its fixture identity mechanism is not complete authentication. Evidence should record whether the principal came from trusted lookup and which boundary was checked; it should not reproduce a raw cookie. Keep any redaction policy separate from the question of whether verification actually happened. A redacted trace can be honest and useful without exposing a credential.</p>
+<p><strong>Check:</strong> Does changing the carrier of a claim make the claim trustworthy?</p>
+<p><em>Basis: CAN-15, source lecture line 121; derived scope is in SOURCE_NOTES.md.</em></p>
+<h3>16. Worked example — session cookie contract</h3>
+<p>EX-03 assembles a header containing an opaque-looking fixed value and selected cookie attributes. The <code>production</code> option adds <code>Secure</code>; it does not configure TLS, sign a session or create server-owned identity. The fixed value is a demonstration fixture.</p>
+<p>The supplied test examines a response header. In this delivery it is preserved as source and is not executed. A separately labelled scalar expression check can examine which attributes are selected without starting Express, but it must not be called an HTTP response observation. Keep configuration, serialisation, server session state and browser behaviour as four different evidence questions.</p>
+<p><strong>Check:</strong> What does the example’s production option actually change?</p>
+<p><em>Basis: CAN-16, source lecture line 125; derived scope is in SOURCE_NOTES.md.</em></p>
+<h3>17. Origin is scheme, host, and port</h3>
+<p>Origin is the tuple of scheme, host and port. Compare the complete origin required by the sharing policy, not a familiar-looking part of a name. The source’s allowlist represents exact accepted origins; it does not admit every site using HTTPS.</p>
+<p>The offline model uses fictional fixed origins solely to illustrate that tuple. It does not send requests, resolve names or probe a service. A pure URL conversion can show which tuple a parser represents, but it cannot establish trust. Trust comes from the application’s reviewed allowlist and deployment contract, not from successful parsing or the visual similarity of names.</p>
+<p><strong>Check:</strong> Can a different port denote a different origin?</p>
+<p><em>Basis: CAN-17, source lecture line 138; derived scope is in SOURCE_NOTES.md.</em></p>
+<h3>18. Same-origin policy limits browser reads</h3>
+<p>The same-origin policy constrains what browser scripts may read across origins. It is not the application’s identity system and should not be treated as a universal guarantee that no cross-origin request reaches a server. [R3]</p>
+<p>Separate request arrival, browser response visibility and permission to mutate a resource. These may have different outcomes for the same interaction. A server-side test using native fetch does not implement a browser’s enforcement model. When browser evidence is unavailable, record that absence rather than inferring it from a response header or a successful callback check.</p>
+<p><strong>Check:</strong> Which part of a cross-origin interaction is the observation about?</p>
+<p><em>Basis: CAN-18, source lecture line 142; derived scope is in SOURCE_NOTES.md.</em></p>
+<h3>19. CORS opts origins into response sharing</h3>
+<p>CORS is a server-selected browser response-sharing policy. It indicates when a script from an allowed origin may read a cross-origin response. It does not replace session verification, resource policy or request-intent checks. [R3]</p>
+<p>The relevant record has distinct fields for the origin, emitted sharing headers, HTTP status and actual browser observation. Some applications refuse an unlisted origin explicitly; a teaching example may instead continue without granting sharing headers. Those are not the same HTTP result. Do not label both as a measured 403, and do not label a missing sharing header as proof of server-side authorisation.</p>
+<p><strong>Check:</strong> What additional field prevents “CORS denied” from becoming ambiguous?</p>
+<p><em>Basis: CAN-19, source lecture line 146; derived scope is in SOURCE_NOTES.md.</em></p>
+<h3>20. Credentialed CORS requires exact matching</h3>
+<p>For credentialed sharing, the source specifies an exact allowed origin rather than wildcard sharing. When the selected response depends on Origin, <code>Vary: Origin</code> communicates that variation to caches. This concerns response selection, not user permission. [R3]</p>
+<div class="rc10-historical-reference"><p class="rc10-historical-scope"><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S11 task list and evidence route</a>.</p><p>EX-04 emits <code>Vary</code> on its allowed branch; the P03 protective reference emits it before branching. The audit records that difference but did not execute a cache. Treat any cache consequence as dependent on the actual deployment and cache rules. The handout does not turn this source observation into a reproduced cache failure or a complete CORS repair.</p></div>
+<p><strong>Check:</strong> Why should the status and the Vary header be recorded separately?</p>
+<p><em>Basis: CAN-20, source lecture line 150; derived scope is in SOURCE_NOTES.md.</em></p>
+<h3>21. Worked example — credentialed CORS policy</h3>
+<p>EX-04 has an allowlist and an OPTIONS branch. For an unlisted origin it can continue without Access-Control-Allow-Origin; this is withholding response sharing, not necessarily returning an HTTP refusal. Its account fixture is not an authenticated production account endpoint.</p>
+<p>The supplied test asserts selected headers. No Express or browser test is run here. A preflight-like header exchange is not approval of the later operation’s principal or permission. Inspect the exact source, then describe the boundary it implements. The S11 reduced CORS task and its own explicit refusal contract are separate from this small course example.</p>
+<p><strong>Check:</strong> Does a 204 from an OPTIONS branch grant permission to mutate?</p>
+<p><em>Basis: CAN-21, source lecture line 154; derived scope is in SOURCE_NOTES.md.</em></p>
+<h3>22. CORS is not authorization</h3>
+<p>A non-browser client is not constrained by browser CORS enforcement. Conversely, a browser being unable to read a response does not by itself establish that a request was never sent or that its side effects were refused. The server still needs its independent security boundaries. [R3]</p>
+<p>In the diagram, keep CORS alongside response sharing rather than placing it in the identity-to-policy chain as a substitute for authentication. The lab offers a fixed classification example, not a request generator. A correct answer should name the missing evidence boundary, not propose broader origin access just to make a demonstration succeed.</p>
+<p><strong>Check:</strong> Which control still owns permission when sharing is granted?</p>
+<p><em>Basis: CAN-22, source lecture line 167; derived scope is in SOURCE_NOTES.md.</em></p>
+<h3>23. CSRF exploits ambient credentials</h3>
+<p>Cookie-authenticated requests may carry credentials by browser behaviour rather than an explicit script-held authorisation header. A state-changing operation therefore needs a deliberate request-intent defence in addition to identity and resource permission. The course explains that risk without executing a cross-site attack.</p>
+<p>The required portfolio selects CORS and CSRF as two distinct classes. A request record must not include raw tokens or cookies. Record a benign accepted check, a benign refused check and the decision boundary, with the actual execution class stated. A token mismatch result from a helper is not proof that a browser or a middleware chain enforced it.</p>
+<p><strong>Check:</strong> Why can valid identity be insufficient for a cookie-authenticated write?</p>
+<p><em>Basis: CAN-23, source lecture line 171; derived scope is in SOURCE_NOTES.md.</em></p>
+<h3>24. CSRF controls compose</h3>
+<p>The source combines intentional cookie policy with a secret, unpredictable session-bound request token and origin checks as defence in depth. Enforcement must occur before a write. A deterministic classroom fixture is not a production secret merely because the comparison succeeds. [R2]</p>
+<div class="rc10-historical-reference"><p class="rc10-historical-scope"><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S11 task list and evidence route</a>.</p><p>P02’s supplied CSRF helper checks its fixture token but does not inspect Origin or Referer. Explain that limit while preserving the learner’s one-file policy boundary. The reduced P03 successor will identify the selected helper work separately. Completing or testing those two helpers must not be reported as acceptance of the original five-class exercise.</p></div>
+<div class="rc10-historical-reference"><p class="rc10-historical-scope"><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S11 task list and evidence route</a>.</p><p><strong>Check:</strong> Which claim about same-origin enforcement is unsupported by P02’s helper?</p></div>
+<p><em>Basis: CAN-24, source lecture line 175; derived scope is in SOURCE_NOTES.md.</em></p>
+<h3>25. Injection occurs when data becomes syntax</h3>
+<p>Preserve query structure by keeping the SQL statement fixed and binding data separately. This is a boundary between instructions and values, not an HTML-escaping problem. An ordinary search term is enough to inspect the query object and its parameter list. [R7]</p>
+<div class="rc10-historical-reference"><p class="rc10-historical-scope"><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S11 task list and evidence route</a>.</p><p>P03’s repository checks a fixed query contract and filters an in-memory array; it does not execute SQL. EX-05 imports sql.js and prepares a statement in source, but that engine remains unexecuted here. Keep parameter-object checks separate from parser, LIKE, ordering and database execution evidence. No injection payload or database attack is generated by the lab.</p></div>
+<p><strong>Check:</strong> What would be necessary before calling a result a SQLite test?</p>
+<p><em>Basis: CAN-25, source lecture line 185; derived scope is in SOURCE_NOTES.md.</em></p>
+<h3>26. XSS depends on output context</h3>
+<p>HTML text, a quoted attribute, a URL and JavaScript source are different destinations. A transformation suitable for one destination is not automatically suitable for another. First identify the exact sink, then choose the corresponding control. [R8]</p>
+<p>The protective functional examples use ordinary text such as an ampersand; they are not exploit demonstrations. The literal-text helper in this package is limited to a text representation and does not claim URL acceptance, HTML sanitisation or JavaScript safety. A successful transformation check is evidence about that function, not proof that every place the application inserts text uses it.</p>
+<p><strong>Check:</strong> Why should the record identify a sink rather than say only “sanitised”?</p>
+<p><em>Basis: CAN-26, source lecture line 189; derived scope is in SOURCE_NOTES.md.</em></p>
+<h3>27. Prefer text APIs for text</h3>
+<p>For content intended as text, a text API such as <code>textContent</code> avoids interpreting that value as markup. Template auto-escaping has its own documented destination contract. Sanitising intentionally accepted HTML is a different problem and is not added to this lesson’s implementation. [R8]</p>
+<p>The offline lab inserts the learner’s prediction as text and provides no HTML-import facility. This is a specific code choice, not universal safety certification. A DOM-model check can reject attempted HTML assignment in the code path under test; focus, rendering and browser APIs remain separate qualification. Keep long predictions bounded and do not paste private data.</p>
+<p><strong>Check:</strong> What interpretation should be avoided when the input is only a label?</p>
+<p><em>Basis: CAN-27, source lecture line 193; derived scope is in SOURCE_NOTES.md.</em></p>
+<h3>28. URL policy is separate from encoding</h3>
+<p>URL acceptance is a policy decision separate from escaping a quoted attribute. An allowed protocol does not establish a permitted origin or a privacy policy for a remote image. Conversely, encoding a value does not grant it URL authority. [R8]</p>
+<p>The canonical helper returns a fallback path for an unsupported value. That path’s string is not proof the corresponding image exists: the audit found missing fallback assets in the relevant sources. This course documents that gap without a browser GET or asset download. Future support can supply a named local asset, but that work must be explicit and independently checked.</p>
+<p><strong>Check:</strong> Which check is missing after a helper returns a fallback filename?</p>
+<p><em>Basis: CAN-28, source lecture line 197; derived scope is in SOURCE_NOTES.md.</em></p>
+<h3>29. Worked example — browser security contexts</h3>
+<p>EX-05 contains source for a parameterised database route and an HTML card route with text handling and URL selection. Read each control alongside its own destination. No one of those controls replaces CORS, CSRF or resource permission.</p>
+<div class="rc10-historical-reference"><p class="rc10-historical-scope"><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S11 task list and evidence route</a>.</p><p>The source tests include historical adversarial inputs; they are preserved for provenance and not run in this course route. Current demonstrations use source inspection and benign protective function checks only. No Express server, sql.js engine or browser is started. Do not describe the P03 array-based repository as equivalent execution merely because both examples discuss queries.</p></div>
+<p><strong>Check:</strong> Which evidence class is different between a prepared object and an executed query?</p>
+<p><em>Basis: CAN-29, source lecture line 201; derived scope is in SOURCE_NOTES.md.</em></p>
+<h3>30. CSP reduces impact</h3>
+<p>Content Security Policy can restrict execution and provide reports when configured appropriately. It is an additional layer, not a substitute for correct output handling or permission checks. The source presents the concept without supplying a complete deployment policy for this application.</p>
+<p>Do not invent a policy header and call it tested. A useful review asks which destinations and execution sources are intended, how the policy fits them and what a real browser observation would need to show. This course does not enable a reporting endpoint, modify a deployment or treat a passed model as evidence that CSP is enforced.</p>
+<p><strong>Check:</strong> What input-handling responsibility remains when CSP is configured?</p>
+<p><em>Basis: CAN-30, source lecture line 214; derived scope is in SOURCE_NOTES.md.</em></p>
+<h3>31. Secrets come from deployment configuration</h3>
+<p>Secrets belong in controlled deployment configuration, not committed fallback values. Missing required configuration should stop the relevant operation rather than silently using a permissive production default. Length validation is a shape check, not a measurement of randomness or entropy.</p>
+<div class="rc10-historical-reference"><p class="rc10-historical-scope"><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S11 task list and evidence route</a>.</p><p>P03 checks a sessionSecret configuration field, but fixture authentication does not use it to sign sessions. The source therefore cannot support a claim that passing configuration validation proves signed-session authentication. Record which component actually consumes each configuration value. No credentials, environment dumps or keys are requested for this course or the later evidence form.</p></div>
+<p><strong>Check:</strong> Which use of a secret must exist before its length check can support an authentication claim?</p>
+<p><em>Basis: CAN-31, source lecture line 218; derived scope is in SOURCE_NOTES.md.</em></p>
+<h3>32. Logs and errors are output boundaries</h3>
+<p>Logs and public errors are output destinations too. Keep credentials, tokens and internal diagnostic detail out of public responses and learning evidence. Stable public categories can be recorded without copying sensitive values. A helpful internal diagnostic need not be emitted to every caller.</p>
+<div class="rc10-historical-reference"><p class="rc10-historical-scope"><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S11 task list and evidence route</a>.</p><p>The P03 source sanitises 500 messages explicitly, while some 4xx messages follow a different route. That is a source boundary to review, not an observed disclosure in this delivery. Do not classify every 4xx as a leak. A future support wrapper can map known public errors separately without silently extending the student’s assessed file.</p></div>
+<p><strong>Check:</strong> Which diagnostic detail is unnecessary in a student’s public outcome record?</p>
+<p><em>Basis: CAN-32, source lecture line 222; derived scope is in SOURCE_NOTES.md.</em></p>
+<h3>33. Review one exploit trace at a time</h3>
+<p>The canonical heading asks for an exploit trace. The approved derived method changes that activity explicitly to static data-flow review: input, trusted source, decision or sink, applicable control and a protective verification plan. No exploit is produced, launched or reported as performed.</p>
+<p>Keep one claim narrow enough to falsify through benign expected-allow and expected-refuse checks on protective code. Preserve a normal positive control; refusing everything is not a complete implementation. Do not weaken controls to manufacture a demonstration or scan third-party systems. This method change is documented rather than concealed under the original activity label.</p>
+<p><strong>Check:</strong> What would make a static finding reviewable without executing an attack?</p>
+<p><em>Basis: CAN-33, source lecture line 226; derived scope is in SOURCE_NOTES.md.</em></p>
+<h3>34. Scanners provide partial evidence</h3>
+<p>A scanner contributes evidence within its configured scope and version. Known-dependency findings, a source scan and a dynamic check have different coverage. None of them alone proves the full authorisation policy or the absence of unknown weaknesses.</p>
+<p>This course performs no dependency installation or live scanner run. The audit’s hash and source checks establish identity and selected properties, not production security. When later evidence is collected, name the tool, input, version, result and untested boundary. A report bearing PASS is not self-authenticating evidence, especially when copied into an unverified draft.</p>
+<p><strong>Check:</strong> Which missing context prevents “the scanner passed” from being a complete claim?</p>
+<p><em>Basis: CAN-34, source lecture line 230; derived scope is in SOURCE_NOTES.md.</em></p>
+<h3>35. AI output requires a threat model</h3>
+<p>Require a model of the asset, input provenance, trusted data, decision owner and enforcement order before accepting a generated security change. Constrain the permitted files and ask for evidence tied to the actual implementation, not a generic promise to make the application secure.</p>
+<p>For the seminar, critique one sanitised claim with a minimal code or trace excerpt. Retain the relevant real Gemini response, independently check it and record ACCEPTED, REJECTED, PARTIALLY ACCEPTED or UNKNOWN with a correction and limit. The course’s synthetic practice claim is not a Gemini conversation. Never submit passwords, cookies, tokens or institutional records for this exercise.</p>
+<p><strong>Check:</strong> What observation would independently challenge the generated claim?</p>
+<p><em>Basis: CAN-35, source lecture line 234; derived scope is in SOURCE_NOTES.md.</em></p>
+<h2>Transfer to S11</h2>
+<div class="rc10-historical-reference"><p class="rc10-historical-scope"><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S11 task list and evidence route</a>.</p><p>P02 is the full central implementation, in <code>student/src/authorization-policy.js</code>. The source estimate is 55–65 minutes; the 18-minute seminar implementation segment does not guarantee completion. P01 is capstone integration, not a second in-class implementation. P03 uses the derived two-class 11.3A route: <strong>CORS and CSRF</strong>. The source prescribes two classes but not which two; this selection belongs to the approved local architecture. The all-five 11.3B route remains advanced follow-up.</p></div>
+<div class="rc10-historical-reference"><p class="rc10-historical-scope"><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S11 task list and evidence route</a>.</p><p>The original P03 starter imports deliberately insecure evidence transitively. Do not launch it as a routine preview. S11 will provide the separately identified reduced successor; that package is not produced in this C11 phase. A selected two-class result cannot be called a pass of the original all-five suite.</p></div>
+<h2>A record that does not overclaim</h2>
+<p>State the input category without secret values, the trusted source, expected protective result, observed result, exact evidence locator and evidence class. SOURCE, PURE_JS, CALLBACK_MODEL and ACTUAL_HTTP are not synonyms. Browser enforcement, TLS and deployment evidence remain separate. A frozen flat snapshot is not a lock; one loader count is not a transaction; a header is not browser behaviour.</p>
+<p>At minute 60, stop. Record unfinished work without declaring acceptance. The later seminar uses one PDF for one private S11 Assignment, not a C11 upload. No deadline, grade or permission to run a service is created by this handout.</p>
+<h2>Qualification boundary</h2>
+<p>Source identity, a pure JavaScript result, a callback substitute, an actual Express request, a SQL-engine run, browser enforcement and TLS are different evidence classes. No application server, SQL, browser or TLS run is performed here. Native Word/platform and Moodle qualification remain separate. No secret or real credential is requested. The next-reading list is preserved at canonical/reading-list-next.md, not implemented by this phase.</p>
+<h1>C11 — Sources and evidence rights</h1>
+<h2>Primary basis</h2>
+<p>The controlling material is canonical Unit 11, its 35 lecture topics, five exact examples and the approved Week 11 architecture. CAN-xx identifies a source topic; EX-xx an exact directory; Mxx a separate fixed model. Public source hashes are in CANONICAL_SOURCES.json. Original spellings and historical README/test/run statements remain exact. The authoring does not convert those statements into new execution evidence.</p>
+<div class="rc10-historical-reference"><p class="rc10-historical-scope"><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S11 task list and evidence route</a>.</p><p>The local design changes the 96-minute source lecture to 60 minutes and changes attack-trace execution to static defensive analysis and benign protective checks. SOURCE_NOTES.md identifies corrections. P02 is central, P01 is capstone integration and the mandatory reduced 11.3A pair is the locally selected CORS/CSRF pair. Source prescribes two classes but not their choice.</p></div>
+<h2>Primary documentation consulted</h2>
+<p>Consulted 30 September 2026 for the bounded interpretations below. These pages do not update or qualify source pins, and do not have journal DOIs. None is invented. Current Node documentation identifies itself as v26.10.0; this is not the runtime used for local checks.</p>
+<div class="rc10-historical-reference"><p class="rc10-historical-scope"><strong>Historical full-application context; implementation is optional advanced reference, outside the current seminar task allocation.</strong> <a href="#rc10-current-transfer">Current S11 task list and evidence route</a>.</p><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>APA-style reference</th>
+<th>Role and limit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R1</td>
+<td><a href="https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html">OWASP Foundation. (n.d.). Session management cheat sheet.</a></td>
+<td>Server-owned session state and expiry; not a browser, transport or entropy test.</td>
+</tr>
+<tr>
+<td>R2</td>
+<td><a href="https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html">OWASP Foundation. (n.d.). Cross-site request forgery prevention cheat sheet.</a></td>
+<td>Request-intent controls and unpredictable session-bound tokens; not execution of the supplied middleware.</td>
+</tr>
+<tr>
+<td>R3</td>
+<td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">MDN contributors. (n.d.). Cross-Origin Resource Sharing (CORS).</a></td>
+<td>Sharing, credentialed origins and Vary; not actual browser or cache evidence.</td>
+</tr>
+<tr>
+<td>R4</td>
+<td><a href="https://nodejs.org/api/crypto.html">Node.js contributors. (n.d.). Crypto.</a></td>
+<td>timingSafeEqual boundary; not timing safety of surrounding login code or a prescribed runtime qualification.</td>
+</tr>
+<tr>
+<td>R5</td>
+<td><a href="https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html">OWASP Foundation. (n.d.). Password storage cheat sheet.</a></td>
+<td>Maintained slow salted constructions; no new work parameters or password attack.</td>
+</tr>
+<tr>
+<td>R6</td>
+<td><a href="https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html">OWASP Foundation. (n.d.). Authorization cheat sheet.</a></td>
+<td>Explicit least-privilege permission and deny-by-default; not the full assessed P02 answer.</td>
+</tr>
+<tr>
+<td>R7</td>
+<td><a href="https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html">OWASP Foundation. (n.d.). SQL injection prevention cheat sheet.</a></td>
+<td>Separate query structure and bound values; no SQL engine execution.</td>
+</tr>
+<tr>
+<td>R8</td>
+<td><a href="https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html">OWASP Foundation. (n.d.). Cross site scripting prevention cheat sheet.</a></td>
+<td>Destination-specific output handling; not universal sanitisation or browser acceptance.</td>
+</tr>
+</tbody>
+</table></div>
+</article></main><footer>60-minute content limit. Source, model, application, browser and TLS evidence remain distinct.</footer></body></html>

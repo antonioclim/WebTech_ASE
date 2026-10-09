@@ -1,2 +1,6 @@
-# Keep published teaching bytes and integrity controls exact on every checkout.
+# Preserve exact committed bytes, including historic sealed carriers.
 * -text
+*.zip binary
+*.docx binary
+*.pdf binary
+*.png binary
