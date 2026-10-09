@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+const sent = { readings: [11, 13, 17] };
+const received = structuredClone(sent);
+const separateGraph = received !== sent && received.readings !== sent.readings;
+sent.readings[0] = 99;
+assert.equal(separateGraph, true);
+assert.deepEqual(received.readings, [11, 13, 17]);
+const originalBuffer = new Uint8Array([5, 8, 13]).buffer;
+const movedBuffer = structuredClone(originalBuffer, { transfer: [originalBuffer] });
+assert.equal(originalBuffer.byteLength, 0);
+assert.deepEqual([...new Uint8Array(movedBuffer)], [5, 8, 13]);
+console.log(JSON.stringify({scope:'ACTUAL_NODE_STRUCTURED_CLONE_AND_TRANSFER', separateGraph, senderAfter:sent, receiverAfter:received, senderByteLength:originalBuffer.byteLength, receivedBytes:[...new Uint8Array(movedBuffer)], nativeWorker:'NOT_EXECUTED', performance:'NOT_MEASURED'},null,2));

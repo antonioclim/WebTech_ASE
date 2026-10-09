@@ -1,45 +1,43 @@
-# RC10 CURRENT CLASSROOM TRANSFER
+# C13 · Sources, contracts and observation rights
 
-Current S13 classroom transfer
+## Current source authority
 
-Complete every listed microproject individually in class. These are bounded tasks, not completion of the historical full applications.
+The current S13 scope, student target comments, supplied cases and original named tests identify the assessed contracts. C13 connects those bounded rules to browser storage, execution, lifecycle and composition. The 24 screens retain all 34 source topics through the connected handout. Target release v4.0.0 does not itself certify platform acceptance.
 
-P01 — Worker reply: own result and current ID — editable path from the seminar package root: CLASSROOM_RC6/student/p01.mjs
+- Current S13: `../../S13_SEMINAR/EN_GB/CLASSROOM_RC6/CLASSROOM_SCOPE.json`, `student/p01.mjs`–`p03.mjs`, `support/cases.json` and `tests/objective.test.mjs`.
+- Current explanation: `course.html#s1`–`#s24`, `reading.html#topics`, `worked-mechanisms.html` and `documents/C13_HANDOUT.md`.
+- Current tutorial/evidence: `../../S13_SEMINAR/TUTORIAL.html`, `../../S13_SEMINAR/EN_GB/FORMATIVE_ASSESSMENT.html` and current `PACKAGE_ID.txt`.
+- Five preserved public canonical directories have exact byte identities in `CANONICAL_SOURCES.json`. Their source-provenance identity is distinct from the current unit byte seal.
 
-P02 — Service Worker: controlled routing predicate — editable path from the seminar package root: CLASSROOM_RC6/student/p02.mjs
+## Source-specific claims and limits
 
-P03 — Composable shell: source/origin/generation gate — editable path from the seminar package root: CLASSROOM_RC6/student/p03.mjs
+| Source | Inspectable mechanism | Limit retained in current prose |
+| --- | --- | --- |
+| canonical/01-versioned-storage-record/main.js | version 1/theme, owned namespace, parse/schema fallback | getItem outside parse catch; access/removal errors differ; example mutates its owned key |
+| canonical/02-worker-clone-boundary/main.js and worker.js | send before sender mutation, one reduction, success termination | not complete concurrent correlation, error paths or terminal cleanup |
+| canonical/03-service-worker-scope-decision/main.js and sw.js | register/ready then controller ?? active, MessageChannel route labels | active messaging is not current client control; no fetch/cache/offline operation |
+| canonical/04-message-contract-gate/main.js and decoy.html | exact origin/source, numeric 1, catalog/select and string itemId | same-origin decoy isolates source; no length/format bound; different current envelope |
+| canonical/05-frame-generation-gate/main.js | exact current source/generation, queued render | no event.origin check; source reading is not native replacement evidence |
+| derived/storage-boundary.mjs | density record and guarded storage helper | schema differs from canonical theme; access and parse share one diagnostic region |
+| derived/message-contract.mjs | item.selected intent with bounded itemId | not fragment.ready or the current assessed answer |
+| derived/generation-gate.mjs | local replace/queue/markReady state | no actual source, origin, iframe, native lifecycle or automatic cleanup |
 
-Current entry: ../../../ENTRY/S13.html
+The fixed models in `assets/models-data.json` are stipulated explanatory inputs/outputs. Historical CAN/EX and project references identify source topics and distinct historical full contracts; they do not make current P02/P03 optional or launch an additional Regression Harness assignment. Current S13 requires all three targets individually with one genuine learner AI critique/independent check and one private PDF. Native Worker, Service Worker, frame, keyboard, print/PDF, Word and Moodle operations remain unexecuted here. No responsiveness or performance measurement is inferred from a model.
 
-Step-by-step tutorial: ../../../TUTORIALS/S13.html
+## Verified primary technical references (APA 7)
 
-Current evidence form: ../../S13/WEBTECH_ASE_S13_EN_GB_v1.2.2_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html
+WHATWG. (n.d.-a). *HTML living standard: Web storage*. Retrieved October 9, 2026, from https://html.spec.whatwg.org/multipage/webstorage.html — storage access, missing values and failure distinctions.
 
-Preserve support files, run the stated target checks and record actual results, including blocked or unexecuted checks. Complete the current form for all projects and export one PDF. Review its saved pages and filename before uploading it to the corresponding private Moodle Assignment. A blocked check is not a PASS.
+WHATWG. (n.d.-b). *HTML living standard: Web workers*. Retrieved October 9, 2026, from https://html.spec.whatwg.org/multipage/workers.html — worker execution contexts, messaging and termination.
 
-The old full applications are optional advanced references. Their reused IDs, paths, allocations, portfolio requirements, timings and mark statements do not define these current microprojects. The actual Assignment supplies dates and assessment policy. No completion-time or mark guarantee is made here.
+WHATWG. (n.d.-c). *HTML living standard: Safe passing of structured data*. Retrieved October 9, 2026, from https://html.spec.whatwg.org/multipage/structured-data.html — clone/transfer semantics, distinct from JSON.
 
-# C13 — Sources and evidence rights
+WHATWG. (n.d.-d). *HTML living standard: Cross-document messaging*. Retrieved October 9, 2026, from https://html.spec.whatwg.org/multipage/web-messaging.html — source/origin, targetOrigin and receiving protocol responsibility.
 
-## Primary basis
+World Wide Web Consortium. (2026, September 17). *Service workers nightly* [Editor's draft]. https://w3c.github.io/ServiceWorker/ — registration, active, ready and current controller are distinct. The draft is a technical source, not implementation qualification.
 
-The controlling basis is exact Unit 13, the 34 numbered lecture topics, five canonical examples and the approved Week 13 architecture. `CAN-xx` refers to a source topic, `EX-xx` to an exact example and `Mxx` to a fixed explanatory model. Public source hashes are in `CANONICAL_SOURCES.json`.
+Ecma International. (n.d.). *ECMAScript language specification: Abstract operations*. Retrieved October 9, 2026, from https://tc39.es/ecma262/multipage/abstract-operations.html#sec-hasownproperty — own-property existence versus inherited presence. These living specification pages have official URLs; no DOI is invented.
 
-The source lecture plans 96 minutes. This delivery is an exact 60-minute route. Historical commands and validation statements remain source text and are not converted into current Worker, Service Worker or browser evidence.
+## Evidence classes
 
-## Explicit corrections retained
-
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-1. The storage example protects parse/schema recovery but not every storage API access error.
-2. The clone example is one request and one response, not a complete lifecycle.
-3. The Service Worker example can message an active worker without a current controller.
-4. The message-gate decoy is same-origin and mainly proves wrong-source rejection.
-5. The frame-generation example checks source and generation, not origin.
-6. P01, P02 and P03 limits remain documented and are not silently repaired in this public course package.
-7. Regression Harness is only launched in S13 and its tests remain unexecuted here.
-
-## Qualification boundary
-
-Source identity, pure JavaScript, fake events, native browser contexts and platform acceptance are separate evidence classes. This package does not qualify the prescribed runtime, Worker, Service Worker, iframe composition, Microsoft Word, Moodle or R3B-6.
+Source identity supports exact bytes and inspected order. A Node demonstration supports the specific language operation or declared fake. A native browser claim requires the actual browser action and lifecycle context. A valid predicate result cannot establish registration, current controller, Cache API behaviour, Window identity, offline readiness or responsiveness. Human, native document and platform acceptance must retain their genuine status.

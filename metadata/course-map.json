@@ -697,7 +697,7 @@
         "maximum": 45
       },
       "shorter_slot_policy": "Arrange an explicit continuation; all two or three individual projects remain required.",
-      "candidate_revision_status": "PENDING_LATER_TRANCHE_REVIEW"
+      "candidate_revision_status": "T07_COMPLETE_WITH_EXPLICIT_LIMITS"
     },
     {
       "week": 14,
@@ -720,7 +720,7 @@
           "id": "P01",
           "title": "Regression: actual persisted follow-up",
           "editable_file": "CLASSROOM_RC6/student/p01.mjs",
-          "execution_nature": "Actual local service and repository regression witness; not an HTTP test"
+          "execution_nature": "Actual local service and supplied in-memory Map repository witness; no HTTP, disk or restart durability"
         },
         {
           "id": "P03",
@@ -744,7 +744,7 @@
         "maximum": 45
       },
       "shorter_slot_policy": "Arrange an explicit continuation; all two or three individual projects remain required.",
-      "candidate_revision_status": "PENDING_LATER_TRANCHE_REVIEW"
+      "candidate_revision_status": "T07_COMPLETE_WITH_EXPLICIT_LIMITS"
     }
   ],
   "final_target_version": "4.0.0",
@@ -753,5 +753,6 @@
   "candidate_progress": "metadata/CANDIDATE_PROGRESS.json",
   "published": false,
   "native_acceptance": false,
-  "publication_qualified": false
+  "publication_qualified": false,
+  "implementation_scope": "All 14 course and seminar pairs revised through T01–T07 with explicit limits. Exactly 40 required individual projects and 38 intentionally unfinished targets remain."
 }

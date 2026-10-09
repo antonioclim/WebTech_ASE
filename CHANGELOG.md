@@ -1,5 +1,10 @@
 # Changes
 
+## v4.0.0 candidate — T07 complete source preparation
+
+C13/S13 and C14/S14 complete the 28-unit teaching revision. S13 retains three required individual projects; S14 retains P01 and P03 only. The final integration reconciles current navigation and prepares a filtered teaching distribution with a distinct derived identity. Source and finite execution checks retain their actual boundaries. Browser rendering, saved PDF, native Windows/macOS, Word and human checks remain unexecuted or pending. The planned review identity is v4.0.0-rc.1; v4.0.0 remains the final target and is not published by a local build. Earlier releases retain their original assets and tags.
+
+
 ## v4.0.0 candidate — T06 prepared, 9 October 2026
 
 C11/S11 and C12/S12 connect trusted identity, report authorisation, independent CORS and CSRF decisions, connection identity, job lifecycle and reply ownership through expanded teaching, 24 meaningful seminar stages, neutral runnable observations and current formative evidence forms. Pure decisions remain distinct from real authentication, browser enforcement, WebSocket delivery and durable queues. The ten preserved canonical projects retain their source and dependency contracts; their missing optional environments remain explicit blocks. All 40 projects remain required individual work and all 38 learner targets remain unfinished. T01–T06 are prepared with explicit limits; T07, whole-collection integration, native/print/PDF and owner acceptance remain pending. This checkpoint is not a published release.

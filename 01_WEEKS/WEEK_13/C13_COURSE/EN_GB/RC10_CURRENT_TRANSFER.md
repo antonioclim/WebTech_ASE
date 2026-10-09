@@ -1,21 +1,5 @@
-# RC10 current classroom transfer
+# C13 → current S13 transfer
 
-Current S13 classroom transfer
+P01 acceptWorkerResult: own opaque result, exact completion and current ID. P02 serviceWorkerLane: exact true control plus GET, origin and task route. P03 trustedFrame: exact source, origin, current generation, fragment.ready and numeric version 1. All three targets in CLASSROOM_RC6/student are required individually.
 
-Complete every listed microproject individually in class. These are bounded tasks, not completion of the historical full applications.
-
-P01 — Worker reply: own result and current ID — editable path from the seminar package root: CLASSROOM_RC6/student/p01.mjs
-
-P02 — Service Worker: controlled routing predicate — editable path from the seminar package root: CLASSROOM_RC6/student/p02.mjs
-
-P03 — Composable shell: source/origin/generation gate — editable path from the seminar package root: CLASSROOM_RC6/student/p03.mjs
-
-Current entry: ../../../ENTRY/S13.html
-
-Step-by-step tutorial: ../../../TUTORIALS/S13.html
-
-Current evidence form: ../../S13/WEBTECH_ASE_S13_EN_GB_v1.2.2_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html
-
-Preserve support files, run the stated target checks and record actual results, including blocked or unexecuted checks. Complete the current form for all projects and export one PDF. Review its saved pages and filename before uploading it to the corresponding private Moodle Assignment. A blocked check is not a PASS.
-
-The old full applications are optional advanced references. Their reused IDs, paths, allocations, portfolio requirements, timings and mark statements do not define these current microprojects. The actual Assignment supplies dates and assessment policy. No completion-time or mark guarantee is made here.
+[Current S13](../../S13_SEMINAR/index.html) · [Twelve stages](../../S13_SEMINAR/TUTORIAL.html) · [One current evidence record](../../S13_SEMINAR/EN_GB/FORMATIVE_ASSESSMENT.html). Historical full applications and older evidence editions remain distinct. Core Node operations do not create native browser mechanisms. One genuine learner AI critique/independent check and one private PDF cover every current project. Full 120–165-minute unpiloted estimate retains all work through proposed taught continuation.

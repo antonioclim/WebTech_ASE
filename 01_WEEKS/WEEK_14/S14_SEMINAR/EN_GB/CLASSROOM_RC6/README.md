@@ -1,66 +1,18 @@
-# S14 · individual classroom microprojects · proposed classroom scope 1.0
+# S14 · Two required individual projects
 
-This successor classroom lane contains 2 complete bounded microprojects. Every listed microproject is required and completed individually in class. It does not implement or certify the retained full application contracts. Read-only original guide and form references are retained for historical context; their omitted full-application starters and tests are not this assignment. Do not copy a classroom PASS into an old full-project completion or canonical-test field.
+Complete P01 `persistenceWitness(input, adapter)` in `student/p01.mjs` and P03 `evidenceGate(input)` in `student/p03.mjs`. There is no current P02. Follow [all eight causal stages](../../TUTORIAL.html), [the exact start](START.html), [unchanged scope](CLASSROOM_SCOPE.json) and [protected boundary](CLASSROOM_BOUNDARY.json). Tests, public fixtures, adapter and learner TODO boundaries remain protected.
 
-The current complete sequence plans 90–120 minutes, including 30–45 for every required project. This is an unpiloted planning range. No learner pilot, measured completion time, actual Gemini exchange or native/framework/browser qualification is claimed. Installation is outside timed work. Use the prescribed Node 24.21.0/npm 11.19.0 prepared by the teacher; these targets have no third-party dependencies. They execute bounded JavaScript models, except P01, which executes the supplied local service and repository.
+From the seminar EN_GB folder run `node CLASSROOM_RC6/environment.mjs --unit S14 --profile node --json`, then `node CLASSROOM_RC6/check.mjs initial` before editing. The core has no external dependency or npm requirement. After your own implementation use `check.mjs work` and `verify.mjs work` with the same `CLASSROOM_RC6/` prefix. Initial expected baseline passes plus intentional objective assertion failures are different from crashes, timeout or an unfamiliar failure. The work check evaluates whole objectives without stage selectors; verify checks only the source boundary and can pass while targets remain unfinished.
 
-## Current unpiloted plan: 90–120 minutes
+P01 executes the actual local service/Map and independently reads by its real created ID. Its result is not HTTP, SQLite or restart durability. P03 gives required failure precedence, then required unknown, while preserving all rows. It does not run tools, authenticate rows or validate completion of the separate ten-category human review.
 
-Complete all 2 microprojects individually. Plan 30–45 minutes for each required project. Prepare the prescribed runtime and expressly required dependencies before class. The following durations are planning estimates, not measured completion times, empirical minimums or completion guarantees.
+Use [one current blank formative record](../FORMATIVE_ASSESSMENT.html), eight stage records, ten-category inventory, one genuine sanitised AI critique with independent check and one private PDF covering both projects. The current v1 envelope has version 1.2.0 with dedicated inventory metadata. Prior classroom v1 records are earlier bounded draft formats; the separately named original full-application form has a wider historical contract. A complete truthful review may retain UNKNOWN readiness and HUMAN REVIEW PENDING. Missing work remains DRAFT/BLOCKED.
 
-| Planned duration | Individual activity |
-| --- | --- |
-| 5 minutes | Prepared environment and privacy check |
-| 30–45 minutes | P01 — required bounded project with progress and evidence checkpoints |
-| 30–45 minutes | P03 — required bounded project with progress and evidence checkpoints |
-| 15 minutes | One shared genuine bounded AI critique and independent check |
-| 5 minutes | Review the evidence and save one individual PDF |
-| 5 minutes | Final recap: achievement, learning, reason and next transfer |
+The 90–120-minute estimate is unpiloted. [The concrete 90–100-minute checkpoint and taught continuation](../../TUTORIAL.html#planning) keeps both projects required individual classroom work. Keep private cases, drafts, logs, captures and PDF outside the whole collection in your home-folder WebTech_Evidence/S14. Native browser/PDF and actual Moodle actions require separate observations.
 
-For each project, use about 5 planned minutes to read the contract and record a prediction, 20–30 to implement, run checks and investigate results, then 5–10 to review a counterexample and record evidence. These checkpoints total 30–45 planned minutes.
 
-If the actual institutional slot is shorter, agree a taught continuation with the lecturer before the session. All projects remain required individual classroom work; keep unfinished work marked unfinished. The end of a meeting does not establish completion.
+## Current manual conclusion and earlier private drafts
 
-The current `GUIDE.html` and the separate top-level `project_schedule` in `CLASSROOM_SCOPE.json` govern these planned blocks. The `projects` array retains the unchanged assessment contract.
+The current formative version 1.2.0 records your separate manual readiness conclusion and its basis. You select UNKNOWN, FAIL or PASS yourself after analysing your evidence. The form checks metadata presence; it does not aggregate row states, call your assessed target or authenticate the conclusion. HUMAN REVIEW PENDING remains visible.
 
-## Run the actual classroom lane
-
-From the extracted package root, run `node CLASSROOM_RC6/check.mjs initial` before editing. It requires 2 baseline PASS and 2 intended objective assertion failures. A crash, timeout, syntax error or unfamiliar failure is a genuine STOP. Edit only the named `CLASSROOM_RC6/student/` file for each task. After your own changes run `node CLASSROOM_RC6/check.mjs work`; all named classroom assertions must pass. These commands do not run or weaken the retained full-project verifier.
-
-## P01 · Regression: actual persisted follow-up
-
-Historical source connection (reference only): `projects/p01/student/src/regression-harness.mjs`. Editable classroom target: `CLASSROOM_RC6/student/p01.mjs`.
-
-Use the supplied checklist service adapter to create a trimmed title and independently read repository state. Return created/stored titles and whether the stored record matches. The missing-persistence mutation must produce a false decision. This is real local service/repository execution, not HTTP or the complete protected seven-contract harness. Preserve the original runtime oracle and learner TODO unchanged.
-
-Before running, record one predicted valid outcome and a counterexample. Implement your own function. Run all supplied cases, then add a separate individually designed counterexample in your evidence notes and execute it using your function. Record input, exact command/action, expected and actual result, evidence locator, causal mechanism and one limit. A failed supplied case is unfinished work, not completion. Use concise copied text logs or genuine captures embedded in the PDF.
-
-## P03 · Production evidence: fail/unknown/pass gate
-
-Historical source connection (reference only): `projects/p03/student/src/production-review.mjs`. Editable classroom target: `CLASSROOM_RC6/student/p03.mjs`.
-
-Review the ten named evidence rows for your own project. In code derive FAIL if any required row fails, otherwise UNKNOWN if a required witness is unknown, otherwise a scoped PASS. DEPLOYMENT remains visible and nonblocking in this classroom policy. Row text is unverified student evidence; missing actual checks remain unknown, never invented pass.
-
-Before running, record one predicted valid outcome and a counterexample. Implement your own function. Run all supplied cases, then add a separate individually designed counterexample in your evidence notes and execute it using your function. Record input, exact command/action, expected and actual result, evidence locator, causal mechanism and one limit. A failed supplied case is unfinished work, not completion. Use concise copied text logs or genuine captures embedded in the PDF.
-
-## Actual bounded LLM work and one PDF
-
-Ask Gemini or the classroom-approved LLM to critique one narrow claim from one of your microprojects. Share only synthetic inputs and at most a short non-private excerpt; do not ask it for your completed implementation. Record the tool/date, sanitised prompt actually sent, relevant claim actually received, your independent check, justified ACCEPTED, REJECTED, PARTLY ACCEPTED or UNKNOWN verdict, correction and scope limit. Prepared text or a model trace is not an actual exchange. If access is blocked, record BLOCKED honestly; it does not authorise an alternative or fulfil the actual-exchange requirement.
-
-Use the current classroom evidence form, preserving one record for every microproject. Fill identity, current classroom scope/package ID, actual environment, before/after evidence, results, reflection and the bounded genuine LLM record. All responses start blank and the ownership declaration starts unchecked. Export one individual PDF using the assigned current seminar filename, reopen the actual saved file and inspect every page, finish the recap before submitting it to the teacher-created seminar Assignment. No separate course Assignment, project ZIP or invented deadline is required. A filename/path in a text-only HTML form does not embed an image. The legacy form remains a full-project route with its original semantics and cannot certify this reduced lane.
-
-## Your independently designed counterexample
-
-Create your own small synthetic JSON input and record a prediction before running it. Keep every private fixture, JSON draft, log and PDF outside the entire extracted collection. Use your home-folder `WebTech_Evidence/S14`: `%USERPROFILE%\WebTech_Evidence\S14` on Windows or `$HOME/WebTech_Evidence/S14` on macOS/Linux. Keep the extracted collection in a different folder. The [detailed tutorial](../../TUTORIAL.html) provides the quoted absolute paths and operating-system commands.
-
-From this seminar package root, follow the detailed tutorial’s operating-system-specific command to pass the quoted absolute fixture path to `node CLASSROOM_RC6/try.mjs` with the actual project ID. Copy the real output into that task’s record. The runner does not compare your output with your prediction or authenticate authorship. If it reports `CLASSROOM_CASE_FAILED`, preserve that failure and investigate your input and implementation. Only synthetic data are permitted.
-
-## Final recap before submission
-
-Explain why an independent stored-record lookup can expose a persistence defect despite a successful create result. Relate that lesson to preserving failed and unknown required evidence in your production decision. Next, apply the same witness-and-limit reasoning to your own project without presenting an in-memory or synthetic result as durable storage or general readiness.
-
-Finish the recap before actual submission. If it changes your form record, update the form, renew the affected declarations and export and review the latest single PDF before uploading it. Use the agreed continuation if review remains unfinished; do not submit an earlier PDF as the updated record.
-
-## Current carrier and historical references
-
-The `CLASSROOM_RC6` folder, retained edition labels and v1 record values identify the existing teaching carrier and record contract. Use the current candidate unit identity shown by the collection entry for a new record. Linked original guides and forms are read-only historical references; their omitted full-application starters and tests are not the current assignment.
+The earlier unpublished 1.1.0 developer format and older classroom v1 envelope are refused. Preserve any authentic earlier private JSON backup. Manually re-enter only genuine recorded text into the current blank form and review it before making your own conclusion. Do not rename version, IDs or fields to force import and do not treat an earlier computed label as a manual declaration. No automatic migration is provided.

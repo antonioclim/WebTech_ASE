@@ -1,40 +1,40 @@
-# Current edition checks and acceptance
+# Current candidate checks and acceptance
 
-Use the [repository source checker](../README.md) first. Its result concerns bytes, unit identities and document routes. It does not execute a course application, render a page in a browser, inspect a saved PDF or contact Moodle.
+Use the [repository source checker](../README.md) before editing. Its result concerns inventory, source bytes, unit identities and declared document routes. It does not execute a course application, render HTML, inspect a saved PDF or contact Moodle.
 
-Each seminar's current classroom work is inside:
+The current classroom workspace for each seminar is:
 
 ```text
 01_WEEKS/WEEK_XX/SXX_SEMINAR/EN_GB/CLASSROOM_RC6/
 ```
 
-Open that seminar's `START.html`, `GUIDE.html` and `EVIDENCE_FORM.html`. The retained `CLASSROOM_RC6` folder name identifies its inner classroom contract within the current v3.0.0 edition.
+Choose the actual week through [the course plan](../../00_START_HERE/COURSE_PLAN.html), then read that workspace’s `START.html`, `GUIDE.html` and `EVIDENCE_FORM.html`. `CLASSROOM_RC6` identifies the retained inner workspace protocol; it is not the edition number of this v4.0.0 candidate.
 
-From the chosen seminar's `EN_GB` folder, the protected-source commands are:
+From the selected seminar’s `EN_GB` folder, source checks are:
 
 ```text
 node CLASSROOM_RC6/verify.mjs initial
 node CLASSROOM_RC6/verify.mjs work
 ```
 
-S01–S07 use:
+For S01–S07 the current task entry points are:
 
 ```text
 node CLASSROOM_RC6/kit.mjs initial
 node CLASSROOM_RC6/kit.mjs check all
 ```
 
-S08–S14 use:
+For S08–S14 they are:
 
 ```text
 node CLASSROOM_RC6/check.mjs initial
 node CLASSROOM_RC6/check.mjs work
 ```
 
-Read the chosen guide for its actual browser, HTTP, SQLite, React or observation steps. These seminar commands retain the recorded Node `v24.21.0` reference. The repository byte checker does not require that exact minor version. A `STOP_REFERENCE_NODE` or `REFERENCE_NODE_MISMATCH` from a retained seminar command records a runtime mismatch; it is not evidence that the repository bytes failed or that the seminar passed. No command here installs or changes the runtime.
+The guide distinguishes the environment required by each operation. Pure Node targets do not require npm; SQLite, HTTP, framework and infrastructure observations use separate profiles when applicable. Missing optional dependencies block their own operation. ENV_WARN permits the supported activity, while ENV_BLOCKED identifies the missing indispensable capability or actual probe failure. The named Node v24.21.0/npm 11.19.0 reference remains distinct from the observed Linux Node v24.19.0/npm 11.9.0 maintainer environment. An injected version string tests policy only and does not qualify that runtime. Read [environment guidance](../../00_START_HERE/ENVIRONMENT.html).
 
-Learner targets are intentionally unfinished. An initial/source-boundary pass shows the supplied starter state. A work check may fail until the student implements the required project. Do not replace unfinished learner code with solutions merely to obtain a pass.
+Learner targets are intentionally unfinished. An initial pass authenticates the starter boundary. A work check may return the documented assertion failure until the learner completes every required project; it must not be turned green by replacing learner tasks with supplied answers. Follow the selected guide’s protected-source and capability diagnostics before changing code.
 
-Keep evidence files, exported drafts, logs and PDFs outside the entire repository. Record the actual runtime and actual observations. A browser observation must distinguish source inspection from rendered behaviour; a saved PDF must be checked after saving; a Moodle observation must come from the real service. Planned 30–45-minute project intervals remain unpiloted estimates.
+Each seminar requires one PDF covering every required individual project, one genuine learner AI critique and an independent check of the chosen claim. Learner fields stay blank in the supplied forms. DOM-model maintainer checks are synthetic QA: they do not demonstrate native interaction, saved PDF output or a real learner AI exchange. Keep private drafts, logs, screenshots and PDFs outside the repository. Timings in the seminar plans are unpiloted estimates and preserve all required projects.
 
-General qualification remains **NOT_FINAL**, with all ten gates pending: local integrity, reference runtime, headless browser, native Windows, native macOS, manual browser, Word, live Moodle, human pilot and owner acceptance. Finite checks may provide scoped evidence while these general gates remain pending. No source-check or build command claims their completion.
+All seven teaching tranches are prepared with explicit limits. Whole-collection integration and publication remain within T07, with no T08. General qualification is **NOT_FINAL**; the ten global gates retain pending status. Scoped source and runtime checks do not certify native Windows/macOS, headless or manual browser, Word, live Moodle, a novice pilot or owner acceptance. The browser security refusal is recorded as an unexecuted observation and must not be bypassed to manufacture a pass.

@@ -1,3 +1,13 @@
+# C14 · Current preparation and transfer
+
+Recover create response versus independently read state. Read the actual Map adapter and predict normal/missing-persistence before running. Recall exact state strings, row preservation and fail-before-unknown precedence. Prepare the Node-only classroom capability check, your private evidence folder and a project/version for the ten-category review. No new benchmark, external audit or deployment obligation is introduced.
+
+Follow the current HTML preparation and S14 tutorial for real commands. The 60-minute lecture and 90–120-minute seminar estimates are unpiloted with taught continuation where needed.
+
+---
+
+## Retained historical preparation below
+
 # RC10 CURRENT CLASSROOM TRANSFER
 
 Current S14 classroom transfer

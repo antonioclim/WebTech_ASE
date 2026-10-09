@@ -1,8 +1,10 @@
 # Start here — Web Technologies v4.0.0 candidate
 
-This candidate has revised C01/S01 through C12/S12. The remaining pairs await T07. The latest published edition remains 3.0.0; this checkout is not the final release.
+This candidate contains all 14 revised course and seminar pairs from T01–T07. The latest published edition remains 3.0.0; this checkout is not the final release.
 
 Download or clone the complete repository, then open [START_HERE.html](START_HERE.html) locally. Follow your operating-system setup and open the current course and seminar from [the collection home](../index.html).
+
+The 30 supplied Word documents are preserved historical references. Some retain earlier release names and folder layouts. Use the current HTML and Markdown guides for this candidate's navigation, task contracts and evidence requirements. Opening or rendering a historical reference does not qualify the current interactive material.
 
 - [Course plan and required projects](COURSE_PLAN.html)
 - [Evidence and assessment](ASSESSMENT.html)

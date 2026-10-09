@@ -17,7 +17,8 @@ from urllib.parse import unquote, urlsplit
 VERSION = '4.0.0'
 LATEST_PUBLISHED_VERSION = '3.0.0'
 PROGRESS = 'metadata/CANDIDATE_PROGRESS.json'
-PREPARED_TRANCHE = 6
+PREPARED_TRANCHE = 7
+FINAL_PHASE_SCOPE = 'T07_GLOBAL_INTEGRATION_AND_PUBLICATION'
 METADATA = 'metadata/CLASSROOM_COLLECTION.json'
 COURSE_MAP = 'metadata/course-map.json'
 MANIFEST = 'metadata/current-integrity/REPOSITORY_SHA256SUMS.txt'
@@ -151,6 +152,7 @@ def read_metadata(root):
             or meta.get('latest_published_version') != LATEST_PUBLISHED_VERSION
             or meta.get('distribution_status') != 'LOCAL_CANDIDATE_NOT_PUBLISHED'
             or meta.get('candidate_progress') != PROGRESS
+            or meta.get('final_phase_scope') != FINAL_PHASE_SCOPE
             or meta.get('qualificationVerdict') != 'NOT_FINAL'
             or meta.get('native_acceptance') is not False
             or meta.get('publication_qualified') is not False
@@ -200,7 +202,9 @@ def verify_progress(root, meta):
             or progress.get('published') is not False
             or progress.get('qualificationGates') != meta['qualificationGates']
             or progress.get('phase') != f'T{PREPARED_TRANCHE:02}_CANDIDATE_PREPARED'
-            or progress.get('next_phase') != f'T{PREPARED_TRANCHE + 1:02}'
+            or 'next_phase' not in progress
+            or progress['next_phase'] is not None
+            or progress.get('final_phase_scope') != FINAL_PHASE_SCOPE
             or progress.get('prepared_tranches') != [f'T{number:02}' for number in range(1, PREPARED_TRANCHE + 1)]):
         raise ValueError('Candidate progress identity, distribution or qualification differs')
     tranches = progress.get('tranches')
@@ -213,6 +217,7 @@ def verify_progress(root, meta):
                 or tranche.get('implementation_status') != ('COMPLETE_WITH_EXPLICIT_LIMITS' if number <= PREPARED_TRANCHE else 'PENDING')):
             raise ValueError('Prepared tranche boundary differs: ' + f'T{number:02}')
     return {'phase': progress.get('phase'), 'next_phase': progress.get('next_phase'),
+            'final_phase_scope': progress.get('final_phase_scope'),
             'implementation_scope': progress.get('implementation_scope'),
             'global_qualification': 'NOT_FINAL', 'published': False}
 

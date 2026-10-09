@@ -1,0 +1,43 @@
+{
+  "schema": "webtech-snippet-inventory/v1",
+  "unit": "C13",
+  "cwd": "01_WEEKS/WEEK_13/C13_COURSE/EN_GB",
+  "entries": [
+    {
+      "id": "C13-D1",
+      "file": "demonstrations/01-storage-phases.mjs",
+      "kind": "COMPLETE_NODE_DEMONSTRATION",
+      "command": "node tools/tw-kit.mjs example 01",
+      "prediction": "Access failure is not parse or schema failure",
+      "witness": "Explicit actual.phase per declared fake",
+      "limit": "No browser storage",
+      "timeout_ms": 10000,
+      "output_limit_bytes": 1000000,
+      "dependencies": "Node core only"
+    },
+    {
+      "id": "C13-D2",
+      "file": "demonstrations/02-clone-transfer.mjs",
+      "kind": "COMPLETE_NODE_DEMONSTRATION",
+      "command": "node tools/tw-kit.mjs example 02",
+      "prediction": "Distinct nested graph and detached sender buffer",
+      "witness": "Actual identity/content/byteLength assertions",
+      "limit": "No native Worker or benchmark",
+      "timeout_ms": 10000,
+      "output_limit_bytes": 1000000,
+      "dependencies": "Node core only"
+    },
+    {
+      "id": "C13-D3",
+      "file": "demonstrations/03-property-shapes.mjs",
+      "kind": "COMPLETE_NODE_DEMONSTRATION",
+      "command": "node tools/tw-kit.mjs example 03",
+      "prediction": "Own zero/false/null/undefined differs from inherited-only",
+      "witness": "Object.hasOwn, in, truthiness and JSON results",
+      "limit": "No S13 completed admission function",
+      "timeout_ms": 10000,
+      "output_limit_bytes": 1000000,
+      "dependencies": "Node core only"
+    }
+  ]
+}

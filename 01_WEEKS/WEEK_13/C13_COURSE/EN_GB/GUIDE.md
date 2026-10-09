@@ -1,37 +1,5 @@
-# RC10 CURRENT CLASSROOM TRANSFER
+# C13 · Current reading and observation route
 
-Current S13 classroom transfer
+  Read the same case through each boundary  Start with a preference, an analysis and a replaceable catalogue. Use all 24 screens and 34 topics, naming each owner, admission decision, recovery and missing witness. Every screen follows a specific problem/model/mechanism/prediction/witness/diagnosis/transfer chain. The selected 60-minute priorities are an unpiloted plan; complete reading and native demonstrations are additional time.  The fixed model lab reveals stipulated outputs. Predict first and verify that its controls load. If assets are blocked, preserve reading and a truthful BLOCKED note. Historical role/shape references remain distinct from current S13. The Word documents are preserved references; the current HTML/Markdown carries the expanded explanation.   Actual Node commands  separate storage-phase fakes, real clone/transfer and property operations from browser sources.  Contrasts and recovery  connect each observation to its possible falsifier. No numerical performance, native lifecycle or responsiveness claim follows from those operations.  Continue to  all twelve current S13 stages . All P01/P02/P03 remain individual requirements, with a genuine learner AI critique plus independent check and one private PDF. Their 120–165-minute unpiloted estimate explicitly proposes taught continuation for 90–100-minute slots rather than omitting tasks.
 
-Complete every listed microproject individually in class. These are bounded tasks, not completion of the historical full applications.
-
-P01 — Worker reply: own result and current ID — editable path from the seminar package root: CLASSROOM_RC6/student/p01.mjs
-
-P02 — Service Worker: controlled routing predicate — editable path from the seminar package root: CLASSROOM_RC6/student/p02.mjs
-
-P03 — Composable shell: source/origin/generation gate — editable path from the seminar package root: CLASSROOM_RC6/student/p03.mjs
-
-Current entry: ../../../ENTRY/S13.html
-
-Step-by-step tutorial: ../../../TUTORIALS/S13.html
-
-Current evidence form: ../../S13/WEBTECH_ASE_S13_EN_GB_v1.2.2_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html
-
-Preserve support files, run the stated target checks and record actual results, including blocked or unexecuted checks. Complete the current form for all projects and export one PDF. Review its saved pages and filename before uploading it to the corresponding private Moodle Assignment. A blocked check is not a PASS.
-
-The old full applications are optional advanced references. Their reused IDs, paths, allocations, portfolio requirements, timings and mark statements do not define these current microprojects. The actual Assignment supplies dates and assessment policy. No completion-time or mark guarantee is made here.
-
-# C13 public guide
-
-Status: **WIP/PREVIEW — not FINAL**.
-
-1. Open `index.html`.
-2. Use `course.html` for the 24-screen lecture.
-3. Use `reading.html` and `preparation.html` for the documents.
-4. Use `lab.html` only as a fixed explanatory model. Export remains `SYNTHETIC MODEL OUTPUT`.
-5. Inspect exact examples under `canonical/` without installing or starting them.
-
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-Project roles: P01 is the central implementation, P02 is a guided demonstration and P03 is optional advanced. Regression Harness is launched at the end of S13 and completed before S14. There is no C13 Assignment.
-
-Do not report hashes, source reading or fixed-model output as Worker, Service Worker, iframe or browser evidence.
+[24 screens](course.html) · [all 34 topics](reading.html#topics) · [worked mechanisms](worked-mechanisms.html) · [exact commands](RUN_EXAMPLES.md) · [S13 tutorial](../../S13_SEMINAR/TUTORIAL.html).

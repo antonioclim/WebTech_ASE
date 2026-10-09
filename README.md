@@ -1,10 +1,12 @@
 # Web Technologies — English student materials, v4.0.0 candidate
 
-This branch prepares the next complete edition. C01/S01 through C12/S12 have been revised in T01–T06; C13/S13 and C14/S14 retain their supplied material and await their scheduled revision. The latest published classroom edition remains 3.0.0. Read the [candidate progress](metadata/CANDIDATE_PROGRESS.json) before interpreting this checkout as a complete release.
+All 14 course and seminar pairs have completed the T01–T07 teaching revision with explicit limits. This complete source candidate prepares the final v4.0.0 edition. The latest published classroom edition remains 3.0.0. Read the [candidate progress](metadata/CANDIDATE_PROGRESS.json) before interpreting this checkout as a complete release.
 
 This repository contains the current materials for 14 course and seminar pairs, with two operating-system setup guides, 14 detailed seminar tutorials and 40 required individual microprojects. The 38 learner target files are intentionally unfinished. HTML presentations and guides are the main teaching route; Word references are optional.
 
-Start with [00_START_HERE](00_START_HERE/README.md) or open [index.html](index.html) locally. The original repository organisation is retained: setup in `00_SETUP`, current guidance in `00_START_HERE`, maintenance utilities in `00_TOOLS` and teaching materials in `01_WEEKS`. Shared files remain in `assets` and current records in `metadata`.
+For the current published classroom edition, open the [3.0.0 release](https://github.com/antonioclim/WebTech_ASE/releases/tag/classroom-en-gb-v3.0.0) and use its attached classroom ZIP. Keep that edition separate from this review candidate. The planned review identity is **v4.0.0-rc.1**; the final **v4.0.0** tag is reserved until the required qualification is complete.
+
+Start this candidate review with [00_START_HERE](00_START_HERE/README.md) or open [index.html](index.html) locally. The original repository organisation is retained: setup in `00_SETUP`, current guidance in `00_START_HERE`, maintenance utilities in `00_TOOLS` and teaching materials in `01_WEEKS`. Shared files remain in `assets` and current records in `metadata`.
 
 ## Obtain and open the materials
 
@@ -34,4 +36,4 @@ The [download guide](00_START_HERE/DOWNLOAD.html) distinguishes this current rep
 
 ## Qualification
 
-General qualification remains **NOT_FINAL**. The ten broad qualification gates remain pending for the complete edition. T01–T06 have scoped Node, SQLite, local HTTP, source and form-model checks; native browser rendering, print, Windows, macOS and human acceptance have not passed. Read [the qualification scope](00_START_HERE/QUALIFICATION.html). Integrity and task results support the checks they actually perform.
+General qualification remains **NOT_FINAL**. The ten broad qualification gates remain pending for the complete edition. T01–T07 have scoped Node, SQLite, local HTTP, source and form-model checks; native browser rendering, print, Windows, macOS and human acceptance have not passed. Read [the qualification scope](00_START_HERE/QUALIFICATION.html). Integrity and task results support the checks they actually perform.

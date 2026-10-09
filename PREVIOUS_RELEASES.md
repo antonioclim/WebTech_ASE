@@ -1,6 +1,6 @@
 # Previous editions
 
-The current repository contains the updated 3.0.0 materials in the original directory organisation. Keep editions in separate extracted folders.
+The current source contains the complete revised v4.0.0 candidate in the original directory organisation. The latest published classroom edition remains the frozen 3.0.0 release below. Keep editions in separate extracted folders; source integration does not replace published payloads.
 
 | Edition | Exact preserved content |
 | --- | --- |

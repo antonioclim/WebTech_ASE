@@ -1,7 +1,7 @@
-# Week 13 — Web Technologies 3.0.0
+# Week 13 — Web Technologies v4.0.0 candidate
 
 - [C13 — Workers, Service Workers and the cost of composition](C13_COURSE/index.html)
-- [S13 — Worker Offload](S13_SEMINAR/index.html)
+- [S13 — Current message, lane and readiness gates](S13_SEMINAR/index.html)
 - [Detailed seminar tutorial](S13_SEMINAR/TUTORIAL.html)
 
 ## What you will learn

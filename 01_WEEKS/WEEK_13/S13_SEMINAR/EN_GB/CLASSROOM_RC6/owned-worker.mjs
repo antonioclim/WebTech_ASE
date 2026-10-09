@@ -1,0 +1,10 @@
+import {runOwnedProcess} from './owned-process.mjs';
+export async function runOwnedWorker(args,{cwd,env=process.env,timeoutMs,maxBytes}={}){
+ function limit(name,fallback,min,max){const value=env[name];if(value===undefined)return fallback;if(typeof value!=='string'||!/^\d+$/.test(value)||!Number.isSafeInteger(Number(value))||Number(value)<min||Number(value)>max)throw Error('INVALID_'+name);return Number(value);}
+ try{timeoutMs??=limit('WEBTECH_CHILD_TIMEOUT_MS',10000,10,60000);maxBytes??=limit('WEBTECH_CHILD_MAX_BYTES',1000000,1024,10000000);}catch(error){const diagnostic={status:'ENV_BLOCKED_WORKER_LIMIT',reason:error.message,allowed:{WEBTECH_CHILD_TIMEOUT_MS:[10,60000],WEBTECH_CHILD_MAX_BYTES:[1024,10000000]},remedy:'Remove or correct only the named local override, then rerun the same command. No child process has been started.'};console.error(JSON.stringify(diagnostic));return{status:2,exitCode:2,error:{code:error.message},reason:error.message,stdout:'',stderr:'',signal:null,limits:{timeoutMs:timeoutMs??null,maxBytes:maxBytes??null},temporaryWorkspace:null,processOwnership:'NO_CHILD_STARTED',treeCleanup:'NOT_NEEDED'};}
+ if(!Array.isArray(args)||args.some(x=>typeof x!=='string')||typeof cwd!=='string'||!Number.isInteger(timeoutMs)||timeoutMs<10||timeoutMs>60000||!Number.isInteger(maxBytes)||maxBytes<1)throw new TypeError('Invalid bounded worker options');
+ const result=await runOwnedProcess(process.execPath,args,{cwd,env,timeoutMs,maxBytes});
+ console.error(JSON.stringify({status:'OWNED_WORKER_TEMPORARY_DIRECTORY',...result.temporaryWorkspace,processOwnership:result.processOwnership,treeCleanup:result.treeCleanup}));
+ return {...result,status:result.exitCode,error:result.reason?{code:result.reason}:undefined};
+}
+export function assertWorkerCompleted(result){if(result.error||result.signal||result.status===null){const error=Error('BOUNDED_CHILD_FAULT '+(result.error?.code||result.signal||'NO_EXIT_STATUS'));error.temporaryWorkspace=result.temporaryWorkspace;throw error;}if(result.status!==0&&!result.stdout?.trim()){const error=Error('WORKER_EXIT_ERROR '+result.status);error.temporaryWorkspace=result.temporaryWorkspace;throw error;}}

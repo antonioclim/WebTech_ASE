@@ -1,75 +1,54 @@
-# S13 · individual classroom microprojects · proposed classroom scope 1.0
+# S13 · All three current individual microprojects
 
-This successor classroom lane contains 3 complete bounded microprojects. Every listed microproject is required and completed individually in class. It does not implement or certify the retained full application contracts. Read-only original guide and form references are retained for historical context; their omitted full-application starters and tests are not this assignment. Do not copy a classroom PASS into an old full-project completion or canonical-test field.
+## Exact operation and edit boundary
 
-The current complete sequence plans 120–165 minutes, including 30–45 for every required project. This is an unpiloted planning range. No learner pilot, measured completion time, actual Gemini exchange or native/framework/browser qualification is claimed. Installation is outside timed work. Use the prescribed Node 24.21.0/npm 11.19.0 prepared by the teacher; these targets have no third-party dependencies. The core checks execute bounded JavaScript models (and the actual local service in S14 P01). They do not execute Redux Toolkit, Express HTTP, Worker, Service Worker, Redis/BullMQ or a cross-origin browser boundary. S08–S10 additionally supply a real React companion with its own provisioned interaction tests; record those results separately.
-
-## Current unpiloted plan: 120–165 minutes
-
-Complete all 3 microprojects individually. Plan 30–45 minutes for each required project. Prepare the prescribed runtime and expressly required dependencies before class. The following durations are planning estimates, not measured completion times, empirical minimums or completion guarantees.
-
-| Planned duration | Individual activity |
-| --- | --- |
-| 5 minutes | Prepared environment and privacy check |
-| 30–45 minutes | P01 — required bounded project with progress and evidence checkpoints |
-| 30–45 minutes | P02 — required bounded project with progress and evidence checkpoints |
-| 30–45 minutes | P03 — required bounded project with progress and evidence checkpoints |
-| 15 minutes | One shared genuine bounded AI critique and independent check |
-| 5 minutes | Review the evidence and save one individual PDF |
-| 5 minutes | Final recap: achievement, learning, reason and next transfer |
-
-For each project, use about 5 planned minutes to read the contract and record a prediction, 20–30 to implement, run checks and investigate results, then 5–10 to review a counterexample and record evidence. These checkpoints total 30–45 planned minutes.
-
-If the actual institutional slot is shorter, agree a taught continuation with the lecturer before the session. All projects remain required individual classroom work; keep unfinished work marked unfinished. The end of a meeting does not establish completion.
-
-The current `GUIDE.html` and the separate top-level `project_schedule` in `CLASSROOM_SCOPE.json` govern these planned blocks. The `projects` array retains the unchanged assessment contract.
-
-## Run the actual classroom lane
-
-From the extracted package root, run `node CLASSROOM_RC6/check.mjs initial` before editing. It requires 2 baseline PASS and 3 intended objective assertion failures. A crash, timeout, syntax error or unfamiliar failure is a genuine STOP. Edit only the named `CLASSROOM_RC6/student/` file for each task. After your own changes run `node CLASSROOM_RC6/check.mjs work`; all named classroom assertions must pass. These commands do not run or weaken the retained full-project verifier.
+CWD: the S13 EN_GB directory containing CLASSROOM_RC6. Use node CLASSROOM_RC6/environment.mjs --unit S13 --profile node --json, verify.mjs initial and check.mjs initial before edits. The capable core requires Node and no npm. ENV_OK/ENV_WARN continues; ENV_BLOCKED2 applies to the selected absent capability. Initial requires two baseline passes and three intended objective assertion failures, not import/syntax faults. After editing only student/p01.mjs, p02.mjs and p03.mjs, use verify.mjs work and check.mjs work. Final requires every original objective and both baselines. Children are bounded 10 seconds/1 MB; try input is 100000 bytes.
 
 ## P01 · Worker reply: own result and current ID
 
-Historical source connection (reference only): `projects/p01/student/src/worker-client.js`. Editable classroom target: `CLASSROOM_RC6/student/p01.mjs`.
-
-Accept only analysis.completed for a current ID with an own result property. Opaque results such as strings are valid. Wrong IDs, absent result or wrong message type refuse. JSON fixtures cannot model inherited properties; that case remains in the retained full contract. No native Worker or responsiveness is observed.
-
-Before running, record one predicted valid outcome and a counterexample. Implement your own function. Run all supplied cases, then add a separate individually designed counterexample in your evidence notes and execute it using your function. Record input, exact command/action, expected and actual result, evidence locator, causal mechanism and one limit. A failed supplied case is unfinished work, not completion. Use concise copied text logs or genuine captures embedded in the PDF.
+Editable target: CLASSROOM_RC6/student/p01.mjs, export acceptWorkerResult. The four causal stages are in [the current tutorial](../../TUTORIAL.html#P01). Read target comments and supplied fixtures without changing them. Preserve prediction, actual output, one-factor falsifier, no-mutation evidence and each stage reflection.
 
 ## P02 · Service Worker: controlled routing predicate
 
-Historical source connection (reference only): `guided/p02/student/src/sw-dispatcher.js`. Editable classroom target: `CLASSROOM_RC6/student/p02.mjs`.
-
-Choose controlled protocol only for a currently controlled same-origin GET /api/tasks/<id>; otherwise choose direct fetch. A ready registration is not controller ownership. Synthetic flags are explicit model inputs; no Service Worker, cache hit or offline PWA is observed.
-
-Before running, record one predicted valid outcome and a counterexample. Implement your own function. Run all supplied cases, then add a separate individually designed counterexample in your evidence notes and execute it using your function. Record input, exact command/action, expected and actual result, evidence locator, causal mechanism and one limit. A failed supplied case is unfinished work, not completion. Use concise copied text logs or genuine captures embedded in the PDF.
+Editable target: CLASSROOM_RC6/student/p02.mjs, export serviceWorkerLane. The four causal stages are in [the current tutorial](../../TUTORIAL.html#P02). Read target comments and supplied fixtures without changing them. Preserve prediction, actual output, one-factor falsifier, no-mutation evidence and each stage reflection.
 
 ## P03 · Composable shell: source/origin/generation gate
 
-Historical source connection (reference only): `optional/p03/student/src/composition-coordinator.js`. Editable classroom target: `CLASSROOM_RC6/student/p03.mjs`.
+Editable target: CLASSROOM_RC6/student/p03.mjs, export trustedFrame. The four causal stages are in [the current tutorial](../../TUTORIAL.html#P03). Read target comments and supplied fixtures without changing them. Preserve prediction, actual output, one-factor falsifier, no-mutation evidence and each stage reflection.
 
-Admit fragment.ready only when synthetic source token, exact origin, version 1 and current generation all match the registered fixture. Wrong origin/source/old generation refuse. Synthetic tokens do not authenticate actual Window objects or cross-origin browser delivery.
+## Observations and private case commands
 
-Before running, record one predicted valid outcome and a counterexample. Implement your own function. Run all supplied cases, then add a separate individually designed counterexample in your evidence notes and execute it using your function. Record input, exact command/action, expected and actual result, evidence locator, causal mechanism and one limit. A failed supplied case is unfinished work, not completion. Use concise copied text logs or genuine captures embedded in the PDF.
+From EN_GB, run node CLASSROOM_RC6/PROBE.mjs P01-result, P02-routing or P03-generation. These print actualOutput/inputUnchanged and no oracle. P01 JavaScript prototype/undefined cases are separate from JSON; P02 varies control/method/origin/path; P03 varies five exact fields. Save personal complete synthetic JSON outside the complete collection in home-folder WebTech_Evidence/S13, then run node CLASSROOM_RC6/try.mjs P01 followed by the quoted absolute path, using P02/P03 as appropriate. The [tutorial](../../TUTORIAL.html#private-cases) gives exact OS procedures. try reports actual_output/input_unchanged and does not grade predictions.
 
-## Actual bounded LLM work and one PDF
+## One genuine critique, truthful declaration and one PDF
 
-Ask Gemini or the classroom-approved LLM to critique one narrow claim from one of your microprojects. Share only synthetic inputs and at most a short non-private excerpt; do not ask it for your completed implementation. Record the tool/date, sanitised prompt actually sent, relevant claim actually received, your independent check, justified ACCEPTED, REJECTED, PARTLY ACCEPTED or UNKNOWN verdict, correction and scope limit. Prepared text or a model trace is not an actual exchange. If access is blocked, record BLOCKED honestly; it does not authorise an alternative or fulfil the actual-exchange requirement.
+Use [FORMATIVE_ASSESSMENT.html](../FORMATIVE_ASSESSMENT.html), initially blank, for all twelve stages and project reflections. One genuine learner AI critique and independent check use only synthetic/sanitised data. Suggested prompts or synthetic conversations do not fulfil this requirement. Save private draft outside the collection; import resets declarations. Print reviewed student declaration remains REVIEWED_STUDENT_DECLARATION with HUMAN REVIEW PENDING. Native print, actual saved-PDF inspection and real Moodle upload are separate actions. Review every page of the one individual PDF after recap before the teacher-created S13 Assignment. The earlier classroom-evidence/v1 form route is a historical identity, distinct from the current formative-assessment/v1 edition.
 
-Use the current classroom evidence form, preserving one record for every microproject. Fill identity, current classroom scope/package ID, actual environment, before/after evidence, results, reflection and the bounded genuine LLM record. All responses start blank and the ownership declaration starts unchecked. Export one individual PDF using the assigned current seminar filename, reopen the actual saved file and inspect every page, finish the recap before submitting it to the teacher-created seminar Assignment. No separate course Assignment, project ZIP or invented deadline is required. A filename/path in a text-only HTML form does not embed an image. The legacy form remains a full-project route with its original semantics and cannot certify this reduced lane.
+## Unpiloted planning and continuation
 
-## Your independently designed counterexample
+Full route 120–165 minutes: setup 5, each required project30–45, genuine critique/check 15, one-PDF review 5 and recap 5. These are estimates without a novice pilot. For 90–100 minutes preserve exact next stage, unsatisfied assertion, private case and next prediction; propose lecturer-arranged taught continuation 20–65 beyond 100 or 30–75 beyond 90. All projects stay individual classroom work. Provisioning and optional native demonstrations are additional time.
 
-Create your own small synthetic JSON input and record a prediction before running it. Keep every private fixture, JSON draft, log and PDF outside the entire extracted collection. Use your home-folder `WebTech_Evidence/S13`: `%USERPROFILE%\WebTech_Evidence\S13` on Windows or `$HOME/WebTech_Evidence/S13` on macOS/Linux. Keep the extracted collection in a different folder. The [detailed tutorial](../../TUTORIAL.html) provides the quoted absolute paths and operating-system commands.
+## Limits and transfer
 
-From this seminar package root, follow the detailed tutorial’s operating-system-specific command to pass the quoted absolute fixture path to `node CLASSROOM_RC6/try.mjs` with the actual project ID. Copy the real output into that task’s record. The runner does not compare your output with your prediction or authenticate authorship. If it reports `CLASSROOM_CASE_FAILED`, preserve that failure and investigate your input and implementation. Only synthetic data are permitted.
+These checks evaluate admission/selection on finite JavaScript inputs. No Worker/Service Worker/iframe/browser/Cache API execution, responsiveness, origin enforcement or saved-PDF/Moodle acceptance is certified. Transfer the exact claim and missing witness to C14/S14; analysis completion does not itself grant readiness.
 
-## Final recap before submission
 
-Compare the message, controller and source/origin/generation gates against your recorded cases. Explain why current ownership matters and which plausible shortcut your negative case rejected. Next, transfer one gate into a genuine Worker, Service Worker or composition boundary and name the lifecycle and browser observations still required.
+## Optional bounded diagnostic override
 
-Finish the recap before actual submission. If it changes your form record, update the form, renew the affected declarations and export and review the latest single PDF before uploading it. Use the agreed continuation if review remains unfinished; do not submit an earlier PDF as the updated record.
+If a teacher-approved diagnostic requires more time, the owned child accepts WEBTECH_CHILD_TIMEOUT_MS as an integer10–60000 (default10000) and WEBTECH_CHILD_MAX_BYTES as an integer1024–10000000 (default1000000). Invalid overrides exit 2 before launching the child. Increasing a bound does not turn a failed test into PASS or certify native process-tree behaviour. Record actual reported bounds.
 
-## Current carrier and historical references
+In macOS/Linux, from S13 EN_GB: `WEBTECH_CHILD_TIMEOUT_MS=20000 node CLASSROOM_RC6/check.mjs work`. This variable applies to that command only. In PowerShell, preserve and restore any previous value from the same CWD:
 
-The `CLASSROOM_RC6` folder, retained edition labels and v1 record values identify the existing teaching carrier and record contract. Use the current candidate unit identity shown by the collection entry for a new record. Linked original guides and forms are read-only historical references; their omitted full-application starters and tests are not the current assignment.
+```powershell
+ $hadS13ChildTimeout = Test-Path Env:WEBTECH_CHILD_TIMEOUT_MS
+ $previousS13ChildTimeout = $env:WEBTECH_CHILD_TIMEOUT_MS
+ try {
+   $env:WEBTECH_CHILD_TIMEOUT_MS = '20000'
+   node CLASSROOM_RC6/check.mjs work
+ } finally {
+   if ($hadS13ChildTimeout) { $env:WEBTECH_CHILD_TIMEOUT_MS = $previousS13ChildTimeout }
+   else { Remove-Item Env:WEBTECH_CHILD_TIMEOUT_MS -ErrorAction SilentlyContinue }
+ }
+```
+
+These are optional diagnostic commands, not a required environment modification or installation.

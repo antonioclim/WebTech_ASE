@@ -1,6 +1,6 @@
 {
   "schema": "webtech-classroom-collection/v1",
-  "status": "CANDIDATE_V4_0_0_T06_PREPARED_NOT_FINAL_NOT_PUBLISHED",
+  "status": "CANDIDATE_V4_0_0_T07_PREPARED_NOT_FINAL_NOT_PUBLISHED",
   "distribution_version": "4.0.0",
   "language": "en-GB",
   "classroom_inner_version": "1.0.0-rc.6",
@@ -157,9 +157,9 @@
       "guide": "01_WEEKS/WEEK_13/C13_COURSE/EN_GB/course.html",
       "form": null,
       "package_id_path": "01_WEEKS/WEEK_13/C13_COURSE/EN_GB/PACKAGE_ID.txt",
-      "package_id": "606a78dbfa26be9b8405fa17e745876f361cb2517054537da637ae52c669f7b7",
+      "package_id": "b6ba730e54e30a9ffb3c460b3806f68b8412946710daf727474b98e0258f3b3d",
       "included_in_collection_version": "4.0.0",
-      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
+      "candidate_revision_status": "T07_COMPLETE_WITH_EXPLICIT_LIMITS"
     },
     {
       "object_id": "C14",
@@ -169,9 +169,9 @@
       "guide": "01_WEEKS/WEEK_14/C14_COURSE/EN_GB/course.html",
       "form": null,
       "package_id_path": "01_WEEKS/WEEK_14/C14_COURSE/EN_GB/PACKAGE_ID.txt",
-      "package_id": "eb57d73c940e1aa8cd47c08eb04991654bd2f2fd1dcc28cf96883cc287514071",
+      "package_id": "3d41db187790fd768f288a8d11b394db5f749ba02a6094002676b606310f49be",
       "included_in_collection_version": "4.0.0",
-      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
+      "candidate_revision_status": "T07_COMPLETE_WITH_EXPLICIT_LIMITS"
     },
     {
       "object_id": "S01",
@@ -569,7 +569,7 @@
       "entry": "01_WEEKS/WEEK_13/S13_SEMINAR/index.html",
       "start": "01_WEEKS/WEEK_13/S13_SEMINAR/EN_GB/CLASSROOM_RC6/START.html",
       "guide": "01_WEEKS/WEEK_13/S13_SEMINAR/EN_GB/CLASSROOM_RC6/GUIDE.html",
-      "form": "01_WEEKS/WEEK_13/S13_SEMINAR/EN_GB/CLASSROOM_RC6/EVIDENCE_FORM.html",
+      "form": "01_WEEKS/WEEK_13/S13_SEMINAR/EN_GB/FORMATIVE_ASSESSMENT.html",
       "tutorial": "01_WEEKS/WEEK_13/S13_SEMINAR/TUTORIAL.html",
       "projects": [
         {
@@ -592,9 +592,9 @@
         }
       ],
       "package_id_path": "01_WEEKS/WEEK_13/S13_SEMINAR/EN_GB/PACKAGE_ID.txt",
-      "package_id": "e9727a784eac738a60f7127182d6fa845a0a48d7f114419cc38428ba12532ac3",
+      "package_id": "bd89fff3b2b47e870fb89527a8eb3d70f616be45576de1e1e2803a7b444b7096",
       "included_in_collection_version": "4.0.0",
-      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
+      "candidate_revision_status": "T07_COMPLETE_WITH_EXPLICIT_LIMITS"
     },
     {
       "object_id": "S14",
@@ -602,7 +602,7 @@
       "entry": "01_WEEKS/WEEK_14/S14_SEMINAR/index.html",
       "start": "01_WEEKS/WEEK_14/S14_SEMINAR/EN_GB/CLASSROOM_RC6/START.html",
       "guide": "01_WEEKS/WEEK_14/S14_SEMINAR/EN_GB/CLASSROOM_RC6/GUIDE.html",
-      "form": "01_WEEKS/WEEK_14/S14_SEMINAR/EN_GB/CLASSROOM_RC6/EVIDENCE_FORM.html",
+      "form": "01_WEEKS/WEEK_14/S14_SEMINAR/EN_GB/FORMATIVE_ASSESSMENT.html",
       "tutorial": "01_WEEKS/WEEK_14/S14_SEMINAR/TUTORIAL.html",
       "projects": [
         {
@@ -619,9 +619,9 @@
         }
       ],
       "package_id_path": "01_WEEKS/WEEK_14/S14_SEMINAR/EN_GB/PACKAGE_ID.txt",
-      "package_id": "1d4f31117bd3a666595e7154dc803c1e734cce59be7cf2d5d747824cd9fd38f4",
+      "package_id": "114c455bdc67dbc5a083e9b6efbc5a1622b558b9d83e6ff4f72792e251f88756",
       "included_in_collection_version": "4.0.0",
-      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
+      "candidate_revision_status": "T07_COMPLETE_WITH_EXPLICIT_LIMITS"
     },
     {
       "object_id": "SETUP_MACOS_LINUX",
@@ -798,5 +798,6 @@
   "latest_published_version": "3.0.0",
   "distribution_status": "LOCAL_CANDIDATE_NOT_PUBLISHED",
   "candidate_progress": "metadata/CANDIDATE_PROGRESS.json",
-  "published": false
+  "published": false,
+  "final_phase_scope": "T07_GLOBAL_INTEGRATION_AND_PUBLICATION"
 }

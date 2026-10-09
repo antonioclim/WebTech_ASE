@@ -4,9 +4,9 @@
   "final_target_version": "4.0.0",
   "latest_published_version": "3.0.0",
   "distribution_status": "LOCAL_CANDIDATE_NOT_PUBLISHED",
-  "phase": "T06_CANDIDATE_PREPARED",
-  "next_phase": "T07",
-  "implementation_scope": "T01–T06: C01/S01 through C12/S12 and affected common guidance, activity guards and evidence forms. C13/S13 and C14/S14 retain inherited source pending T07 and whole-collection integration.",
+  "phase": "T07_CANDIDATE_PREPARED",
+  "next_phase": null,
+  "implementation_scope": "T01–T07: all 14 courses and all 14 seminars, the two setup guides and affected common teaching guidance, activity guards and evidence forms. Whole-collection integration, filtered distribution verification and publication remain work within T07 until their separate actual receipts exist.",
   "qualificationVerdict": "NOT_FINAL",
   "native_acceptance": false,
   "publication_qualified": false,
@@ -34,7 +34,7 @@
       ],
       "implementation_status": "COMPLETE_WITH_EXPLICIT_LIMITS",
       "acceptance_status": "PENDING",
-      "next_step": "Retain T01 scoped evidence and recheck affected controls when later common changes require it; whole-edition acceptance remains pending."
+      "next_step": "Retain this tranche’s authentic scoped evidence and recheck affected controls only when later common changes or unresolved concerns require it. Whole-edition acceptance remains pending."
     },
     {
       "id": "T02",
@@ -46,7 +46,7 @@
       ],
       "implementation_status": "COMPLETE_WITH_EXPLICIT_LIMITS",
       "acceptance_status": "PENDING",
-      "next_step": "Retain T02 scoped evidence and recheck affected controls when later common changes require it; whole-edition acceptance remains pending."
+      "next_step": "Retain this tranche’s authentic scoped evidence and recheck affected controls only when later common changes or unresolved concerns require it. Whole-edition acceptance remains pending."
     },
     {
       "id": "T03",
@@ -58,7 +58,7 @@
       ],
       "implementation_status": "COMPLETE_WITH_EXPLICIT_LIMITS",
       "acceptance_status": "PENDING",
-      "next_step": "Retain T03 scoped evidence and recheck affected controls when later common changes require it; whole-edition acceptance remains pending."
+      "next_step": "Retain this tranche’s authentic scoped evidence and recheck affected controls only when later common changes or unresolved concerns require it. Whole-edition acceptance remains pending."
     },
     {
       "id": "T04",
@@ -70,7 +70,7 @@
       ],
       "implementation_status": "COMPLETE_WITH_EXPLICIT_LIMITS",
       "acceptance_status": "PENDING",
-      "next_step": "Retain T04 scoped evidence and recheck affected controls when later common changes require it; whole-edition acceptance remains pending."
+      "next_step": "Retain this tranche’s authentic scoped evidence and recheck affected controls only when later common changes or unresolved concerns require it. Whole-edition acceptance remains pending."
     },
     {
       "id": "T05",
@@ -82,7 +82,7 @@
       ],
       "implementation_status": "COMPLETE_WITH_EXPLICIT_LIMITS",
       "acceptance_status": "PENDING",
-      "next_step": "Retain T05 scoped evidence and recheck affected controls when later common changes require it; whole-edition acceptance remains pending."
+      "next_step": "Retain this tranche’s authentic scoped evidence and recheck affected controls only when later common changes or unresolved concerns require it. Whole-edition acceptance remains pending."
     },
     {
       "id": "T06",
@@ -94,7 +94,7 @@
       ],
       "implementation_status": "COMPLETE_WITH_EXPLICIT_LIMITS",
       "acceptance_status": "PENDING",
-      "next_step": "Continue with T07 after an explicit next; keep whole-collection integration and global acceptance pending."
+      "next_step": "Retain this tranche’s authentic scoped evidence and recheck affected controls only when later common changes or unresolved concerns require it. Whole-edition acceptance remains pending."
     },
     {
       "id": "T07",
@@ -104,9 +104,9 @@
         "C14",
         "S14"
       ],
-      "implementation_status": "PENDING",
+      "implementation_status": "COMPLETE_WITH_EXPLICIT_LIMITS",
       "acceptance_status": "PENDING",
-      "next_step": "Implement and verify this tranche before claiming completion"
+      "next_step": "Complete the integrated distribution checks and publication route within T07. There is no T08 or further tranche to author; native and human acceptance remain separate pending gates."
     }
   ],
   "T01_evidence": [
@@ -183,15 +183,16 @@
       "reason": "Local preparation does not establish owner acceptance."
     }
   ],
-  "evidence_boundary": "Tranche-level observations are recorded separately from the ten global gates. No subset result makes the whole 14-pair distribution qualified, published or accepted. Source identity and final verification receipts are retained outside the sealed tree to avoid self-reference.",
-  "timing_limit": "S01 is estimated at 90–120 minutes and S02–S12 at 120–165 minutes, all unpiloted. A 90–100-minute slot does not establish completion of all required individual work. For S03–S12 reserve an explicit taught continuation estimated at 20–65 minutes beyond a 100-minute slot or 30–75 beyond 90, then validate through an actual novice pilot. Optional framework, server and infrastructure demonstrations require a separate allocation and their selected environment. No project is omitted or silently assigned as homework.",
+  "evidence_boundary": "Tranche-level observations remain bound to their actual tested bytes, execution identities and environments. All seven teaching tranches are prepared with explicit limits; this does not make the whole 14-pair distribution qualified, published or accepted. T07 also contains whole-collection integration, filtered distribution checks, publication and portal promotion. A null next_phase ends the seven-tranche sequence; it does not declare those final operations complete. Final source identities and actual operation receipts remain outside the sealed tree to avoid self-reference.",
+  "timing_limit": "S01 is estimated at 90–120 minutes, S02–S13 at 120–165 minutes and S14 at 90–120 minutes, all unpiloted. A 90–100-minute slot does not guarantee completion. For S03–S13 reserve explicit taught continuation estimated at 20–65 minutes beyond 100 or 30–75 beyond 90. For S14 reserve up to 20 minutes beyond 100 or 30 beyond 90 when needed. All required individual projects remain classroom work; no project is omitted or silently reassigned as homework. Optional frameworks, servers and infrastructure need their separate environment and allocation. An actual novice pilot remains pending.",
   "prepared_tranches": [
     "T01",
     "T02",
     "T03",
     "T04",
     "T05",
-    "T06"
+    "T06",
+    "T07"
   ],
   "T02_evidence": [
     {
@@ -341,6 +342,39 @@
       "area": "Whole-collection integration and acceptance",
       "state": "NOT_EXECUTED_OR_PENDING",
       "scope": "All ten global gates remain pending, qualification NOT_FINAL and v4.0.0 unpublished. T07 must complete C13/S13 and C14/S14, integrate the whole collection and reconcile 16 inherited frontdoors outside T06 that still call 3.0.0 current. Browser/headless, native Windows/macOS, saved PDF, Word, Moodle live and novice pilot remain unexecuted; owner acceptance pending."
+    }
+  ],
+  "final_phase_scope": "T07_GLOBAL_INTEGRATION_AND_PUBLICATION",
+  "T07_evidence": [
+    {
+      "area": "C13/S13 and C14/S14 teaching",
+      "state": "PASS_SOURCE_REVIEW_WITH_LIMITS",
+      "scope": "48 expanded course screens, 34 C13 and 38 C14 handout topics, 12 S13 and eight S14 meaningful stages. Independent critical source review corrected HTML placeholder, cleanup scope, legacy identities and boundary/objective terminology. Exactly all 40 individual projects and 152 causal tutorial stages remain. Source review does not establish timing, native rendering or saved PDF."
+    },
+    {
+      "area": "T07 starter and finite contract controls",
+      "state": "PASS_SELECTED_PRESEAL_CHECKS_WITH_LIMITS",
+      "scope": "Actual Node v24.19.0 on Linux, guarded initial/work/probe/try operations, finite private accepted references, assertion mutants, invocation faults, thenable and time/output controls. Exact command counts and source hashes remain in external receipts; these finite checks do not qualify all inputs or complete public TODOs."
+    },
+    {
+      "area": "T07 forms and global evidence routes",
+      "state": "PASS_SCOPED_MODEL_AND_SOURCE_CHECKS_WITH_PRIVACY_CORRECTION",
+      "scope": "53 initial Node VM/DOM groups and six detected controller mutants precede a separately recorded privacy correction: the S14 form no longer exposes the assessed aggregation implementation. Current S14 version 1.2.0 uses a manual readiness declaration and written basis; 31 post-correction VM groups pass, six mutants are detected and one weakened parser check retains secondary schema refusal. These counts overlap and are not one coverage measure. Fourteen form routes, 40 project identities, 38 learner paths, 132 S03–S14 form stages and all 152 tutorial stages checked. Real learner AI fields remain blank. Native file/CSP, clipboard, download, print and actual saved PDF remain unexecuted."
+    },
+    {
+      "area": "Preserved original student source",
+      "state": "PASS_BYTES_ONLY",
+      "scope": "315 canonical files, 48 lockfiles, 30 Word references, 38 learner TODO files and all 26 earlier environment modules retain exact bytes from parent3cf450a. Byte preservation does not validate Word rendering or native applications."
+    },
+    {
+      "area": "Preserved historical Word references",
+      "state": "PASS_LINUX_RENDER_WITH_UNRESOLVED_PRESENTATION_WARNINGS",
+      "scope": "All 30 unchanged DOCX references rendered with LibreOfficeDev 26.8.0.0.alpha0 on Linux; all 187 page PNGs inspected at original resolution. 38 unresolved presentation warnings, with no confirmed physical clipping, literal glyph overlap, missing glyphs or unreadable tables. Native Microsoft Word and Windows/macOS were not executed; this does not close the Word gate or qualify current interactive HTML or a student evidence PDF. Exact bytes and corrected preliminary observations are bound externally."
+    },
+    {
+      "area": "Final integration and release profile",
+      "state": "PENDING_SEPARATE_EXTERNAL_RECEIPTS",
+      "scope": "The series ends at T07; next_phase is null. Complete source sealing, filtered distribution, fresh extraction, conditional Git integration and publication require authentic external receipts. Faza 0 permits v4.0.0-rc.1 draft/prerelease while required browser/PDF and native/reference qualification is unresolved. Stable v4.0.0 remains the target and its tag must not be consumed prematurely."
     }
   ]
 }

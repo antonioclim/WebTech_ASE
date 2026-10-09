@@ -71,7 +71,7 @@ def main():
                'repository_package_id': identity['repository_package_id'], 'units': len(units),
                'projects': projects, 'document_links': links,
                'candidate_progress': progress,
-               'derivation_scope': 'Local candidate checkout with the retained folder structure. T01–T06 are prepared with explicit limits; T07 and whole-collection integration remain pending. This artifact is not a published release or final acceptance and does not replace any earlier published ZIP.',
+               'derivation_scope': 'Local candidate checkout with the retained folder structure. All 28 course/seminar units are prepared through T01–T07 with explicit limits. Integration and publication have distinct external evidence; this complete source archive is separate from the filtered student distribution. This artifact is not a published release or final acceptance and does not replace any earlier published ZIP.',
                'qualificationVerdict': 'NOT_FINAL', 'applications_executed': False,
                'native_acceptance': False, 'actions_dispatched': 0, 'published': False,
                'software_installed': False}
