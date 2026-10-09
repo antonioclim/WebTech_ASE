@@ -1,6 +1,6 @@
 {
   "schema": "webtech-classroom-collection/v1",
-  "status": "CANDIDATE_V4_0_0_T05_PREPARED_NOT_FINAL_NOT_PUBLISHED",
+  "status": "CANDIDATE_V4_0_0_T06_PREPARED_NOT_FINAL_NOT_PUBLISHED",
   "distribution_version": "4.0.0",
   "language": "en-GB",
   "classroom_inner_version": "1.0.0-rc.6",
@@ -133,9 +133,9 @@
       "guide": "01_WEEKS/WEEK_11/C11_COURSE/EN_GB/course.html",
       "form": null,
       "package_id_path": "01_WEEKS/WEEK_11/C11_COURSE/EN_GB/PACKAGE_ID.txt",
-      "package_id": "a84fa5953e66fd737038273ee92e6bcd0c6b1559fd5df2ab74c5adee77c32d7e",
+      "package_id": "d2149be7e231ac6268a5b071cd2a09e35e2ddcffc0bb1af794681a8bdb61991b",
       "included_in_collection_version": "4.0.0",
-      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
+      "candidate_revision_status": "T06_COMPLETE_WITH_EXPLICIT_LIMITS"
     },
     {
       "object_id": "C12",
@@ -145,9 +145,9 @@
       "guide": "01_WEEKS/WEEK_12/C12_COURSE/EN_GB/course.html",
       "form": null,
       "package_id_path": "01_WEEKS/WEEK_12/C12_COURSE/EN_GB/PACKAGE_ID.txt",
-      "package_id": "f514ce0acdd7957efa087ee08d80e086b4f26efa03adb3a30285c03a445cd8b4",
+      "package_id": "4b5ff44f870a01b4204f2bfcd89f55607e542b829d5c0eca8d664ad62b4641b7",
       "included_in_collection_version": "4.0.0",
-      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
+      "candidate_revision_status": "T06_COMPLETE_WITH_EXPLICIT_LIMITS"
     },
     {
       "object_id": "C13",
@@ -503,7 +503,7 @@
       "entry": "01_WEEKS/WEEK_11/S11_SEMINAR/index.html",
       "start": "01_WEEKS/WEEK_11/S11_SEMINAR/EN_GB/CLASSROOM_RC6/START.html",
       "guide": "01_WEEKS/WEEK_11/S11_SEMINAR/EN_GB/CLASSROOM_RC6/GUIDE.html",
-      "form": "01_WEEKS/WEEK_11/S11_SEMINAR/EN_GB/CLASSROOM_RC6/EVIDENCE_FORM.html",
+      "form": "01_WEEKS/WEEK_11/S11_SEMINAR/EN_GB/FORMATIVE_ASSESSMENT.html",
       "tutorial": "01_WEEKS/WEEK_11/S11_SEMINAR/TUTORIAL.html",
       "projects": [
         {
@@ -526,9 +526,9 @@
         }
       ],
       "package_id_path": "01_WEEKS/WEEK_11/S11_SEMINAR/EN_GB/PACKAGE_ID.txt",
-      "package_id": "c55c6c808346b51343f91537bcc56b8408b28517e7df9b3f6fd59f292ad7b927",
+      "package_id": "1cafabefa0ff96b91b0967316f5d3d306e378d0c232d8c19c60fac985bc9e7a0",
       "included_in_collection_version": "4.0.0",
-      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
+      "candidate_revision_status": "T06_COMPLETE_WITH_EXPLICIT_LIMITS"
     },
     {
       "object_id": "S12",
@@ -536,7 +536,7 @@
       "entry": "01_WEEKS/WEEK_12/S12_SEMINAR/index.html",
       "start": "01_WEEKS/WEEK_12/S12_SEMINAR/EN_GB/CLASSROOM_RC6/START.html",
       "guide": "01_WEEKS/WEEK_12/S12_SEMINAR/EN_GB/CLASSROOM_RC6/GUIDE.html",
-      "form": "01_WEEKS/WEEK_12/S12_SEMINAR/EN_GB/CLASSROOM_RC6/EVIDENCE_FORM.html",
+      "form": "01_WEEKS/WEEK_12/S12_SEMINAR/EN_GB/FORMATIVE_ASSESSMENT.html",
       "tutorial": "01_WEEKS/WEEK_12/S12_SEMINAR/TUTORIAL.html",
       "projects": [
         {
@@ -549,7 +549,7 @@
           "id": "P02",
           "title": "Queue: terminal state does not regress",
           "editable_path": "CLASSROOM_RC6/student/p02.mjs",
-          "completeScope": "Apply queued→active→completed/failed transitions; active progress may only increase from0to100; terminal or out-of-order events preserve state. Use synthetic lifecycle events. No Redis, BullMQ, actual job or exactly-once guarantee is observed."
+          "completeScope": "Only queued plus active activates; only active admits progress, completed or failed. Progress uses event.progress, must be a finite number from0to100 and may not decrease. Completed sets progress 100; failed preserves current progress. Terminal and out-of-order events preserve state content, including unrelated fields, with input immutability. No returned-reference/deep-copy or arbitrary malformed-start-state policy is added. This is synthetic lifecycle evidence, not Redis/BullMQ or exactly-once."
         },
         {
           "id": "P03",
@@ -559,9 +559,9 @@
         }
       ],
       "package_id_path": "01_WEEKS/WEEK_12/S12_SEMINAR/EN_GB/PACKAGE_ID.txt",
-      "package_id": "d63ef6aafd437ff40a58ded9a284b2737d0c821ef942e093a86ea86778b60c7f",
+      "package_id": "7d2de8e67b41a1f26e7b8df35acd04ce95cfdd974a546c7216d4838f95b2571b",
       "included_in_collection_version": "4.0.0",
-      "candidate_revision_status": "INHERITED_SOURCE_PENDING_LATER_TRANCHE_REVIEW"
+      "candidate_revision_status": "T06_COMPLETE_WITH_EXPLICIT_LIMITS"
     },
     {
       "object_id": "S13",

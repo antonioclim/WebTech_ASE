@@ -1,7 +1,5 @@
-S11 — current v3.0.0 teaching package in main
+S11 — v4.0.0 candidate teaching route
 
-Open CLASSROOM_RC6/START.html for the current classroom projects. The internal CLASSROOM_RC6 name and saved-form edition identify the retained classroom contract; they do not select an older repository release. Every required project remains required and intentionally unfinished learner targets remain unfinished. Runtime, contracts, checks, dependency locks, evidence-form scripts and source-boundary controls are exact published v3.0.0 teaching bytes.
+Start CLASSROOM_RC6/START.html, then ../TUTORIAL.html. All three individual targets and 12 semantic stages are required; TODO targets remain unfinished. CLASSROOM_RC6 is retained carrier provenance, not a separate repository release. Core capability checks use ENV_OK/WARN/BLOCKED and do not require npm. Current PACKAGE_ID identifies these candidate bytes after sealing, not the published main 3.0.0 ZIP.
 
-PACKAGE_ID.txt and SHA256SUMS.txt identify this current repository unit after removal of ancestor-only receipts. This repository layout has a new byte identity; it does not replace or relabel the published v3.0.0 ZIP. Prior versions remain available through Git tags and GitHub releases.
-
-Keep all private evidence, drafts, logs and PDFs outside the entire repository or extracted collection. General qualification remains NOT_FINAL; all ten general acceptance gates remain pending and native, manual and human acceptance was deferred by the owner.
+Keep all private fixtures, logs, drafts and the single reviewed PDF outside the whole collection. Native/browser/TLS/PDF/Moodle/platform/pilot acceptance remains unexecuted; the current formative declarations do not certify it.

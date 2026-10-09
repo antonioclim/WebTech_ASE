@@ -1,3 +1,3 @@
-# macOS/Linux consultation
+# C12 · Platform and source context
 
-Extract into a new directory and open `index.html` locally. The package is static. Do not install dependencies or run historical example commands merely to inspect the materials.
+Read [RUN_EXAMPLES](RUN_EXAMPLES.md) for exact CWDs, finite core wrappers and separately prepared canonical profiles. Native platform, browser and PDF observations remain unexecuted until actually recorded. The preserved canonical README commands/validation paragraphs are historical source; no install, arbitrary local Redis attachment or port 3000 start is required.

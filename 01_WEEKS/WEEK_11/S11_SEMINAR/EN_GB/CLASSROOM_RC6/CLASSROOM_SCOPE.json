@@ -323,6 +323,88 @@
     165
   ],
   "timeline_numeric_values": "Lower end of the unpiloted planning range, not an empirical minimum or a completion threshold.",
-  "planning_continuation": "If the actual institutional slot is shorter, confirm a continuation arrangement with the lecturer. All projects remain required individual classroom work; incomplete work remains incomplete.",
-  "private_evidence_location": "A private home-folder WebTech_Evidence/Sxx directory outside the entire extracted collection; use the detailed tutorial for operating-system-specific quoted absolute paths."
+  "planning_continuation": "120–165 minutes unpiloted: taught 20–65 additional minutes for a 100-minute meeting or 30–75 for a 90-minute meeting. Begin all three individually, preserve current-stage evidence and resume all unfinished stages/evidence in the agreed taught continuation.",
+  "private_evidence_location": "A private home-folder WebTech_Evidence/Sxx directory outside the entire extracted collection; use the detailed tutorial for operating-system-specific quoted absolute paths.",
+  "semantic_stage_counts": {
+    "P01": 4,
+    "P02": 4,
+    "P03": 4
+  },
+  "semantic_stages": {
+    "P01": [
+      {
+        "anchor": "P01-stage1",
+        "title": "Identify the authoritative principal source"
+      },
+      {
+        "anchor": "P01-stage2",
+        "title": "Reject a missing or invalid principal"
+      },
+      {
+        "anchor": "P01-stage3",
+        "title": "Construct selected values without changing inputs"
+      },
+      {
+        "anchor": "P01-stage4",
+        "title": "Falsify a body fallback"
+      }
+    ],
+    "P02": [
+      {
+        "anchor": "P02-stage1",
+        "title": "Order identity and report preconditions"
+      },
+      {
+        "anchor": "P02-stage2",
+        "title": "Separate owner and role for each action"
+      },
+      {
+        "anchor": "P02-stage3",
+        "title": "Explain refusal and existence policy"
+      },
+      {
+        "anchor": "P02-stage4",
+        "title": "Change claimed privilege without changing authority"
+      }
+    ],
+    "P03": [
+      {
+        "anchor": "P03-stage1",
+        "title": "Partition sharing and request-rule inputs"
+      },
+      {
+        "anchor": "P03-stage2",
+        "title": "Compare the complete origin"
+      },
+      {
+        "anchor": "P03-stage3",
+        "title": "Apply the declared unsafe-cookie rule"
+      },
+      {
+        "anchor": "P03-stage4",
+        "title": "Vary one decision independently"
+      }
+    ]
+  },
+  "current_tutorial": "../../TUTORIAL.html",
+  "current_form": "../FORMATIVE_ASSESSMENT.html",
+  "contract_explanations": {
+    "P01": "Output selected id/role values and unchanged input content; valid nonblank IDs remain raw. No additional result-reference freshness or own-property restriction.",
+    "P02": "Only read/delete with supplied principal/report; absent principal401 precedes absent report404. The body cannot alter action, role or ownership. No resource load or deletion is performed.",
+    "P03": "Exact membership of supplied origin strings; no URL normalisation. auth is cookie/bearer, tokenMatches a Boolean and declared uppercase methods use the stated exemptions. Sharing and request-token decisions remain independent."
+  },
+  "finite_witness_scope": {
+    "original_case_ids_preserved": true,
+    "original_cases_json_unchanged": true,
+    "original_fixture_output_and_input_assertions_preserved": true,
+    "objective_tests": 3,
+    "finite_output_calls": 56,
+    "input_content_assertions": 56,
+    "probe_rows": {
+      "P01": 13,
+      "P02": 16,
+      "P03": 19
+    },
+    "limit": "Finite pure-function contract, not login/HTTP/browser/TLS/timing; no return-reference identity requirement or added own-property/prototype constraint"
+  }
 }

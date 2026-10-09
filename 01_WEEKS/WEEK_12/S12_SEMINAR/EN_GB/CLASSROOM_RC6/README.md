@@ -1,75 +1,11 @@
-# S12 · individual classroom microprojects · proposed classroom scope 1.0
+# S12 · Current required individual route
 
-This successor classroom lane contains 3 complete bounded microprojects. Every listed microproject is required and completed individually in class. It does not implement or certify the retained full application contracts. Read-only original guide and form references are retained for historical context; their omitted full-application starters and tests are not this assignment. Do not copy a classroom PASS into an old full-project completion or canonical-test field.
+ Complete recipientKey, jobTransition and settleOwned individually in CLASSROOM_RC6/student/p01.mjs, p02.mjs and p03.mjs.  The full twelve-stage tutorial  supplies prior prediction, causal mechanism, target change, actual witness, diagnostic, recovery and reflection. Protected support, tests, workers, forms and integrity files remain outside the edit boundary. No full coordinator, queue service or Promise dispatcher is an additional requirement.  Extract the whole package. In VS Code File → Open Folder select the seminar EN_GB directory, which contains CLASSROOM_RC6 and FORMATIVE_ASSESSMENT.html. In the collection this is 01_WEEKS/WEEK_12/S12_SEMINAR/EN_GB. Use Get-Location in PowerShell or pwd on macOS/Linux to verify that CWD before every relative Node command here.   node CLASSROOM_RC6/preflight.mjs core
+node CLASSROOM_RC6/verify.mjs initial
+node CLASSROOM_RC6/check.mjs initial   ENV_OK or ENV_WARN permits the selected capable operation. ENV_BLOCKED names a missing operation-specific capability. A version difference alone does not prohibit continuation. Core uses Node without npm, HTTP, Redis or WebSocket dependencies; check also probes actual clone and single-process test invocation.  Environment guidance . The untouched initial run expects two baseline passes, three objective assertion failures and PASS_UNTOUCHED_CLASSROOM_STARTER. Syntax/import errors, crashes, signals, timeouts and output-limit faults are execution faults, not expected TODO failures.  After any target edit use work. Final work requires both baseline tests, all three original named objectives and PASS_BOUNDED_CLASSROOM_CONTRACT, with PASS_MUTABLE_CLASSROOM_BOUNDARY from verify. Protected workers are bounded to 10 seconds and 1 MB combined stdout/stderr; owned POSIX process-group cleanup is qualified separately from native Windows tree cleanup.   node CLASSROOM_RC6/verify.mjs work
+node CLASSROOM_RC6/check.mjs work
+node CLASSROOM_RC6/PROBE.mjs P01-reference
+node CLASSROOM_RC6/PROBE.mjs P02-lifecycle
+node CLASSROOM_RC6/PROBE.mjs P03-replay   The probes import your targets and print actual finite observations. P01 contrasts opaque labels and representation. P02 feeds actual completion output into late progress. P03 uses actual returned pending with the same reply for replay. If TODO output has no usable snapshot, the dependent step is NOT_EXECUTED; no invented result completes it. Probes are observations, not personal-case oracles, author authentication or actual queue/network execution.  Save synthetic personal JSON cases outside the complete collection in WebTech_Evidence/S12 under your user profile/home directory. From this EN_GB CWD run node CLASSROOM_RC6/try.mjs P01 followed by the quoted absolute JSON path, using P02/P03 for their interfaces. The  tutorial supplies exact PowerShell and POSIX procedures . Replay input is the complete object {pending: actual first.pending, reply: the same whole reply}; save valid JSON values, not those descriptive placeholders. Try reports actual_output and input_unchanged without judging your prediction.  Recovery help .  Use  one blank formative record  for all twelve stages, project reflections, one genuine AI critique and your independent check. Verify that actual fields and controls load. If file delivery blocks assets, keep private notes/BLOCKED and follow the teacher’s delivery procedure. A suggested prompt, synthetic model statement or draft does not satisfy the genuine exchange.  Evidence help .  Save private JSON draft outside the collection. Import resets declarations. Print reviewed student declaration remains a student assertion with HUMAN REVIEW PENDING; unfinished evidence uses Print draft or blocked record. Save one individual PDF covering all three projects and AI/check, reopen every page and inspect actual text/captures before the real teacher-created S12 Moodle Assignment. Follow its actual deadline and submit controls. No native PDF, real AI exchange or upload is certified by these files.  The full route is an unpiloted 120–165 minute estimate: each project 30–45, setup 5, genuine AI plus independent check 15, PDF review 5 and recap 5. Evidence is recorded during stages. For a 90–100 minute slot, checkpoint at minute 60 and around 80–90 preserve exact next stage, unsatisfied assertion, external case and next prediction. A proposed lecturer-arranged taught continuation is 20–65 minutes beyond 100 or 30–75 beyond 90. Reconstruct that state and finish every stage with the same one PDF. No project becomes optional. Provisioning and conditional infrastructure demonstrations are additional time. 
 
-The current complete sequence plans 120–165 minutes, including 30–45 for every required project. This is an unpiloted planning range. No learner pilot, measured completion time, actual Gemini exchange or native/framework/browser qualification is claimed. Installation is outside timed work. Use the prescribed Node 24.21.0/npm 11.19.0 prepared by the teacher; these targets have no third-party dependencies. The core checks execute bounded JavaScript models (and the actual local service in S14 P01). They do not execute Redux Toolkit, Express HTTP, Worker, Service Worker, Redis/BullMQ or a cross-origin browser boundary. S08–S10 additionally supply a real React companion with its own provisioned interaction tests; record those results separately.
-
-## Current unpiloted plan: 120–165 minutes
-
-Complete all 3 microprojects individually. Plan 30–45 minutes for each required project. Prepare the prescribed runtime and expressly required dependencies before class. The following durations are planning estimates, not measured completion times, empirical minimums or completion guarantees.
-
-| Planned duration | Individual activity |
-| --- | --- |
-| 5 minutes | Prepared environment and privacy check |
-| 30–45 minutes | P01 — required bounded project with progress and evidence checkpoints |
-| 30–45 minutes | P02 — required bounded project with progress and evidence checkpoints |
-| 30–45 minutes | P03 — required bounded project with progress and evidence checkpoints |
-| 15 minutes | One shared genuine bounded AI critique and independent check |
-| 5 minutes | Review the evidence and save one individual PDF |
-| 5 minutes | Final recap: achievement, learning, reason and next transfer |
-
-For each project, use about 5 planned minutes to read the contract and record a prediction, 20–30 to implement, run checks and investigate results, then 5–10 to review a counterexample and record evidence. These checkpoints total 30–45 planned minutes.
-
-If the actual institutional slot is shorter, agree a taught continuation with the lecturer before the session. All projects remain required individual classroom work; keep unfinished work marked unfinished. The end of a meeting does not establish completion.
-
-The current `GUIDE.html` and the separate top-level `project_schedule` in `CLASSROOM_SCOPE.json` govern these planned blocks. The `projects` array retains the unchanged assessment contract.
-
-## Run the actual classroom lane
-
-From the extracted package root, run `node CLASSROOM_RC6/check.mjs initial` before editing. It requires 2 baseline PASS and 3 intended objective assertion failures. A crash, timeout, syntax error or unfamiliar failure is a genuine STOP. Edit only the named `CLASSROOM_RC6/student/` file for each task. After your own changes run `node CLASSROOM_RC6/check.mjs work`; all named classroom assertions must pass. These commands do not run or weaken the retained full-project verifier.
-
-## P01 · HTTP/WebSocket: recipient ownership
-
-Historical source connection (reference only): `guided/p01/student/src/reply-coordinator.js`. Editable classroom target: `CLASSROOM_RC6/student/p01.mjs`.
-
-Construct a collision-free JSON tuple key from two nonblank strings, principalId and connectionId. Reject invalid labels with null. Demonstrate that equal desk labels under different principals remain distinct. This is a binding model, not HTTP 202, authentication or socket delivery.
-
-Before running, record one predicted valid outcome and a counterexample. Implement your own function. Run all supplied cases, then add a separate individually designed counterexample in your evidence notes and execute it using your function. Record input, exact command/action, expected and actual result, evidence locator, causal mechanism and one limit. A failed supplied case is unfinished work, not completion. Use concise copied text logs or genuine captures embedded in the PDF.
-
-## P02 · Queue: terminal state does not regress
-
-Historical source connection (reference only): `optional/p02/student/src/job-lifecycle.js`. Editable classroom target: `CLASSROOM_RC6/student/p02.mjs`.
-
-Apply queued→active→completed/failed transitions; active progress may only increase from 0 to 100; terminal or out-of-order events preserve state. Use synthetic lifecycle events. No Redis, BullMQ, actual job or exactly-once guarantee is observed.
-
-Before running, record one predicted valid outcome and a counterexample. Implement your own function. Run all supplied cases, then add a separate individually designed counterexample in your evidence notes and execute it using your function. Record input, exact command/action, expected and actual result, evidence locator, causal mechanism and one limit. A failed supplied case is unfinished work, not completion. Use concise copied text logs or genuine captures embedded in the PDF.
-
-## P03 · Dispatcher: correlation and single settlement
-
-Historical source connection (reference only): `projects/p03/student/src/request-dispatcher.mjs`. Editable classroom target: `CLASSROOM_RC6/student/p03.mjs`.
-
-Accept a completed reply only for its current pending request ID and exact expected type, remove that one entry and preserve all others. Ignore duplicates/unknown/wrong-type replies. This array snapshot is a protocol model, not the full promise/timer/abort dispatcher or socket cleanup.
-
-Before running, record one predicted valid outcome and a counterexample. Implement your own function. Run all supplied cases, then add a separate individually designed counterexample in your evidence notes and execute it using your function. Record input, exact command/action, expected and actual result, evidence locator, causal mechanism and one limit. A failed supplied case is unfinished work, not completion. Use concise copied text logs or genuine captures embedded in the PDF.
-
-## Actual bounded LLM work and one PDF
-
-Ask Gemini or the classroom-approved LLM to critique one narrow claim from one of your microprojects. Share only synthetic inputs and at most a short non-private excerpt; do not ask it for your completed implementation. Record the tool/date, sanitised prompt actually sent, relevant claim actually received, your independent check, justified ACCEPTED, REJECTED, PARTLY ACCEPTED or UNKNOWN verdict, correction and scope limit. Prepared text or a model trace is not an actual exchange. If access is blocked, record BLOCKED honestly; it does not authorise an alternative or fulfil the actual-exchange requirement.
-
-Use the current classroom evidence form, preserving one record for every microproject. Fill identity, current classroom scope/package ID, actual environment, before/after evidence, results, reflection and the bounded genuine LLM record. All responses start blank and the ownership declaration starts unchecked. Export one individual PDF using the assigned current seminar filename, reopen the actual saved file and inspect every page, finish the recap before submitting it to the teacher-created seminar Assignment. No separate course Assignment, project ZIP or invented deadline is required. A filename/path in a text-only HTML form does not embed an image. The legacy form remains a full-project route with its original semantics and cannot certify this reduced lane.
-
-## Your independently designed counterexample
-
-Create your own small synthetic JSON input and record a prediction before running it. Keep every private fixture, JSON draft, log and PDF outside the entire extracted collection. Use your home-folder `WebTech_Evidence/S12`: `%USERPROFILE%\WebTech_Evidence\S12` on Windows or `$HOME/WebTech_Evidence/S12` on macOS/Linux. Keep the extracted collection in a different folder. The [detailed tutorial](../../TUTORIAL.html) provides the quoted absolute paths and operating-system commands.
-
-From this seminar package root, follow the detailed tutorial’s operating-system-specific command to pass the quoted absolute fixture path to `node CLASSROOM_RC6/try.mjs` with the actual project ID. Copy the real output into that task’s record. The runner does not compare your output with your prediction or authenticate authorship. If it reports `CLASSROOM_CASE_FAILED`, preserve that failure and investigate your input and implementation. Only synthetic data are permitted.
-
-## Final recap before submission
-
-Explain how distinct recipient identity, a non-regressing terminal state and owned settlement prevented the failures you investigated. State what you achieved with synthetic state and what you learned about lifecycle ownership. Next, identify the socket, queue or cancellation witness required before making a claim about a full asynchronous application.
-
-Finish the recap before actual submission. If it changes your form record, update the form, renew the affected declarations and export and review the latest single PDF before uploading it. Use the agreed continuation if review remains unfinished; do not submit an earlier PDF as the updated record.
-
-## Current carrier and historical references
-
-The `CLASSROOM_RC6` folder, retained edition labels and v1 record values identify the existing teaching carrier and record contract. Use the current candidate unit identity shown by the collection entry for a new record. Linked original guides and forms are read-only historical references; their omitted full-application starters and tests are not the current assignment.
+[Start](START.html) · [tutorial](../../TUTORIAL.html) · [one blank record](../FORMATIVE_ASSESSMENT.html).

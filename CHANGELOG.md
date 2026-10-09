@@ -1,5 +1,9 @@
 # Changes
 
+## v4.0.0 candidate — T06 prepared, 9 October 2026
+
+C11/S11 and C12/S12 connect trusted identity, report authorisation, independent CORS and CSRF decisions, connection identity, job lifecycle and reply ownership through expanded teaching, 24 meaningful seminar stages, neutral runnable observations and current formative evidence forms. Pure decisions remain distinct from real authentication, browser enforcement, WebSocket delivery and durable queues. The ten preserved canonical projects retain their source and dependency contracts; their missing optional environments remain explicit blocks. All 40 projects remain required individual work and all 38 learner targets remain unfinished. T01–T06 are prepared with explicit limits; T07, whole-collection integration, native/print/PDF and owner acceptance remain pending. This checkpoint is not a published release.
+
 ## v4.0.0 candidate — T05 prepared, 9 October 2026
 
 C09/S09 and C10/S10 now connect URL identity, document delivery, authoritative refresh, state ownership and architecture requirements through expanded teaching, 18 causal seminar stages, neutral runnable observations, scoped activity guards and current formative evidence forms. Pure functions remain distinct from real router, HTTP, Context and Redux execution. The earlier C08 optional launcher now reads the actual canonical registry object before dependency checks, and S08 clone probes verify copied content before isolation. Original canonical sources are preserved and React execution remains separately conditional. All 40 projects remain required individual work and all 38 learner targets remain unfinished. T01–T05 are prepared with explicit limits; T06–T07, native/print/PDF and whole-edition acceptance remain pending. This checkpoint is not a published release.

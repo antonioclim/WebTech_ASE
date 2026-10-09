@@ -10,11 +10,11 @@ P02 — Authorization: owner versus role — editable path from the seminar pack
 
 P03 — CORS and CSRF: two independent decisions — editable path from the seminar package root: CLASSROOM_RC6/student/p03.mjs
 
-Current entry: ../../../../ENTRY/S11.html
+Current entry: ../../../S11_SEMINAR/index.html
 
-Step-by-step tutorial: ../../../../TUTORIALS/S11.html
+Step-by-step tutorial: ../../../S11_SEMINAR/TUTORIAL.html
 
-Current evidence form: ../../../S11/WEBTECH_ASE_S11_EN_GB_v1.2.4_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html
+Current evidence form: ../../../S11_SEMINAR/EN_GB/FORMATIVE_ASSESSMENT.html
 
 Preserve support files, run the stated target checks and record actual results, including blocked or unexecuted checks. Complete the current form for all projects and export one PDF. Review its saved pages and filename before uploading it to the corresponding private Moodle Assignment. A blocked check is not a PASS.
 
@@ -24,7 +24,7 @@ The old full applications are optional advanced references. Their reused IDs, pa
 
 ## Reading this handout
 
-**WIP/PREVIEW.** This is the derived 60-minute C11 course for third-year Economic Informatics. Its primary basis is the 35 numbered topics of canonical Unit 11 and the approved Week 11 architecture. Canonical titles below retain their original wording. Explanatory corrections are identified as derived notes, not silently applied to the sources.
+**v4.0.0 candidate.** This is the derived 60-minute C11 course for third-year Economic Informatics. Its primary basis is the 35 numbered topics of canonical Unit 11 and the approved Week 11 architecture. Canonical titles below retain their original wording. Explanatory corrections are identified as derived notes, not silently applied to the sources.
 
 The organising question is: **Which boundary accepts an identity, operation or representation, who owns that decision and what evidence actually tests it?** Keep transport, authentication, permission, request intent and output handling distinct. A successful result for one boundary does not certify the others.
 
@@ -32,7 +32,7 @@ The five exact source examples are reading anchors under `canonical/`. They are 
 
 ## The 60-minute route
 
-00–05: boundary map. 05–16: credentials and sessions. 16–28: moderation policy. 28–36: cookies and origins. 36–45: CORS and CSRF. 45–54: parameters, contexts and configuration. 54–57: defensive review and transfer. 57–60: retrieval and STOP. The three retrieval intermezzos are included in these blocks. The reserved 30 minutes are not overflow or installation time.
+00–05: boundary map. 05–16: credentials and sessions. 16–28: moderation policy. 28–36: cookies and origins. 36–45: CORS and CSRF. 45–54: parameters, contexts and configuration. 54–57: defensive review and transfer. 57–60: retrieval and STOP. The three retrieval intermezzos are included in these blocks. The reserved 30 minutes belonged to the historical course plan, not a current S11 completion allowance. The current nominal course route is unpiloted; S11 uses its own taught continuation and excludes installation from timed work.
 
 
 ### 1. HTTPS protects transport
@@ -47,13 +47,9 @@ A string in `x-forwarded-proto` is not a TLS handshake. The canonical support as
 
 ### 2. Authentication establishes a principal
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
+Authentication produces a principal from a trusted verification path. Treat the principal as the result of checking credentials or resolving server-owned session state, not as a claim copied from a form, hidden input or cookie profile. The identity decision precedes a resource policy; current S11 P02 receives that principal as a supplied fact.
 
-Authentication produces a principal from a trusted verification path. Treat the principal as the result of checking credentials or resolving server-owned session state, not as a claim copied from a form, hidden input or cookie profile. The identity decision precedes the central P02 policy.
-
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-The canonical lecture example 01 deliberately selects a fixture user by name without password verification. That demonstrates opaque lookup, not a complete login. P01 is the separate capstone source for a password/session boundary. Keep the reduced example and the full project distinct; understanding that boundary does not require completing the entire P01 implementation in the S11 hour.
+The canonical lecture example 01 deliberately selects a fixture user by name without password verification. That demonstrates opaque lookup, not a complete login. Historical full P01 was the capstone source for a password/session boundary; current S11 P01 is principalOwner. Keep the reduced example and the full project distinct; understanding that boundary does not require completing the historical full P01 application as part of current S11.
 
 **Check:** Who created the principal, and which trusted data supported it?
 
@@ -93,9 +89,7 @@ A deterministic identifier generator is useful in a reproducible local test. It 
 
 Rotation changes the accepted session identity after a relevant authentication or privilege transition. Expiration bounds acceptance on the server; logout invalidates the server record. Clearing a browser cookie is related housekeeping, not a substitute for revocation. [R1]
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-The P01 store has an expiry boundary and explicit invalidation. Its cleanup of expired records is triggered by lookup; do not invent a periodic cleanup worker or a `rotate` method absent from that source. Login composes invalidation and creation. A pure store check can verify expiry at the boundary, but it cannot demonstrate the browser’s cookie lifecycle or the full login sequence.
+The historical full P01 store had an expiry boundary and explicit invalidation. Its cleanup of expired records is triggered by lookup; do not invent a periodic cleanup worker or a `rotate` method absent from that source. Login composes invalidation and creation. A pure store check can verify expiry at the boundary, but it cannot demonstrate the browser’s cookie lifecycle or the full login sequence.
 
 **Check:** What should happen at exactly the recorded server expiry time?
 
@@ -115,7 +109,7 @@ The example does not check a password or expire the map entry based on time. Its
 
 A signed self-contained token changes where some state is represented; it does not remove verification responsibilities. The lecture names expiry, issuer, audience, key management and a revocation strategy as obligations. Signature validity alone is not a permission decision for a specific resource.
 
-This week does not introduce an external identity provider or a new JWT implementation. The central project already receives a principal from supplied authentication. Keep token architecture as an explanatory contrast with opaque sessions, not an extra implementation hidden in the policy file. A diagram of a token does not count as an executed verifier or a deployment acceptance.
+This week does not introduce an external identity provider or a new JWT implementation. The historical full central project received a principal from supplied authentication; current S11 P02 also assumes its supplied principal. Keep token architecture as an explanatory contrast with opaque sessions, not an extra implementation hidden in the policy file. A diagram of a token does not count as an executed verifier or a deployment acceptance.
 
 **Check:** Which policy question remains after a token has been verified?
 
@@ -125,9 +119,7 @@ This week does not introduce an external identity provider or a new JWT implemen
 
 Authorisation asks whether this principal may perform this action on this server-loaded resource. The action is fixed by the route; the resource and principal have separate trusted sources. An authenticated request can still be refused. [R6]
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-For P02, retain the single assessed file `src/authorization-policy.js`. The supplied route owns its state precondition after allowance. The course explains this decision boundary without providing the complete assessed policy implementation. A check of a callback is evidence about that callback’s result, not proof that Express invoked middleware in the intended order. Record those two classes of evidence separately.
+Historical full P02 used src/authorization-policy.js. The current assessed file is CLASSROOM_RC6/student/p02.mjs. The historical full P02 route owned its state precondition after allowance; current reportPermission performs no route operation. The course explains this decision boundary without providing the complete assessed policy implementation. A check of a callback is evidence about that callback’s result, not proof that Express invoked middleware in the intended order. Record those two classes of evidence separately.
 
 **Check:** Which inputs are required beyond a valid identity?
 
@@ -137,9 +129,7 @@ For P02, retain the single assessed file `src/authorization-policy.js`. The supp
 
 Ownership and resource state come from repository data. Principal identity and role come from authentication. A request body may contain proposed domain data, but it must not redefine these trusted facts. Hidden controls in a user interface are not enforcement.
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-The P02 support uses fixed test sessions and a closed fixture domain. Do not generalise those lookups to arbitrary principal objects or unreviewed role names. The derived S11 support work will document that boundary separately; C11 does not repair authentication in a file the learner is forbidden to edit. Inspect provenance, not merely the attractive name of a property such as `ownerId`.
+The historical full P02 support used fixed test sessions and a closed fixture domain. Do not generalise those lookups to arbitrary principal objects or unreviewed role names. Current S11 has its separate supplied-principal boundary; C11 does not repair authentication in a file the learner is forbidden to edit. Inspect provenance, not merely the attractive name of a property such as `ownerId`.
 
 **Check:** At which boundary would a proposed field acquire trustworthy meaning?
 
@@ -149,9 +139,7 @@ The P02 support uses fixed test sessions and a closed fixture domain. Do not gen
 
 A role is meaningful because a central permission policy assigns actions to it. Keep the vocabulary explicit, reviewable and consistent across routes. Do not scatter role-name checks across unrelated handlers or treat an administrator label submitted by a client as authority.
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-The lecture example has a reduced set of fixture principals; it does not instantiate every role named in the lecture prose. Its role checks are inline middleware, not the separate pure policy function announced in the README. The central P02 exercise has its own permission map and contract. Read the supplied map there rather than extrapolating a full matrix from EX-02.
+The lecture example has a reduced set of fixture principals; it does not instantiate every role named in the lecture prose. Its role checks are inline middleware, not the separate pure policy function announced in the README. Historical full P02 had its own permission map; current reportPermission uses the declared read/delete table. Read the supplied map there rather than extrapolating a full matrix from EX-02.
 
 **Check:** Why is a role label insufficient without an action and resource?
 
@@ -161,7 +149,7 @@ The lecture example has a reduced set of fixture principals; it does not instant
 
 Default refusal means that allowance must follow an explicit rule, not an absence of checks. Distinguish an unauthenticated request, a known principal lacking permission and a resource intentionally concealed. The project gives exact response vocabulary for these cases. [R6]
 
-An unsupported action in the canonical policy raises a configuration `TypeError` while constructing the middleware. That is distinct from an unexpected loader error forwarded at request time. Do not report an observed HTTP 500 when only the constructor was executed. Preserve the canonical test and explain the mismatch with prose; fail-closed configuration is not accidental permission.
+An unsupported action in the historical full P02 policy raised a configuration `TypeError` while constructing the middleware. That is distinct from an unexpected loader error forwarded at request time. Do not report an observed HTTP 500 when only the constructor was executed. Retain the original source distinction and explain the mismatch with prose; fail-closed configuration is not accidental permission.
 
 **Check:** How does a construction error differ from an HTTP denial?
 
@@ -171,9 +159,7 @@ An unsupported action in the canonical policy raises a configuration `TypeError`
 
 EX-02 combines a trusted fixture principal, repository lookup and route-specific middleware. It illustrates the separation of identity and permission, but its report map belongs to the module rather than to each application factory. It is not evidence of per-factory isolation.
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-For central P02 evidence, measure the policy loader call and the route-continuation call independently. A frozen clone of the flat loaded record is not a transaction or lock. A permitted operation may still fail the supplied state precondition with 409. Keep that result distinct from a permission refusal. No concurrent authorisation/mutation race is executed in this course.
+In historical full P02 evidence, measure the policy loader call and the route-continuation call independently. A frozen clone of the flat loaded record is not a transaction or lock. A permitted operation may still fail the supplied state precondition with 409. Keep that result distinct from a permission refusal. No concurrent authorisation/mutation race is executed in this course.
 
 **Check:** What does one loader call fail to prove about later mutation?
 
@@ -243,9 +229,7 @@ The relevant record has distinct fields for the origin, emitted sharing headers,
 
 For credentialed sharing, the source specifies an exact allowed origin rather than wildcard sharing. When the selected response depends on Origin, `Vary: Origin` communicates that variation to caches. This concerns response selection, not user permission. [R3]
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-EX-04 emits `Vary` on its allowed branch; the P03 protective reference emits it before branching. The audit records that difference but did not execute a cache. Treat any cache consequence as dependent on the actual deployment and cache rules. The handout does not turn this source observation into a reproduced cache failure or a complete CORS repair.
+EX-04 emits `Vary` on its allowed branch; the historical full P03 protective reference emits it before branching. The audit records that difference but did not execute a cache. Treat any cache consequence as dependent on the actual deployment and cache rules. The handout does not turn this source observation into a reproduced cache failure or a complete CORS repair.
 
 **Check:** Why should the status and the Vary header be recorded separately?
 
@@ -255,7 +239,7 @@ EX-04 emits `Vary` on its allowed branch; the P03 protective reference emits it 
 
 EX-04 has an allowlist and an OPTIONS branch. For an unlisted origin it can continue without Access-Control-Allow-Origin; this is withholding response sharing, not necessarily returning an HTTP refusal. Its account fixture is not an authenticated production account endpoint.
 
-The supplied test asserts selected headers. No Express or browser test is run here. A preflight-like header exchange is not approval of the later operation’s principal or permission. Inspect the exact source, then describe the boundary it implements. The S11 reduced CORS task and its own explicit refusal contract are separate from this small course example.
+The supplied test asserts selected headers. No Express or browser test is run here. A preflight-like header exchange is not approval of the later operation’s principal or permission. Inspect the exact source, then describe the boundary it implements. Current S11 securityDecision instead returns independent sharing/token Booleans, with no emitted response or explicit HTTP refusal.
 
 **Check:** Does a 204 from an OPTIONS branch grant permission to mutate?
 
@@ -275,7 +259,7 @@ In the diagram, keep CORS alongside response sharing rather than placing it in t
 
 Cookie-authenticated requests may carry credentials by browser behaviour rather than an explicit script-held authorisation header. A state-changing operation therefore needs a deliberate request-intent defence in addition to identity and resource permission. The course explains that risk without executing a cross-site attack.
 
-The required portfolio selects CORS and CSRF as two distinct classes. A request record must not include raw tokens or cookies. Record a benign accepted check, a benign refused check and the decision boundary, with the actual execution class stated. A token mismatch result from a helper is not proof that a browser or a middleware chain enforced it.
+The historical full portfolio selected CORS and CSRF as two distinct classes. Current S11 requires the third bounded function, not that portfolio. A request record must not include raw tokens or cookies. Record a benign accepted check, a benign refused check and the decision boundary, with the actual execution class stated. A token mismatch result from a helper is not proof that a browser or a middleware chain enforced it.
 
 **Check:** Why can valid identity be insufficient for a cookie-authenticated write?
 
@@ -285,13 +269,9 @@ The required portfolio selects CORS and CSRF as two distinct classes. A request 
 
 The source combines intentional cookie policy with a secret, unpredictable session-bound request token and origin checks as defence in depth. Enforcement must occur before a write. A deterministic classroom fixture is not a production secret merely because the comparison succeeds. [R2]
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
+Historical full P02’s supplied CSRF helper checks its fixture token but does not inspect Origin or Referer. Explain that limit while preserving the learner’s one-file policy boundary. Current S11 P03 identifies its two independent decisions separately and does not repair those historical helpers. Completing or testing those two helpers must not be reported as acceptance of the original five-class exercise.
 
-P02’s supplied CSRF helper checks its fixture token but does not inspect Origin or Referer. Explain that limit while preserving the learner’s one-file policy boundary. The reduced P03 successor will identify the selected helper work separately. Completing or testing those two helpers must not be reported as acceptance of the original five-class exercise.
-
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-**Check:** Which claim about same-origin enforcement is unsupported by P02’s helper?
+**Check:** Which claim about same-origin enforcement is unsupported by historical full P02’s helper?
 
 *Basis: CAN-24, source lecture line 175; derived scope is in SOURCE_NOTES.md.*
 
@@ -299,9 +279,7 @@ P02’s supplied CSRF helper checks its fixture token but does not inspect Origi
 
 Preserve query structure by keeping the SQL statement fixed and binding data separately. This is a boundary between instructions and values, not an HTML-escaping problem. An ordinary search term is enough to inspect the query object and its parameter list. [R7]
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-P03’s repository checks a fixed query contract and filters an in-memory array; it does not execute SQL. EX-05 imports sql.js and prepares a statement in source, but that engine remains unexecuted here. Keep parameter-object checks separate from parser, LIKE, ordering and database execution evidence. No injection payload or database attack is generated by the lab.
+The historical full P03 repository checked a fixed query contract and filters an in-memory array; it does not execute SQL. EX-05 imports sql.js and prepares a statement in source, but that engine remains unexecuted here. Keep parameter-object checks separate from parser, LIKE, ordering and database execution evidence. No injection payload or database attack is generated by the lab.
 
 **Check:** What would be necessary before calling a result a SQLite test?
 
@@ -341,9 +319,7 @@ The canonical helper returns a fallback path for an unsupported value. That path
 
 EX-05 contains source for a parameterised database route and an HTML card route with text handling and URL selection. Read each control alongside its own destination. No one of those controls replaces CORS, CSRF or resource permission.
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-The source tests include historical adversarial inputs; they are preserved for provenance and not run in this course route. Current demonstrations use source inspection and benign protective function checks only. No Express server, sql.js engine or browser is started. Do not describe the P03 array-based repository as equivalent execution merely because both examples discuss queries.
+The source tests include historical adversarial inputs; they are preserved for provenance and not run in this course route. The current neutral demonstrations execute benign equipment fixtures, actual node:sqlite and literal Node HTTP. They start no canonical Express server or sql.js engine and no browser. Do not describe the historical full P03 array-based repository as equivalent execution merely because both examples discuss queries.
 
 **Check:** Which evidence class is different between a prepared object and an executed query?
 
@@ -363,9 +339,7 @@ Do not invent a policy header and call it tested. A useful review asks which des
 
 Secrets belong in controlled deployment configuration, not committed fallback values. Missing required configuration should stop the relevant operation rather than silently using a permissive production default. Length validation is a shape check, not a measurement of randomness or entropy.
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-P03 checks a sessionSecret configuration field, but fixture authentication does not use it to sign sessions. The source therefore cannot support a claim that passing configuration validation proves signed-session authentication. Record which component actually consumes each configuration value. No credentials, environment dumps or keys are requested for this course or the later evidence form.
+Historical full P03 checked a sessionSecret configuration field, but fixture authentication does not use it to sign sessions. The source therefore cannot support a claim that passing configuration validation proves signed-session authentication. Record which component actually consumes each configuration value. No credentials, environment dumps or keys are requested for this course or the later evidence form.
 
 **Check:** Which use of a secret must exist before its length check can support an authentication claim?
 
@@ -375,9 +349,7 @@ P03 checks a sessionSecret configuration field, but fixture authentication does 
 
 Logs and public errors are output destinations too. Keep credentials, tokens and internal diagnostic detail out of public responses and learning evidence. Stable public categories can be recorded without copying sensitive values. A helpful internal diagnostic need not be emitted to every caller.
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-The P03 source sanitises 500 messages explicitly, while some 4xx messages follow a different route. That is a source boundary to review, not an observed disclosure in this delivery. Do not classify every 4xx as a leak. A future support wrapper can map known public errors separately without silently extending the student’s assessed file.
+The historical full P03 source sanitises 500 messages explicitly, while some 4xx messages follow a different route. That is a source boundary to review, not an observed disclosure in this delivery. Do not classify every 4xx as a leak. A future support wrapper can map known public errors separately without silently extending the student’s assessed file.
 
 **Check:** Which diagnostic detail is unnecessary in a student’s public outcome record?
 
@@ -415,23 +387,19 @@ For the seminar, critique one sanitised claim with a minimal code or trace excer
 
 ## Transfer to S11
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
+Historical full applications assigned central P02 middleware, capstone P01 and a selected two-class P03 portfolio. Their paths and timings do not define current S11. All three current pure targets and twelve stages remain required individually.
 
-P02 is the full central implementation, in `student/src/authorization-policy.js`. The source estimate is 55–65 minutes; the 18-minute seminar implementation segment does not guarantee completion. P01 is capstone integration, not a second in-class implementation. P03 uses the derived two-class 11.3A route: **CORS and CSRF**. The source prescribes two classes but not which two; this selection belongs to the approved local architecture. The all-five 11.3B route remains advanced follow-up.
-
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-The original P03 starter imports deliberately insecure evidence transitively. Do not launch it as a routine preview. S11 will provide the separately identified reduced successor; that package is not produced in this C11 phase. A selected two-class result cannot be called a pass of the original all-five suite.
+The original P03 starter imports deliberately insecure evidence transitively. Do not launch it as a routine preview. Current S11 is supplied and has its own three bounded tasks; it does not qualify that old starter or selected full-application helpers. A selected two-class result cannot be called a pass of the original all-five suite.
 
 ## A record that does not overclaim
 
 State the input category without secret values, the trusted source, expected protective result, observed result, exact evidence locator and evidence class. SOURCE, PURE_JS, CALLBACK_MODEL and ACTUAL_HTTP are not synonyms. Browser enforcement, TLS and deployment evidence remain separate. A frozen flat snapshot is not a lock; one loader count is not a transaction; a header is not browser behaviour.
 
-At minute 60, stop. Record unfinished work without declaring acceptance. The later seminar uses one PDF for one private S11 Assignment, not a C11 upload. No deadline, grade or permission to run a service is created by this handout.
+The nominal 60-minute guided course segment ends with a recorded checkpoint; continue remaining reading and consolidation separately, without declaring unfinished work accepted. The later seminar uses one PDF for one private S11 Assignment, not a C11 upload. No deadline, grade or permission to run a service is created by this handout.
 
 ## Qualification boundary
 
-Source identity, a pure JavaScript result, a callback substitute, an actual Express request, a SQL-engine run, browser enforcement and TLS are different evidence classes. No application server, SQL, browser or TLS run is performed here. Native Word/platform and Moodle qualification remain separate. No secret or real credential is requested. The next-reading list is preserved at canonical/reading-list-next.md, not implemented by this phase.
+Source identity, a pure JavaScript result, a callback substitute, an actual Express request, a SQL-engine run, browser enforcement and TLS are different evidence classes. Current neutral demonstrations have their own Node, node:sqlite and literal HTTP scope; canonical Express/sql.js, browser and TLS execution remain separately unqualified. Native Word/platform and Moodle qualification remain separate. No secret or real credential is requested. The next-reading list is preserved at canonical/reading-list-next.md, not implemented by this phase.
 
 <!--pagebreak-->
 # C11 — Sources and evidence rights
@@ -440,24 +408,49 @@ Source identity, a pure JavaScript result, a callback substitute, an actual Expr
 
 The controlling material is canonical Unit 11, its 35 lecture topics, five exact examples and the approved Week 11 architecture. CAN-xx identifies a source topic; EX-xx an exact directory; Mxx a separate fixed model. Public source hashes are in CANONICAL_SOURCES.json. Original spellings and historical README/test/run statements remain exact. The authoring does not convert those statements into new execution evidence.
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-The local design changes the 96-minute source lecture to 60 minutes and changes attack-trace execution to static defensive analysis and benign protective checks. SOURCE_NOTES.md identifies corrections. P02 is central, P01 is capstone integration and the mandatory reduced 11.3A pair is the locally selected CORS/CSRF pair. Source prescribes two classes but not their choice.
+The local design changes the 96-minute source lecture to 60 minutes and changes attack-trace execution to static defensive analysis and benign protective checks. SOURCE_NOTES.md identifies corrections. Historical full P02 was central, P01 capstone integration and the selected reduced 11.3A pair is the locally selected CORS/CSRF pair. Source prescribes two classes but not their choice.
 
 ## Primary documentation consulted
 
-Consulted 30 September 2026 for the bounded interpretations below. These pages do not update or qualify source pins, and do not have journal DOIs. None is invented. Current Node documentation identifies itself as v26.10.0; this is not the runtime used for local checks.
-
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
+Retained source references were consulted 30 September 2026; the current primary-reference review is 9 October 2026. These pages do not update or qualify source pins, and do not have journal DOIs. None is invented. The referenced Node v24 documentation identifies v24.21.0 at current review; it documents an API and does not establish execution on that reference runtime.
 
 | ID | APA-style reference | Role and limit |
 | --- | --- | --- |
 | R1 | [OWASP Foundation. (n.d.). Session management cheat sheet.](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html) | Server-owned session state and expiry; not a browser, transport or entropy test. |
 | R2 | [OWASP Foundation. (n.d.). Cross-site request forgery prevention cheat sheet.](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html) | Request-intent controls and unpredictable session-bound tokens; not execution of the supplied middleware. |
 | R3 | [MDN contributors. (n.d.). Cross-Origin Resource Sharing (CORS).](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS) | Sharing, credentialed origins and Vary; not actual browser or cache evidence. |
-| R4 | [Node.js contributors. (n.d.). Crypto.](https://nodejs.org/api/crypto.html) | timingSafeEqual boundary; not timing safety of surrounding login code or a prescribed runtime qualification. |
+| R4 | [Node.js contributors. (n.d.). Crypto.](https://nodejs.org/docs/latest-v24.x/api/crypto.html) | timingSafeEqual boundary; not timing safety of surrounding login code or a prescribed runtime qualification. |
 | R5 | [OWASP Foundation. (n.d.). Password storage cheat sheet.](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html) | Maintained slow salted constructions; no new work parameters or password attack. |
 | R6 | [OWASP Foundation. (n.d.). Authorization cheat sheet.](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html) | Explicit least-privilege permission and deny-by-default; not the full assessed P02 answer. |
 | R7 | [OWASP Foundation. (n.d.). SQL injection prevention cheat sheet.](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html) | Separate query structure and bound values; no SQL engine execution. |
 | R8 | [OWASP Foundation. (n.d.). Cross site scripting prevention cheat sheet.](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html) | Destination-specific output handling; not universal sanitisation or browser acceptance. |
 
+## Follow one report across five trust questions
+
+The accessible responsibility diagram in reading.html links transport → accepted principal → resource permission, then separates request intent and output handling. Its arrows organise the explanation rather than claim an executed middleware order. The table below gives each owner, input, witness and limit.
+
+Begin with the fictional request to read r42, whose loaded ownerId is u1. An earlier accepted stage supplies u1/member. Body proposes role admin, but remains requester data. Keep the same case across five responsibilities so that a fact accepted by one owner does not silently answer another question.
+
+| Question | Owner and input | Discriminating witness | Limit |
+|---|---|---|---|
+| Transport | Reviewed TLS endpoint and certificate policy | Actual validated transport | A forwarded label or Secure header is insufficient |
+| Accepted principal | Credential/session mechanism and accepted server state | Lookup after invalidation with the same retained client copy | Current P01 assumes the earlier trusted stage |
+| Report permission | Principal, route action and server-loaded ownerId | Moderator non-owner read versus delete and moderator-owner delete | Current P02 neither loads nor deletes a report |
+| Request intent | Application token/credential contract | Same cookie POST with false versus true synthetic match | Current P03 compares no actual token |
+| Output boundary | Sharing policy and destination-specific representation | HTTP status/header/body separately; SQL row versus text result | Browser, cache and TLS remain unqualified |
+
+Changing body to admin leaves the accepted principal unchanged. Changing stored ownerId can change the relationship. Changing a role can grant a particular action without granting all operations. A listed origin may accompany a refused cookie POST: sharing and request intent answer separate questions. These contrasts refute one generic security flag without creating another application assignment.
+
+### Server record versus transported representation
+
+Neutral demo01 owns an equipment receipt with expiry 30. Lookup at 29 succeeds; at 30 and 31 it refuses. Cancellation causes an independent lookup at 29 to fail while an earlier copied receipt remains. This actual Map/deadline observation concerns equipment. Transferring the reasoning to a session requires the actual session store's invalidation and expiry: canonical01 removes at logout but has no server-time expiry.
+
+### Policy snapshot versus operation
+
+A loaded report supports a decision at one moment. A frozen flat copy can retain that view while the original repository changes. Neither cloning nor one loader call gives transaction isolation. C07/S07 names the owner of atomic finalisation. Current S11 deliberately leaves that operation out: returning 204 does not delete a report.
+
+### Course and seminar continuity
+
+Reactivate C05 service boundaries and C09 identity/delivery ownership, then follow all four stages of current S11 P01 provenance, P02 action policy and P03 independent decisions. C12/S12 carries trusted principal provenance into recipient selection, keeping principal, connection and request identities distinct.
+
+The nominal 60-minute guided course route selects the main causal steps and at most one neutral run. Full reading, remaining demonstrations and consolidation have separate time. S11 plans 30–45 minutes per project and 120–165 total, unpiloted. A 100-minute meeting requires taught 20–65-minute continuation, a 90-minute meeting 30–75; start all three and resume their unfinished stages. These are planning estimates, not novice pilot measurements.

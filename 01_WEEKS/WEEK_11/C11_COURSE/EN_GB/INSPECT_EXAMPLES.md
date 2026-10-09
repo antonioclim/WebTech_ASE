@@ -1,31 +1,13 @@
-# C11 — Inspect exact source anchors, do not launch them here
+# C11 — Inspect exact canonical sources
 
-Open index.html, course.html and lab.html as local documents. This delivery needs no dependency installation for its HTML reading/model route. The five canonical directories contain Express source projects, not double-click web pages. Their original README commands and test inputs remain historical source text; this guide does not authorise their execution.
+Read SOURCE_NOTES.md before treating any original README/test statement as current evidence. EX-01–05 are the five preserved canonical directories, with unchanged source, tests, package manifests and locks. CAN-01–35 are different historical topic coordinates.
 
-No server is started, no network request is made and no unsafe fixture is loaded by the course index or fixed model lab. Do not run npm install, npm start or npm test as a preflight. No new launcher is supplied in this course phase. A future separately authorised application qualification must preserve the exact lockfile, establish the actual runtime and dependencies, bind only a reviewed local interface and distinguish actual HTTP, SQL, browser and TLS evidence. That future qualification is not completed by reading this document.
+| Directory | Read for | Actual limitation |
+|---|---|---|
+|01-session-identity-trace|Cookie reference lookup and logout removal|Literal alice fixture, no password check or server TTL|
+|02-authorization-decision-table|Inline READ and moderator PATCH/resolve|Module report Map, non-owner READ403, no DELETE/admin fixture|
+|03-session-cookie-contract|Serialized cookie attributes|Fixed cookie value, Secure not TLS/entropy|
+|04-credentialed-cors-policy|Reflected exact-origin headers and OPTIONS204|Ordinary GET output, no auth/CSRF/browser/cache proof|
+|05-browser-security-contexts|Actual sql.js source, fixed binding and context helpers|Prepared dependency required; missing fallback image; no general URL allowlist/template proof|
 
-## Exact directories and declared scripts (inventory only)
-
-### 01-session-identity-trace
-
-Path: `canonical/01-session-identity-trace/`. Source-declared scripts: `start` = `node server.mjs`, `test` = `node --test server.test.mjs`. These are inventory, not instructions to execute now.
-
-### 02-authorization-decision-table
-
-Path: `canonical/02-authorization-decision-table/`. Source-declared scripts: `start` = `node server.mjs`, `test` = `node --test server.test.mjs`. These are inventory, not instructions to execute now.
-
-### 03-session-cookie-contract
-
-Path: `canonical/03-session-cookie-contract/`. Source-declared scripts: `start` = `node server.mjs`, `test` = `node --test server.test.mjs`. These are inventory, not instructions to execute now.
-
-### 04-credentialed-cors-policy
-
-Path: `canonical/04-credentialed-cors-policy/`. Source-declared scripts: `start` = `node server.mjs`, `test` = `node --test server.test.mjs`. These are inventory, not instructions to execute now.
-
-### 05-browser-security-contexts
-
-Path: `canonical/05-browser-security-contexts/`. Source-declared scripts: `start` = `node server.mjs`, `test` = `node --test server.test.mjs`. These are inventory, not instructions to execute now.
-
-## STOP conditions
-
-An unavailable dependency, parser failure, startup guard, timeout, signal or reporter error is not an expected security-learning outcome. Do not weaken guards, alter original tests, enable services or use real credentials. The reference Node 24.21.0/npm 11.19.0 is not obtained or qualified here. Actual local QA records its own runtime. Browser/Word/TLS/Moodle remain separate gates.
+RUN_EXAMPLES.md explains the optional prepared preflight/test route. It preserves all original tests; missing dependencies, crashes or timeouts are operational results, not security-learning PASS. Original source-declared npm start/test scripts are historical inventory, not the guided route. Use the four independent neutral demonstrations for bounded mechanisms. No original server entry, dependency install, attack fixture, real credential or deployment is introduced.

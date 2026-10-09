@@ -1,9 +1,5 @@
-# C12 public guide
+# C12 · Current reading and observation route
 
-1. Open `index.html`.
-2. Use `course.html` for the 24-screen lecture.
-3. Use `reading.html` and `preparation.html` for the documents.
-4. Use `lab.html` only as a fixed explanatory model; export text remains `SYNTHETIC MODEL OUTPUT`.
-5. Inspect exact examples under `canonical/` without installing or starting them.
+ Read  all 24 screens  and the  connected export handout  with all 34 retained topics. Begin with the five owners, then recover Promise ownership, service boundaries and trusted actor identity. Predict before revealing the  M01–M20 fixed models . They return stipulated data and explanations; they do not run a worker, native channel or full dispatcher.  The model source IDs CAN/F refer to historical topic/finding maps, not an assertion that current canonical example 04 or 05 implements every described rule. M11’s equal-progress statement refers to a historical reference; current S12 permits non-decreasing content. M20’s zero listener/timer counts are an expected design end-state, not measured counts from canonical example 05, which retains global listeners. Keep this visible beside model use.   Exact source CWDs and finite commands  distinguish core demonstrations, unchanged canonical source and optional prepared dependency/infrastructure tests. Native keyboard, file delivery, layout, print and PDF remain separate observations. Verify that actual lab/navigation controls load; if assets are unavailable, keep source reading and a truthful BLOCKED note.  The selected 60-minute lecture map is unpiloted: prioritise owners/acceptance, transport direction, recipient/current instance, projection, caller/resources and recap. Complete reading and optional examples need additional time. Current S12 requires all three functions through twelve stages with full 120–165 minutes and explicit taught continuation. Historical full-app roles are source context, not current optional projects.  The preserved Word documents are historical companions. Maintained HTML/Markdown carries current adaptations without requiring a second assignment.  Current seminar  ·  One private record  ·  Environment guide . 
 
-Do not report source hashes or model output as protocol, browser or infrastructure evidence.
+[24 screens](course.html) · [connected handout](reading.html) · [model lab](lab.html) · [exact runnable contexts](RUN_EXAMPLES.md) · [S12 tutorial](../../S12_SEMINAR/TUTORIAL.html).

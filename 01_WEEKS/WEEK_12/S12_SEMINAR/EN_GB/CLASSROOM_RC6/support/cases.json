@@ -14,11 +14,73 @@
       {
         "principalId": "",
         "connectionId": "desk"
+      },
+      {
+        "principalId": "a:b",
+        "connectionId": "c"
+      },
+      {
+        "principalId": "a",
+        "connectionId": "b:c"
+      },
+      {
+        "principalId": " a ",
+        "connectionId": " desk "
+      },
+      {
+        "principalId": "A",
+        "connectionId": "desk"
+      },
+      {
+        "principalId": "a\"\\line",
+        "connectionId": "c\nbox"
+      },
+      {
+        "principalId": " \t\n",
+        "connectionId": "desk"
+      },
+      {
+        "principalId": "a",
+        "connectionId": ""
+      },
+      {
+        "principalId": "a",
+        "connectionId": "\t"
+      },
+      {
+        "principalId": 7,
+        "connectionId": "desk"
+      },
+      {
+        "principalId": "a",
+        "connectionId": false
+      },
+      {
+        "principalId": null,
+        "connectionId": "desk"
+      },
+      {
+        "principalId": "a",
+        "connectionId": [
+          "desk"
+        ]
       }
     ],
     "expected": [
       "[\"a\",\"desk\"]",
       "[\"b\",\"desk\"]",
+      null,
+      "[\"a:b\",\"c\"]",
+      "[\"a\",\"b:c\"]",
+      "[\" a \",\" desk \"]",
+      "[\"A\",\"desk\"]",
+      "[\"a\\\"\\\\line\",\"c\\nbox\"]",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
       null
     ]
   },
@@ -63,6 +125,339 @@
         "event": {
           "type": "completed"
         }
+      },
+      {
+        "state": {
+          "status": "active",
+          "progress": 65,
+          "reportId": "kept",
+          "meta": {
+            "owner": "fictional"
+          }
+        },
+        "event": {
+          "type": "progress",
+          "progress": 0
+        }
+      },
+      {
+        "state": {
+          "status": "active",
+          "progress": 65,
+          "reportId": "kept",
+          "meta": {
+            "owner": "fictional"
+          }
+        },
+        "event": {
+          "type": "progress",
+          "progress": 64
+        }
+      },
+      {
+        "state": {
+          "status": "active",
+          "progress": 65,
+          "reportId": "kept",
+          "meta": {
+            "owner": "fictional"
+          }
+        },
+        "event": {
+          "type": "progress",
+          "progress": 65
+        }
+      },
+      {
+        "state": {
+          "status": "active",
+          "progress": 65,
+          "reportId": "kept",
+          "meta": {
+            "owner": "fictional"
+          }
+        },
+        "event": {
+          "type": "progress",
+          "progress": 80
+        }
+      },
+      {
+        "state": {
+          "status": "active",
+          "progress": 65,
+          "reportId": "kept",
+          "meta": {
+            "owner": "fictional"
+          }
+        },
+        "event": {
+          "type": "progress",
+          "progress": 100
+        }
+      },
+      {
+        "state": {
+          "status": "active",
+          "progress": 65,
+          "reportId": "kept",
+          "meta": {
+            "owner": "fictional"
+          }
+        },
+        "event": {
+          "type": "progress",
+          "progress": -1
+        }
+      },
+      {
+        "state": {
+          "status": "active",
+          "progress": 65,
+          "reportId": "kept",
+          "meta": {
+            "owner": "fictional"
+          }
+        },
+        "event": {
+          "type": "progress",
+          "progress": 101
+        }
+      },
+      {
+        "state": {
+          "status": "active",
+          "progress": 65,
+          "reportId": "kept",
+          "meta": {
+            "owner": "fictional"
+          }
+        },
+        "event": {
+          "type": "progress",
+          "progress": "80"
+        }
+      },
+      {
+        "state": {
+          "status": "active",
+          "progress": 65,
+          "reportId": "kept",
+          "meta": {
+            "owner": "fictional"
+          }
+        },
+        "event": {
+          "type": "progress",
+          "progress": null
+        }
+      },
+      {
+        "state": {
+          "status": "completed",
+          "progress": 100,
+          "reportId": "terminal",
+          "meta": {
+            "tag": "kept"
+          }
+        },
+        "event": {
+          "type": "active"
+        }
+      },
+      {
+        "state": {
+          "status": "completed",
+          "progress": 100,
+          "reportId": "terminal",
+          "meta": {
+            "tag": "kept"
+          }
+        },
+        "event": {
+          "type": "progress",
+          "progress": 80
+        }
+      },
+      {
+        "state": {
+          "status": "completed",
+          "progress": 100,
+          "reportId": "terminal",
+          "meta": {
+            "tag": "kept"
+          }
+        },
+        "event": {
+          "type": "completed"
+        }
+      },
+      {
+        "state": {
+          "status": "completed",
+          "progress": 100,
+          "reportId": "terminal",
+          "meta": {
+            "tag": "kept"
+          }
+        },
+        "event": {
+          "type": "failed"
+        }
+      },
+      {
+        "state": {
+          "status": "failed",
+          "progress": 65,
+          "reportId": "terminal",
+          "meta": {
+            "tag": "kept"
+          }
+        },
+        "event": {
+          "type": "active"
+        }
+      },
+      {
+        "state": {
+          "status": "failed",
+          "progress": 65,
+          "reportId": "terminal",
+          "meta": {
+            "tag": "kept"
+          }
+        },
+        "event": {
+          "type": "progress",
+          "progress": 80
+        }
+      },
+      {
+        "state": {
+          "status": "failed",
+          "progress": 65,
+          "reportId": "terminal",
+          "meta": {
+            "tag": "kept"
+          }
+        },
+        "event": {
+          "type": "completed"
+        }
+      },
+      {
+        "state": {
+          "status": "failed",
+          "progress": 65,
+          "reportId": "terminal",
+          "meta": {
+            "tag": "kept"
+          }
+        },
+        "event": {
+          "type": "failed"
+        }
+      },
+      {
+        "state": {
+          "status": "queued",
+          "progress": 0,
+          "reportId": "queued-extra"
+        },
+        "event": {
+          "type": "progress",
+          "progress": 80
+        }
+      },
+      {
+        "state": {
+          "status": "queued",
+          "progress": 0,
+          "reportId": "queued-extra"
+        },
+        "event": {
+          "type": "completed"
+        }
+      },
+      {
+        "state": {
+          "status": "queued",
+          "progress": 0,
+          "reportId": "queued-extra"
+        },
+        "event": {
+          "type": "failed"
+        }
+      },
+      {
+        "state": {
+          "status": "queued",
+          "progress": 0,
+          "reportId": "queued-extra"
+        },
+        "event": {
+          "type": "other"
+        }
+      },
+      {
+        "state": {
+          "status": "queued",
+          "progress": 0,
+          "reportId": "queued-extra"
+        },
+        "event": {
+          "type": "active"
+        }
+      },
+      {
+        "state": {
+          "status": "active",
+          "progress": 65,
+          "reportId": "kept",
+          "meta": {
+            "owner": "fictional"
+          }
+        },
+        "event": {
+          "type": "completed"
+        }
+      },
+      {
+        "state": {
+          "status": "active",
+          "progress": 65,
+          "reportId": "kept",
+          "meta": {
+            "owner": "fictional"
+          }
+        },
+        "event": {
+          "type": "failed"
+        }
+      },
+      {
+        "state": {
+          "status": "active",
+          "progress": 65,
+          "reportId": "kept",
+          "meta": {
+            "owner": "fictional"
+          }
+        },
+        "event": {
+          "type": "active"
+        }
+      },
+      {
+        "state": {
+          "status": "active",
+          "progress": 0,
+          "reportId": "zero"
+        },
+        "event": {
+          "type": "progress",
+          "progress": 0
+        }
       }
     ],
     "expected": [
@@ -81,6 +476,196 @@
       {
         "status": "completed",
         "progress": 100
+      },
+      {
+        "status": "active",
+        "progress": 65,
+        "reportId": "kept",
+        "meta": {
+          "owner": "fictional"
+        }
+      },
+      {
+        "status": "active",
+        "progress": 65,
+        "reportId": "kept",
+        "meta": {
+          "owner": "fictional"
+        }
+      },
+      {
+        "status": "active",
+        "progress": 65,
+        "reportId": "kept",
+        "meta": {
+          "owner": "fictional"
+        }
+      },
+      {
+        "status": "active",
+        "progress": 80,
+        "reportId": "kept",
+        "meta": {
+          "owner": "fictional"
+        }
+      },
+      {
+        "status": "active",
+        "progress": 100,
+        "reportId": "kept",
+        "meta": {
+          "owner": "fictional"
+        }
+      },
+      {
+        "status": "active",
+        "progress": 65,
+        "reportId": "kept",
+        "meta": {
+          "owner": "fictional"
+        }
+      },
+      {
+        "status": "active",
+        "progress": 65,
+        "reportId": "kept",
+        "meta": {
+          "owner": "fictional"
+        }
+      },
+      {
+        "status": "active",
+        "progress": 65,
+        "reportId": "kept",
+        "meta": {
+          "owner": "fictional"
+        }
+      },
+      {
+        "status": "active",
+        "progress": 65,
+        "reportId": "kept",
+        "meta": {
+          "owner": "fictional"
+        }
+      },
+      {
+        "status": "completed",
+        "progress": 100,
+        "reportId": "terminal",
+        "meta": {
+          "tag": "kept"
+        }
+      },
+      {
+        "status": "completed",
+        "progress": 100,
+        "reportId": "terminal",
+        "meta": {
+          "tag": "kept"
+        }
+      },
+      {
+        "status": "completed",
+        "progress": 100,
+        "reportId": "terminal",
+        "meta": {
+          "tag": "kept"
+        }
+      },
+      {
+        "status": "completed",
+        "progress": 100,
+        "reportId": "terminal",
+        "meta": {
+          "tag": "kept"
+        }
+      },
+      {
+        "status": "failed",
+        "progress": 65,
+        "reportId": "terminal",
+        "meta": {
+          "tag": "kept"
+        }
+      },
+      {
+        "status": "failed",
+        "progress": 65,
+        "reportId": "terminal",
+        "meta": {
+          "tag": "kept"
+        }
+      },
+      {
+        "status": "failed",
+        "progress": 65,
+        "reportId": "terminal",
+        "meta": {
+          "tag": "kept"
+        }
+      },
+      {
+        "status": "failed",
+        "progress": 65,
+        "reportId": "terminal",
+        "meta": {
+          "tag": "kept"
+        }
+      },
+      {
+        "status": "queued",
+        "progress": 0,
+        "reportId": "queued-extra"
+      },
+      {
+        "status": "queued",
+        "progress": 0,
+        "reportId": "queued-extra"
+      },
+      {
+        "status": "queued",
+        "progress": 0,
+        "reportId": "queued-extra"
+      },
+      {
+        "status": "queued",
+        "progress": 0,
+        "reportId": "queued-extra"
+      },
+      {
+        "status": "active",
+        "progress": 0,
+        "reportId": "queued-extra"
+      },
+      {
+        "status": "completed",
+        "progress": 100,
+        "reportId": "kept",
+        "meta": {
+          "owner": "fictional"
+        }
+      },
+      {
+        "status": "failed",
+        "progress": 65,
+        "reportId": "kept",
+        "meta": {
+          "owner": "fictional"
+        }
+      },
+      {
+        "status": "active",
+        "progress": 65,
+        "reportId": "kept",
+        "meta": {
+          "owner": "fictional"
+        }
+      },
+      {
+        "status": "active",
+        "progress": 0,
+        "reportId": "zero"
       }
     ]
   },
@@ -130,6 +715,256 @@
           "type": "other.completed",
           "result": 2
         }
+      },
+      {
+        "pending": [
+          {
+            "id": "A",
+            "type": "calculate",
+            "metadata": {
+              "keep": 1
+            }
+          },
+          {
+            "id": "B",
+            "type": "export",
+            "metadata": {
+              "keep": 2
+            }
+          },
+          {
+            "id": "C",
+            "type": "inspect",
+            "metadata": {
+              "keep": 3
+            }
+          }
+        ],
+        "reply": {
+          "requestId": "B",
+          "type": "calculate.completed",
+          "result": 2
+        }
+      },
+      {
+        "pending": [
+          {
+            "id": "A",
+            "type": "calculate",
+            "metadata": {
+              "keep": 1
+            }
+          },
+          {
+            "id": "B",
+            "type": "export",
+            "metadata": {
+              "keep": 2
+            }
+          },
+          {
+            "id": "C",
+            "type": "inspect",
+            "metadata": {
+              "keep": 3
+            }
+          }
+        ],
+        "reply": {
+          "requestId": "B",
+          "type": "export.progress",
+          "result": 2
+        }
+      },
+      {
+        "pending": [
+          {
+            "id": "A",
+            "type": "calculate",
+            "metadata": {
+              "keep": 1
+            }
+          },
+          {
+            "id": "B",
+            "type": "export",
+            "metadata": {
+              "keep": 2
+            }
+          },
+          {
+            "id": "C",
+            "type": "inspect",
+            "metadata": {
+              "keep": 3
+            }
+          }
+        ],
+        "reply": {
+          "requestId": "b",
+          "type": "export.completed",
+          "result": 2
+        }
+      },
+      {
+        "pending": [
+          {
+            "id": "A",
+            "type": "calculate",
+            "metadata": {
+              "keep": 1
+            }
+          },
+          {
+            "id": "B",
+            "type": "export",
+            "metadata": {
+              "keep": 2
+            }
+          },
+          {
+            "id": "C",
+            "type": "inspect",
+            "metadata": {
+              "keep": 3
+            }
+          }
+        ],
+        "reply": {
+          "requestId": "missing",
+          "type": "export.completed",
+          "result": 2
+        }
+      },
+      {
+        "pending": [
+          {
+            "id": "A",
+            "type": "calculate",
+            "metadata": {
+              "keep": 1
+            }
+          },
+          {
+            "id": "B",
+            "type": "export",
+            "metadata": {
+              "keep": 2
+            }
+          },
+          {
+            "id": "C",
+            "type": "inspect",
+            "metadata": {
+              "keep": 3
+            }
+          }
+        ],
+        "reply": {
+          "requestId": "B",
+          "type": "export.completed",
+          "result": false
+        }
+      },
+      {
+        "pending": [
+          {
+            "id": "A",
+            "type": "calculate",
+            "metadata": {
+              "keep": 1
+            }
+          },
+          {
+            "id": "B",
+            "type": "export",
+            "metadata": {
+              "keep": 2
+            }
+          },
+          {
+            "id": "C",
+            "type": "inspect",
+            "metadata": {
+              "keep": 3
+            }
+          }
+        ],
+        "reply": {
+          "requestId": "B",
+          "type": "export.completed",
+          "result": 0
+        }
+      },
+      {
+        "pending": [
+          {
+            "id": "A",
+            "type": "calculate",
+            "metadata": {
+              "keep": 1
+            }
+          },
+          {
+            "id": "B",
+            "type": "export",
+            "metadata": {
+              "keep": 2
+            }
+          },
+          {
+            "id": "C",
+            "type": "inspect",
+            "metadata": {
+              "keep": 3
+            }
+          }
+        ],
+        "reply": {
+          "requestId": "B",
+          "type": "export.completed",
+          "result": null
+        }
+      },
+      {
+        "pending": [
+          {
+            "id": "A",
+            "type": "calculate",
+            "metadata": {
+              "keep": 1
+            }
+          },
+          {
+            "id": "B",
+            "type": "export",
+            "metadata": {
+              "keep": 2
+            }
+          },
+          {
+            "id": "C",
+            "type": "inspect",
+            "metadata": {
+              "keep": 3
+            }
+          }
+        ],
+        "reply": {
+          "requestId": "B",
+          "type": "export.completed",
+          "result": {
+            "download": "opaque"
+          }
+        }
+      },
+      {
+        "pending": [],
+        "reply": {
+          "requestId": "B",
+          "type": "export.completed",
+          "result": 0
+        }
       }
     ],
     "expected": [
@@ -161,6 +996,204 @@
             "type": "calculate"
           }
         ],
+        "settled": null
+      },
+      {
+        "pending": [
+          {
+            "id": "A",
+            "type": "calculate",
+            "metadata": {
+              "keep": 1
+            }
+          },
+          {
+            "id": "B",
+            "type": "export",
+            "metadata": {
+              "keep": 2
+            }
+          },
+          {
+            "id": "C",
+            "type": "inspect",
+            "metadata": {
+              "keep": 3
+            }
+          }
+        ],
+        "settled": null
+      },
+      {
+        "pending": [
+          {
+            "id": "A",
+            "type": "calculate",
+            "metadata": {
+              "keep": 1
+            }
+          },
+          {
+            "id": "B",
+            "type": "export",
+            "metadata": {
+              "keep": 2
+            }
+          },
+          {
+            "id": "C",
+            "type": "inspect",
+            "metadata": {
+              "keep": 3
+            }
+          }
+        ],
+        "settled": null
+      },
+      {
+        "pending": [
+          {
+            "id": "A",
+            "type": "calculate",
+            "metadata": {
+              "keep": 1
+            }
+          },
+          {
+            "id": "B",
+            "type": "export",
+            "metadata": {
+              "keep": 2
+            }
+          },
+          {
+            "id": "C",
+            "type": "inspect",
+            "metadata": {
+              "keep": 3
+            }
+          }
+        ],
+        "settled": null
+      },
+      {
+        "pending": [
+          {
+            "id": "A",
+            "type": "calculate",
+            "metadata": {
+              "keep": 1
+            }
+          },
+          {
+            "id": "B",
+            "type": "export",
+            "metadata": {
+              "keep": 2
+            }
+          },
+          {
+            "id": "C",
+            "type": "inspect",
+            "metadata": {
+              "keep": 3
+            }
+          }
+        ],
+        "settled": null
+      },
+      {
+        "pending": [
+          {
+            "id": "A",
+            "type": "calculate",
+            "metadata": {
+              "keep": 1
+            }
+          },
+          {
+            "id": "C",
+            "type": "inspect",
+            "metadata": {
+              "keep": 3
+            }
+          }
+        ],
+        "settled": {
+          "id": "B",
+          "result": false
+        }
+      },
+      {
+        "pending": [
+          {
+            "id": "A",
+            "type": "calculate",
+            "metadata": {
+              "keep": 1
+            }
+          },
+          {
+            "id": "C",
+            "type": "inspect",
+            "metadata": {
+              "keep": 3
+            }
+          }
+        ],
+        "settled": {
+          "id": "B",
+          "result": 0
+        }
+      },
+      {
+        "pending": [
+          {
+            "id": "A",
+            "type": "calculate",
+            "metadata": {
+              "keep": 1
+            }
+          },
+          {
+            "id": "C",
+            "type": "inspect",
+            "metadata": {
+              "keep": 3
+            }
+          }
+        ],
+        "settled": {
+          "id": "B",
+          "result": null
+        }
+      },
+      {
+        "pending": [
+          {
+            "id": "A",
+            "type": "calculate",
+            "metadata": {
+              "keep": 1
+            }
+          },
+          {
+            "id": "C",
+            "type": "inspect",
+            "metadata": {
+              "keep": 3
+            }
+          }
+        ],
+        "settled": {
+          "id": "B",
+          "result": {
+            "download": "opaque"
+          }
+        }
+      },
+      {
+        "pending": [],
         "settled": null
       }
     ]

@@ -1,27 +1,9 @@
-# RC10 CURRENT CLASSROOM TRANSFER
+# C11 — Authentication, authorisation and web security: v4.0.0 candidate
 
-Current S11 classroom transfer
+Open index.html, course.html and reading.html. All 24 screens remain, with one report followed across transport, accepted principal, resource permission, request intent and output boundaries. The nominal 60-minute guided route is unpiloted; full reading and remaining neutral runs have separate consolidation time.
 
-Complete every listed microproject individually in class. These are bounded tasks, not completion of the historical full applications.
+Use GUIDE.md and RUN_EXAMPLES.md. The four separately authored neutral examples have core/SQLite/HTTP capability profiles. The optional canonical test profile preserves all original source/tests/locks and blocks when its exact prepared dependencies are absent. Nothing here installs dependencies or starts canonical servers.
 
-P01 — Authentication transfer: trusted principal — editable path from the seminar package root: CLASSROOM_RC6/student/p01.mjs
+Current S11 supplies principalOwner, reportPermission and securityDecision, all required individually, four semantic stages each. Follow ../../S11_SEMINAR/TUTORIAL.html, retain one genuine AI critique with an independent check and one PDF. The current seminar's 120–165-minute planning range and taught continuation replace historical full-application allocations. No separate C11 Assignment is added.
 
-P02 — Authorization: owner versus role — editable path from the seminar package root: CLASSROOM_RC6/student/p02.mjs
-
-P03 — CORS and CSRF: two independent decisions — editable path from the seminar package root: CLASSROOM_RC6/student/p03.mjs
-
-Current entry: ../../../ENTRY/S11.html
-
-Step-by-step tutorial: ../../../TUTORIALS/S11.html
-
-Current evidence form: ../../S11/WEBTECH_ASE_S11_EN_GB_v1.2.4_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html
-
-Preserve support files, run the stated target checks and record actual results, including blocked or unexecuted checks. Complete the current form for all projects and export one PDF. Review its saved pages and filename before uploading it to the corresponding private Moodle Assignment. A blocked check is not a PASS.
-
-The old full applications are optional advanced references. Their reused IDs, paths, allocations, portfolio requirements, timings and mark statements do not define these current microprojects. The actual Assignment supplies dates and assessment policy. No completion-time or mark guarantee is made here.
-
-# C11 public course — WIP/PREVIEW
-
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-Start with index.html. This is a local course package, not an upload kit or a security certificate. Read GUIDE.md and SOURCE_NOTES.md. Exact canonical examples are source-only, not authorised server launches. No S11 assignment/form is produced here.
+SOURCE_NOTES.md names every source distinction, including literal fixture login, absent server expiry, historical full P02/P03 contracts and fixed M20 model scope. Original assets/derived/canonical and Word files remain unchanged. Use current HTML/MD; retained Word describes the earlier edition. Native reading/controls/printing, browser CORS/cache/TLS and framework qualification remain unexecuted.

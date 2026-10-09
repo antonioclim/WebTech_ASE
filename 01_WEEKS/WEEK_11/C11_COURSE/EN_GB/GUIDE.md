@@ -1,31 +1,11 @@
-# RC10 CURRENT CLASSROOM TRANSFER
+# C11 — Current reading and execution guide
 
-Current S11 classroom transfer
+Start with index.html and course.html. Follow the fictional report r42 from an accepted u1/member principal through five different trust questions. Use Previous/Next, the screen selector or arrow/Page keys outside interactive controls. Home/End select the ends. Text size, reading mode and print controls are available; without JavaScript the content remains in reading order. Native keyboard/layout/print behaviour has not been executed in current QA.
 
-Complete every listed microproject individually in class. These are bounded tasks, not completion of the historical full applications.
+Read reading.html and documents/C11_HANDOUT.md as the current continuous handout. preparation.html and its Markdown twin reactivate named prerequisites and lead into all three S11 models. Retained Word files describe the earlier source edition. Do not treat their old allocations as the current assignment.
 
-P01 — Authentication transfer: trusted principal — editable path from the seminar package root: CLASSROOM_RC6/student/p01.mjs
+The fixed lab selects 20 retained narratives, accepts a non-sensitive prediction and reveals a model. Its export is synthetic teaching material. M20 describes the historical reduced portfolio, including an old S11-absent statement; it does not override the supplied current three-task/twelve-stage assignment. CAN-01–35 name old topic coordinates, EX-01–05 the actual canonical directories, M01–20 the fixed lab narratives. Verify a downloaded model file separately; a download request does not establish a save.
 
-P02 — Authorization: owner versus role — editable path from the seminar package root: CLASSROOM_RC6/student/p02.mjs
+Use RUN_EXAMPLES.md for four neutral Node/SQLite/HTTP demonstrations and the optional exact canonical test profile. ENV_WARN permits a functioning selected operation. No installation or canonical server launch is supplied. Keep pure model, transmitted HTTP, SQL engine and browser observations separately scoped; a Node 200 without a sharing header is not an observed browser refusal or 403.
 
-P03 — CORS and CSRF: two independent decisions — editable path from the seminar package root: CLASSROOM_RC6/student/p03.mjs
-
-Current entry: ../../../ENTRY/S11.html
-
-Step-by-step tutorial: ../../../TUTORIALS/S11.html
-
-Current evidence form: ../../S11/WEBTECH_ASE_S11_EN_GB_v1.2.4_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html
-
-Preserve support files, run the stated target checks and record actual results, including blocked or unexecuted checks. Complete the current form for all projects and export one PDF. Review its saved pages and filename before uploading it to the corresponding private Moodle Assignment. A blocked check is not a PASS.
-
-The old full applications are optional advanced references. Their reused IDs, paths, allocations, portfolio requirements, timings and mark statements do not define these current microprojects. The actual Assignment supplies dates and assessment policy. No completion-time or mark guarantee is made here.
-
-# C11 — Local reading guide
-
-Open index.html, then course.html. Use Previous/Next, the screen selector or arrow/Page keys outside interactive controls. Home/End jump to the first/last screen. Text size ranges from 40% to 160%; reset returns to 100%. Reading mode displays all screens. Without JavaScript the content remains in reading order. Browser behaviour is not qualified by the static rendering in this package.
-
-The handout is reading.html or documents/C11_HANDOUT.docx. Preparation is preparation.html or its DOCX. The fixed lab is lab.html: select a scenario, write a non-sensitive prediction, reveal the model and request a text export only after a current result. Editing the prediction or changing the scenario invalidates export eligibility. Exports are synthetic model material, not student or application evidence. Verify any downloaded file separately; a download request does not establish it was saved.
-
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-Do not paste secrets or private records. Nothing is autosaved and no network access is part of the navigator/lab. Read sources.html and SOURCE_NOTES.md for exact-source versus derived distinctions. Canonical examples are source-only now; read INSPECT_EXAMPLES.md, do not launch their servers or tests. No S11 form or completed policy is contained here. P02 is full central work; P01 is capstone integration; reduced 11.3A CORS/CSRF is the required portfolio.
+Current S11 entry: ../../S11_SEMINAR/index.html. Tutorial: ../../S11_SEMINAR/TUTORIAL.html. Form: ../../S11_SEMINAR/EN_GB/FORMATIVE_ASSESSMENT.html. Each project is required individually with four stages, an own case and reflection. One real sanitised Gemini/approved AI critique and independent check, plus one reviewed seminar PDF, cover the whole seminar. First verify that the form's fields and controls load; if local file/CSP delivery fails, preserve private notes and BLOCKED. No native file/print/Moodle observation is prefilled.

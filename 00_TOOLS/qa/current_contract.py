@@ -17,7 +17,7 @@ from urllib.parse import unquote, urlsplit
 VERSION = '4.0.0'
 LATEST_PUBLISHED_VERSION = '3.0.0'
 PROGRESS = 'metadata/CANDIDATE_PROGRESS.json'
-PREPARED_TRANCHE = 5
+PREPARED_TRANCHE = 6
 METADATA = 'metadata/CLASSROOM_COLLECTION.json'
 COURSE_MAP = 'metadata/course-map.json'
 MANIFEST = 'metadata/current-integrity/REPOSITORY_SHA256SUMS.txt'

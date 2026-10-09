@@ -1,31 +1,5 @@
-# RC10 CURRENT CLASSROOM TRANSFER
+# C12 · Current reading and observation route
 
-Current S12 classroom transfer
+ Read  all 24 screens  and the  connected export handout  with all 34 retained topics. Begin with the five owners, then recover Promise ownership, service boundaries and trusted actor identity. Predict before revealing the  M01–M20 fixed models . They return stipulated data and explanations; they do not run a worker, native channel or full dispatcher.  The model source IDs CAN/F refer to historical topic/finding maps, not an assertion that current canonical example 04 or 05 implements every described rule. M11’s equal-progress statement refers to a historical reference; current S12 permits non-decreasing content. M20’s zero listener/timer counts are an expected design end-state, not measured counts from canonical example 05, which retains global listeners. Keep this visible beside model use.   Exact source CWDs and finite commands  distinguish core demonstrations, unchanged canonical source and optional prepared dependency/infrastructure tests. Native keyboard, file delivery, layout, print and PDF remain separate observations. Verify that actual lab/navigation controls load; if assets are unavailable, keep source reading and a truthful BLOCKED note.  The selected 60-minute lecture map is unpiloted: prioritise owners/acceptance, transport direction, recipient/current instance, projection, caller/resources and recap. Complete reading and optional examples need additional time. Current S12 requires all three functions through twelve stages with full 120–165 minutes and explicit taught continuation. Historical full-app roles are source context, not current optional projects.  The preserved Word documents are historical companions. Maintained HTML/Markdown carries current adaptations without requiring a second assignment.  Current seminar  ·  One private record  ·  Environment guide . 
 
-Complete every listed microproject individually in class. These are bounded tasks, not completion of the historical full applications.
-
-P01 — HTTP/WebSocket: recipient ownership — editable path from the seminar package root: CLASSROOM_RC6/student/p01.mjs
-
-P02 — Queue: terminal state does not regress — editable path from the seminar package root: CLASSROOM_RC6/student/p02.mjs
-
-P03 — Dispatcher: correlation and single settlement — editable path from the seminar package root: CLASSROOM_RC6/student/p03.mjs
-
-Current entry: ../../../ENTRY/S12.html
-
-Step-by-step tutorial: ../../../TUTORIALS/S12.html
-
-Current evidence form: ../../S12/WEBTECH_ASE_S12_EN_GB_v1.2.4_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html
-
-Preserve support files, run the stated target checks and record actual results, including blocked or unexecuted checks. Complete the current form for all projects and export one PDF. Review its saved pages and filename before uploading it to the corresponding private Moodle Assignment. A blocked check is not a PASS.
-
-The old full applications are optional advanced references. Their reused IDs, paths, allocations, portfolio requirements, timings and mark statements do not define these current microprojects. The actual Assignment supplies dates and assessment policy. No completion-time or mark guarantee is made here.
-
-# C12 — Realtime Communication and Asynchronous Work
-
-Status: **WIP/PREVIEW — not FINAL**.
-
-Start with `index.html`. The package is offline-first: it contains the lecture, handout, preparation, fixed model lab, exact course examples and source notes. It does not install or execute Express, BullMQ, Redis, a WebSocket server or a browser stack.
-
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-Project roles: P03 is the central implementation, P01 is a guided demonstration and P02 is optional advanced. There is no C12 Assignment.
+[24 screens](course.html) · [connected handout](reading.html) · [model lab](lab.html) · [exact runnable contexts](RUN_EXAMPLES.md) · [S12 tutorial](../../S12_SEMINAR/TUTORIAL.html).

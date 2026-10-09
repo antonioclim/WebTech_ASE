@@ -6,4 +6,4 @@ The authoritative current repository controls are `current-integrity/REPOSITORY_
 
 These records describe the current files and the scope of checks. They do not assert that all qualification gates passed. General qualification remains **NOT_FINAL**.
 
-`CANDIDATE_PROGRESS.json` separates the twenty T01–T05 units and their scoped checks from the remaining scheduled revisions and the ten pending whole-edition gates. The target is v4.0.0; the latest published classroom edition remains 3.0.0.
+`CANDIDATE_PROGRESS.json` separates the twenty-four T01–T06 units and their scoped checks from the remaining scheduled revisions and the ten pending whole-edition gates. The target is v4.0.0; the latest published classroom edition remains 3.0.0.

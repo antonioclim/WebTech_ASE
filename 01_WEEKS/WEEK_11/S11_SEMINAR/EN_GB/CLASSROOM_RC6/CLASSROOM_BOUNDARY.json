@@ -7,22 +7,30 @@
     "student/p03.mjs": "ec4a62ca9b31b036a3c9b0839a8367c254111667b5d4ab56b0ce9d911f6a2109"
   },
   "protected": {
-    "CLASSROOM_PLAN_EN_GB.md": "bd86aa3e882ab707cb87aad1e99b49d645977333694f9c3ea872a57ae5597144",
-    "CLASSROOM_SCOPE.json": "d871d3b16ff4b1b3bff3e1cefc082df6d3bc0731a945e98970f8df1bab303675",
-    "EVIDENCE_FORM.html": "c804fafd32a6304144da5d5f3ef777f5f82b69a3898a7b70a26d94a134780a7e",
-    "GUIDE.html": "ac9fc25e12cab18d2da13258d4238597080e3e78aca1534e7a067082d6809bb3",
-    "README.md": "bd86aa3e882ab707cb87aad1e99b49d645977333694f9c3ea872a57ae5597144",
-    "START.html": "12e29044b43d2e4fbce9c82611e07a9fe8693793f01eadd3d03848692d952ae0",
-    "check.mjs": "a727fade6aa0b77074562309a3de19910bbfd28a1a86581f7a0d74656cb002bf",
+    "CLASSROOM_PLAN_EN_GB.md": "f6b889c4360e243cc29338028b8804a70a3e321323039c4b99612502a0c3d178",
+    "CLASSROOM_SCOPE.json": "eb0c0eb80adc368a2a311ed6a04a58c07cf9b2353e3534e5eea6086d05dddb65",
+    "EVIDENCE_FORM.html": "b10e1c4c73e46ec09a72d053ff90b9b8b0891e5d4a2651e401c0c9fcf219c3c7",
+    "GUIDE.html": "15108574d6a2e30aa41b8cd97853eab5706e715b8f7d7b88e6ebc707e7e25064",
+    "PROBE.mjs": "75e2026ed330ec78c5caaea58208a30c0db99144a28e29108edfdd4051f01080",
+    "README.md": "f6b889c4360e243cc29338028b8804a70a3e321323039c4b99612502a0c3d178",
+    "START.html": "5af97c4f9ee94a7c92295c6a16b302ccf8ff4bbd6cd366691106589ebac3fbe9",
+    "activity-environment.mjs": "38c7be0fd1dd9550869f676845bd054cfc5bddba7826172021631d9be3292e65",
+    "check.mjs": "471cbf26eff5948371e2617c4107312ebcced7c840c1a86f0d01be761dcca8dc",
+    "environment.mjs": "ced06f69b9a2b3c971558581aa9d750d6645c4a615047b6ba55023e31e05a891",
+    "owned-process.mjs": "e9e58fa4810a1c0aad295ba3763caa99fa666e91100b163a2bb8020237514ed5",
+    "owned-worker.mjs": "3c6ed5cba7655b45a2b7734ecf08955c6bda1175f8c64b6ac3c49c4f17987c4f",
+    "preflight.mjs": "3a2d05b69c9aeb69f82877e9bc0f74c6d7af60c38a831ec5443e1e45e7ca9ee6",
+    "probe-worker.mjs": "3f9e13984fb98e12c6466bad5f8bcb7e30a381eb41a68e993fa6d44a17d6ebc3",
     "support/cases.json": "9acd017845125d38df2cf2397e59d735e12f69ede7adda17556fd9066f72545e",
     "tests/baseline.test.mjs": "51756d6385bdcc1ad819062297090e5671997e3ab1cae959ffc3bd1142ae5a2d",
-    "tests/objective.test.mjs": "e5e284d863ab04d9dd8719eb978ada959ce0dbe7f2c66425e3652269d5351d4e",
-    "try.mjs": "c78e4b34de44d875339008ff6b64c10a0f9de8dad362c7d9e5a7a9b04d7f4263",
-    "verify.mjs": "e0928e6062d1b0f86409c229291cf6511d2f19550a9396d5c07a2943226df6ff"
+    "tests/objective.test.mjs": "7b2302c8de325fc6410ab0df89291bdc8dec60c5df811dd6b88ab3d3a9f72dc3",
+    "try-worker.mjs": "ddd805a4d2fb98b9508a281812942b60fb707a8605e81f46a63e4939fe7a21ba",
+    "try.mjs": "1c7f225581f24c8b09362206b8deaa616650d8cd3e113dd8364e7e94e988a2c4",
+    "verify.mjs": "58fc6a1f368c64cbd0d997228cdd148c7807d2a919a155d684994b3d75908f7a"
   },
   "excludedRuntimeDirectories": [],
   "sourceManifestExcluded": [
     "CLASSROOM_BOUNDARY.json"
   ],
-  "trust": "Unsigned local source self-consistency. Independent release/package identity protects the original manifest. Runtime directories are unverified; lockfiles and supplied React shell remain protected. Initial checks compare untouched targets; work permits only stated target changes."
+  "trust": "Unsigned local source self-consistency. Independent release/package identity protects the original manifest. Only three stated learner files are mutable in work mode. No generated runtime directories are excluded in S11/S12. Initial checks compare untouched targets; all other files remain protected. This does not establish a signature or native qualification."
 }

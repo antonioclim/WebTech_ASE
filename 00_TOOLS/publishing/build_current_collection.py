@@ -71,7 +71,7 @@ def main():
                'repository_package_id': identity['repository_package_id'], 'units': len(units),
                'projects': projects, 'document_links': links,
                'candidate_progress': progress,
-               'derivation_scope': 'Local candidate checkout with the retained folder structure. T01–T05 are prepared with explicit limits; T06–T07 review remains pending. This artifact is not a published release or final acceptance and does not replace any earlier published ZIP.',
+               'derivation_scope': 'Local candidate checkout with the retained folder structure. T01–T06 are prepared with explicit limits; T07 and whole-collection integration remain pending. This artifact is not a published release or final acceptance and does not replace any earlier published ZIP.',
                'qualificationVerdict': 'NOT_FINAL', 'applications_executed': False,
                'native_acceptance': False, 'actions_dispatched': 0, 'published': False,
                'software_installed': False}

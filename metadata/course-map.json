@@ -589,8 +589,8 @@
         "minimum": 30,
         "maximum": 45
       },
-      "shorter_slot_policy": "Arrange an explicit continuation; all two or three individual projects remain required.",
-      "candidate_revision_status": "PENDING_LATER_TRANCHE_REVIEW"
+      "shorter_slot_policy": "Reserve an explicit taught continuation estimated at 20–65 minutes beyond a 100-minute slot or 30–75 beyond 90; validate with a novice pilot. All three individual projects remain required. Allocate optional server, WebSocket and Redis demonstrations separately when their selected environment is prepared.",
+      "candidate_revision_status": "T06_COMPLETE_WITH_EXPLICIT_LIMITS"
     },
     {
       "week": 12,
@@ -642,8 +642,8 @@
         "minimum": 30,
         "maximum": 45
       },
-      "shorter_slot_policy": "Arrange an explicit continuation; all two or three individual projects remain required.",
-      "candidate_revision_status": "PENDING_LATER_TRANCHE_REVIEW"
+      "shorter_slot_policy": "Reserve an explicit taught continuation estimated at 20–65 minutes beyond a 100-minute slot or 30–75 beyond 90; validate with a novice pilot. All three individual projects remain required. Allocate optional server, WebSocket and Redis demonstrations separately when their selected environment is prepared.",
+      "candidate_revision_status": "T06_COMPLETE_WITH_EXPLICIT_LIMITS"
     },
     {
       "week": 13,

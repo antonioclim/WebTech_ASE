@@ -4,9 +4,9 @@
   "final_target_version": "4.0.0",
   "latest_published_version": "3.0.0",
   "distribution_status": "LOCAL_CANDIDATE_NOT_PUBLISHED",
-  "phase": "T05_CANDIDATE_PREPARED",
-  "next_phase": "T06",
-  "implementation_scope": "T01–T05: C01/S01 through C10/S10 and affected common guidance, activity guards and evidence forms. C11/S11 through C14/S14 retain inherited source pending their authorised tranche review.",
+  "phase": "T06_CANDIDATE_PREPARED",
+  "next_phase": "T07",
+  "implementation_scope": "T01–T06: C01/S01 through C12/S12 and affected common guidance, activity guards and evidence forms. C13/S13 and C14/S14 retain inherited source pending T07 and whole-collection integration.",
   "qualificationVerdict": "NOT_FINAL",
   "native_acceptance": false,
   "publication_qualified": false,
@@ -82,7 +82,7 @@
       ],
       "implementation_status": "COMPLETE_WITH_EXPLICIT_LIMITS",
       "acceptance_status": "PENDING",
-      "next_step": "Continue with T06 after an explicit next; keep global acceptance pending."
+      "next_step": "Retain T05 scoped evidence and recheck affected controls when later common changes require it; whole-edition acceptance remains pending."
     },
     {
       "id": "T06",
@@ -92,9 +92,9 @@
         "C12",
         "S12"
       ],
-      "implementation_status": "PENDING",
+      "implementation_status": "COMPLETE_WITH_EXPLICIT_LIMITS",
       "acceptance_status": "PENDING",
-      "next_step": "Implement and verify this tranche before claiming completion"
+      "next_step": "Continue with T07 after an explicit next; keep whole-collection integration and global acceptance pending."
     },
     {
       "id": "T07",
@@ -184,13 +184,14 @@
     }
   ],
   "evidence_boundary": "Tranche-level observations are recorded separately from the ten global gates. No subset result makes the whole 14-pair distribution qualified, published or accepted. Source identity and final verification receipts are retained outside the sealed tree to avoid self-reference.",
-  "timing_limit": "S01 is estimated at 90–120 minutes and S02–S10 at 120–165 minutes, all unpiloted. A 90–100-minute slot does not establish completion of all required individual work. For S03–S10 reserve an explicit taught continuation estimated at 20–65 minutes beyond a 100-minute slot or 30–75 beyond 90, then validate through an actual novice pilot. Supplied React demonstrations have a separate conditional allocation. No project is omitted or silently assigned as homework.",
+  "timing_limit": "S01 is estimated at 90–120 minutes and S02–S12 at 120–165 minutes, all unpiloted. A 90–100-minute slot does not establish completion of all required individual work. For S03–S12 reserve an explicit taught continuation estimated at 20–65 minutes beyond a 100-minute slot or 30–75 beyond 90, then validate through an actual novice pilot. Optional framework, server and infrastructure demonstrations require a separate allocation and their selected environment. No project is omitted or silently assigned as homework.",
   "prepared_tranches": [
     "T01",
     "T02",
     "T03",
     "T04",
-    "T05"
+    "T05",
+    "T06"
   ],
   "T02_evidence": [
     {
@@ -293,6 +294,53 @@
       "area": "Native and whole-edition acceptance",
       "state": "NOT_EXECUTED_OR_PENDING",
       "scope": "Native/headless browser, file/CSP/print/PDF, Windows/macOS, Word, Moodle live and novice pilot unexecuted; all ten global gates and owner acceptance pending, v4.0.0 unpublished."
+    }
+  ],
+  "T06_evidence": [
+    {
+      "area": "C11/S11 and C12/S12 teaching",
+      "state": "PASS_SOURCE_REVIEW_WITH_LIMITS",
+      "scope": "48 preserved course screens, 35 C11 and 34 C12 connected handout topics and 24 meaningful seminar stages reviewed against the current master and six unchanged target contracts. Each seminar has four stages per project, all three individual projects, a real learner AI critique followed by independent checking and one PDF. Source review does not establish a novice timing pilot or native rendering."
+    },
+    {
+      "area": "S11 pure contracts",
+      "state": "PASS_FINITE_AUTHOR_QA",
+      "scope": "Two accepted private implementations each pass three original objective tests, two baseline assertions and 76 independent changed-data calls; 56 public finite output cases preserve the original assertions and input content. Eighteen purposeful defects produce assertion failures. No fresh-object identity or own-property obligation is invented. Supplied trusted principal, server-loaded report and synthetic tokenMatches are not real authentication, loading or cryptographic enforcement."
+    },
+    {
+      "area": "S12 pure contracts",
+      "state": "PASS_FINITE_AUTHOR_QA",
+      "scope": "Private reference and permitted equal-copy variant each pass two baseline and three original objective tests; 19 purposeful defects produce assertion failures. 57 JSON cases plus frozen content, nonfinite progress and output-derived replay preserve current value semantics. Recipient tuples, lifecycle and pending removal do not execute a WebSocket, Promise dispatcher, Redis queue or exactly-once effects."
+    },
+    {
+      "area": "C11/C12 neutral demonstrations",
+      "state": "PASS_SELECTED_NODE_OBSERVATIONS",
+      "scope": "Four C11 and three C12 neutral demonstrations execute on Linux Node v24.19.0. C11 includes actual built-in SQLite and five owned loopback HTTP exchanges; the post-close witness now asserts ECONNREFUSED explicitly. C12 uses finite core traces and an owned socket facade where named. These fixtures differ from assessed target implementations and preserved canonical applications."
+    },
+    {
+      "area": "T06 forms",
+      "state": "PASS_MODEL_AND_SOURCE_CHECKS",
+      "scope": "42 Node VM/DOM-model groups, 70 invalid import envelopes, four parser bounds and six deliberate controller defects detected; ten current/legacy paths preserve four historical routes and blank learner fields. Tutorial and course guidance now name the actual derived REVIEWED_STUDENT_DECLARATION status and preserve HUMAN REVIEW PENDING. Initial form receipts retain their actual pending-tutorial state; a separate final source binding resolves 24 current anchors. Native file/CSP, clipboard/download, print/PDF and genuine learner AI execution remain unexecuted."
+    },
+    {
+      "area": "T06 selected environment and ownership",
+      "state": "PASS_SELECTED_PRESEAL_CHECKS_WITH_LIMITS",
+      "scope": "44 runtime-owned paths and 25 byte-identical standalone policy copies. 144 selected operational/policy argv records, two separate optional API syntax checks and four before/after diagnostic-CWD witnesses. Three private harness diagnostic expectations and an earlier quoting setup error remain explicit in their original evidence. Version and capability injections are sensitivity only. Final sealed-source command bindings remain external receipts. Late S11 probe checks distinguish a required structuredClone capability block from worker faults and reject thenables under the synchronous target contract. Separate before/after and final-source bindings retain the original execution identities."
+    },
+    {
+      "area": "Optional canonical environments",
+      "state": "ENV_BLOCKED",
+      "scope": "All ten C11/C12 optional canonical profiles authenticate preserved source before admission. Local Express, sql.js, ws, BullMQ and ioredis dependencies are absent; C12 queue infrastructure is separately unassessed and the launcher refuses borrowing an existing Redis service. Direct Node and npm-script diagnostics are separate profiles. No installation or canonical framework/API test execution is claimed."
+    },
+    {
+      "area": "T06 private/public separation",
+      "state": "PASS_SOURCE_REVIEW_WITH_LIMITS",
+      "scope": "11 authenticated read-only private sources: four notes and three supports read in full, plus four comparator HTML structures, 66 numbered-step first paragraphs and eight worked-trace paragraphs. A corrected reading-count receipt preserves the original narrower generator result. All seven neutral demos and ten probe/control files have separate scoped privacy reviews. Raw private notes, answer keys, full references, mutants and QA corpora are excluded from public source and owner continuity."
+    },
+    {
+      "area": "Whole-collection integration and acceptance",
+      "state": "NOT_EXECUTED_OR_PENDING",
+      "scope": "All ten global gates remain pending, qualification NOT_FINAL and v4.0.0 unpublished. T07 must complete C13/S13 and C14/S14, integrate the whole collection and reconcile 16 inherited frontdoors outside T06 that still call 3.0.0 current. Browser/headless, native Windows/macOS, saved PDF, Word, Moodle live and novice pilot remain unexecuted; owner acceptance pending."
     }
   ]
 }

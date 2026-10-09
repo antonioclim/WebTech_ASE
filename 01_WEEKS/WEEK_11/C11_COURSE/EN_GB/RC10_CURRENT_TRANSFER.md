@@ -10,11 +10,11 @@ P02 — Authorization: owner versus role — editable path from the seminar pack
 
 P03 — CORS and CSRF: two independent decisions — editable path from the seminar package root: CLASSROOM_RC6/student/p03.mjs
 
-Current entry: ../../../ENTRY/S11.html
+Current entry: ../../S11_SEMINAR/index.html
 
-Step-by-step tutorial: ../../../TUTORIALS/S11.html
+Step-by-step tutorial: ../../S11_SEMINAR/TUTORIAL.html
 
-Current evidence form: ../../S11/WEBTECH_ASE_S11_EN_GB_v1.2.4_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html
+Current evidence form: ../../S11_SEMINAR/EN_GB/FORMATIVE_ASSESSMENT.html
 
 Preserve support files, run the stated target checks and record actual results, including blocked or unexecuted checks. Complete the current form for all projects and export one PDF. Review its saved pages and filename before uploading it to the corresponding private Moodle Assignment. A blocked check is not a PASS.
 

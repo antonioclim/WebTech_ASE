@@ -24,7 +24,11 @@ export const carriers=[
  "01_WEEKS/WEEK_09/S09_SEMINAR/EN_GB/CLASSROOM_RC6/environment.mjs",
  "01_WEEKS/WEEK_09/C09_COURSE/EN_GB/tools/environment.mjs",
  "01_WEEKS/WEEK_10/S10_SEMINAR/EN_GB/CLASSROOM_RC6/environment.mjs",
- "01_WEEKS/WEEK_10/C10_COURSE/EN_GB/tools/environment.mjs"
+ "01_WEEKS/WEEK_10/C10_COURSE/EN_GB/tools/environment.mjs",
+ "01_WEEKS/WEEK_11/C11_COURSE/EN_GB/tools/environment.mjs",
+ "01_WEEKS/WEEK_11/S11_SEMINAR/EN_GB/CLASSROOM_RC6/environment.mjs",
+ "01_WEEKS/WEEK_12/C12_COURSE/EN_GB/tools/environment.mjs",
+ "01_WEEKS/WEEK_12/S12_SEMINAR/EN_GB/CLASSROOM_RC6/environment.mjs"
 ];
 export function verifyCarriers(){for(const path of carriers)if(!readFileSync(resolve(root,path)).equals(canonical))throw Error('ENVIRONMENT_CARRIER_DRIFT '+path);return carriers.length;}
 if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url)){try{console.log(JSON.stringify({status:'PASS_ENVIRONMENT_CARRIERS',copies:verifyCarriers()}));}catch(error){console.error(error.message);process.exitCode=1;}}

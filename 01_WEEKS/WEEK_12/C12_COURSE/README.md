@@ -1,9 +1,3 @@
-# C12 — Realtime and asynchronous work
+# C12 · Realtime communication and asynchronous work
 
-Current English teaching files for Web Technologies 3.0.0 are in `EN_GB/`.
-
-- [Open this unit](index.html)
-- [Start instructions](EN_GB/index.html)
-- [HTML presentation or guide](EN_GB/course.html)
-
-[Collection home](../../../index.html) · [Start guide](../../../00_START_HERE/START_HERE.html)
+[Entry](EN_GB/index.html) · [24 screens](EN_GB/course.html) · [connected 34topic handout](EN_GB/reading.html) · [models](EN_GB/lab.html) · [exact commands](EN_GB/RUN_EXAMPLES.md) · [three required S12 functions](../S12_SEMINAR/TUTORIAL.html).

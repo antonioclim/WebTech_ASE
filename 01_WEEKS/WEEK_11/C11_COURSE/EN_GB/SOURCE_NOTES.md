@@ -1,71 +1,35 @@
-# RC10 CURRENT CLASSROOM TRANSFER
+# C11 — Current source scope and causal corrections
 
-Current S11 classroom transfer
+This v4.0.0 candidate retains all five canonical directories, original locks/tests/README claims, assets, derived helpers and Word files. The current course/reading HTML and MD are the controlling teaching expansion; retained Word documents describe the earlier source and are not updated current guides. Source identity does not qualify runtime behaviour.
 
-Complete every listed microproject individually in class. These are bounded tasks, not completion of the historical full applications.
+CAN-01–CAN-35 identify historical lecture-topic coordinates, not five executable directories. EX-01–EX-05 identify the five canonical directories. M01–M20 identify the retained fixed narratives; M20's central-P02/portfolio/S11-absent text belongs to that historical model and does not govern current assessment. DEMONSTRATIONS identifies the separately authored runnable neutral examples.
 
-P01 — Authentication transfer: trusted principal — editable path from the seminar package root: CLASSROOM_RC6/student/p01.mjs
+## N01 — Identity and lifetime
+Canonical01 accepts username alice without password verification, uses a factory-owned Map and removes a record at logout. It has no server-time expiry; cookie Max-Age does not create one. Canonical03 emits a fixed cookie value. The historical full P01 password/session source had its own expiry/invalidation. Current S11 P01 principalOwner instead selects supplied trusted values and authenticates nobody. No deterministic fixture or fixed value establishes entropy.
 
-P02 — Authorization: owner versus role — editable path from the seminar package root: CLASSROOM_RC6/student/p02.mjs
+## N02 — Policy, order and state
+Canonical02 has inline middleware, module-owned reports and no admin fixture. Its READ non-owner403 and PATCH/resolve moderator grant differ from S11 READ404/DELETE owner-admin. app.param can select missing-report404 before route authentication; S11 missing-principal401 comes first. Historical full P02 construction-time action errors and request-time loader errors belong to that old middleware. A flat frozen snapshot is not a transaction or lock.
 
-P03 — CORS and CSRF: two independent decisions — editable path from the seminar package root: CLASSROOM_RC6/student/p03.mjs
+## N03 — Prepared execution profiles
+Read original entry checks as source, not a verified Windows launch contract. Repeated factories do not imply fresh module-owned data. The current neutral launcher runs only separately named demonstrations, with selected capability guards. tools/canonical.mjs optionally preflights/tests the exact prepared dependencies and bounded original tests; no installation or server-start route is supplied. An absent module blocks only that optional profile. Native platform/Word/browser/TLS qualification remains unexecuted.
 
-Current entry: ../../../ENTRY/S11.html
+## N04 — Request-intent support
+The historical full P02 fixture token helper compared a deterministic token without Origin/Referer checks. It is not assigned for repair through current reportPermission. Current securityDecision receives tokenMatches as a Boolean and models the declared safe-method/bearer exemptions, separate from exact-string sharing. No real token or timing-safe comparison is executed.
 
-Step-by-step tutorial: ../../../TUTORIALS/S11.html
+## N05 — Input, transport and configuration
+Cookie decoding faults differ from ordinary absent/expired records. A forwarded string is not TLS or proof of proxy trust. The historical full P03 sessionSecret shape check was not a signing-key consumer in its fixture authentication; its 500 mapping did not establish all 4xx output contracts. These are nominal source limitations, not reproduced disclosures.
 
-Current evidence form: ../../S11/WEBTECH_ASE_S11_EN_GB_v1.2.4_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html
+## N06 — Historical full P03 boundary
+The old full-application starter delegated to deliberately insecure evidence and is not launched here. Historical selected two-class/all-five portfolio roles do not define current S11 completion. Current P03 is the bounded two-Boolean task, required individually alongside P01/P02. Its model cannot qualify the old helpers or complete application.
 
-Preserve support files, run the stated target checks and record actual results, including blocked or unexecuted checks. Complete the current form for all projects and export one PDF. Review its saved pages and filename before uploading it to the corresponding private Moodle Assignment. A blocked check is not a PASS.
+## N07 — Engine and destination
+Historical full P03 used an array substitute for a parameter contract. Canonical05 contains actual sql.js engine source, which needs its own prepared dependencies. Neutral demo03 independently executes a new node:sqlite equipment catalogue and the retained HTML-text helper. None substitutes for canonical engine/middleware/browser qualification. The canonical fallback image is absent; no image download or native render is claimed.
 
-The old full applications are optional advanced references. Their reused IDs, paths, allocations, portfolio requirements, timings and mark statements do not define these current microprojects. The actual Assignment supplies dates and assessment policy. No completion-time or mark guarantee is made here.
+## N08 — Sharing and response
+Canonical04 can return ordinary output without granting sharing headers; Vary appears only on the allowed branch. Historical full P03 had a different explicit 403 policy. Current P03 returns Booleans, not headers or status. Neutral demo04 observes literal Node HTTP header/status/body fixtures, not a general allowlist implementation or browser/cache enforcement.
 
-# C11 — Source notes and explicit corrections
+## N09 — Timing and evidence
+Verifier-call counts, helper results, header transmission and labels have distinct bounded meanings. timingSafeEqual does not certify surrounding login code. Retained canonical README Validated statements are historical claims, not current maintainer results. The current receipt records actual source hashes, CWD and exits separately.
 
-The canonical copies are exact, including historical run/test instructions. They are source-reading anchors, not authorisation to start servers. The original lecture/GIFT remain private. New prose and fixed models are derived; no complete assessed policy or two-helper repair is supplied publicly.
-
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-## N01 — Reduced session examples (F03)
-EX-01 maps a fixture name to an opaque lookup without password verification or server-time expiry. EX-03 emits a fixed cookie value and attributes. P01 is a different source with explicit expiry/invalidation. Do not equate Max-Age with a server expiry operation or a deterministic generator with entropy evidence.
-
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-## N02 — Policy and state (F04, F07, F08, F17)
-EX-02 uses inline policy and a module-owned report map with no administrator fixture. P02 has its own closed principal domain and exact policy contract. Its unsupported action raises a construction TypeError; request-time loader errors are separate. A policy snapshot is a frozen clone of a flat fixture, not a transaction or a lock. Do not broaden the learner’s edit boundary.
-
-## N03 — Launch boundaries (F05)
-Historical entry checks are not a verified Windows launch contract. Some source factories are stateful; repeated imports or factories do not guarantee fresh data. This C11 package provides no new server launcher. Inspect sources only now; future launch support, loopback binding and native-path verification require their own qualified route. No app is started automatically from the index or model lab.
-
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-## N04 — CSRF and same-origin support (F06)
-P02’s fixture helper compares a deterministic token and does not inspect Origin/Referer. Describe that actual support, not a complete production same-origin boundary. Authentication and support repairs do not move silently into authorization-policy.js. The two-class reduced successor belongs to S11.
-
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-## N05 — Input, transport and secret assumptions (F09, F10, F13, F15)
-Cookie-decoding failures differ from ordinary missing/expired session outcomes. A forwarded string is not TLS or proof of proxy trust. P03’s validated sessionSecret is not consumed by its fixture authentication as a signing key. Its 500 mapping does not establish every 4xx public-message contract. These static boundaries are not reproduced attacks or observed disclosures.
-
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-## N06 — P03 quarantine (F11)
-The original P03 starter delegates transitively to deliberately insecure evidence. It is not included as a public C11 project and is not launched. The next phase will name a reduced successor separately; selected controls cannot be reported as all-five canonical-suite acceptance.
-
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-## N07 — Database and output scope (F12, F16)
-P03 models a parameter contract and filters an array, not SQL. EX-05 contains sql.js source but no SQL engine is executed here. Its fallback image and the P03 placeholder are absent from their supplied trees. Returning a path or accepting a protocol does not prove image availability or origin privacy. No asset download or image request is made.
-
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-## N08 — Response sharing versus refusal (F14)
-EX-04 can continue without granting sharing headers, unlike P03’s explicit 403 for an unlisted origin. It adds Vary only on the allowed branch. Record HTTP status, sharing headers and browser/cache evidence separately; no cache failure is reproduced here.
-
-## N09 — Timing and evidence (F02)
-Header checks, helper outcomes and verification-call counts have bounded meanings. No whole-login timing claim follows from timingSafeEqual. Historical validations remain historical. The 38 canonical declarations are not executed in this phase.
-
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-## N10 — Time, reduced scope and method (F01)
-C11 ends at 60. P02 remains full central work; P01 is capstone integration. Two-class 11.3A selects CORS/CSRF as a local design choice. Topic 33’s exploit-trace wording is retained in coverage but the implemented activity is static data-flow analysis plus benign protective checks, not attack execution. S11 and its evidence form are not produced here.
+## N10 — Time and current hand-off
+The course has a nominal 60-minute guided route, unpiloted, with at most one neutral execution and separate full reading/consolidation. Current S11 exists: principalOwner, reportPermission and securityDecision are all required individually, four semantic stages each. Plan 30–45 per project and 120–165 total; shorter 100/90-minute meetings require taught 20–65/30–75 continuation. One genuine AI critique/check and one private reviewed PDF cover all three. No extra C11 Assignment or historical portfolio is created.

@@ -1,59 +1,43 @@
-# RC10 CURRENT CLASSROOM TRANSFER
+# C12 · Named source contracts and evidence limits
 
-Current S12 classroom transfer
+The five canonical directories and their packages/locks remain original bytes. The derived helpers and M01–M20 assets also retain their own contracts. Current explanation does not silently repair an original or inherit historical execution claims. CAN/F labels inside fixed models map historical topics/findings; they are not current canonical assertions.
 
-Complete every listed microproject individually in class. These are bounded tasks, not completion of the historical full applications.
+## N01 — canonical example 02 registry
 
-P01 — HTTP/WebSocket: recipient ownership — editable path from the seminar package root: CLASSROOM_RC6/student/p01.mjs
+The colon key can collide and x-user-id is a header identity fixture, not authenticated principal evidence. The replacement sets the new socket before closing the previous one, and its close handler already deletes only if the closing socket remains current. The Map is process-local. S12 P01 instead requires strict nonblank string labels and a JSON tuple string, preserving valid whitespace; it proves representation, not trust or delivery.
 
-P02 — Queue: terminal state does not regress — editable path from the seminar package root: CLASSROOM_RC6/student/p02.mjs
+## N02 — canonical example 03 acceptance
 
-P03 — Dispatcher: correlation and single settlement — editable path from the seminar package root: CLASSROOM_RC6/student/p03.mjs
+queue.add is awaited before Location/202; rejection reaches 503. The source has no domain validation/authorisation and no GET/jobs/:id despite its advertised Location. Do not infer a monitor route from response metadata or combine this source with canonical example 04 as an already executed service.
 
-Current entry: ../../../ENTRY/S12.html
+## N03 — canonical example 04 projection
 
-Step-by-step tutorial: ../../../TUTORIALS/S12.html
+The application writes queued after await queue.add, while Worker/event paths can write active/completed/failed. This admits a source ordering interleaving; it is not an actual Redis failure observed here. Its projection is a local Map, not distributed/durable routing. Its integration test needs prepared BullMQ/ioredis/Express and a separately owned Redis service. The current route blocks 04 rather than using an arbitrary existing service.
 
-Current evidence form: ../../S12/WEBTECH_ASE_S12_EN_GB_v1.2.4_RC6/CLASSROOM_RC6/EVIDENCE_FORM.html
+## N04 — historical HTTP-to-WebSocket full application
 
-Preserve support files, run the stated target checks and record actual results, including blocked or unexecuted checks. Complete the current form for all projects and export one PDF. Review its saved pages and filename before uploading it to the corresponding private Moodle Assignment. A blocked check is not a PASS.
+The former full application’s duplicate request IDs could replace pending ownership and close did not clear unresolved work. Those findings are historical context, not recipientKey behaviour or canonical example 02’s current-instance close guard. Its absent full-app paths are not current edit targets.
 
-The old full applications are optional advanced references. Their reused IDs, paths, allocations, portfolio requirements, timings and mark statements do not define these current microprojects. The actual Assignment supplies dates and assessment policy. No completion-time or mark guarantee is made here.
+## N05 — historical Queued Job Runner and preserved helper
 
-# C12 — Source notes and explicit corrections
+The former full runner’s equal progress, direct completion and incomplete-descriptor findings belong to that named contract. The preserved derived advanceProjection helper instead rejects equal progress, uses Number coercion, lacks a 100 ceiling and has extra completion-descriptor checks. Neither body substitutes for S12 P02’s admitted lifecycle, numeric 0–100, non-regression and stable terminal content. Equal content does not impose returned-reference identity.
 
-The canonical copies are exact. The corrections below belong to the derived explanation and do not rewrite them.
+## N06 — short canonical example 05 dispatcher
 
-## N01 — Registry identity and launch scope
+The short class has monotonic r1/r2 IDs within its instance, pending-before-send and ID correlation. It lacks expected-type, abort, malformed-JSON catch, global-listener teardown and unavailable-after-close state. Synchronous send throw rejects its Promise but can leave the already-created pending/timer until another terminal path. The neutral facade demo observes this unchanged class locally; no native WebSocket follows from that observation.
 
-EX-02 uses a colon-delimited key and trusts a header fixture. Different pairs can collide when values contain the delimiter. No server is started and the package does not claim production identity handling.
+## N07 — historical full Correlated Request Dispatcher
 
-## N02 — Accepted job contract
+The former full contract had request-dispatcher.mjs despite a .js specification, nextId exceptions, post-settlement ID reuse and another close policy. These are not interfaces of the short class. Today S12 P03 edits only CLASSROOM_RC6/student/p03.mjs and models exact current ID/type, one removal and replay; it creates no timers/Promise callbacks/listeners. No own-result-presence or universal malformed-pending rule is added.
 
-EX-03 emits a Location value but has no corresponding GET status route. Teach it as a minimal acceptance envelope, not a complete status lifecycle.
+## N08 — preserved fixed models
 
-## N03 — Queue projection ordering
+M11’s reference republishes equal progress text refers to a historical reference. M20’s zero timers/listeners is a design end-state, not measured canonical example 05 cleanup; that class retains global listeners. M19 reuse is a protocol scenario, not evidence that the short class reuses an ID after settlement. The assets are kept original and visibly qualified at lab use.
 
-EX-04 writes the queued projection after awaited queue work. The source can therefore admit an ordering interleaving. Redis and BullMQ remain unexecuted.
+## N09 — protocol heuristic and infrastructure
 
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
+suggestProtocol is a heuristic; high-frequency one-way input can take its WebSocket branch. It neither establishes bidirectionality nor benchmarks a channel. Polling arithmetic is idealised; canonical example 01 has no SSE. Source tests, dependency manifests and successful preflight are distinct from executed HTTP/WS/Redis/browser qualification. Missing dependencies stay BLOCKED without installation or pin changes.
 
-## N04 — P01 limits
+## N10 — source inventory and current task allocation
 
-The reference demonstrates targeted delivery and sanitised failure, but duplicate request IDs overwrite pending ownership and socket close does not remove unresolved pending work. A query-session fixture is not a production recommendation.
-
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-## N05 — P02 limits
-
-The reference republishes equal progress, accepts completion without the active state, normalises incomplete completion data and may accept a reused job ID that remains owned by the first projection. The advanced route is not required.
-
-> Historical full-application source reference. Its implementation is optional advanced work in this collection; old project IDs, paths, role allocations, timings and mark statements below do not define the current seminar tasks. The conceptual explanation remains course content.
-
-## N06 — P03 limits
-
-The actual assessed path is `request-dispatcher.mjs`, not `.js`. Transport close does not mark the dispatcher unavailable, request IDs can be reused after settlement and `nextId` errors escape synchronously. The source also differs between student and reference in additional support files; the student still edits only the dispatcher.
-
-## N07 — Evidence and installation
-
-The 39 canonical tests are not executed. Seven lockfile artefacts were not found in the four bounded archives, including optional native artefacts. No installation or global absence claim follows.
+Earlier statements about 39 tests or seven absent lock artefacts described historical bounded-archive audits, not this current tree or a new execution receipt. All original current lock files are preserved. All three current targets are required individually through twelve stages, one genuine learner AI critique/check and one PDF. The maintained HTML/Markdown adapts current teaching; preserved Word remains historical. Full 120–165 minutes and taught continuation are unpiloted estimates. Native file-CSP/focus/PDF, real AI, Moodle and novice pilot need actual observations.

@@ -15,7 +15,7 @@
       "id": "P02",
       "title": "Queue: terminal state does not regress",
       "editable_path": "CLASSROOM_RC6/student/p02.mjs",
-      "completeScope": "Apply queued→active→completed/failed transitions; active progress may only increase from0to100; terminal or out-of-order events preserve state. Use synthetic lifecycle events. No Redis, BullMQ, actual job or exactly-once guarantee is observed."
+      "completeScope": "Only queued plus active activates; only active admits progress, completed or failed. Progress uses event.progress, must be a finite number from0to100 and may not decrease. Completed sets progress 100; failed preserves current progress. Terminal and out-of-order events preserve state content, including unrelated fields, with input immutability. No returned-reference/deep-copy or arbitrary malformed-start-state policy is added. This is synthetic lifecycle evidence, not Redis/BullMQ or exactly-once."
     },
     {
       "id": "P03",
@@ -323,6 +323,80 @@
     165
   ],
   "timeline_numeric_values": "Lower end of the unpiloted planning range, not an empirical minimum or a completion threshold.",
-  "planning_continuation": "If the actual institutional slot is shorter, confirm a continuation arrangement with the lecturer. All projects remain required individual classroom work; incomplete work remains incomplete.",
-  "private_evidence_location": "A private home-folder WebTech_Evidence/Sxx directory outside the entire extracted collection; use the detailed tutorial for operating-system-specific quoted absolute paths."
+  "planning_continuation": "Unpiloted proposal: checkpoint around minute 60, preserve exact next stage, unsatisfied assertion, external case and prediction around 80\u201390; taught continuation 20\u201365 beyond 100 or 30\u201375 beyond 90. All three projects, one genuine critique/check and one PDF remain required.",
+  "private_evidence_location": "A private home-folder WebTech_Evidence/Sxx directory outside the entire extracted collection; use the detailed tutorial for operating-system-specific quoted absolute paths.",
+  "semantic_stages": [
+    {
+      "project_id": "P01",
+      "stage": "P01-01",
+      "title": "Name the principal and connection separately",
+      "tutorial_anchor": "P01-01"
+    },
+    {
+      "project_id": "P01",
+      "stage": "P01-02",
+      "title": "Refuse blank labels without normalising valid identity",
+      "tutorial_anchor": "P01-02"
+    },
+    {
+      "project_id": "P01",
+      "stage": "P01-03",
+      "title": "Encode the tuple rather than join a delimiter",
+      "tutorial_anchor": "P01-03"
+    },
+    {
+      "project_id": "P01",
+      "stage": "P01-04",
+      "title": "Design a collision or refusal falsifier",
+      "tutorial_anchor": "P01-04"
+    },
+    {
+      "project_id": "P02",
+      "stage": "P02-01",
+      "title": "Draw the admitted lifecycle",
+      "tutorial_anchor": "P02-01"
+    },
+    {
+      "project_id": "P02",
+      "stage": "P02-02",
+      "title": "Preserve terminal state against late events",
+      "tutorial_anchor": "P02-02"
+    },
+    {
+      "project_id": "P02",
+      "stage": "P02-03",
+      "title": "Admit valid non-regressing progress",
+      "tutorial_anchor": "P02-03"
+    },
+    {
+      "project_id": "P02",
+      "stage": "P02-04",
+      "title": "Trace a lifecycle and challenge its boundary",
+      "tutorial_anchor": "P02-04"
+    },
+    {
+      "project_id": "P03",
+      "stage": "P03-01",
+      "title": "Correlate the reply to its current request",
+      "tutorial_anchor": "P03-01"
+    },
+    {
+      "project_id": "P03",
+      "stage": "P03-02",
+      "title": "Require the expected completion type",
+      "tutorial_anchor": "P03-02"
+    },
+    {
+      "project_id": "P03",
+      "stage": "P03-03",
+      "title": "Remove one entry without changing prior input",
+      "tutorial_anchor": "P03-03"
+    },
+    {
+      "project_id": "P03",
+      "stage": "P03-04",
+      "title": "Replay the reply against the returned snapshot",
+      "tutorial_anchor": "P03-04"
+    }
+  ]
 }

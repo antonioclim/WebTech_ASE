@@ -1,13 +1,7 @@
-# S11 — Role-Protected Moderation Operation
+# S11 — Trusted principal, report permission and independent decisions
 
-Current English teaching files for Web Technologies 3.0.0 are in `EN_GB/`.
+All three current projects are required individually, with four semantic stages each. Start [the unit](index.html), [the full tutorial](TUTORIAL.html) or [the short guide](EN_GB/CLASSROOM_RC6/START.html). Open EN_GB in VS Code before commands. Only CLASSROOM_RC6/student/p01.mjs–p03.mjs are assessed editable targets.
 
-- [Open this unit](index.html)
-- [Start instructions](EN_GB/CLASSROOM_RC6/START.html)
-- [HTML presentation or guide](EN_GB/CLASSROOM_RC6/GUIDE.html)
-- [Detailed seminar tutorial](TUTORIAL.html)
-- [Evidence form](EN_GB/CLASSROOM_RC6/EVIDENCE_FORM.html)
+Use the [current formative record](EN_GB/FORMATIVE_ASSESSMENT.html) for all 12 stages, three reflections, one genuine AI critique/check and one private reviewed PDF. Verify fields and controls load; native file/CSP/print behaviour remains unexecuted. Plan 30–45 minutes per project and 120–165 overall, unpiloted, with a taught continuation for a shorter meeting. Keep all private evidence outside the whole collection.
 
-Open the `EN_GB` folder in VS Code before running the seminar commands. It contains `CLASSROOM_RC6`, the supplied current implementation and evidence-form protocol. Complete all required projects individually and keep private evidence outside the entire repository.
-
-[Collection home](../../../index.html) · [Start guide](../../../00_START_HERE/START_HERE.html)
+[C11 course](../C11_COURSE/EN_GB/course.html) · [Collection](../../../index.html) · [Environment help](../../../00_START_HERE/ENVIRONMENT.html)
