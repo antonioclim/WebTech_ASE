@@ -208,8 +208,8 @@ if ($KitRoot -match '[^\x00-\x7F]') { $special += 'non-ASCII' }
 Add-Result 'PATH_SPECIAL_CHARACTERS' 'PASS' $false (($special -join ', ') -replace '^$','none') 'quoted-path support' 'Scripts use literal/quoted paths'
 
 # Node is always assessed; npm is assessed only for the selected npm operation.
-$nodePaths = Command-Paths 'node.exe'
-if ($nodePaths.Count -eq 0) { $nodePaths = Command-Paths 'node' }
+$nodePaths = @(Command-Paths 'node.exe')
+if ($nodePaths.Count -eq 0) { $nodePaths = @(Command-Paths 'node') }
 $nodeActive = if ($nodePaths.Count -gt 0) { $nodePaths[0] } else { $null }
 $nodeVersion='';$nodeReady=$false
 if ($nodeActive) {
@@ -222,7 +222,7 @@ if ($nodeActive) {
 if ($nodePaths.Count -gt 1) { Add-Result 'NODE_MULTIPLE_INSTALLATIONS' 'ENV_WARN' $false ($nodePaths -join '; ') 'record active executable' 'Multiple paths alone do not block' }
 $npmActive=$null
 if($Profile -eq 'npm') {
-  $npmPaths=Command-Paths 'npm.cmd'
+  $npmPaths=@(Command-Paths 'npm.cmd')
   if($npmPaths.Count -gt 0){$npmActive=$npmPaths[0]}
   if($npmActive){$nr=Invoke-Tool $npmActive @('--version');if($nr.ok -and $nr.stdout -match '^\d+\.\d+\.\d+$'){Add-Result 'NPM_VERSION' $(if($nr.stdout -eq $RequiredNpm){'ENV_OK'}else{'ENV_WARN'}) $false "$($nr.stdout) / $npmActive" "$RequiredNpm (unexecuted reference)" 'npm.cmd avoids npm.ps1 without changing ExecutionPolicy'}else{Add-Result 'NPM_VERSION' 'ENV_BLOCKED' $true $nr.stderr 'successful valid npm.cmd --version' 'npm command failed'}}
   else {Add-Result 'NPM_VERSION' 'ENV_BLOCKED' $true '' 'functional npm for npm operation' 'npm.cmd unavailable; Node-only activities remain independent'}
@@ -258,8 +258,8 @@ try {
 }
 
 # Git.
-$gitPaths = Command-Paths 'git.exe'
-if ($gitPaths.Count -eq 0) { $gitPaths = Command-Paths 'git' }
+$gitPaths = @(Command-Paths 'git.exe')
+if ($gitPaths.Count -eq 0) { $gitPaths = @(Command-Paths 'git') }
 $gitActive = if ($gitPaths.Count -gt 0) { $gitPaths[0] } else { $null }
 if ($gitActive) {
   $gr = Invoke-Tool $gitActive @('--version')
@@ -294,7 +294,7 @@ foreach ($p in @(
   "${env:ProgramFiles(x86)}\Microsoft VS Code\Code.exe"
 )) { if ($p -and (Test-Path -LiteralPath $p)) { $vs.Add($p) | Out-Null } }
 Add-RegistryAppPath $vs 'Code.exe'
-$vsPaths = Unique-Paths @($vs)
+$vsPaths = @(Unique-Paths @($vs))
 $vsActive = if ($vsPaths.Count -gt 0) { $vsPaths[0] } else { $null }
 if ($vsActive) {
   $vr = Invoke-Tool $vsActive @('--version') 15000
@@ -333,7 +333,7 @@ foreach ($p in @(
   "$env:LOCALAPPDATA\Microsoft\Edge\Application\msedge.exe"
 )) { if ($p -and (Test-Path -LiteralPath $p)) { $browsers.Add($p) | Out-Null } }
 Add-RegistryAppPath $browsers 'chrome.exe'; Add-RegistryAppPath $browsers 'msedge.exe'
-$browserPaths = Unique-Paths @($browsers)
+$browserPaths = @(Unique-Paths @($browsers))
 if ($browserPaths.Count -gt 0) {
   $bp = $browserPaths[0]
   try { $bv = (Get-Item -LiteralPath $bp).VersionInfo.ProductVersion } catch { $bv = '' }
@@ -360,14 +360,14 @@ if ($Stage -in @('S05','S06','S08')) {
   $postman = New-Object System.Collections.Generic.List[string]
   foreach ($p in @("$env:LOCALAPPDATA\Postman\Postman.exe","$env:LOCALAPPDATA\Programs\Postman\Postman.exe","$env:ProgramFiles\Postman\Postman.exe")) { if ($p -and (Test-Path -LiteralPath $p)) { $postman.Add($p) | Out-Null } }
   Add-RegistryAppPath $postman 'Postman.exe'
-  $pp = Unique-Paths @($postman)
+  $pp = @(Unique-Paths @($postman))
   if ($pp.Count -gt 0) { Add-Result 'POSTMAN' 'PASS' $false $pp[0] 'Postman Desktop from S05' 'Application detected' }
   elseif ($AckAlternativeHttpClient) { Add-Result 'POSTMAN' 'WARN' $false 'approved alternative acknowledged' 'Postman or approved alternative' 'POSTMAN-001' }
   else { Add-Result 'POSTMAN' 'ENV_BLOCKED' $false '' 'Postman Desktop from S05' 'POSTMAN-001' }
 } else { Add-Result 'POSTMAN' 'NOT_REQUIRED' $false '' 'required from S05' 'Not evaluated at DAY0' }
 if ($Stage -in @('S06','S08')) {
-  $sqlite = Command-Paths 'sqlite3.exe'
-  if ($sqlite.Count -eq 0) { $sqlite = Command-Paths 'sqlite3' }
+  $sqlite = @(Command-Paths 'sqlite3.exe')
+  if ($sqlite.Count -eq 0) { $sqlite = @(Command-Paths 'sqlite3') }
   if ($sqlite.Count -gt 0) {
     $sr = Invoke-Tool $sqlite[0] @('--version')
     if ($sr.ok) { Add-Result 'SQLITE' 'PASS' $false $sr.stdout 'sqlite3 from S06' 'CLI works' }
@@ -395,7 +395,7 @@ $payload = [PSCustomObject][ordered]@{
   schema='tw2026.environment.preflight.v2'; generatedAt=(Get-Date).ToString('o'); platform='windows'; stage=$Stage;
   kitVersion='2.2.1'; requiredNode=$RequiredNode; requiredNpm=$RequiredNpm; workspace=(Protect-Text $Workspace);
   profile=$Profile; verdict=$Verdict; exitCode=$ExitCode; counts=[PSCustomObject][ordered]@{unsupported=$unsupported;technicalBlocking=$technicalBlocking;manualPending=$manualPending;warnings=$warnings};
-  results=@($Results)
+  results=$Results.ToArray()
 }
 if ($Format -eq 'json') {
   $payload | ConvertTo-Json -Depth 8

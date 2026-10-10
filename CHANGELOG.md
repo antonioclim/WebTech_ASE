@@ -1,5 +1,9 @@
 # Changes
 
+## v4.0.0 candidate — Windows preflight array compatibility correction, 2026-10-10
+
+A native Windows PowerShell 5.1 / Node v24.21.0 observation of the published RC1 passed collection and Windows setup integrity, then failed because a single discovered Node path was captured as a scalar. A later native observation of the first corrected candidate passed source and Windows setup integrity and reached payload construction, where direct array-subexpression wrapping of a New-Object List[object] raised ArgumentException. Capture all ten path-discovery results as arrays and copy the results list with ToArray() before JSON serialisation. Preserve StrictMode, the existing capability probes and exit policy. Reseal the Windows setup unit and current source controls. HTTP, SQLite and final collection checks were not reached in either native attempt. Static/source checks remain distinct from the pending second corrected native rerun. The frozen RC1 tag and four assets remain unchanged; this candidate is prepared for a new owner commit and is not a published release.
+
 ## v4.0.0-rc.1 — published teaching review, 9 October 2026
 
 Publish the complete teaching review as a prerelease, with four verified assets and tag source commit `23803fdaf5987384b86104bbaf0a8d293654aa0e`. Promote the current portal to the actual RC1 download and retain 3.0.0 as GitHub Latest stable. The frozen RC1 assets keep their original bytes and distinct filtered distribution identity. Later portal changes are a separate source change, with current integrity controls refreshed. Stable v4.0.0 remains NOT_FINAL and its tag is reserved. Historical entries below describe their original preparation checkpoints.
