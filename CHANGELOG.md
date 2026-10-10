@@ -1,5 +1,9 @@
 # Changes
 
+## v4.0.0 postpublication portal — 10 October 2026
+
+Promoted the published v4.0.0 classroom ZIP and its three companion assets as the main download route after verifying the stable release, observed Latest status and fixed source `f86668d6784e1b97b9057ae2e2080113efce45e3`. Added `metadata/PUBLISHED_RELEASE.json` with the actual source/tag/asset identities, while retaining the source qualification snapshots and RC1 record byte-for-byte. The later portal has a separate manifest and cannot replace or retrospectively become the source of the published archive. Maintenance validators recognise the narrow publication overlay; builders reject a replacement v4.0.0 build from this later copy. All setup, course and seminar bytes, scripts, styles, 40 required projects and 38 unfinished learner targets remain preserved. Portal promotion receives separate local integrity and static route checks; no new browser, Windows, PDF, macOS or human execution is implied. General qualification remains NOT_FINAL, the observed Windows PASS retains its limits, macOS remains unexecuted and unqualified, and RC1/previous editions remain historical.
+
 ## v4.0.0 source — declared observed Windows profile, 10 October 2026
 
 The owner selected the observed Windows technical profile for the final v4.0.0 publication scope. The complete source retains all 14 courses, 14 seminars, both setup units, 40 required individual microprojects and 38 intentionally unfinished learner targets. Common guidance and maintenance records distinguish `technical_qualification: PASS_DECLARED_WINDOWS_PROFILE_WITH_LIMITS` and declared source `publication_qualified: true` from general `qualificationVerdict: NOT_FINAL`, broad `native_acceptance: false` and `published: false`. The final content commit, tag, release assets and publication are still to be completed.

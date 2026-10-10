@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build an unpublished complete Windows-profile source ZIP from an exact clean commit."""
+"""Build frozen preparation source, never a later portal ZIP under the v4.0.0 identity."""
 from __future__ import annotations
 
 import argparse
@@ -20,6 +20,7 @@ def build(output_dir, source_commit, version, release_tag, mode):
     selected = {**selected, 'archive_root': 'WEBTECH_ASE_COMPLETE_SOURCE_' + release_tag + '/',
                 'archive': 'WEBTECH_ASE_COMPLETE_SOURCE_' + release_tag + '.zip'}
     output = validate_output(output_dir)
+    # The shared snapshot rejects the postpublication portal before output creation.
     meta, files, identity, units, course, projects, links, progress, profile = snapshot_source()
     binding = authenticate_commit(source_commit, files)
     payload = {name: path.read_bytes() for name, path in files.items()}

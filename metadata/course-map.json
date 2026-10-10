@@ -4,7 +4,7 @@
   "academic_year": "2026-2027",
   "language": "en-GB",
   "qualification": "NOT_FINAL",
-  "purpose": "Project identities, navigation and learning outcomes for all 14 course and seminar pairs revised through T01–T07. RC1 is published as a teaching review prerelease; final stable v4.0.0 technical qualification remains NOT_FINAL. Grading weights and submission deadlines are defined by the lecturer in the actual seminar Assignment.",
+  "purpose": "Project identities, navigation and learning outcomes for all 14 course and seminar pairs revised through T01–T07. v4.0.0 is published as stable under the declared observed Windows profile; general qualification remains NOT_FINAL. RC1 remains a separate frozen teaching review prerelease. Grading weights and submission deadlines are defined by the lecturer in the actual seminar Assignment.",
   "required_project_count": 40,
   "weeks": [
     {
@@ -748,7 +748,7 @@
     }
   ],
   "final_target_version": "4.0.0",
-  "latest_published_version": "3.0.0",
+  "latest_published_version": "4.0.0",
   "distribution_status": "QUALIFIED_WINDOWS_SOURCE_NOT_PUBLISHED",
   "candidate_progress": "metadata/CANDIDATE_PROGRESS.json",
   "published": false,
@@ -756,8 +756,11 @@
   "publication_qualified": true,
   "implementation_scope": "All 14 course and seminar pairs revised through T01–T07 with explicit limits. Exactly 40 required individual projects and 38 intentionally unfinished targets remain.",
   "review_publication": "metadata/REVIEW_PRERELEASE.json",
-  "publication_status_scope": "published, publication_qualified and distribution_status in the candidate metadata describe the final stable v4.0.0 candidate, not RC1 availability. latest_published_version describes the previous stable edition. This record supplies the separate actual review publication state.",
+  "publication_status_scope": "This later main copy promotes the verified published v4.0.0 portal. latest_published_version identifies that observed Latest stable release and published_release points to its separate actual publication record. The retained status, phase, distribution_status, published: false and publication_qualified fields describe the frozen source preparation and its bounded Windows eligibility; they do not deny the later recorded release. PUBLICATION_PROFILE.json and CURRENT_QUALIFICATION.json remain byte-identical source evidence snapshots. This portal has its own manifest and is not the retrospective source of the fixed v4.0.0 ZIP. RC1 remains a separate frozen prerelease.",
   "technical_qualification": "PASS_DECLARED_WINDOWS_PROFILE_WITH_LIMITS",
   "publication_profile": "metadata/PUBLICATION_PROFILE.json",
-  "publication_qualification_scope": "Scoped technical source eligibility for the explicitly declared observed Windows profile only. This does not authenticate the future final source commit, build, extraction, tag or assets and does not record publication or broad native/manual/human acceptance."
+  "publication_qualification_scope": "Scoped technical source eligibility for the explicitly declared observed Windows profile only. This does not authenticate the future final source commit, build, extraction, tag or assets and does not record publication or broad native/manual/human acceptance.",
+  "published_release": "metadata/PUBLISHED_RELEASE.json",
+  "portal_state": "POSTPUBLICATION_PORTAL_SOURCE",
+  "portal_commit": "RECORDED_EXTERNALLY_AFTER_OWNER_COMMIT"
 }

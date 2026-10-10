@@ -29,5 +29,11 @@
   "publication_qualified": true,
   "publication_qualification_scope": "Scoped technical source eligibility for the explicitly declared observed Windows profile only. This does not authenticate the future final source commit, build, extraction, tag or assets and does not record publication or broad native/manual/human acceptance.",
   "native_acceptance": false,
-  "published": false
+  "published": false,
+  "published_release": "metadata/PUBLISHED_RELEASE.json",
+  "portal_state": "POSTPUBLICATION_PORTAL_SOURCE",
+  "publication_status_scope": "This later main copy promotes the verified published v4.0.0 portal. latest_published_version identifies that observed Latest stable release and published_release points to its separate actual publication record. The retained status, phase, distribution_status, published: false and publication_qualified fields describe the frozen source preparation and its bounded Windows eligibility; they do not deny the later recorded release. PUBLICATION_PROFILE.json and CURRENT_QUALIFICATION.json remain byte-identical source evidence snapshots. This portal has its own manifest and is not the retrospective source of the fixed v4.0.0 ZIP. RC1 remains a separate frozen prerelease.",
+  "published_source_scope": "published_source retains the historical 3.0.0 layout reference. The current stable v4.0.0 publication, fixed f866 source and four assets are recorded separately in PUBLISHED_RELEASE.json. This later portal copy has a separate repository identity.",
+  "latest_published_version": "4.0.0",
+  "portal_commit": "RECORDED_EXTERNALLY_AFTER_OWNER_COMMIT"
 }

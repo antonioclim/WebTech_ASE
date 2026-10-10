@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build an unpublished Windows-profile classroom distribution from an exact clean commit."""
+"""Build from a frozen preparation source; reject the later published-release portal."""
 from __future__ import annotations
 
 import argparse
@@ -27,6 +27,7 @@ STAMP = (2026, 10, 10, 0, 0, 0)
 EXCLUDED_PREFIXES = ('.github/', '00_TOOLS/publishing/',
                      '00_TOOLS/maintainer/', '00_TOOLS/acceptance/')
 DERIVATION = 'metadata/DISTRIBUTION_DERIVATION.json'
+PUBLISHED_RELEASE_PATH = 'metadata/PUBLISHED_RELEASE.json'
 
 STUDENT_TOOLS = '''# Verify this Windows-profile teaching distribution
 
@@ -186,7 +187,18 @@ def verify_publication_profile(meta, progress, files):
     return profile
 
 
+def reject_postpublication_portal_source():
+    published_record = ROOT / PUBLISHED_RELEASE_PATH
+    if published_record.exists() or published_record.is_symlink():
+        raise ValueError(
+            'Postpublication portal source cannot prepare new v4.0.0 archives. '
+            'Use the frozen v4.0.0 source commit '
+            'f86668d6784e1b97b9057ae2e2080113efce45e3 and its committed builders '
+            'for reproduction; preserve the published four assets and both release tags.')
+
+
 def snapshot_source():
+    reject_postpublication_portal_source()
     meta, files, identity = verify_source(ROOT)
     units = verify_units(ROOT, meta, files)
     course, projects = verify_course_map(ROOT, meta, files)

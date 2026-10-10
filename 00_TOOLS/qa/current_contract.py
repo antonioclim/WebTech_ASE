@@ -34,6 +34,84 @@ WINDOWS_DISTRIBUTION_STATUS = 'QUALIFIED_WINDOWS_SOURCE_NOT_PUBLISHED'
 WINDOWS_TECHNICAL_QUALIFICATION = 'PASS_DECLARED_WINDOWS_PROFILE_WITH_LIMITS'
 PUBLICATION_PROFILE = 'metadata/PUBLICATION_PROFILE.json'
 WINDOWS_PROFILE_ID = 'windows-observed-v4.0.0'
+
+PUBLISHED_RELEASE = 'metadata/PUBLISHED_RELEASE.json'
+PORTAL_MARKERS = {'published_release': 'metadata/PUBLISHED_RELEASE.json',
+ 'portal_state': 'POSTPUBLICATION_PORTAL_SOURCE',
+ 'portal_commit': 'RECORDED_EXTERNALLY_AFTER_OWNER_COMMIT'}
+PORTAL_QUALIFICATION_SCOPE = 'Postpublication portal source only. The separately verified offline release record identifies published v4.0.0 at its fixed source; this later source is not a replacement archive or publication-eligible copy. This check verifies bytes and retained record facts, performs no live GitHub query and does not reexecute browser, native, learner or human acceptance.'
+PORTAL_PUBLICATION_SCOPE = 'published=false describes this current source copy, not availability of the separately recorded published v4.0.0 release.'
+# Fixed publication observations retained offline; no live GitHub request is made.
+PUBLISHED_RELEASE_CONTRACT = {'schema': 'webtech-published-release/v1',
+ 'status': 'PUBLISHED_V4_0_0_DECLARED_WINDOWS_PROFILE',
+ 'version': '4.0.0',
+ 'release_id': 409107590,
+ 'tag': 'v4.0.0',
+ 'release_url': 'https://github.com/antonioclim/WebTech_ASE/releases/tag/v4.0.0',
+ 'draft': False,
+ 'prerelease': False,
+ 'published': True,
+ 'published_at_utc': '2026-10-10T17:56:35Z',
+ 'source_commit': 'f86668d6784e1b97b9057ae2e2080113efce45e3',
+ 'source_tree': '773ef0725c7b4d7f01888ed2b7a95784d2b4d8c1',
+ 'source_repository_package_id': 'f7a74a10b456134a45fd1e306c0ee2e660a9871e0ff23be7874abaf1a82d6e97',
+ 'source_files': 1728,
+ 'distribution_package_id': 'e1eae003ec1bbebec36f59e6885af69086722788893d65e638a02e305489063e',
+ 'distribution_files': 1719,
+ 'archive_sha256': '3fe88aa7d4c033110fc7e2aade270e3ebeac8c48a5668f057ee4dc93250c51e5',
+ 'build_receipt_sha256': 'a3a031a366a27579cd7fa538aaed66ecd5d360c93257a4e4c3dd75a9db3ec503',
+ 'profile_id': 'windows-observed-v4.0.0',
+ 'technical_qualification': 'PASS_DECLARED_WINDOWS_PROFILE_WITH_LIMITS',
+ 'qualificationVerdict': 'NOT_FINAL',
+ 'native_acceptance': False,
+ 'macOS': 'NOT_EXECUTED_NOT_QUALIFIED',
+ 'publication_performed_by_owner': True,
+ 'latest_observed': True,
+ 'GitHub_immutable_observed': False,
+ 'observed_at_utc': '2026-10-10T18:11:17.765Z',
+ 'assets': [{'id': 628606228,
+             'name': 'BUILD_RECEIPT.json',
+             'state': 'uploaded',
+             'size': 22669,
+             'digest': 'sha256:a3a031a366a27579cd7fa538aaed66ecd5d360c93257a4e4c3dd75a9db3ec503',
+             'browser_download_url': 'https://github.com/antonioclim/WebTech_ASE/releases/download/v4.0.0/BUILD_RECEIPT.json'},
+            {'id': 628606259,
+             'name': 'FILES_MANIFEST.txt',
+             'state': 'uploaded',
+             'size': 220031,
+             'digest': 'sha256:e1eae003ec1bbebec36f59e6885af69086722788893d65e638a02e305489063e',
+             'browser_download_url': 'https://github.com/antonioclim/WebTech_ASE/releases/download/v4.0.0/FILES_MANIFEST.txt'},
+            {'id': 628606322,
+             'name': 'WEBTECH_ASE_EN_GB_CLASSROOM_v4.0.0.zip',
+             'state': 'uploaded',
+             'size': 5131965,
+             'digest': 'sha256:3fe88aa7d4c033110fc7e2aade270e3ebeac8c48a5668f057ee4dc93250c51e5',
+             'browser_download_url': 'https://github.com/antonioclim/WebTech_ASE/releases/download/v4.0.0/WEBTECH_ASE_EN_GB_CLASSROOM_v4.0.0.zip'},
+            {'id': 628606377,
+             'name': 'WEBTECH_ASE_EN_GB_CLASSROOM_v4.0.0.zip.sha256',
+             'state': 'uploaded',
+             'size': 105,
+             'digest': 'sha256:b158b1795a3a5f7eeef1631264e1585f4752077b16bc08edb39d258c7dfe6057',
+             'browser_download_url': 'https://github.com/antonioclim/WebTech_ASE/releases/download/v4.0.0/WEBTECH_ASE_EN_GB_CLASSROOM_v4.0.0.zip.sha256'}],
+ 'verification': {'scope': '__REQUIRED_NONEMPTY_EXPLANATORY_TEXT__',
+                  'binary_redownload': False,
+                  'notes_match_after_line_ending_normalisation': True,
+                  'local_classroom_builds': 2,
+                  'four_assets_byte_identical_across_builds': True,
+                  'fresh_extraction_checks': 'PASS_STRICT_PYTHON_AND_NODE_INITIAL_BYTES_STATIC_ROUTES_ONLY',
+                  'fresh_extraction_receipt_sha256': '092dcd5818886a46395debf1c5b99d9a423c7d68f4e08df5add49638f5d0214b',
+                  'publication_audit_sha256': '726f005570ccfa4c02d794d78a71e8b9e5148968e5ef15824e1038ac58a51db4',
+                  'limits': '__REQUIRED_NONEMPTY_EXPLANATORY_TEXT__'},
+ 'frozen_RC1': {'tag': 'v4.0.0-rc.1',
+                'release_id': 408264000,
+                'source_commit': '23803fdaf5987384b86104bbaf0a8d293654aa0e',
+                'four_original_asset_identities_preserved': True,
+                'scope': '__REQUIRED_NONEMPTY_EXPLANATORY_TEXT__'},
+ 'portal_relationship': {'state': 'POSTPUBLICATION_PORTAL_SOURCE',
+                         'release_source_is_fixed': True,
+                         'portal_commit': 'RECORDED_EXTERNALLY_AFTER_OWNER_COMMIT',
+                         'scope': '__REQUIRED_NONEMPTY_EXPLANATORY_TEXT__'},
+ 'preservation_policy': '__REQUIRED_NONEMPTY_EXPLANATORY_TEXT__'}
 # These are approved, retained observation identities, not observations rerun by
 # this integrity checker. All thirty unit identities come from committed f6.
 WINDOWS_PROFILE_CONTRACT = {'schema': 'webtech-publication-profile/v1',
@@ -369,7 +447,32 @@ def qualification_contract(record, meta=None, verdict='qualificationVerdict'):
     return windows
 
 
+def is_postpublication_portal(record):
+    if not isinstance(record, dict):
+        raise ValueError('Expected portal metadata record')
+    portal = any(key in record for key in PORTAL_MARKERS)
+    if portal:
+        if (any(record.get(key) != value or type(record.get(key)) is not str
+                for key, value in PORTAL_MARKERS.items())
+                or record.get('latest_published_version') != VERSION
+                or record.get('distribution_status') != WINDOWS_DISTRIBUTION_STATUS):
+            raise ValueError('Postpublication portal metadata markers differ')
+    return portal
+
+
+def verify_postpublication_record(root, meta):
+    portal = is_postpublication_portal(meta)
+    record_path = checked_path(root, PUBLISHED_RELEASE)
+    if record_path.exists() != portal:
+        raise ValueError('Published release record and portal markers must appear together')
+    if portal:
+        record = strict_json(record_path.read_bytes())
+        match_contract(record, PUBLISHED_RELEASE_CONTRACT, 'PUBLISHED_RELEASE')
+    return portal
+
+
 def verify_publication_profile(root, meta):
+    verify_postpublication_record(root, meta)
     if not qualification_contract(meta):
         if checked_path(root, PUBLICATION_PROFILE).exists():
             raise ValueError('Historical preparatory source must not retain a publication profile')
@@ -388,6 +491,8 @@ def verify_publication_profile(root, meta):
         scope_path = checked_path(root, 'metadata/COLLECTION_SCOPE.json')
         if scope_path.exists():
             scope = strict_json(scope_path.read_bytes())
+            if is_postpublication_portal(scope) != is_postpublication_portal(meta):
+                raise ValueError('Collection scope and metadata portal branches differ')
             if (scope.get('distribution_status') != 'LOCAL_CANDIDATE_NOT_PUBLISHED'
                     or scope.get('qualificationVerdict') != 'NOT_FINAL'
                     or any(key in scope and scope[key] is not False for key in ('native_acceptance', 'publication_qualified', 'published'))
@@ -400,6 +505,8 @@ def verify_publication_profile(root, meta):
     match_contract(evidence, CURRENT_QUALIFICATION_CONTRACT, 'CURRENT_QUALIFICATION')
     scope = strict_json(checked_path(root, 'metadata/COLLECTION_SCOPE.json').read_bytes())
     qualification_contract(scope, meta)
+    if is_postpublication_portal(scope) != is_postpublication_portal(meta):
+        raise ValueError('Collection scope and metadata portal branches differ')
     if (scope.get('schema') != 'webtech-current-repository-scope/v1'
             or scope.get('version') != VERSION
             or scope.get('candidate_progress') != 'CANDIDATE_PROGRESS.json'
@@ -412,14 +519,27 @@ def verify_publication_profile(root, meta):
 
 def qualification_report(meta, current_copy_eligible=False):
     windows = qualification_contract(meta)
-    return {'distribution_status': meta['distribution_status'],
-            'technical_qualification': meta.get('technical_qualification'),
-            'publication_profile': meta.get('publication_profile'),
-            'publication_profile_id': WINDOWS_PROFILE_ID if windows else None,
-            'publication_qualified': meta['publication_qualified'],
-            'current_copy_publication_eligible': bool(windows and current_copy_eligible),
-            'qualification_scope': 'Declared observed Windows source eligibility only; exact final commit/build/tag/assets and publication remain pending. This check verifies bytes, contracts and retained evidence identities; it does not reexecute browser, native, learner or human acceptance.' if windows else 'Historical preparatory source only; no publication qualification.',
-            'qualificationVerdict': 'NOT_FINAL', 'native_acceptance': False, 'published': False}
+    portal = is_postpublication_portal(meta)
+    report = {'distribution_status': meta['distribution_status'],
+              'technical_qualification': meta.get('technical_qualification'),
+              'publication_profile': meta.get('publication_profile'),
+              'publication_profile_id': WINDOWS_PROFILE_ID if windows else None,
+              'publication_qualified': meta['publication_qualified'],
+              'current_copy_publication_eligible': bool(windows and current_copy_eligible and not portal),
+              'qualification_scope': PORTAL_QUALIFICATION_SCOPE if portal else ('Declared observed Windows source eligibility only; exact final commit/build/tag/assets and publication remain pending. This check verifies bytes, contracts and retained evidence identities; it does not reexecute browser, native, learner or human acceptance.' if windows else 'Historical preparatory source only; no publication qualification.'),
+              'qualificationVerdict': 'NOT_FINAL', 'native_acceptance': False, 'published': False}
+    if portal:
+        report.update({'published_release': PUBLISHED_RELEASE,
+                       'portal_state': PORTAL_MARKERS['portal_state'],
+                       'current_copy_is_published_release_bytes': False,
+                       'referenced_release_published': True,
+                       'referenced_release_tag': PUBLISHED_RELEASE_CONTRACT['tag'],
+                       'referenced_release_source_commit': PUBLISHED_RELEASE_CONTRACT['source_commit'],
+                       'referenced_release_latest_observed': True,
+                       'referenced_release_observed_at_utc': PUBLISHED_RELEASE_CONTRACT['observed_at_utc'],
+                       'publication_observation_live_query': False,
+                       'published_scope': PORTAL_PUBLICATION_SCOPE})
+    return report
 
 
 def sha(data):
@@ -543,7 +663,7 @@ def read_metadata(root):
     if (meta.get('schema') != 'webtech-classroom-collection/v1'
             or meta.get('distribution_version') != VERSION
             or meta.get('final_target_version') != VERSION
-            or meta.get('latest_published_version') != LATEST_PUBLISHED_VERSION
+            or meta.get('latest_published_version') != (VERSION if is_postpublication_portal(meta) else LATEST_PUBLISHED_VERSION)
             or meta.get('candidate_progress') != PROGRESS
             or meta.get('final_phase_scope') != FINAL_PHASE_SCOPE
             or meta.get('qualificationVerdict') != 'NOT_FINAL'
@@ -586,10 +706,12 @@ def read_metadata(root):
 def verify_progress(root, meta):
     progress = strict_json(checked_path(root, PROGRESS).read_bytes())
     windows = qualification_contract(progress, meta)
+    if is_postpublication_portal(progress) != is_postpublication_portal(meta):
+        raise ValueError('Progress and collection portal branches differ')
     if (progress.get('schema') != 'webtech-candidate-progress/v1'
             or progress.get('candidate_version') != VERSION
             or progress.get('final_target_version') != VERSION
-            or progress.get('latest_published_version') != LATEST_PUBLISHED_VERSION
+            or progress.get('latest_published_version') != (VERSION if is_postpublication_portal(meta) else LATEST_PUBLISHED_VERSION)
             or progress.get('qualificationVerdict') != 'NOT_FINAL'
             or progress.get('native_acceptance') is not False
             or progress.get('published') is not False
@@ -706,11 +828,13 @@ def verify_units(root, meta, paths, allow_edits=False):
 def verify_course_map(root, meta, paths):
     course = strict_json(checked_path(root, COURSE_MAP).read_bytes())
     qualification_contract(course, meta, 'qualification')
+    if is_postpublication_portal(course) != is_postpublication_portal(meta):
+        raise ValueError('Course map and collection portal branches differ')
     weeks = course.get('weeks')
     if (course.get('schema') != 'webtech-classroom-course-map/v1'
             or course.get('distribution_version') != VERSION
             or course.get('final_target_version') != VERSION
-            or course.get('latest_published_version') != LATEST_PUBLISHED_VERSION
+            or course.get('latest_published_version') != (VERSION if is_postpublication_portal(meta) else LATEST_PUBLISHED_VERSION)
             or course.get('candidate_progress') != PROGRESS
             or course.get('qualification') != 'NOT_FINAL'
             or course.get('native_acceptance') is not False

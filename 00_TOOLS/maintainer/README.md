@@ -1,6 +1,6 @@
 # Maintain the v4.0.0 source
 
-The repository keeps its familiar folder structure. `00_SETUP` contains the two Day 0 kits, `00_START_HERE` contains the current student routes and `01_WEEKS` contains all 14 course/seminar pairs. `00_TOOLS`, `assets` and `metadata` support this candidate. The Latest stable classroom edition remains 3.0.0; the [RC1 teaching review](https://github.com/antonioclim/WebTech_ASE/releases/tag/v4.0.0-rc.1) is published as a prerelease; a prepared teaching corpus does not record a new publication.
+The repository keeps its familiar folder structure. `00_SETUP` contains the two Day 0 kits, `00_START_HERE` contains the current student routes and `01_WEEKS` contains all 14 course/seminar pairs. `00_TOOLS`, `assets` and `metadata` support this later portal source. [The actual v4.0.0 publication record](../../metadata/PUBLISHED_RELEASE.json) identifies the observed Latest stable release at fixed source `f86668d6784e1b97b9057ae2e2080113efce45e3` and its four assets. The [RC1 teaching review](https://github.com/antonioclim/WebTech_ASE/releases/tag/v4.0.0-rc.1) remains a separate frozen prerelease; 3.0.0 is a previous edition. Retained source preparation fields and byte-identical qualification snapshots are historical evidence, distinct from the actual publication record.
 
 The authoritative whole-repository controls are:
 
@@ -13,13 +13,13 @@ For a reviewed source change, refresh affected unit controls first, update the m
 
 The declared [Windows publication profile](../../metadata/PUBLICATION_PROFILE.json) binds the thirty preserved unit identities and the actual existing evidence. Resealing changed teaching or setup bytes does not transfer that evidence. A later functional revision needs its own applicable checks and coordinated qualification record; it cannot silently retain this profile's preserved-byte claim. General **NOT_FINAL** and broad native/manual/human Pending remain distinct from the declared source technical eligibility. macOS remains explicitly unqualified.
 
-Before an owner publication:
+After a reviewed change to this distinct portal source:
 
 ```text
 python 00_TOOLS/qa/validate_public_repo.py --strict
 ```
 
-Then use the [offline builder](../publishing/README.md) and review its receipt and archive. Both commands inspect bytes and static document routes; they do not execute learner applications or replace [acceptance observations](../acceptance/README.md).
+The [publishing guide](../publishing/README.md) explains preservation and optional reproduction from the frozen release source. Both builders refuse replacement v4.0.0 archives from this later portal copy. Source checks inspect bytes and static document routes; they do not execute learner applications or replace [acceptance observations](../acceptance/README.md).
 
 Historical publisher recipes and snapshots belong with their archived editions. Do not redirect an old sealed recipe to current source or transfer historical acceptance claims to a new tree. Preserve old Git tags and published assets when maintaining the current checkout.
 

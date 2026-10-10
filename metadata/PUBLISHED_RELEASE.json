@@ -1,0 +1,88 @@
+{
+  "schema": "webtech-published-release/v1",
+  "status": "PUBLISHED_V4_0_0_DECLARED_WINDOWS_PROFILE",
+  "version": "4.0.0",
+  "release_id": 409107590,
+  "tag": "v4.0.0",
+  "release_url": "https://github.com/antonioclim/WebTech_ASE/releases/tag/v4.0.0",
+  "draft": false,
+  "prerelease": false,
+  "published": true,
+  "published_at_utc": "2026-10-10T17:56:35Z",
+  "source_commit": "f86668d6784e1b97b9057ae2e2080113efce45e3",
+  "source_tree": "773ef0725c7b4d7f01888ed2b7a95784d2b4d8c1",
+  "source_repository_package_id": "f7a74a10b456134a45fd1e306c0ee2e660a9871e0ff23be7874abaf1a82d6e97",
+  "source_files": 1728,
+  "distribution_package_id": "e1eae003ec1bbebec36f59e6885af69086722788893d65e638a02e305489063e",
+  "distribution_files": 1719,
+  "archive_sha256": "3fe88aa7d4c033110fc7e2aade270e3ebeac8c48a5668f057ee4dc93250c51e5",
+  "build_receipt_sha256": "a3a031a366a27579cd7fa538aaed66ecd5d360c93257a4e4c3dd75a9db3ec503",
+  "profile_id": "windows-observed-v4.0.0",
+  "technical_qualification": "PASS_DECLARED_WINDOWS_PROFILE_WITH_LIMITS",
+  "qualificationVerdict": "NOT_FINAL",
+  "native_acceptance": false,
+  "macOS": "NOT_EXECUTED_NOT_QUALIFIED",
+  "publication_performed_by_owner": true,
+  "latest_observed": true,
+  "GitHub_immutable_observed": false,
+  "observed_at_utc": "2026-10-10T18:11:17.765Z",
+  "assets": [
+    {
+      "id": 628606228,
+      "name": "BUILD_RECEIPT.json",
+      "state": "uploaded",
+      "size": 22669,
+      "digest": "sha256:a3a031a366a27579cd7fa538aaed66ecd5d360c93257a4e4c3dd75a9db3ec503",
+      "browser_download_url": "https://github.com/antonioclim/WebTech_ASE/releases/download/v4.0.0/BUILD_RECEIPT.json"
+    },
+    {
+      "id": 628606259,
+      "name": "FILES_MANIFEST.txt",
+      "state": "uploaded",
+      "size": 220031,
+      "digest": "sha256:e1eae003ec1bbebec36f59e6885af69086722788893d65e638a02e305489063e",
+      "browser_download_url": "https://github.com/antonioclim/WebTech_ASE/releases/download/v4.0.0/FILES_MANIFEST.txt"
+    },
+    {
+      "id": 628606322,
+      "name": "WEBTECH_ASE_EN_GB_CLASSROOM_v4.0.0.zip",
+      "state": "uploaded",
+      "size": 5131965,
+      "digest": "sha256:3fe88aa7d4c033110fc7e2aade270e3ebeac8c48a5668f057ee4dc93250c51e5",
+      "browser_download_url": "https://github.com/antonioclim/WebTech_ASE/releases/download/v4.0.0/WEBTECH_ASE_EN_GB_CLASSROOM_v4.0.0.zip"
+    },
+    {
+      "id": 628606377,
+      "name": "WEBTECH_ASE_EN_GB_CLASSROOM_v4.0.0.zip.sha256",
+      "state": "uploaded",
+      "size": 105,
+      "digest": "sha256:b158b1795a3a5f7eeef1631264e1585f4752077b16bc08edb39d258c7dfe6057",
+      "browser_download_url": "https://github.com/antonioclim/WebTech_ASE/releases/download/v4.0.0/WEBTECH_ASE_EN_GB_CLASSROOM_v4.0.0.zip.sha256"
+    }
+  ],
+  "verification": {
+    "scope": "Live GitHub tag, release and Latest GET metadata; asset names, IDs, sizes, uploaded states and server-reported SHA256 match the same audited prepublication draft and final local builds. This offline record is not a live GitHub query by the local verifier.",
+    "binary_redownload": false,
+    "notes_match_after_line_ending_normalisation": true,
+    "local_classroom_builds": 2,
+    "four_assets_byte_identical_across_builds": true,
+    "fresh_extraction_checks": "PASS_STRICT_PYTHON_AND_NODE_INITIAL_BYTES_STATIC_ROUTES_ONLY",
+    "fresh_extraction_receipt_sha256": "092dcd5818886a46395debf1c5b99d9a423c7d68f4e08df5add49638f5d0214b",
+    "publication_audit_sha256": "726f005570ccfa4c02d794d78a71e8b9e5148968e5ef15824e1038ac58a51db4",
+    "limits": "Packaging and metadata observations do not repeat native Windows, browser/PDF, macOS, learner or human observations. General NOT_FINAL, broad native acceptance false and all recorded platform/environment/human limits remain."
+  },
+  "frozen_RC1": {
+    "tag": "v4.0.0-rc.1",
+    "release_id": 408264000,
+    "source_commit": "23803fdaf5987384b86104bbaf0a8d293654aa0e",
+    "four_original_asset_identities_preserved": true,
+    "scope": "The published RC1 tag and original four assets remain separate and unchanged."
+  },
+  "portal_relationship": {
+    "state": "POSTPUBLICATION_PORTAL_SOURCE",
+    "release_source_is_fixed": true,
+    "portal_commit": "RECORDED_EXTERNALLY_AFTER_OWNER_COMMIT",
+    "scope": "This later main portal points to the already published release. Its future owner commit and recalculated current-integrity identify a distinct source tree; neither becomes the retrospective source of the v4.0.0 ZIP. The retained PUBLICATION_PROFILE.json and CURRENT_QUALIFICATION.json are preparation/evidence snapshots from the frozen release source."
+  },
+  "preservation_policy": "Do not move the v4.0.0 or RC1 tags or replace their assets. GitHub reports immutable=false; fixed identity is the project preservation policy, not a claim of platform-enforced immutability."
+}
