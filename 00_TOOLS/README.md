@@ -1,4 +1,4 @@
-# Current v4.0.0 candidate tools
+# Current v4.0.0 source tools
 
 The student source checker confirms the supplied files before editing and protects support files after declared learner changes. Runtime helpers perform the capability checks required by the selected activity. Neither checker grades an implementation or substitutes for its actual task checks.
 
@@ -28,7 +28,7 @@ The work mode permits only the 38 declared learner targets and 83 declared runti
 | [Source checks](qa/validate_public_repo.py) | Whole-source inventory, byte identities, project map and declared local routes |
 | [Activity environment](runtime/README.md) | Capability checks and owned-resource limits for the selected operation |
 | [Acceptance scope](acceptance/README.md) | Distinguish source, application, browser, native and classroom observations |
-| [Offline build](publishing/README.md) | Maintainer preparation of a deterministic candidate ZIP |
+| [Offline build](publishing/README.md) | Maintainer preparation of a deterministic classroom ZIP |
 | [Source maintenance](maintainer/README.md) | Refresh reviewed seals before final integration and publication |
 
-All seven teaching tranches have a prepared candidate scope. Final integration and publication remain within T07; there is no T08. General qualification is **NOT_FINAL**, with ten gates pending. No checker installs software, dispatches Actions, publishes a release, merges a branch or contacts student accounts. The Latest stable classroom edition remains 3.0.0; the [RC1 teaching review](https://github.com/antonioclim/WebTech_ASE/releases/tag/v4.0.0-rc.1) is published as a prerelease. Read [candidate progress](../metadata/CANDIDATE_PROGRESS.json) for exact scope.
+All seven teaching tranches are complete with their stated limits. Final source integration, tag, release assets and publication remain within T07; there is no T08. The [declared Windows publication profile](../metadata/PUBLICATION_PROFILE.json) records **PASS_DECLARED_WINDOWS_PROFILE_WITH_LIMITS** for source technical eligibility. General qualification remains **NOT_FINAL**, broad native acceptance remains false and the ten historic whole-edition gates remain pending. macOS materials are retained but unexecuted and unqualified; scoped Linux observations do not qualify the whole platform. No checker installs software, dispatches Actions, publishes a release, merges a branch or contacts student accounts. The Latest stable classroom edition remains 3.0.0; the [frozen RC1 teaching review](https://github.com/antonioclim/WebTech_ASE/releases/tag/v4.0.0-rc.1) remains a prerelease. Read [qualification scope](../00_START_HERE/QUALIFICATION.html) and [candidate progress](../metadata/CANDIDATE_PROGRESS.json) for the separate technical and publication states.

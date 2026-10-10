@@ -16,10 +16,18 @@
   "qualificationVerdict": "NOT_FINAL",
   "native_manual_human_acceptance": "PENDING_NOT_PASSED_FOR_CANDIDATE",
   "qualification_scope": "A published stable version and byte integrity do not assert complete runtime, native, manual or human acceptance.",
-  "distribution_status": "LOCAL_CANDIDATE_NOT_PUBLISHED",
+  "distribution_status": "QUALIFIED_WINDOWS_SOURCE_NOT_PUBLISHED",
   "candidate_base_public_commit": "b3f4a6b86dd465641015322c99f52908725dc198",
   "previous_scope_sha256": "6346d7c9fef6476fb42d44130accf3cd5133260f6603bc151d1d91abbad1bfd7",
   "reviewed_repository_parent_scope": "Historical predecessor of the supplied restored layout; candidate_base_public_commit is the current derivation base.",
   "candidate_progress": "CANDIDATE_PROGRESS.json",
-  "final_phase_scope": "T07_GLOBAL_INTEGRATION_AND_PUBLICATION"
+  "final_phase_scope": "T07_GLOBAL_INTEGRATION_AND_PUBLICATION",
+  "current_qualification": "metadata/CURRENT_QUALIFICATION.json",
+  "current_qualification_scope": "Later scoped technical evidence for named tested copies is recorded separately. Original tranche and release history, ten pending broad gates and general NOT_FINAL remain unchanged.",
+  "technical_qualification": "PASS_DECLARED_WINDOWS_PROFILE_WITH_LIMITS",
+  "publication_profile": "metadata/PUBLICATION_PROFILE.json",
+  "publication_qualified": true,
+  "publication_qualification_scope": "Scoped technical source eligibility for the explicitly declared observed Windows profile only. This does not authenticate the future final source commit, build, extraction, tag or assets and does not record publication or broad native/manual/human acceptance.",
+  "native_acceptance": false,
+  "published": false
 }

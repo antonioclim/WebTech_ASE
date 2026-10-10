@@ -1,0 +1,188 @@
+{
+  "schema": "webtech-current-scoped-qualification/v1",
+  "recorded_utc": "2026-10-10T15:32:52.164309+00:00",
+  "final_target_version": "4.0.0",
+  "qualificationVerdict": "NOT_FINAL",
+  "native_acceptance": false,
+  "publication_qualified": true,
+  "published": false,
+  "status_scope": "These fields describe the final stable candidate. Frozen RC1 availability is recorded separately in REVIEW_PRERELEASE.json.",
+  "record_scope": "Sanitised consolidation of existing scoped observations and their evidence identities. Raw private drafts, native logs, PDF files and environment request URLs are not included. Receipt digests identify retained evidence; this record does not claim that those private carriers are public downloads.",
+  "source_binding": {
+    "committed_base": "f6bfd409b50560db6e3e63bb9b127488f4bfb67c",
+    "committed_base_tree": "1206fcc2f5e5ba18ff0d69fae451f37678cee35a",
+    "committed_base_repository_package_id": "b98413caba38a59a2364ed79d695777d5b8e8cfdcc3b16e04309e6a9b844799f",
+    "committed_base_files": 1726,
+    "browser_tested_repository_package_id": "75877f364e5c9573cd3c220af938c8450a4561c3a70b582c6dec307eb5d90fb2",
+    "browser_candidate_source_commit": null,
+    "browser_candidate_base_commit": "6803fbab10219c2880453a3be0744fb2f204c1a6",
+    "browser_tested_copy_state": "UNCOMMITTED_LOCAL_CANDIDATE",
+    "committed_post_browser_differences": [
+      "00_START_HERE/QUALIFICATION.html",
+      "CHANGELOG.md",
+      "metadata/current-integrity/REPOSITORY_PACKAGE_ID.txt",
+      "metadata/current-integrity/REPOSITORY_SHA256SUMS.txt"
+    ],
+    "this_record_state": "UNCOMMITTED_WINDOWS_PUBLICATION_PROFILE_SOURCE_CANDIDATE",
+    "current_copy_identity": "current-integrity/REPOSITORY_PACKAGE_ID.txt binds the complete current manifest. It is deliberately not repeated inside this manifest-covered record.",
+    "binding_limit": "The browser and PDF observations remain bound to the tested candidate. Only documented byte-identical units, scripts and controls may inherit their bounded observations. The later documentation prose itself did not receive the 334-check run."
+  },
+  "evidence_identities": {
+    "browser_archive_sha256": "3bc103349b8a3276cd8004fe0008b0142a9fa7b97038056eff812f025be63890",
+    "browser_receipt_sha256": "913402335578f1daf52230cfd6423e272ed6344635eef2442595b1447b4411a5",
+    "committed_source_audit_sha256": "1c283f1621b264d6321aca5cb0d50550c228a90bc1c7aa4d035b1acccc55b468",
+    "independent_portal_diagnostics_audit_sha256": "b19fecd2d3f0f89441b8010bf3752f686ff27bd236c1a89290fc40236fa1a2f6",
+    "independent_forms_and_mechanisms_audit_sha256": "9a1edab8305f20f1ff0d92680ac34442f7d2ff61aa01c9c355173811d7b644a7",
+    "independent_pdf_text_geometry_audit_sha256": "e2bb994d1c1b0e994bf0700e291350fde8869ea2c8e7fb23ed1f8d9697bc4cdd",
+    "independent_pdf_visual_audit_sha256": "869ae6b827774b48b0fcb8b1a4928bb41259fe57b286b31cc95114f174356b88"
+  },
+  "scoped_checks": {
+    "committed_source_integrity": {
+      "state": "PASS_EXACT_COMMITTED_SOURCE",
+      "units": 30,
+      "required_microprojects": 40,
+      "editable_unfinished_targets": 38,
+      "method": "Independent Python and Node collection checks plus complete remote Git tree/blob/size binding at the committed base."
+    },
+    "native_windows_preflight": {
+      "state": "PASS_SELECTED_WITH_WARNINGS",
+      "PowerShell": "5.1.26100.9549",
+      "Node": "v24.21.0",
+      "observed_source_repository_package_id": "46b65b3c864ef34d867abd88606838100f6edcfd7b0e32b91b0df18c97c52de3",
+      "profiles": [
+        "node",
+        "http",
+        "sqlite"
+      ],
+      "outer_status": "ENV_WARN",
+      "outer_exit_codes": [
+        0,
+        0,
+        0
+      ],
+      "inner_capability_status": "ENV_OK",
+      "windows_setup_package_id": "dc3b41f3722be6dd7bec20ba7bdc15d50a41ba1b6faf4bd9da384b7f4cfd7ae7",
+      "windows_setup_bytes_preserved_in_committed_base": true,
+      "limits": "Actual Node, UTF-8 output, owned local HTTP response/cleanup and in-memory SQLite observations only. Git line endings and duplicate VS Code paths remain warnings; unobserved account settings and other Windows architectures are not accepted."
+    },
+    "native_windows_course_runtime": {
+      "state": "PASS_SELECTED_WITH_OUTPUT_ENCODING_LIMIT",
+      "Node": "v24.21.0",
+      "canonical_examples": 57,
+      "courses": 13,
+      "outer_exit_zero_checks": 17,
+      "owned_temporary_cleanups": 21,
+      "limits": "Finite examples and actual taught command boundaries. Thirty-two accented-character console transport lines were mojibake despite passing assertions. This does not accept all frameworks, all runtime versions or student implementations."
+    },
+    "owner_headless_browser_v2": {
+      "state": "PASS_SCOPED_AUTOMATED_BROWSER_BATCH",
+      "platform": "Windows",
+      "browser": "Edge 155.0.4283.45",
+      "Node": "v24.21.0",
+      "checks": 334,
+      "passed": 334,
+      "failed": 0,
+      "portal_checks": 88,
+      "form_checks": 233,
+      "actual_downloaded_json_records": 14,
+      "native_browser_mechanism_cases": [
+        "C02_NATIVE_KEYBOARD_ROUTE",
+        "C02_ACTUAL_REDUCED_MOTION_TWO_STATES",
+        "C13_NATIVE_STORAGE_VALID_AND_MALFORMED",
+        "C13_NATIVE_WORKER_STRUCTURED_CLONE_REPLY",
+        "C13_NATIVE_SERVICE_WORKER_LIFECYCLE_AND_MESSAGES",
+        "C13_OWNED_SERVICE_WORKER_REGISTRATION_CLEANUP"
+      ],
+      "unexpected_errors": 0,
+      "CSP_diagnostics": 0,
+      "known_environment_blocked_requests": 127,
+      "environment_interference": "Kaspersky requests narrowly classified from retained actual blocked-request diagnostics.",
+      "environmentAcceptance": false,
+      "cleanup": {
+        "tested_source_unchanged": true,
+        "owned_browser_exited": true,
+        "owned_profile_removed": true
+      },
+      "limits": "One installed headless Edge version, selected routes, keyboard events, 320/768/1280-pixel layouts and finite cases. This does not establish general accessibility, physical-keyboard interaction or every browser/environment. S11 print callback was instrumented and does not establish a native print dialogue. Service Worker message classifications do not demonstrate network fetching or caching."
+    },
+    "owner_headless_pdf_v2": {
+      "state": "PASS_SCOPED_HEADLESS_SYNTHETIC_DRAFTS",
+      "files": 15,
+      "pages": 201,
+      "glyphs": 136809,
+      "out_of_page_glyphs": 0,
+      "missing_page_clipping_or_overlap_observed": false,
+      "review": "Independent whole-text, glyph-boundary and rendered-page inspection of all 201 pages; 14 seminar drafts and one bounded S14 stress record.",
+      "limits": "New actual v2 PDF bytes, distinct from the preceding reviewed set. Synthetic unfinished drafts with blank identity and false learner declarations are not completed student work, an authentic AI exchange, a native print dialogue or a Moodle receipt."
+    },
+    "owner_saved_native_draft_pdfs": {
+      "state": "PASS_SELECTED_SHORT_MARKER_DRAFTS",
+      "units": [
+        "S01",
+        "S03",
+        "S14"
+      ],
+      "pages_by_unit": {
+        "S01": 4,
+        "S03": 15,
+        "S14": 17
+      },
+      "distinct_pages": 36,
+      "pdf_sha256_by_unit": {
+        "S01": "b39dba9354fc0f2bf7ccee544d81aaf8220bdb8ce58af92fd0cb419c1d25eaca",
+        "S03": "4ad34d362db5af004b9e8243e135cd17510aa736780bfed0bdba14f430012c4c",
+        "S14": "8f03f6a49561fbf7d229c7059c4bf285f2bf9fefda79eda5568fe6f79d65e0c8"
+      },
+      "limits": "Selected owner-saved synthetic native drafts only. Two uploaded S14 copies identify the same PDF record. No complete native-browser, learner completion or Moodle acceptance follows."
+    },
+    "optional_word_references": {
+      "state": "PASS_LINUX_RENDER_QA_WITH_PRESENTATION_WARNINGS_AND_NATIVE_LIMIT",
+      "files": 30,
+      "pages": 187,
+      "presentation_warnings": 38,
+      "renderer": "LibreOffice on Linux",
+      "native_Microsoft_Word_execution": "NOT_EXECUTED",
+      "limits": "Preserved optional Word references supplement the authoritative HTML route. The Linux rendering review is distinct from native Word acceptance and current seminar PDF observations."
+    }
+  },
+  "remaining_observations": {
+    "native_macos": {
+      "state": "NOT_EXECUTED_NOT_QUALIFIED",
+      "macos_linux_setup_package_id": "a5327a1a753495494f83ef848453a8d62377b932ee133525d14323a1e6b003d1",
+      "scope": "The owner explicitly selected the observed Windows primary technical profile. macOS materials remain included, but no native macOS execution or qualification is claimed."
+    },
+    "live_moodle": {
+      "state": "PENDING_EXTERNAL",
+      "scope": "No live Assignment, submitted file, submission-window/IP restriction or institutional receipt was observed."
+    },
+    "novice_teaching_pilot": {
+      "state": "PENDING_HUMAN",
+      "scope": "Teaching durations remain estimates; maintainer and synthetic QA do not establish a novice pilot."
+    },
+    "owner_pedagogic_acceptance": {
+      "state": "PENDING_HUMAN",
+      "scope": "Source commit and authority to continue are distinct from human pedagogic acceptance."
+    },
+    "final_distribution_and_publication": {
+      "state": "PENDING_SEPARATE_EXACT_RECEIPTS",
+      "scope": "Corrected successor source, build, fresh extraction, final tag and assets need their actual byte identities and receipts. RC1 remains frozen."
+    }
+  },
+  "broad_gate_interpretation": "The ten historical broad gates remain pending and general NOT_FINAL/native_acceptance false are preserved. PASS_DECLARED_WINDOWS_PROFILE_WITH_LIMITS is a separate source-publication eligibility claim, not broad native/manual/human PASS.",
+  "history_preservation": "Earlier failed Windows attempts, the preceding 305-check browser batch with 287 passes and 18 failures and original tranche NOT_EXECUTED observations retain their original tested copies and scopes. Later evidence supplements, rather than rewrites, them.",
+  "assistant_operations": {
+    "commits_created": false,
+    "Actions_started": false,
+    "remote_publication_performed": false,
+    "software_installed": false
+  },
+  "distribution_status": "QUALIFIED_WINDOWS_SOURCE_NOT_PUBLISHED",
+  "technical_qualification": "PASS_DECLARED_WINDOWS_PROFILE_WITH_LIMITS",
+  "publication_profile": "metadata/PUBLICATION_PROFILE.json",
+  "publication_qualification_scope": "Scoped technical source eligibility for the explicitly declared observed Windows profile only. This does not authenticate the future final source commit, build, extraction, tag or assets and does not record publication or broad native/manual/human acceptance.",
+  "profile_decision": {
+    "timestamp": "2026-10-10T18:54:13+03:00",
+    "profile_id": "windows-observed-v4.0.0",
+    "scope": "Source technical eligibility is limited to the observed Windows profile; all existing bounded observations and remaining external/human limits are retained."
+  }
+}

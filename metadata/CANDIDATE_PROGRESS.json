@@ -3,13 +3,13 @@
   "candidate_version": "4.0.0",
   "final_target_version": "4.0.0",
   "latest_published_version": "3.0.0",
-  "distribution_status": "LOCAL_CANDIDATE_NOT_PUBLISHED",
-  "phase": "T07_CANDIDATE_PREPARED",
+  "distribution_status": "QUALIFIED_WINDOWS_SOURCE_NOT_PUBLISHED",
+  "phase": "T07_WINDOWS_PROFILE_SOURCE_PREPARED",
   "next_phase": null,
   "implementation_scope": "T01–T07: all 14 courses and all 14 seminars, the two setup guides and affected common teaching guidance, activity guards and evidence forms. Whole-collection integration, filtered distribution verification and publication remain work within T07 until their separate actual receipts exist.",
   "qualificationVerdict": "NOT_FINAL",
   "native_acceptance": false,
-  "publication_qualified": false,
+  "publication_qualified": true,
   "published": false,
   "qualificationGates": {
     "local_integrity": "pending",
@@ -378,5 +378,10 @@
     }
   ],
   "review_publication": "metadata/REVIEW_PRERELEASE.json",
-  "publication_status_scope": "published, publication_qualified and distribution_status in the candidate metadata describe the final stable v4.0.0 candidate, not RC1 availability. latest_published_version describes the previous stable edition. This record supplies the separate actual review publication state."
+  "publication_status_scope": "published, publication_qualified and distribution_status in the candidate metadata describe the final stable v4.0.0 candidate, not RC1 availability. latest_published_version describes the previous stable edition. This record supplies the separate actual review publication state.",
+  "current_qualification": "metadata/CURRENT_QUALIFICATION.json",
+  "current_qualification_scope": "Later scoped technical evidence for named tested copies is recorded separately. Original tranche and release history, ten pending broad gates and general NOT_FINAL remain unchanged.",
+  "technical_qualification": "PASS_DECLARED_WINDOWS_PROFILE_WITH_LIMITS",
+  "publication_profile": "metadata/PUBLICATION_PROFILE.json",
+  "publication_qualification_scope": "Scoped technical source eligibility for the explicitly declared observed Windows profile only. This does not authenticate the future final source commit, build, extraction, tag or assets and does not record publication or broad native/manual/human acceptance."
 }

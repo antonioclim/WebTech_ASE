@@ -9,7 +9,7 @@ import sys
 from pathlib import Path
 
 sys.dont_write_bytecode = True
-from current_contract import verify_source, verify_units, verify_course_map, verify_links, verify_progress, strict_json, VERSION
+from current_contract import verify_source, verify_units, verify_course_map, verify_links, verify_progress, strict_json, qualification_report, VERSION
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -29,6 +29,11 @@ def run(allow_edits=False):
     node = strict_json(process.stdout)
     if (node.get('status') != source['status'] or node.get('repository_package_id') != source['repository_package_id']
             or node.get('files') != source['files'] or node.get('qualificationVerdict') != 'NOT_FINAL'
+            or any(node.get(key) != source.get(key) or type(node.get(key)) is not type(source.get(key)) for key in qualification_report(meta))
+            or node.get('units') != units
+            or node.get('native_acceptance') is not False
+            or node.get('applications_executed') is not False
+            or node.get('rendered_browser_executed') is not False
             or node.get('actionsStarted') is not False
             or node.get('distribution_version') != VERSION
             or node.get('requiredProjectIDsChecked') is not True
@@ -37,7 +42,7 @@ def run(allow_edits=False):
         raise ValueError('Independent byte-check reports disagree')
     return {'schema': 'webtech-current-repository-validation/v1',
             'status': 'PASS_V4_CANDIDATE_PROTECTED_SOURCE_AND_STATIC_ROUTES_ONLY' if allow_edits else 'PASS_V4_CANDIDATE_INITIAL_SOURCE_AND_STATIC_ROUTES_ONLY',
-            'distribution_version': VERSION, 'distribution_status': 'LOCAL_CANDIDATE_NOT_PUBLISHED', 'source': source, 'units': units,
+            'distribution_version': VERSION, **qualification_report(meta, not allow_edits and not source['allowedStudentChanges']), 'source': source, 'units': units,
             'projects': projects, 'document_links': links, 'independent_node_check': node,
             'candidate_progress': progress, 'published': False,
             'qualificationVerdict': 'NOT_FINAL', 'native_acceptance': False,

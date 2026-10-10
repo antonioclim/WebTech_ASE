@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Derive the complete filtered v4.0.0-rc.1 teaching review distribution offline."""
+"""Build an unpublished Windows-profile classroom distribution from an exact clean commit."""
 from __future__ import annotations
 
 import argparse
@@ -18,19 +18,19 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / '00_TOOLS/qa'))
 from current_contract import (verify_source, verify_units, verify_course_map,
                               verify_links, verify_progress, sha,
-                              manifest_from_hashes, CONTROLS, MANIFEST, PACKAGE_ID)
+                              manifest_from_hashes, strict_json, CONTROLS, MANIFEST, PACKAGE_ID)
 
-REVIEW_IDENTITY = 'v4.0.0-rc.1'
-PREFIX = 'WEBTECH_ASE_EN_GB_CLASSROOM_' + REVIEW_IDENTITY + '/'
-ZIP_NAME = PREFIX[:-1] + '.zip'
-STAMP = (2026, 10, 9, 0, 0, 0)
+VERSION = '4.0.0'
+PROFILE_PATH = 'metadata/PUBLICATION_PROFILE.json'
+PROFILE_ID = 'windows-observed-v4.0.0'
+STAMP = (2026, 10, 10, 0, 0, 0)
 EXCLUDED_PREFIXES = ('.github/', '00_TOOLS/publishing/',
                      '00_TOOLS/maintainer/', '00_TOOLS/acceptance/')
 DERIVATION = 'metadata/DISTRIBUTION_DERIVATION.json'
 
-STUDENT_TOOLS = '''# Verify this teaching distribution
+STUDENT_TOOLS = '''# Verify this Windows-profile teaching distribution
 
-The complete review distribution contains 14 courses, 14 seminars, two setup units and the support needed by their published commands. Its 40 individual projects and 38 unfinished learner targets retain the supplied contracts.
+The complete distribution contains 14 courses, 14 seminars, two setup units and their runnable support. Its 40 required individual projects and 38 unfinished learner targets retain their supplied contracts. The declared publication profile is `windows-observed-v4.0.0`; see [the exact profile](../metadata/PUBLICATION_PROFILE.json) and [qualification scope](../00_START_HERE/QUALIFICATION.html).
 
 From the extracted collection root run:
 
@@ -44,17 +44,17 @@ After changing only the declared learner targets or creating declared runtime di
 node 00_TOOLS/qa/VERIFY_COLLECTION.mjs --allow-student-edits
 ```
 
-Python is an optional independent source check, not a prerequisite for Node classroom projects:
+Python provides an optional independent check:
 
 ```text
 python 00_TOOLS/qa/validate_public_repo.py --strict
 ```
 
-These checks verify supplied files and project identities. They do not grade your implementation or run a browser. Follow the selected seminar's commands from its stated working directory. [Runtime support](runtime/README.md) describes the operation-selected environment policy.
+These checks verify supplied bytes and project identities. They neither grade an implementation nor execute a browser. Follow each selected seminar's commands from its stated working directory. [Runtime support](runtime/README.md) describes the operation-selected policy.
 
-Keep private drafts, logs, screenshots and PDFs outside the complete extracted collection. General qualification remains **NOT_FINAL**. This v4.0.0-rc.1 review copy has not passed native browser, saved-PDF, Windows/macOS, Word or human acceptance.
+General qualification remains **NOT_FINAL** and broad native acceptance remains false. Source technical eligibility applies only to the declared observed Windows profile with its recorded limits. The packaging tool does not repeat the owner browser/PDF batch or execute native macOS. Retained macOS/Linux guidance and historical Word references do not extend the accepted profile. Keep private drafts, logs, screenshots and PDFs outside the complete extracted collection.
 
-Owner publishing, source maintenance and repository automation files are omitted from this student distribution. [The derivation record](../metadata/DISTRIBUTION_DERIVATION.json) identifies its source snapshot and exact filtering. All teaching unit bytes and unit identities are retained.
+Owner publishing, maintenance, acceptance and automation files are omitted. [The derivation record](../metadata/DISTRIBUTION_DERIVATION.json) binds the exact authenticated source commit, source identity and filtering. All teaching unit bytes and unit identities are retained. Preparing this archive performs no publication and changes no frozen release.
 '''
 
 STUDENT_INTEGRITY = '''# Teaching distribution integrity
@@ -71,13 +71,11 @@ After changing only the declared learner targets or creating declared runtime di
 node 00_TOOLS/qa/VERIFY_COLLECTION.mjs --allow-student-edits
 ```
 
-The retained control paths `metadata/current-integrity/REPOSITORY_SHA256SUMS.txt` and `metadata/current-integrity/REPOSITORY_PACKAGE_ID.txt` describe **this filtered distribution**, not the original repository inventory. The manifest has sorted SHA-256 rows for every supplied file except these two self-controls. The distribution package ID is SHA-256 of the exact UTF-8 manifest bytes, followed by LF. These are byte identities, not digital signatures or acceptance results.
+The retained paths `metadata/current-integrity/REPOSITORY_SHA256SUMS.txt` and `metadata/current-integrity/REPOSITORY_PACKAGE_ID.txt` identify this filtered distribution, rather than the original repository inventory. The manifest covers every supplied file except these two self-controls, with sorted SHA-256 rows and UTF-8/LF bytes. PACKAGE_ID is SHA-256 of those exact manifest bytes, followed by LF. Byte identities are neither signatures nor acceptance results.
 
-[DISTRIBUTION_DERIVATION.json](metadata/DISTRIBUTION_DERIVATION.json) records the original source package ID and commit when authenticated, excluded owner-only files and the two common-guide rewrites. The source package ID and the distribution package ID are distinct. Every one of the 30 complete teaching/setup units retains its original supplied bytes and unit controls. No unit file is filtered out.
+[The derivation record](metadata/DISTRIBUTION_DERIVATION.json) records the exact clean source commit, source package identity, excluded owner files and two rewritten common guides. Source and distribution identities differ. All 30 complete teaching/setup units retain their supplied bytes, identities and committed file modes. C01 retains `90_AUDIT`, C02 retains `06_AUDIT` and other units retain their outer controls. Student-edit mode admits only the 38 declared learner targets and 83 runtime directories while continuing to check protected files.
 
-C01 retains its `90_AUDIT` identity scheme, C02 retains its `06_AUDIT` scheme and the other units retain their outer manifests. Keep these controls unchanged. The verifier admits only the 38 declared learner targets and 83 declared runtime directories in student-edit mode; it continues checking every protected file.
-
-Store private evidence outside the entire extracted collection. A passing integrity result does not show that your implementation, browser, service, print operation or Moodle submission worked. Read the [qualification scope](00_START_HERE/QUALIFICATION.html) and record actual task observations separately.
+Read [the Windows publication profile](metadata/PUBLICATION_PROFILE.json) and [qualification limits](00_START_HERE/QUALIFICATION.html). Source technical eligibility is separate from broad native acceptance, completed student work or publication. The build does not execute browser, PDF, native macOS or Moodle operations. Keep private evidence outside the entire collection.
 '''
 
 
@@ -86,192 +84,281 @@ def json_bytes(value):
 
 
 def validate_output(output):
-    output = output.absolute()
+    output = Path(output).absolute()
     for ancestor in [output, *output.parents]:
         if ancestor.is_symlink():
             raise ValueError('Output path traverses a symlink')
     if output.resolve().is_relative_to(ROOT.resolve()) or ROOT.resolve().is_relative_to(output.resolve()):
         raise ValueError('Output directory must be separate from the entire repository')
-    if output.exists() and (not output.is_dir() or any(output.iterdir())):
-        raise ValueError('Output directory is not empty; existing files were preserved')
+    if output.exists():
+        raise ValueError('Output directory already exists; use a new destination and preserve existing files')
     return output
 
 
-def authenticate_commit(expected, files=None):
-    if expected is None:
-        return None
-    if not re.fullmatch(r'[0-9a-f]{40}', expected):
-        raise ValueError('Source commit must be a full lowercase Git commit SHA')
-    head = subprocess.run(['git', 'rev-parse', 'HEAD'], cwd=ROOT,
-                          capture_output=True, text=True, timeout=15)
-    status = subprocess.run(['git', 'status', '--porcelain', '--untracked-files=all'],
-                            cwd=ROOT, capture_output=True, text=True, timeout=15)
-    if head.returncode or status.returncode or head.stdout.strip() != expected or status.stdout:
-        raise ValueError('Source commit cannot bind a dirty or different checkout; preserve the source and inspect it')
-    flags = subprocess.run(['git', 'ls-files', '-v', '-z'], cwd=ROOT,
-                           capture_output=True, timeout=15)
-    tree = subprocess.run(['git', 'ls-tree', '-rz', '--full-tree', expected],
-                          cwd=ROOT, capture_output=True, timeout=15)
-    if flags.returncode or tree.returncode:
-        raise ValueError('Cannot authenticate the exact committed source inventory')
-    for row in flags.stdout.split(b'\0'):
+def publication_identity(version, release_tag, mode):
+    if version != VERSION or mode not in ('final', 'review'):
+        raise ValueError('Explicit version 4.0.0 and mode final or review required')
+    if release_tag == 'v4.0.0-rc.1':
+        raise ValueError('Frozen RC1 identity is protected; never replace its assets or tag')
+    if mode == 'final':
+        if release_tag != 'v4.0.0':
+            raise ValueError('Final mode requires explicit release tag v4.0.0')
+    else:
+        match = re.fullmatch(r'v4\.0\.0-rc\.([1-9][0-9]*)', release_tag or '')
+        if not match or int(match.group(1)) < 2:
+            raise ValueError('Review mode requires an explicitly selected v4.0.0-rc.N identity with N >= 2')
+    root = 'WEBTECH_ASE_EN_GB_CLASSROOM_' + release_tag
+    return {'version': version, 'mode': mode, 'release_tag': release_tag,
+            'archive_root': root + '/', 'archive': root + '.zip'}
+
+
+def authenticate_commit(expected, files):
+    if not isinstance(expected, str) or not re.fullmatch(r'[0-9a-f]{40}', expected):
+        raise ValueError('An explicit complete lowercase source commit SHA is required')
+    def git(*args, binary=False):
+        result = subprocess.run(['git', *args], cwd=ROOT, capture_output=True,
+                                text=not binary, timeout=30)
+        if result.returncode:
+            raise ValueError('Git cannot authenticate the complete release source: ' + ' '.join(args[:2]))
+        return result.stdout
+    top = git('rev-parse', '--show-toplevel').strip()
+    head = git('rev-parse', 'HEAD').strip()
+    status = git('status', '--porcelain=v1', '--untracked-files=all', '--ignore-submodules=none')
+    if Path(top).resolve() != ROOT.resolve() or head != expected or status:
+        raise ValueError('Release source must be the exact clean complete checkout HEAD')
+    for row in git('ls-files', '-v', '-z', binary=True).split(b'\0'):
         if row and (row[:1].islower() or row[:1] == b'S'):
-            raise ValueError('Assume-unchanged or skip-worktree flags cannot authenticate a release source')
-    committed = {}
-    for row in tree.stdout.split(b'\0'):
+            raise ValueError('Assume-unchanged and skip-worktree flags cannot authenticate release source')
+    entries = {}
+    modes = {}
+    for row in git('ls-tree', '-rz', '--full-tree', '--long', expected, binary=True).split(b'\0'):
         if not row:
             continue
-        header, name = row.split(b'\t', 1)
-        mode, kind, oid = header.split(b' ')
-        name = name.decode('utf-8')
-        if kind != b'blob' or mode not in (b'100644', b'100755') or name in committed:
-            raise ValueError('Release source requires distinct regular Git blob entries')
-        committed[name] = oid.decode('ascii')
-    if files is None:
-        # Used only by narrow local helper checks; a build always supplies its
-        # independently verified complete source inventory below.
-        files = {name: ROOT / name for name in committed}
-    if set(committed) != set(files):
-        raise ValueError('Working source inventory differs from the exact commit tree')
-    for name, source in files.items():
-        content = source.read_bytes()
-        git_blob = hashlib.sha1(b'blob ' + str(len(content)).encode('ascii') + b'\0' + content).hexdigest()
-        if git_blob != committed[name]:
-            raise ValueError('Working source bytes differ from the exact committed Git blob: ' + name)
-    return expected
+        header, encoded_name = row.split(b'\t', 1)
+        mode, kind, oid, size = header.split()
+        name = encoded_name.decode('utf-8')
+        if kind != b'blob' or mode not in (b'100644', b'100755') or name in entries:
+            raise ValueError('Only distinct regular committed Git blobs are admitted')
+        entries[name] = (oid.decode('ascii'), int(size))
+        modes[name] = int(mode, 8) & 0o777
+    if set(entries) != set(files):
+        raise ValueError('Supplied source inventory differs from the exact committed Git tree')
+    for name, path in files.items():
+        content = path.read_bytes()
+        observed = hashlib.sha1(b'blob ' + str(len(content)).encode('ascii') + b'\0' + content).hexdigest()
+        if (observed, len(content)) != entries[name]:
+            raise ValueError('Source bytes or size differ from committed Git blob: ' + name)
+        # Windows does not represent Unix executable bits. Archive permissions
+        # always come from the authenticated Git tree, never a filename suffix.
+        if os.name != 'nt' and path.stat().st_mode & 0o777 != modes[name]:
+            raise ValueError('Source mode differs from committed Git mode: ' + name)
+    tree = git('rev-parse', expected + '^{tree}').strip()
+    if not re.fullmatch(r'[0-9a-f]{40}', tree):
+        raise ValueError('Malformed authenticated source tree identity')
+    return {'source_commit': expected, 'source_tree': tree,
+            'source_commit_state': 'AUTHENTICATED_CLEAN_COMPLETE_GIT_HEAD',
+            'git_blob_count': len(entries), 'committed_modes': modes,
+            'source_inventory_blob_sizes_and_modes_authenticated': True}
 
 
-def build(output_dir, source_commit=None):
-    output = validate_output(output_dir)
-    meta, files, source_identity = verify_source(ROOT)
-    source_commit = authenticate_commit(source_commit, files)
-    source_units = verify_units(ROOT, meta, files)
+def verify_publication_profile(meta, progress, files):
+    profile = strict_json(files[PROFILE_PATH].read_bytes())
+    if (profile.get('schema') != 'webtech-publication-profile/v1'
+            or profile.get('profile_id') != PROFILE_ID
+            or profile.get('final_target_version') != VERSION
+            or profile.get('technical_qualification') != 'PASS_DECLARED_WINDOWS_PROFILE_WITH_LIMITS'
+            or profile.get('publication_qualified') is not True
+            or profile.get('qualificationVerdict') != 'NOT_FINAL'
+            or profile.get('native_acceptance') is not False
+            or profile.get('published') is not False
+            or profile.get('distribution_status') != 'QUALIFIED_WINDOWS_SOURCE_NOT_PUBLISHED'
+            or meta.get('publication_profile') != PROFILE_PATH
+            or meta.get('technical_qualification') != 'PASS_DECLARED_WINDOWS_PROFILE_WITH_LIMITS'
+            or meta.get('publication_qualified') is not True
+            or meta.get('qualificationVerdict') != 'NOT_FINAL'
+            or meta.get('native_acceptance') is not False
+            or meta.get('published') is not False
+            or meta.get('distribution_status') != 'QUALIFIED_WINDOWS_SOURCE_NOT_PUBLISHED'
+            or meta.get('status') != 'WINDOWS_PROFILE_V4_0_0_SOURCE_PREPARED_NOT_PUBLISHED'
+            or progress.get('phase') != 'T07_WINDOWS_PROFILE_SOURCE_PREPARED'
+            or progress.get('next_phase') is not None):
+        raise ValueError('Declared Windows source technical eligibility or general qualification differs')
+    return profile
+
+
+def snapshot_source():
+    meta, files, identity = verify_source(ROOT)
+    units = verify_units(ROOT, meta, files)
     course, projects = verify_course_map(ROOT, meta, files)
-    source_links = verify_links(ROOT, meta, course, files)
+    links = verify_links(ROOT, meta, course, files)
     progress = verify_progress(ROOT, meta)
-    if progress.get('phase') != 'T07_CANDIDATE_PREPARED' or progress.get('next_phase') is not None:
-        raise ValueError('The complete T07 source is required; there is no T08')
+    profile = verify_publication_profile(meta, progress, files)
+    return meta, files, identity, units, course, projects, links, progress, profile
+
+
+def check_source_unchanged(files, identity, binding):
+    _, after_files, after = verify_source(ROOT)
+    if after['repository_package_id'] != identity['repository_package_id'] or set(after_files) != set(files):
+        raise ValueError('Source changed during packaging; preserve output for inspection')
+    after_binding = authenticate_commit(binding['source_commit'], after_files)
+    if after_binding != binding:
+        raise ValueError('Committed source authentication changed during packaging')
+
+
+def write_zip(archive, prefix, payload, modes):
+    with archive.open('xb') as handle:
+        with zipfile.ZipFile(handle, 'w', zipfile.ZIP_DEFLATED, compresslevel=9) as zipped:
+            for name, content in sorted(payload.items()):
+                info = zipfile.ZipInfo(prefix + name, STAMP)
+                info.create_system = 3
+                info.compress_type = zipfile.ZIP_DEFLATED
+                info.external_attr = (0o100000 | modes.get(name, 0o644)) << 16
+                zipped.writestr(info, content, compress_type=zipfile.ZIP_DEFLATED, compresslevel=9)
+        handle.flush()
+        os.fsync(handle.fileno())
+    with zipfile.ZipFile(archive) as zipped:
+        if zipped.testzip() is not None or zipped.namelist() != [prefix + name for name in sorted(payload)]:
+            raise ValueError('Created ZIP CRC or member inventory differs')
+        for name, content in payload.items():
+            item = zipped.getinfo(prefix + name)
+            if (zipped.read(prefix + name) != content
+                    or (item.external_attr >> 16) & 0o777 != modes.get(name, 0o644)):
+                raise ValueError('Created ZIP member bytes or committed mode differ: ' + name)
+
+
+def build(output_dir, source_commit, version, release_tag, mode):
+    selected = publication_identity(version, release_tag, mode)
+    output = validate_output(output_dir)
+    meta, files, identity, units, course, projects, links, progress, profile = snapshot_source()
+    binding = authenticate_commit(source_commit, files)
     if DERIVATION in files:
-        raise ValueError('Build from the complete sealed source, not a previously derived distribution')
+        raise ValueError('Build from complete sealed source, not a previously derived distribution')
     excluded = [name for name in sorted(files) if name.startswith(EXCLUDED_PREFIXES)]
-    payload = {name: source.read_bytes() for name, source in files.items()
+    if len(excluded) != 10:
+        raise ValueError('Exactly ten declared owner-only files must be excluded')
+    payload = {name: path.read_bytes() for name, path in files.items()
                if name not in CONTROLS and name not in excluded}
-    rewrites=[]
+    rewrites = []
     for name, text in [('00_TOOLS/README.md', STUDENT_TOOLS), ('INTEGRITY.md', STUDENT_INTEGRITY)]:
         before = payload[name]
-        after = text.encode('utf-8')
-        payload[name] = after
+        payload[name] = text.encode('utf-8')
         rewrites.append({'path': name, 'source_sha256': sha(before),
-                         'distribution_sha256': sha(after),
-                         'reason': 'Student guidance retains runnable verification routes and omits owner-only maintenance/publishing links.'})
-    derivation = {'schema': 'webtech-filtered-teaching-distribution/v1',
-                  'final_target_version': '4.0.0', 'review_identity': REVIEW_IDENTITY,
-                  'source_commit': source_commit,
-                  'source_commit_state': 'AUTHENTICATED_CLEAN_GIT_HEAD' if source_commit else 'UNBOUND_LOCAL_SOURCE_SNAPSHOT',
-                  'source_repository_package_id': source_identity['repository_package_id'],
-                  'source_file_count': len(files),
-                  'excluded_prefixes': list(EXCLUDED_PREFIXES),
-                  'excluded_files': [{'path': name, 'source_sha256': sha(files[name].read_bytes())} for name in excluded],
-                  'rewritten_files': rewrites,
-                  'preserved_unit_count': 30,
-                  'preservation_scope': 'Every byte of every course, seminar and setup EN_GB unit, including canonical examples, lockfiles, references, controls and unfinished learner targets. All 28 week frontdoors and tutorials remain.',
-                  'identity_method': 'Recalculate only the two whole-distribution self-controls after adding this record. Unit identities stay unchanged. The final distribution ID is outside this manifest-covered record to avoid self-reference.',
+                         'distribution_sha256': sha(payload[name]),
+                         'reason': 'Student verification and declared Windows profile guidance, omitting owner-only links.'})
+    derivation = {'schema': 'webtech-filtered-teaching-distribution/v2',
+                  'final_target_version': VERSION, 'distribution_identity': selected,
+                  'source_commit': binding['source_commit'], 'source_tree': binding['source_tree'],
+                  'source_commit_state': binding['source_commit_state'],
+                  'source_repository_package_id': identity['repository_package_id'],
+                  'source_file_count': len(files), 'publication_profile_path': PROFILE_PATH,
+                  'publication_profile_id': PROFILE_ID, 'publication_profile_sha256': sha(files[PROFILE_PATH].read_bytes()),
+                  'technical_qualification': meta['technical_qualification'],
+                  'publication_qualified': True,
                   'qualificationVerdict': 'NOT_FINAL', 'native_acceptance': False,
                   'publication_performed': False,
-                  'limitation': 'This record binds a build derivation. It does not authenticate authorship, execute learner applications or qualify a browser/native platform. Publication state is reported externally.'}
+                  'excluded_prefixes': list(EXCLUDED_PREFIXES),
+                  'excluded_files': [{'path': name, 'source_sha256': sha(files[name].read_bytes())} for name in excluded],
+                  'rewritten_files': rewrites, 'preserved_unit_count': 30,
+                  'all_unit_bytes_and_committed_modes_preserved': True,
+                  'preservation_scope': 'All course, seminar and setup unit bytes, including canonical sources, lockfiles, references, controls and unfinished learner targets. All frontdoors and tutorials remain.',
+                  'identity_method': 'The two whole-distribution self-controls are recalculated after this record. Unit identities and publication-profile/current-qualification bytes are preserved.',
+                  'limitation': 'The exact commit and declared source profile qualify provenance and technical eligibility only. This builder does not execute browser, PDF, native platform or Moodle checks and performs no publication.'}
     payload[DERIVATION] = json_bytes(derivation)
     manifest = manifest_from_hashes({name: sha(content) for name, content in payload.items()})
     distribution_id = sha(manifest)
-    payload[MANIFEST] = manifest
-    payload[PACKAGE_ID] = (distribution_id+'\n').encode('ascii')
-    output.mkdir(parents=True, exist_ok=True)
-    staging = output / '.staging' / PREFIX[:-1]
+    payload[MANIFEST], payload[PACKAGE_ID] = manifest, (distribution_id + '\n').encode('ascii')
+    output.mkdir(parents=True, exist_ok=False)
+    staging = output / '.staging' / selected['archive_root'].rstrip('/')
     staging.mkdir(parents=True)
+    modes = binding['committed_modes']
     for name, content in sorted(payload.items()):
-        item=staging/name
-        item.parent.mkdir(parents=True, exist_ok=True)
-        with item.open('xb') as handle:
+        path = staging / name
+        path.parent.mkdir(parents=True, exist_ok=True)
+        with path.open('xb') as handle:
             handle.write(content)
-        item.chmod(0o755 if name.endswith('.sh') else 0o644)
-    dist_meta, dist_files, dist_source = verify_source(staging)
+        path.chmod(modes.get(name, 0o644))
+    dist_meta, dist_files, _ = verify_source(staging)
     dist_units = verify_units(staging, dist_meta, dist_files)
     dist_course, dist_projects = verify_course_map(staging, dist_meta, dist_files)
     dist_links = verify_links(staging, dist_meta, dist_course, dist_files)
     verify_progress(staging, dist_meta)
-    if dist_units != source_units or dist_projects != projects:
-        raise ValueError('Complete unit identities or project contracts changed during filtering')
-    for unit in meta['objects']:
-        base=unit['payload_root']
-        for name, source in files.items():
-            if name.startswith(base) and payload.get(name) != source.read_bytes():
-                raise ValueError('Teaching unit byte changed in derivation: '+name)
-    process=subprocess.run(['node', str(staging/'00_TOOLS/qa/VERIFY_COLLECTION.mjs')],
-                           cwd=staging, capture_output=True, text=True, timeout=120)
+    if dist_units != units or dist_projects != projects:
+        raise ValueError('Teaching unit identities or project contracts changed during filtering')
+    for obj in meta['objects']:
+        for name, path in files.items():
+            if name.startswith(obj['payload_root']) and payload.get(name) != path.read_bytes():
+                raise ValueError('Teaching unit byte changed during derivation: ' + name)
+    for name in [PROFILE_PATH, 'metadata/CURRENT_QUALIFICATION.json']:
+        if payload[name] != files[name].read_bytes():
+            raise ValueError('Declared profile or current qualification record changed during derivation')
+    process = subprocess.run(['node', str(staging / '00_TOOLS/qa/VERIFY_COLLECTION.mjs')],
+                             cwd=staging, capture_output=True, text=True, timeout=120)
     if process.returncode:
-        raise ValueError('Independent Node distribution check failed: '+process.stderr.strip()[:1000])
-    node=json.loads(process.stdout)
-    if node.get('repository_package_id') != distribution_id or node.get('files') != len(payload):
+        raise ValueError('Independent Node distribution check failed: ' + process.stderr.strip()[:1000])
+    node = strict_json(process.stdout)
+    if (node.get('repository_package_id') != distribution_id or node.get('files') != len(payload)
+            or node.get('qualificationVerdict') != 'NOT_FINAL'
+            or node.get('native_acceptance') is not False
+            or node.get('publication_qualified') is not True
+            or node.get('published') is not False
+            or node.get('distribution_status') != 'QUALIFIED_WINDOWS_SOURCE_NOT_PUBLISHED'):
         raise ValueError('Independent distribution byte-check reports disagree')
-    archive=output/ZIP_NAME
-    with archive.open('xb') as handle:
-        with zipfile.ZipFile(handle,'w',zipfile.ZIP_DEFLATED,compresslevel=9) as zipped:
-            for name, content in sorted(payload.items()):
-                info=zipfile.ZipInfo(PREFIX+name,STAMP)
-                info.create_system=3
-                info.compress_type=zipfile.ZIP_DEFLATED
-                info.external_attr=(0o100755 if name.endswith('.sh') else 0o100644)<<16
-                zipped.writestr(info,content,compress_type=zipfile.ZIP_DEFLATED,compresslevel=9)
-        handle.flush();os.fsync(handle.fileno())
-    _, after_files, after=verify_source(ROOT)
-    if after['repository_package_id'] != source_identity['repository_package_id'] or set(after_files) != set(files):
-        raise ValueError('Source changed during packaging; preserve output for inspection')
-    with zipfile.ZipFile(archive) as zipped:
-        if zipped.testzip() is not None or zipped.namelist() != [PREFIX+n for n in sorted(payload)]:
-            raise ValueError('Created ZIP CRC or member inventory differs')
-        for name, content in payload.items():
-            if zipped.read(PREFIX+name) != content:
-                raise ValueError('Created ZIP member bytes differ: '+name)
-    digest=sha(archive.read_bytes())
-    with (output/(ZIP_NAME+'.sha256')).open('x',encoding='ascii',newline='\n') as handle:
-        handle.write(digest+'  '+ZIP_NAME+'\n')
-    with (output/'FILES_MANIFEST.txt').open('xb') as handle:
+    archive = output / selected['archive']
+    write_zip(archive, selected['archive_root'], payload, modes)
+    check_source_unchanged(files, identity, binding)
+    digest = sha(archive.read_bytes())
+    with (output / (selected['archive'] + '.sha256')).open('x', encoding='ascii', newline='\n') as handle:
+        handle.write(digest + '  ' + selected['archive'] + '\n')
+    with (output / 'FILES_MANIFEST.txt').open('xb') as handle:
         handle.write(manifest)
-    receipt={'schema':'webtech-filtered-student-build/v1',
-             'status':'PASS_COMPLETE_FILTERED_TEACHING_BYTES_AND_STATIC_ROUTES_ONLY',
-             'final_target_version':'4.0.0','review_identity':REVIEW_IDENTITY,
-             'distribution_status':'PREPARED_REVIEW_PRERELEASE_NOT_PUBLISHED',
-             'archive':ZIP_NAME,'archive_root':PREFIX,'archive_sha256':digest,
-             'archive_bytes':archive.stat().st_size,'files':len(payload),
-             'source_commit':source_commit,'source_commit_state':derivation['source_commit_state'],
-             'source_repository_package_id':source_identity['repository_package_id'],
-             'source_file_count':len(files),'distribution_package_id':distribution_id,
-             'excluded_owner_files':len(excluded),'rewritten_common_guides':rewrites,
-             'units':len(dist_units),'projects':dist_projects,
-             'source_document_links':source_links,'distribution_document_links':dist_links,
-             'independent_node_check':node,'candidate_progress':progress,
-             'all_unit_bytes_preserved':True,'qualificationVerdict':'NOT_FINAL',
-             'native_acceptance':False,'applications_executed':False,
-             'rendered_browser_executed':False,'saved_pdf_executed':False,
-             'actions_dispatched':0,'software_installed':False,'publication_performed':False,
-             'release_assets':[ZIP_NAME,ZIP_NAME+'.sha256','FILES_MANIFEST.txt','BUILD_RECEIPT.json'],
-             'limit':'Static routes and bytes only. A fresh extraction and actual selected task commands require their own external evidence. Required native/browser/PDF checks have not passed; this artifact cannot qualify stable v4.0.0.'}
-    with (output/'BUILD_RECEIPT.json').open('xb') as handle:
+    receipt = {'schema': 'webtech-filtered-student-build/v2',
+               'status': 'PASS_FILTERED_WINDOWS_PROFILE_BYTES_AND_STATIC_ROUTES_ONLY',
+               'final_target_version': VERSION, 'distribution_identity': selected,
+               'distribution_status': 'QUALIFIED_WINDOWS_SOURCE_NOT_PUBLISHED',
+               'archive': selected['archive'], 'archive_root': selected['archive_root'],
+               'archive_sha256': digest, 'archive_bytes': archive.stat().st_size, 'files': len(payload),
+               'source_commit': binding['source_commit'], 'source_tree': binding['source_tree'],
+               'source_commit_state': binding['source_commit_state'],
+               'source_repository_package_id': identity['repository_package_id'],
+               'source_file_count': len(files), 'distribution_package_id': distribution_id,
+               'publication_profile': profile, 'publication_profile_sha256': sha(files[PROFILE_PATH].read_bytes()),
+               'technical_qualification': meta['technical_qualification'],
+               'publication_qualified': True, 'qualificationVerdict': 'NOT_FINAL',
+               'native_acceptance': False, 'published': False, 'publication_performed': False,
+               'excluded_owner_files': len(excluded), 'rewritten_common_guides': rewrites,
+               'units': len(dist_units), 'projects': dist_projects,
+               'source_document_links': links, 'distribution_document_links': dist_links,
+               'independent_node_check': node, 'candidate_progress': progress,
+               'all_unit_bytes_and_committed_modes_preserved': True,
+               'applications_executed': False, 'rendered_browser_executed': False,
+               'saved_pdf_executed': False, 'native_macos_executed': False,
+               'actions_dispatched': 0, 'software_installed': False,
+               'release_assets': [selected['archive'], selected['archive'] + '.sha256', 'FILES_MANIFEST.txt', 'BUILD_RECEIPT.json'],
+               'limit': 'Earlier owner observations are recorded in the preserved qualification/profile records. This build validates exact committed supplied bytes and static routes; it does not repeat those observations, establish learner completion, qualify another platform or publish the archive.'}
+    with (output / 'BUILD_RECEIPT.json').open('xb') as handle:
         handle.write(json_bytes(receipt))
-    shutil.rmtree(output/'.staging')
+    shutil.rmtree(output / '.staging')
     return receipt
 
 
+def add_public_arguments(parser):
+    parser.add_argument('--output-dir', type=Path, required=True, help='A new directory outside the entire checkout; existing directories are rejected.')
+    parser.add_argument('--source-commit', required=True, help='Full lowercase SHA of the exact clean complete checkout HEAD.')
+    parser.add_argument('--version', required=True, choices=[VERSION], help='Explicit final-target version.')
+    parser.add_argument('--mode', required=True, choices=['final', 'review'], help='Prepared final identity or explicitly selected later review identity; neither publishes.')
+    parser.add_argument('--release-tag', required=True, help='v4.0.0 in final mode, or an explicit v4.0.0-rc.N with N >= 2 in review mode.')
+
+
 def main():
-    parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--output-dir',type=Path,required=True,help='A new or empty directory outside the entire repository.')
-    parser.add_argument('--source-commit',help='Optional exact SHA of this clean checkout; omit only for explicitly unbound local development checks.')
-    args=parser.parse_args()
-    result=build(args.output_dir,args.source_commit)
-    print(json.dumps({key:result[key] for key in ['status','review_identity','archive','archive_sha256','archive_bytes','files','source_commit','source_repository_package_id','distribution_package_id','excluded_owner_files','units','projects','qualificationVerdict']},indent=2))
+    parser = argparse.ArgumentParser(description=__doc__)
+    add_public_arguments(parser)
+    args = parser.parse_args()
+    result = build(args.output_dir, args.source_commit, args.version, args.release_tag, args.mode)
+    print(json.dumps({key: result[key] for key in ['status', 'distribution_identity', 'archive', 'archive_sha256', 'archive_bytes', 'files', 'source_commit', 'source_tree', 'source_repository_package_id', 'distribution_package_id', 'excluded_owner_files', 'units', 'projects', 'qualificationVerdict']}, indent=2))
 
 
-if __name__=='__main__':
+if __name__ == '__main__':
     try:
         main()
-    except (ValueError,OSError,KeyError,TypeError,subprocess.TimeoutExpired,zipfile.BadZipFile) as error:
-        raise SystemExit('STOP_FILTERED_STUDENT_BUILD: '+str(error))
+    except (ValueError, OSError, KeyError, TypeError, subprocess.TimeoutExpired, zipfile.BadZipFile) as error:
+        raise SystemExit('STOP_FILTERED_STUDENT_BUILD: ' + str(error))

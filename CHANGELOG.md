@@ -1,5 +1,15 @@
 # Changes
 
+## v4.0.0 source — declared observed Windows profile, 10 October 2026
+
+The owner selected the observed Windows technical profile for the final v4.0.0 publication scope. The complete source retains all 14 courses, 14 seminars, both setup units, 40 required individual microprojects and 38 intentionally unfinished learner targets. Common guidance and maintenance records distinguish `technical_qualification: PASS_DECLARED_WINDOWS_PROFILE_WITH_LIMITS` and declared source `publication_qualified: true` from general `qualificationVerdict: NOT_FINAL`, broad `native_acceptance: false` and `published: false`. The final content commit, tag, release assets and publication are still to be completed.
+
+The selected evidence uses Windows x64, PowerShell 5.1.26100.9549, Node v24.21.0 and headless Edge 155.0.4283.45. Corrected node, HTTP and SQLite preflight and all 334 declared browser checks passed within their receipt scopes. Fourteen downloaded JSON drafts and 15 synthetic headless draft PDFs comprising 201 pages were independently reviewed. Previously owner-saved native S01, S03 and S14 draft PDFs retain their separate 36-page review. Existing browser receipts remain tied to their named tested copies and unchanged teaching code; final documentation and maintenance-control changes do not claim a new browser execution.
+
+All macOS/Linux materials are retained. macOS is explicitly `NOT_EXECUTED_NOT_QUALIFIED`; scoped Linux observations do not establish whole-platform qualification. Optional Word references retain the LibreOffice-on-Linux review of 187 pages, 38 presentation warnings and explicit native Microsoft Word limits. The ten broad historic gates remain pending. Environment acceptance remains false, with the 127 narrowly classified blocked Kaspersky requests preserved. Physical-keyboard, comprehensive accessibility, every native print dialog, all frameworks, Moodle and human acceptance are not implied by the declared technical profile.
+
+The frozen RC1 tag and its four assets remain unchanged. Current portal download links continue to identify RC1 and the previous stable 3.0.0 edition. A separate post-publication portal update will point to the verified v4.0.0 assets after their actual publication.
+
 ## v4.0.0 candidate — scoped browser regression v2, 10 October 2026
 
 The owner-run isolated headless Edge 155 regression on Windows, with Node v24.21.0 and a read-only loopback source, passed all 334 declared checks. It exercised the uncommitted corrected candidate with repository PACKAGE_ID `75877f364e5c9573cd3c220af938c8450a4561c3a70b582c6dec307eb5d90fb2`, derived from source commit `6803fbab10219c2880453a3be0744fb2f204c1a6`. The 16 portal arrivals that failed in the preceding batch passed their new entry and primary-route checks. S11's text-size increase, restoration, instrumented print callback and instrumentation restoration also passed; that callback check does not establish native print-dialog operation.

@@ -1,10 +1,10 @@
-# Start here — Web Technologies v4.0.0 candidate
+# Start here — Web Technologies v4.0.0 source
 
-This candidate contains all 14 revised course and seminar pairs from T01–T07. The [RC1 teaching review](https://github.com/antonioclim/WebTech_ASE/releases/tag/v4.0.0-rc.1) is published as a prerelease; the Latest stable edition remains 3.0.0; this checkout is not the final release.
+This source contains all 14 revised courses, 14 seminars and two setup units. The declared observed Windows profile is technically qualified within the recorded checks. The final source commit, v4.0.0 tag, assets and publication remain to be completed. The [frozen RC1 teaching review](https://github.com/antonioclim/WebTech_ASE/releases/tag/v4.0.0-rc.1) remains a prerelease and the Latest stable edition remains 3.0.0. General qualification remains **NOT_FINAL**. macOS/Linux materials remain available; macOS is unexecuted and unqualified and the Linux observations do not qualify the whole platform. Read [the qualification scope](QUALIFICATION.html) for the declared Windows evidence and limits.
 
 For the frozen review edition, [download the attached RC1 teaching ZIP](https://github.com/antonioclim/WebTech_ASE/releases/download/v4.0.0-rc.1/WEBTECH_ASE_EN_GB_CLASSROOM_v4.0.0-rc.1.zip). For a separate current source copy, download or clone the complete repository. Extract each edition separately, then open [START_HERE.html](START_HERE.html) locally. Follow your operating-system setup and open the current course and seminar from [the collection home](../index.html).
 
-The 30 supplied Word documents are preserved historical references. Some retain earlier release names and folder layouts. Use the current HTML and Markdown guides for this candidate's navigation, task contracts and evidence requirements. Opening or rendering a historical reference does not qualify the current interactive material.
+The 30 supplied Word documents are preserved historical references. Some retain earlier release names and folder layouts. Use the current HTML and Markdown guides for this source copy's navigation, task contracts and evidence requirements. Opening or rendering a historical reference does not qualify the current interactive material.
 
 - [Course plan and required projects](COURSE_PLAN.html)
 - [Evidence and assessment](ASSESSMENT.html)

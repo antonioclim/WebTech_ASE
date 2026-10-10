@@ -1,4 +1,4 @@
-# Maintain the v4.0.0 candidate source
+# Maintain the v4.0.0 source
 
 The repository keeps its familiar folder structure. `00_SETUP` contains the two Day 0 kits, `00_START_HERE` contains the current student routes and `01_WEEKS` contains all 14 course/seminar pairs. `00_TOOLS`, `assets` and `metadata` support this candidate. The Latest stable classroom edition remains 3.0.0; the [RC1 teaching review](https://github.com/antonioclim/WebTech_ASE/releases/tag/v4.0.0-rc.1) is published as a prerelease; a prepared teaching corpus does not record a new publication.
 
@@ -10,6 +10,8 @@ The authoritative whole-repository controls are:
 The manifest covers every current public file except those two self-controls. `.git` is excluded from inventory. Each course, seminar and setup kit also retains its own unit manifest and package ID. Collection metadata must match each unit's actual package ID and route.
 
 For a reviewed source change, refresh affected unit controls first, update the matching IDs in `metadata/CLASSROOM_COLLECTION.json` and rebuild the whole-repository controls last. C01 uses `90_AUDIT/PAYLOAD_SHA256SUMS.txt`; C02's `06_AUDIT/SHA256SUMS.txt` includes its package-ID row and derives the ID from the remaining canonical rows. Other current units use their root `SHA256SUMS.txt` and `PACKAGE_ID.txt`. Preserve these distinct identity methods.
+
+The declared [Windows publication profile](../../metadata/PUBLICATION_PROFILE.json) binds the thirty preserved unit identities and the actual existing evidence. Resealing changed teaching or setup bytes does not transfer that evidence. A later functional revision needs its own applicable checks and coordinated qualification record; it cannot silently retain this profile's preserved-byte claim. General **NOT_FINAL** and broad native/manual/human Pending remain distinct from the declared source technical eligibility. macOS remains explicitly unqualified.
 
 Before an owner publication:
 

@@ -1,88 +1,69 @@
 #!/usr/bin/env python3
-"""Build an offline deterministic v4 candidate ZIP without publishing anything."""
+"""Build an unpublished complete Windows-profile source ZIP from an exact clean commit."""
 from __future__ import annotations
 
 import argparse
 import json
-import os
+import subprocess
 import sys
 import zipfile
 from pathlib import Path
 
 sys.dont_write_bytecode = True
-ROOT = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(ROOT / '00_TOOLS/qa'))
-from current_contract import verify_source, verify_units, verify_course_map, verify_links, verify_progress, sha, VERSION
+from build_student_collection import (ROOT, VERSION, PROFILE_PATH, PROFILE_ID,
+    add_public_arguments, publication_identity, validate_output, snapshot_source,
+    authenticate_commit, write_zip, check_source_unchanged, sha, json_bytes)
 
-PREFIX = 'WEBTECH_ASE_CANDIDATE_v4.0.0/'
-ZIP_NAME = 'WEBTECH_ASE_CANDIDATE_v4.0.0.zip'
-STAMP = (2026, 10, 9, 0, 0, 0)
+
+def build(output_dir, source_commit, version, release_tag, mode):
+    selected = publication_identity(version, release_tag, mode)
+    selected = {**selected, 'archive_root': 'WEBTECH_ASE_COMPLETE_SOURCE_' + release_tag + '/',
+                'archive': 'WEBTECH_ASE_COMPLETE_SOURCE_' + release_tag + '.zip'}
+    output = validate_output(output_dir)
+    meta, files, identity, units, course, projects, links, progress, profile = snapshot_source()
+    binding = authenticate_commit(source_commit, files)
+    payload = {name: path.read_bytes() for name, path in files.items()}
+    output.mkdir(parents=True, exist_ok=False)
+    archive = output / selected['archive']
+    write_zip(archive, selected['archive_root'], payload, binding['committed_modes'])
+    check_source_unchanged(files, identity, binding)
+    digest = sha(archive.read_bytes())
+    with (output / (selected['archive'] + '.sha256')).open('x', encoding='ascii', newline='\n') as handle:
+        handle.write(digest + '  ' + selected['archive'] + '\n')
+    receipt = {'schema': 'webtech-current-offline-build/v2',
+               'status': 'PASS_COMPLETE_WINDOWS_PROFILE_COMMITTED_SOURCE_BYTES_ONLY',
+               'distribution_version': VERSION, 'distribution_identity': selected,
+               'distribution_status': 'QUALIFIED_WINDOWS_SOURCE_NOT_PUBLISHED',
+               'archive': selected['archive'], 'archive_root': selected['archive_root'],
+               'archive_sha256': digest, 'archive_bytes': archive.stat().st_size, 'files': len(files),
+               'source_commit': binding['source_commit'], 'source_tree': binding['source_tree'],
+               'source_commit_state': binding['source_commit_state'],
+               'repository_package_id': identity['repository_package_id'], 'units': len(units),
+               'projects': projects, 'document_links': links, 'candidate_progress': progress,
+               'publication_profile': profile, 'publication_profile_path': PROFILE_PATH,
+               'publication_profile_id': PROFILE_ID, 'publication_profile_sha256': sha(files[PROFILE_PATH].read_bytes()),
+               'technical_qualification': meta['technical_qualification'], 'publication_qualified': True,
+               'qualificationVerdict': 'NOT_FINAL', 'native_acceptance': False,
+               'all_committed_source_bytes_and_modes_preserved': True,
+               'applications_executed': False, 'rendered_browser_executed': False,
+               'saved_pdf_executed': False, 'native_macos_executed': False,
+               'actions_dispatched': 0, 'published': False, 'publication_performed': False,
+               'software_installed': False,
+               'limit': 'Complete source archive for provenance and integration review, separate from the filtered classroom asset. The packaging check neither repeats recorded owner observations nor extends the declared Windows technical profile or performs publication.'}
+    with (output / 'BUILD_RECEIPT.json').open('xb') as handle:
+        handle.write(json_bytes(receipt))
+    return receipt
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--output-dir', type=Path, required=True, help='A new or empty directory outside the repository.')
+    add_public_arguments(parser)
     args = parser.parse_args()
-    output = args.output_dir.absolute()
-    for ancestor in [output, *output.parents]:
-        if ancestor.is_symlink():
-            raise ValueError('Output path traverses a symlink')
-    if output.resolve().is_relative_to(ROOT.resolve()) or ROOT.resolve().is_relative_to(output.resolve()):
-        raise ValueError('Output directory must be separate from the entire repository')
-    if output.exists() and (not output.is_dir() or any(output.iterdir())):
-        raise ValueError('Output directory is not empty; existing files were preserved')
-    meta, files, identity = verify_source(ROOT)
-    units = verify_units(ROOT, meta, files)
-    course, projects = verify_course_map(ROOT, meta, files)
-    links = verify_links(ROOT, meta, course, files)
-    progress = verify_progress(ROOT, meta)
-    output.mkdir(parents=True, exist_ok=True)
-    archive = output / ZIP_NAME
-    with archive.open('xb') as handle:
-        with zipfile.ZipFile(handle, 'w', zipfile.ZIP_DEFLATED, compresslevel=9) as zipped:
-            for name, source in sorted(files.items()):
-                content = source.read_bytes()
-                info = zipfile.ZipInfo(PREFIX + name, STAMP)
-                info.create_system = 3
-                info.compress_type = zipfile.ZIP_DEFLATED
-                info.external_attr = (0o100755 if name.endswith('.sh') else 0o100644) << 16
-                zipped.writestr(info, content, compress_type=zipfile.ZIP_DEFLATED, compresslevel=9)
-        handle.flush()
-        os.fsync(handle.fileno())
-    # Reject a source change during packaging and retain the partial output.
-    _, after_files, after = verify_source(ROOT)
-    if after['repository_package_id'] != identity['repository_package_id'] or set(after_files) != set(files):
-        raise ValueError('Source changed during packaging; preserve output for inspection')
-    with zipfile.ZipFile(archive) as zipped:
-        if zipped.testzip() is not None:
-            raise ValueError('Created ZIP CRC check failed')
-        names = zipped.namelist()
-        if names != [PREFIX + name for name in sorted(files)]:
-            raise ValueError('Created ZIP inventory differs')
-        for name, source in files.items():
-            if zipped.read(PREFIX + name) != source.read_bytes():
-                raise ValueError('Created ZIP member differs: ' + name)
-    digest = sha(archive.read_bytes())
-    with (output / (ZIP_NAME + '.sha256')).open('x', encoding='ascii', newline='\n') as sidecar:
-        sidecar.write(digest + '  ' + ZIP_NAME + '\n')
-    receipt = {'schema': 'webtech-current-offline-build/v1', 'status': 'PASS_DETERMINISTIC_CANDIDATE_BYTES_ONLY',
-               'distribution_version': VERSION, 'distribution_status': 'LOCAL_CANDIDATE_NOT_PUBLISHED', 'archive': ZIP_NAME, 'archive_sha256': digest,
-               'archive_bytes': archive.stat().st_size, 'archive_root': PREFIX, 'files': len(files),
-               'repository_package_id': identity['repository_package_id'], 'units': len(units),
-               'projects': projects, 'document_links': links,
-               'candidate_progress': progress,
-               'derivation_scope': 'Local candidate checkout with the retained folder structure. All 28 course/seminar units are prepared through T01–T07 with explicit limits. Integration and publication have distinct external evidence; this complete source archive is separate from the filtered student distribution. This artifact is not a published release or final acceptance and does not replace any earlier published ZIP.',
-               'qualificationVerdict': 'NOT_FINAL', 'applications_executed': False,
-               'native_acceptance': False, 'actions_dispatched': 0, 'published': False,
-               'software_installed': False}
-    with (output / 'BUILD_RECEIPT.json').open('x', encoding='utf-8', newline='\n') as report:
-        json.dump(receipt, report, ensure_ascii=False, indent=2)
-        report.write('\n')
-    print(json.dumps(receipt, ensure_ascii=False, indent=2))
+    print(json.dumps(build(args.output_dir, args.source_commit, args.version, args.release_tag, args.mode), indent=2))
 
 
 if __name__ == '__main__':
     try:
         main()
-    except (ValueError, OSError, KeyError, TypeError, zipfile.BadZipFile) as error:
+    except (ValueError, OSError, KeyError, TypeError, subprocess.TimeoutExpired, zipfile.BadZipFile) as error:
         raise SystemExit('STOP_CURRENT_OFFLINE_BUILD: ' + str(error))
