@@ -3,7 +3,7 @@
   "prepared_utc": "2026-10-11T18:48:48.873686+00:00",
   "audience": "students_EN_GB",
   "target_public_version": "v4.1.0",
-  "scope": "Pinned local integration candidate for v4.1.0, not applied to Git and not a release. Existing v4.0.0 EN_GB payloads, unit manifests and publication records are retained; companions occupy sibling 90_100/EN_GB routes.",
+  "scope": "Historical preparation snapshot for v4.1.0, dated by prepared_utc. The later verified staging transfer and draft PR are recorded in current_documentation_state. Existing v4.0.0 EN_GB payloads, unit manifests and publication records are retained; companions occupy sibling 90_100/EN_GB routes.",
   "package_containment": "Complete byte-identical ZIP containers. No flattened companion files, symlinks or duplicated extracted CLASSROOM trees.",
   "semesters_or_calendar_changed": false,
   "existing_course_materials_modified": false,
@@ -356,5 +356,30 @@
   "baseline_repository": "antonioclim/WebTech_ASE",
   "baseline_commit": "eec1a2a5c362ebeaeeab664137590a0e7107a745",
   "baseline_tree": "f0889a4215ab4fb5a8543ba23064fcb749c6638b",
-  "timing_status": "UNPILOTED"
+  "timing_status": "UNPILOTED",
+  "historical_snapshot_role": {
+    "snapshot_date_field": "prepared_utc",
+    "scope": "Original preparation and per-seminar status fields describe the dated preparation snapshot. They do not describe the later owner staging transfer or draft PR.",
+    "original_scope": "Pinned local integration candidate for v4.1.0, not applied to Git and not a release. Existing v4.0.0 EN_GB payloads, unit manifests and publication records are retained; companions occupy sibling 90_100/EN_GB routes.",
+    "original_fields_and_package_records_preserved": true
+  },
+  "visible_public_status_scope": "Historical preparation snapshot at prepared_utc; see current_documentation_state for the verified staging state.",
+  "remote_integrated_scope": "Integration into main or release publication; verified transfer to staging is recorded separately.",
+  "current_documentation_state": {
+    "documented_utc": "2026-10-12T14:49:04.752750+00:00",
+    "source_evidence": "Owner-created PR #42 and unchanged main/staging pins verified through the GitHub connector during this local follow-up; this documentation timestamp is not a new remote acceptance receipt.",
+    "repository": "antonioclim/WebTech_ASE",
+    "status": "REMOTE_STAGING_VERIFIED_DRAFT_PR_OPEN",
+    "staging_branch": "staging/s01-s14-33cdb26d-9312dadf",
+    "verified_staging_commit": "2e6ae2c53badda1d9f2c61519821e1a55ae95d47",
+    "verified_main_commit": "eec1a2a5c362ebeaeeab664137590a0e7107a745",
+    "draft_PR": 42,
+    "draft_PR_url": "https://github.com/antonioclim/WebTech_ASE/pull/42",
+    "owner_remote_staging_transfer_verified": true,
+    "main_integrated": false,
+    "release_created": false,
+    "native_acceptance": false,
+    "timing_status": "UNPILOTED",
+    "wording_follow_up": "LOCAL_ONLY_NOT_APPLIED_TO_REMOTE"
+  }
 }
