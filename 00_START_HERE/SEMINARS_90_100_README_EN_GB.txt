@@ -1,0 +1,1 @@
+Open SEMINARS_90_100.html locally. Download and extract the complete ZIP for your seminar, then follow its START file. GitHub’s HTML file view displays source. Every project listed for your seminar remains required.

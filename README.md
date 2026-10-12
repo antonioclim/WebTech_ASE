@@ -8,6 +8,12 @@ For the complete published edition, [download the attached v4.0.0 classroom ZIP]
 
 Start this source copy with [00_START_HERE](00_START_HERE/README.md) or open [index.html](index.html) locally. The original repository organisation is retained: setup in `00_SETUP`, current guidance in `00_START_HERE`, maintenance utilities in `00_TOOLS` and teaching materials in `01_WEEKS`. Shared files remain in `assets` and current records in `metadata`.
 
+## 90/100 minute seminar companions — local candidate
+
+[Choose your S01–S14 companion](00_START_HERE/SEMINARS_90_100.html). Download the complete student ZIP for your seminar, extract it into a separate new folder and follow its START file. Keep the internal structure intact and open the seminar folder identified by START in VS Code. The download page is not a project working directory.
+
+Local preparation for v4.1.0. This candidate has not been published. The 90/100 minute plans are unpiloted and native browser/PDF acceptance remains pending. All 40 required individual projects and 152 stages remain in scope. S01 and S14 each require two projects. The lecturer selects the 90 or 100 minute route; incomplete work needs an honest checkpoint and the lecturer’s instructions. The course material and the fixed published v4.0.0 assets remain available through the existing links.
+
 ## Obtain and open the materials
 
 1. Prefer the attached [v4.0.0 classroom ZIP](https://github.com/antonioclim/WebTech_ASE/releases/download/v4.0.0/WEBTECH_ASE_EN_GB_CLASSROOM_v4.0.0.zip) for the published edition. For a separate current source copy, choose **Code → Download ZIP** or use a Git clone. Extract each complete archive into its own new folder.

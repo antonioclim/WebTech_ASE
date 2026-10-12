@@ -4,6 +4,12 @@ This source contains all 14 revised courses, 14 seminars and two setup units. Th
 
 For the published edition, [download the attached v4.0.0 classroom ZIP](https://github.com/antonioclim/WebTech_ASE/releases/download/v4.0.0/WEBTECH_ASE_EN_GB_CLASSROOM_v4.0.0.zip), keep its three companion assets and follow [the download checks](DOWNLOAD.html). Open `WEBTECH_ASE_EN_GB_CLASSROOM_v4.0.0/00_START_HERE/START_HERE.html` after extraction. For a separate current source copy, download or clone the complete repository. Extract each edition separately, then open [START_HERE.html](START_HERE.html) locally. Follow your operating-system setup and open the current course and seminar from [the collection home](../index.html).
 
+## 90/100 minute seminar companions — local candidate
+
+[Choose your S01–S14 companion](SEMINARS_90_100.html) when your lecturer selects the 90 or 100 minute route. Download and extract the whole seminar ZIP into a separate new folder, then follow its START file for the correct working directory, form and checks. GitHub’s HTML file view displays source; open the extracted HTML pages locally.
+
+Local preparation for v4.1.0. This candidate has not been published. The 90/100 minute plans are unpiloted and native browser/PDF acceptance remains pending. Every required individual project remains required. The existing v4.0.0 acquisition and setup instructions remain the baseline route; the companion START supplies its own route.
+
 The 30 supplied Word documents are preserved historical references. Some retain earlier release names and folder layouts. Use the current HTML and Markdown guides for this source copy's navigation, task contracts and evidence requirements. Opening or rendering a historical reference does not qualify the current interactive material.
 
 - [Course plan and required projects](COURSE_PLAN.html)

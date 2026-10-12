@@ -1,5 +1,13 @@
 # S14 · Independent follow-up and honest evidence
 
+## 90/100 minute companion — local candidate
+
+[Open the complete S14 companion](90_100/EN_GB/index.html). Download and extract the entire ZIP into a separate new folder, then follow its START file for the correct working directory, form and checks. Keep the internal structure intact.
+
+Local preparation for v4.1.0. This candidate has not been published. The 90/100 minute plans are unpiloted and native browser/PDF acceptance remains pending. Every required individual project remains required. The lecturer selects the class clock; save an honest checkpoint if work is incomplete.
+
+The v4.0.0 route and preparation wording below are retained as the historical baseline. Its [publication record](../../../metadata/PUBLISHED_RELEASE.json) is separate. For a 90/100 minute class, follow the companion START rather than mixing its commands or form with the retained route.
+
 Complete both required individual projects, P01 and P03. There is no current P02. Follow [the eight-stage tutorial](TUTORIAL.html), [exact start](EN_GB/CLASSROOM_RC6/START.html) and [one blank private formative record](EN_GB/FORMATIVE_ASSESSMENT.html). The current formative v1 envelope uses version 1.2.0, eight stage records and a dedicated ten-category inventory. The retained old classroom v1 form is a different historical record route.
 
 P01 executes a local service and Map lookup without HTTP or durability. P03 computes precedence over unchanged supplied rows without authenticating sources. Complete the separate human inventory with actual locators or honest unknowns. A completed analysis may preserve UNKNOWN readiness while remaining a reviewed student declaration with HUMAN REVIEW PENDING.
