@@ -1,5 +1,13 @@
 # S01 — HTTP exchange classifier and precise greeting resource
 
+## 90/100 minute companion — local candidate
+
+[Open the complete S01 companion](90_100/EN_GB/index.html). Download and extract the entire ZIP into a separate new folder, then follow its START file for the correct working directory, form and checks. Keep the internal structure intact.
+
+Local preparation for v4.1.0. This candidate has not been published. The 90/100 minute plans are unpiloted and native browser/PDF acceptance remains pending. Every required individual project remains required. The lecturer selects the class clock; save an honest checkpoint if work is incomplete.
+
+The v4.0.0 route and preparation wording below are retained as the historical baseline. Its [publication record](../../../metadata/PUBLISHED_RELEASE.json) is separate. For a 90/100 minute class, follow the companion START rather than mixing its commands or form with the retained route.
+
 Teaching revision for the v4.0.0 candidate; retained `CLASSROOM_RC6` names identify the source contract. Both P01 and P02 are mandatory and individual.
 
 - [Start instructions](EN_GB/CLASSROOM_RC6/START.html)
