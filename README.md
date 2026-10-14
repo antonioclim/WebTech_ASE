@@ -1,3 +1,20 @@
+# Web Technologies — v4.1.0 local source-review candidate
+
+Dated context: 13 October 2026. [v4.1.0-rc.1](https://github.com/antonioclim/WebTech_ASE/releases/tag/v4.1.0-rc.1) is a published prerelease. This later local source-review candidate is not a published stable release. The separately published v4.0.0 remains the baseline and Latest stable edition at the verified publication checkpoint. Published archives and protected unit identities remain unchanged.
+
+[Choose the original or 90/100 seminar route](00_START_HERE/CURRENT_SUCCESSOR.html) before opening a form or running unit commands. The current chooser supplies exact ZIP names, extracted roots, START, projection, form, working directory and declaration for all 14 seminars. Read the [current S13, C13 and Day 0 documentary errata](00_START_HERE/CURRENT_ERRATA.html); they also govern preserved sealed inner copies.
+
+All 40 individual projects, 152 semantic stages and 1,531 required text fields remain. The 90/100 allocations are UNPILOTED; timing feasibility is an open design question. No task reduction, homework, continuation or later submission is authorised by this material. Save an honest incomplete record where appropriate.
+
+S01/S02 legacy project-level forms use COMPLETED and incompatible classroom JSON; their companion formative forms use REVIEWED_STUDENT_DECLARATION and HUMAN REVIEW PENDING. Choose one route and one PDF. Preserve existing backups before import and renew only truthful declarations. Current S03–S14 original and companion form configurations match; private observation logs remain distinct from assessment JSON.
+
+The complete source includes maintenance material. Retained v4.0.0 collection builders and VERIFY_COLLECTION guard that baseline contract; they do not qualify or package this changed successor source. Follow the selected companion START for its own immutable inner copy and unit checks. Old qualification observations retain their actual sources and limits; these documentary changes establish no new native/browser, pilot or Moodle acceptance.
+
+<details>
+<summary>Historical README checkpoint — complete former wording retained</summary>
+
+The following is the exact former README text. Its earlier preparation status, current-edition phrasing and links describe that retained checkpoint. Use the dated current chooser and errata above for this successor candidate.
+
 # Web Technologies — English student materials, v4.0.0
 
 All 14 courses, 14 seminars and two setup units are present. The complete v4.0.0 source is technically qualified for the declared observed Windows profile within the recorded checks. [v4.0.0](https://github.com/antonioclim/WebTech_ASE/releases/tag/v4.0.0) is published as the Latest stable classroom edition, with four verified asset identities and fixed source `f86668d6784e1b97b9057ae2e2080113efce45e3`. The [frozen v4.0.0-rc.1 teaching review](https://github.com/antonioclim/WebTech_ASE/releases/tag/v4.0.0-rc.1) remains a prerelease and 3.0.0 remains a previous stable edition. Read the [declared publication profile](metadata/PUBLICATION_PROFILE.json) and [qualification scope](00_START_HERE/QUALIFICATION.html) for the evidence and limits.
@@ -45,3 +62,5 @@ The [download guide](00_START_HERE/DOWNLOAD.html) distinguishes the [published v
 The declared Windows technical profile is **PASS_DECLARED_WINDOWS_PROFILE_WITH_LIMITS**. Observed evidence uses Windows x64, PowerShell 5.1.26100.9549, Node v24.21.0 and headless Edge 155.0.4283.45. It includes the corrected node, HTTP and SQLite preflight, all 334 declared browser checks, 14 downloaded JSON drafts and 15 synthetic headless draft PDFs comprising 201 pages. Owner-saved native S01, S03 and S14 draft PDFs retain their separate 36-page review. These observations bind the named tested copies and unchanged teaching code; later source documentation and maintenance changes have separate integrity checks.
 
 General qualification remains **NOT_FINAL**, broad native acceptance remains false and the ten historic whole-edition gates remain pending. The retained source preparation snapshots preserve their original eligibility and pending fields; the separate publication record confirms the subsequent stable release. Local verification of this later portal copy does not authorise another v4.0.0 archive or imply new runtime observations. Environment acceptance remains false: 127 narrowly classified blocked Kaspersky requests are retained in the browser evidence. macOS is **NOT_EXECUTED_NOT_QUALIFIED**, with all materials retained. Linux observations are scoped and do not qualify the whole platform. The optional Word references retain Linux rendering QA and explicit native Word limits. Live Moodle, human pilot and owner acceptance are separate pending observations. Read [the qualification scope](00_START_HERE/QUALIFICATION.html), [the publication profile](metadata/PUBLICATION_PROFILE.json) and [the current scoped evidence record](metadata/CURRENT_QUALIFICATION.json).
+
+</details>

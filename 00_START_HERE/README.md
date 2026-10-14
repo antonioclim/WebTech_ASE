@@ -1,3 +1,20 @@
+# Start here — v4.1.0 local source-review candidate
+
+Dated context: 13 October 2026. [v4.1.0-rc.1](https://github.com/antonioclim/WebTech_ASE/releases/tag/v4.1.0-rc.1) is a published prerelease. This later local source-review candidate is not a published stable release. The separately published v4.0.0 remains the baseline and Latest stable edition at the verified publication checkpoint. Published archives and protected unit identities remain unchanged.
+
+[Choose the original or 90/100 seminar route](CURRENT_SUCCESSOR.html) before opening a form or running unit commands. The current chooser supplies exact ZIP names, extracted roots, START, projection, form, working directory and declaration for all 14 seminars. Read the [current S13, C13 and Day 0 documentary errata](CURRENT_ERRATA.html); they also govern preserved sealed inner copies.
+
+All 40 individual projects, 152 semantic stages and 1,531 required text fields remain. The 90/100 allocations are UNPILOTED; timing feasibility is an open design question. No task reduction, homework, continuation or later submission is authorised by this material. Save an honest incomplete record where appropriate.
+
+S01/S02 legacy project-level forms use COMPLETED and incompatible classroom JSON; their companion formative forms use REVIEWED_STUDENT_DECLARATION and HUMAN REVIEW PENDING. Choose one route and one PDF. Preserve existing backups before import and renew only truthful declarations. Current S03–S14 original and companion form configurations match; private observation logs remain distinct from assessment JSON.
+
+The complete source includes maintenance material. Retained v4.0.0 collection builders and VERIFY_COLLECTION guard that baseline contract; they do not qualify or package this changed successor source. Follow the selected companion START for its own immutable inner copy and unit checks. Old qualification observations retain their actual sources and limits; these documentary changes establish no new native/browser, pilot or Moodle acceptance.
+
+<details>
+<summary>Historical README checkpoint — complete former wording retained</summary>
+
+The following is the exact former README text. Its earlier preparation status, current-edition phrasing and links describe that retained checkpoint. Use the dated current chooser and errata above for this successor candidate.
+
 # Start here — Web Technologies v4.0.0
 
 This source contains all 14 revised courses, 14 seminars and two setup units. The declared observed Windows profile is technically qualified within the recorded checks. [v4.0.0](https://github.com/antonioclim/WebTech_ASE/releases/tag/v4.0.0) is published as the Latest stable classroom edition under that bounded profile. The [frozen RC1 teaching review](https://github.com/antonioclim/WebTech_ASE/releases/tag/v4.0.0-rc.1) remains a prerelease and 3.0.0 remains a previous stable edition. General qualification remains **NOT_FINAL**. macOS/Linux materials remain available; macOS is unexecuted and unqualified and the Linux observations do not qualify the whole platform. Read [the qualification scope](QUALIFICATION.html) for the declared Windows evidence and limits.
@@ -24,3 +41,5 @@ The 30 supplied Word documents are preserved historical references. Some retain 
 - [Weeks 01–14](../01_WEEKS/README.md)
 
 From the repository root, run `node 00_TOOLS/qa/VERIFY_COLLECTION.mjs` before editing. Follow each seminar’s task commands from its `EN_GB` folder. Store private evidence outside the entire repository.
+
+</details>

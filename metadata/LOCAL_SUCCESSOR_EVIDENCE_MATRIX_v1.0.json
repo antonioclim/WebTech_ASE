@@ -1,0 +1,1117 @@
+{
+  "schema": "webtech-public-local-successor-evidence-scope/v1",
+  "recorded_utc": "2026-10-13T20:18:09.696509+00:00",
+  "audience": "PUBLIC_SOURCE_REVIEW",
+  "state": "LOCAL_CANDIDATE_NOT_PUBLISHED",
+  "native_acceptance": false,
+  "classroom_timing_accepted": false,
+  "totals": {
+    "seminars": 14,
+    "individual_projects": 40,
+    "semantic_stages": 152,
+    "required_text_fields": 1531,
+    "unique_editable_target_files": 38,
+    "generated_controls": 1984
+  },
+  "scope": "Exact current unit and sealed companion preservation with existing finite observations; no new application, browser, PDF, AI, pilot or Moodle acceptance.",
+  "units": [
+    {
+      "unit": "S01",
+      "companion_version": "1.0",
+      "source_package_id": "4889e64304b49b27ffde1e027c726a34cb4227783c7bc085348f406a796e524f",
+      "source_manifest_and_covered_files_verified": true,
+      "student_zip": {
+        "path": "01_WEEKS/WEEK_01/S01_SEMINAR/90_100/EN_GB/WEBTECH_S01_STUDENT_90_100_EN_GB_v1.0.zip",
+        "bytes": 5413433,
+        "sha256": "6555ea2e018b0fc87917c9636b3f6b422fada582588b310ada7b758d94b38a39",
+        "root_after_extract": "WEBTECH_S01_STUDENT_90_100_EN_GB_v1.0"
+      },
+      "active_form": {
+        "member": "WEBTECH_S01_STUDENT_90_100_EN_GB_v1.0/FORMATIVE_S01_EN_GB.html",
+        "sha256": "9f3e04468ce5a5fec99ce6ed6168feb4ba5a48650c40e55024b0dabf82495367",
+        "script_member": "WEBTECH_S01_STUDENT_90_100_EN_GB_v1.0/FORMATIVE_ASSETS/formative.js",
+        "script_sha256": "f82d54a694c09724fcac1489ce331d1e82a53023a130eb10ce096871cd1f83e8",
+        "schema": "webtech-formative-assessment/v1",
+        "version": "1.0.0",
+        "html_form_id": "assessment-form",
+        "terminal_declaration_state": "REVIEWED_STUDENT_DECLARATION",
+        "terminal_state_means": "A student review declaration; neither a grade, authenticated truth nor completed contract."
+      },
+      "project_ids": [
+        "P01",
+        "P02"
+      ],
+      "projects": 2,
+      "semantic_stages": 8,
+      "required_text_fields": 82,
+      "timing": {
+        "project_minutes_90": [
+          30,
+          30
+        ],
+        "project_minutes_100": [
+          34,
+          34
+        ],
+        "published_plan_minutes": [
+          90,
+          120
+        ],
+        "source_project_planned_minutes": [
+          30,
+          45
+        ],
+        "observed_novice_duration": null
+      },
+      "current_unit_bytes_inside_companion_match_RC": true,
+      "whole_classroom_copy_scope": "Fixed historical classroom copy; equality of the current unit does not imply equality of every surrounding classroom file with the later RC.",
+      "existing_observations": {
+        "unit": "S01",
+        "companion_version": "1.0",
+        "observed_runtime_in_existing_evidence": "v24.19.0",
+        "platform_scope": "Linux for new/inherited companion runtime receipts; retained legacy Windows observations are separate",
+        "source_package_id": "4889e64304b49b27ffde1e027c726a34cb4227783c7bc085348f406a796e524f",
+        "source_identity_matches_public_unit": true,
+        "existing_verdict": "LOCAL_TECHNICAL_QA_PASS_TIMING_UNPILOTED",
+        "count_inventory": {
+          "kind": "Node command invocations in existing companion report",
+          "value": 40
+        },
+        "separate_mechanism_counts": {
+          "runtime_real_HTTP_lifecycle_checks": 45
+        },
+        "technical_scope": "Finite Node starter/worker/source checks and real owned loopback HTTP lifecycle; finite original and additive form logic.",
+        "new_native_evidence_scope": "No native browser/Windows/PDF execution in this companion phase; this does not negate legacy v4.0.0 evidence",
+        "mandatory_new_native_fixture_core": false,
+        "legacy_inheritance_policy": "Only exact byte-identical tested carriers can inherit bounded historical evidence; changed forms/projection content and 90/100-minute workload need their own scope."
+      },
+      "new_native_classroom_acceptance": false,
+      "specific_S02_required_browser_fixture_pending": false
+    },
+    {
+      "unit": "S02",
+      "companion_version": "1.0",
+      "source_package_id": "13f1ae7cee1e12b386982044359811eb44c76f5ee2b94e9170c89b5061121b18",
+      "source_manifest_and_covered_files_verified": true,
+      "student_zip": {
+        "path": "01_WEEKS/WEEK_02/S02_SEMINAR/90_100/EN_GB/WEBTECH_S02_STUDENT_90_100_EN_GB_v1.0.zip",
+        "bytes": 5418618,
+        "sha256": "02ad69b7798d3de87a7e6de58d504da13b6d18560078276cc337bb84055b2cdb",
+        "root_after_extract": "WEBTECH_S02_STUDENT_90_100_EN_GB_v1.0"
+      },
+      "active_form": {
+        "member": "WEBTECH_S02_STUDENT_90_100_EN_GB_v1.0/FORMATIVE_S02_EN_GB.html",
+        "sha256": "9f007f09d30f027d1b527e292006cd94e111706ee088f47db5f92c4c625229cc",
+        "script_member": "WEBTECH_S02_STUDENT_90_100_EN_GB_v1.0/FORMATIVE_ASSETS/formative.js",
+        "script_sha256": "42d9a5876401519ee1d9c4801def42be52c538fcf90b39d08e7baadce3343512",
+        "schema": "webtech-formative-assessment/v1",
+        "version": "1.0.0",
+        "html_form_id": "assessment-form",
+        "terminal_declaration_state": "REVIEWED_STUDENT_DECLARATION",
+        "terminal_state_means": "A student review declaration; neither a grade, authenticated truth nor completed contract."
+      },
+      "project_ids": [
+        "P01",
+        "P02",
+        "P03"
+      ],
+      "projects": 3,
+      "semantic_stages": 12,
+      "required_text_fields": 115,
+      "timing": {
+        "project_minutes_90": [
+          21,
+          17,
+          20
+        ],
+        "project_minutes_100": [
+          24,
+          20,
+          22
+        ],
+        "published_plan_minutes": [
+          120,
+          165
+        ],
+        "source_project_planned_minutes": [
+          30,
+          45
+        ],
+        "observed_novice_duration": null
+      },
+      "current_unit_bytes_inside_companion_match_RC": true,
+      "whole_classroom_copy_scope": "Fixed historical classroom copy; equality of the current unit does not imply equality of every surrounding classroom file with the later RC.",
+      "existing_observations": {
+        "unit": "S02",
+        "companion_version": "1.0",
+        "observed_runtime_in_existing_evidence": "v24.19.0",
+        "platform_scope": "Linux for new/inherited companion runtime receipts; retained legacy Windows observations are separate",
+        "source_package_id": "13f1ae7cee1e12b386982044359811eb44c76f5ee2b94e9170c89b5061121b18",
+        "source_identity_matches_public_unit": true,
+        "existing_verdict": "LOCAL_SOURCE_HTTP_FORM_QA_PASS_REQUIRED_NATIVE_UNEXECUTED_TIMING_UNPILOTED",
+        "count_inventory": {
+          "kind": "Node command invocations in existing companion report",
+          "value": 40
+        },
+        "separate_mechanism_counts": {
+          "runtime_real_HTTP_lifecycle_checks": 39
+        },
+        "technical_scope": "Finite Node/source-boundary checks, regex CSS source assertions, owned HTTP lifecycle and synthetic form logic. CSS rendering, actual keys and real motion states unexecuted in this companion phase.",
+        "new_native_evidence_scope": "No native browser/Windows/PDF execution in this companion phase; this does not negate legacy v4.0.0 evidence",
+        "mandatory_new_native_fixture_core": true,
+        "legacy_inheritance_policy": "Only exact byte-identical tested carriers can inherit bounded historical evidence; changed forms/projection content and 90/100-minute workload need their own scope."
+      },
+      "new_native_classroom_acceptance": false,
+      "specific_S02_required_browser_fixture_pending": true
+    },
+    {
+      "unit": "S03",
+      "companion_version": "1.1",
+      "source_package_id": "fbdfcdddb3515cc91a5d246618079f91688a7bc62c5e5ff00d9b40376f485044",
+      "source_manifest_and_covered_files_verified": true,
+      "student_zip": {
+        "path": "01_WEEKS/WEEK_03/S03_SEMINAR/90_100/EN_GB/WEBTECH_S03_STUDENT_90_100_EN_GB_v1.1.zip",
+        "bytes": 5392346,
+        "sha256": "514c20e720c73dea309aec3abcbb9d75fb1acd1704c5fc9a65b3dee6022cc8c1",
+        "root_after_extract": "WEBTECH_S03_STUDENT_90_100_EN_GB_v1.1"
+      },
+      "active_form": {
+        "member": "WEBTECH_S03_STUDENT_90_100_EN_GB_v1.1/CLASSROOM/WEBTECH_ASE_EN_GB_CLASSROOM_v4.0.0/01_WEEKS/WEEK_03/S03_SEMINAR/EN_GB/FORMATIVE_ASSESSMENT.html",
+        "sha256": "956fab37e128c22c0cdc4c1fbbe230984812aea683964f0caef8996bb43e8c78",
+        "script_member": "WEBTECH_S03_STUDENT_90_100_EN_GB_v1.1/CLASSROOM/WEBTECH_ASE_EN_GB_CLASSROOM_v4.0.0/01_WEEKS/WEEK_03/S03_SEMINAR/EN_GB/ASSETS/formative.js",
+        "script_sha256": "3d7a6ac39d6f6b8b60bd72e8155e70546da5686a240136fd9f596c3babbcccf9",
+        "schema": "webtech-formative-assessment/v1",
+        "version": "1.0.0",
+        "html_form_id": "assessment-form",
+        "terminal_declaration_state": "REVIEWED_STUDENT_DECLARATION",
+        "terminal_state_means": "A student review declaration; neither a grade, authenticated truth nor completed contract."
+      },
+      "project_ids": [
+        "P01",
+        "P02",
+        "P03"
+      ],
+      "projects": 3,
+      "semantic_stages": 12,
+      "required_text_fields": 115,
+      "timing": {
+        "project_minutes_90": [
+          20,
+          20,
+          20
+        ],
+        "project_minutes_100": [
+          23,
+          22,
+          23
+        ],
+        "published_plan_minutes": [
+          120,
+          165
+        ],
+        "source_project_planned_minutes": [
+          30,
+          45
+        ],
+        "observed_novice_duration": null
+      },
+      "current_unit_bytes_inside_companion_match_RC": true,
+      "whole_classroom_copy_scope": "Fixed historical classroom copy; equality of the current unit does not imply equality of every surrounding classroom file with the later RC.",
+      "existing_observations": {
+        "unit": "S03",
+        "companion_version": "1.1",
+        "observed_runtime_in_existing_evidence": "v24.19.0",
+        "platform_scope": "Linux for new/inherited companion runtime receipts; retained legacy Windows observations are separate",
+        "source_package_id": "fbdfcdddb3515cc91a5d246618079f91688a7bc62c5e5ff00d9b40376f485044",
+        "source_identity_matches_public_unit": true,
+        "existing_verdict": "LOCAL_TECHNICAL_QA_PASS_TIMING_UNPILOTED",
+        "count_inventory": {
+          "kind": "Inherited baseline command invocations",
+          "value": 42,
+          "rerun_this_v1_1_phase": false,
+          "additional_private_observer_checks": 23,
+          "additional_packed_smoke_invocations": 3
+        },
+        "separate_mechanism_counts": {},
+        "technical_scope": "Inherited 42-command Linux runtime record and 35 synthetic logic checks; later v1.1 optional-observer and packaged smoke checks. No new recount of baseline execution.",
+        "new_native_evidence_scope": "No native browser/Windows/PDF execution in this companion phase; this does not negate legacy v4.0.0 evidence",
+        "mandatory_new_native_fixture_core": false,
+        "legacy_inheritance_policy": "Only exact byte-identical tested carriers can inherit bounded historical evidence; changed forms/projection content and 90/100-minute workload need their own scope."
+      },
+      "new_native_classroom_acceptance": false,
+      "specific_S02_required_browser_fixture_pending": false
+    },
+    {
+      "unit": "S04",
+      "companion_version": "1.0",
+      "source_package_id": "b64b458aabd8d847132e40007a319197d6f458d055e959a794981a48cbd19f1e",
+      "source_manifest_and_covered_files_verified": true,
+      "student_zip": {
+        "path": "01_WEEKS/WEEK_04/S04_SEMINAR/90_100/EN_GB/WEBTECH_S04_STUDENT_90_100_EN_GB_v1.0.zip",
+        "bytes": 5400664,
+        "sha256": "28d20b40f210b90a9dba79276f0051e89ccb1ccda132d8051644f79ef05203b9",
+        "root_after_extract": "WEBTECH_S04_STUDENT_90_100_EN_GB_v1.0"
+      },
+      "active_form": {
+        "member": "WEBTECH_S04_STUDENT_90_100_EN_GB_v1.0/CLASSROOM/WEBTECH_ASE_EN_GB_CLASSROOM_v4.0.0/01_WEEKS/WEEK_04/S04_SEMINAR/EN_GB/FORMATIVE_ASSESSMENT.html",
+        "sha256": "80d5901f2aee96d423dac433701f30f1bca2860861ed8800ca6cf4aed445ded3",
+        "script_member": "WEBTECH_S04_STUDENT_90_100_EN_GB_v1.0/CLASSROOM/WEBTECH_ASE_EN_GB_CLASSROOM_v4.0.0/01_WEEKS/WEEK_04/S04_SEMINAR/EN_GB/ASSETS/formative.js",
+        "script_sha256": "3d7a6ac39d6f6b8b60bd72e8155e70546da5686a240136fd9f596c3babbcccf9",
+        "schema": "webtech-formative-assessment/v1",
+        "version": "1.0.0",
+        "html_form_id": "assessment-form",
+        "terminal_declaration_state": "REVIEWED_STUDENT_DECLARATION",
+        "terminal_state_means": "A student review declaration; neither a grade, authenticated truth nor completed contract."
+      },
+      "project_ids": [
+        "P01",
+        "P02",
+        "P03"
+      ],
+      "projects": 3,
+      "semantic_stages": 12,
+      "required_text_fields": 115,
+      "timing": {
+        "project_minutes_90": [
+          21,
+          20,
+          17
+        ],
+        "project_minutes_100": [
+          24,
+          22,
+          20
+        ],
+        "published_plan_minutes": [
+          120,
+          165
+        ],
+        "source_project_planned_minutes": [
+          30,
+          45
+        ],
+        "observed_novice_duration": null
+      },
+      "current_unit_bytes_inside_companion_match_RC": true,
+      "whole_classroom_copy_scope": "Fixed historical classroom copy; equality of the current unit does not imply equality of every surrounding classroom file with the later RC.",
+      "existing_observations": {
+        "unit": "S04",
+        "companion_version": "1.0",
+        "observed_runtime_in_existing_evidence": "v24.19.0",
+        "platform_scope": "Linux for new/inherited companion runtime receipts; retained legacy Windows observations are separate",
+        "source_package_id": "b64b458aabd8d847132e40007a319197d6f458d055e959a794981a48cbd19f1e",
+        "source_identity_matches_public_unit": true,
+        "existing_verdict": "LOCAL_TECHNICAL_QA_PASS_TIMING_UNPILOTED",
+        "count_inventory": {
+          "kind": "Node command invocations in existing companion report",
+          "value": 45
+        },
+        "separate_mechanism_counts": {
+          "runtime_real_HTTP_lifecycle_checks": 41
+        },
+        "technical_scope": "Finite Node callback/delegation/retry models and actual owned HTTP lifecycle; form logic is synthetic and delegation witness is not native pointer interaction.",
+        "new_native_evidence_scope": "No native browser/Windows/PDF execution in this companion phase; this does not negate legacy v4.0.0 evidence",
+        "mandatory_new_native_fixture_core": false,
+        "legacy_inheritance_policy": "Only exact byte-identical tested carriers can inherit bounded historical evidence; changed forms/projection content and 90/100-minute workload need their own scope."
+      },
+      "new_native_classroom_acceptance": false,
+      "specific_S02_required_browser_fixture_pending": false
+    },
+    {
+      "unit": "S05",
+      "companion_version": "1.0",
+      "source_package_id": "c6972379b0f9e0951e30f14c9538a046f1dd3732c65ace0ca9be281d08f02870",
+      "source_manifest_and_covered_files_verified": true,
+      "student_zip": {
+        "path": "01_WEEKS/WEEK_05/S05_SEMINAR/90_100/EN_GB/WEBTECH_S05_STUDENT_90_100_EN_GB_v1.0.zip",
+        "bytes": 5309375,
+        "sha256": "1bb3ed902fb0357c3a953d0a983bd4c582699937c6e05d3601ce1ab3826495f7",
+        "root_after_extract": "WEBTECH_S05_STUDENT_90_100_EN_GB_v1.0"
+      },
+      "active_form": {
+        "member": "WEBTECH_S05_STUDENT_90_100_EN_GB_v1.0/FORMATIVE_S05_EN_GB.html",
+        "sha256": "e6ea7ccfbbab8867f45dc22da56a0db71a50aa5f873081bfd4c9b02b6460cceb",
+        "script_member": "WEBTECH_S05_STUDENT_90_100_EN_GB_v1.0/FORMATIVE_ASSETS/formative.js",
+        "script_sha256": "3d7a6ac39d6f6b8b60bd72e8155e70546da5686a240136fd9f596c3babbcccf9",
+        "schema": "webtech-formative-assessment/v1",
+        "version": "1.0.0",
+        "html_form_id": "assessment-form",
+        "terminal_declaration_state": "REVIEWED_STUDENT_DECLARATION",
+        "terminal_state_means": "A student review declaration; neither a grade, authenticated truth nor completed contract."
+      },
+      "project_ids": [
+        "P01",
+        "P02",
+        "P03"
+      ],
+      "projects": 3,
+      "semantic_stages": 12,
+      "required_text_fields": 115,
+      "timing": {
+        "project_minutes_90": [
+          21,
+          17,
+          20
+        ],
+        "project_minutes_100": [
+          24,
+          20,
+          22
+        ],
+        "published_plan_minutes": [
+          120,
+          165
+        ],
+        "source_project_planned_minutes": [
+          30,
+          45
+        ],
+        "observed_novice_duration": null
+      },
+      "current_unit_bytes_inside_companion_match_RC": true,
+      "whole_classroom_copy_scope": "Fixed historical classroom copy; equality of the current unit does not imply equality of every surrounding classroom file with the later RC.",
+      "existing_observations": {
+        "unit": "S05",
+        "companion_version": "1.0",
+        "observed_runtime_in_existing_evidence": "v24.19.0",
+        "platform_scope": "Linux for new/inherited companion runtime receipts; retained legacy Windows observations are separate",
+        "source_package_id": "c6972379b0f9e0951e30f14c9538a046f1dd3732c65ace0ca9be281d08f02870",
+        "source_identity_matches_public_unit": true,
+        "existing_verdict": "LOCAL_NODE_HTTP_FORM_QA_PASS_TIMING_UNPILOTED",
+        "count_inventory": {
+          "kind": "Node command invocations in existing companion report",
+          "value": 61
+        },
+        "separate_mechanism_counts": {
+          "runtime_real_HTTP_lifecycle_checks": 38
+        },
+        "technical_scope": "Finite Node body/logger/adapter models and actual owned HTTP trace. P03 adapter labels do not establish POST persistence or a live member resource.",
+        "new_native_evidence_scope": "No native browser/Windows/PDF execution in this companion phase; this does not negate legacy v4.0.0 evidence",
+        "mandatory_new_native_fixture_core": false,
+        "legacy_inheritance_policy": "Only exact byte-identical tested carriers can inherit bounded historical evidence; changed forms/projection content and 90/100-minute workload need their own scope."
+      },
+      "new_native_classroom_acceptance": false,
+      "specific_S02_required_browser_fixture_pending": false
+    },
+    {
+      "unit": "S06",
+      "companion_version": "1.0",
+      "source_package_id": "f8e1d3c663288761a69f28b57ddad3cb3179803f920741eec6b284a57d790086",
+      "source_manifest_and_covered_files_verified": true,
+      "student_zip": {
+        "path": "01_WEEKS/WEEK_06/S06_SEMINAR/90_100/EN_GB/WEBTECH_S06_STUDENT_90_100_EN_GB_v1.0.zip",
+        "bytes": 5308160,
+        "sha256": "ac90a0f53b9558275ab7ab32e897e075712fb49f828ce48779e01c712833b360",
+        "root_after_extract": "WEBTECH_S06_STUDENT_90_100_EN_GB_v1.0"
+      },
+      "active_form": {
+        "member": "WEBTECH_S06_STUDENT_90_100_EN_GB_v1.0/FORMATIVE_S06_EN_GB.html",
+        "sha256": "5e19680aaa1796095b924186f72f5b74c6ea40230762bca32ceb3c833a32bf83",
+        "script_member": "WEBTECH_S06_STUDENT_90_100_EN_GB_v1.0/FORMATIVE_ASSETS/formative.js",
+        "script_sha256": "3d7a6ac39d6f6b8b60bd72e8155e70546da5686a240136fd9f596c3babbcccf9",
+        "schema": "webtech-formative-assessment/v1",
+        "version": "1.0.0",
+        "html_form_id": "assessment-form",
+        "terminal_declaration_state": "REVIEWED_STUDENT_DECLARATION",
+        "terminal_state_means": "A student review declaration; neither a grade, authenticated truth nor completed contract."
+      },
+      "project_ids": [
+        "P01",
+        "P02",
+        "P03"
+      ],
+      "projects": 3,
+      "semantic_stages": 12,
+      "required_text_fields": 115,
+      "timing": {
+        "project_minutes_90": [
+          21,
+          17,
+          20
+        ],
+        "project_minutes_100": [
+          24,
+          20,
+          22
+        ],
+        "published_plan_minutes": [
+          120,
+          165
+        ],
+        "source_project_planned_minutes": [
+          30,
+          45
+        ],
+        "observed_novice_duration": null
+      },
+      "current_unit_bytes_inside_companion_match_RC": true,
+      "whole_classroom_copy_scope": "Fixed historical classroom copy; equality of the current unit does not imply equality of every surrounding classroom file with the later RC.",
+      "existing_observations": {
+        "unit": "S06",
+        "companion_version": "1.0",
+        "observed_runtime_in_existing_evidence": "v24.19.0",
+        "platform_scope": "Linux for new/inherited companion runtime receipts; retained legacy Windows observations are separate",
+        "source_package_id": "f8e1d3c663288761a69f28b57ddad3cb3179803f920741eec6b284a57d790086",
+        "source_identity_matches_public_unit": true,
+        "existing_verdict": "LOCAL_NODE_SQLITE_FORM_QA_PASS_TIMING_UNPILOTED",
+        "count_inventory": {
+          "kind": "Node command invocations in existing companion report",
+          "value": 73
+        },
+        "separate_mechanism_counts": {
+          "runtime_sqlite_lifecycle_checks": 18
+        },
+        "technical_scope": "Finite Node and owned SQLite close/reopen/binding/managed adapter checks; no seminar HTTP server and no required native-browser mechanism.",
+        "new_native_evidence_scope": "No native browser/Windows/PDF execution in this companion phase; this does not negate legacy v4.0.0 evidence",
+        "mandatory_new_native_fixture_core": false,
+        "legacy_inheritance_policy": "Only exact byte-identical tested carriers can inherit bounded historical evidence; changed forms/projection content and 90/100-minute workload need their own scope."
+      },
+      "new_native_classroom_acceptance": false,
+      "specific_S02_required_browser_fixture_pending": false
+    },
+    {
+      "unit": "S07",
+      "companion_version": "1.0",
+      "source_package_id": "4579bf280e5ee766c1595a0b4025488292705c29327f1fcd4fe174245c7accaf",
+      "source_manifest_and_covered_files_verified": true,
+      "student_zip": {
+        "path": "01_WEEKS/WEEK_07/S07_SEMINAR/90_100/EN_GB/WEBTECH_S07_STUDENT_90_100_EN_GB_v1.0.zip",
+        "bytes": 5312284,
+        "sha256": "d943a3992afb18939ca9eeb088d859446fff9fad502c3ee82552dc54e718293d",
+        "root_after_extract": "WEBTECH_S07_STUDENT_90_100_EN_GB_v1.0"
+      },
+      "active_form": {
+        "member": "WEBTECH_S07_STUDENT_90_100_EN_GB_v1.0/FORMATIVE_S07_EN_GB.html",
+        "sha256": "bfe93f746baca8135d1d5c972acc867efd48183a6d7b2d98f5b270a50182ae52",
+        "script_member": "WEBTECH_S07_STUDENT_90_100_EN_GB_v1.0/FORMATIVE_ASSETS/formative.js",
+        "script_sha256": "b8db40aad882a39ea26759cf3db4d9ad837b6085cfdb408eb50d839b7dd36e4c",
+        "schema": "webtech-formative-assessment/v1",
+        "version": "1.0.0",
+        "html_form_id": "assessment-form",
+        "terminal_declaration_state": "REVIEWED_STUDENT_DECLARATION",
+        "terminal_state_means": "A student review declaration; neither a grade, authenticated truth nor completed contract."
+      },
+      "project_ids": [
+        "P01",
+        "P02",
+        "P03"
+      ],
+      "projects": 3,
+      "semantic_stages": 13,
+      "required_text_fields": 123,
+      "timing": {
+        "project_minutes_90": [
+          18,
+          23,
+          17
+        ],
+        "project_minutes_100": [
+          21,
+          26,
+          19
+        ],
+        "published_plan_minutes": [
+          120,
+          165
+        ],
+        "source_project_planned_minutes": [
+          30,
+          45
+        ],
+        "observed_novice_duration": null
+      },
+      "current_unit_bytes_inside_companion_match_RC": true,
+      "whole_classroom_copy_scope": "Fixed historical classroom copy; equality of the current unit does not imply equality of every surrounding classroom file with the later RC.",
+      "existing_observations": {
+        "unit": "S07",
+        "companion_version": "1.0",
+        "observed_runtime_in_existing_evidence": "v24.19.0",
+        "platform_scope": "Linux for new/inherited companion runtime receipts; retained legacy Windows observations are separate",
+        "source_package_id": "4579bf280e5ee766c1595a0b4025488292705c29327f1fcd4fe174245c7accaf",
+        "source_identity_matches_public_unit": true,
+        "existing_verdict": "LOCAL_NODE_SQLITE_HTTP_FORM_QA_PASS_TIMING_UNPILOTED",
+        "count_inventory": {
+          "kind": "Node command invocations in existing companion report",
+          "value": 79
+        },
+        "separate_mechanism_counts": {
+          "runtime_sqlite_lifecycle_checks": 22,
+          "runtime_HTTP_checks": 11
+        },
+        "technical_scope": "Finite Node/SQLite transaction witnesses and actual owned loopback HTTP resource traces; no production locking, durable storage or distributed idempotency claim.",
+        "new_native_evidence_scope": "No native browser/Windows/PDF execution in this companion phase; this does not negate legacy v4.0.0 evidence",
+        "mandatory_new_native_fixture_core": false,
+        "legacy_inheritance_policy": "Only exact byte-identical tested carriers can inherit bounded historical evidence; changed forms/projection content and 90/100-minute workload need their own scope."
+      },
+      "new_native_classroom_acceptance": false,
+      "specific_S02_required_browser_fixture_pending": false
+    },
+    {
+      "unit": "S08",
+      "companion_version": "1.0",
+      "source_package_id": "16b6ca06fb8812b92f6b61ff8bfa2705a66fada036fa0a5d3821e7226c76a40d",
+      "source_manifest_and_covered_files_verified": true,
+      "student_zip": {
+        "path": "01_WEEKS/WEEK_08/S08_SEMINAR/90_100/EN_GB/WEBTECH_S08_STUDENT_90_100_EN_GB_v1.0.zip",
+        "bytes": 5310520,
+        "sha256": "3edf56619bd8a32f1d9fd7a4499cc42dbcad75fca3297a5519035525b99d18ba",
+        "root_after_extract": "WEBTECH_S08_STUDENT_90_100_EN_GB_v1.0"
+      },
+      "active_form": {
+        "member": "WEBTECH_S08_STUDENT_90_100_EN_GB_v1.0/FORM_S08_90_100_EN_GB.html",
+        "sha256": "fb118da562acad135c3ca939b90ff5e9b5bcc36463e527b8ad77bcbda1cb4385",
+        "script_member": "WEBTECH_S08_STUDENT_90_100_EN_GB_v1.0/FORMATIVE_ASSETS/formative.js",
+        "script_sha256": "b8db40aad882a39ea26759cf3db4d9ad837b6085cfdb408eb50d839b7dd36e4c",
+        "schema": "webtech-formative-assessment/v1",
+        "version": "1.0.0",
+        "html_form_id": "assessment-form",
+        "terminal_declaration_state": "REVIEWED_STUDENT_DECLARATION",
+        "terminal_state_means": "A student review declaration; neither a grade, authenticated truth nor completed contract."
+      },
+      "project_ids": [
+        "P01",
+        "P02",
+        "P03"
+      ],
+      "projects": 3,
+      "semantic_stages": 9,
+      "required_text_fields": 91,
+      "timing": {
+        "project_minutes_90": [
+          20,
+          20,
+          20
+        ],
+        "project_minutes_100": [
+          23,
+          23,
+          23
+        ],
+        "published_plan_minutes": [
+          120,
+          165
+        ],
+        "source_project_planned_minutes": [
+          30,
+          45
+        ],
+        "observed_novice_duration": null
+      },
+      "current_unit_bytes_inside_companion_match_RC": true,
+      "whole_classroom_copy_scope": "Fixed historical classroom copy; equality of the current unit does not imply equality of every surrounding classroom file with the later RC.",
+      "existing_observations": {
+        "unit": "S08",
+        "companion_version": "1.0",
+        "observed_runtime_in_existing_evidence": "v24.19.0",
+        "platform_scope": "Linux for new/inherited companion runtime receipts; retained legacy Windows observations are separate",
+        "source_package_id": "16b6ca06fb8812b92f6b61ff8bfa2705a66fada036fa0a5d3821e7226c76a40d",
+        "source_identity_matches_public_unit": true,
+        "existing_verdict": "LOCAL_NODE_FORM_QA_PASS_TIMING_UNPILOTED",
+        "count_inventory": {
+          "kind": "Finite technical expectations and top-level commands, kept separate",
+          "expectations": 63,
+          "top_level_commands": 44,
+          "runtime_commands": 43,
+          "syntax_only_commands": 1
+        },
+        "separate_mechanism_counts": {},
+        "technical_scope": "Finite pure Node queue/view/permission models, owned workers and neutral C08 examples. Conditional React build/JSDOM/native work is separate and not executed in this companion phase.",
+        "new_native_evidence_scope": "No native browser/Windows/PDF execution in this companion phase; this does not negate legacy v4.0.0 evidence",
+        "mandatory_new_native_fixture_core": false,
+        "legacy_inheritance_policy": "Only exact byte-identical tested carriers can inherit bounded historical evidence; changed forms/projection content and 90/100-minute workload need their own scope."
+      },
+      "new_native_classroom_acceptance": false,
+      "specific_S02_required_browser_fixture_pending": false
+    },
+    {
+      "unit": "S09",
+      "companion_version": "1.0",
+      "source_package_id": "b039b19c616c749e9c6bbe028275a207205f3b29774fa1143772cdd1914380ce",
+      "source_manifest_and_covered_files_verified": true,
+      "student_zip": {
+        "path": "01_WEEKS/WEEK_09/S09_SEMINAR/90_100/EN_GB/WEBTECH_S09_STUDENT_90_100_EN_GB_v1.0.zip",
+        "bytes": 5312300,
+        "sha256": "793c21a385641e56e5ab1d703814cc672be074c87b6ee3190734c68aa71ca3a2",
+        "root_after_extract": "WEBTECH_S09_STUDENT_90_100_EN_GB_v1.0"
+      },
+      "active_form": {
+        "member": "WEBTECH_S09_STUDENT_90_100_EN_GB_v1.0/FORM_S09_90_100_EN_GB.html",
+        "sha256": "227b42cd4f3db5d84b33edd31c8e052743d145a36c9a9c2686d97f9c5169e2b1",
+        "script_member": "WEBTECH_S09_STUDENT_90_100_EN_GB_v1.0/FORMATIVE_ASSETS/formative.js",
+        "script_sha256": "b8db40aad882a39ea26759cf3db4d9ad837b6085cfdb408eb50d839b7dd36e4c",
+        "schema": "webtech-formative-assessment/v1",
+        "version": "1.0.0",
+        "html_form_id": "assessment-form",
+        "terminal_declaration_state": "REVIEWED_STUDENT_DECLARATION",
+        "terminal_state_means": "A student review declaration; neither a grade, authenticated truth nor completed contract."
+      },
+      "project_ids": [
+        "P01",
+        "P02",
+        "P03"
+      ],
+      "projects": 3,
+      "semantic_stages": 9,
+      "required_text_fields": 91,
+      "timing": {
+        "project_minutes_90": [
+          20,
+          20,
+          20
+        ],
+        "project_minutes_100": [
+          23,
+          23,
+          23
+        ],
+        "published_plan_minutes": [
+          120,
+          165
+        ],
+        "source_project_planned_minutes": [
+          30,
+          45
+        ],
+        "observed_novice_duration": null
+      },
+      "current_unit_bytes_inside_companion_match_RC": true,
+      "whole_classroom_copy_scope": "Fixed historical classroom copy; equality of the current unit does not imply equality of every surrounding classroom file with the later RC.",
+      "existing_observations": {
+        "unit": "S09",
+        "companion_version": "1.0",
+        "observed_runtime_in_existing_evidence": "v24.19.0",
+        "platform_scope": "Linux for new/inherited companion runtime receipts; retained legacy Windows observations are separate",
+        "source_package_id": "b039b19c616c749e9c6bbe028275a207205f3b29774fa1143772cdd1914380ce",
+        "source_identity_matches_public_unit": true,
+        "existing_verdict": "LOCAL_NODE_FORM_QA_PASS_TIMING_UNPILOTED",
+        "count_inventory": {
+          "kind": "Finite technical expectations and top-level commands, kept separate",
+          "expectations": 74,
+          "top_level_commands": 53,
+          "runtime_commands": 52,
+          "syntax_only_commands": 1
+        },
+        "separate_mechanism_counts": {
+          "C09_named_real_HTTP_fixture_exchanges": 13
+        },
+        "technical_scope": "Finite pure route/refresh/delivery policy models; 13 declared neutral C09 HTTP exchanges remain separate from canonical Express/React and assessed functions.",
+        "new_native_evidence_scope": "No native browser/Windows/PDF execution in this companion phase; this does not negate legacy v4.0.0 evidence",
+        "mandatory_new_native_fixture_core": false,
+        "legacy_inheritance_policy": "Only exact byte-identical tested carriers can inherit bounded historical evidence; changed forms/projection content and 90/100-minute workload need their own scope."
+      },
+      "new_native_classroom_acceptance": false,
+      "specific_S02_required_browser_fixture_pending": false
+    },
+    {
+      "unit": "S10",
+      "companion_version": "1.0",
+      "source_package_id": "94e2c5c308eb311014384a426063027c5ac71f7d0a9c37d8ebe927992d5b1784",
+      "source_manifest_and_covered_files_verified": true,
+      "student_zip": {
+        "path": "01_WEEKS/WEEK_10/S10_SEMINAR/90_100/EN_GB/WEBTECH_S10_STUDENT_90_100_EN_GB_v1.0.zip",
+        "bytes": 5315536,
+        "sha256": "0df8fb69faf404807c9f5f4a0fcfd647d88f9577bd6c1e6c7adc44f91ac7dbeb",
+        "root_after_extract": "WEBTECH_S10_STUDENT_90_100_EN_GB_v1.0"
+      },
+      "active_form": {
+        "member": "WEBTECH_S10_STUDENT_90_100_EN_GB_v1.0/FORM_S10_90_100_EN_GB.html",
+        "sha256": "d9ae8e310289ca47340da23f78a8efa9ccc8047a34cce68421a59623c1d69ec4",
+        "script_member": "WEBTECH_S10_STUDENT_90_100_EN_GB_v1.0/FORMATIVE_ASSETS/formative.js",
+        "script_sha256": "b8db40aad882a39ea26759cf3db4d9ad837b6085cfdb408eb50d839b7dd36e4c",
+        "schema": "webtech-formative-assessment/v1",
+        "version": "1.0.0",
+        "html_form_id": "assessment-form",
+        "terminal_declaration_state": "REVIEWED_STUDENT_DECLARATION",
+        "terminal_state_means": "A student review declaration; neither a grade, authenticated truth nor completed contract."
+      },
+      "project_ids": [
+        "P01",
+        "P02",
+        "P03"
+      ],
+      "projects": 3,
+      "semantic_stages": 9,
+      "required_text_fields": 91,
+      "timing": {
+        "project_minutes_90": [
+          20,
+          20,
+          20
+        ],
+        "project_minutes_100": [
+          23,
+          23,
+          23
+        ],
+        "published_plan_minutes": [
+          120,
+          165
+        ],
+        "source_project_planned_minutes": [
+          30,
+          45
+        ],
+        "observed_novice_duration": null
+      },
+      "current_unit_bytes_inside_companion_match_RC": true,
+      "whole_classroom_copy_scope": "Fixed historical classroom copy; equality of the current unit does not imply equality of every surrounding classroom file with the later RC.",
+      "existing_observations": {
+        "unit": "S10",
+        "companion_version": "1.0",
+        "observed_runtime_in_existing_evidence": "v24.19.0",
+        "platform_scope": "Linux for new/inherited companion runtime receipts; retained legacy Windows observations are separate",
+        "source_package_id": "94e2c5c308eb311014384a426063027c5ac71f7d0a9c37d8ebe927992d5b1784",
+        "source_identity_matches_public_unit": true,
+        "existing_verdict": "LOCAL_NODE_FORM_QA_PASS_TIMING_UNPILOTED",
+        "count_inventory": {
+          "kind": "Finite technical expectations and top-level commands, kept separate",
+          "expectations": 65,
+          "top_level_commands": 46,
+          "runtime_commands": 45,
+          "syntax_only_commands": 1
+        },
+        "separate_mechanism_counts": {
+          "C10_actual_HTTP_exchanges": 0
+        },
+        "technical_scope": "Finite pure state/refresh/architecture choice models; neutral C10 examples perform no HTTP and do not qualify Context/Redux/thunk or benchmark results.",
+        "new_native_evidence_scope": "No native browser/Windows/PDF execution in this companion phase; this does not negate legacy v4.0.0 evidence",
+        "mandatory_new_native_fixture_core": false,
+        "legacy_inheritance_policy": "Only exact byte-identical tested carriers can inherit bounded historical evidence; changed forms/projection content and 90/100-minute workload need their own scope."
+      },
+      "new_native_classroom_acceptance": false,
+      "specific_S02_required_browser_fixture_pending": false
+    },
+    {
+      "unit": "S11",
+      "companion_version": "1.0",
+      "source_package_id": "01c2a471c3a86fe79446c09567038ea96af26cabfb3cf19803a5e04b9a4dfc6a",
+      "source_manifest_and_covered_files_verified": true,
+      "student_zip": {
+        "path": "01_WEEKS/WEEK_11/S11_SEMINAR/90_100/EN_GB/WEBTECH_S11_STUDENT_90_100_EN_GB_v1.0.zip",
+        "bytes": 5316741,
+        "sha256": "8d98b6fea1bc598abd4b118c049c569fbddcaaffeff43f3bb4f373ede44d9fd9",
+        "root_after_extract": "WEBTECH_S11_STUDENT_90_100_EN_GB_v1.0"
+      },
+      "active_form": {
+        "member": "WEBTECH_S11_STUDENT_90_100_EN_GB_v1.0/FORM_S11_90_100_EN_GB.html",
+        "sha256": "0c48b4456cab149cf6ace4d2140b2b5c2cccbf0e00ad190c040c2f477ff8dd1d",
+        "script_member": "WEBTECH_S11_STUDENT_90_100_EN_GB_v1.0/FORMATIVE_ASSETS/formative.js",
+        "script_sha256": "b8db40aad882a39ea26759cf3db4d9ad837b6085cfdb408eb50d839b7dd36e4c",
+        "schema": "webtech-formative-assessment/v1",
+        "version": "1.0.0",
+        "html_form_id": "assessment-form",
+        "terminal_declaration_state": "REVIEWED_STUDENT_DECLARATION",
+        "terminal_state_means": "A student review declaration; neither a grade, authenticated truth nor completed contract."
+      },
+      "project_ids": [
+        "P01",
+        "P02",
+        "P03"
+      ],
+      "projects": 3,
+      "semantic_stages": 12,
+      "required_text_fields": 115,
+      "timing": {
+        "project_minutes_90": [
+          20,
+          20,
+          20
+        ],
+        "project_minutes_100": [
+          23,
+          23,
+          23
+        ],
+        "published_plan_minutes": [
+          120,
+          165
+        ],
+        "source_project_planned_minutes": [
+          30,
+          45
+        ],
+        "observed_novice_duration": null
+      },
+      "current_unit_bytes_inside_companion_match_RC": true,
+      "whole_classroom_copy_scope": "Fixed historical classroom copy; equality of the current unit does not imply equality of every surrounding classroom file with the later RC.",
+      "existing_observations": {
+        "unit": "S11",
+        "companion_version": "1.0",
+        "observed_runtime_in_existing_evidence": "v24.19.0",
+        "platform_scope": "Linux for new/inherited companion runtime receipts; retained legacy Windows observations are separate",
+        "source_package_id": "01c2a471c3a86fe79446c09567038ea96af26cabfb3cf19803a5e04b9a4dfc6a",
+        "source_identity_matches_public_unit": true,
+        "existing_verdict": "LOCAL_NODE_FORM_QA_PASS_TIMING_UNPILOTED",
+        "count_inventory": {
+          "kind": "Finite technical expectations and top-level commands, kept separate",
+          "expectations": 91,
+          "top_level_commands": 56,
+          "runtime_commands": 55,
+          "syntax_only_commands": 1
+        },
+        "separate_mechanism_counts": {
+          "C11_named_fixture_HTTP_exchanges": 5,
+          "C11_capability_HTTP_exchanges": 8
+        },
+        "technical_scope": "Finite identity/authority/origin predicate models and 13 C11 HTTP exchanges (5 named fixture, 8 capability). No new canonical framework/native-browser acceptance.",
+        "new_native_evidence_scope": "No native browser/Windows/PDF execution in this companion phase; this does not negate legacy v4.0.0 evidence",
+        "mandatory_new_native_fixture_core": false,
+        "legacy_inheritance_policy": "Only exact byte-identical tested carriers can inherit bounded historical evidence; changed forms/projection content and 90/100-minute workload need their own scope."
+      },
+      "new_native_classroom_acceptance": false,
+      "specific_S02_required_browser_fixture_pending": false
+    },
+    {
+      "unit": "S12",
+      "companion_version": "1.0",
+      "source_package_id": "40609bf1a86653676bdeb0412aff3ee90d38185047500f6f6994116f84a530c5",
+      "source_manifest_and_covered_files_verified": true,
+      "student_zip": {
+        "path": "01_WEEKS/WEEK_12/S12_SEMINAR/90_100/EN_GB/WEBTECH_S12_STUDENT_90_100_EN_GB_v1.0.zip",
+        "bytes": 5317036,
+        "sha256": "648ea79d76db0182055f35c2c44b2166c2c5a24b6cd3493fadea5f73fcfff30a",
+        "root_after_extract": "WEBTECH_S12_STUDENT_90_100_EN_GB_v1.0"
+      },
+      "active_form": {
+        "member": "WEBTECH_S12_STUDENT_90_100_EN_GB_v1.0/FORM_S12_90_100_EN_GB.html",
+        "sha256": "ce420c3f652715f810e74c4b46b613f8dba49963472cb7b25d580d87255beccd",
+        "script_member": "WEBTECH_S12_STUDENT_90_100_EN_GB_v1.0/FORMATIVE_ASSETS/formative.js",
+        "script_sha256": "b8db40aad882a39ea26759cf3db4d9ad837b6085cfdb408eb50d839b7dd36e4c",
+        "schema": "webtech-formative-assessment/v1",
+        "version": "1.0.0",
+        "html_form_id": "assessment-form",
+        "terminal_declaration_state": "REVIEWED_STUDENT_DECLARATION",
+        "terminal_state_means": "A student review declaration; neither a grade, authenticated truth nor completed contract."
+      },
+      "project_ids": [
+        "P01",
+        "P02",
+        "P03"
+      ],
+      "projects": 3,
+      "semantic_stages": 12,
+      "required_text_fields": 115,
+      "timing": {
+        "project_minutes_90": [
+          20,
+          20,
+          20
+        ],
+        "project_minutes_100": [
+          23,
+          23,
+          23
+        ],
+        "published_plan_minutes": [
+          120,
+          165
+        ],
+        "source_project_planned_minutes": [
+          30,
+          45
+        ],
+        "observed_novice_duration": null
+      },
+      "current_unit_bytes_inside_companion_match_RC": true,
+      "whole_classroom_copy_scope": "Fixed historical classroom copy; equality of the current unit does not imply equality of every surrounding classroom file with the later RC.",
+      "existing_observations": {
+        "unit": "S12",
+        "companion_version": "1.0",
+        "observed_runtime_in_existing_evidence": "v24.19.0",
+        "platform_scope": "Linux for new/inherited companion runtime receipts; retained legacy Windows observations are separate",
+        "source_package_id": "40609bf1a86653676bdeb0412aff3ee90d38185047500f6f6994116f84a530c5",
+        "source_identity_matches_public_unit": true,
+        "existing_verdict": "LOCAL_NODE_FORM_QA_PASS_TIMING_UNPILOTED",
+        "count_inventory": {
+          "kind": "Finite technical expectations and top-level commands, kept separate",
+          "expectations": 93,
+          "top_level_commands": 54,
+          "runtime_commands": 53,
+          "syntax_only_commands": 1
+        },
+        "separate_mechanism_counts": {
+          "C12_capability_HTTP_exchanges": 3
+        },
+        "technical_scope": "Finite protocol/job/dispatcher models; 3 HTTP capability exchanges are not canonical protocol-infrastructure execution or native timing.",
+        "new_native_evidence_scope": "No native browser/Windows/PDF execution in this companion phase; this does not negate legacy v4.0.0 evidence",
+        "mandatory_new_native_fixture_core": false,
+        "legacy_inheritance_policy": "Only exact byte-identical tested carriers can inherit bounded historical evidence; changed forms/projection content and 90/100-minute workload need their own scope."
+      },
+      "new_native_classroom_acceptance": false,
+      "specific_S02_required_browser_fixture_pending": false
+    },
+    {
+      "unit": "S13",
+      "companion_version": "1.0",
+      "source_package_id": "51fb29db5a9d21ae4886b80fd1ab5c484ab5b02858d9f78885596c5787c89c70",
+      "source_manifest_and_covered_files_verified": true,
+      "student_zip": {
+        "path": "01_WEEKS/WEEK_13/S13_SEMINAR/90_100/EN_GB/WEBTECH_S13_STUDENT_90_100_EN_GB_v1.0.zip",
+        "bytes": 5319494,
+        "sha256": "3013056c30f15d668065842610f9bbe452ae686fcc86c3bd684cd2d18d8092ba",
+        "root_after_extract": "WEBTECH_S13_STUDENT_90_100_EN_GB_v1.0"
+      },
+      "active_form": {
+        "member": "WEBTECH_S13_STUDENT_90_100_EN_GB_v1.0/FORM_S13_90_100_EN_GB.html",
+        "sha256": "4ce5e03780951bafa0fe6c6b0e0bef07003b4e51c661b76340145453b6b39a64",
+        "script_member": "WEBTECH_S13_STUDENT_90_100_EN_GB_v1.0/FORMATIVE_ASSETS/formative.js",
+        "script_sha256": "7095e2a449d8ad0155484c5b7dfa01300fe7aaaf4a6ad82d68f26b0cd11526b9",
+        "schema": "webtech-formative-assessment/v1",
+        "version": "1.0.0",
+        "html_form_id": "assessment-form",
+        "terminal_declaration_state": "REVIEWED_STUDENT_DECLARATION",
+        "terminal_state_means": "A student review declaration; neither a grade, authenticated truth nor completed contract."
+      },
+      "project_ids": [
+        "P01",
+        "P02",
+        "P03"
+      ],
+      "projects": 3,
+      "semantic_stages": 12,
+      "required_text_fields": 115,
+      "timing": {
+        "project_minutes_90": [
+          20,
+          20,
+          20
+        ],
+        "project_minutes_100": [
+          23,
+          23,
+          23
+        ],
+        "published_plan_minutes": [
+          120,
+          165
+        ],
+        "source_project_planned_minutes": [
+          30,
+          45
+        ],
+        "observed_novice_duration": null
+      },
+      "current_unit_bytes_inside_companion_match_RC": true,
+      "whole_classroom_copy_scope": "Fixed historical classroom copy; equality of the current unit does not imply equality of every surrounding classroom file with the later RC.",
+      "existing_observations": {
+        "unit": "S13",
+        "companion_version": "1.0",
+        "observed_runtime_in_existing_evidence": "v24.19.0",
+        "platform_scope": "Linux for new/inherited companion runtime receipts; retained legacy Windows observations are separate",
+        "source_package_id": "51fb29db5a9d21ae4886b80fd1ab5c484ab5b02858d9f78885596c5787c89c70",
+        "source_identity_matches_public_unit": true,
+        "existing_verdict": "LOCAL_NODE_FORM_QA_PASS_TIMING_UNPILOTED",
+        "count_inventory": {
+          "kind": "Finite technical expectations and top-level commands, kept separate",
+          "expectations": 97,
+          "top_level_commands": 55,
+          "runtime_commands": 54,
+          "syntax_only_commands": 1
+        },
+        "separate_mechanism_counts": {
+          "C13_capability_HTTP_exchanges": 1
+        },
+        "technical_scope": "Finite worker/service-worker/frame admission models; neutral Node clone/property demonstrations and 1 HTTP capability exchange. No new native Worker/SW/frame/storage qualification.",
+        "new_native_evidence_scope": "No native browser/Windows/PDF execution in this companion phase; this does not negate legacy v4.0.0 evidence",
+        "mandatory_new_native_fixture_core": false,
+        "legacy_inheritance_policy": "Only exact byte-identical tested carriers can inherit bounded historical evidence; changed forms/projection content and 90/100-minute workload need their own scope."
+      },
+      "new_native_classroom_acceptance": false,
+      "specific_S02_required_browser_fixture_pending": false
+    },
+    {
+      "unit": "S14",
+      "companion_version": "1.0",
+      "source_package_id": "957c61416e0928cdae592314835958245daf859c890bcfd755523a04a1aa8c2c",
+      "source_manifest_and_covered_files_verified": true,
+      "student_zip": {
+        "path": "01_WEEKS/WEEK_14/S14_SEMINAR/90_100/EN_GB/WEBTECH_S14_STUDENT_90_100_EN_GB_v1.0.zip",
+        "bytes": 5321694,
+        "sha256": "b471cd86c084c47d3d09f76220cfca450e154229e68bff78e879ac097272cc8e",
+        "root_after_extract": "WEBTECH_S14_STUDENT_90_100_EN_GB_v1.0"
+      },
+      "active_form": {
+        "member": "WEBTECH_S14_STUDENT_90_100_EN_GB_v1.0/FORM_S14_90_100_EN_GB.html",
+        "sha256": "03d2ad6395ce46416181285d4c9f26eee5ecb6f2251fac3cea0df9f1a8e771a4",
+        "script_member": "WEBTECH_S14_STUDENT_90_100_EN_GB_v1.0/FORMATIVE_ASSETS/formative.js",
+        "script_sha256": "faabdbb8b5a09460e962a669e062397f1294c558629cf06fb42eaf5b7ee89d0f",
+        "schema": "webtech-formative-assessment/v1",
+        "version": "1.2.0",
+        "html_form_id": "assessment-form",
+        "terminal_declaration_state": "REVIEWED_STUDENT_DECLARATION",
+        "terminal_state_means": "A student review declaration; neither a grade, authenticated truth nor completed contract."
+      },
+      "project_ids": [
+        "P01",
+        "P03"
+      ],
+      "projects": 2,
+      "semantic_stages": 8,
+      "required_text_fields": 133,
+      "timing": {
+        "project_minutes_90": [
+          30,
+          30
+        ],
+        "project_minutes_100": [
+          35,
+          35
+        ],
+        "published_plan_minutes": [
+          90,
+          120
+        ],
+        "source_project_planned_minutes": [
+          30,
+          45
+        ],
+        "observed_novice_duration": null
+      },
+      "current_unit_bytes_inside_companion_match_RC": true,
+      "whole_classroom_copy_scope": "Fixed historical classroom copy; equality of the current unit does not imply equality of every surrounding classroom file with the later RC.",
+      "existing_observations": {
+        "unit": "S14",
+        "companion_version": null,
+        "observed_runtime_in_existing_evidence": "v24.19.0",
+        "platform_scope": "Linux for new/inherited companion runtime receipts; retained legacy Windows observations are separate",
+        "source_package_id": "957c61416e0928cdae592314835958245daf859c890bcfd755523a04a1aa8c2c",
+        "source_identity_matches_public_unit": true,
+        "existing_verdict": "LOCAL_NODE_FORM_QA_PASS_TIMING_UNPILOTED",
+        "count_inventory": {
+          "kind": "Finite technical expectations and top-level commands, kept separate",
+          "expectations": 99,
+          "top_level_commands": 58,
+          "runtime_commands": 58,
+          "syntax_only_commands": 0
+        },
+        "separate_mechanism_counts": {},
+        "technical_scope": "Finite synchronous service/repository and readiness model; 4 HTTP exchanges are capability witnesses and one canonical pure Node protected test was executed. No canonical Express or learner inventory-truth acceptance.",
+        "new_native_evidence_scope": "No native browser/Windows/PDF execution in this companion phase; this does not negate legacy v4.0.0 evidence",
+        "mandatory_new_native_fixture_core": false,
+        "legacy_inheritance_policy": "Only exact byte-identical tested carriers can inherit bounded historical evidence; changed forms/projection content and 90/100-minute workload need their own scope."
+      },
+      "new_native_classroom_acceptance": false,
+      "specific_S02_required_browser_fixture_pending": false
+    }
+  ],
+  "legacy_observation_scope": {
+    "Windows_Edge": "Historical finite observations retained. Full old334-tested-copy equivalence is not independently closed; changed facade has no inherited native claim.",
+    "browser_checks": 334,
+    "browser_checks_passed": 334,
+    "downloaded_JSON_artifacts_separate_count": 14,
+    "earlier_failed_browser_checks_preserved": 18,
+    "same_registered_Windows_setup_carrier": {
+      "state": "REGISTERED_TESTED_SETUP_PACKAGE_ID_MATCHES_CURRENT_VERIFIED_MANIFEST",
+      "package_id": "dc3b41f3722be6dd7bec20ba7bdc15d50a41ba1b6faf4bd9da384b7f4cfd7ae7",
+      "covered_files": 63,
+      "manifest_sha256": "dc3b41f3722be6dd7bec20ba7bdc15d50a41ba1b6faf4bd9da384b7f4cfd7ae7",
+      "all_covered_hashes_verified": true,
+      "limits": "Identity linkage is explicit in the retained qualification record; raw historical Windows receipt/archive not independently fetched or executed in this phase."
+    },
+    "S02_owner_preflight": "Recorded Windows Node v24.21.0 preflight confirms environment/HTTP and expected unchanged TODO failures only. It does not qualify actual CSS viewports, keys or motion states and lacks a complete native-copy archive binding."
+  },
+  "inheritance_policy": "Exact tested bytes are necessary, not sufficient. Retain the recorded environment, dependencies, exercised mechanism, relevant path/origin and limitations. Do not transfer a finite PASS to a different route, form or claim.",
+  "timing": "UNPILOTED: the feasibility of completing every obligation within 90/100 minutes remains an open design question. No homework or extra meeting is implied.",
+  "human_evidence": "Student authorship, a genuine AI exchange, independently executed checks, saved/reopened evidence PDF and institutional submission remain genuine separate obligations.",
+  "packaging_scope": "Complete tracked source with fixed companion archives; not installed dependencies, external services or a student-only filtered distribution."
+}

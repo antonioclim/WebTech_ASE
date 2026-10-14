@@ -1,0 +1,58 @@
+{
+  "schema": "webtech-local-successor-source-review-profile/v1",
+  "profile_id": "WebTech_ASE-v4.1.0-local-source-review-20261013",
+  "recorded_utc": "2026-10-13T20:18:09.696509+00:00",
+  "target_version": "v4.1.0",
+  "state": "LOCAL_CANDIDATE_NOT_PUBLISHED",
+  "distribution_profile": "COMPLETE_SOURCE_REVIEW_WITH_DECLARED_LIMITS",
+  "qualificationVerdict": "PREPARED_SOURCE_REVIEW_PROFILE_NOT_YET_ACCEPTED_FOR_PUBLICATION",
+  "publication_qualified": false,
+  "published": false,
+  "native_acceptance": false,
+  "classroom_timing_accepted": false,
+  "owner_profile_selection_or_stable_publication_authorised": false,
+  "base_snapshot": {
+    "repository": "antonioclim/WebTech_ASE",
+    "published_RC_tag": "v4.1.0-rc.1",
+    "commit": "e7d2f2b2fe47e062020e994dc5975c63f8e2e079",
+    "tree": "3c6cb1253f529aa4ef36ad0c617a6e0a021825e2",
+    "preserved_stable_baseline": "v4.0.0"
+  },
+  "candidate_identity_policy": "The new candidate is an uncommitted local source copy. Its computed content identity and complete manifest are in the external distribution receipt; no future Git commit/tree or self-hash is invented in this covered record.",
+  "current_entry": "00_START_HERE/CURRENT_SUCCESSOR.html",
+  "documentary_errata": "00_START_HERE/CURRENT_ERRATA.html",
+  "route_inventory": "00_START_HERE/CURRENT_ROUTES_PUBLIC.json",
+  "evidence_matrix": {
+    "path": "metadata/LOCAL_SUCCESSOR_EVIDENCE_MATRIX_v1.0.json",
+    "sha256": "fae42a5b555030152175d001fc955b9533401788af704f3814639907551b51db"
+  },
+  "assessment_contract": {
+    "seminars": 14,
+    "individual_projects": 40,
+    "semantic_stages": 152,
+    "required_text_fields": 1531,
+    "unique_editable_target_files": 38,
+    "generated_controls": 1984
+  },
+  "preservation": [
+    "All 40 individual projects and 152 semantic stages remain.",
+    "All 1,531 required text fields and existing field keys remain.",
+    "All 28 sealed student/instructor companion archives retain their RC hashes.",
+    "Protected original unit manifests, source, course examples, form logic, legacy builders and qualification/publication snapshots remain unchanged.",
+    "Original prepublication prose is labelled historical; the current outer errata govern the new opening route."
+  ],
+  "new_change_scope": "Additive current facade, original/companion selectors, exact extraction instructions, outer documentary errata and separate source-review profile. No change to executable classroom behaviour or form schema.",
+  "existing_evidence_scope": "Finite Linux Node v24.19.0 companion observations and historical bounded Windows/Edge/PDF evidence remain under their recorded scope. Preserving them is not a fresh replay or a blanket native acceptance.",
+  "runtime_policy": "Necessary selected capabilities determine eligibility. A numeric reference-version difference alone is ENV_WARN when those probes and explicit package requirements pass. Pure Node/SQLite cores do not require npm; conditional framework routes have their own requirements.",
+  "open_observations": [
+    "S02 actual rendered viewport, real keyboard and verified motion-preference fixture observations.",
+    "Native browser/form/PDF observations for changed wrappers/layouts where such a claim is sought.",
+    "Genuine student AI, authorship and truthful observations; institutional Moodle operation.",
+    "Novice completion within 90/100 minutes remains unpiloted and an unresolved design question.",
+    "Conditional framework/dependency/native routes not covered by pure Node core evidence.",
+    "Full old 334-tested-copy manifest equivalence not independently closed."
+  ],
+  "no_implicit_homework_or_continuation": true,
+  "verification_protocol": "External candidate QA receipts must verify the exact changeset, preservation, routes, manifest/modes, archive CRC/extraction and two builds under the same recorded Python/zlib runtime. This source-covered profile does not assert a future check passed.",
+  "external_actions": "This local preparation authorises no GitHub write, Ready/merge, tag/release, Latest, Pages, Actions or repository-setting change. A later action requires its actual authorisation and a fresh event/ref-specific Actions check."
+}
